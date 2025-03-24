@@ -999,7 +999,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 139,
     "fullName": "V.a. Depression",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "depression",
     "name": "Albrecht",
     "surname": "Mussigman",
     "birthdate": "",
@@ -1829,7 +1829,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 149,
     "fullName": "V.a. Fibromyalgie",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "fibromyalgie",
     "name": "Manfred",
     "surname": "",
     "birthdate": "",
@@ -2244,7 +2244,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 154,
     "fullName": "V.a. Klavikulafraktur und Rippenbogenfraktur",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "rippenfeaktur_prellung",
     "name": "Kurt",
     "surname": "Schroben-Hauser",
     "birthdate": "23.03.1970",
@@ -2908,7 +2908,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 162,
     "fullName": "V.a. Fibromyalgie, Depression, psychosomatische Schmerzen",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "fibromyalgie",
     "name": "Achmed",
     "surname": "Schoeuerle",
     "birthdate": "23.10.1970",
@@ -5730,7 +5730,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 197,
     "fullName": "V.a. Depression",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "depression",
     "name": "Frau",
     "surname": "Weindele",
     "birthdate": "",
@@ -6228,7 +6228,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 203,
     "fullName": "V.a. Depression",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "depression",
     "name": "Knitthilf",
     "surname": "Weidele",
     "birthdate": "",

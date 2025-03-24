@@ -58017,7 +58017,10127 @@ Einleiten weiterführender diagnostischer Maßnahmen zur Bestätigung der Karzin
 • „Ist eine endoskopische Abklärung (Magen-, Darmspiegelung) notwendig, um eine Karzinoid-Quelle zu finden?“
 `
   }
+},
+depression: {
+  name: "Depression",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Depression**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Den Hauptgrund des Arztbesuchs in Bezug auf depressive Symptome erfassen.  
+
+**Anleitung:**  
+- Offene Fragen stellen, um die emotionale Lage und die aktuellen Beschwerden zu eruieren.  
+
+**Beispielfragen:**  
+- „Was führt Sie heute zu uns?“  
+- „Welche Symptome haben Sie in letzter Zeit bemerkt, die Ihnen Sorgen bereiten?“  
+- „Woran glauben Sie, liegt Ihr aktueller seelischer Zustand?“  
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich fühle mich seit Monaten niedergeschlagen und habe das Gefühl, dass mir alles die Freude raubt.“  
+- *Arzt:* „Seit wann erleben Sie diese Stimmung, und gab es ein konkretes Ereignis, das diesen Zustand ausgelöst haben könnte?“
+
+---
+
+**2. Stimmung und Affekt**  
+**Ziel:**  
+- Den emotionalen Zustand im Detail erfassen, z. B. anhaltende Traurigkeit, Leere, Reizbarkeit oder emotionale Abstumpfung.  
+
+**Anleitung:**  
+- Fragen zur aktuellen Stimmung, zu affektiven Schwankungen und emotionalen Reaktionen stellen.  
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre momentane Stimmung beschreiben?“  
+- „Fühlen Sie sich meist traurig oder leer?“  
+- „Gibt es Momente, in denen Sie positive Gefühle empfinden?“  
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich fühle mich fast ständig traurig und habe kaum noch emotionale Reaktionen auf sonst schöne Dinge.“  
+- *Arzt:* „Bemerkten Sie in letzter Zeit Veränderungen in Ihrer emotionalen Reaktivität?“
+
+---
+
+**3. Zeitverlauf und Dauer der Symptome**  
+**Ziel:**  
+- Den Beginn, die Dauer und den Verlauf der depressiven Symptome klären.  
+
+**Anleitung:**  
+- Nach dem Auftreten, der Intensität und möglichen Schwankungen im Zeitverlauf fragen.  
+
+**Beispielfragen:**  
+- „Wann haben Sie zum ersten Mal depressive Verstimmungen bemerkt?“  
+- „Sind die Symptome kontinuierlich oder gab es Phasen der Besserung?“  
+- „Hat sich Ihr Zustand im Laufe der Zeit verschlechtert?“  
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Seit etwa einem Jahr habe ich diesen Zustand, und in den letzten sechs Monaten hat sich alles weiter verschlechtert.“  
+- *Arzt:* „Gab es in diesem Zeitraum belastende Ereignisse, die den Verlauf beeinflusst haben?“
+
+---
+
+**4. Antrieb, Energie und Aktivitätsniveau**  
+**Ziel:**  
+- Erfassen, ob und in welchem Maße Antriebslosigkeit, Müdigkeit und Energiemangel vorliegen.  
+
+**Anleitung:**  
+- Fragen zu alltäglichen Aktivitäten, Motivation und körperlicher Erschöpfung stellen.  
+
+**Beispielfragen:**  
+- „Fällt es Ihnen schwer, alltägliche Aufgaben zu bewältigen?“  
+- „Wie würden Sie Ihr Energielevel im Alltag einschätzen?“  
+- „Haben Sie das Gefühl, dass Ihnen der Antrieb fehlt?“  
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe kaum noch Energie und finde es schwierig, auch nur einfache Aufgaben zu erledigen.“  
+- *Arzt:* „Beeinträchtigt diese Antriebslosigkeit Ihren Beruf oder Ihr Sozialleben?“
+
+---
+
+**5. Schlafstörungen**  
+**Ziel:**  
+- Feststellen, ob es zu Ein- oder Durchschlafproblemen, Frühaufwachen oder übermäßigem Schlaf kommt.  
+
+**Anleitung:**  
+- Fragen zur Schlafdauer, Schlafqualität und etwaigen nächtlichen Unterbrechungen stellen.  
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Einschlafen oder Durchschlafen?“  
+- „Fühlen Sie sich nach dem Schlaf ausgeruht?“  
+- „Wachen Sie häufig in der Nacht auf?“  
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich schlafe unruhig, wache oft auf und fühle mich morgens überhaupt nicht erholt.“  
+- *Arzt:* „Seit wann treten diese Schlafprobleme auf, und haben Sie schon etwas dagegen unternommen?“
+
+---
+
+**6. Appetit und Gewicht**  
+**Ziel:**  
+- Veränderungen im Essverhalten und in der Gewichtsentwicklung ermitteln.  
+
+**Anleitung:**  
+- Fragen zu Appetitverlust oder -steigerung und daraus resultierenden Gewichtsveränderungen stellen.  
+
+**Beispielfragen:**  
+- „Haben Sie eine Veränderung Ihres Appetits bemerkt?“  
+- „Ist in letzter Zeit Ihr Gewicht signifikant verändert?“  
+- „Essen Sie weniger oder mehr als früher?“  
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe kaum noch Appetit und habe in den letzten Monaten deutlich an Gewicht verloren.“  
+- *Arzt:* „Wann haben Sie diese Veränderungen zum ersten Mal bemerkt und wie stark sind sie ausgeprägt?“
+
+---
+
+**7. Selbstwertgefühl und Gedankenwelt**  
+**Ziel:**  
+- Erfassung von negativen Selbstbewertungen, Gefühlen der Wertlosigkeit und selbstkritischen Gedanken.  
+
+**Anleitung:**  
+- Offene Fragen zu Selbstzweifeln, Schuldgefühlen und negativen Gedankenmustern stellen.  
+
+**Beispielfragen:**  
+- „Wie schätzen Sie Ihr Selbstwertgefühl ein?“  
+- „Haben Sie häufig Gedanken, dass Sie nichts wert sind?“  
+- „Fällt es Ihnen schwer, positive Aspekte an sich zu sehen?“  
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich fühle mich nutzlos und habe ständig das Gefühl, versagt zu haben.“  
+- *Arzt:* „Treffen diese Gedanken auch in bestimmten Situationen besonders zu?“
+
+---
+
+**8. Konzentrations- und Entscheidungsschwierigkeiten**  
+**Ziel:**  
+- Untersuchung von kognitiven Beeinträchtigungen, wie Konzentrationsschwierigkeiten, Gedächtnisprobleme und langsame Entscheidungsfindung.  
+
+**Anleitung:**  
+- Fragen zur Leistungsfähigkeit im Denken und Problemlösen stellen.  
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten, sich zu konzentrieren?“  
+- „Fällt es Ihnen schwer, Entscheidungen zu treffen?“  
+- „Haben Sie das Gefühl, dass Ihre Gedanken verlangsamt sind?“  
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ja, ich bin sehr unkonzentriert und überfordert schon bei kleinen Aufgaben.“  
+- *Arzt:* „Beeinträchtigt dies Ihre berufliche oder private Tätigkeit?“
+
+---
+
+**9. Suizidgedanken und Selbstverletzungsverhalten**  
+**Ziel:**  
+- Dringende Abklärung suizidaler Gedanken und möglicher Selbstverletzungen.  
+
+**Anleitung:**  
+- Sensible und direkte Fragen zu Suizidgedanken stellen und das Risiko einschätzen.  
+
+**Beispielfragen:**  
+- „Haben Sie Gedanken daran, sich das Leben zu nehmen?“  
+- „Gab es bereits Selbstverletzungsverhalten?“  
+- „Haben Sie einen konkreten Plan, falls es zu einem Suizidversuch käme?“  
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich denke oft darüber nach und weiß nicht, wie ich aus diesem Zustand herauskommen soll.“  
+- *Arzt:* „Diese Gedanken nehmen wir sehr ernst. Wir müssen umgehend über weitere Unterstützungsmaßnahmen sprechen.“
+
+---
+
+**10. Soziale Isolation und Alltagsaktivitäten**  
+**Ziel:**  
+- Erfassung des Ausmaßes sozialer Rückzüge und Veränderungen im Alltag.  
+
+**Anleitung:**  
+- Fragen zu sozialen Kontakten, Freizeitaktivitäten und dem Grad der Isolation stellen.  
+
+**Beispielfragen:**  
+- „Haben Sie in letzter Zeit den Kontakt zu Freunden oder Familie reduziert?“  
+- „Wie verbringen Sie Ihre Freizeit?“  
+- „Fühlen Sie sich einsam oder isoliert?“  
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich ziehe mich immer mehr zurück und vermeide jeglichen Kontakt.“  
+- *Arzt:* „Welche Auswirkungen hat diese Isolation auf Ihr Wohlbefinden?“
+
+---
+
+**11. Psychische Belastungen und Stressoren**  
+**Ziel:**  
+- Identifikation von externen Stressfaktoren, die zur Depressivität beitragen.  
+
+**Anleitung:**  
+- Nach belastenden Ereignissen im privaten oder beruflichen Umfeld fragen.  
+
+**Beispielfragen:**  
+- „Gab es in letzter Zeit einschneidende Ereignisse, die Sie belasten?“  
+- „Wie gehen Sie mit beruflichem oder familiärem Stress um?“  
+- „Fühlen Sie sich durch äußere Umstände überfordert?“  
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich bin stark belastet durch Konflikte im Familienkreis und berufliche Überforderung.“  
+- *Arzt:* „Können Sie diese Stressoren näher beschreiben?“
+
+---
+
+**12. Vorherige psychotherapeutische Maßnahmen und Behandlungen**  
+**Ziel:**  
+- Erfassen, welche therapeutischen Interventionen bereits stattgefunden haben und wie deren Wirkung war.  
+
+**Anleitung:**  
+- Fragen zu bisherigen Therapien, Medikamenteneinnahmen und stationären Behandlungen stellen.  
+
+**Beispielfragen:**  
+- „Haben Sie bereits psychotherapeutische Hilfe in Anspruch genommen?“  
+- „Welche medikamentösen Therapien wurden bereits probiert?“  
+- „Gab es stationäre Behandlungen wegen Ihrer Symptome?“  
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich war schon in mehreren Therapien, aber bisher hat mir nichts dauerhaft geholfen.“  
+- *Arzt:* „Welche Therapieformen wurden durchgeführt und wie lange wurden diese angewendet?“
+`
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese bei Depression**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Erfassen des allgemeinen körperlichen Befindens und der Vitalität.  
+**Beispielfragen:**  
+- „Wie würden Sie Ihren allgemeinen Gesundheitszustand beschreiben?“  
+- „Fühlen Sie sich oft erschöpft, auch ohne körperliche Anstrengung?“  
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich ständig ausgelaugt und kraftlos.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Feststellen von Veränderungen im Essverhalten.  
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Appetit festgestellt?“  
+- „Essen Sie mehr oder weniger als früher?“  
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe kaum noch Appetit und esse unregelmäßig.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Ungewollten Gewichtsverlust oder -zunahme feststellen.  
+**Beispielfragen:**  
+- „Ist in letzter Zeit Ihr Gewicht stark verändert?“  
+- „Haben Sie ohne bewusste Ernährungsumstellung abgenommen oder zugenommen?“  
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe in den letzten Monaten deutlich an Gewicht verloren.“
+
+---
+
+**4. Schlafqualität und -quantität**  
+**Ziel:**  
+- Bewertung der Schlafmuster und der Erholsamkeit des Schlafes.  
+**Beispielfragen:**  
+- „Wie würden Sie Ihre Schlafqualität beschreiben?“  
+- „Haben Sie Schwierigkeiten beim Ein- oder Durchschlafen?“  
+**Mögliche Antworten:**  
+- *Patient:* „Ich schlafe sehr unruhig und fühle mich morgens nicht erholt.“
+
+---
+
+**5. Thermoregulation (Wärme/Kälteempfinden)**  
+**Ziel:**  
+- Erfassung von ungewöhnlichen Wärme- oder Kälteempfindungen.  
+**Beispielfragen:**  
+- „Empfinden Sie häufig Kälte oder Hitze, auch wenn es normal temperiert ist?“  
+**Mögliche Antworten:**  
+- *Patient:* „Ich friere oft, selbst in einem warmen Raum.“
+
+---
+
+**6. Herz-Kreislauf-Reaktionen**  
+**Ziel:**  
+- Feststellen von Herzklopfen oder unregelmäßigem Herzschlag als mögliche vegetative Reaktion.  
+**Beispielfragen:**  
+- „Haben Sie häufig Herzklopfen oder ein beschleunigtes Herzgefühl?“  
+**Mögliche Antworten:**  
+- *Patient:* „Manchmal spüre ich ein starkes Herzrasen, besonders in Stresssituationen.“
+
+---
+
+**7. Magen-Darm-Funktion**  
+**Ziel:**  
+- Untersuchung von Verdauungsstörungen, Übelkeit oder anderen gastrointestinalen Symptomen.  
+**Beispielfragen:**  
+- „Haben Sie Veränderungen im Stuhlgang oder Übelkeit bemerkt?“  
+**Mögliche Antworten:**  
+- *Patient:* „Gelegentlich habe ich leichte Übelkeit, aber keine gravierenden Verdauungsprobleme.“
+
+---
+
+**8. Atemfrequenz und Atmungsmuster**  
+**Ziel:**  
+- Erfassung möglicher Veränderungen in der Atmung, wie flaches oder beschleunigtes Atmen.  
+**Beispielfragen:**  
+- „Haben Sie das Gefühl, dass sich Ihr Atem verändert hat?“  
+- „Atmen Sie schneller oder flacher als früher?“  
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe gelegentlich das Gefühl, schneller zu atmen, auch in Ruhe.“
+
+---
+
+**9. Schwitzen**  
+**Ziel:**  
+- Bewertung von übermäßigem oder unkontrolliertem Schwitzen, auch in Ruhe.  
+**Beispielfragen:**  
+- „Schwitzen Sie vermehrt, selbst in kühlen Räumen?“  
+**Mögliche Antworten:**  
+- *Patient:* „Ja, ich bemerke vermehrtes Schwitzen, besonders nachts.“
+
+---
+
+**10. Bewegungsaktivität und motorische Funktionen**  
+**Ziel:**  
+- Erfassen von Antriebslosigkeit in Bezug auf körperliche Aktivität und Bewegungsabläufe.  
+**Beispielfragen:**  
+- „Fällt es Ihnen schwer, sich zu bewegen oder aktiv zu sein?“  
+- „Haben Sie das Gefühl, dass Ihre Bewegungen langsamer geworden sind?“  
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich oft träge und finde kaum Motivation für Bewegung.“
+
+---
+
+**11. Sexualfunktion**  
+**Ziel:**  
+- Untersuchung von Veränderungen im Sexualtrieb und in der sexuellen Aktivität.  
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Sexualtrieb bemerkt?“  
+- „Beeinträchtigt dies Ihre Beziehung?“  
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe kaum noch Interesse an Sexualität und fühle mich emotional distanziert.“
+
+---
+
+**12. Stressreaktion und körperliche Belastbarkeit**  
+**Ziel:**  
+- Bewertung, wie der Körper auf Stress reagiert und wie belastbar er ist.  
+**Beispielfragen:**  
+- „Wie reagiert Ihr Körper nach stressigen Situationen?“  
+- „Fühlen Sie sich nach Belastungen besonders erschöpft?“  
+**Mögliche Antworten:**  
+- *Patient:* „Nach stressigen Phasen fühle ich mich körperlich und geistig total ausgelaugt.“
+
+---
+
+**13. Schmerzempfindung**  
+**Ziel:**  
+- Erfassung von körperlichen Schmerzen, die ohne erkennbare organische Ursache auftreten.  
+**Beispielfragen:**  
+- „Leiden Sie unter chronischen Schmerzen, wie Kopfschmerzen oder Gliederschmerzen?“  
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe oft diffuse Schmerzen, die ich nicht genau lokalisieren kann.“
+
+---
+
+**14. Veränderung der Körperwahrnehmung**  
+**Ziel:**  
+- Feststellen, ob der Patient eine veränderte Wahrnehmung seines Körpers hat (z. B. Schweregefühl oder Fremdheitsempfinden).  
+**Beispielfragen:**  
+- „Haben Sie das Gefühl, dass Ihr Körper schwer oder fremd wirkt?“  
+**Mögliche Antworten:**  
+- *Patient:* „Manchmal fühle ich mich, als ob mein Körper nicht mehr zu mir gehört.“
+
+---
+
+**15. Emotionale Reaktivität**  
+**Ziel:**  
+- Bewertung, wie stark der Patient auf emotionale Reize reagiert.  
+**Beispielfragen:**  
+- „Fällt es Ihnen schwer, auf emotionale Ereignisse zu reagieren?“  
+- „Haben Sie das Gefühl, emotional abgestumpft zu sein?“  
+**Mögliche Antworten:**  
+- *Patient:* „Ich reagiere kaum mehr auf positive oder negative Ereignisse.“
+
+---
+
+**16. Allgemeines Wohlbefinden**  
+**Ziel:**  
+- Zusammenfassende Einschätzung des gesamten vegetativen Zustands und des subjektiven Wohlbefindens.  
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden derzeit einschätzen?“  
+- „Gibt es Aspekte, die Sie als besonders belastend empfinden?“  
+**Mögliche Antworten:**  
+- *Patient:* „Mein allgemeines Wohlbefinden ist stark beeinträchtigt – ich fühle mich ständig am Limit.“
+`
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob bereits frühere psychische oder somatische Erkrankungen vorliegen, die den Verlauf der Depression beeinflussen können.  
+
+**Beispiele:**  
+- Frühere depressive Episoden, Angststörungen, bipolare Störungen.  
+- Chronische körperliche Erkrankungen (z. B. Herz-Kreislauf-Erkrankungen, Diabetes, Schilddrüsenerkrankungen).  
+
+**Beispielfragen:**  
+- „Hatten Sie bereits in der Vergangenheit depressive Episoden oder andere psychische Erkrankungen?“  
+- „Leiden Sie an chronischen somatischen Erkrankungen, die Ihre Stimmung beeinflussen könnten?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich hatte in der Vergangenheit mehrere depressive Episoden und leide an einer leichten Schilddrüsenunterfunktion.“
+`
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Ermitteln, ob in der Vergangenheit chirurgische Eingriffe oder invasive Behandlungen stattgefunden haben, die als belastende Ereignisse gewertet werden können.  
+
+**Beispielfragen:**  
+- „Wurden Sie bereits operiert, und wenn ja, in welchem Zusammenhang?“  
+- „Gab es postoperativ Komplikationen oder längere Erholungsphasen?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich wurde vor einigen Jahren an Herzproblemen operiert, was eine erhebliche Belastung darstellte.“
+`
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche medikamentösen Behandlungen aktuell oder in der Vergangenheit zur Behandlung psychischer und somatischer Beschwerden eingenommen wurden.  
+
+**Beispiele:**  
+- Antidepressiva (SSRIs, SNRIs, trizyklische Antidepressiva), Anxiolytika, Stimmungsstabilisatoren.  
+- Medikamente gegen chronische körperliche Erkrankungen, die indirekt die Stimmung beeinflussen können.  
+
+**Beispielfragen:**  
+- „Welche Medikamente nehmen Sie derzeit ein?“  
+- „Gab es in der Vergangenheit Änderungen in Ihrer Medikation und wie haben Sie darauf reagiert?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich nehme seit sechs Monaten einen SSRI, aber bislang spüre ich nur geringe Verbesserungen.“
+`
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Identifizieren, ob Allergien oder Unverträglichkeiten vorliegen, die Einfluss auf die medikamentöse Behandlung haben könnten.  
+
+**Beispielfragen:**  
+- „Haben Sie bekannte Allergien gegen bestimmte Medikamente?“  
+- „Reagieren Sie empfindlich auf bestimmte Nahrungsmittel oder Substanzen?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich reagiere allergisch auf bestimmte NSAR.“
+`
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen potenzieller Risikofaktoren und schädlicher Einflüsse, die zur Entstehung oder Verschlimmerung der Depression beitragen können.  
+
+**Beispiele:**  
+- Chronischer beruflicher und privater Stress, belastende Lebensereignisse, soziale Isolation.  
+
+**Beispielfragen:**  
+- „Erleben Sie anhaltenden Stress im Alltag?“  
+- „Gab es kürzlich Ereignisse, die Sie emotional stark belastet haben?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich bin stark belastet durch hohe Arbeitsanforderungen und familiäre Konflikte.“
+`
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Ermitteln, ob in der Familie psychische Erkrankungen, insbesondere Depressionen oder bipolare Störungen, vorkommen.  
+
+**Beispielfragen:**  
+- „Gibt es in Ihrer Familie Fälle von Depression oder anderen psychischen Erkrankungen?“  
+- „Wurden bei nahen Angehörigen ähnliche Symptome beobachtet?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Meine Mutter und mein Bruder litten zeitweise an depressiven Verstimmungen.“
+`
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen Lebensumstände, des beruflichen Umfelds, der Wohnsituation und des Unterstützungsnetzwerks.  
+
+**Relevante Bereiche:**  
+- Berufliche Belastungen, familiäre Beziehungen, Freizeitaktivitäten, soziale Isolation.  
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre aktuelle Lebenssituation beschreiben?“  
+- „Haben Sie ein stabiles und unterstützendes soziales Umfeld?“  
+- „Beeinflusst Ihr Beruf Ihre psychische Gesundheit?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich isoliert und mein Arbeitsumfeld ist sehr stressig, was meine depressive Symptomatik verstärkt.“
+`
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung anderer psychischer Störungen oder somatischer Erkrankungen, die depressive Symptome verursachen oder begleiten können.  
+
+**Beispiele:**  
+1. Bipolare Störung (Differenzierung zwischen depressiven und manischen Phasen)  
+2. Angststörungen (z. B. generalisierte Angststörung, Panikstörung)  
+3. Somatoforme Störungen (körperliche Beschwerden ohne organische Ursache)  
+4. Schizophrenie (bei Vorliegen von psychotischen Symptomen)  
+5. Anpassungsstörung (bei kürzlich aufgetretenen Belastungen)  
+
+**Beispielfragen:**  
+- „Haben Sie neben Ihrer Niedergeschlagenheit auch Phasen extremer Hochstimmung erlebt?“  
+- „Sind Ihre Symptome konstant oder schwanken sie im Tagesverlauf?“  
+- „Wurden andere psychiatrische Erkrankungen bereits diagnostiziert oder ausgeschlossen?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe überwiegend depressive Symptome, ohne Anzeichen von manischen Episoden.“
+`
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Auf Basis der gesammelten anamnestischen Daten, vegetativen Befunde und psychischen Symptome einen vorläufigen Diagnosevorschlag zu formulieren.  
+
+**Kriterien:**  
+- Anhaltende depressive Stimmung über mindestens zwei Wochen (in der Regel länger)  
+- Verlust von Interesse und Freude an früher positiven Aktivitäten  
+- Deutliche Veränderungen in Schlaf, Appetit, Gewicht und Energie  
+- Konzentrationsstörungen, negative Selbstwahrnehmung und Gefühle der Wertlosigkeit  
+- Vorhandensein von suizidalen Gedanken oder Selbstverletzungsverhalten  
+
+**Beispielfazit:**  
+- „Aufgrund der seit über sechs Monaten anhaltenden depressiven Symptomatik und der signifikanten Beeinträchtigung des Alltags ist der Verdacht auf eine Major Depression gerechtfertigt.“
+`
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung weiterer diagnostischer und therapeutischer Schritte zur Bestätigung der Diagnose und zur Planung der Behandlung.  
+
+**Vorgeschlagene Maßnahmen:**
+
+**Psychologische Tests und Assessments:**  
+- Einsatz standardisierter Fragebögen wie Beck-Depressions-Inventar (BDI) oder Hamilton Depression Rating Scale (HDRS)  
+- Durchführung eines ausführlichen klinischen Interviews zur Vertiefung der Symptomatik  
+
+**Laboruntersuchungen:**  
+- Blutuntersuchungen zur Überprüfung von Hormonwerten (z. B. Schilddrüsenparameter)  
+- Bestimmung von Entzündungsparametern zur Ausschlussdiagnostik somatischer Ursachen  
+
+**Bildgebende Verfahren (bei Bedarf):**  
+- Neuroimaging (z. B. MRT des Gehirns), falls neurodegenerative Prozesse vermutet werden  
+
+**Therapeutische Interventionen:**  
+- Einleitung oder Anpassung einer medikamentösen Therapie (z. B. Antidepressiva)  
+- Beginn einer psychotherapeutischen Behandlung (z. B. kognitive Verhaltenstherapie, psychodynamische Therapie)  
+- Zusätzliche Maßnahmen wie Bewegungstherapie, Ernährungsberatung und soziale Unterstützungsprogramme  
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, an einem ausführlichen psychologischen Assessment teilzunehmen?“  
+- „Wie stehen Sie zu einer kombinierten Therapie aus Medikamenten und Psychotherapie?“
+    `
+  },
+},
+rippenfeaktur_prellung: {
+  name: "Rippenfeaktur / Prellung",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Rippenfeaktur / Prellung**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassen, welches traumatische Ereignis oder welche Beschwerden den Patienten veranlasst haben, sich vorzustellen.
+
+**Anleitung:**  
+- Offene Fragen stellen, um den Unfallhergang und die unmittelbaren Beschwerden zu eruieren.
+
+**Beispielfragen:**  
+- „Was ist passiert, dass Sie heute hier sind?“  
+- „Wann und wie haben Sie sich verletzt?“  
+- „Welche Beschwerden haben Sie unmittelbar nach dem Trauma bemerkt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich bin von einer Leiter gefallen und habe seitdem starke Schmerzen im Brustbereich.“  
+- *Arzt:* „Sind die Schmerzen konstant oder wechseln sie in ihrer Intensität?“
+
+---
+
+**2. Schmerzlokalisation und -charakter**  
+**Ziel:**  
+- Die genaue Lokalisation der Schmerzen sowie deren Art (dumpf, stechend, brennend) erfassen.
+
+**Anleitung:**  
+- Fragen stellen, um herauszufinden, welche Seite betroffen ist und wie sich der Schmerz äußert.
+
+**Beispielfragen:**  
+- „Auf welcher Seite des Brustkorbs haben Sie die Schmerzen?“  
+- „Wie würden Sie den Schmerz beschreiben – dumpf, stechend oder brennend?“  
+- „Strahlen die Schmerzen in andere Bereiche aus, z. B. in den Rücken oder in den Arm?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Der Schmerz ist auf der rechten Seite lokalisiert, dumpf und wird bei Bewegung stärker.“  
+- *Arzt:* „Verstärken sich die Schmerzen beim tiefen Einatmen?“
+
+---
+
+**3. Zeitverlauf der Beschwerden**  
+**Ziel:**  
+- Den Beginn und die Entwicklung der Schmerzen seit dem Trauma klären.
+
+**Anleitung:**  
+- Nach dem Zeitpunkt des Unfalls und der Progression der Symptome fragen.
+
+**Beispielfragen:**  
+- „Wann genau haben Sie den Unfall erlitten?“  
+- „Wie haben sich Ihre Beschwerden seit dem Trauma entwickelt?“  
+- „Gab es Zeiten der Besserung oder Verschlechterung?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Schmerzen traten unmittelbar nach dem Sturz auf und sind seither konstant.“  
+- *Arzt:* „Haben Sie schon Schmerzmittel oder andere Maßnahmen ergriffen?“
+
+---
+
+**4. Atembeschwerden und Atmungsmuster**  
+**Ziel:**  
+- Klären, ob die Rippenverletzung zu Atemproblemen führt.
+
+**Anleitung:**  
+- Fragen stellen, ob tiefe Atemzüge, Husten oder Atemnot auftreten.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten, tief einzuatmen?“  
+- „Fühlen Sie sich kurzatmig oder haben Sie Schmerzen beim Atmen?“  
+- „Verändern sich die Beschwerden beim Husten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Das Einatmen verursacht starke Schmerzen, und ich fühle mich manchmal kurzatmig.“  
+- *Arzt:* „Treten diese Atembeschwerden nur bei Bewegung oder auch in Ruhe auf?“
+
+---
+
+**5. Begleitsymptome und sichtbare Verletzungen**  
+**Ziel:**  
+- Ermitteln, ob zusätzlich zu den Schmerzen Schwellungen, Blutergüsse oder andere sichtbare Prellungen vorhanden sind.
+
+**Anleitung:**  
+- Fragen zu sichtbaren Verletzungen und weiteren Symptomen stellen.
+
+**Beispielfragen:**  
+- „Haben Sie Blutergüsse oder Schwellungen im Bereich der Rippen bemerkt?“  
+- „Gab es Anzeichen von inneren Blutungen oder anderen Komplikationen?“  
+- „Haben Sie Übelkeit oder Schwindel verspürt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe deutliche blaue Flecken und Prellungen, aber keine Hinweise auf innere Blutungen.“  
+- *Arzt:* „Treten diese Begleitsymptome synchron mit den Schmerzen auf?“
+
+---
+
+**6. Funktionseinschränkung und Alltagsbeeinträchtigung**  
+**Ziel:**  
+- Erfassen, inwieweit die Verletzung die Beweglichkeit und alltägliche Aktivitäten einschränkt.
+
+**Anleitung:**  
+- Fragen zur Beeinträchtigung von Bewegungen und alltäglichen Aufgaben stellen.
+
+**Beispielfragen:**  
+- „Beeinträchtigen die Schmerzen Ihre Beweglichkeit?“  
+- „Haben Sie Schwierigkeiten, sich zu bücken, zu drehen oder zu atmen?“  
+- „Wie stark schätzen Sie die Einschränkung auf einer Skala von 0 bis 10 ein?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich kann mich kaum mehr bewegen, besonders beim Drehen und Bücken.“  
+- *Arzt:* „Erleben Sie auch Einschränkungen bei alltäglichen Aktivitäten wie Gehen oder Sitzen?“
+
+---
+
+**7. Vorherige Schmerzbehandlungen und Selbstmaßnahmen**  
+**Ziel:**  
+- Erfassen, welche Maßnahmen der Patient bereits zur Schmerzlinderung ergriffen hat.
+
+**Anleitung:**  
+- Fragen zur Einnahme von Schmerzmitteln, Ruhigstellung und Selbsthilfemaßnahmen stellen.
+
+**Beispielfragen:**  
+- „Haben Sie seit dem Unfall Schmerzmittel eingenommen?“  
+- „Welche Selbstmaßnahmen haben Sie bereits ergriffen (z. B. Kühlen, Ruhigstellung)?“  
+- „Wie haben diese Maßnahmen auf Ihre Schmerzen gewirkt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe Ibuprofen genommen, was die Schmerzen kurzfristig etwas reduziert hat.“  
+- *Arzt:* „Haben Sie den betroffenen Bereich zusätzlich gekühlt oder geschont?“
+
+---
+
+**8. Notfallmaßnahmen und erste medizinische Versorgung**  
+**Ziel:**  
+- Klären, ob am Unfallort oder unmittelbar danach Erste-Hilfe-Maßnahmen durchgeführt wurden.
+
+**Anleitung:**  
+- Fragen zur Erstversorgung und zum Transport ins Krankenhaus stellen.
+
+**Beispielfragen:**  
+- „Wurde am Unfallort Erste Hilfe geleistet?“  
+- „Mussten Sie direkt ins Krankenhaus gebracht werden?“  
+- „Welche Maßnahmen wurden unmittelbar nach dem Unfall ergriffen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Am Unfallort erhielt ich Erste Hilfe und wurde dann zur weiteren Abklärung ins Krankenhaus eingeliefert.“  
+- *Arzt:* „Welche Behandlungen wurden dort bereits durchgeführt?“
+
+---
+
+**9. Vorerfahrungen mit ähnlichen Verletzungen**  
+**Ziel:**  
+- Erfragen, ob der Patient schon einmal eine Rippenverletzung oder ähnliche Traumata erlitten hat.
+
+**Anleitung:**  
+- Fragen zu früheren Verletzungen und deren Verlauf stellen.
+
+**Beispielfragen:**  
+- „Hatten Sie schon einmal eine Rippenfraktur oder Prellung?“  
+- „Wie verlief die Heilung bei früheren Verletzungen?“  
+- „Gab es Komplikationen bei früheren Traumen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Vor einigen Jahren hatte ich eine Rippenprellung, die ohne Komplikationen verheilte.“  
+- *Arzt:* „Wurden damals spezielle Maßnahmen ergriffen, die sich auf den jetzigen Fall auswirken könnten?“
+
+---
+
+**10. Einschätzung der Schmerzintensität**  
+**Ziel:**  
+- Quantitative Bewertung der Schmerzen zur Einschätzung des Schweregrades der Verletzung.
+
+**Anleitung:**  
+- Den Patienten bitten, die Schmerzen auf einer Skala von 0 (keine Schmerzen) bis 10 (unerträgliche Schmerzen) einzustufen.
+
+**Beispielfragen:**  
+- „Wie stark schmerzen Sie aktuell auf einer Skala von 0 bis 10?“  
+- „Ändert sich die Schmerzintensität bei bestimmten Bewegungen oder in Ruhe?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich würde meine Schmerzen mit 7 bewerten, besonders bei Bewegung steigen sie an.“  
+- *Arzt:* „Nimmt die Schmerzintensität im Tagesverlauf zu oder ab?“
+
+---
+
+**11. Einfluss auf die Atmung und Brustkorbfunktion**  
+**Ziel:**  
+- Untersuchen, ob die Rippenverletzung die Atemfunktion beeinträchtigt.
+
+**Anleitung:**  
+- Fragen zu Atembeschwerden, Husten und tiefem Einatmen stellen.
+
+**Beispielfragen:**  
+- „Haben Sie Schmerzen beim tiefen Einatmen oder Husten?“  
+- „Fällt es Ihnen schwer, normal zu atmen?“  
+- „Beeinträchtigt die Verletzung Ihre Brustkorbbewegung?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Tiefes Einatmen ist sehr schmerzhaft, und ich habe oft das Gefühl, nicht genug Luft zu bekommen.“  
+- *Arzt:* „Sind diese Atemprobleme konstant oder treten sie nur bei Bewegung auf?“
+
+---
+
+**12. Allgemeine Körperwahrnehmung nach dem Trauma**  
+**Ziel:**  
+- Erfassen, wie der Patient seinen allgemeinen körperlichen Zustand nach dem Unfall wahrnimmt.
+
+**Anleitung:**  
+- Fragen zu allgemeinem Unwohlsein, Schwindel oder Übelkeit stellen.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich nach dem Unfall generell schwach oder unwohl?“  
+- „Haben Sie Schwindel oder Übelkeit bemerkt?“  
+- „Gibt es weitere Symptome, die Sie als Folge des Traumas empfinden?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich fühle mich oft schwach und habe manchmal leichte Übelkeit, besonders nach dem Aufstehen.“  
+- *Arzt:* „Sind diese Symptome neu aufgetreten oder haben Sie sie schon früher erlebt?“
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese bei Rippenfeaktur / Prellung**
+
+---
+
+**1. Allgemeiner körperlicher Zustand**  
+**Ziel:**  
+- Einschätzung des generellen körperlichen Befindens und der Belastbarkeit nach dem Trauma.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihren allgemeinen körperlichen Zustand seit dem Unfall beschreiben?“  
+- „Fühlen Sie sich schwächer als vor dem Unfall?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich insgesamt geschwächt und weniger belastbar.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Erfragen, ob Schmerzen oder Stress das Essverhalten verändert haben.
+
+**Beispielfragen:**  
+- „Haben Sie seit dem Unfall Veränderungen in Ihrem Appetit festgestellt?“  
+- „Essen Sie weniger, weil Sie Schmerzen haben?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich esse etwas weniger, da die Schmerzen auch beim Kauen und Schlucken spürbar sind.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Feststellen, ob sich durch veränderten Appetit oder Stress das Gewicht verändert hat.
+
+**Beispielfragen:**  
+- „Ist Ihr Gewicht seit dem Unfall verändert?“  
+- „Haben Sie ungewollt abgenommen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe in den letzten Wochen ein wenig an Gewicht verloren.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität, insbesondere im Hinblick auf schmerzbedingte Schlafstörungen.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Einschlafen oder Durchschlafen?“  
+- „Wird Ihr Schlaf durch die Schmerzen gestört?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich schlafe unruhig und werde häufig durch Schmerzen geweckt.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Beobachtung, ob es zu ungewöhnlichen Kälte- oder Hitzeempfindungen kommt, bedingt durch Stress oder Schmerzen.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft zu kalt oder zu warm?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Gelegentlich fühle ich mich besonders kalt, vor allem nachts.“
+
+---
+
+**6. Herz-Kreislauf-Reaktionen**  
+**Ziel:**  
+- Erfassen, ob Schmerzen oder Stress zu einer Erhöhung der Herzfrequenz oder zu Blutdruckschwankungen führen.
+
+**Beispielfragen:**  
+- „Haben Sie bemerkt, dass Ihr Herz schneller schlägt?“  
+- „Gab es Veränderungen in Ihrem Blutdruck?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich spüre manchmal ein schnelleres Herzklopfen, besonders wenn die Schmerzen sehr stark sind.“
+
+---
+
+**7. Magen-Darm-Funktion**  
+**Ziel:**  
+- Erfragen, ob durch den Stress oder die Schmerzmedikation Verdauungsprobleme auftreten.
+
+**Beispielfragen:**  
+- „Haben Sie Verdauungsstörungen oder Übelkeit bemerkt?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Gelegentlich habe ich leichte Übelkeit, aber nichts Gravierendes.“
+
+---
+
+**8. Atemverhalten**  
+**Ziel:**  
+- Untersuchung, ob die Schmerzen das normale Atmungsmuster beeinflussen.
+
+**Beispielfragen:**  
+- „Atmen Sie flacher als gewohnt?“  
+- „Beeinträchtigt die Verletzung Ihre normale Atmung?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ja, ich atme oft flach, weil tiefes Einatmen schmerzhaft ist.“
+
+---
+
+**9. Schwitzen**  
+**Ziel:**  
+- Erfassung von vermehrtem Schwitzen als Reaktion auf Schmerz oder Stress.
+
+**Beispielfragen:**  
+- „Schwitzen Sie vermehrt, auch in kühlen Räumen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich bemerke vermehrtes Schwitzen, besonders wenn die Schmerzen sehr stark sind.“
+
+---
+
+**10. Beweglichkeit und motorische Funktionen**  
+**Ziel:**  
+- Bewertung, inwieweit die Verletzung die körperliche Bewegung beeinträchtigt.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten, sich zu bewegen?“  
+- „Fühlen Sie sich steif oder unbeweglich?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich träge und habe Schwierigkeiten bei schnellen Bewegungen.“
+
+---
+
+**11. Schmerzempfindung im vegetativen Bereich**  
+**Ziel:**  
+- Erfassen, ob zusätzlich zu den lokalisierten Schmerzen auch unspezifische vegetative Beschwerden auftreten.
+
+**Beispielfragen:**  
+- „Haben Sie diffuse Schmerzen im ganzen Körper, die nicht direkt an der Verletzungsstelle liegen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Manchmal fühle ich allgemeine Schmerzen, die ich nicht genau zuordnen kann.“
+
+---
+
+**12. Allgemeines Wohlbefinden und Erschöpfung**  
+**Ziel:**  
+- Zusammenfassende Bewertung des vegetativen Zustands.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden beschreiben?“  
+- „Fühlen Sie sich oft müde und erschöpft?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich insgesamt sehr ausgelaugt und leidgeprüft.“
+
+---
+
+**13. Psychische Stressreaktion**  
+**Ziel:**  
+- Feststellen, ob der körperliche Schmerz zusätzlich psychischen Stress verursacht.
+
+**Beispielfragen:**  
+- „Belasten Sie die anhaltenden Schmerzen auch emotional?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ja, die Schmerzen setzen mich zusätzlich emotional unter Druck.“
+
+---
+
+**14. Tagesverlauf der vegetativen Symptome**  
+**Ziel:**  
+- Untersuchung, ob sich die vegetativen Symptome im Tagesverlauf verändern.
+
+**Beispielfragen:**  
+- „Verändern sich Ihre Beschwerden im Laufe des Tages?“  
+- „Gibt es Zeiten, in denen Sie sich besser oder schlechter fühlen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Die Schmerzen sind morgens am stärksten, bessern sich aber etwas im Laufe des Tages.“
+
+---
+
+**15. Auswirkung auf den Kreislauf bei Belastung**  
+**Ziel:**  
+- Feststellen, ob körperliche Belastung zu Kreislaufproblemen führt.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich bei Anstrengung schwindelig oder benommen?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Bei körperlicher Belastung werde ich manchmal schwindelig.“
+
+---
+
+**16. Zusammenfassendes vegetatives Gesamtbild**  
+**Ziel:**  
+- Übergreifende Einschätzung des vegetativen Zustands im Zusammenhang mit der Rippenverletzung.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr vegetatives Befinden insgesamt beschreiben?“  
+- „Welche vegetativen Symptome belasten Sie am meisten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Insgesamt fühle ich mich stark beeinträchtigt, vor allem durch den gestörten Schlaf und die Atemprobleme.“
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob vorbestehende Erkrankungen (z. B. Osteoporose, chronische Lungenerkrankungen) vorliegen, die den Heilungsprozess oder das Verletzungsrisiko beeinflussen könnten.
+
+**Beispielfragen:**  
+- „Leiden Sie an Knochenerkrankungen wie Osteoporose?“  
+- „Gab es in der Vergangenheit bereits Knochenbrüche oder Rippenverletzungen?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Bei mir wurde eine leichte Osteoporose diagnostiziert, aber bisher hatte ich keine Knochenbrüche.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob bereits operative Eingriffe im Thoraxbereich stattgefunden haben, die für den aktuellen Zustand relevant sein könnten.
+
+**Beispielfragen:**  
+- „Wurden Sie schon einmal operativ am Brustkorb behandelt?“  
+- „Gab es nach früheren Eingriffen Komplikationen, die Ihre Heilung beeinträchtigen könnten?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich wurde bisher nicht operiert, abgesehen von kleineren ambulanten Eingriffen.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche medikamentösen Behandlungen aktuell oder in der Vergangenheit zur Schmerzlinderung und zur Behandlung vorbestehender Erkrankungen eingenommen wurden.
+
+**Beispielfragen:**  
+- „Welche Schmerzmittel nehmen Sie seit dem Unfall ein?“  
+- „Nehmen Sie Medikamente zur Behandlung von Osteoporose oder anderen chronischen Erkrankungen?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich nehme regelmäßig Ibuprofen zur Schmerzlinderung und erhalte Medikamente gegen Osteoporose.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob bekannte Allergien oder Unverträglichkeiten vorliegen, die bei der Behandlung berücksichtigt werden müssen.
+
+**Beispielfragen:**  
+- „Haben Sie Allergien gegen Schmerzmittel oder andere Medikamente?“  
+- „Gab es in der Vergangenheit unerwünschte Reaktionen auf Medikamente?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe keine bekannten Allergien gegen Medikamente.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen potenzieller Risikofaktoren, die zur Verletzung oder zu Komplikationen beitragen könnten.
+
+**Beispiele:**  
+- Körperlich anstrengende Arbeit, Sturzrisiken, Rauchen.
+
+**Beispielfragen:**  
+- „Arbeiten Sie in einem Umfeld, in dem Sturzgefahr besteht?“  
+- „Rauchen Sie, und wenn ja, wie viel?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite in einem körperlich anspruchsvollen Beruf und rauche gelegentlich.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie Knochenerkrankungen wie Osteoporose oder häufige Knochenbrüche vorkommen, die das Risiko erhöhen könnten.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie Fälle von Osteoporose oder Knochenbrüchen?“  
+- „Leiden nahe Angehörige an chronischen Knochenerkrankungen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Bei mehreren älteren Familienmitgliedern wurde Osteoporose diagnostiziert.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen und beruflichen Lebensumstände, die Einfluss auf den Unfall und den Heilungsverlauf haben könnten.
+
+**Relevante Bereiche:**  
+- Berufliche Belastung, körperliche Arbeit, Unterstützung im Alltag, Wohnsituation.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre berufliche Situation beschreiben?“  
+- „Haben Sie Unterstützung im Alltag, um sich zu erholen?“  
+- „Beeinflusst Ihre Wohnsituation Ihre Genesung?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite in einem körperlich fordernden Beruf und habe nur begrenzte Unterstützung im Haushalt.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung anderer Verletzungen oder Zustände, die ähnliche Symptome wie eine Rippenfeaktur oder Prellung verursachen können.
+
+**Beispiele:**  
+1. Pneumothorax – insbesondere bei komplizierten Rippenfrakturen.  
+2. Interkostalneuralgie – nervenbedingte Brustschmerzen.  
+3. Kontusionen des Brustkorbs ohne Fraktur – reine Weichteilverletzungen.  
+4. Verletzungen der Weichteile im Thoraxbereich.
+
+**Beispielfragen:**  
+- „Gab es Anzeichen für einen Pneumothorax, wie plötzliche Atemnot?“  
+- „Können die Schmerzen auch durch eine nervale Beteiligung erklärt werden?“  
+- „Wurden andere Verletzungen im Rahmen der Bildgebung ausgeschlossen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Die Röntgenuntersuchung ergab keine Hinweise auf einen Pneumothorax, es handelt sich um eine isolierte Prellung bzw. Fraktur.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags auf Basis des Traumas, der klinischen Untersuchung und der vorliegenden Symptome.
+
+**Kriterien:**  
+- Vorliegen eines traumatischen Ereignisses mit akuten, lokalisierten Brustschmerzen.  
+- Klinische Hinweise auf eine Rippenfeaktur oder Prellung, ggf. eingeschränkte Atemfunktion.  
+- Begleitende Symptome wie Prellungen, Schwellungen und funktionelle Einschränkungen.
+
+**Beispielfazit:**  
+- „Aufgrund des berichteten Traumas und der klinischen Befunde besteht der Verdacht auf eine Rippenfeaktur bzw. -prellung, welcher durch weitere bildgebende Verfahren bestätigt werden sollte.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung weiterer diagnostischer und therapeutischer Schritte zur Bestätigung der Diagnose und Planung der Behandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Bildgebende Verfahren:**  
+- **Röntgen-Thorax:** Zur Darstellung der Rippen und zum Ausschluss von Frakturen oder einem Pneumothorax.  
+- **CT-Thorax:** Bei unklaren Befunden oder Verdacht auf komplizierte Frakturen.
+
+**Laboruntersuchungen:**  
+- Blutbild und Entzündungsparameter zur Ausschlussdiagnostik von Begleitinfektionen.
+
+**Therapeutische Interventionen:**  
+- Konservative Therapie: Schmerzlinderung durch NSAR oder Paracetamol, Schonung, Kühlen und Atemübungen.  
+- Physiotherapie: Zur Verbesserung der Beweglichkeit und zur Vorbeugung von Komplikationen (z. B. Pneumonie).  
+- Operative Maßnahmen: Bei schweren oder instabilen Frakturen, falls indiziert.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, sich einer Röntgenuntersuchung des Thorax zu unterziehen?“  
+- „Wie wirken die von Ihnen eingenommenen Schmerzmittel auf Ihre Beschwerden?“  
+- „Würden Sie einer physiotherapeutischen Behandlung zur Unterstützung der Genesung zustimmen?“
+    `
+  },
+},
+ulcus_duodeni: {
+  name: "Ulcus duodeni",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Ulcus duodeni**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Den Grund des Arztbesuchs in Bezug auf oberbauchbezogene Beschwerden erfassen.
+
+**Anleitung:**  
+- Offene Fragen stellen, um die Hauptbeschwerden und den Anlass des Besuchs zu eruieren.
+
+**Beispielfragen:**  
+- „Was führt Sie heute zu uns?“  
+- „Welche Beschwerden haben Sie im Oberbauch?“  
+- „Gab es ein auslösendes Ereignis oder Veränderungen in Ihrem Gesundheitszustand?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe seit einigen Wochen immer wieder starke Schmerzen im Oberbauch, besonders nach dem Essen.“  
+- *Arzt:* „Sind die Schmerzen konstant oder treten sie in Intervallen auf?“
+
+---
+
+**2. Schmerzlokalisation und -charakter**  
+**Ziel:**  
+- Die genaue Lokalisation und den Charakter der Schmerzen bestimmen, z. B. epigastrisch, drückend oder brennend.
+
+**Anleitung:**  
+- Detaillierte Fragen zu Schmerzcharakteristika und möglichen Ausstrahlungen stellen.
+
+**Beispielfragen:**  
+- „Wo genau spüren Sie die Schmerzen?“  
+- „Wie würden Sie den Schmerz beschreiben – brennend, drückend oder stechend?“  
+- „Strahlen die Schmerzen in den Rücken oder in die Brust aus?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Der Schmerz ist vorwiegend epigastrisch, brennend und wird nach dem Essen stärker.“  
+- *Arzt:* „Verändert sich der Schmerz in Abhängigkeit von der Nahrungsaufnahme?“
+
+---
+
+**3. Zeitverlauf und Symptomdynamik**  
+**Ziel:**  
+- Den Beginn, die Dauer und die zeitliche Entwicklung der Symptome klären.
+
+**Anleitung:**  
+- Nach dem Zeitpunkt des Auftretens, möglichen Schwankungen und einer Chronifizierung fragen.
+
+**Beispielfragen:**  
+- „Seit wann leiden Sie an diesen Beschwerden?“  
+- „Sind die Schmerzen täglich vorhanden oder treten sie sporadisch auf?“  
+- „Haben Sie bereits Phasen der Besserung oder Verschlechterung bemerkt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Beschwerden bestehen seit etwa drei Monaten und haben sich in den letzten Wochen intensiviert.“  
+- *Arzt:* „Gab es belastende Ereignisse, die diesen Verlauf beeinflusst haben könnten?“
+
+---
+
+**4. Zusammenhang mit Nahrungsaufnahme**  
+**Ziel:**  
+- Ermitteln, ob und wie die Nahrungsaufnahme die Beschwerden beeinflusst.
+
+**Anleitung:**  
+- Fragen stellen, wie sich die Symptome in Relation zu Mahlzeiten verhalten.
+
+**Beispielfragen:**  
+- „Treffen die Schmerzen direkt nach dem Essen ein?“  
+- „Verbessert oder verschlechtert sich Ihr Befinden in Abhängigkeit von der Art der Nahrung?“  
+- „Haben Sie Veränderungen in Ihrem Essverhalten bemerkt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Nach schweren Mahlzeiten spüre ich oft einen starken, brennenden Schmerz im Oberbauch.“  
+- *Arzt:* „Gibt es bestimmte Nahrungsmittel, die Ihre Beschwerden verstärken?“
+
+---
+
+**5. Begleitsymptome**  
+**Ziel:**  
+- Erfassen von zusätzlichen Symptomen, die typisch für ein Ulcus duodeni sein können.
+
+**Anleitung:**  
+- Nach Übelkeit, Erbrechen, Völlegefühl, Sodbrennen oder Gewichtsverlust fragen.
+
+**Beispielfragen:**  
+- „Haben Sie Übelkeit oder Erbrechen bemerkt?“  
+- „Gibt es Anzeichen von Sodbrennen oder Völlegefühl?“  
+- „Ist in letzter Zeit ungewollt Gewicht verloren gegangen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich leide auch unter gelegentlicher Übelkeit und habe in den letzten Monaten etwas abgenommen.“  
+- *Arzt:* „Treten diese Begleitsymptome gleichzeitig mit den Schmerzen auf?“
+
+---
+
+**6. Veränderungen des Stuhlgangs**  
+**Ziel:**  
+- Klären, ob es Anzeichen für Blut im Stuhl (Meläna) oder andere Auffälligkeiten gibt.
+
+**Anleitung:**  
+- Fragen stellen, ob der Patient Veränderungen im Stuhl bemerkt hat.
+
+**Beispielfragen:**  
+- „Haben Sie bemerkt, dass Ihr Stuhl dunkler oder teerartig ist?“  
+- „Gab es Veränderungen in der Stuhlfrequenz?“  
+- „Haben Sie Blut im Stuhl bemerkt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Mir ist aufgefallen, dass mein Stuhl manchmal dunkler wirkt, aber ich bin mir nicht sicher, ob es Blut ist.“  
+- *Arzt:* „Das werden wir durch weitere Untersuchungen klären.“
+
+---
+
+**7. Medikamentenanamnese**  
+**Ziel:**  
+- Erfassen, ob Medikamente, insbesondere NSAR, eingenommen werden, die zur Entstehung eines Ulcus duodeni beitragen können.
+
+**Anleitung:**  
+- Fragen, welche Medikamente regelmäßig eingenommen werden, insbesondere Schmerzmittel oder andere gastrointestinale belastende Substanzen.
+
+**Beispielfragen:**  
+- „Nehmen Sie regelmäßig Schmerzmittel ein, wie z. B. Ibuprofen oder Aspirin?“  
+- „Haben Sie in letzter Zeit neue Medikamente begonnen?“  
+- „Gab es Veränderungen in der Medikation, die mit dem Auftreten der Beschwerden zusammenfallen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich nehme seit einigen Monaten regelmäßig NSAR wegen chronischer Rückenschmerzen.“  
+- *Arzt:* „Das könnte ein Risikofaktor für Ihr Ulcus darstellen.“
+
+---
+
+**8. Vorherige Diagnostik und Behandlungen**  
+**Ziel:**  
+- Erfragen, ob bereits diagnostische Maßnahmen (z. B. Gastroskopie) oder Behandlungen durchgeführt wurden.
+
+**Anleitung:**  
+- Fragen zu früheren Untersuchungen und deren Ergebnissen stellen.
+
+**Beispielfragen:**  
+- „Wurden bei Ihnen bereits gastroskopische Untersuchungen durchgeführt?“  
+- „Gab es in der Vergangenheit schon Hinweise auf ein Ulcus?“  
+- „Welche Behandlungen haben Sie bereits erhalten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Vor einigen Monaten wurde bei mir eine Gastroskopie durchgeführt, aber es wurden keine eindeutigen Befunde festgestellt.“  
+- *Arzt:* „Welche Therapieformen wurden bisher versucht?“
+
+---
+
+**9. Vorerkrankungen im Gastrointestinalen Bereich**  
+**Ziel:**  
+- Erfassen, ob es bereits bekannte Magen-Darm-Erkrankungen gibt, wie Gastritis oder Helicobacter-pylori-Infektion.
+
+**Anleitung:**  
+- Fragen zu früheren Diagnosen und deren Behandlung stellen.
+
+**Beispielfragen:**  
+- „Hatten Sie schon einmal Magenbeschwerden oder eine Gastritis?“  
+- „Wurde bei Ihnen eine Helicobacter-pylori-Infektion diagnostiziert?“  
+- „Gab es in der Vergangenheit gastrointestinale Blutungen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich hatte schon früher gelegentlich Magenbeschwerden, jedoch wurde bisher keine Infektion bestätigt.“  
+- *Arzt:* „Wir sollten eventuell einen erneuten Helicobacter-Test in Erwägung ziehen.“
+
+---
+
+**10. Weitere relevante Anamneseaspekte**  
+**Ziel:**  
+- Erfassen von zusätzlichen, für das Ulcus duodeni relevanten Faktoren, wie Alkohol- und Nikotinkonsum.
+
+**Anleitung:**  
+- Fragen zu Lebensgewohnheiten stellen, die das Risiko beeinflussen können.
+
+**Beispielfragen:**  
+- „Rauchen Sie, und wenn ja, wie viel?“  
+- „Konsumieren Sie regelmäßig Alkohol?“  
+- „Gab es in letzter Zeit Veränderungen in Ihrem Lebensstil?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich rauche täglich und trinke gelegentlich Alkohol, was möglicherweise zu meinen Beschwerden beiträgt.“  
+- *Arzt:* „Diese Faktoren werden wir in die Gesamteinschätzung einbeziehen.“
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese bei Ulcus duodeni**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Einschätzung des allgemeinen körperlichen Befindens und der Belastbarkeit.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Befinden in letzter Zeit beschreiben?“  
+- „Fühlen Sie sich insgesamt körperlich geschwächt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich oft abgeschlagen und weniger belastbar.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Feststellen von Veränderungen im Appetit und Essverhalten, die bei Ulcus duodeni typisch sein können.
+
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Appetit bemerkt?“  
+- „Essen Sie weniger als gewohnt?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe in letzter Zeit deutlich weniger Appetit und esse kleinere Portionen.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Ermitteln, ob ein ungewollter Gewichtsverlust vorliegt.
+
+**Beispielfragen:**  
+- „Haben Sie in den letzten Monaten an Gewicht verloren?“  
+- „Wie würden Sie Ihre Gewichtsentwicklung beschreiben?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe in den letzten drei Monaten mehrere Kilogramm abgenommen.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität und -quantität, da nächtliche Beschwerden auftreten können.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Einschlafen oder Durchschlafen?“  
+- „Fühlen Sie sich nach dem Schlaf ausgeruht?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich schlafe oft unruhig und wache mehrfach in der Nacht auf.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Erfragen, ob es zu ungewöhnlichen Wärme- oder Kälteempfindungen kommt.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft zu warm oder zu kalt?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Manchmal habe ich ein Gefühl von innerer Kälte, besonders am Morgen.“
+
+---
+
+**6. Energielevel und Antrieb**  
+**Ziel:**  
+- Erfassen, ob der Patient sich durch die Beschwerden energiearm und antriebslos fühlt.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft energiearm oder kraftlos?“  
+- „Beeinträchtigt der Mangel an Energie Ihren Alltag?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich häufig erschöpft und habe wenig Antrieb, selbst einfache Aufgaben zu erledigen.“
+
+---
+
+**7. Übelkeit und Erbrechen**  
+**Ziel:**  
+- Erfassen von gastrointestinalen Symptomen wie Übelkeit oder Erbrechen, die bei einem Ulcus duodeni auftreten können.
+
+**Beispielfragen:**  
+- „Leiden Sie unter Übelkeit oder mussten Sie sich schon erbrechen?“  
+- „Treten diese Symptome nach dem Essen auf?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich verspüre häufig Übelkeit, besonders nach schweren Mahlzeiten.“
+
+---
+
+**8. Verdauungs- und Stuhlgangveränderungen**  
+**Ziel:**  
+- Untersuchung, ob es zu Veränderungen im Stuhlgang kommt, wie beispielsweise teeriger Stuhl bei Blutungen.
+
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Stuhlgang bemerkt?“  
+- „Ist der Stuhl dunkler oder ungewöhnlich geformt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir ist aufgefallen, dass mein Stuhl manchmal dunkler erscheint.“
+
+---
+
+**9. Völlegefühl und Bauchschmerzen**  
+**Ziel:**  
+- Erfassung von Symptomen wie Völlegefühl oder drückenden Bauchschmerzen.
+
+**Beispielfragen:**  
+- „Haben Sie oft ein Völlegefühl oder Druck im Oberbauch?“  
+- „Treten diese Beschwerden in Verbindung mit den Mahlzeiten auf?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Nach dem Essen fühle ich mich oft übermäßig voll und habe einen dumpfen Schmerz.“
+
+---
+
+**10. Allgemeines Wohlbefinden**  
+**Ziel:**  
+- Zusammenfassende Bewertung des subjektiven Wohlbefindens und der Lebensqualität.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden derzeit beschreiben?“  
+- „Beeinträchtigen die Beschwerden Ihren Alltag erheblich?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mein allgemeines Befinden ist stark beeinträchtigt, und ich fühle mich oft sehr unwohl.“
+
+---
+
+**11. Müdigkeit und Erschöpfung**  
+**Ziel:**  
+- Erfassung von anhaltender Müdigkeit als Folge der Schmerzen und gastrointestinalen Beschwerden.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich im Laufe des Tages ständig müde?“  
+- „Beeinträchtigt diese Erschöpfung Ihre Leistungsfähigkeit?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich fast den ganzen Tag über erschöpft.“
+
+---
+
+**12. Psychische Belastung**  
+**Ziel:**  
+- Bewertung, ob die körperlichen Beschwerden zu erhöhter psychischer Belastung führen.
+
+**Beispielfragen:**  
+- „Belasten Sie die Schmerzen und Verdauungsprobleme auch Ihre Stimmung?“  
+- „Fühlen Sie sich durch die Beschwerden emotional belastet?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ja, die ständigen Beschwerden setzen mich auch psychisch sehr zu.“
+
+---
+
+**13. Soziale Auswirkungen**  
+**Ziel:**  
+- Ermitteln, ob und wie die Beschwerden das soziale Leben und die berufliche Tätigkeit beeinflussen.
+
+**Beispielfragen:**  
+- „Haben die Symptome Auswirkungen auf Ihr Sozialleben oder Ihre Arbeit?“  
+- „Fühlen Sie sich dadurch isoliert oder eingeschränkt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Wegen der Schmerzen und der Übelkeit meide ich gesellschaftliche Aktivitäten und habe Probleme im Beruf.“
+
+---
+
+**14. Flüssigkeitsaufnahme und Durstgefühl**  
+**Ziel:**  
+- Feststellen, ob es Veränderungen in der Trinkmenge gibt, bedingt durch die Beschwerden.
+
+**Beispielfragen:**  
+- „Trinken Sie mehr oder weniger als gewöhnlich?“  
+- „Haben Sie das Gefühl, dass Sie häufiger Durst haben?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich trinke weniger, da ich mich nach dem Essen oft unwohl fühle.“
+
+---
+
+**15. Weitere vegetative Symptome**  
+**Ziel:**  
+- Erfassen von zusätzlichen vegetativen Beschwerden, die nicht direkt mit der Verdauung zusammenhängen.
+
+**Beispielfragen:**  
+- „Haben Sie noch andere körperliche Beschwerden, die Sie stören?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Abgesehen von den bereits genannten Symptomen fühle ich mich insgesamt sehr angeschlagen.“
+
+---
+
+**16. Zusammenfassendes vegetatives Gesamtbild**  
+**Ziel:**  
+- Übergreifende Einschätzung des vegetativen Zustands im Zusammenhang mit dem Ulcus duodeni.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr vegetatives Befinden insgesamt beschreiben?“  
+- „Welche Symptome sind für Sie am belastendsten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Insgesamt fühle ich mich stark beeinträchtigt, vor allem durch den Appetitverlust, die Übelkeit und die Müdigkeit.“
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob bereits bekannte gastrointestinale Erkrankungen vorliegen, die den Verlauf eines Ulcus duodeni beeinflussen können.
+
+**Beispielfragen:**  
+- „Hatten Sie in der Vergangenheit Magen- oder Zwölffingerdarmgeschwüre?“  
+- „Wurde bei Ihnen schon einmal eine Helicobacter-pylori-Infektion diagnostiziert?“  
+- „Gab es frühere gastrointestinale Blutungen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich hatte vor einigen Jahren bereits Magenbeschwerden, jedoch wurde bisher kein Ulcus duodeni bestätigt, und eine Helicobacter-Diagnose liegt nicht vor.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob im Bereich des Abdomens oder des Verdauungstrakts bereits operative Eingriffe erfolgt sind, die für den aktuellen Zustand relevant sein könnten.
+
+**Beispielfragen:**  
+- „Wurden Sie bereits am Magen oder Darm operiert?“  
+- „Gab es Komplikationen im Rahmen früherer Eingriffe?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich wurde bisher nicht operiert, abgesehen von kleineren ambulanten Eingriffen.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche Medikamente aktuell oder in der Vergangenheit eingenommen wurden, insbesondere solche, die das Risiko für ein Ulcus duodeni erhöhen können.
+
+**Beispielfragen:**  
+- „Nehmen Sie regelmäßig NSAR oder andere Schmerzmittel ein?“  
+- „Haben Sie in der Vergangenheit Medikamente zur Behandlung von Magenbeschwerden eingenommen?“  
+- „Verwenden Sie Protonenpumpenhemmer (PPI) oder H2-Blocker?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich nehme regelmäßig Ibuprofen gegen Rückenschmerzen und benutze gelegentlich PPI zur Linderung von Magenbeschwerden.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob Allergien oder Unverträglichkeiten vorliegen, die die medikamentöse Behandlung beeinflussen könnten.
+
+**Beispielfragen:**  
+- „Haben Sie bekannte Allergien gegen bestimmte Medikamente, wie NSAR oder Antibiotika?“  
+- „Reagieren Sie empfindlich auf bestimmte Nahrungsmittel?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe keine bekannten Allergien gegen Medikamente.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von Risikofaktoren, die zur Entstehung eines Ulcus duodeni beitragen können.
+
+**Beispiele:**  
+- Regelmäßiger NSAR-Gebrauch, Alkohol- und Nikotinkonsum, stressbedingte Belastungen.
+
+**Beispielfragen:**  
+- „Nehmen Sie regelmäßig Schmerzmittel ein?“  
+- „Rauchen Sie, und wie viel Alkohol konsumieren Sie regelmäßig?“  
+- „Gab es in Ihrem Alltag anhaltenden Stress, der Ihre Beschwerden begünstigen könnte?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich nehme täglich NSAR und rauche, außerdem ist mein Arbeitsalltag sehr stressig.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfragen, ob in der Familie Magen-Darm-Erkrankungen, wie Ulzera oder chronische Gastritiden, vorkommen.
+
+**Beispielfragen:**  
+- „Gibt es in Ihrer Familie Fälle von Magengeschwüren oder ähnlichen Erkrankungen?“  
+- „Wurden bei nahen Angehörigen bereits gastrointestinal bedingte Komplikationen festgestellt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „In meiner Familie wurden vereinzelt Magengeschwüre diagnostiziert.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen und beruflichen Lebensumstände, die Einfluss auf das Risiko und den Verlauf eines Ulcus duodeni haben können.
+
+**Relevante Bereiche:**  
+- Berufliche Belastung, Ernährungsgewohnheiten, Alkohol- und Tabakkonsum, Stress.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre aktuelle Lebenssituation und Ihren Beruf beschreiben?“  
+- „Haben Sie bestimmte Ernährungsgewohnheiten, die problematisch sein könnten?“  
+- „Wie häufig konsumieren Sie Alkohol, und rauchen Sie?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite in einem stressigen Beruf, esse oft unregelmäßig und rauche täglich; Alkohol trinke ich gelegentlich.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung von anderen Erkrankungen, die ähnliche Symptome wie ein Ulcus duodeni verursachen können.
+
+**Beispiele:**  
+1. Gastritis – Entzündung der Magenschleimhaut.  
+2. Pancreatitis – akute oder chronische Bauchspeicheldrüsenerkrankung.  
+3. Cholezystitis – Gallenblasenentzündung.  
+4. Funktionelle Dyspepsie – nichtorganische Verdauungsstörung.
+
+**Beispielfragen:**  
+- „Können Ihre Beschwerden auch durch eine Gastritis erklärt werden?“  
+- „Wurden andere gastrointestinale Erkrankungen durch bildgebende Verfahren ausgeschlossen?“  
+- „Sind die Symptome konstant oder schwanken sie in Abhängigkeit von der Nahrungsaufnahme?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Die Röntgen- und Labortests deuten eher auf ein Ulcus duodeni hin, jedoch können ähnliche Symptome auch bei einer Gastritis auftreten.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags basierend auf den anamnestischen und vegetativen Befunden.
+
+**Kriterien:**  
+- Vorliegen eines brennenden, epigastrischen Schmerzes, der in Zusammenhang mit der Nahrungsaufnahme steht.  
+- Begleitende Symptome wie Übelkeit, Gewichtsverlust und Veränderungen im Stuhlgang.  
+- Risikofaktoren wie regelmäßiger NSAR-Gebrauch und Nikotinkonsum.
+
+**Beispielfazit:**  
+- „Aufgrund der vorliegenden Symptome und Risikofaktoren besteht der Verdacht auf ein Ulcus duodeni, der mittels weiterer diagnostischer Verfahren bestätigt werden sollte.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung weiterer diagnostischer und therapeutischer Schritte zur Bestätigung der Diagnose und Planung der Behandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Endoskopische Untersuchungen:**  
+- **Gastroskopie:** Direkte Untersuchung der Schleimhaut des Magens und des Zwölffingerdarms, Biopsieentnahme und Helicobacter-pylori-Test.  
+
+**Laboruntersuchungen:**  
+- Blutbild, Entzündungsparameter, Leberwerte und Schilddrüsenfunktion zur Ausschlussdiagnostik.  
+- Spezifischer Test auf Helicobacter pylori (Urease-Test, Antikörperbestimmung).
+
+**Bildgebende Verfahren:**  
+- Ultraschall des Abdomens zur Beurteilung der angrenzenden Organe, falls indiziert.
+
+**Therapeutische Interventionen:**  
+- Medikamentöse Therapie mit Protonenpumpenhemmern (PPI) und ggf. Antibiotikatherapie bei Helicobacter-pylori-Infektion.  
+- Ernährungsberatung und Maßnahmen zur Reduktion von Risikofaktoren (z. B. Verzicht auf NSAR, Reduktion von Nikotin- und Alkoholkonsum).
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, sich einer Gastroskopie zu unterziehen?“  
+- „Wie gut vertragen Sie die aktuell eingenommenen Schmerzmittel?“  
+- „Wären Sie bereit, Änderungen in Ihrem Lebensstil vorzunehmen, um die Heilung zu unterstützen?“
+    `
+  },
+},
+mamakarzinom: {
+  name: "Mamakarzinom",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Mamakarzinom**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassung des Grundes für den Arztbesuch im Zusammenhang mit Brustveränderungen und Verdacht auf ein Mammakarzinom.
+
+**Anleitung:**  
+- Offene Fragen stellen, um die Hauptbeschwerden und den Anlass des Besuchs zu eruieren.
+
+**Beispielfragen:**  
+- „Was hat Sie veranlasst, heute in die Praxis zu kommen?“  
+- „Haben Sie Veränderungen in Ihrer Brust bemerkt, wie Knoten oder Hautveränderungen?“  
+- „Gab es Schmerzen, Rötungen oder andere auffällige Symptome?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patientin:* „Mir ist vor kurzem ein Knoten in meiner linken Brust aufgefallen, und ich habe leichte Schmerzen in diesem Bereich.“  
+- *Arzt:* „Seit wann haben Sie diese Veränderungen bemerkt und haben sie sich im Zeitverlauf verändert?“
+
+---
+
+**2. Lokalisation und Beschaffenheit der Brustveränderungen**  
+**Ziel:**  
+- Detaillierte Erfassung der Lage, Größe, Konsistenz und etwaiger Ausstrahlungen der Brustveränderung.
+
+**Anleitung:**  
+- Fragen zu Lokalisation, Knotencharakteristik (hart, weich, beweglich) und Begleitsymptomen stellen.
+
+**Beispielfragen:**  
+- „In welcher Brust (links oder rechts) haben Sie den Knoten bemerkt?“  
+- „Wie würden Sie die Beschaffenheit des Knotens beschreiben – ist er fest oder eher weich?“  
+- „Haben Sie Veränderungen der Brustwarze, wie Einziehungen oder Absonderungen, festgestellt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patientin:* „Der Knoten befindet sich in der linken Brust, er ist hart und scheint nicht verschiebbar zu sein.“  
+- *Arzt:* „Sind noch weitere Veränderungen an der Haut oder Brustwarze erkennbar?“
+
+---
+
+**3. Zeitverlauf und Dynamik der Symptome**  
+**Ziel:**  
+- Klärung, wann die Brustveränderung erstmals aufgetreten ist, wie sie sich entwickelt und ob sie mit anderen Symptomen einhergeht.
+
+**Anleitung:**  
+- Nach Beginn, Dauer und zeitlichem Verlauf der Symptome fragen.
+
+**Beispielfragen:**  
+- „Wann haben Sie den Knoten zum ersten Mal bemerkt?“  
+- „Hat sich die Größe oder Beschaffenheit im Laufe der Zeit verändert?“  
+- „Gab es in letzter Zeit weitere Beschwerden, wie Schmerzen oder Hautveränderungen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patientin:* „Ich habe den Knoten vor etwa drei Monaten entdeckt, und er scheint seither leicht gewachsen zu sein.“  
+- *Arzt:* „Haben Sie in dieser Zeit weitere Veränderungen oder Beschwerden bemerkt?“
+
+---
+
+**4. Schmerzen und Empfindungen**  
+**Ziel:**  
+- Erfassung, ob und welche Schmerzen im Brustbereich auftreten und wie diese sich äußern.
+
+**Anleitung:**  
+- Fragen zu Schmerzintensität, -dauer und eventuellen Ausstrahlungen stellen.
+
+**Beispielfragen:**  
+- „Haben Sie Schmerzen in der Brust, die mit dem Knoten zusammenhängen?“  
+- „Wie stark würden Sie die Schmerzen auf einer Skala von 0 bis 10 bewerten?“  
+- „Strahlen die Schmerzen in andere Bereiche, wie den Arm oder die Achselhöhle, aus?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patientin:* „Ich habe leichte, aber anhaltende Schmerzen, besonders in Ruhe; auf einer Skala würde ich sie mit 4 bewerten.“  
+- *Arzt:* „Verändern sich die Schmerzen im Laufe des Menstruationszyklus?“
+
+---
+
+**5. Veränderungen der Brustwarze und Haut**  
+**Ziel:**  
+- Erfassung von spezifischen Veränderungen an der Brustwarze und der umgebenden Haut, die auf ein Mammakarzinom hindeuten können.
+
+**Anleitung:**  
+- Detaillierte Fragen zu Einziehungen, Absonderungen oder Hautveränderungen stellen.
+
+**Beispielfragen:**  
+- „Haben Sie Veränderungen an der Brustwarze bemerkt, wie Einziehungen oder Verfärbungen?“  
+- „Ist eine Absonderung aus der Brustwarze aufgetreten?“  
+- „Gibt es Rötungen oder Hautdicken in dem betroffenen Bereich?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patientin:* „Mir ist aufgefallen, dass die Brustwarze in der linken Brust leicht eingezogen wirkt, jedoch keine Ausflussbildung stattfindet.“  
+- *Arzt:* „Sind diese Veränderungen konstant oder variabel?“
+
+---
+
+**6. Systemische Symptome**  
+**Ziel:**  
+- Erfassen von Begleitsymptomen, die auf eine systemische Beteiligung hinweisen könnten.
+
+**Anleitung:**  
+- Fragen zu allgemeinem Unwohlsein, Gewichtsverlust oder Müdigkeit stellen.
+
+**Beispielfragen:**  
+- „Haben Sie in letzter Zeit ungewollt Gewicht verloren?“  
+- „Fühlen Sie sich oft müde oder abgeschlagen?“  
+- „Gab es Symptome wie Fieber oder Nachtschweiß?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patientin:* „Ich habe etwas an Gewicht verloren und fühle mich oft müde, aber Fieber hatte ich nicht.“  
+- *Arzt:* „Diese Symptome können in Verbindung mit systemischer Erkrankung stehen.“
+
+---
+
+**7. Vorangegangene Diagnostik und Behandlungen**  
+**Ziel:**  
+- Erfassen, ob bereits Untersuchungen wie Mammographie, Ultraschall oder Biopsie durchgeführt wurden.
+
+**Anleitung:**  
+- Fragen zu früheren diagnostischen Maßnahmen und deren Ergebnissen stellen.
+
+**Beispielfragen:**  
+- „Wurden bereits bildgebende Verfahren wie eine Mammographie oder ein Ultraschall durchgeführt?“  
+- „Gab es eine Biopsie des Knotens?“  
+- „Welche Ergebnisse wurden bisher erzielt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patientin:* „Ich hatte vor zwei Monaten einen Ultraschall, der einen verdächtigen Knoten zeigte, aber noch keine Biopsie wurde durchgeführt.“  
+- *Arzt:* „Wurden Ihnen bereits Therapieempfehlungen oder weiterführende Untersuchungen mitgeteilt?“
+
+---
+
+**8. Medikamentenanamnese**  
+**Ziel:**  
+- Erfassen, ob aktuell hormonelle oder andere medikamentöse Therapien eingenommen werden, die Einfluss auf die Brustgesundheit haben könnten.
+
+**Anleitung:**  
+- Fragen zur aktuellen Medikation, wie Hormonersatztherapie oder oralen Kontrazeptiva, stellen.
+
+**Beispielfragen:**  
+- „Nehmen Sie aktuell hormonelle Medikamente oder eine Hormonersatztherapie ein?“  
+- „Gab es in der Vergangenheit Veränderungen in Ihrer Medikation, die mit den Brustveränderungen zusammenhängen könnten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patientin:* „Ich nehme seit einigen Jahren orale Kontrazeptiva, eine Hormontherapie besteht nicht.“  
+- *Arzt:* „Wir sollten den Einfluss der Medikation auf die Brustveränderungen berücksichtigen.“
+
+---
+
+**9. Familienanamnese in Bezug auf Brustkrebs**  
+**Ziel:**  
+- Erfragen, ob in der Familie bereits Fälle von Brustkrebs oder anderen hormonabhängigen Krebserkrankungen vorliegen.
+
+**Anleitung:**  
+- Fragen zur Krankheitsgeschichte der Mutter, Großmutter oder anderer naher Verwandter stellen.
+
+**Beispielfragen:**  
+- „Gibt es in Ihrer Familie Fälle von Brustkrebs?“  
+- „Wurden genetische Risikofaktoren (z. B. BRCA1/2) bereits untersucht?“  
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patientin:* „Meine Mutter hatte im Alter von 55 Jahren Brustkrebs, und es gibt in der Familie vereinzelt ähnliche Fälle.“  
+- *Arzt:* „Eine genetische Beratung könnte hier sinnvoll sein.“
+
+---
+
+**10. Weitere relevante Anamneseaspekte**  
+**Ziel:**  
+- Erfassen von Risikofaktoren wie Alkoholkonsum, Nikotinkonsum und beruflichem Stress, die das Risiko für Mammakarzinome erhöhen können.
+
+**Anleitung:**  
+- Fragen zu Lebensstil und Risikofaktoren stellen.
+
+**Beispielfragen:**  
+- „Rauchen Sie, und wenn ja, wie viele Zigaretten pro Tag?“  
+- „Wie häufig konsumieren Sie Alkohol?“  
+- „Gab es in Ihrem Leben belastende Ereignisse, die Ihre Gesundheit beeinflussen könnten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patientin:* „Ich rauche gelegentlich und trinke moderat Alkohol; außerdem war ich in der Vergangenheit stark belastet.“  
+- *Arzt:* „Diese Faktoren fließen in die Risikobewertung mit ein.“
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese bei Mamakarzinom**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Einschätzung des allgemeinen körperlichen und seelischen Befindens.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden in letzter Zeit beschreiben?“  
+- „Fühlen Sie sich energiegeladen oder oft erschöpft?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich fühle mich oft müde und abgeschlagen, was meinen Alltag beeinträchtigt.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Feststellung, ob sich das Essverhalten verändert hat, insbesondere in Bezug auf Gewicht und Nährstoffaufnahme.
+
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Appetit festgestellt?“  
+- „Essen Sie mehr oder weniger als früher?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich habe in letzter Zeit weniger Appetit und esse unregelmäßig, was zu einem Gewichtsverlust geführt hat.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Erfassung ungewollter Gewichtsveränderungen.
+
+**Beispielfragen:**  
+- „Haben Sie ohne bewusste Diät Gewicht verloren?“  
+- „Wie hat sich Ihr Gewicht in den letzten Monaten entwickelt?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich habe in den letzten sechs Monaten spürbar an Gewicht verloren.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität und -quantität, da Schmerzen oder psychische Belastungen den Schlaf stören können.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Einschlafen oder Durchschlafen?“  
+- „Fühlen Sie sich nach dem Schlaf ausgeruht?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich schlafe oft unruhig und wache mehrmals in der Nacht auf.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Erfragen, ob es zu ungewöhnlichen Wärme- oder Kälteempfindungen kommt.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft zu warm oder zu kalt?“  
+
+**Mögliche Antworten:**  
+- *Patientin:* „Manchmal habe ich das Gefühl, dass mir innerlich kalt ist, besonders in ruhigen Momenten.“
+
+---
+
+**6. Energielevel und Antrieb**  
+**Ziel:**  
+- Feststellung von Erschöpfung, Antriebslosigkeit und genereller Leistungsfähigkeit.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich tagsüber häufig energiearm?“  
+- „Beeinträchtigt der Mangel an Energie Ihre täglichen Aktivitäten?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich fühle mich oft erschöpft und habe wenig Motivation für alltägliche Aufgaben.“
+
+---
+
+**7. Übelkeit und Verdauungsbeschwerden**  
+**Ziel:**  
+- Erfassung gastrointestinaler Symptome, die im Zusammenhang mit systemischen Veränderungen auftreten können.
+
+**Beispielfragen:**  
+- „Leiden Sie unter Übelkeit oder Verdauungsproblemen?“  
+- „Gibt es Veränderungen im Stuhlgang?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich verspüre gelegentlich Übelkeit, aber keine gravierenden Verdauungsprobleme.“
+
+---
+
+**8. Allgemeines Wohlbefinden**  
+**Ziel:**  
+- Zusammenfassende Einschätzung des vegetativen Zustands und dessen Auswirkungen auf die Lebensqualität.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden beschreiben?“  
+- „Welche vegetativen Symptome empfinden Sie als besonders belastend?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Mein allgemeines Befinden ist durch Müdigkeit, Schlafstörungen und Appetitverlust stark beeinträchtigt.“
+
+---
+
+**9. Psychische Stressreaktion**  
+**Ziel:**  
+- Bewertung, ob die körperlichen Beschwerden zusätzlich zu psychischem Stress führen.
+
+**Beispielfragen:**  
+- „Belasten Sie Ihre körperlichen Symptome auch seelisch?“  
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ja, die Beschwerden setzen mich auch emotional sehr zu.“
+
+---
+
+**10. Flüssigkeitsaufnahme und Durstgefühl**  
+**Ziel:**  
+- Erfassung von Veränderungen in der Trinkmenge, da diese das vegetative System beeinflussen können.
+
+**Beispielfragen:**  
+- „Trinken Sie mehr oder weniger als gewöhnlich?“  
+- „Haben Sie häufiges Durstgefühl?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich trinke derzeit weniger, da ich mich oft unwohl fühle.“
+
+---
+
+**11. Weitere vegetative Symptome**  
+**Ziel:**  
+- Erfassen zusätzlicher vegetativer Beschwerden, die nicht direkt den anderen Kategorien zugeordnet werden können.
+
+**Beispielfragen:**  
+- „Gibt es noch weitere körperliche Beschwerden, die Sie wahrnehmen?“  
+
+**Mögliche Antworten:**  
+- *Patientin:* „Neben den genannten Symptomen fühle ich mich insgesamt sehr angeschlagen.“
+
+---
+
+**12. Zusammenfassendes vegetatives Gesamtbild**  
+**Ziel:**  
+- Übergreifende Beurteilung des vegetativen Zustands im Zusammenhang mit dem Mamakarzinom.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr vegetatives Befinden insgesamt beschreiben?“  
+- „Welche Symptome beeinträchtigen Sie am meisten?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Insgesamt fühle ich mich stark beeinträchtigt, vor allem durch Schlafstörungen, Müdigkeit und Appetitverlust.“
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Vergangenheit bereits Brust- oder andere hormonabhängige Erkrankungen diagnostiziert wurden, die das Risiko für ein Mammakarzinom erhöhen können.
+
+**Beispielfragen:**  
+- „Hatten Sie bereits in der Vergangenheit gutartige Brustveränderungen oder Zysten?“  
+- „Wurde bei Ihnen in der Vergangenheit eine Hyperplasie der Brustdrüse festgestellt?“  
+- „Gab es bereits hormonelle Störungen, wie eine Schilddrüsenüber- oder -unterfunktion?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich hatte in der Vergangenheit gutartige Brustzysten, ansonsten keine schwerwiegenden hormonellen Störungen.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob bereits operative Eingriffe im Brustbereich (z. B. Biopsien, lumpektomische Eingriffe) erfolgt sind.
+
+**Beispielfragen:**  
+- „Wurden Sie schon einmal operiert, z. B. wegen gutartiger Brustveränderungen?“  
+- „Gab es nach früheren Eingriffen Komplikationen oder Narbenbildungen, die für den aktuellen Zustand relevant sein könnten?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich hatte vor einigen Jahren eine Biopsie eines Brustknotens, ansonsten keine operativen Eingriffe.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche medikamentösen Therapien aktuell oder in der Vergangenheit zur Behandlung von Brustveränderungen oder hormonellen Störungen eingenommen wurden.
+
+**Beispielfragen:**  
+- „Nehmen Sie derzeit hormonelle Medikamente, wie oralen Kontrazeptiva oder Hormonersatztherapie?“  
+- „Gab es in der Vergangenheit medikamentöse Behandlungen im Zusammenhang mit Brustveränderungen?“  
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich nehme derzeit keine Hormonersatztherapie, benutze aber seit einigen Jahren orale Kontrazeptiva.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob Allergien oder Unverträglichkeiten vorliegen, die Einfluss auf die medikamentöse Therapie haben könnten.
+
+**Beispielfragen:**  
+- „Haben Sie bekannte Allergien gegen bestimmte Medikamente, wie z. B. Antibiotika oder hormonelle Präparate?“  
+- „Gab es in der Vergangenheit allergische Reaktionen auf Medikamente?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich habe keine bekannten Allergien gegen Medikamente.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von Risikofaktoren, die zur Entstehung eines Mammakarzinoms beitragen können.
+
+**Beispiele:**  
+- Nikotinkonsum, erhöhter Alkoholkonsum, ungesunde Ernährungsgewohnheiten, körperliche Inaktivität und chronischer Stress.
+
+**Beispielfragen:**  
+- „Rauchen Sie, und wenn ja, wie viele Zigaretten pro Tag?“  
+- „Wie häufig konsumieren Sie Alkohol?“  
+- „Wie würden Sie Ihre Ernährungsgewohnheiten und körperliche Aktivität beschreiben?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich rauche gelegentlich, trinke moderat Alkohol und führe einen eher sitzenden Lebensstil, was sicherlich zu meinem Risiko beiträgt.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie Fälle von Brustkrebs oder anderen hormonabhängigen Krebserkrankungen vorkommen, die das individuelle Risiko erhöhen können.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie Fälle von Brustkrebs oder anderen verwandten Krebserkrankungen?“  
+- „Wurden genetische Risikofaktoren (z. B. BRCA1/BRCA2) bereits untersucht?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Meine Mutter litt an Brustkrebs, und auch in weiteren Familienzweigen gibt es Hinweise auf ähnliche Erkrankungen.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen, beruflichen und Lebensgewohnheiten, die Einfluss auf das Risiko und den Verlauf eines Mammakarzinoms haben können.
+
+**Relevante Bereiche:**  
+- Berufliche Belastungen, soziale Unterstützung, Lebensstil, Ernährungsgewohnheiten, körperliche Aktivität.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre aktuelle Lebenssituation und Ihren Beruf beschreiben?“  
+- „Haben Sie ein stabiles soziales Umfeld und Unterstützung durch Familie und Freunde?“  
+- „Wie sieht Ihr Freizeitverhalten aus, insbesondere in Bezug auf Sport und Ernährung?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich arbeite in einem stressigen Beruf und fühle mich oft isoliert; zudem ist meine körperliche Aktivität eher gering und meine Ernährung nicht optimal.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung anderer Brustveränderungen und gutartiger Erkrankungen von einem Mammakarzinom.
+
+**Beispiele:**  
+1. Gutartige Brustzysten oder Fibroadenome  
+2. Mastopathie und fibrokystische Veränderungen  
+3. Entzündliche Erkrankungen der Brust (Mastitis)  
+4. Phyllodes-Tumor (selten)
+
+**Beispielfragen:**  
+- „Können die gefundenen Veränderungen auch durch gutartige Prozesse erklärt werden?“  
+- „Wurden weitere diagnostische Verfahren durchgeführt, um zwischen benignen und malignen Befunden zu differenzieren?“  
+
+**Mögliche Antworten:**  
+- *Patientin:* „Die bildgebenden Befunde deuten auf einen soliden Knoten hin, der nicht typisch für gutartige Veränderungen erscheint.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags auf Basis der gesammelten anamnestischen Daten, der klinischen Untersuchung und der ersten bildgebenden Befunde.
+
+**Kriterien:**  
+- Vorhandensein eines soliden, nicht verschiebbaren Knotens in der Brust  
+- Veränderungen der Brustwarze und/oder Haut  
+- Risikofaktoren wie familiäre Vorbelastung und hormonelle Einflüsse
+
+**Beispielfazit:**  
+- „Aufgrund der vorliegenden Befunde und der Risikofaktoren besteht der Verdacht auf ein Mammakarzinom, welcher durch eine Biopsie und weiterführende Bildgebung bestätigt werden sollte.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung der weiteren diagnostischen und therapeutischen Schritte zur Bestätigung der Diagnose und Planung der Behandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Bildgebende Verfahren:**  
+- **Mammographie:** Standarduntersuchung zur Darstellung der Brustverhältnisse.  
+- **Brustultraschall:** Ergänzend zur Mammographie, um die Eigenschaften des Knotens zu beurteilen.  
+- **MRT der Brust:** Bei unklaren Befunden oder hohem Risiko, zur genauen Lokalisierung und Darstellung.
+
+**Diagnostische Interventionen:**  
+- **Biopsie:** Zur histologischen Abklärung des Knotens (Nadelbiopsie oder Vakuumbiopsie).  
+- **Genetische Tests:** Bei familiärem Risiko (z. B. BRCA1/BRCA2-Analyse).
+
+**Therapeutische Interventionen:**  
+- Planung der Therapie abhängig vom Stadium (Operation, Chemotherapie, Radiotherapie, Hormontherapie).  
+- Interdisziplinäre Beratung im Tumorboard.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, sich einer Biopsie zu unterziehen?“  
+- „Haben Sie bereits genetische Beratungen in Erwägung gezogen?“  
+- „Wie stehen Sie zu einer interdisziplinären Behandlung, falls sich der Verdacht bestätigt?“
+    `
+  },
+},
+inguinal_hernia: {
+  name: "Inguinalhernie",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Inguinalhernie**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassen, warum der Patient den Arzt aufsucht, und ob Beschwerden im Leistenbereich vorliegen.
+
+**Anleitung:**  
+- Offene Fragen stellen, um den Anlass des Arztbesuchs und den Zeitpunkt des ersten Auftretens der Beschwerden zu ermitteln.
+
+**Beispielfragen:**  
+- „Was führt Sie heute zu uns?“  
+- „Haben Sie Schmerzen oder eine Schwellung im Leistenbereich bemerkt?“  
+- „Ist Ihnen ein hervortretender Knoten oder eine Veränderung in der Leistengegend aufgefallen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Mir ist vor kurzem eine Schwellung in der Leiste aufgefallen, und sie wird bei Belastung größer.“  
+- *Arzt:* „Seit wann haben Sie diese Schwellung bemerkt und hat sich das Ausmaß verändert?“
+
+---
+
+**2. Schmerzlokalisation und -charakter**  
+**Ziel:**  
+- Detaillierte Erfassung der Schmerzlokalisation, Intensität und des Charakters (z. B. ziehend, drückend).
+
+**Anleitung:**  
+- Fragen zu den Eigenschaften der Schmerzen und ihrer Ausstrahlung in benachbarte Bereiche (z. B. Leiste, Oberschenkel) stellen.
+
+**Beispielfragen:**  
+- „Wo genau im Leistenbereich spüren Sie den Schmerz?“  
+- „Wie würden Sie den Schmerz beschreiben – ziehend, drückend oder stechend?“  
+- „Strahlen die Schmerzen in den Oberschenkel oder in den Hodensack (bei Männern) aus?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Der Schmerz ist vorwiegend in der rechten Leiste und drückt bei körperlicher Belastung.“  
+- *Arzt:* „Verstärken sich die Schmerzen beim Husten oder Heben schwerer Gegenstände?“
+
+---
+
+**3. Zeitverlauf und Dynamik der Symptome**  
+**Ziel:**  
+- Klären, wann die Beschwerden erstmals auftraten und wie sie sich im Verlauf verändert haben.
+
+**Anleitung:**  
+- Nach Beginn der Symptome, deren Dauer und möglichen Schwankungen fragen.
+
+**Beispielfragen:**  
+- „Wann haben Sie zum ersten Mal eine Veränderung im Leistenbereich bemerkt?“  
+- „Sind die Beschwerden konstant vorhanden oder intermittierend?“  
+- „Hat sich die Schwellung im Laufe der Zeit vergrößert oder verändert?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe den Knoten vor etwa sechs Monaten bemerkt, und er scheint bei Belastung immer größer zu werden.“  
+- *Arzt:* „Gab es belastende Ereignisse oder körperliche Aktivitäten, die den Verlauf beeinflusst haben könnten?“
+
+---
+
+**4. Zusammenhang mit körperlicher Aktivität**  
+**Ziel:**  
+- Ermitteln, ob körperliche Belastung, Heben schwerer Gegenstände oder sportliche Aktivitäten die Beschwerden beeinflussen.
+
+**Anleitung:**  
+- Fragen stellen, wie sich die Symptome bei Aktivität oder Ruhe verhalten.
+
+**Beispielfragen:**  
+- „Verändern sich die Symptome bei körperlicher Anstrengung?“  
+- „Ist der Knoten in Ruhe kleiner und bei Belastung größer?“  
+- „Haben Sie Schmerzen, wenn Sie sich anstrengen oder husten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ja, der Knoten tritt bei Anstrengung stärker hervor und verursacht verstärkte Schmerzen.“  
+- *Arzt:* „Treten die Beschwerden auch im Sitzen oder Liegen auf?“
+
+---
+
+**5. Begleitsymptome und Schwellungen**  
+**Ziel:**  
+- Erfassen von zusätzlichen Symptomen wie Schwellungen, Hautveränderungen oder Überwärmung im Bereich der Hernie.
+
+**Anleitung:**  
+- Fragen zu sichtbaren Veränderungen und weiteren Beschwerden im betroffenen Bereich stellen.
+
+**Beispielfragen:**  
+- „Haben Sie eine sichtbare Schwellung oder Rötung in der Leiste bemerkt?“  
+- „Verändert sich das Ausmaß der Schwellung im Tagesverlauf?“  
+- „Haben Sie ein Ziehen oder Brennen im Bereich der Hernie?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Es gibt eine deutliche Schwellung, die bei längerem Stehen noch ausgeprägter wird, und sie fühlt sich warm an.“  
+- *Arzt:* „Gab es auch Überempfindlichkeiten oder Schmerzen bei Berührung?“
+
+---
+
+**6. Funktionseinschränkung und Alltagseinfluss**  
+**Ziel:**  
+- Erfassung, wie stark die Inguinalhernie den Alltag und die körperliche Funktion beeinträchtigt.
+
+**Anleitung:**  
+- Fragen zu Einschränkungen bei alltäglichen Aktivitäten und beruflichen Belastungen stellen.
+
+**Beispielfragen:**  
+- „Beeinträchtigt die Hernie Ihre Beweglichkeit oder Ihre Arbeit?“  
+- „Haben Sie Schwierigkeiten beim Gehen, Heben oder Sitzen?“  
+- „Wie stark würden Sie die Einschränkung auf einer Skala von 0 bis 10 bewerten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Bei körperlicher Belastung habe ich deutliche Schmerzen und fühle mich in meiner Beweglichkeit eingeschränkt.“  
+- *Arzt:* „Beeinträchtigt dies auch Ihre Freizeitaktivitäten?“
+
+---
+
+**7. Vorherige Schmerzbehandlungen und Selbstmaßnahmen**  
+**Ziel:**  
+- Erfassen, ob der Patient bereits Maßnahmen zur Linderung der Beschwerden ergriffen hat.
+
+**Anleitung:**  
+- Fragen zu Schmerzmedikation, Ruhigstellung, Kühlung oder physiotherapeutischen Maßnahmen stellen.
+
+**Beispielfragen:**  
+- „Welche Schmerzmittel haben Sie bisher eingenommen?“  
+- „Haben Sie den betroffenen Bereich schon gekühlt oder ruhiggestellt?“  
+- „Wie haben diese Maßnahmen auf Ihre Beschwerden gewirkt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich nehme gelegentlich Ibuprofen, und das Kühlen hilft etwas, aber die Schmerzen bleiben bestehen.“  
+- *Arzt:* „Gab es sonstige Selbstmaßnahmen, die Sie ausprobiert haben?“
+
+---
+
+**8. Notfallmaßnahmen und erste medizinische Versorgung**  
+**Ziel:**  
+- Klären, ob bereits erste medizinische Maßnahmen ergriffen wurden, etwa bei akuten Schmerzen.
+
+**Anleitung:**  
+- Fragen stellen, ob und welche Notfallbehandlungen oder Überweisungen stattgefunden haben.
+
+**Beispielfragen:**  
+- „Haben Sie bereits einen Arzt oder ein Krankenhaus aufgesucht, als die Beschwerden begannen?“  
+- „Wurden Ihnen Notfallmaßnahmen oder Überweisungen empfohlen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe bereits meinen Hausarzt konsultiert, der mich zur weiteren Abklärung überwiesen hat.“  
+- *Arzt:* „Welche Untersuchungen wurden bisher durchgeführt?“
+
+---
+
+**9. Vorerfahrungen mit Hernien**  
+**Ziel:**  
+- Erfassen, ob der Patient bereits in der Vergangenheit ähnliche Beschwerden hatte oder an einer Hernie litt.
+
+**Anleitung:**  
+- Fragen zu früheren Leistenbrüchen oder anderen Hernien stellen.
+
+**Beispielfragen:**  
+- „Hatten Sie schon einmal einen Leistenbruch?“  
+- „Wie wurde dieser behandelt, und gab es Komplikationen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich hatte vor einigen Jahren einen leichten Leistenbruch, der konservativ behandelt wurde.“  
+- *Arzt:* „Hat sich der Zustand damals verändert oder ist es ein erneutes Auftreten?“
+
+---
+
+**10. Einschätzung der Schmerzintensität**  
+**Ziel:**  
+- Quantitative Bewertung der Schmerzen zur Einschätzung der Schwere der Hernie.
+
+**Anleitung:**  
+- Den Patienten bitten, die Schmerzen auf einer Skala von 0 (keine Schmerzen) bis 10 (unerträgliche Schmerzen) zu bewerten.
+
+**Beispielfragen:**  
+- „Wie stark schmerzen Sie aktuell?“  
+- „Ändert sich die Schmerzintensität bei bestimmten Bewegungen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich würde meine Schmerzen mit 6 bewerten, besonders bei körperlicher Belastung steigt der Schmerz deutlich an.“  
+- *Arzt:* „Nimmt die Schmerzintensität im Tagesverlauf zu oder ab?“
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese bei Inguinalhernie**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Einschätzung des allgemeinen körperlichen Befindens und der Belastbarkeit.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihren allgemeinen Gesundheitszustand beschreiben?“  
+- „Fühlen Sie sich aufgrund der Beschwerden insgesamt geschwächt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich teilweise erschöpft, besonders nach längerem Stehen oder Gehen.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Erfassen, ob sich die Nahrungsaufnahme aufgrund von Schmerzen oder Stress verändert hat.
+
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Appetit bemerkt?“  
+- „Essen Sie weniger, weil Sie Schmerzen oder Unwohlsein verspüren?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich esse meist normal, jedoch fühle ich mich manchmal unwohl, was meinen Appetit leicht mindert.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Ermitteln, ob durch verminderte Aktivität oder Appetitveränderungen ein ungewollter Gewichtsverlust stattgefunden hat.
+
+**Beispielfragen:**  
+- „Haben Sie in letzter Zeit ungewollt an Gewicht verloren?“  
+- „Wie hat sich Ihr Gewicht in den letzten Monaten entwickelt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir ist kein signifikanter Gewichtsverlust aufgefallen.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität, da Schmerzen und Unwohlsein den Schlaf beeinträchtigen können.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Einschlafen oder Durchschlafen?“  
+- „Fühlen Sie sich nach dem Schlaf erholt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich schlafe meist gut, jedoch stören mich akute Schmerzepisoden gelegentlich in der Nacht.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Erfragen, ob es zu ungewöhnlichen Wärme- oder Kälteempfindungen kommt, die im Zusammenhang mit Stress oder Schmerz auftreten können.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft zu warm oder zu kalt?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir ist in der Regel nichts Ungewöhnliches aufgefallen.“
+
+---
+
+**6. Energielevel und Antrieb**  
+**Ziel:**  
+- Erfassen, ob die Beschwerden zu verminderter Energie und Antriebslosigkeit führen.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich tagsüber oft energiearm?“  
+- „Beeinträchtigt der Mangel an Energie Ihre täglichen Aktivitäten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich nach anstrengenden Aktivitäten etwas erschöpft, ansonsten normal.“
+
+---
+
+**7. Übelkeit und Magen-Darm-Beschwerden**  
+**Ziel:**  
+- Erfassen, ob im Zusammenhang mit Schmerzen oder Medikamenteneinnahme Verdauungsbeschwerden auftreten.
+
+**Beispielfragen:**  
+- „Haben Sie Übelkeit oder Verdauungsprobleme bemerkt?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Nein, Übelkeit ist nicht Teil meiner Beschwerden.“
+
+---
+
+**8. Allgemeines Wohlbefinden**  
+**Ziel:**  
+- Zusammenfassende Bewertung des subjektiven vegetativen Zustands und der Lebensqualität.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden beschreiben?“  
+- „Beeinträchtigen die Beschwerden Ihre Lebensqualität erheblich?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Die Beschwerden sind lokal begrenzt, sodass ich mein Wohlbefinden insgesamt als gut bewerte.“
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob bereits bestehende Erkrankungen vorliegen, die den Eintritt oder die Schwere einer Inguinalhernie beeinflussen können (z. B. Bindegewebsschwäche, chronische Harnwegsprobleme).
+
+**Beispielfragen:**  
+- „Hatten Sie in der Vergangenheit schon einmal einen Leistenbruch oder verwandte Erkrankungen?“  
+- „Gibt es bekannte Erkrankungen wie Bindegewebsschwäche oder chronische Harnwegsprobleme?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich hatte in der Vergangenheit keinen Leistenbruch, aber bei mir wurde eine Bindegewebsschwäche diagnostiziert.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob bereits operative Eingriffe im Bereich der Leiste oder des Abdomens durchgeführt wurden, die relevant sein könnten.
+
+**Beispielfragen:**  
+- „Wurden Sie bereits operativ an der Leiste behandelt?“  
+- „Gab es Komplikationen oder Narben, die für den aktuellen Zustand relevant sind?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich wurde bisher nicht operiert, abgesehen von kleineren Eingriffen.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche medikamentösen Behandlungen aktuell oder in der Vergangenheit zur Schmerzbehandlung oder zur Behandlung begleitender Erkrankungen eingenommen wurden.
+
+**Beispielfragen:**  
+- „Nehmen Sie Schmerzmittel oder andere Medikamente regelmäßig ein?“  
+- „Gibt es Medikamente, die Ihre Beschwerden beeinflussen könnten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich nehme gelegentlich Ibuprofen, wenn die Schmerzen zunehmen.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob bekannte Allergien oder Unverträglichkeiten vorliegen, die bei der medikamentösen Behandlung berücksichtigt werden müssen.
+
+**Beispielfragen:**  
+- „Haben Sie Allergien gegen Schmerzmittel oder andere Medikamente?“  
+- „Gab es in der Vergangenheit unerwünschte Reaktionen auf Medikamente?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe keine bekannten Allergien gegen Medikamente.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von Risikofaktoren, die zur Entstehung einer Inguinalhernie beitragen können.
+
+**Beispiele:**  
+- Körperlich anstrengende Arbeit, schweres Heben, Übergewicht, chronischer Husten.
+
+**Beispielfragen:**  
+- „Haben Sie einen Beruf, bei dem schweres Heben zum Alltag gehört?“  
+- „Gab es in letzter Zeit eine Zunahme körperlicher Belastung?“  
+- „Leiden Sie an chronischem Husten oder Übergewicht?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite in einem handwerklich körperlich anstrengenden Beruf und hebe regelmäßig schwere Lasten.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie Fälle von Hernien oder Bindegewebserkrankungen vorkommen, die ein erhöhtes Risiko signalisieren.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie Fälle von Leistenbrüchen oder verwandten Erkrankungen?“  
+- „Leiden nahe Angehörige an chronischen Bindegewebsschwächen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Bei meinem Vater wurde ein Leistenbruch operativ behandelt, und es gibt in der Familie Hinweise auf Bindegewebsschwächen.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen, beruflichen und lebensstilbezogenen Faktoren, die Einfluss auf das Risiko und den Verlauf einer Inguinalhernie haben können.
+
+**Relevante Bereiche:**  
+- Berufliche Belastungen, körperliche Aktivität, Ernährungsgewohnheiten, Unterstützung im Alltag.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre aktuelle berufliche Situation beschreiben?“  
+- „Haben Sie ausreichend Unterstützung im Alltag, insbesondere bei körperlich anstrengenden Tätigkeiten?“  
+- „Wie sieht Ihr Lebensstil in Bezug auf Ernährung und Bewegung aus?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite in einem körperlich fordernden Beruf und habe wenig Freizeitaktivität, was vermutlich zu meiner Bindegewebsschwäche beiträgt.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung anderer Ursachen für Leistenbeschwerden, die ähnlich wie eine Inguinalhernie erscheinen können.
+
+**Beispiele:**  
+1. Adduktenriss oder Muskelzerrung in der Leistenregion  
+2. Zysten oder Lymphknotenvergrößerungen  
+3. Femoralhernie – Differenzierung durch anatomische Lage  
+4. Inguinale Adhäsionen nach Operationen
+
+**Beispielfragen:**  
+- „Können die Beschwerden auch durch muskuläre oder lymphatische Ursachen erklärt werden?“  
+- „Wurden andere Formen von Hernien (z. B. Femoralhernie) ausgeschlossen?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Die klinische Untersuchung und Bildgebung sprechen klar für eine Inguinalhernie, ohne Hinweise auf alternative Ursachen.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags basierend auf den anamnestischen und klinischen Befunden.
+
+**Kriterien:**  
+- Nachweis eines hervortretenden Knotens in der Leistenregion, der sich bei Belastung vergrößert.  
+- Lokalisierte Schmerzen und Funktionseinschränkungen im Zusammenhang mit körperlicher Aktivität.  
+- Vorliegen von Risikofaktoren wie schweres Heben und Bindegewebsschwäche.
+
+**Beispielfazit:**  
+- „Aufgrund der vorliegenden Befunde besteht der Verdacht auf eine Inguinalhernie, die durch weiterführende bildgebende Verfahren (z. B. Ultraschall) bestätigt werden sollte.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung der weiteren diagnostischen und therapeutischen Schritte zur Bestätigung der Diagnose und Planung der Behandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Bildgebende Verfahren:**  
+- **Ultraschall der Leiste:** Zur Bestätigung des Hernieninhalt und zur Beurteilung der Bruchpforte.  
+- **CT oder MRT:** Bei unklaren Befunden oder zur Planung eines operativen Eingriffs.
+
+**Diagnostische Interventionen:**  
+- Klinische Untersuchung und evtl. funktionelle Tests zur Beurteilung der Hernienbeweglichkeit.
+
+**Therapeutische Interventionen:**  
+- Konservative Therapie: Schmerzmedikation, Vermeidung von schwerem Heben, eventuell ein Leistenbruchband.  
+- Operative Therapie: Bei zunehmenden Beschwerden oder Komplikationen (z. B. Inkarzeration) Planung eines operativen Eingriffs.  
+- Physiotherapie: Zur Unterstützung der Rehabilitation und Stärkung der Bauchmuskulatur.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, sich einer Ultraschalluntersuchung der Leiste zu unterziehen?“  
+- „Wie gut vertragen Sie konservative Maßnahmen wie das Tragen eines Leistenbruchbandes?“  
+- „Wären Sie bereit, eine operative Therapie in Erwägung zu ziehen, falls sich der Zustand verschlechtert?“
+    `
+  },
+},
+burnout_syndrome: {
+  name: "Burnout-Syndrom",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Burnout-Syndrom**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassung des Hauptgrundes für den Arztbesuch im Zusammenhang mit emotionaler Erschöpfung und beruflichem Stress.
+
+**Anleitung:**  
+- Offene Fragen stellen, um die subjektiven Belastungen und Beschwerden zu eruieren.
+
+**Beispielfragen:**  
+- „Was führt Sie heute zu uns?“  
+- „Welche Probleme belasten Sie derzeit am meisten?“  
+- „Haben Sie das Gefühl, dass Sie beruflich und/oder privat überfordert sind?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich fühle mich seit Monaten emotional ausgelaugt und überfordert, besonders durch den Job.“  
+- *Arzt:* „Seit wann verspüren Sie diese Belastung und welche Ereignisse könnten dies ausgelöst haben?“
+
+---
+
+**2. Emotionale Erschöpfung und Depersonalisierung**  
+**Ziel:**  
+- Detaillierte Erfassung von Gefühlen der emotionalen Erschöpfung, inneren Leere und einer Distanzierung von der eigenen Person.
+
+**Anleitung:**  
+- Fragen zur subjektiven Wahrnehmung der eigenen Energie und zur emotionalen Abstumpfung stellen.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihren aktuellen emotionalen Zustand beschreiben?“  
+- „Fühlen Sie sich innerlich leer oder ausgebrannt?“  
+- „Haben Sie das Gefühl, dass Sie sich von Ihren Mitmenschen distanzieren?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich fühle mich ständig erschöpft, habe kaum noch emotionale Reaktionen und distanziere mich zunehmend von Freunden und Familie.“  
+- *Arzt:* „In welchen Situationen merken Sie besonders, dass Ihre Emotionen flacher geworden sind?“
+
+---
+
+**3. Zeitverlauf und Verlauf der Symptome**  
+**Ziel:**  
+- Klären, wann die Symptome erstmals auftraten, wie sie sich im Zeitverlauf verändert haben und ob es Phasen der Besserung oder Verschlechterung gibt.
+
+**Anleitung:**  
+- Nach Beginn, Dauer und eventuellen Schwankungen der Symptome fragen.
+
+**Beispielfragen:**  
+- „Wann haben Sie erstmals Anzeichen von Erschöpfung und Überforderung bemerkt?“  
+- „Haben sich Ihre Beschwerden im Laufe der Zeit verstärkt?“  
+- „Gab es Phasen, in denen es Ihnen kurzzeitig besser ging?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Symptome treten seit etwa einem Jahr auf und haben sich in den letzten sechs Monaten deutlich verschlechtert.“  
+- *Arzt:* „Gab es in diesem Zeitraum belastende Ereignisse oder Veränderungen in Ihrem Arbeitsumfeld?“
+
+---
+
+**4. Schlafstörungen und Erholungsdefizit**  
+**Ziel:**  
+- Erfassung von Ein- und Durchschlafstörungen, frühzeitigem Erwachen oder übermäßigem Schlaf und deren Auswirkung auf das Tagesgefühl.
+
+**Anleitung:**  
+- Fragen zu Schlafgewohnheiten und subjektiver Schlafqualität stellen.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Einschlafen oder Durchschlafen?“  
+- „Fühlen Sie sich nach dem Schlaf ausgeruht?“  
+- „Wachen Sie häufig in der Nacht auf oder haben Sie Albträume?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich schlafe unruhig, wache oft auf und fühle mich morgens nicht erholt.“  
+- *Arzt:* „Seit wann treten diese Schlafprobleme auf und haben Sie bereits etwas dagegen unternommen?“
+
+---
+
+**5. Konzentrations- und Leistungsabfall**  
+**Ziel:**  
+- Erfassen von kognitiven Beeinträchtigungen, wie Schwierigkeiten bei der Konzentration, Gedächtnisstörungen und verminderter Leistungsfähigkeit.
+
+**Anleitung:**  
+- Fragen zur mentalen Klarheit und Konzentrationsfähigkeit im Alltag stellen.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten, sich zu konzentrieren oder Aufgaben zu bewältigen?“  
+- „Fällt es Ihnen schwer, Entscheidungen zu treffen?“  
+- „Wie würden Sie Ihre geistige Leistungsfähigkeit einschätzen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich bin oft unkonzentriert und fühle mich geistig ausgelaugt, was meine Arbeit stark beeinträchtigt.“  
+- *Arzt:* „Beeinträchtigt dies auch Ihr Privatleben oder soziale Aktivitäten?“
+
+---
+
+**6. Körperliche Beschwerden und vegetative Symptome**  
+**Ziel:**  
+- Erfassung von körperlichen Beschwerden, die im Zusammenhang mit Burnout auftreten können, wie Kopfschmerzen, Magen-Darm-Probleme oder allgemeine Müdigkeit.
+
+**Anleitung:**  
+- Fragen zu begleitenden somatischen Symptomen stellen.
+
+**Beispielfragen:**  
+- „Haben Sie körperliche Beschwerden wie Kopfschmerzen oder Magenprobleme?“  
+- „Fühlen Sie sich körperlich ständig müde?“  
+- „Gibt es andere vegetative Symptome, die Sie bemerkt haben?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe häufig Kopfschmerzen und Magenbeschwerden, und meine allgemeine körperliche Erschöpfung ist groß.“  
+- *Arzt:* „Treten diese Symptome in bestimmten Situationen verstärkt auf?“
+
+---
+
+**7. Vorherige psychotherapeutische Maßnahmen und Behandlungen**  
+**Ziel:**  
+- Erfassen, ob und welche therapeutischen Interventionen bereits stattgefunden haben und wie deren Wirkung war.
+
+**Anleitung:**  
+- Fragen zu bisherigen Therapien, Medikation und Beratung stellen.
+
+**Beispielfragen:**  
+- „Haben Sie bereits psychotherapeutische Hilfe in Anspruch genommen?“  
+- „Welche medikamentösen Therapien wurden bereits ausprobiert?“  
+- „Gab es stationäre Behandlungen oder Beratungen im Zusammenhang mit Stress oder Depressionen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich war bereits in mehreren Gesprächstherapien, aber bisher hat sich kaum etwas verändert.“  
+- *Arzt:* „Welche Therapieformen wurden durchgeführt und wie lange haben Sie diese angewendet?“
+
+---
+
+**8. Zusammenhang mit beruflichen und privaten Stressoren**  
+**Ziel:**  
+- Erfassung der Stressfaktoren, die zu den Symptomen beigetragen haben könnten.
+
+**Anleitung:**  
+- Fragen zu beruflichen Belastungen, familiären Konflikten und anderen Stressoren stellen.
+
+**Beispielfragen:**  
+- „Welche Faktoren in Ihrem Beruf empfinden Sie als besonders belastend?“  
+- „Gab es in Ihrem Privatleben Ereignisse, die zu einer Überlastung geführt haben?“  
+- „Wie lange sind Sie bereits diesen Belastungen ausgesetzt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Mein Job ist extrem fordernd, und auch im privaten Bereich gibt es ständig Konflikte, die mich zusätzlich belasten.“  
+- *Arzt:* „Haben Sie bereits Strategien entwickelt, um mit diesem Stress umzugehen?“
+
+---
+
+**9. Vorherige Diagnostik und Befunde**  
+**Ziel:**  
+- Erfragen, ob bereits diagnostische Maßnahmen (z. B. psychologische Tests) durchgeführt wurden und welche Ergebnisse vorliegen.
+
+**Anleitung:**  
+- Fragen zu früheren Untersuchungen und deren Befunden stellen.
+
+**Beispielfragen:**  
+- „Wurden bei Ihnen bereits standardisierte Tests zur Messung der Burnout-Symptomatik durchgeführt?“  
+- „Gab es Befunde, die auf eine depressive Störung hindeuteten?“  
+- „Welche Ergebnisse wurden bisher erzielt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe bereits den Maslach Burnout Inventory-Test gemacht, der hohe Werte in emotionaler Erschöpfung ergab.“  
+- *Arzt:* „Diese Ergebnisse sollten in unsere weitere Diagnostik einfließen.“
+
+---
+
+**10. Weitere relevante Anamneseaspekte**  
+**Ziel:**  
+- Erfassen zusätzlicher Aspekte, wie Substanzkonsum (Alkohol, Nikotin) oder veränderte Lebensgewohnheiten, die zur Symptomatik beitragen könnten.
+
+**Anleitung:**  
+- Fragen zu Lifestyle-Faktoren stellen.
+
+**Beispielfragen:**  
+- „Rauchen Sie oder konsumieren Sie Alkohol?“  
+- „Haben sich Ihre Ernährungsgewohnheiten oder Ihr Bewegungsverhalten verändert?“  
+- „Gab es sonstige belastende Lebensumstände?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich rauche gelegentlich und trinke ab und zu Alkohol; zudem fühle ich mich in meinem Lebensstil generell aus dem Gleichgewicht.“
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese beim Burnout-Syndrom**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Erfassung des allgemeinen körperlichen Befindens und der subjektiven Vitalität.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihren allgemeinen Gesundheitszustand aktuell einschätzen?“  
+- „Fühlen Sie sich häufig körperlich erschöpft?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich oft ausgelaugt und habe das Gefühl, keine Energie zu besitzen.“
+
+---
+
+**2. Appetit und Essverhalten**  
+**Ziel:**  
+- Erfassung von Veränderungen im Appetit, die häufig bei Burnout auftreten.
+
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Appetit festgestellt?“  
+- „Essen Sie weniger oder mehr als gewöhnlich?“
+
+**Mögliche Antworten:**  
+- *Patient:* „In letzter Zeit habe ich oft keinen Appetit und esse unregelmäßig.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Feststellen, ob es zu ungewolltem Gewichtsverlust oder -zunahme gekommen ist.
+
+**Beispielfragen:**  
+- „Haben Sie ohne bewusste Diät Gewicht verloren oder zugenommen?“  
+- „Wie hat sich Ihr Gewicht in den letzten Monaten verändert?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe in den letzten Monaten ein wenig an Gewicht verloren.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität und -quantität, da Schlafstörungen häufig mit Burnout einhergehen.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Einschlafen oder Durchschlafen?“  
+- „Fühlen Sie sich nach dem Schlaf erholt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich schlafe unruhig, wache oft auf und fühle mich morgens nicht ausgeruht.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Erfragen, ob es zu ungewöhnlichen Wärme- oder Kälteempfindungen kommt.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft zu warm oder zu kalt?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Gelegentlich habe ich das Gefühl, dass mir innerlich kalt ist, obwohl es außen normal ist.“
+
+---
+
+**6. Energielevel und Antrieb**  
+**Ziel:**  
+- Erfassen, ob der Patient sich energielos und antriebslos fühlt.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr Energielevel tagsüber beschreiben?“  
+- „Fühlen Sie sich oft kraftlos und antriebslos?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe kaum noch Energie und es fällt mir schwer, auch einfache Aufgaben zu bewältigen.“
+
+---
+
+**7. Vegetative Reaktionen (z. B. Herzfrequenz, Schwitzen)**  
+**Ziel:**  
+- Erfassen von autonomen Symptomen, die als Reaktion auf chronischen Stress auftreten können.
+
+**Beispielfragen:**  
+- „Haben Sie oft ein schneller schlagendes Herz oder vermehrtes Schwitzen?“  
+- „Bemerkten Sie Veränderungen in Ihrer Blutdruckregulation?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Gelegentlich spüre ich ein starkes Herzklopfen und etwas vermehrtes Schwitzen, besonders in stressigen Situationen.“
+
+---
+
+**8. Allgemeines Wohlbefinden**  
+**Ziel:**  
+- Zusammenfassende Einschätzung des subjektiven Wohlbefindens und der Lebensqualität.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden beschreiben?“  
+- „Inwiefern beeinträchtigen die vegetativen Symptome Ihren Alltag?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mein allgemeines Wohlbefinden ist stark beeinträchtigt, was sich in ständiger Müdigkeit und Unruhe äußert.“
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob bereits frühere psychische oder somatische Erkrankungen vorliegen, die das Burnout-Syndrom begünstigen könnten.
+
+**Beispielfragen:**  
+- „Hatten Sie in der Vergangenheit depressive Episoden oder Angststörungen?“  
+- „Gab es chronische körperliche Beschwerden, die Sie zusätzlich belastet haben?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich hatte schon mehrere depressive Phasen und leide an chronischen Rückenproblemen, die mich zusätzlich belasten.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob operative Eingriffe in der Vergangenheit stattfanden, die als belastende Ereignisse empfunden wurden oder langfristig Einfluss auf den Gesundheitszustand hatten.
+
+**Beispielfragen:**  
+- „Wurden Sie in der Vergangenheit operiert?“  
+- „Gab es operative Eingriffe, die zu einer anhaltenden Belastung oder Einschränkung führten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich wurde bisher nicht operiert, abgesehen von kleineren Eingriffen, die keinen langanhaltenden Einfluss hatten.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche medikamentösen Behandlungen aktuell oder in der Vergangenheit eingenommen wurden, insbesondere solche zur Behandlung von Depressionen oder Stresssymptomen.
+
+**Beispielfragen:**  
+- „Nehmen Sie derzeit Medikamente gegen depressive Verstimmungen oder zur Stressreduktion ein?“  
+- „Gab es Veränderungen in Ihrer Medikation in der letzten Zeit?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich nehme seit einigen Monaten ein Antidepressivum, allerdings fühle ich bisher nur eine geringe Wirkung.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob Allergien oder Unverträglichkeiten vorliegen, die die medikamentöse Behandlung beeinflussen könnten.
+
+**Beispielfragen:**  
+- „Haben Sie bekannte Allergien gegen Medikamente?“  
+- „Gab es in der Vergangenheit unerwünschte Reaktionen auf psychotrope Substanzen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe keine bekannten Allergien gegen Medikamente.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von Risikofaktoren und belastenden Einflüssen, die zur Entstehung des Burnout-Syndroms beitragen können.
+
+**Beispiele:**  
+- Dauerhafter beruflicher Stress, Überstunden, hohe emotionale Belastungen, ungesunde Work-Life-Balance.
+
+**Beispielfragen:**  
+- „Wie hoch schätzen Sie den Stress in Ihrem Beruf ein?“  
+- „Arbeiten Sie regelmäßig Überstunden?“  
+- „Gab es belastende private oder berufliche Ereignisse in letzter Zeit?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite regelmäßig sehr lange und fühle mich ständig unter Druck, was mir enorm zusetzt.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie psychische Erkrankungen, wie Depressionen oder Angststörungen, vorkommen, die auf eine genetische Prädisposition hindeuten könnten.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie Fälle von Depression oder Burnout?“  
+- „Leiden nahestehende Angehörige an psychischen Erkrankungen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „In meiner Familie wurden vereinzelt depressive Störungen diagnostiziert, was mich zusätzlich belastet.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen und beruflichen Lebensumstände, die Einfluss auf den Burnout haben können.
+
+**Relevante Bereiche:**  
+- Berufliche Situation, Arbeitszeiten, Unterstützung im privaten Umfeld, Freizeitaktivitäten.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre berufliche Situation und Arbeitsbelastung beschreiben?“  
+- „Haben Sie ein stabiles soziales Umfeld und genügend Erholungsphasen?“  
+- „Wie verbringen Sie Ihre Freizeit, und können Sie sich ausreichend entspannen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mein Job ist extrem stressig, und ich finde kaum noch Zeit für Erholung oder soziale Kontakte.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung von anderen psychischen Störungen oder somatischen Erkrankungen, die ähnliche Symptome wie ein Burnout-Syndrom verursachen können.
+
+**Beispiele:**  
+1. Major Depression – Abgrenzung durch spezifische depressive Symptome.  
+2. Angststörungen – Überlappung bei Stresssymptomen, jedoch mit ausgeprägter Angst.  
+3. Chronisches Erschöpfungssyndrom – ähnliche Symptomatik, jedoch andere Ursachen.  
+4. Anpassungsstörung – zeitlich begrenzte Reaktion auf belastende Ereignisse.
+
+**Beispielfragen:**  
+- „Haben Sie auch Symptome, die typisch für eine Major Depression sind?“  
+- „Wie lange bestehen Ihre Symptome bereits, und gibt es deutliche Angstsymptome?“  
+- „Wurden andere Erkrankungen bereits diagnostiziert und ausgeschlossen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe vor allem Erschöpfung und Konzentrationsschwierigkeiten, ohne die tiefgreifende depressive Stimmung einer Major Depression.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags basierend auf den anamnestischen Daten, klinischen Befunden und den vegetativen Symptomen.
+
+**Kriterien:**  
+- Anhaltende emotionale Erschöpfung, reduzierte Leistungsfähigkeit und Konzentrationsstörungen.  
+- Zusammenhang mit beruflichem und privatem Stress.  
+- Fehlen schwerer depressiver oder angstbezogener Symptome, die eine andere primäre psychische Störung begründen würden.
+
+**Beispielfazit:**  
+- „Aufgrund der vorliegenden Symptome und des ausgeprägten beruflichen sowie privaten Stressors besteht der Verdacht auf ein Burnout-Syndrom, das einer weiterführenden psychologischen Diagnostik bedarf.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung der weiteren diagnostischen und therapeutischen Schritte zur Bestätigung der Diagnose und Planung der Behandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Psychologische Diagnostik:**  
+- **Standardisierte Fragebögen:** Einsatz von Instrumenten wie dem Maslach Burnout Inventory (MBI) und weiteren psychometrischen Tests zur Erfassung der Burnout-Symptomatik.  
+- **Klinisches Interview:** Vertiefte Erhebung der Stressfaktoren, emotionalen Erschöpfung und kognitiven Beeinträchtigungen.
+
+**Laboruntersuchungen:**  
+- Blutbild und ggf. Hormonanalysen zur Ausschlussdiagnostik von organischen Ursachen (z. B. Schilddrüsenfunktionsstörungen).
+
+**Therapeutische Interventionen:**  
+- **Psychotherapie:** Speziell kognitive Verhaltenstherapie oder Stressbewältigungstraining.  
+- **Medikamentöse Therapie:** Bei Bedarf Einsatz von Antidepressiva oder Anxiolytika zur symptomatischen Linderung.  
+- **Entspannungsverfahren und Coaching:** Maßnahmen zur Verbesserung der Work-Life-Balance und Stressreduktion, wie Meditation, Yoga oder professionelles Coaching.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, an einem ausführlichen psychologischen Assessment teilzunehmen?“  
+- „Wie stehen Sie zu einer kombinierten Therapie aus Psychotherapie und medikamentöser Unterstützung?“  
+- „Wären Sie bereit, Ihren Arbeitsalltag hinsichtlich Stressreduktion zu überdenken und entsprechende Maßnahmen umzusetzen?“
+    `
+  },
+},
+fibromyalgie: {
+  name: "Fibromyalgie",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Fibromyalgie**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassen, warum der Patient den Arzt aufsucht, insbesondere im Zusammenhang mit weit verbreiteten Schmerzen und Erschöpfung.
+
+**Anleitung:**  
+- Offene Fragen stellen, um die Hauptbeschwerden und den Anlass des Arztbesuchs zu eruieren.
+
+**Beispielfragen:**  
+- „Was führt Sie heute zu uns?“  
+- „Welche Beschwerden plagen Sie aktuell am meisten?“  
+- „Seit wann leiden Sie unter den unspezifischen, weit verbreiteten Schmerzen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich leide seit mehreren Monaten unter chronischen, diffusen Schmerzen und fühle mich ständig erschöpft.“  
+- *Arzt:* „Gab es einen auslösenden Faktor oder haben sich die Symptome allmählich entwickelt?“
+
+---
+
+**2. Schmerzlokalisation und -charakter**  
+**Ziel:**  
+- Detaillierte Erfassung der Schmerzverteilung, -intensität und -qualität (z. B. brennend, stechend, dumpf).
+
+**Anleitung:**  
+- Fragen zur Lokalisation (z. B. Nacken, Schultern, Rücken, Gliedmaßen) und zur Empfindung der Schmerzen stellen.
+
+**Beispielfragen:**  
+- „Wo genau spüren Sie die Schmerzen?“  
+- „Wie würden Sie die Art der Schmerzen beschreiben – eher dumpf, brennend oder stechend?“  
+- „Sind die Schmerzen konstant oder schwanken sie im Tagesverlauf?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Schmerzen betreffen meinen ganzen Körper, besonders den Nacken, die Schultern und die Arme. Sie sind meist dumpf, werden aber bei Belastung stechender.“  
+- *Arzt:* „Verändern sich die Schmerzintensität und -charakter im Laufe des Tages?“
+
+---
+
+**3. Zeitverlauf und Symptomdynamik**  
+**Ziel:**  
+- Klären, wann die Symptome erstmals auftraten, wie sie sich entwickelt haben und ob es Phasen der Besserung oder Verschlechterung gibt.
+
+**Anleitung:**  
+- Nach Beginn, Dauer und Schwankungen der Symptome fragen.
+
+**Beispielfragen:**  
+- „Seit wann leiden Sie unter diesen Symptomen?“  
+- „Haben sich die Schmerzen im Laufe der Zeit verändert?“  
+- „Gab es Phasen, in denen es Ihnen besser oder schlechter ging?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich bemerke die Symptome seit ungefähr einem Jahr, mit einer allmählichen Zunahme der Schmerzintensität in den letzten Monaten.“  
+- *Arzt:* „Gab es in diesem Zeitraum besondere Belastungen, die den Verlauf beeinflusst haben?“
+
+---
+
+**4. Begleitende Symptome**  
+**Ziel:**  
+- Erfassung weiterer Symptome, die typisch für Fibromyalgie sein können, wie Müdigkeit, Schlafstörungen und kognitive Beeinträchtigungen.
+
+**Anleitung:**  
+- Fragen zu begleitenden Beschwerden wie Erschöpfung, Konzentrationsproblemen und Schlafqualität stellen.
+
+**Beispielfragen:**  
+- „Leiden Sie neben den Schmerzen auch unter ständiger Müdigkeit?“  
+- „Haben Sie Schwierigkeiten, sich zu konzentrieren oder Entscheidungen zu treffen?“  
+- „Wie ist Ihre Schlafqualität?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ja, ich fühle mich den ganzen Tag über müde und habe oft Konzentrationsprobleme. Mein Schlaf ist unruhig und wird häufig unterbrochen.“  
+- *Arzt:* „Beeinträchtigen diese Symptome Ihren Alltag erheblich?“
+
+---
+
+**5. Auswirkungen auf den Alltag**  
+**Ziel:**  
+- Erfassen, wie stark die Symptome die berufliche Leistungsfähigkeit, soziale Kontakte und Freizeitaktivitäten beeinflussen.
+
+**Anleitung:**  
+- Fragen zu Alltagsaktivitäten und Einschränkungen stellen.
+
+**Beispielfragen:**  
+- „Wie beeinträchtigen die Schmerzen und die Erschöpfung Ihren Alltag?“  
+- „Haben Sie Probleme im Beruf oder im sozialen Leben?“  
+- „Können Sie Ihren gewohnten Aktivitäten noch nachgehen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe große Schwierigkeiten, meinen beruflichen Verpflichtungen nachzukommen, und ziehe mich zunehmend zurück.“  
+- *Arzt:* „Haben Sie bereits Maßnahmen ergriffen, um mit diesen Einschränkungen umzugehen?“
+
+---
+
+**6. Psychische Belastung und emotionale Symptome**  
+**Ziel:**  
+- Erfassung von psychischen Symptomen wie Stimmungsschwankungen, Depression oder Angst, die häufig mit Fibromyalgie einhergehen.
+
+**Anleitung:**  
+- Fragen zur emotionalen Befindlichkeit und psychischen Belastung stellen.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft niedergeschlagen oder ängstlich?“  
+- „Haben Sie Stimmungsschwankungen bemerkt?“  
+- „Beeinträchtigen diese emotionalen Symptome Ihr Wohlbefinden?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ja, ich fühle mich oft deprimiert und habe manchmal Angst, dass sich die Schmerzen nicht bessern.“  
+- *Arzt:* „Haben Sie bereits über professionelle Unterstützung in diesem Bereich nachgedacht?“
+
+---
+
+**7. Vorherige Behandlungen und Therapieversuche**  
+**Ziel:**  
+- Erfassen, welche therapeutischen Maßnahmen bereits ergriffen wurden, um die Symptome zu lindern.
+
+**Anleitung:**  
+- Fragen zu bisherigen Behandlungen, Medikamenten oder physiotherapeutischen Maßnahmen stellen.
+
+**Beispielfragen:**  
+- „Haben Sie bereits Behandlungen gegen Ihre Beschwerden erhalten?“  
+- „Welche Therapien (z. B. medikamentöse Behandlung, Physiotherapie) haben Sie bisher ausprobiert?“  
+- „Wie haben Sie auf diese Behandlungen reagiert?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich war in verschiedenen Therapien, darunter Physiotherapie und Schmerzmedikation, aber leider ohne langfristige Besserung.“  
+- *Arzt:* „Gab es bestimmte Ansätze, die zumindest kurzfristig Erleichterung gebracht haben?“
+
+---
+
+**8. Zusammenhang mit körperlicher und psychischer Belastung**  
+**Ziel:**  
+- Ermitteln, inwieweit körperliche oder emotionale Stressfaktoren die Symptome verschlimmern.
+
+**Anleitung:**  
+- Fragen zum Zusammenhang von Belastungen und Symptomentwicklung stellen.
+
+**Beispielfragen:**  
+- „Haben Sie das Gefühl, dass Ihre Symptome bei Stress stärker werden?“  
+- „Beeinflusst körperliche Anstrengung Ihre Beschwerden?“  
+- „Gibt es bestimmte Auslöser, die die Schmerzen intensivieren?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ja, an stressigen Tagen nehmen die Schmerzen und die Erschöpfung deutlich zu.“  
+- *Arzt:* „Welche Stressfaktoren begegnen Ihnen regelmäßig im Alltag?“
+
+---
+
+**9. Vorherige Diagnostik und Befunde**  
+**Ziel:**  
+- Erfassen, ob bereits diagnostische Maßnahmen (z. B. Blutuntersuchungen, bildgebende Verfahren) durchgeführt wurden und welche Ergebnisse vorliegen.
+
+**Anleitung:**  
+- Fragen zu bisherigen Untersuchungen und deren Befunden stellen.
+
+**Beispielfragen:**  
+- „Wurden bereits laborchemische oder bildgebende Untersuchungen durchgeführt?“  
+- „Gab es Ergebnisse, die auf Fibromyalgie hindeuten?“  
+- „Welche diagnostischen Verfahren wurden bisher angewandt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich wurde schon mehrfach untersucht; die Befunde waren unspezifisch, aber die Symptomatik passt zu Fibromyalgie.“  
+- *Arzt:* „Diese Ergebnisse unterstützen den Verdacht, allerdings benötigen wir eine umfassende Evaluation.“
+
+---
+
+**10. Weitere relevante Aspekte**  
+**Ziel:**  
+- Erfassen zusätzlicher Faktoren, wie Schlafgewohnheiten, Substanzkonsum (z. B. Koffein, Alkohol) und Lebensstil, die zur Symptomatik beitragen können.
+
+**Anleitung:**  
+- Offene Fragen zu weiteren Lebensgewohnheiten und Belastungen stellen.
+
+**Beispielfragen:**  
+- „Haben sich Ihre Schlafgewohnheiten verändert?“  
+- „Konsumieren Sie vermehrt koffeinhaltige Getränke oder Alkohol?“  
+- „Wie würden Sie Ihren allgemeinen Lebensstil beschreiben?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Mein Schlaf ist unruhig, und ich greife oft zu Kaffee, um wach zu bleiben, was möglicherweise auch belastend wirkt.“
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese bei Fibromyalgie**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Einschätzung des allgemeinen körperlichen Befindens und der subjektiven Vitalität.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden aktuell einschätzen?“  
+- „Fühlen Sie sich oft körperlich erschöpft?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich häufig müde und ausgelaugt, fast den ganzen Tag über.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Erfassung von Veränderungen im Appetit und Essverhalten, die bei chronischen Schmerzen und Stress auftreten können.
+
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Appetit festgestellt?“  
+- „Essen Sie weniger oder mehr als gewöhnlich?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Meistens habe ich keinen großen Appetit und esse oft unregelmäßig.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Feststellen, ob es zu ungewolltem Gewichtsverlust oder -zunahme gekommen ist.
+
+**Beispielfragen:**  
+- „Haben Sie ohne bewusste Diät an Gewicht verloren oder zugenommen?“  
+- „Wie hat sich Ihr Gewicht in den letzten Monaten verändert?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe in den letzten Monaten leicht an Gewicht verloren.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität und -quantität, da Schlafstörungen ein typisches Symptom sind.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Einschlafen oder Durchschlafen?“  
+- „Fühlen Sie sich nach dem Schlaf erholt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich schlafe unruhig und fühle mich morgens oft nicht ausgeruht.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Erfragen, ob es zu ungewöhnlichen Wärme- oder Kälteempfindungen kommt.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft zu warm oder zu kalt?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Manchmal habe ich das Gefühl, innerlich zu frieren, auch wenn es außen normal ist.“
+
+---
+
+**6. Energielevel und Antrieb**  
+**Ziel:**  
+- Erfassen, ob der Patient sich kraftlos und antriebslos fühlt.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr Energielevel tagsüber beschreiben?“  
+- „Fühlen Sie sich oft energielos und ohne Antrieb?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe kaum noch Energie und finde kaum Motivation, den Tag zu bewältigen.“
+
+---
+
+**7. Vegetative Reaktionen (Herz-Kreislauf)**  
+**Ziel:**  
+- Erfassen von autonomen Symptomen, wie Herzklopfen, Blutdruckschwankungen oder vermehrtem Schwitzen.
+
+**Beispielfragen:**  
+- „Haben Sie ein schneller schlagendes Herz oder vermehrtes Schwitzen bemerkt?“  
+- „Fühlen Sie sich in stressigen Momenten körperlich anders?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Gelegentlich spüre ich ein starkes Herzklopfen, besonders wenn ich gestresst bin.“
+
+---
+
+**8. Allgemeines Wohlbefinden**  
+**Ziel:**  
+- Zusammenfassende Einschätzung des subjektiven vegetativen Zustands.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden beschreiben?“  
+- „Welche vegetativen Symptome beeinträchtigen Sie am meisten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mein allgemeines Wohlbefinden ist stark beeinträchtigt, vor allem durch Müdigkeit und Schlafprobleme.“
+
+---
+
+**9. Flüssigkeitsaufnahme und Durstgefühl**  
+**Ziel:**  
+- Erfassung, ob es Veränderungen in der Trinkmenge gibt, die das vegetative System beeinflussen.
+
+**Beispielfragen:**  
+- „Trinken Sie mehr oder weniger als gewöhnlich?“  
+- „Haben Sie ein verändertes Durstgefühl?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Meine Flüssigkeitsaufnahme ist etwas reduziert, da ich oft keinen Appetit habe.“
+
+---
+
+**10. Weitere vegetative Symptome**  
+**Ziel:**  
+- Erfassung zusätzlicher autonomer Symptome, die nicht direkt in andere Kategorien passen.
+
+**Beispielfragen:**  
+- „Gibt es noch weitere körperliche Beschwerden, die Sie stören?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Abgesehen von den genannten Symptomen fühle ich mich insgesamt sehr angeschlagen.“
+
+---
+
+**11. Zusammenfassendes vegetatives Gesamtbild**  
+**Ziel:**  
+- Übergreifende Beurteilung des vegetativen Zustands im Zusammenhang mit Fibromyalgie.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr vegetatives Befinden insgesamt beschreiben?“  
+- „Welche Symptome empfinden Sie als besonders belastend?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Insgesamt beeinträchtigen mich die ständige Müdigkeit, die Schlafstörungen und das Gefühl der inneren Kälte sehr.“
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob frühere psychische oder somatische Erkrankungen vorliegen, die das Risiko für Fibromyalgie erhöhen können.
+
+**Beispielfragen:**  
+- „Hatten Sie bereits andere chronische Schmerzerkrankungen oder depressive Episoden?“  
+- „Gab es in der Vergangenheit Muskel-Skelett-Erkrankungen, die langfristig belastend waren?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich hatte in der Vergangenheit wiederholt muskuläre Beschwerden und bereits depressive Phasen, die sich nicht vollständig therapieren ließen.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob operative Eingriffe in der Vergangenheit stattgefunden haben, die als belastende Ereignisse empfunden wurden.
+
+**Beispielfragen:**  
+- „Wurden Sie in der Vergangenheit operiert, insbesondere im muskuloskelettalen Bereich?“  
+- „Gab es Eingriffe, die Ihre körperliche Belastbarkeit beeinflusst haben?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich wurde bisher nicht operiert, abgesehen von kleineren Eingriffen, die keinen langfristigen Einfluss hatten.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche medikamentösen Therapien aktuell oder in der Vergangenheit zur Behandlung von Schmerzen, Depressionen oder Schlafstörungen eingenommen wurden.
+
+**Beispielfragen:**  
+- „Nehmen Sie aktuell Medikamente gegen chronische Schmerzen oder depressive Verstimmungen ein?“  
+- „Gab es Änderungen in Ihrer Medikation in der letzten Zeit?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich nehme derzeit ein leicht dosiertes Antidepressivum und Schmerzmittel, jedoch ist die Wirkung bislang begrenzt.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob Allergien oder Unverträglichkeiten vorliegen, die bei der medikamentösen Behandlung berücksichtigt werden müssen.
+
+**Beispielfragen:**  
+- „Haben Sie bekannte Allergien gegen bestimmte Medikamente?“  
+- „Gab es in der Vergangenheit unerwünschte Reaktionen auf Schmerzmittel oder Psychopharmaka?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe keine bekannten Allergien gegen Medikamente.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von Risikofaktoren und belastenden Einflüssen, die zur Entstehung der Fibromyalgie beitragen können.
+
+**Beispiele:**  
+- Chronischer beruflicher und privater Stress, fehlende Work-Life-Balance, Bewegungsmangel.
+
+**Beispielfragen:**  
+- „Wie hoch schätzen Sie Ihren beruflichen Stress ein?“  
+- „Haben Sie in letzter Zeit Veränderungen in Ihrem privaten Umfeld erlebt?“  
+- „Wie sieht Ihr Bewegungsverhalten aus?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite in einem sehr stressigen Umfeld, und auch privat fühle ich mich häufig überfordert und wenig aktiv.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie Fälle von chronischen Schmerzerkrankungen, Depressionen oder Fibromyalgie-ähnlichen Symptomen vorkommen, die auf eine genetische Prädisposition hindeuten könnten.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie Fälle von Fibromyalgie oder ähnlichen Schmerzerkrankungen?“  
+- „Wurden bei nahen Angehörigen depressive Störungen diagnostiziert?“
+
+**Mögliche Antworten:**  
+- *Patient:* „In meiner Familie gibt es vereinzelt Fälle von chronischen Schmerzen und depressiven Verstimmungen.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen und beruflichen Lebensumstände, die Einfluss auf das Risiko und den Verlauf der Fibromyalgie haben können.
+
+**Relevante Bereiche:**  
+- Berufliche Situation, Arbeitszeiten, soziale Unterstützung, Freizeitaktivitäten und Erholungsphasen.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre aktuelle berufliche Situation beschreiben?“  
+- „Haben Sie ausreichend Erholungsphasen und Unterstützung im privaten Umfeld?“  
+- „Wie verbringen Sie Ihre Freizeit, und finden Sie Zeit für Bewegung?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite in einem hochstressigen Job, finde aber selten Zeit für Erholung oder soziale Aktivitäten, was sich negativ auf mein Befinden auswirkt.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung anderer Schmerzerkrankungen oder psychischer Störungen, die ähnliche Symptome wie Fibromyalgie verursachen können.
+
+**Beispiele:**  
+1. Major Depression – insbesondere bei vorherrschender Stimmungstiefs;  
+2. Chronisches Erschöpfungssyndrom – mit überwiegender körperlicher Erschöpfung;  
+3. Rheumatoide Arthritis oder andere entzündliche Erkrankungen – bei Gelenkschmerzen;  
+4. Somatoforme Schmerzstörung – wenn keine organische Ursache gefunden wird.
+
+**Beispielfragen:**  
+- „Können Ihre Symptome auch durch andere Erkrankungen erklärt werden?“  
+- „Wurden entzündliche oder rheumatische Ursachen ausgeschlossen?“  
+- „Gibt es Hinweise auf primär psychische Belastungen, die die Schmerzen verstärken?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Die Untersuchungen haben keine entzündlichen Prozesse ergeben, und die Symptome passen eher zum Bild der Fibromyalgie.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags auf Basis der anamnestischen Daten, klinischen Befunde und vegetativen Symptome.
+
+**Kriterien:**  
+- Vorhandensein weit verbreiteter, chronischer Schmerzen, verbunden mit Erschöpfung, Schlafstörungen und kognitiven Beeinträchtigungen.  
+- Ausschluss organischer Ursachen durch bisherige Untersuchungen.  
+- Erhöhter Stress und psychosoziale Belastungen als beitragende Faktoren.
+
+**Beispielfazit:**  
+- „Aufgrund der weit verbreiteten, chronischen Schmerzzustände, der anhaltenden Erschöpfung und der begleitenden vegetativen Störungen besteht der Verdacht auf Fibromyalgie. Eine weiterführende interdisziplinäre Diagnostik ist angezeigt.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung der weiteren diagnostischen und therapeutischen Schritte zur Bestätigung der Diagnose und zur Planung einer individuellen Behandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Diagnostische Interventionen:**  
+- **Interdisziplinäres Assessment:** Einbeziehung von Schmerztherapeuten, Psychologen und Rheumatologen.  
+- **Standardisierte Fragebögen:** Einsatz von Instrumenten wie dem Fibromyalgia Impact Questionnaire (FIQ) und weiteren psychometrischen Tests.  
+- **Laboruntersuchungen:** Blutbild, Entzündungsparameter und rheumatologische Basisuntersuchungen zur Ausschlussdiagnostik organischer Ursachen.
+
+**Therapeutische Interventionen:**  
+- **Medikamentöse Therapie:** Einsatz von Antidepressiva (z. B. Amitriptylin, Duloxetin) und Schmerzmitteln, angepasst an den Patienten.  
+- **Physiotherapie und Bewegungstherapie:** Gezielte Übungen zur Stärkung der Muskulatur und Verbesserung der Beweglichkeit.  
+- **Psychotherapeutische Maßnahmen:** Kognitive Verhaltenstherapie und Stressbewältigungsstrategien zur Reduktion der psychischen Belastung.  
+- **Ergänzende Maßnahmen:** Entspannungsverfahren wie Yoga, Meditation und ein gezieltes Schlafhygiene-Training.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, sich einem interdisziplinären Assessment zu unterziehen?“  
+- „Wie stehen Sie zu einer kombinierten Therapie aus medikamentöser Behandlung und Physiotherapie?“  
+- „Wären Sie bereit, an psychotherapeutischen Sitzungen zur Stressbewältigung teilzunehmen?“
+    `
+  },
+},
+metabolisches_syndrom: {
+  name: "Metabolisches Syndrom",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Metabolisches Syndrom**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassung des Grundes für den Arztbesuch im Zusammenhang mit Symptomen, die auf ein metabolisches Syndrom hindeuten können (z. B. Übergewicht, Bluthochdruck, erhöhter Blutzucker).
+
+**Anleitung:**  
+- Offene Fragen stellen, um Beschwerden und Risikofaktoren zu eruieren.
+
+**Beispielfragen:**  
+- „Was führt Sie heute zu uns?“  
+- „Haben Sie in letzter Zeit gesundheitliche Veränderungen bemerkt, wie anhaltende Müdigkeit oder Gewichtszunahme?“  
+- „Gab es bei Ihnen Symptome wie häufiges Durstgefühl oder vermehrtes Wasserlassen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe in den letzten Monaten deutlich zugenommen und mein Blutdruck ist konstant erhöht.“  
+- *Arzt:* „Seit wann haben Sie diese Beschwerden und haben Sie bereits eine Behandlung erhalten?“
+
+---
+
+**2. Symptomatik und Beschwerdebild**  
+**Ziel:**  
+- Detaillierte Erfassung der Symptome, die zum metabolischen Syndrom passen, wie Übergewicht, Bluthochdruck, Insulinresistenz und dyslipidämische Werte.
+
+**Anleitung:**  
+- Fragen zu einzelnen Symptomen und deren Intensität stellen.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre körperliche Verfassung im Hinblick auf Ihr Gewicht und Ihre Energie beschreiben?“  
+- „Haben Sie Anzeichen wie erhöhten Bauchumfang oder Fettverteilung am Bauch?“  
+- „Wurden Ihnen bereits erhöhte Blutzuckerwerte oder abnormale Cholesterinwerte diagnostiziert?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Mir wurde gesagt, dass mein Bauchumfang deutlich erhöht ist, und mein Blutzucker liegt regelmäßig über dem Normalwert.“  
+- *Arzt:* „Haben Sie zusätzlich Symptome wie Müdigkeit, häufigen Durst oder Sehstörungen bemerkt?“
+
+---
+
+**3. Zeitverlauf und Dynamik der Symptome**  
+**Ziel:**  
+- Klärung, wann die Symptome erstmals auftraten und wie sich diese über die Zeit verändert haben.
+
+**Anleitung:**  
+- Nach dem Beginn der Beschwerden, deren Dauer und eventuellen Schwankungen fragen.
+
+**Beispielfragen:**  
+- „Seit wann haben Sie das Gefühl, dass sich Ihr Gewicht oder Ihre Blutwerte verändert haben?“  
+- „Haben sich Ihre Symptome im Laufe der Zeit verschlechtert oder stabilisiert?“  
+- „Gab es Phasen, in denen Sie Verbesserungen feststellen konnten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Probleme bestehen seit etwa zwei Jahren und haben sich in den letzten Monaten deutlich verschlechtert.“  
+- *Arzt:* „Wurden in dieser Zeit bereits Änderungen in Ihrer Ernährung oder Ihrem Lebensstil vorgenommen?“
+
+---
+
+**4. Zusammenhang mit Ernährung und Lebensstil**  
+**Ziel:**  
+- Erfassen, wie Ernährungsgewohnheiten, körperliche Aktivität und Lebensstil zur Symptomatik beitragen.
+
+**Anleitung:**  
+- Fragen zu Essgewohnheiten, Bewegungsverhalten und Freizeitaktivitäten stellen.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre Ernährungsgewohnheiten beschreiben?“  
+- „Treiben Sie regelmäßig Sport oder bewegen Sie sich ausreichend?“  
+- „Gab es in letzter Zeit Veränderungen in Ihrem Lebensstil, die Sie als belastend empfinden?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich ernähre mich eher unregelmäßig, esse oft fett- und zuckerreich und bewege mich kaum im Alltag.“  
+- *Arzt:* „Das sind wichtige Faktoren, die wir in die Therapieplanung einbeziehen sollten.“
+
+---
+
+**5. Begleitende Symptome und Komorbiditäten**  
+**Ziel:**  
+- Erfassen von zusätzlichen Symptomen, die häufig mit dem metabolischen Syndrom einhergehen, z. B. Bluthochdruck, Insulinresistenz und dyslipidämische Veränderungen.
+
+**Anleitung:**  
+- Fragen zu bekannten Diagnosen und Symptomen stellen, die mit den Risikofaktoren korrelieren.
+
+**Beispielfragen:**  
+- „Wurden bei Ihnen bereits Bluthochdruck, Diabetes oder Fettstoffwechselstörungen diagnostiziert?“  
+- „Haben Sie Symptome wie vermehrten Durst, häufiges Wasserlassen oder Sehstörungen?“  
+- „Gab es Beschwerden wie Kurzatmigkeit bei körperlicher Belastung?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ja, bei mir wurde Bluthochdruck und eine Insulinresistenz festgestellt, zudem wurde mir ein erhöhter Cholesterinspiegel bescheinigt.“  
+- *Arzt:* „Diese Komorbiditäten sind typische Begleiter des metabolischen Syndroms und müssen in die Behandlung einbezogen werden.“
+
+---
+
+**6. Medikamentenanamnese**  
+**Ziel:**  
+- Erfassen, welche Medikamente aktuell eingenommen werden, insbesondere solche, die zur Kontrolle von Blutdruck, Blutzucker und Cholesterin beitragen.
+
+**Anleitung:**  
+- Fragen zu aktuellen und bisherigen medikamentösen Therapien stellen.
+
+**Beispielfragen:**  
+- „Nehmen Sie aktuell Medikamente gegen Bluthochdruck oder Diabetes ein?“  
+- „Gab es Änderungen in Ihrer Medikation in der letzten Zeit?“  
+- „Wie reagieren Sie auf die medikamentöse Therapie?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich nehme täglich ein blutdrucksenkendes Mittel und ein orales Antidiabetikum, aber meine Werte bleiben teilweise erhöht.“  
+- *Arzt:* „Wir sollten Ihre Medikation überprüfen und ggf. anpassen.“
+
+---
+
+**7. Vorherige Diagnostik und Befunde**  
+**Ziel:**  
+- Erfassen, ob bereits diagnostische Maßnahmen (z. B. Blutuntersuchungen, Ultraschall) durchgeführt wurden und welche Ergebnisse vorliegen.
+
+**Anleitung:**  
+- Fragen zu früheren Untersuchungen und deren Befunden stellen.
+
+**Beispielfragen:**  
+- „Wurden bei Ihnen bereits Blutuntersuchungen durchgeführt?“  
+- „Wie sind Ihre Blutzucker-, Cholesterin- und Blutdruckwerte?“  
+- „Gab es in der Vergangenheit Hinweise auf metabolische Dysfunktionen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Meine Blutwerte zeigen seit einiger Zeit erhöhte Blutzucker- und Cholesterinwerte, und mein Blutdruck liegt regelmäßig über dem Normalwert.“  
+- *Arzt:* „Diese Befunde bestätigen den Verdacht auf ein metabolisches Syndrom.“
+
+---
+
+**8. Zusammenhang mit Stress und psychischen Faktoren**  
+**Ziel:**  
+- Erfassen, ob beruflicher oder privater Stress zur Entstehung oder Verschlimmerung der Symptome beiträgt.
+
+**Anleitung:**  
+- Fragen zu Stressfaktoren, emotionaler Belastung und psychischen Symptomen stellen.
+
+**Beispielfragen:**  
+- „Wie hoch schätzen Sie Ihren aktuellen Stresslevel ein?“  
+- „Gab es belastende Ereignisse, die zu einer Verschlechterung Ihres Gesundheitszustandes geführt haben?“  
+- „Fühlen Sie sich emotional überfordert oder niedergeschlagen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich bin ständig unter Stress, was sich auch negativ auf meine Gesundheit auswirkt.“  
+- *Arzt:* „Stress ist ein bekannter Risikofaktor für das metabolische Syndrom und sollte in der Therapie berücksichtigt werden.“
+
+---
+
+**9. Weitere relevante Anamneseaspekte**  
+**Ziel:**  
+- Erfassen zusätzlicher Faktoren wie Schlafstörungen, Substanzkonsum (z. B. Nikotin, Alkohol) und familiäre Vorbelastungen.
+
+**Anleitung:**  
+- Offene Fragen zu weiteren Lebensgewohnheiten und Risikofaktoren stellen.
+
+**Beispielfragen:**  
+- „Haben Sie Schlafprobleme oder andere störende Symptome?“  
+- „Rauchen Sie oder konsumieren Sie Alkohol, und wenn ja, in welchem Umfang?“  
+- „Gibt es in Ihrer Familie Fälle von Diabetes oder Herz-Kreislauf-Erkrankungen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich schlafe unruhig, rauche gelegentlich und trinke moderat Alkohol. In meiner Familie gibt es mehrere Fälle von Herz-Kreislauf-Erkrankungen.“  
+- *Arzt:* „Diese Informationen fließen in Ihre Risikoeinschätzung ein.“
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese beim Metabolischen Syndrom**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Einschätzung des allgemeinen körperlichen Befindens und der subjektiven Vitalität.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden aktuell beschreiben?“  
+- „Fühlen Sie sich oft müde oder kraftlos?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich häufig erschöpft und habe das Gefühl, ständig energiearm zu sein.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Erfassung von Veränderungen im Essverhalten, die typisch für ein metabolisches Syndrom sein können.
+
+**Beispielfragen:**  
+- „Haben Sie in letzter Zeit Veränderungen in Ihrem Appetit bemerkt?“  
+- „Essen Sie regelmäßig und ausgewogen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mein Appetit ist oft gestört – ich esse unregelmäßig und neige zu ungesunden Lebensmitteln.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Feststellen, ob es zu einem ungewollten Gewichtsanstieg, insbesondere im Bauchbereich, gekommen ist.
+
+**Beispielfragen:**  
+- „Haben Sie in den letzten Monaten an Gewicht zugenommen?“  
+- „Ist Ihr Bauchumfang im Vergleich zu früher deutlich größer geworden?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe deutlich an Gewicht zugenommen, insbesondere im Bauchbereich.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität, da Schlafstörungen häufig bei Menschen mit metabolischem Syndrom auftreten.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Einschlafen oder Durchschlafen?“  
+- „Fühlen Sie sich nach dem Schlaf ausgeruht?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich schlafe unruhig und fühle mich morgens oft nicht ausreichend erholt.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Erfragen, ob es zu ungewöhnlichen Wärme- oder Kälteempfindungen kommt.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft zu warm oder zu kalt?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Manchmal habe ich das Gefühl, dass mir innerlich heiß ist, besonders in stressigen Zeiten.“
+
+---
+
+**6. Energielevel und Antrieb**  
+**Ziel:**  
+- Erfassen, ob der Patient sich energiearm und antriebslos fühlt.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr Energielevel tagsüber beschreiben?“  
+- „Fühlen Sie sich oft kraftlos und ohne Motivation?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich den ganzen Tag über müde und habe kaum Antrieb für Aktivitäten.“
+
+---
+
+**7. Vegetative Reaktionen (Herz-Kreislauf)**  
+**Ziel:**  
+- Erfassen von autonomen Symptomen wie Herzklopfen oder Blutdruckschwankungen.
+
+**Beispielfragen:**  
+- „Haben Sie häufig ein schneller schlagendes Herz oder spüren Sie Blutdruckschwankungen?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Gelegentlich bemerke ich ein starkes Herzklopfen, besonders in Stresssituationen.“
+
+---
+
+**8. Allgemeines Wohlbefinden**  
+**Ziel:**  
+- Zusammenfassende Einschätzung des vegetativen Zustands und der subjektiven Lebensqualität.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden beschreiben?“  
+- „Welche vegetativen Symptome empfinden Sie als besonders belastend?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mein allgemeines Wohlbefinden ist stark beeinträchtigt, vor allem durch Müdigkeit und Schlafstörungen.“
+
+---
+
+**9. Flüssigkeitsaufnahme und Durstgefühl**  
+**Ziel:**  
+- Erfassen, ob sich die Trinkgewohnheiten verändert haben.
+
+**Beispielfragen:**  
+- „Trinken Sie mehr oder weniger als früher?“  
+- „Haben Sie vermehrt Durst?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich trinke in letzter Zeit etwas mehr, da ich oft Durst verspüre.“
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob bereits frühere Erkrankungen vorliegen, die mit dem metabolischen Syndrom in Verbindung stehen können, wie Diabetes, Hypertonie oder Dyslipidämie.
+
+**Beispielfragen:**  
+- „Wurden bei Ihnen bereits Diabetes, Bluthochdruck oder Fettstoffwechselstörungen diagnostiziert?“  
+- „Gab es in der Vergangenheit chronische Erkrankungen, die Ihren Stoffwechsel beeinflussen?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Bei mir wurden in der Vergangenheit eine Insulinresistenz und erhöhte Cholesterinwerte festgestellt, und mein Blutdruck liegt oft über dem Normalwert.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob operative Eingriffe im Bereich des Abdomens oder anderer relevanter Organe durchgeführt wurden, die den Stoffwechsel oder die körperliche Belastbarkeit beeinflussen könnten.
+
+**Beispielfragen:**  
+- „Wurden Sie bereits operiert, insbesondere im Bereich des Verdauungstrakts oder zur Adipositasbehandlung?“  
+- „Gab es operative Eingriffe, die Einfluss auf Ihre metabolische Gesundheit haben könnten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich wurde bisher nicht operiert, abgesehen von gelegentlichen kleineren Eingriffen.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche medikamentösen Therapien aktuell oder in der Vergangenheit eingenommen wurden, um Risikofaktoren zu kontrollieren (z. B. blutdrucksenkende Mittel, Antidiabetika, Lipidsenker).
+
+**Beispielfragen:**  
+- „Nehmen Sie Medikamente gegen Bluthochdruck, Diabetes oder Dyslipidämie ein?“  
+- „Gab es in der letzten Zeit Änderungen in Ihrer Medikation?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich nehme täglich ein blutdrucksenkendes Mittel, ein orales Antidiabetikum und einen Cholesterinsenker.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob bekannte Allergien oder Unverträglichkeiten vorliegen, die bei der medikamentösen Therapie berücksichtigt werden müssen.
+
+**Beispielfragen:**  
+- „Haben Sie Allergien gegen bestimmte Medikamente?“  
+- „Gab es in der Vergangenheit unerwünschte Reaktionen auf Medikamente, die Sie einnehmen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe keine bekannten Allergien gegen Medikamente.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von Risikofaktoren, die zur Entstehung des metabolischen Syndroms beitragen, wie ungesunde Ernährung, Bewegungsmangel und chronischer Stress.
+
+**Beispiele:**  
+- Übergewicht, sedentärer Lebensstil, Rauchen, hoher Alkoholkonsum.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre Ernährungsgewohnheiten beschreiben?“  
+- „Treiben Sie regelmäßig Sport oder bewegen Sie sich ausreichend?“  
+- „Rauchen Sie, und konsumieren Sie regelmäßig Alkohol?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Meine Ernährung ist oft ungesund, ich bewege mich kaum und rauche gelegentlich, außerdem erlebe ich hohen beruflichen Stress.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie Fälle von Diabetes, Bluthochdruck, Herz-Kreislauf-Erkrankungen oder Adipositas vorliegen, die auf eine genetische Prädisposition hindeuten könnten.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie Fälle von Diabetes oder Herz-Kreislauf-Erkrankungen?“  
+- „Leiden nahe Angehörige an chronischen Stoffwechselstörungen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „In meiner Familie gibt es mehrere Fälle von Diabetes und Herz-Kreislauf-Erkrankungen, was mich zusätzlich belastet.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen und beruflichen Lebensumstände, die Einfluss auf das metabolische Syndrom haben können.
+
+**Relevante Bereiche:**  
+- Berufliche Belastung, Stress, Freizeitaktivitäten, Ernährungsgewohnheiten und Unterstützung im privaten Umfeld.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre aktuelle berufliche Situation beschreiben?“  
+- „Haben Sie genügend Zeit und Möglichkeiten, sich sportlich zu betätigen?“  
+- „Wie sieht Ihr soziales Umfeld aus – gibt es Unterstützung, und wie ist Ihre Stressbewältigung?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite in einem stressigen Beruf, finde selten Zeit für Bewegung und habe nur eingeschränkte Unterstützung im privaten Umfeld.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung anderer Erkrankungen, die ähnliche Symptome wie das metabolische Syndrom verursachen können.
+
+**Beispiele:**  
+1. Endokrine Störungen wie Schilddrüsenerkrankungen  
+2. Adipositas-bedingte kardiovaskuläre Erkrankungen  
+3. Insulinresistenz ohne ausgeprägte Stoffwechselstörung  
+4. Chronisches Erschöpfungssyndrom
+
+**Beispielfragen:**  
+- „Können Ihre Beschwerden auch durch eine Schilddrüsenerkrankung erklärt werden?“  
+- „Wurden andere endokrine oder metabolische Erkrankungen durch Blutuntersuchungen ausgeschlossen?“  
+- „Gibt es Anzeichen, die eindeutig auf das metabolische Syndrom hinweisen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Meine Blutwerte und Untersuchungen sprechen hauptsächlich für ein metabolisches Syndrom, andere Störungen konnten weitestgehend ausgeschlossen werden.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags basierend auf den anamnestischen Daten, den klinischen Befunden und den laborchemischen Ergebnissen.
+
+**Kriterien:**  
+- Vorhandensein von Übergewicht (insbesondere abdominal), Bluthochdruck, erhöhter Blutzucker und dyslipidämischen Werten.  
+- Begleitende Symptome wie Müdigkeit, unregelmäßige Essgewohnheiten und Bewegungsmangel.  
+- Lebensstilbedingte Risikofaktoren wie Stress und ungesunde Ernährung.
+
+**Beispielfazit:**  
+- „Aufgrund der vorliegenden Befunde und Risikofaktoren besteht der Verdacht auf ein metabolisches Syndrom, das einer gezielten Therapie und Lebensstilintervention bedarf.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung der weiteren diagnostischen und therapeutischen Schritte zur Bestätigung der Diagnose und zur individuellen Behandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Diagnostische Interventionen:**  
+- **Laboruntersuchungen:** Regelmäßige Kontrolle von Blutzucker, Lipidprofil, Leberwerten und Blutdruck.  
+- **Bildgebende Verfahren:** Ultraschalluntersuchung zur Beurteilung des Bauchumfangs und der Organverhältnisse, ggf. weitere bildgebende Diagnostik.
+
+**Therapeutische Interventionen:**  
+- **Lebensstilmodifikation:** Umfassende Ernährungsberatung, Bewegungsprogramme und Stressmanagement.  
+- **Medikamentöse Therapie:** Anpassung bzw. Einleitung von blutdrucksenkenden Mitteln, Antidiabetika und Lipidsenkern, falls indiziert.  
+- **Interdisziplinäre Betreuung:** Einbeziehung von Ernährungsberatern, Sportmedizinern und Psychologen zur nachhaltigen Verbesserung des Gesundheitszustandes.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, Ihren Lebensstil hinsichtlich Ernährung und Bewegung umzustellen?“  
+- „Wie stehen Sie zu einer interdisziplinären Behandlung, um Ihre Risikofaktoren zu reduzieren?“  
+- „Würden Sie sich regelmäßig labordiagnostisch kontrollieren lassen?“
+    `
+  },
+},
+restless_legs_syndrom: {
+  name: "Restless-Legs-Syndrom",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Restless-Legs-Syndrom**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassung des Hauptgrundes für den Arztbesuch im Zusammenhang mit unruhigen Beinen und unangenehmen Empfindungen.
+
+**Anleitung:**  
+- Offene Fragen stellen, um die Beschwerden und den Zeitpunkt ihres Auftretens zu eruieren.
+
+**Beispielfragen:**  
+- „Was führt Sie heute zu uns?“  
+- „Welche Beschwerden machen Ihnen in den Beinen zu schaffen?“  
+- „Wann treten die unangenehmen Empfindungen in Ihren Beinen auf?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe vor allem abends und in Ruhephasen ein starkes Ziehen und Kribbeln in den Beinen, das mich am Einschlafen hindert.“  
+- *Arzt:* „Treffen diese Symptome ausschließlich in Ruhe zu oder auch bei Bewegung?“
+
+---
+
+**2. Schmerzlokalisation und Empfindungscharakter**  
+**Ziel:**  
+- Detaillierte Erfassung der Lokalisation und des Charakters der Empfindungen (z. B. Kribbeln, Ziehen, Schmerzen).
+
+**Anleitung:**  
+- Fragen zu den spezifischen Empfindungen in den Beinen und deren Ausprägung stellen.
+
+**Beispielfragen:**  
+- „Wo genau in den Beinen spüren Sie die Beschwerden?“  
+- „Wie würden Sie die Empfindungen beschreiben – als Kribbeln, Ziehen oder als Schmerzen?“  
+- „Gibt es Bereiche, in denen die Symptome stärker ausgeprägt sind?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Beschwerden betreffen vor allem die Unterschenkel und manchmal auch die Oberschenkel, sie fühlen sich meist als starkes Kribbeln an.“  
+- *Arzt:* „Verändern sich die Empfindungen im Verlauf des Abends?“
+
+---
+
+**3. Zeitverlauf und Dynamik der Symptome**  
+**Ziel:**  
+- Klärung, seit wann die Symptome bestehen und wie sich diese im Tagesverlauf oder über längere Zeiträume verändern.
+
+**Anleitung:**  
+- Nach dem Beginn, der Dauer und möglichen Schwankungen der Symptome fragen.
+
+**Beispielfragen:**  
+- „Seit wann treten die Beschwerden in Ihren Beinen auf?“  
+- „Haben sich die Symptome im Laufe der Zeit verstärkt oder verändert?“  
+- „Gibt es bestimmte Tageszeiten, zu denen die Beschwerden am stärksten sind?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Symptome sind seit etwa einem Jahr vorhanden und erreichen abends meist ihren Höhepunkt.“  
+- *Arzt:* „Gab es in diesem Zeitraum Faktoren, die den Verlauf beeinflusst haben könnten?“
+
+---
+
+**4. Zusammenhang mit Ruhe und Aktivität**  
+**Ziel:**  
+- Erfassen, ob die Symptome vor allem in Ruhephasen auftreten und sich bei Bewegung bessern.
+
+**Anleitung:**  
+- Fragen stellen, inwiefern Ruhe oder Bewegung die Beschwerden beeinflussen.
+
+**Beispielfragen:**  
+- „Treten die Beschwerden vor allem auf, wenn Sie sich hinsetzen oder liegen?“  
+- „Verbessern sich Ihre Symptome, wenn Sie sich bewegen?“  
+- „Haben Sie festgestellt, dass Aktivitäten Linderung bringen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ja, in Bewegung verschwinden die Beschwerden meist, aber sobald ich stillsitze, setzen sie wieder ein.“  
+- *Arzt:* „Wie lange dauert es, bis sich nach einer Bewegung eine Besserung einstellt?“
+
+---
+
+**5. Begleitende Symptome und Schlafstörungen**  
+**Ziel:**  
+- Erfassung weiterer Symptome wie Schlafprobleme, die häufig mit dem Restless-Legs-Syndrom einhergehen.
+
+**Anleitung:**  
+- Fragen zu Schlafqualität, Einschlafproblemen und nächtlichem Erwachen stellen.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Einschlafen aufgrund der Beschwerden?“  
+- „Wachen Sie häufig in der Nacht auf?“  
+- „Fühlen Sie sich am Morgen ausgeruht?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich kann kaum einschlafen, da das Kribbeln in den Beinen sehr störend ist, und ich wache oft auf.“  
+- *Arzt:* „Beeinträchtigen diese Schlafstörungen Ihren Alltag erheblich?“
+
+---
+
+**6. Auswirkungen auf den Alltag und Lebensqualität**  
+**Ziel:**  
+- Erfassung, wie stark die Beschwerden die alltägliche Funktion und Lebensqualität beeinträchtigen.
+
+**Anleitung:**  
+- Fragen zu beruflichen, sozialen und privaten Einschränkungen stellen.
+
+**Beispielfragen:**  
+- „Wie wirken sich die Beschwerden auf Ihre täglichen Aktivitäten aus?“  
+- „Haben Sie Probleme bei der Arbeit oder in sozialen Situationen?“  
+- „Können Sie Ihren gewohnten Aktivitäten noch nachgehen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Beschwerden stören meinen Schlaf und damit auch meine Leistungsfähigkeit tagsüber, was mich im Berufs- und Privatleben stark einschränkt.“  
+- *Arzt:* „Welche Maßnahmen haben Sie bereits ergriffen, um eine Verbesserung zu erzielen?“
+
+---
+
+**7. Vorherige Behandlungen und Therapieversuche**  
+**Ziel:**  
+- Erfassen, welche therapeutischen Ansätze bereits unternommen wurden, um die Symptome zu lindern.
+
+**Anleitung:**  
+- Fragen zu medikamentösen Therapien, Physiotherapie oder anderen Interventionen stellen.
+
+**Beispielfragen:**  
+- „Haben Sie bereits Behandlungen oder Medikamente gegen Ihre Beschwerden ausprobiert?“  
+- „Welche Therapieansätze wurden bisher durchgeführt?“  
+- „Wie haben Sie auf diese Behandlungen reagiert?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe es mit Schmerzmitteln und leichten Muskelentspannern versucht, aber die Besserung war nur vorübergehend.“  
+- *Arzt:* „Gab es alternative Ansätze, wie z. B. physiotherapeutische Maßnahmen oder Änderungen im Lebensstil?“
+
+---
+
+**8. Vorherige Diagnostik und Befunde**  
+**Ziel:**  
+- Erfragen, ob bereits diagnostische Untersuchungen (z. B. neurologische Tests) durchgeführt wurden und welche Ergebnisse vorliegen.
+
+**Anleitung:**  
+- Fragen zu bisherigen Untersuchungen und deren Befunden stellen.
+
+**Beispielfragen:**  
+- „Wurden bei Ihnen bereits neurologische Untersuchungen durchgeführt?“  
+- „Gab es Befunde, die das Restless-Legs-Syndrom bestätigen oder ausschließen?“  
+- „Welche diagnostischen Tests wurden bisher angewandt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Es wurden bereits einfache neurologische Tests durchgeführt, die jedoch nichts Auffälliges ergeben haben.“  
+- *Arzt:* „Eine weiterführende Diagnostik könnte hier sinnvoll sein, um andere Ursachen auszuschließen.“
+
+---
+
+**9. Weitere relevante Anamneseaspekte**  
+**Ziel:**  
+- Erfassen von zusätzlichen Faktoren wie Substanzkonsum, Stress und familiären Vorerkrankungen, die Einfluss auf das Syndrom haben können.
+
+**Anleitung:**  
+- Offene Fragen zu Lebensgewohnheiten und Risikofaktoren stellen.
+
+**Beispielfragen:**  
+- „Rauchen Sie oder konsumieren Sie regelmäßig Alkohol?“  
+- „Gab es in Ihrer Familie Fälle von Restless-Legs-Syndrom oder anderen neurologischen Erkrankungen?“  
+- „Wie hoch ist Ihr allgemeiner Stresslevel?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich rauche gelegentlich und habe einen hohen beruflichen Stress, aber familiär wurde das Syndrom nicht vermehrt festgestellt.“
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese beim Restless-Legs-Syndrom**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Einschätzung des allgemeinen körperlichen Befindens und der Vitalität, da anhaltende Beschwerden oft zu Erschöpfung führen.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden beschreiben?“  
+- „Fühlen Sie sich häufig müde oder ausgelaugt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich oft erschöpft, vor allem weil ich nachts schlecht schlafen kann.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Erfassen, ob das Syndrom Auswirkungen auf den Appetit hat.
+
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Appetit festgestellt?“  
+- „Essen Sie regelmäßig oder sind Ihre Essgewohnheiten beeinträchtigt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe keinen signifikanten Appetitverlust bemerkt, aber meine Essgewohnheiten haben sich nicht verändert.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Feststellen, ob es zu ungewolltem Gewichtsverlust oder -zunahme gekommen ist.
+
+**Beispielfragen:**  
+- „Haben Sie in letzter Zeit Veränderungen in Ihrem Gewicht bemerkt?“  
+- „Gab es ungewollte Gewichtsveränderungen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe kein signifikantes Gewicht verloren oder zugenommen.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Detaillierte Erfassung der Schlafqualität, da das Restless-Legs-Syndrom oft mit erheblichen Schlafstörungen einhergeht.
+
+**Beispielfragen:**  
+- „Haben Sie Probleme beim Einschlafen oder Durchschlafen?“  
+- „Wachen Sie häufig auf, weil die Beschwerden in den Beinen Sie stören?“  
+- „Fühlen Sie sich morgens ausgeruht?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich schlafe sehr unruhig, wache oft auf und fühle mich morgens kaum erholt.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Erfassen, ob ungewöhnliche Wärme- oder Kälteempfindungen vorliegen, die in Zusammenhang mit autonomen Reaktionen stehen können.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft zu warm oder zu kalt?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe kein besonderes Wärme- oder Kälteempfinden, das mir auffällt.“
+
+---
+
+**6. Energielevel und Antrieb**  
+**Ziel:**  
+- Bewertung, ob das Syndrom zu einem anhaltenden Mangel an Energie und zu Antriebslosigkeit führt.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr Energielevel während des Tages beschreiben?“  
+- „Fühlen Sie sich oft kraftlos und ohne Motivation?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich sehr energielos, was vor allem auf die gestörte Schlafqualität zurückzuführen ist.“
+
+---
+
+**7. Vegetative Reaktionen (Herz-Kreislauf)**  
+**Ziel:**  
+- Erfassen von autonomen Symptomen wie Herzklopfen oder vermehrtem Schwitzen als Reaktion auf Stress oder nächtliche Beschwerden.
+
+**Beispielfragen:**  
+- „Haben Sie oft ein schneller schlagendes Herz oder vermehrtes Schwitzen, besonders nachts?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Gelegentlich spüre ich ein leichtes Herzklopfen, aber nichts Auffälliges im Bereich des Schwitzens.“
+
+---
+
+**8. Allgemeines Wohlbefinden**  
+**Ziel:**  
+- Zusammenfassende Einschätzung des subjektiven vegetativen Zustands.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden beschreiben?“  
+- „Inwiefern beeinträchtigen die vegetativen Symptome Ihren Alltag?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mein Wohlbefinden ist insgesamt beeinträchtigt, hauptsächlich durch die gestörte Nachtruhe und die daraus resultierende Tagesmüdigkeit.“
+
+---
+
+**9. Flüssigkeitsaufnahme und Durstgefühl**  
+**Ziel:**  
+- Erfassen, ob es Veränderungen in der Trinkmenge gibt.
+
+**Beispielfragen:**  
+- „Trinken Sie mehr oder weniger als gewöhnlich?“  
+- „Haben Sie vermehrt Durst?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Meine Trinkgewohnheiten haben sich nicht wesentlich verändert.“
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Vergangenheit neurologische oder psychiatrische Erkrankungen vorlagen, die mit dem Restless-Legs-Syndrom assoziiert sein könnten.
+
+**Beispielfragen:**  
+- „Hatten Sie bereits neurologische Untersuchungen oder Diagnosen, die zu ähnlichen Symptomen führten?“  
+- „Gab es in der Vergangenheit psychische Belastungen, wie Depressionen oder Angststörungen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich hatte in der Vergangenheit leichte depressive Phasen, aber sonst keine spezifischen neurologischen Erkrankungen.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob operative Eingriffe stattgefunden haben, die als belastende Ereignisse empfunden wurden und indirekt Einfluss auf das Syndrom haben könnten.
+
+**Beispielfragen:**  
+- „Wurden Sie in der Vergangenheit operiert?“  
+- „Gab es Eingriffe, die Ihre Nerven oder Muskeln im Bereich der Beine beeinflusst haben?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich wurde bisher nicht operiert, abgesehen von kleineren ambulanten Eingriffen.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche medikamentösen Behandlungen aktuell oder in der Vergangenheit zur Linderung der Symptome eingesetzt wurden.
+
+**Beispielfragen:**  
+- „Nehmen Sie aktuell Medikamente gegen die Beschwerden in den Beinen ein?“  
+- „Gab es in der Vergangenheit Versuche mit medikamentösen Therapien, wie z. B. Dopaminagonisten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe bereits Dopaminagonisten ausprobiert, jedoch ohne langanhaltende Besserung.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob Allergien oder Unverträglichkeiten vorliegen, die die medikamentöse Therapie beeinflussen könnten.
+
+**Beispielfragen:**  
+- „Haben Sie bekannte Allergien gegen Medikamente?“  
+- „Gab es in der Vergangenheit unerwünschte Reaktionen auf die Behandlung von neurologischen Beschwerden?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe keine bekannten Allergien gegen Medikamente.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von Risikofaktoren und belastenden Einflüssen, die zur Entstehung des Restless-Legs-Syndroms beitragen können.
+
+**Beispiele:**  
+- Hoher beruflicher Stress, unzureichende Bewegung, übermäßiger Konsum koffeinhaltiger Getränke und Alkohol.
+
+**Beispielfragen:**  
+- „Wie hoch schätzen Sie Ihren Stresslevel ein?“  
+- „Bewegen Sie sich regelmäßig?“  
+- „Konsumieren Sie viel Kaffee oder andere koffeinhaltige Getränke?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich bin beruflich stark belastet, bewege mich kaum und trinke täglich mehrere Tassen Kaffee.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie Fälle von neurologischen oder Schlafstörungen, oder auch Restless-Legs-Syndrom-ähnlichen Symptomen vorkommen.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie Fälle von unruhigen Beinen oder ähnlichen neurologischen Beschwerden?“  
+- „Leiden nahe Angehörige an Schlafstörungen oder anderen neurologischen Erkrankungen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „In meiner Familie gibt es vereinzelt Berichte über Schlafstörungen, aber kein klar diagnostiziertes Restless-Legs-Syndrom.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen und beruflichen Lebensumstände, die Einfluss auf das Syndrom haben können.
+
+**Relevante Bereiche:**  
+- Arbeitsumfeld, Freizeitgestaltung, Schlafgewohnheiten und Stressbewältigung.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre aktuelle berufliche Situation beschreiben?“  
+- „Finden Sie in Ihrem Alltag genügend Erholungsphasen?“  
+- „Wie sieht Ihr Schlafumfeld aus – gibt es Störfaktoren?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite in einem stressigen Umfeld, finde aber selten Zeit zur Entspannung, was sich negativ auf meinen Schlaf auswirkt.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung anderer Erkrankungen, die ähnliche Symptome wie das Restless-Legs-Syndrom verursachen können.
+
+**Beispiele:**  
+1. Periphere Neuropathie – oft mit ähnlichen Empfindungsstörungen verbunden.  
+2. Krampfanfälle der Muskulatur oder zerebrale Durchblutungsstörungen.  
+3. Restless-Arms-Syndrom – eine Variante, die vor allem die Arme betrifft.  
+4. Schlafapnoe – indirekt durch Schlafstörungen.
+
+**Beispielfragen:**  
+- „Können Ihre Symptome auch durch eine periphere Neuropathie erklärt werden?“  
+- „Wurden andere neurologische Erkrankungen durch Untersuchungen ausgeschlossen?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Neurologische Untersuchungen haben keine Hinweise auf eine periphere Neuropathie ergeben, sodass die Symptomatik eher dem Restless-Legs-Syndrom zuzuordnen ist.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags basierend auf den anamnestischen und klinischen Befunden sowie den vegetativen Symptomen.
+
+**Kriterien:**  
+- Vorhandensein von unangenehmen, unkontrollierbaren Empfindungen in den Beinen, die in Ruhe auftreten und sich durch Bewegung bessern.  
+- Schlafstörungen und daraus resultierende Tagesmüdigkeit.  
+- Ausschluss anderer neurologischer Erkrankungen durch bisherige Untersuchungen.
+
+**Beispielfazit:**  
+- „Aufgrund der vorliegenden Anamnese und der typischen Symptomatik besteht der Verdacht auf ein Restless-Legs-Syndrom, welches einer weiterführenden, interdisziplinären Diagnostik bedarf.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung der weiteren diagnostischen und therapeutischen Schritte zur Bestätigung der Diagnose und zur individuellen Therapieplanung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Diagnostische Interventionen:**  
+- **Neurologische Untersuchung:** Detaillierte Untersuchung der peripheren Nervenfunktion und Reflexe.  
+- **Schlaflaboruntersuchung:** Erfassung der Schlafqualität und Identifikation von nächtlichen Störungen.  
+- **Standardisierte Fragebögen:** Einsatz von Instrumenten wie dem Restless Legs Syndrome Rating Scale (RLSRS) zur Quantifizierung der Symptome.
+
+**Therapeutische Interventionen:**  
+- **Medikamentöse Therapie:** Einsatz von Dopaminagonisten oder anderen spezifischen Medikamenten zur Linderung der Symptome.  
+- **Verhaltens- und Schlafhygiene:** Maßnahmen zur Verbesserung des Schlafumfelds und zur Stressreduktion.  
+- **Physiotherapie und Bewegung:** Gezielte Übungen, um die Durchblutung in den Beinen zu fördern.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, sich einer neurologischen Untersuchung und ggf. einer Schlaflaboruntersuchung zu unterziehen?“  
+- „Wie stehen Sie zu einer medikamentösen Behandlung mit Dopaminagonisten?“  
+- „Wären Sie bereit, Änderungen in Ihrem Schlafumfeld und Lebensstil vorzunehmen, um Ihre Symptome zu verbessern?“
+    `
+  },
+},
+pneumothorax: {
+  name: "Pneumothorax",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Pneumothorax**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassung des Grundes für den Arztbesuch im Zusammenhang mit akuten Atembeschwerden und Brustschmerzen.
+
+**Anleitung:**  
+- Offene Fragen stellen, um den Hergang und die Symptome des Pneumothorax zu eruieren.
+
+**Beispielfragen:**  
+- „Was führt Sie heute zu uns?“  
+- „Wann haben die Beschwerden begonnen?“  
+- „Haben Sie plötzlich Brustschmerzen oder Atemnot bemerkt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe plötzlich starke, einseitige Brustschmerzen und fühle mich kurzatmig.“  
+- *Arzt:* „Treten die Schmerzen konstant auf oder wechseln sie in ihrer Intensität?“
+
+---
+
+**2. Schmerzlokalisation und -charakter**  
+**Ziel:**  
+- Detaillierte Erfassung der Schmerzlokalisation (häufig einseitig) und des Schmerzes (stechend, drückend).
+
+**Anleitung:**  
+- Fragen zur genauen Position des Schmerzes und dessen Art stellen.
+
+**Beispielfragen:**  
+- „Auf welcher Seite spüren Sie die Brustschmerzen?“  
+- „Wie würden Sie den Schmerz beschreiben – stechend, drückend oder scharf?“  
+- „Strahlen die Schmerzen in den Rücken oder in die Schultern aus?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Der Schmerz ist auf der rechten Seite und fühlt sich stechend an, er strahlt gelegentlich in den oberen Rücken aus.“  
+- *Arzt:* „Verstärken sich die Schmerzen beim tiefen Einatmen?“
+
+---
+
+**3. Zeitverlauf und Dynamik der Symptome**  
+**Ziel:**  
+- Klärung, wann die Symptome erstmals auftraten und wie sie sich im Zeitverlauf verändert haben.
+
+**Anleitung:**  
+- Nach dem exakten Zeitpunkt des Symptombeginns und der Entwicklung fragen.
+
+**Beispielfragen:**  
+- „Seit wann haben Sie diese Beschwerden?“  
+- „Haben sich die Symptome im Verlauf verschlechtert oder verändert?“  
+- „Gab es einen plötzlichen Beginn oder einen allmählichen Verlauf?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Beschwerden begannen plötzlich vor etwa zwei Stunden und haben sich seither nicht verbessert.“  
+- *Arzt:* „Gab es ein auslösendes Ereignis, z. B. einen Unfall oder eine Valsalva-Bewegung?“
+
+---
+
+**4. Atembeschwerden und Atmungsmuster**  
+**Ziel:**  
+- Erfassung von Atemnot, flacher Atmung oder Husten, die häufig beim Pneumothorax auftreten.
+
+**Anleitung:**  
+- Fragen zum Atemmuster und zur Atemnot stellen.
+
+**Beispielfragen:**  
+- „Haben Sie Atemnot oder Schwierigkeiten beim tiefen Einatmen?“  
+- „Fühlen Sie sich kurzatmig, auch in Ruhe?“  
+- „Treten Husten oder pfeifende Atemgeräusche auf?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe große Schwierigkeiten, tief einzuatmen, und fühle mich kurzatmig, besonders wenn ich versuche, tief durchzuatmen.“  
+- *Arzt:* „Verschlechtert sich die Atemnot bei Bewegung oder in Ruhe?“
+
+---
+
+**5. Begleitende Symptome und Allgemeinbefinden**  
+**Ziel:**  
+- Erfassung weiterer Symptome wie Schwindel, Übelkeit oder Schwitzen, die mit einem Pneumothorax einhergehen können.
+
+**Anleitung:**  
+- Fragen zu allgemeinen Symptomen und dem Allgemeinbefinden stellen.
+
+**Beispielfragen:**  
+- „Haben Sie Schwindel oder Übelkeit verspürt?“  
+- „Fühlen Sie sich insgesamt sehr schwach oder erschöpft?“  
+- „Gab es Fieber oder Schweißausbrüche?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Mir ist etwas schwindelig, und ich fühle mich insgesamt schwach, aber Fieber hatte ich nicht.“  
+- *Arzt:* „Diese Symptome können auf den akuten Zustand hinweisen und sollten weiter überwacht werden.“
+
+---
+
+**6. Vorherige Vorerkrankungen und Risikofaktoren**  
+**Ziel:**  
+- Erfragen, ob bereits Lungenerkrankungen oder Risikofaktoren (z. B. COPD, Asthma, Rauchen) vorliegen, die einen Pneumothorax begünstigen können.
+
+**Anleitung:**  
+- Fragen zu früheren Lungen- oder Herzerkrankungen und Lebensgewohnheiten stellen.
+
+**Beispielfragen:**  
+- „Leiden Sie an chronischen Lungenerkrankungen wie COPD oder Asthma?“  
+- „Rauchen Sie, und wenn ja, wie lange schon?“  
+- „Gab es in der Vergangenheit ähnliche Vorfälle?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich bin Raucher und hatte in der Vergangenheit bereits eine leichte COPD, aber einen Pneumothorax hatte ich noch nie.“  
+- *Arzt:* „Diese Risikofaktoren erhöhen das Risiko für einen Pneumothorax.“
+
+---
+
+**7. Vorherige Diagnostik und Behandlungsversuche**  
+**Ziel:**  
+- Erfassen, ob bereits diagnostische Maßnahmen (z. B. Röntgen, CT) oder Notfallbehandlungen durchgeführt wurden.
+
+**Anleitung:**  
+- Fragen zu bereits durchgeführten Untersuchungen und deren Befunden stellen.
+
+**Beispielfragen:**  
+- „Wurden Sie bereits bildgebend untersucht, z. B. mit einem Röntgen-Thorax?“  
+- „Gab es bereits Notfallmaßnahmen oder Behandlungen, seit die Symptome begannen?“  
+- „Welche Befunde wurden dabei festgestellt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich war bereits in der Notaufnahme, und ein Röntgenbild wurde gemacht, das einen Pneumothorax vermuten ließ.“  
+- *Arzt:* „Wurden Sie bereits behandelt, z. B. mit Sauerstoff oder einer Drainage?“
+
+---
+
+**8. Weitere relevante Anamneseaspekte**  
+**Ziel:**  
+- Erfassen zusätzlicher Informationen, die zur Diagnose beitragen können, wie plötzliche körperliche Belastungen oder Valsalva-Manöver.
+
+**Anleitung:**  
+- Offene Fragen zu Auslösern und weiteren Lebensumständen stellen.
+
+**Beispielfragen:**  
+- „Gab es ein spezifisches Ereignis, z. B. starkes Husten, körperliche Anstrengung oder einen Unfall?“  
+- „Wie haben Sie sich unmittelbar vor dem Symptombeginn gefühlt?“  
+- „Gab es andere begleitende Ereignisse, die in Zusammenhang stehen könnten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe vor kurzem stark gehustet, was möglicherweise den Pneumothorax ausgelöst hat.“  
+- *Arzt:* „Diese Information ist wichtig für die weitere Diagnostik.“
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese beim Pneumothorax**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Einschätzung des allgemeinen körperlichen Befindens und der Vitalität.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Befinden beschreiben?“  
+- „Fühlen Sie sich seit Beginn der Symptome deutlich geschwächt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich sehr schwach und erschöpft, vor allem wegen der Atemnot.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Erfassen, ob die akuten Beschwerden Auswirkungen auf den Appetit haben.
+
+**Beispielfragen:**  
+- „Haben Sie in letzter Zeit Veränderungen in Ihrem Appetit festgestellt?“  
+- „Essen Sie weniger als gewohnt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe momentan wenig Appetit, wahrscheinlich aufgrund der allgemeinen Schwäche.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Feststellen, ob es zu einem kurzfristigen Gewichtsverlust gekommen ist.
+
+**Beispielfragen:**  
+- „Haben Sie in den letzten Tagen an Gewicht verloren?“  
+- „Gab es eine Veränderung Ihres Körpergewichts seit Symptombeginn?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir ist kein signifikanter Gewichtsverlust aufgefallen, allerdings fühle ich mich insgesamt schwach.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität, da Atembeschwerden den Schlaf stören können.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Einschlafen oder Durchschlafen?“  
+- „Fühlen Sie sich nach dem Schlaf ausgeruht?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich schlafe unruhig, weil mir oft die Luft wegbleibt, und fühle mich morgens nicht erholt.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Erfragen, ob es zu ungewöhnlichen Wärme- oder Kälteempfindungen kommt, bedingt durch den akuten Zustand.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft zu warm oder zu kalt?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir ist das momentan nicht besonders aufgefallen.“
+
+---
+
+**6. Energielevel und Antrieb**  
+**Ziel:**  
+- Erfassen, ob der Patient sich aufgrund der Atemnot und Schmerzen energiearm fühlt.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr Energielevel während des Tages beschreiben?“  
+- „Fühlen Sie sich oft kraftlos und ohne Antrieb?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich durchgehend müde und habe kaum noch Kraft, besonders bei körperlicher Anstrengung.“
+
+---
+
+**7. Vegetative Reaktionen (Herz-Kreislauf)**  
+**Ziel:**  
+- Erfassen von autonomen Symptomen wie Herzklopfen oder Blutdruckschwankungen als Reaktion auf den akuten Stress.
+
+**Beispielfragen:**  
+- „Haben Sie ein schneller schlagendes Herz oder ungewöhnliche Blutdruckwerte bemerkt?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich spüre ein leichtes Herzklopfen, vor allem in Momenten, in denen ich versuche tief durchzuatmen.“
+
+---
+
+**8. Allgemeines Wohlbefinden**  
+**Ziel:**  
+- Zusammenfassende Einschätzung des subjektiven vegetativen Zustands.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden beschreiben?“  
+- „Beeinträchtigen die vegetativen Symptome Ihren Alltag stark?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mein allgemeines Wohlbefinden ist deutlich beeinträchtigt, da die Atemnot und Schmerzen mich stark einschränken.“
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob bereits bestehende Lungenerkrankungen oder Risikofaktoren vorliegen, die einen Pneumothorax begünstigen können.
+
+**Beispielfragen:**  
+- „Leiden Sie an chronischen Lungenerkrankungen wie COPD oder Asthma?“  
+- „Haben Sie in der Vergangenheit bereits ähnliche Symptome oder Vorfälle gehabt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe eine leichte COPD und bin Raucher, was mein Risiko erhöht.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob operative Eingriffe am Thorax bereits stattgefunden haben, die Einfluss auf den aktuellen Zustand haben könnten.
+
+**Beispielfragen:**  
+- „Wurden Sie bereits operativ am Brustkorb behandelt?“  
+- „Gab es nach früheren Eingriffen Komplikationen, die relevant sein könnten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich wurde bisher nicht operiert, abgesehen von einer früheren Bronchoskopie.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche medikamentösen Therapien aktuell eingenommen werden, insbesondere solche zur Behandlung von Lungenerkrankungen.
+
+**Beispielfragen:**  
+- „Nehmen Sie aktuell Medikamente gegen Ihre Lungenerkrankung ein?“  
+- „Gab es Änderungen in Ihrer Medikation in letzter Zeit?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich nehme regelmäßig Bronchodilatatoren und ein inhalatives Kortikosteroid, um meine COPD zu behandeln.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob Allergien oder Unverträglichkeiten vorliegen, die bei der medikamentösen Behandlung berücksichtigt werden müssen.
+
+**Beispielfragen:**  
+- „Haben Sie bekannte Allergien gegen Medikamente, z. B. Antibiotika?“  
+- „Gab es in der Vergangenheit unerwünschte Reaktionen auf Atemtherapeutika?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe keine bekannten Allergien gegen Medikamente.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von Risikofaktoren, die zur Entstehung eines Pneumothorax beitragen können.
+
+**Beispiele:**  
+- Rauchen, chronische Lungenerkrankungen, akute körperliche Belastung, Valsalva-Manöver.
+
+**Beispielfragen:**  
+- „Rauchen Sie, und wenn ja, wie lange schon?“  
+- „Gab es in letzter Zeit körperliche Anstrengungen, die den Pneumothorax auslösen könnten?“  
+- „Leiden Sie an chronischen Lungenerkrankungen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich bin Raucher und habe eine leichte COPD; zudem habe ich vor kurzem stark gehustet.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie Fälle von Lungenerkrankungen oder pneumothoraxbedingten Komplikationen vorliegen.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie Fälle von chronischen Lungenerkrankungen?“  
+- „Wurden bei nahen Angehörigen ähnliche Vorfälle dokumentiert?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir sind keine spezifischen Fälle von Pneumothorax in meiner Familie bekannt, aber es gibt vereinzelt Lungenerkrankungen.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen und beruflichen Lebensumstände, die Einfluss auf das Risiko und den Verlauf eines Pneumothorax haben können.
+
+**Relevante Bereiche:**  
+- Berufliche Belastungen, körperliche Aktivität, Wohnsituation und Rauchgewohnheiten.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre berufliche Situation beschreiben?“  
+- „Führen Sie einen aktiven Lebensstil, oder sind Sie überwiegend sesshaft?“  
+- „Wie sieht Ihre Wohnsituation aus – gibt es Faktoren, die Ihre Lungengesundheit beeinträchtigen könnten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite in einem handwerklich körperlich anstrengenden Beruf und rauche, was sicherlich zu meiner Lungensituation beiträgt.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung anderer Erkrankungen, die ähnliche Symptome wie ein Pneumothorax verursachen können.
+
+**Beispiele:**  
+1. Pleuraerguss – Flüssigkeitsansammlung in der Pleurahöhle.  
+2. Lungenembolie – Blockade der Lungenarterien, die Atemnot verursachen kann.  
+3. Akute Bronchitis – Entzündung der Atemwege mit Husten und Schmerzen.  
+4. Pneumonie – Lungenentzündung, die ebenfalls Brustschmerzen und Atemnot verursachen kann.
+
+**Beispielfragen:**  
+- „Können Ihre Symptome auch durch einen Pleuraerguss oder eine Lungenembolie erklärt werden?“  
+- „Wurden andere Ursachen durch bildgebende Verfahren ausgeschlossen?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Die bisherigen Untersuchungen deuten primär auf einen Pneumothorax hin, andere Ursachen wurden weitestgehend ausgeschlossen.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags basierend auf den anamnestischen Daten, klinischen Befunden und den durchgeführten Untersuchungen.
+
+**Kriterien:**  
+- Plötzlicher Beginn einseitiger Brustschmerzen und Atemnot.  
+- Reduzierte Lungenkapazität und Auffälligkeiten im Röntgenbild.  
+- Vorliegen von Risikofaktoren wie COPD und Rauchen.
+
+**Beispielfazit:**  
+- „Aufgrund der vorliegenden Anamnese und der Bildgebungsbefunde besteht der Verdacht auf einen Pneumothorax, der einer sofortigen weiterführenden Behandlung bedarf.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung der weiteren diagnostischen und therapeutischen Schritte zur Bestätigung der Diagnose und zur Notfallbehandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Bildgebende Verfahren:**  
+- **Röntgen-Thorax:** Erste Standarduntersuchung zur Darstellung eines Pneumothorax.  
+- **CT-Thorax:** Bei unklaren Befunden zur detaillierten Darstellung der Lungenstrukturen und des Ausmaßes des Pneumothorax.
+
+**Notfallmaßnahmen:**  
+- Sauerstoffgabe und Überwachung der Vitalparameter.  
+- Bei größerem Pneumothorax: Anlage einer Thoraxdrainage.
+
+**Therapeutische Interventionen:**  
+- Konservative Behandlung bei kleineren Pneumothoraces (Sauerstofftherapie und Beobachtung).  
+- Operative Interventionen, falls sich der Zustand verschlechtert oder Komplikationen auftreten.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, sich einer weiteren bildgebenden Diagnostik zu unterziehen?“  
+- „Wie reagieren Sie auf die Sauerstoffgabe?“  
+- „Wären Sie mit einer minimalinvasiven Drainage als Notfallmaßnahme einverstanden, falls dies erforderlich ist?“
+    `
+  },
+},
+hundebiss: {
+  name: "Hundebiss",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Hundebiss**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassen, warum der Patient den Arzt aufsucht, insbesondere im Zusammenhang mit einem Hundebiss.
+
+**Anleitung:**  
+- Offene Fragen stellen, um den Unfallhergang, den Zeitpunkt des Bisses und erste Reaktionen zu eruieren.
+
+**Beispielfragen:**  
+- „Was hat sich ereignet, dass Sie heute hier sind?“  
+- „Wann und wo wurde Sie von einem Hund gebissen?“  
+- „Wie haben Sie den Biss unmittelbar nach dem Vorfall empfunden?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich wurde gestern von einem Hund gebissen, und die Wunde schmerzt stark.“  
+- *Arzt:* „Hatten Sie im Anschluss bereits erste Hilfe, z. B. Reinigung der Wunde?“
+
+---
+
+**2. Wundlokalisation und -charakter**  
+**Ziel:**  
+- Detaillierte Erfassung der Stelle, Größe und Beschaffenheit der Bisswunde sowie eventuelle Tiefe der Verletzung.
+
+**Anleitung:**  
+- Fragen zur Lokalisation (z. B. an Hand, Arm, Gesicht) und zum Wundbild (z. B. klaffende Wunde, Rötung, Schwellung) stellen.
+
+**Beispielfragen:**  
+- „Wo genau befindet sich die Bisswunde?“  
+- „Wie groß ist die Wunde und wie sieht sie aus – klaffend, stark gerötet oder geschwollen?“  
+- „Spüren Sie starke Schmerzen oder ein Brennen an der Wundstelle?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Wunde befindet sich an meiner linken Hand, ist etwa 3 cm lang, gerötet und geschwollen.“  
+- *Arzt:* „Haben Sie auch Taubheitsgefühle oder ein Kribbeln in der Umgebung bemerkt?“
+
+---
+
+**3. Zeitverlauf und Symptomdynamik**  
+**Ziel:**  
+- Klären, wie sich die Wunde seit dem Vorfall entwickelt hat und ob sich Symptome wie Schwellung, Schmerzen oder Fieber verändert haben.
+
+**Anleitung:**  
+- Nach dem zeitlichen Verlauf, ersten Reaktionen und Veränderungen der Wundsymptomatik fragen.
+
+**Beispielfragen:**  
+- „Wie haben sich Schmerzen und Schwellung seit dem Biss verändert?“  
+- „Ist Fieber aufgetreten oder haben Sie andere systemische Symptome bemerkt?“  
+- „Gab es in den ersten Stunden nach dem Vorfall Veränderungen an der Wunde?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Schmerzen waren sofort stark, haben aber im Laufe des Tages zugenommen. Heute Morgen hatte ich leichtes Fieber.“  
+- *Arzt:* „Wurde die Wunde seitdem weiter verschlechtert oder haben Sie erste Verbesserungen bemerkt?“
+
+---
+
+**4. Erste Maßnahmen und Notfallversorgung**  
+**Ziel:**  
+- Erfassen, welche Erste-Hilfe-Maßnahmen bereits durchgeführt wurden und ob eine erste medizinische Versorgung erfolgte.
+
+**Anleitung:**  
+- Fragen zu Erstversorgung, Wundreinigung, Desinfektion und eventuellen Notfalleinsätzen stellen.
+
+**Beispielfragen:**  
+- „Welche Maßnahmen wurden unmittelbar nach dem Biss ergriffen?“  
+- „Wurde die Wunde von Erste-Hilfe-Leuten oder in einem Krankenhaus versorgt?“  
+- „Haben Sie Antibiotika oder Schmerzmittel erhalten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe die Wunde vor Ort gereinigt und anschließend in der Notaufnahme erste Versorgung erhalten.“  
+- *Arzt:* „Welche Behandlungsschritte wurden dort durchgeführt?“
+
+---
+
+**5. Infektionszeichen und lokale Reaktionen**  
+**Ziel:**  
+- Erfassung von Anzeichen einer Infektion oder allergischen Reaktion an der Wundstelle.
+
+**Anleitung:**  
+- Fragen zu Rötung, Schwellung, Eiterbildung, erhöhter Temperatur und Lymphknotenschwellung stellen.
+
+**Beispielfragen:**  
+- „Haben Sie eine verstärkte Rötung oder Eiterbildung an der Wunde bemerkt?“  
+- „Ist der Bereich warm oder geschwollen?“  
+- „Haben Sie geschwollene Lymphknoten im Hals- oder Achselbereich?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Wunde ist sehr gerötet, geschwollen und es bildet sich bereits etwas Eiter.“  
+- *Arzt:* „Dies deutet auf eine beginnende Infektion hin, wir sollten umgehend weitere Maßnahmen ergreifen.“
+
+---
+
+**6. Schmerzintensität und Funktionseinschränkung**  
+**Ziel:**  
+- Quantitative Bewertung der Schmerzen und Feststellung, ob die Funktion (z. B. Greifen, Bewegen) beeinträchtigt ist.
+
+**Anleitung:**  
+- Den Patienten bitten, die Schmerzintensität auf einer Skala von 0 bis 10 zu bewerten und nach Einschränkungen im Alltag fragen.
+
+**Beispielfragen:**  
+- „Wie stark schmerzen Sie aktuell auf einer Skala von 0 bis 10?“  
+- „Beeinträchtigen die Schmerzen Ihre Fähigkeit, Ihre Hand normal zu bewegen?“  
+- „Haben Sie Schwierigkeiten bei alltäglichen Aktivitäten aufgrund der Wunde?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich würde die Schmerzen mit 7 bewerten, und das Greifen fällt mir schwer.“  
+- *Arzt:* „Beeinträchtigt dies auch Ihre beruflichen oder privaten Aktivitäten?“
+
+---
+
+**7. Vorherige Erfahrungen mit Tierbissen**  
+**Ziel:**  
+- Erfragen, ob der Patient schon einmal von einem Tier gebissen wurde und wie die vorherige Versorgung verlief.
+
+**Anleitung:**  
+- Fragen zu früheren Bissverletzungen und deren Verlauf stellen.
+
+**Beispielfragen:**  
+- „Hatten Sie schon einmal einen Hundebiss oder einen Biss durch ein anderes Tier?“  
+- „Wie verlief die Behandlung bei früheren Vorfällen?“  
+- „Gab es damals Komplikationen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich wurde vor einigen Jahren einmal gebissen, aber damals verlief die Behandlung problemlos.“  
+- *Arzt:* „Inwiefern unterscheiden sich die aktuellen Symptome von denen des Vorfalls?“
+
+---
+
+**8. Weitere relevante Anamneseaspekte**  
+**Ziel:**  
+- Erfassen zusätzlicher Faktoren wie Allergien, Impfstatus (z. B. Tetanus) oder besondere Risikofaktoren.
+
+**Anleitung:**  
+- Offene Fragen zu Vorerkrankungen, Impfstatus und eventuellen Allergien stellen.
+
+**Beispielfragen:**  
+- „Sind Sie gegen Tetanus geimpft?“  
+- „Haben Sie bekannte Allergien gegen Tierhaare oder Medikamente?“  
+- „Gab es in der Vergangenheit Komplikationen bei Wundinfektionen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich bin gegen Tetanus geimpft und habe keine bekannten Allergien.“  
+- *Arzt:* „Das ist wichtig für die weitere Behandlung.“
+
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese beim Hundebiss**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Einschätzung des allgemeinen körperlichen Befindens nach dem Biss.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihren allgemeinen Gesundheitszustand seit dem Biss beschreiben?“  
+- „Fühlen Sie sich schwächer oder haben Sie allgemeine Müdigkeitsgefühle?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich etwas abgeschlagen, besonders in den ersten Stunden nach dem Vorfall.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Erfassung, ob der Hundebiss Auswirkungen auf den Appetit oder die Nahrungsaufnahme hat.
+
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Appetit bemerkt seit dem Biss?“  
+- „Essen Sie weniger aufgrund von Schmerzen oder Unwohlsein?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mein Appetit ist etwas reduziert, vermutlich aufgrund der Schmerzen und des Schocks.“
+
+---
+
+**3. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität, da akute Schmerzen und Unruhe den Schlaf beeinträchtigen können.
+
+**Beispielfragen:**  
+- „Haben Sie seit dem Vorfall Probleme beim Einschlafen oder Durchschlafen?“  
+- „Fühlen Sie sich nach dem Schlaf erholt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich schlafe unruhig und wache häufig auf, weil die Schmerzen mich stören.“
+
+---
+
+**4. Thermoregulation**  
+**Ziel:**  
+- Erfragen, ob es zu ungewöhnlichen Wärme- oder Kälteempfindungen kommt, die als Stressreaktion auftreten können.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft zu warm oder zu kalt seit dem Biss?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich empfinde gelegentlich Kälte, obwohl es mir insgesamt nicht schlecht geht.“
+
+---
+
+**5. Energielevel und Antrieb**  
+**Ziel:**  
+- Erfassen, ob der Hundebiss zu einem vorübergehenden Rückgang des Energielevels oder zu Antriebslosigkeit führt.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr Energielevel seit dem Biss beschreiben?“  
+- „Fühlen Sie sich kraftlos oder antriebslos?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich zeitweise sehr müde und weniger energiegeladen, besonders in den ersten Stunden nach dem Vorfall.“
+
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob bereits bestehende Erkrankungen vorliegen, die das Risiko einer Infektion oder einer Komplikation nach einem Hundebiss erhöhen können.
+
+**Beispielfragen:**  
+- „Leiden Sie an chronischen Erkrankungen wie Diabetes oder Immunschwäche?“  
+- „Gab es in der Vergangenheit Probleme mit Wundheilung oder Infektionen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe keine chronischen Erkrankungen, jedoch fiel mir in der Vergangenheit eine verzögerte Wundheilung auf.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob in der Vergangenheit operative Eingriffe stattgefunden haben, die den aktuellen Zustand oder die Wundheilung beeinflussen könnten.
+
+**Beispielfragen:**  
+- „Wurden Sie in der Vergangenheit operativ behandelt, insbesondere im Bereich der Haut oder Weichteile?“  
+- „Gab es nach früheren Eingriffen Komplikationen in der Wundheilung?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich wurde bisher nicht operiert, abgesehen von kleineren Eingriffen, die problemlos verliefen.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche medikamentösen Behandlungen aktuell oder in der Vergangenheit eingenommen wurden, insbesondere solche zur Schmerzlinderung oder Infektionsprophylaxe.
+
+**Beispielfragen:**  
+- „Nehmen Sie Schmerzmittel oder Antibiotika ein?“  
+- „Gab es Veränderungen in Ihrer Medikation seit dem Vorfall?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe zur Schmerzlinderung Ibuprofen eingenommen und bekomme in der Notaufnahme Antibiotika verabreicht.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob bekannte Allergien vorliegen, die die Behandlung beeinflussen könnten, insbesondere in Bezug auf Antibiotika oder Schmerzmittel.
+
+**Beispielfragen:**  
+- „Haben Sie Allergien gegen bestimmte Medikamente, zum Beispiel Antibiotika?“  
+- „Gab es in der Vergangenheit allergische Reaktionen auf Medikamente?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe keine bekannten Allergien gegen Medikamente.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von Risikofaktoren, die zur Infektionsgefahr oder Komplikationen nach einem Hundebiss beitragen können.
+
+**Beispiele:**  
+- Schmutzige Umgebung, unzureichende Erstversorgung, hoher Stresslevel.
+
+**Beispielfragen:**  
+- „War der Biss in einer schmutzigen Umgebung?“  
+- „Gab es Verzögerungen bei der Erstversorgung?“  
+- „Hatten Sie besonderen Stress oder körperliche Anstrengungen im Zusammenhang mit dem Vorfall?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Der Biss ereignete sich draußen in einem Park, und die Wunde wurde erst nach etwa einer Stunde versorgt.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie eine Neigung zu schlechter Wundheilung, Infektionen oder Allergien besteht, die das Behandlungsergebnis beeinflussen könnten.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie Fälle von schlechter Wundheilung oder häufigen Infektionen?“  
+- „Leiden nahestehende Angehörige an Allergien, die relevant sein könnten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „In meiner Familie gibt es keine auffälligen Wundheilungsstörungen oder Allergien, soweit ich weiß.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen und beruflichen Lebensumstände, die Einfluss auf die Wundheilung und das Infektionsrisiko haben können.
+
+**Relevante Bereiche:**  
+- Berufliche Belastung, Hygienestandards im privaten Umfeld, Unterstützung im Alltag.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre aktuelle Lebenssituation und Ihren Beruf beschreiben?“  
+- „Haben Sie ausreichend Unterstützung, um sich um die Wunde zu kümmern?“  
+- „Wie ist Ihr häusliches Umfeld hinsichtlich Hygiene und Pflege organisiert?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite in einem Büro, zu Hause kann ich mir ausreichend Hilfe holen, allerdings ist mir die richtige Wundpflege wichtig.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung anderer Verletzungsformen oder Komplikationen, die durch einen Hundebiss verursacht werden können.
+
+**Beispiele:**  
+1. Weichteilverletzungen ohne tiefere Gewebeschädigung  
+2. Nervenirritationen oder Quetschungen  
+3. Infektiöse Wundentzündungen (z. B. Tollwut, bakterielle Infektionen)  
+4. Fremdkörperreaktionen durch Hundezähne
+
+**Beispielfragen:**  
+- „Können Ihre Beschwerden auch durch eine oberflächliche Weichteilverletzung erklärt werden?“  
+- „Wurden andere Infektionen oder Allergiereaktionen ausgeschlossen?“  
+- „Ist die Schmerzintensität eher lokal begrenzt oder systemisch?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Die Untersuchung weist auf eine tiefergehende Wundverletzung mit Infektionszeichen hin, andere Ursachen erscheinen unwahrscheinlich.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags basierend auf den anamnestischen Daten, klinischen Befunden und ersten Laboruntersuchungen.
+
+**Kriterien:**  
+- Vorliegen eines Hundebisses mit lokaler Gewebeschädigung und beginnender Infektion.  
+- Schmerz, Schwellung, Rötung und Eiterbildung an der Wunde.  
+- Mögliche systemische Reaktionen (z. B. leichtes Fieber).
+
+**Beispielfazit:**  
+- „Aufgrund des Hundebisses mit lokaler Entzündungsreaktion besteht der Verdacht auf eine beginnende Wundinfektion. Eine weitere Diagnostik und eine adäquate Therapie sind angezeigt.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung der weiteren diagnostischen und therapeutischen Schritte zur Behandlung der Wunde und zur Vorbeugung von Komplikationen.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Diagnostische Interventionen:**  
+- **Wundkultur:** Entnahme eines Wundabstrichs zur Identifikation möglicher bakterieller Erreger.  
+- **Blutuntersuchungen:** Kontrolle von Entzündungsparametern (CRP, Leukozyten).  
+- **Bildgebung:** Bei Verdacht auf tiefere Gewebeschädigungen evtl. Ultraschalluntersuchung.
+
+**Therapeutische Interventionen:**  
+- **Wundreinigung und Desinfektion:** Gründliche Reinigung der Wunde und Anwendung von antiseptischen Lösungen.  
+- **Antibiotikatherapie:** Einleitung einer antibiotischen Behandlung zur Vorbeugung bzw. Behandlung einer Infektion.  
+- **Schmerztherapie:** Gabe von Schmerzmitteln zur Linderung der Beschwerden.  
+- **Impfstatus überprüfen:** Sicherstellung des Tetanus-Schutzes und ggf. Auffrischimpfung.  
+- **Nachsorge:** Regelmäßige Kontrollen zur Überwachung der Wundheilung und zur frühzeitigen Erkennung von Komplikationen.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, sich einer Wundkultur und Blutuntersuchung zu unterziehen?“  
+- „Wie stehen Sie zu einer Antibiotikatherapie, falls die Wundinfektion bestätigt wird?“  
+- „Haben Sie Ihren Tetanus-Impfstatus in den letzten Jahren aktualisiert?“
+    `
+  },
+},
+fahrradunfall_handgelenkfraktur: {
+  name: "Fahrradunfall mit V.a. Handgelenkfraktur (Colles und Smith)",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Fahrradunfall mit V.a. Handgelenkfraktur**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassung des Unfallhergangs und der unmittelbaren Beschwerden im Zusammenhang mit dem Fahrradunfall.
+
+**Anleitung:**  
+- Offene Fragen stellen, um den Unfallhergang, den Zeitpunkt und die ersten Symptome zu eruieren.
+
+**Beispielfragen:**  
+- „Was ist passiert, dass Sie heute in die Praxis kommen?“  
+- „Wann hat der Fahrradunfall stattgefunden?“  
+- „Welche Beschwerden haben Sie unmittelbar nach dem Unfall verspürt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich bin beim Fahrradfahren gestürzt und habe mir dabei das Handgelenk verletzt.“  
+- *Arzt:* „Wie haben sich die Schmerzen seit dem Unfall entwickelt?“
+
+---
+
+**2. Schmerzlokalisation und -charakter**  
+**Ziel:**  
+- Detaillierte Erfassung der Schmerzlokalisation im Handgelenk sowie des Schmerzcharakters (z. B. stechend, dumpf, konstant).
+
+**Anleitung:**  
+- Fragen zur exakten Lokalisation (radiale bzw. ulnares Handgelenk) und zur Qualität der Schmerzen stellen.
+
+**Beispielfragen:**  
+- „Wo genau im Handgelenk spüren Sie den Schmerz?“  
+- „Wie würden Sie die Schmerzen beschreiben – sind sie stechend, dumpf oder pulsierend?“  
+- „Strahlen die Schmerzen in den Unterarm oder in die Hand aus?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Der Schmerz ist vorwiegend am distalen Radius, teilweise strahlt er in den Unterarm aus.“  
+- *Arzt:* „Verstärken sich die Schmerzen bei bestimmten Bewegungen, wie dem Beugen oder Strecken des Handgelenks?“
+
+---
+
+**3. Zeitverlauf und Dynamik der Symptome**  
+**Ziel:**  
+- Erfassung des zeitlichen Verlaufs der Schmerzen und Schwellungen nach dem Unfall.
+
+**Anleitung:**  
+- Nach dem Beginn der Symptome, deren Dauer und eventuellen Veränderungen fragen.
+
+**Beispielfragen:**  
+- „Seit wann haben Sie die Schmerzen?“  
+- „Sind die Beschwerden konstant oder gibt es Schwankungen im Tagesverlauf?“  
+- „Hat sich die Schwellung im Handgelenk verändert?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Schmerzen bestehen seit dem Unfall vor etwa zwei Tagen und haben sich nicht deutlich verändert.“  
+- *Arzt:* „Gab es eine Zunahme der Schwellung oder Rötung?“
+
+---
+
+**4. Unfallmechanismus und Handposition**  
+**Ziel:**  
+- Klären, in welcher Handposition der Unfall erfolgte und ob typische Mechanismen für Colles- oder Smith-Frakturen vorliegen.
+
+**Anleitung:**  
+- Fragen zum Unfallhergang, der Fallrichtung und der Abwehrreaktion stellen.
+
+**Beispielfragen:**  
+- „Wie ist der Sturz passiert – haben Sie sich ausgestreckt oder die Hand abgefangen?“  
+- „War Ihr Handgelenk in einer dorsalen Abwehrposition (für Colles) oder in einer ventralen Position (für Smith)?“  
+- „Hatten Sie einen Reflex, die Hand auszustrecken?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe reflexartig ausgestreckt, sodass meine Hand dorsalflexiert war – das passt eher zu einer Colles-Fraktur, allerdings besteht auch der Verdacht auf eine ventrale Komponente (Smith).“  
+- *Arzt:* „Diese Information ist wichtig für die weitere Diagnostik.“
+
+---
+
+**5. Funktionseinschränkung und Beeinträchtigung im Alltag**  
+**Ziel:**  
+- Erfassung, wie stark die Verletzung die Funktion des Handgelenks beeinträchtigt und welche Einschränkungen im Alltag bestehen.
+
+**Anleitung:**  
+- Fragen zu Beweglichkeit, Kraft und alltäglichen Aktivitäten stellen.
+
+**Beispielfragen:**  
+- „Beeinträchtigt die Verletzung Ihre Fähigkeit, alltägliche Aufgaben zu erfüllen?“  
+- „Können Sie noch greifen oder Gegenstände halten?“  
+- „Wie schätzen Sie Ihre Beweglichkeit auf einer Skala von 0 bis 10 ein?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe Schwierigkeiten, meinen Händedruck zu halten und kann alltägliche Dinge nicht mehr so gut greifen.“  
+- *Arzt:* „Beeinträchtigt das auch Ihre beruflichen oder privaten Aktivitäten?“
+
+---
+
+**6. Vorherige Verletzungen und Erfahrungen mit Handgelenksfrakturen**  
+**Ziel:**  
+- Erfassen, ob der Patient bereits in der Vergangenheit ähnliche Verletzungen erlitten hat.
+
+**Anleitung:**  
+- Fragen zu früheren Frakturen, Prellungen oder sonstigen Handgelenksverletzungen stellen.
+
+**Beispielfragen:**  
+- „Hatten Sie schon einmal eine Fraktur oder einen schweren Prellungsfall im Handgelenk?“  
+- „Wie verlief die Heilung in der Vergangenheit?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich hatte vor einigen Jahren eine Prellung, aber noch nie eine Fraktur.“  
+- *Arzt:* „Das ist wichtig für die Beurteilung der aktuellen Verletzung.“
+
+---
+
+**7. Erste Maßnahmen und Notfallversorgung**  
+**Ziel:**  
+- Erfassen, welche Erstmaßnahmen unmittelbar nach dem Unfall durchgeführt wurden.
+
+**Anleitung:**  
+- Fragen zur Erstversorgung, Wundversorgung und eventuellen Notfalleingriffen stellen.
+
+**Beispielfragen:**  
+- „Welche Maßnahmen haben Sie direkt nach dem Unfall ergriffen?“  
+- „Wurden Sie bereits in der Notaufnahme behandelt?“  
+- „Haben Sie Schmerzmittel oder eine Schiene erhalten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich wurde zunächst in der Notaufnahme versorgt, erhielt Schmerzmittel und wurde zur Ruhigstellung des Handgelenks geschient.“  
+- *Arzt:* „Welche Behandlungsschritte wurden dort bereits durchgeführt?“
+
+---
+
+**8. Vorliegen von Begleitsymptomen**  
+**Ziel:**  
+- Erfassen von zusätzlichen Symptomen wie Schwellung, Rötung, Taubheitsgefühlen oder Durchblutungsstörungen.
+
+**Anleitung:**  
+- Fragen zu lokalen und systemischen Begleitsymptomen stellen.
+
+**Beispielfragen:**  
+- „Haben Sie eine deutliche Schwellung oder Rötung am Handgelenk bemerkt?“  
+- „Gibt es Taubheitsgefühle oder Kribbeln in der Hand?“  
+- „Sind die Finger farblich verändert (z. B. bläulich)?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Mein Handgelenk ist stark geschwollen, gerötet und es kommt gelegentlich zu einem Kribbeln in den Fingern.“  
+- *Arzt:* „Dies spricht für eine mögliche neurologische Beteiligung oder Durchblutungsstörung, die weiter untersucht werden muss.“
+
+---
+
+**9. Medikamentenanamnese**  
+**Ziel:**  
+- Erfassen, ob und welche Medikamente der Patient bereits zur Schmerzlinderung oder zur Stabilisierung des Handgelenks eingenommen hat.
+
+**Anleitung:**  
+- Fragen zur Einnahme von Schmerzmitteln, Entzündungshemmern oder anderen relevanten Medikamenten stellen.
+
+**Beispielfragen:**  
+- „Nehmen Sie Schmerzmittel seit dem Unfall ein?“  
+- „Gab es bereits die Einnahme von NSAR oder anderen entzündungshemmenden Medikamenten?“  
+- „Wie reagieren Sie auf diese Medikamente?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich nehme regelmäßig Ibuprofen, jedoch sind die Schmerzen weiterhin stark.“  
+- *Arzt:* „Wir sollten die Medikamenteneinnahme überprüfen und gegebenenfalls anpassen.“
+
+---
+
+**10. Weitere relevante Anamneseaspekte**  
+**Ziel:**  
+- Erfassen zusätzlicher Faktoren, wie Allergien, Impfstatus (z. B. Tetanus) und bisherige Behandlungen, die für die Diagnose wichtig sind.
+
+**Anleitung:**  
+- Offene Fragen zu Vorerkrankungen, Allergien und Impfstatus stellen.
+
+**Beispielfragen:**  
+- „Sind Sie gegen Tetanus geimpft?“  
+- „Haben Sie bekannte Allergien, insbesondere gegen Medikamente?“  
+- „Gab es in der Vergangenheit Komplikationen bei der Behandlung von Handverletzungen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich bin gegen Tetanus geimpft und habe keine bekannten Allergien.“  
+- *Arzt:* „Das ist wichtig für die weitere Therapieplanung.“
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese bei Handgelenksfraktur**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Einschätzung des allgemeinen körperlichen Befindens und der Vitalität nach dem Unfall.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihren allgemeinen Gesundheitszustand seit dem Unfall beschreiben?“  
+- „Fühlen Sie sich aufgrund der Verletzung generell schwächer?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich insgesamt etwas erschöpft, vor allem in den ersten Tagen nach dem Unfall.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Erfassen, ob der Unfall oder die Schmerzen Einfluss auf den Appetit haben.
+
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Appetit festgestellt?“  
+- „Essen Sie weniger, weil Sie Schmerzen haben oder sich unwohl fühlen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe etwas weniger Appetit, weil die Schmerzen mich belasten.“
+
+---
+
+**3. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität, da Schmerzen den Schlaf beeinträchtigen können.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Einschlafen oder Durchschlafen?“  
+- „Fühlen Sie sich nach dem Schlaf erholt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich schlafe unruhig, weil mich die Schmerzen oft wecken.“
+
+---
+
+**4. Thermoregulation**  
+**Ziel:**  
+- Erfragen, ob es zu ungewöhnlichen Wärme- oder Kälteempfindungen kommt.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft zu warm oder zu kalt?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir ist in der Regel nichts Auffälliges an der Temperaturwahrnehmung aufgefallen.“
+
+---
+
+**5. Energielevel und Antrieb**  
+**Ziel:**  
+- Feststellen, ob der Patient sich aufgrund der Verletzung energiearm fühlt.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr Energielevel seit dem Unfall beschreiben?“  
+- „Fühlen Sie sich oft kraftlos oder antriebslos?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich nach längerer Belastung müde, ansonsten normal.“
+
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Vergangenheit bereits Verletzungen oder Erkrankungen des Handgelenks vorlagen, die die Heilung beeinflussen könnten.
+
+**Beispielfragen:**  
+- „Hatten Sie schon einmal eine Fraktur oder schwere Prellung am Handgelenk?“  
+- „Gab es chronische Beschwerden in diesem Bereich?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich hatte bisher keine schweren Verletzungen am Handgelenk.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob bereits operative Eingriffe am Handgelenk oder in der Umgebung stattgefunden haben, die den aktuellen Zustand beeinflussen könnten.
+
+**Beispielfragen:**  
+- „Wurden Sie bereits operativ am Handgelenk behandelt?“  
+- „Gab es nach früheren Eingriffen Komplikationen in der Wundheilung?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich wurde bisher nicht operiert.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche Medikamente seit dem Unfall eingenommen werden, insbesondere Schmerzmittel und entzündungshemmende Präparate.
+
+**Beispielfragen:**  
+- „Nehmen Sie regelmäßig Schmerzmittel ein?“  
+- „Haben Sie entzündungshemmende Medikamente wie NSAR verabreicht bekommen?“  
+- „Wie reagieren Sie auf diese Medikamente?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich nehme regelmäßig Ibuprofen, allerdings sind die Schmerzen weiterhin stark.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob bekannte Allergien vorliegen, die die medikamentöse Behandlung beeinflussen könnten.
+
+**Beispielfragen:**  
+- „Haben Sie Allergien gegen Schmerzmittel oder andere Medikamente?“  
+- „Gab es in der Vergangenheit unerwünschte Reaktionen auf Medikamente?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe keine bekannten Allergien gegen Medikamente.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von Risikofaktoren, die zur Verletzung oder zu Komplikationen beitragen könnten, wie z. B. hoher körperlicher Stress oder riskante Sportarten.
+
+**Beispielfragen:**  
+- „Treiben Sie regelmäßig Sport, der das Risiko von Stürzen erhöht?“  
+- „Gab es in Ihrem Umfeld Risikofaktoren, die den Unfall begünstigt haben?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fahre regelmäßig Fahrrad und habe dabei leider den Sturz erlitten.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie Erkrankungen oder Verletzungen des Handgelenks häufiger auftreten, die auf eine genetische Prädisposition hinweisen könnten.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie Fälle von Frakturen oder Bindegewebsschwächen?“  
+- „Leiden nahe Angehörige an chronischen Gelenkerkrankungen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir sind in der Familie keine spezifischen Handgelenksprobleme bekannt.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der beruflichen und privaten Lebensumstände, die Einfluss auf das Unfallrisiko und die Heilung haben können.
+
+**Beispielfragen:**  
+- „Wie sieht Ihre berufliche Situation aus – sind Sie körperlich stark belastet?“  
+- „Haben Sie ausreichend Unterstützung im Alltag, um sich zu erholen?“  
+- „Wie organisieren Sie Ihre Freizeit und Bewegung?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite in einem handwerklich belastenden Beruf und habe auch privat einen aktiven Lebensstil, was leider auch zum Unfall beigetragen hat.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung anderer Verletzungsformen oder Erkrankungen, die ähnliche Symptome wie eine Handgelenkfraktur verursachen können.
+
+**Beispiele:**  
+1. Distale Radiusprellung ohne Fraktur  
+2. Sehnenverletzungen oder Bänderrisse im Handgelenk  
+3. Nervenkompression (z. B. Karpaltunnelsyndrom)  
+4. Vaskuläre Verletzungen
+
+**Beispielfragen:**  
+- „Können die Beschwerden auch durch eine reine Prellung erklärt werden?“  
+- „Wurden andere Verletzungen, wie Sehnen- oder Bänderrisse, durch bildgebende Verfahren ausgeschlossen?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Die bildgebende Untersuchung weist auf Frakturzeichen hin, sodass andere Verletzungsformen weniger wahrscheinlich sind.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags basierend auf dem Unfallhergang, den klinischen Befunden und ersten bildgebenden Untersuchungen.
+
+**Kriterien:**  
+- Verdacht auf distale Radiusfraktur mit typischen Merkmalen (Colles und evtl. Smith-Fraktur) nach einem Sturz.  
+- Vorhandensein von Schmerzen, Schwellungen und Funktionsbeeinträchtigungen im Handgelenk.  
+- Mögliche neurologische und vaskuläre Beeinträchtigungen.
+
+**Beispielfazit:**  
+- „Aufgrund des Fahrradunfalls und der klinischen Befunde besteht der Verdacht auf eine Handgelenkfraktur (Colles- und Smith-typisch). Eine weiterführende Bildgebung (Röntgen, CT) ist erforderlich, um die Diagnose zu bestätigen.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung der weiteren diagnostischen und therapeutischen Schritte zur Bestätigung der Diagnose und Planung der Behandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Bildgebende Verfahren:**  
+- **Röntgenuntersuchung:** Standard-Röntgen des Handgelenks in zwei Ebenen zur Frakturerkennung.  
+- **CT oder MRT:** Bei unklaren Befunden oder zur detaillierten Darstellung von Frakturlinien und Weichteilverletzungen.
+
+**Therapeutische Interventionen:**  
+- **Konservative Therapie:** Ruhigstellung mit Schiene oder Gips, Schmerzmedikation und ggf. Physiotherapie zur Rehabilitation.  
+- **Operative Therapie:** Bei komplizierten oder instabilen Frakturen ist eine operative Versorgung (z. B. offene Reposition und Plattenosteosynthese) zu erwägen.  
+- **Nachsorge:** Regelmäßige Kontrollen zur Überwachung der Heilung und Funktion des Handgelenks.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, sich einer Röntgenuntersuchung zu unterziehen?“  
+- „Wie stehen Sie zu konservativen versus operativen Behandlungsansätzen?“  
+- „Wären Sie bereit, an einem Rehabilitationsprogramm zur Wiederherstellung der Handgelenksfunktion teilzunehmen?“
+    `
+  },
+},
+ikterus: {
+  name: "Ikterus",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Ikterus**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassen, warum der Patient den Arzt aufsucht, insbesondere im Zusammenhang mit gelblicher Haut- und Schleimhautverfärbung.
+
+**Anleitung:**  
+- Offene Fragen stellen, um den Zeitpunkt und den Verlauf der Gelbfärbung sowie begleitende Symptome zu eruieren.
+
+**Beispielfragen:**  
+- „Was hat Sie veranlasst, heute einen Arzt aufzusuchen?“  
+- „Wann haben Sie zum ersten Mal eine Gelbfärbung Ihrer Haut oder Augen bemerkt?“  
+- „Haben Sie weitere Beschwerden wie Müdigkeit oder Übelkeit?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Mir ist vor einigen Tagen aufgefallen, dass meine Haut und Augen gelb erscheinen, zudem fühle ich mich sehr müde.“  
+- *Arzt:* „Gab es begleitend zu diesen Symptomen Schmerzen im Oberbauch oder Veränderungen im Urin/Stuhl?“
+
+---
+
+**2. Lokalisierung und Charakter der Gelbfärbung**  
+**Ziel:**  
+- Detaillierte Erfassung der Ausprägung des Ikterus (z. B. Ausmaß, Schnelligkeit des Auftretens).
+
+**Anleitung:**  
+- Fragen zur Verteilung der Gelbfärbung (z. B. beginnend an den Augen, dann am restlichen Körper) stellen.
+
+**Beispielfragen:**  
+- „Wo haben Sie die Gelbfärbung zuerst bemerkt – an den Augen oder am restlichen Körper?“  
+- „Hat sich der Ikterus rasch entwickelt oder schrittweise zugenommen?“  
+- „Ist die Verfärbung gleichmäßig oder gibt es Bereiche mit stärkerer Ausprägung?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Gelbfärbung begann an meinen Augen und hat sich innerhalb weniger Tage auf die Haut ausgebreitet.“  
+- *Arzt:* „Sind weitere visuelle Veränderungen, wie dunkler Urin oder heller Stuhl, aufgetreten?“
+
+---
+
+**3. Zeitverlauf und Symptomdynamik**  
+**Ziel:**  
+- Klärung, wann die Symptome erstmals auftraten und wie sie sich seither verändert haben.
+
+**Anleitung:**  
+- Nach Beginn, Dauer und möglichen Schwankungen der Symptome fragen.
+
+**Beispielfragen:**  
+- „Seit wann bemerken Sie den Ikterus?“  
+- „Hat sich die Gelbfärbung im Laufe der Zeit verstärkt oder verändert?“  
+- „Gab es Phasen, in denen die Symptome abnahmen oder zunahmen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe den Ikterus vor etwa einer Woche bemerkt, und er hat sich kontinuierlich verstärkt.“  
+- *Arzt:* „Treten neben dem Ikterus weitere Beschwerden wie Juckreiz oder Schmerzen auf?“
+
+---
+
+**4. Begleitende Symptome**  
+**Ziel:**  
+- Erfassen von weiteren Symptomen, die mit Ikterus assoziiert sein können, wie Übelkeit, Erbrechen, Bauchschmerzen oder Fieber.
+
+**Anleitung:**  
+- Fragen zu Verdauungsstörungen und systemischen Symptomen stellen.
+
+**Beispielfragen:**  
+- „Haben Sie zusätzlich zu der Gelbfärbung Übelkeit oder Erbrechen?“  
+- „Treten Schmerzen im Oberbauch oder Fieber auf?“  
+- „Haben Sie Veränderungen des Urins (z. B. dunkler Urin) oder des Stuhls (z. B. hellerer Stuhl) festgestellt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe gelegentlich Übelkeit und mein Urin ist dunkler als üblich, der Stuhl wirkt heller.“  
+- *Arzt:* „Diese Symptome könnten auf eine Leber- oder Gallenwegserkrankung hindeuten – wir müssen das weiter abklären.“
+
+---
+
+**5. Risikofaktoren und Vorerkrankungen**  
+**Ziel:**  
+- Erfassen, ob Risikofaktoren wie Alkoholmissbrauch, Virushepatitis, Medikamente oder andere Lebererkrankungen vorliegen.
+
+**Anleitung:**  
+- Fragen zu familiären und persönlichen Risikofaktoren sowie vorangegangenen Erkrankungen stellen.
+
+**Beispielfragen:**  
+- „Haben Sie in der Vergangenheit Alkohol in übermäßigem Maße konsumiert?“  
+- „Wurden bei Ihnen früher Lebererkrankungen oder Hepatitis diagnostiziert?“  
+- „Nehmen Sie regelmäßig Medikamente ein, die die Leber belasten könnten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich trinke gelegentlich, aber nicht in großen Mengen, und mir wurde noch nie Hepatitis diagnostiziert.“  
+- *Arzt:* „Gab es in Ihrer Familie Fälle von Lebererkrankungen?“
+
+---
+
+**6. Medikamentenanamnese**  
+**Ziel:**  
+- Erfassen, welche Medikamente aktuell oder in der Vergangenheit eingenommen wurden, die zu einem Ikterus führen können (z. B. bestimmte Antibiotika, Anabolika oder Psychopharmaka).
+
+**Anleitung:**  
+- Detaillierte Fragen zur aktuellen und vergangenen Medikation stellen.
+
+**Beispielfragen:**  
+- „Nehmen Sie derzeit Medikamente ein, die Ihre Leber belasten könnten?“  
+- „Gab es kürzlich Änderungen in Ihrer Medikation?“  
+- „Haben Sie in der Vergangenheit Medikamente eingenommen, die mit Ikterus in Verbindung gebracht werden?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich nehme zurzeit keine leberschädigenden Medikamente, jedoch gab es vor kurzem eine Änderung meiner Medikation.“  
+- *Arzt:* „Welche Medikamente wurden verändert, und wie war die Reaktion Ihres Körpers?“
+
+---
+
+**7. Vorherige Diagnostik und Befunde**  
+**Ziel:**  
+- Erfassen, ob bereits diagnostische Maßnahmen (z. B. Blutuntersuchungen, Ultraschall, Leberbiopsie) durchgeführt wurden und welche Ergebnisse vorliegen.
+
+**Anleitung:**  
+- Fragen zu früheren Untersuchungen und Laborwerten, insbesondere Leberwerte, stellen.
+
+**Beispielfragen:**  
+- „Wurden bei Ihnen bereits Leberwerte bestimmt?“  
+- „Gab es Hinweise auf erhöhte Bilirubin-, ALT- oder AST-Werte?“  
+- „Haben Sie schon einmal einen Ultraschall der Leber durchführen lassen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Meine Blutwerte zeigen erhöhte Bilirubinwerte, und ein Ultraschall wurde bereits durchgeführt.“  
+- *Arzt:* „Die Ergebnisse des Ultraschalls sollten wir gemeinsam besprechen.“
+
+---
+
+**8. Zusammenhang mit Infektionen oder Erkrankungen**  
+**Ziel:**  
+- Erfassung, ob begleitende Infektionen (z. B. Hepatitis) oder andere Lebererkrankungen vorliegen.
+
+**Anleitung:**  
+- Fragen zu Symptomen und bekannten Infektionen stellen.
+
+**Beispielfragen:**  
+- „Hatten Sie in letzter Zeit Symptome, die auf eine Hepatitis hindeuten könnten?“  
+- „Wurden Sie auf Virushepatitis getestet?“  
+- „Gab es Anzeichen einer Leberentzündung?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich hatte keine klassischen Hepatitis-Symptome, aber mein Arzt hat erhöhte Leberwerte festgestellt.“  
+- *Arzt:* „Wir sollten einen spezifischen Hepatitis-Test in Erwägung ziehen.“
+
+---
+
+**9. Weitere relevante Anamneseaspekte**  
+**Ziel:**  
+- Erfassen zusätzlicher Faktoren, wie chronischer Stress, Ernährungsgewohnheiten und familiäre Vorbelastungen, die den Ikterus beeinflussen könnten.
+
+**Anleitung:**  
+- Offene Fragen zu Lebensstil, Ernährung und familiären Erkrankungen stellen.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre Ernährungsgewohnheiten beschreiben?“  
+- „Haben Sie in letzter Zeit ungewöhnlichen Stress oder Belastungen erlebt?“  
+- „Gibt es in Ihrer Familie Fälle von Lebererkrankungen oder Ikterus?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich ernähre mich eher unregelmäßig und habe in letzter Zeit hohen beruflichen Stress.“  
+- *Arzt:* „Diese Faktoren können ebenfalls zu einer Belastung der Leber beitragen.“
+
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese bei Ikterus**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Einschätzung des allgemeinen körperlichen Befindens und der Vitalität im Zusammenhang mit dem Ikterus.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden aktuell einschätzen?“  
+- „Fühlen Sie sich oft müde oder abgeschlagen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich insgesamt schwach und müde, was ich mit der Gelbfärbung in Verbindung bringe.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Erfassung von Veränderungen im Appetit und in den Essgewohnheiten, die häufig bei Leberfunktionsstörungen auftreten.
+
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Appetit bemerkt?“  
+- „Essen Sie weniger oder anders als gewöhnlich?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe in letzter Zeit weniger Appetit und esse unregelmäßig.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Feststellen, ob es zu einem ungewollten Gewichtsverlust gekommen ist.
+
+**Beispielfragen:**  
+- „Haben Sie in den letzten Monaten an Gewicht verloren?“  
+- „Wie hat sich Ihr Gewicht in letzter Zeit verändert?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe in den letzten Wochen leicht an Gewicht verloren.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität, da Schlafstörungen bei Leberfunktionsstörungen häufig vorkommen.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Einschlafen oder Durchschlafen?“  
+- „Fühlen Sie sich nach dem Schlaf ausgeruht?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich schlafe unruhig und wache oft auf, fühle mich aber nicht vollständig erholt.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Erfragen, ob es zu ungewöhnlichen Wärme- oder Kälteempfindungen kommt.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft zu warm oder zu kalt?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe manchmal das Gefühl, dass mir innerlich warm ist, besonders wenn ich mich unwohl fühle.“
+
+---
+
+**6. Energielevel und Antrieb**  
+**Ziel:**  
+- Erfassen, ob der Patient sich energiearm und antriebslos fühlt.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr Energielevel tagsüber beschreiben?“  
+- „Fühlen Sie sich oft kraftlos und ohne Motivation?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich den ganzen Tag über müde und habe kaum Antrieb, etwas zu unternehmen.“
+
+---
+
+**7. Vegetative Reaktionen (Herz-Kreislauf)**  
+**Ziel:**  
+- Erfassung autonomer Symptome wie Herzklopfen oder Blutdruckschwankungen als Reaktion auf den Krankheitszustand.
+
+**Beispielfragen:**  
+- „Haben Sie ein schneller schlagendes Herz oder spüren Sie ungewöhnliche Blutdruckschwankungen?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich bemerke gelegentlich ein schnelleres Herzklopfen, vor allem in belastenden Situationen.“
+
+---
+
+**8. Allgemeines Wohlbefinden**  
+**Ziel:**  
+- Zusammenfassende Einschätzung des subjektiven vegetativen Zustands und der Lebensqualität.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden beschreiben?“  
+- „Welche vegetativen Symptome empfinden Sie als besonders belastend?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mein allgemeines Wohlbefinden ist beeinträchtigt, vor allem durch Müdigkeit und unregelmäßigen Appetit.“
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob bereits frühere Lebererkrankungen, Stoffwechselstörungen oder andere relevante Erkrankungen vorliegen, die mit Ikterus assoziiert sein können.
+
+**Beispielfragen:**  
+- „Wurden bei Ihnen in der Vergangenheit Lebererkrankungen wie Hepatitis oder Leberzirrhose diagnostiziert?“  
+- „Gab es chronische Stoffwechselstörungen, die Ihren Bilirubinspiegel beeinflussen könnten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Bei mir wurde in der Vergangenheit eine Hepatitis A diagnostiziert, jedoch keine chronische Lebererkrankung.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob operative Eingriffe im Bauch- oder Leberbereich stattgefunden haben, die den aktuellen Zustand oder die Leberfunktion beeinflussen könnten.
+
+**Beispielfragen:**  
+- „Wurden Sie bereits operiert, insbesondere im Bereich des Abdomens oder der Leber?“  
+- „Gab es nach früheren Eingriffen Komplikationen in der Leberfunktion?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich wurde bisher nicht operiert, abgesehen von kleineren Eingriffen, die keinen Einfluss auf die Leber hatten.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche medikamentösen Therapien aktuell oder in der Vergangenheit eingenommen wurden, die die Leberfunktion beeinflussen oder einen Ikterus verursachen können.
+
+**Beispielfragen:**  
+- „Nehmen Sie derzeit Medikamente ein, die bekanntermaßen leberschädigend sein können?“  
+- „Gab es in letzter Zeit Änderungen in Ihrer Medikation?“  
+- „Haben Sie Medikamente zur Behandlung von Lebererkrankungen oder Stoffwechselstörungen eingenommen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich nehme derzeit keine spezifischen leberschädigenden Medikamente, jedoch gab es kürzlich eine Anpassung meiner Medikation.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob bekannte Allergien vorliegen, die Einfluss auf die medikamentöse Behandlung haben könnten.
+
+**Beispielfragen:**  
+- „Haben Sie bekannte Allergien gegen Medikamente oder andere Substanzen?“  
+- „Gab es in der Vergangenheit unerwünschte Reaktionen auf Medikamente, die Ihre Leber belasten könnten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe keine bekannten Allergien gegen Medikamente.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von Risikofaktoren, die zur Entstehung eines Ikterus beitragen können, wie ungesunde Ernährung, Alkoholmissbrauch und chronischer Stress.
+
+**Beispiele:**  
+- Übermäßiger Alkoholkonsum, fett- und zuckerreiche Ernährung, Medikamentenmissbrauch.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre Ernährungsgewohnheiten beschreiben?“  
+- „Konsumieren Sie regelmäßig Alkohol, und wenn ja, in welchem Umfang?“  
+- „Gab es in letzter Zeit Phasen, in denen Sie Medikamente unsachgemäß eingenommen haben?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich trinke gelegentlich Alkohol und ernähre mich oft ungesund, was vermutlich auch zu meinem Zustand beiträgt.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie Lebererkrankungen, Stoffwechselstörungen oder andere relevante Erkrankungen vorkommen, die eine genetische Prädisposition andeuten könnten.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie Fälle von Lebererkrankungen oder chronischen Stoffwechselstörungen?“  
+- „Leiden nahe Angehörige an Ikterus oder verwandten Erkrankungen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „In meiner Familie gibt es vereinzelt Fälle von Lebererkrankungen, aber nichts, das direkt auf Ikterus hinweist.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen und beruflichen Lebensumstände, die Einfluss auf den Gesundheitszustand und den Verlauf eines Ikterus haben können.
+
+**Relevante Bereiche:**  
+- Berufliche Belastungen, Stress, Lebensstil, Ernährungsgewohnheiten und Unterstützung im Alltag.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre aktuelle berufliche und private Situation beschreiben?“  
+- „Haben Sie ausreichend Zeit für gesunde Ernährung und Erholung?“  
+- „Wie bewältigen Sie Stress in Ihrem Alltag?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite in einem stressigen Umfeld und finde kaum Zeit für Erholung, was sich negativ auf meine Ernährung und meinen allgemeinen Gesundheitszustand auswirkt.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung anderer Erkrankungen, die Ikterus verursachen können, wie hämolytische Anämien, Gallengangsobstruktionen oder andere Lebererkrankungen.
+
+**Beispiele:**  
+1. Hämolytische Anämie – vermehrter Abbau von roten Blutkörperchen.  
+2. Gallensteine oder Gallengangsobstruktion – mechanische Blockade des Gallenflusses.  
+3. Virushepatitiden – Entzündliche Lebererkrankungen.  
+4. Medikamenteninduzierter Ikterus – Nebenwirkung bestimmter Therapien.
+
+**Beispielfragen:**  
+- „Können Ihre erhöhten Bilirubinwerte auch durch eine hämolytische Anämie erklärt werden?“  
+- „Wurden bildgebende Verfahren zur Abklärung einer Gallengangsobstruktion durchgeführt?“  
+- „Gab es Hinweise auf Virushepatitis oder andere Lebererkrankungen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Die bisherigen Untersuchungen deuten nicht auf eine hämolytische Anämie oder Gallengangsobstruktion hin, und Hepatitis wurde weitgehend ausgeschlossen.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags auf Basis der anamnestischen Daten, klinischen Befunde und Laborergebnisse.
+
+**Kriterien:**  
+- Vorliegen von Ikterus mit erhöhter Bilirubinkonzentration.  
+- Begleitende Symptome wie Müdigkeit, Appetitlosigkeit und leichte Bauchbeschwerden.  
+- Ausschluss anderer primärer Ursachen wie Gallengangsobstruktion oder hämolytische Anämie.
+
+**Beispielfazit:**  
+- „Aufgrund der vorliegenden Befunde und Laborwerte besteht der Verdacht auf einen funktionellen Ikterus im Rahmen einer leichten Leberfunktionsstörung. Eine weiterführende Abklärung ist notwendig.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung der weiteren diagnostischen und therapeutischen Schritte zur Bestätigung der Diagnose und zur Planung der Behandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Diagnostische Interventionen:**  
+- **Laboruntersuchungen:** Wiederholung von Leberwerten (Bilirubin, ALT, AST, ALP) sowie vollständiges Blutbild und Hämolysetests.  
+- **Bildgebende Verfahren:** Ultraschall des Abdomens zur Beurteilung der Leber, Gallenwege und Bauchspeicheldrüse.  
+- **Spezifische Tests:** Bei Verdacht auf Hepatitis (Virusserologie) oder andere Lebererkrankungen weitere Untersuchungen.
+
+**Therapeutische Interventionen:**  
+- **Medikamentöse Therapie:** Anpassung oder Einleitung einer Therapie zur Unterstützung der Leberfunktion, falls indiziert.  
+- **Ernährungsberatung:** Empfehlungen zu einer leberfreundlichen Ernährung und Reduktion von Alkohol.  
+- **Stressmanagement:** Maßnahmen zur Verbesserung des allgemeinen Gesundheitszustandes und zur Stressreduktion.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, sich weiteren Laboruntersuchungen und einem Ultraschall zu unterziehen?“  
+- „Wie stehen Sie zu einer Ernährungsberatung zur Unterstützung der Leberfunktion?“  
+- „Würden Sie an Maßnahmen zur Stressreduktion teilnehmen, um Ihren allgemeinen Gesundheitszustand zu verbessern?“
+    `
+  },
+},
+lymphadenopathie: {
+  name: "Lymphadenopathie (Kette) im linken Halsbereich",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Lymphadenopathie im linken Halsbereich**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassen, warum der Patient den Arzt wegen der Lymphkettenschwellung im linken Halsbereich aufsucht.
+
+**Anleitung:**  
+- Offene Fragen stellen, um den Erstbefund und eventuelle begleitende Symptome zu eruieren.
+
+**Beispielfragen:**  
+- „Was hat Sie veranlasst, heute in die Praxis zu kommen?“  
+- „Wann haben Sie die Schwellung im Halsbereich erstmals bemerkt?“  
+- „Ist die Schwellung schmerzhaft oder asymptomatisch?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Mir ist vor einigen Wochen eine Kette von geschwollenen Lymphknoten im linken Halsbereich aufgefallen, die gelegentlich drückt.“  
+- *Arzt:* „Haben Sie weitere Beschwerden wie Fieber, Nachtschweiß oder Gewichtsverlust bemerkt?“
+
+---
+
+**2. Lokalisation und Beschaffenheit der Lymphknoten**  
+**Ziel:**  
+- Detaillierte Erfassung der Lokalisation, Größe, Konsistenz und Beweglichkeit der Lymphknoten.
+
+**Anleitung:**  
+- Fragen zur genauen Lage (z. B. entlang des vorderen oder hinteren Halsbereichs) und den palpatorischen Eigenschaften stellen.
+
+**Beispielfragen:**  
+- „Wo genau befinden sich die geschwollenen Lymphknoten im Hals?“  
+- „Sind die Knoten weich, fest oder verhärtet?“  
+- „Sind sie beweglich oder fixiert?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Knoten verlaufen in einer Kette entlang des linken lateralen Halsbereichs und sind überwiegend weich, aber leicht druckschmerzhaft.“  
+- *Arzt:* „Fallen Ihnen Veränderungen in der Größe der Knoten im Tagesverlauf auf?“
+
+---
+
+**3. Zeitverlauf und Dynamik**  
+**Ziel:**  
+- Erfassen, wann die Schwellung erstmals auftrat und ob es Veränderungen in der Größe oder Anzahl der Lymphknoten gibt.
+
+**Anleitung:**  
+- Fragen nach Beginn, Dauer und etwaigen Schwankungen der Schwellung stellen.
+
+**Beispielfragen:**  
+- „Seit wann haben Sie die geschwollenen Lymphknoten bemerkt?“  
+- „Haben sich Größe oder Anzahl der Knoten verändert?“  
+- „Gab es Phasen der Besserung oder Verschlechterung?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Schwellung besteht seit etwa vier Wochen und scheint leicht zuzunehmen.“  
+- *Arzt:* „Haben Sie in diesem Zeitraum begleitende Infektionssymptome bemerkt?“
+
+---
+
+**4. Begleitsymptome und Systembeteiligung**  
+**Ziel:**  
+- Erfassung von zusätzlichen Symptomen, die auf eine infektiöse oder maligne Ursache hinweisen könnten.
+
+**Anleitung:**  
+- Fragen zu systemischen Symptomen wie Fieber, Nachtschweiß, Gewichtsverlust oder allgemeinem Unwohlsein stellen.
+
+**Beispielfragen:**  
+- „Haben Sie Fieber oder Nachtschweiß bemerkt?“  
+- „Gab es ungewollten Gewichtsverlust oder allgemeines Krankheitsgefühl?“  
+- „Leiden Sie unter Müdigkeit oder Abgeschlagenheit?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich hatte gelegentlich leichtes Fieber und fühle mich generell müde, allerdings ohne signifikanten Gewichtsverlust.“  
+- *Arzt:* „Diese Informationen sind wichtig, um mögliche systemische Ursachen einzugrenzen.“
+
+---
+
+**5. Schmerzempfindung und lokale Beschwerden**  
+**Ziel:**  
+- Erfragen, ob die Lymphknoten druckschmerzhaft sind oder ob lokale Beschwerden wie Rötungen oder Überwärmung auftreten.
+
+**Anleitung:**  
+- Fragen zur Schmerzempfindlichkeit und lokalen Veränderungen im Halsbereich stellen.
+
+**Beispielfragen:**  
+- „Sind die geschwollenen Lymphknoten schmerzhaft?“  
+- „Fällt eine Überwärmung oder Rötung im betroffenen Bereich auf?“  
+- „Verändert sich der Schmerz bei Berührung?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Knoten sind leicht druckschmerzhaft, aber es gibt keine Rötung oder Überwärmung.“  
+- *Arzt:* „Spüren Sie den Schmerz konstant oder variiert er im Tagesverlauf?“
+
+---
+
+**6. Zusammenhang mit Infektionen oder anderen Erkrankungen**  
+**Ziel:**  
+- Klären, ob die Lymphadenopathie mit einer akuten Infektion, Entzündung oder anderen Erkrankungen assoziiert ist.
+
+**Anleitung:**  
+- Fragen zu aktuellen oder kürzlich durchgemachten Infektionen (z. B. Erkältung, Halsschmerzen) stellen.
+
+**Beispielfragen:**  
+- „Hatten Sie in letzter Zeit eine Infektion, wie z. B. eine Erkältung oder Halsschmerzen?“  
+- „Gab es andere Anzeichen einer Infektion, wie Halsschmerzen oder Husten?“  
+- „Wurden Sie in letzter Zeit gegen eine Infektion behandelt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich hatte vor etwa einem Monat leichte Halsschmerzen, die jedoch abgeklungen sind.“  
+- *Arzt:* „Das könnte ein Hinweis auf eine reaktive Lymphadenopathie sein.“
+
+---
+
+**7. Vorherige Diagnostik und Behandlungen**  
+**Ziel:**  
+- Erfassen, ob bereits diagnostische Maßnahmen zur Abklärung der Lymphadenopathie durchgeführt wurden.
+
+**Anleitung:**  
+- Fragen zu früheren Untersuchungen, wie Bluttests, Ultraschall oder Biopsien, stellen.
+
+**Beispielfragen:**  
+- „Wurden bereits Blutuntersuchungen oder bildgebende Verfahren durchgeführt?“  
+- „Gab es in der Vergangenheit bereits Auffälligkeiten im Bereich der Lymphknoten?“  
+- „Haben Sie bereits eine Behandlung gegen eine vermutete Infektion erhalten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich wurde noch nicht näher untersucht, da die Schwellung erst vor kurzem aufgefallen ist.“  
+- *Arzt:* „Wir sollten in Erwägung ziehen, zunächst labordiagnostische Maßnahmen durchzuführen.“
+
+---
+
+**8. Weitere relevante Anamneseaspekte**  
+**Ziel:**  
+- Erfassen von Lebensstilfaktoren oder Vorerkrankungen, die Einfluss auf die Lymphknotenvergrößerung haben könnten.
+
+**Anleitung:**  
+- Fragen zu vorangegangenen Infektionen, Autoimmunerkrankungen oder beruflichen Belastungen stellen.
+
+**Beispielfragen:**  
+- „Hatten Sie in der Vergangenheit häufig Infektionen im Halsbereich?“  
+- „Gibt es bekannte Autoimmunerkrankungen in Ihrer Vorgeschichte?“  
+- „Wie ist Ihr beruflicher und privater Stresslevel?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich hatte in den letzten Monaten vermehrt Infektionen, und mein Arbeitsalltag ist sehr stressig.“  
+- *Arzt:* „Diese Aspekte fließen in unsere Gesamtbeurteilung ein.“
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese bei Lymphadenopathie im linken Halsbereich**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Einschätzung des allgemeinen körperlichen Befindens und der Vitalität.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden beschreiben?“  
+- „Fühlen Sie sich allgemein belastet oder abgeschlagen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich gelegentlich müde, ansonsten ist mein Allgemeinzustand in Ordnung.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Erfragen, ob es Veränderungen im Appetit oder Essverhalten gibt, die indirekt auf eine systemische Reaktion hindeuten könnten.
+
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Appetit festgestellt?“  
+- „Essen Sie weniger als üblich?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mein Appetit ist weitgehend unverändert.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Feststellen, ob ungewollter Gewichtsverlust vorliegt, was auf eine systemische Erkrankung hinweisen kann.
+
+**Beispielfragen:**  
+- „Haben Sie in letzter Zeit ungewollt Gewicht verloren?“  
+- „Wie hat sich Ihr Gewicht in den letzten Monaten entwickelt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir ist kein signifikanter Gewichtsverlust aufgefallen.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität, da systemische Beschwerden oft den Schlaf beeinträchtigen.
+
+**Beispielfragen:**  
+- „Schlafen Sie gut?“  
+- „Haben Sie Probleme beim Ein- oder Durchschlafen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich schlafe grundsätzlich gut, auch wenn ich manchmal durch leichte Unruhe geweckt werde.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Erfragen, ob es zu ungewöhnlichen Wärme- oder Kälteempfindungen kommt.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft zu warm oder zu kalt?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir ist in Bezug auf Temperatur nichts Auffälliges aufgefallen.“
+
+---
+
+**6. Energielevel und Antrieb**  
+**Ziel:**  
+- Erfassung, ob die Lymphadenopathie mit einem allgemeinen Energieverlust oder Antriebslosigkeit einhergeht.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr Energielevel tagsüber beschreiben?“  
+- „Fühlen Sie sich oft müde?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich tagsüber meist normal, nur in Stressphasen etwas ermüdet.“
+
+---
+
+**7. Vegetative Reaktionen (Herz-Kreislauf, Schwitzen)**  
+**Ziel:**  
+- Erfassen von autonomen Symptomen, die als Reaktion auf eine systemische Entzündung auftreten können.
+
+**Beispielfragen:**  
+- „Haben Sie bemerkt, dass Ihr Herz schneller schlägt oder Sie vermehrt schwitzen?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Nein, solche Reaktionen habe ich nicht festgestellt.“
+
+---
+
+**8. Allgemeines Wohlbefinden**  
+**Ziel:**  
+- Zusammenfassende Einschätzung des subjektiven Wohlbefindens.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden beschreiben?“  
+- „Beeinträchtigen die vegetativen Symptome Ihren Alltag?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Abgesehen von der Schwellung fühle ich mich insgesamt wohl.“
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Vergangenheit Erkrankungen vorlagen, die die Entstehung einer Lymphadenopathie begünstigen könnten, wie wiederkehrende Infektionen oder Autoimmunerkrankungen.
+
+**Beispielfragen:**  
+- „Hatten Sie in der Vergangenheit wiederholt Halsinfektionen oder andere Infektionen im Kopf- und Halsbereich?“  
+- „Gab es bekannte Autoimmunerkrankungen in Ihrer Vorgeschichte?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich hatte in den letzten Monaten einige Halsentzündungen, ansonsten keine chronischen Erkrankungen.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob operative Eingriffe im Hals- oder Kopfbereich durchgeführt wurden, die für die aktuelle Symptomatik relevant sein könnten.
+
+**Beispielfragen:**  
+- „Wurden Sie bereits am Hals operiert?“  
+- „Gab es nach früheren Eingriffen Komplikationen, die noch nachwirken?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich wurde in der Vergangenheit nicht operiert.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche Medikamente aktuell oder in der Vergangenheit eingenommen wurden, insbesondere solche zur Behandlung von Infektionen oder entzündlichen Prozessen.
+
+**Beispielfragen:**  
+- „Nehmen Sie regelmäßig Medikamente, z. B. Antibiotika oder entzündungshemmende Mittel?“  
+- „Gab es Veränderungen in Ihrer Medikation in Zusammenhang mit den Infektionen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe in den letzten Wochen zeitweise Antibiotika eingenommen, aber aktuell keine Dauermedikation.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob Allergien oder Unverträglichkeiten vorliegen, die bei der medikamentösen Behandlung berücksichtigt werden müssen.
+
+**Beispielfragen:**  
+- „Haben Sie bekannte Allergien gegen Medikamente?“  
+- „Gab es in der Vergangenheit allergische Reaktionen im Zusammenhang mit medikamentösen Therapien?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir sind keine Allergien bekannt.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von Risikofaktoren, die zur Entwicklung einer Lymphadenopathie beitragen könnten.
+
+**Beispiele:**  
+- Häufige Infektionen, berufliche Belastungen, Rauchen.
+
+**Beispielfragen:**  
+- „Hatten Sie in letzter Zeit häufige Infektionen im Halsbereich?“  
+- „Rauchen Sie, und wenn ja, wie viel?“  
+- „Gab es sonstige belastende Faktoren in Ihrem Alltag?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich hatte in letzter Zeit mehrere Halsinfektionen und rauche gelegentlich.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie Fälle von Lymphknotenerkrankungen, Autoimmunerkrankungen oder anderen relevanten Erkrankungen vorkommen.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie Fälle von chronischen Infektionen oder Lymphadenopathien?“  
+- „Leiden nahe Angehörige an Autoimmunerkrankungen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „In meiner Familie gibt es vereinzelte Fälle von Autoimmunerkrankungen, aber keine spezifischen Lymphknotenerkrankungen.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen und beruflichen Lebensumstände, die Einfluss auf das Risiko und den Verlauf der Lymphadenopathie haben können.
+
+**Relevante Bereiche:**  
+- Berufliche Belastungen, Stress, Wohnsituation und soziale Unterstützung.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre aktuelle berufliche Situation beschreiben?“  
+- „Haben Sie ausreichend Unterstützung im Alltag?“  
+- „Gibt es besondere Stressfaktoren in Ihrem privaten Umfeld?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite in einem stressigen Umfeld und fühle mich oft allein gelassen, was möglicherweise zur Entstehung der Lymphadenopathie beiträgt.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung anderer Ursachen für geschwollene Lymphknoten im Halsbereich, wie maligne Erkrankungen oder spezifische Infektionen.
+
+**Beispiele:**  
+1. Infektiöse Mononukleose oder andere virale Infektionen  
+2. Lymphome – insbesondere wenn multiple Knoten vergrößert sind  
+3. Tuberkulöse Lymphadenitis  
+4. Autoimmunerkrankungen, die zu vergrößerten Lymphknoten führen können
+
+**Beispielfragen:**  
+- „Können die geschwollenen Lymphknoten auch durch eine virale oder tuberkulöse Infektion erklärt werden?“  
+- „Wurden malignitätsverdächtige Befunde bereits ausgeschlossen?“  
+- „Gibt es weitere Anzeichen, die auf eine systemische Erkrankung hindeuten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Die bisherigen Untersuchungen deuten eher auf eine reaktive Lymphadenopathie im Rahmen einer Infektion hin, ohne klare Hinweise auf eine maligne Ursache.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags basierend auf den anamnestischen Daten, klinischen Befunden und den vegetativen Symptomen.
+
+**Kriterien:**  
+- Vorhandensein einer Kette geschwollener Lymphknoten im linken Halsbereich  
+- Leichte Druckschmerzhaftigkeit ohne eindeutige Hinweise auf eine maligne Erkrankung  
+- Begleitende Infektionssymptome (z. B. leichte Halsschmerzen, Müdigkeit)
+
+**Beispielfazit:**  
+- „Aufgrund der vorliegenden Befunde besteht der Verdacht auf eine reaktive Lymphadenopathie im linken Halsbereich, vermutlich im Zusammenhang mit einer kürzlich erfolgten Infektion. Eine weiterführende diagnostische Abklärung ist jedoch angezeigt.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung der weiteren diagnostischen und therapeutischen Schritte zur Bestätigung der Diagnose und Planung der Behandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Bildgebende Verfahren:**  
+- **Ultraschall des Halses:** Zur Beurteilung der Lymphknoten (Größe, Form, Kapsel, Durchblutung).  
+- **CT des Halses:** Bei unklaren Befunden oder Verdacht auf maligne Prozesse.
+
+**Labordiagnostik:**  
+- Blutuntersuchungen (Differenzialblutbild, Entzündungsparameter, spezifische serologische Tests)  
+- Gegebenenfalls eine Feinnadelaspiration (FNA) oder Biopsie, wenn der Verdacht auf eine maligne Veränderung besteht.
+
+**Therapeutische Interventionen:**  
+- Bei Verdacht auf eine reaktive Lymphadenopathie zunächst symptomatische Behandlung und Beobachtung.  
+- Bei Hinweis auf einen malignen Prozess weitere interdisziplinäre Abklärung und ggf. Onkologie-Konsultation.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, sich einer Ultraschalluntersuchung des Halses zu unterziehen?“  
+- „Möchten Sie, dass weitere labordiagnostische Untersuchungen durchgeführt werden?“  
+- „Wären Sie bereit, im Falle eines Verdachts auf eine malignen Ursache eine Biopsie in Erwägung zu ziehen?“
+    `
+  },
+},
+chronisch_rezidivierende_tonsillitis: {
+  name: "Chronisch rezidivierende Tonsillitis",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Chronisch rezidivierende Tonsillitis**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassung des Hauptgrundes für den Arztbesuch im Zusammenhang mit wiederkehrenden Entzündungen der Mandeln.
+
+**Anleitung:**  
+- Offene Fragen stellen, um die Beschwerden und den Anlass des Besuchs zu eruieren.
+
+**Beispielfragen:**  
+- „Was führt Sie heute zu uns?“  
+- „Haben Sie in letzter Zeit wiederholt Halsschmerzen oder Fieber gehabt?“  
+- „Seit wann treten die Beschwerden auf und wie oft wiederholen sie sich?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich leide seit mehreren Monaten immer wieder an starken Halsschmerzen, Fieber und Schluckbeschwerden.“  
+- *Arzt:* „Wie oft treten diese akuten Episoden auf und wie lange dauern sie jeweils an?“
+
+---
+
+**2. Schmerzlokalisation und -charakter**  
+**Ziel:**  
+- Detaillierte Erfassung der Schmerzintensität und -charakteristik im Halsbereich.
+
+**Anleitung:**  
+- Fragen zur Lokalisation der Schmerzen und zu deren Qualität (z. B. stechend, drückend) stellen.
+
+**Beispielfragen:**  
+- „Wo genau spüren Sie die Schmerzen im Hals?“  
+- „Wie würden Sie den Schmerz beschreiben – ist er stechend, drückend oder brennend?“  
+- „Strahlen die Schmerzen in die Ohren oder den Nacken aus?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Schmerzen sind überwiegend im Rachen und können in die Ohren ausstrahlen. Sie empfinde ich als stechend und drückend.“  
+- *Arzt:* „Verändern sich die Schmerzen in Abhängigkeit von bestimmten Aktivitäten, wie dem Schlucken?“
+
+---
+
+**3. Zeitverlauf und Dynamik der Symptome**  
+**Ziel:**  
+- Klären, wann die Tonsillitis erstmals auftrat und wie die rezidivierenden Episoden verlaufen.
+
+**Anleitung:**  
+- Nach Beginn, Häufigkeit und Dauer der akuten Phasen fragen.
+
+**Beispielfragen:**  
+- „Seit wann haben Sie diese wiederkehrenden Halsschmerzen?“  
+- „Wie oft kommt es zu akuten Entzündungen?“  
+- „Wie lange dauern die einzelnen Episoden in der Regel an?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Beschwerden treten seit etwa einem Jahr auf, mit 4 bis 6 akuten Episoden pro Jahr, die jeweils etwa 7 bis 10 Tage andauern.“  
+- *Arzt:* „Gab es in dieser Zeit auch Phasen, in denen sich die Beschwerden deutlich gebessert haben?“
+
+---
+
+**4. Begleitende Symptome**  
+**Ziel:**  
+- Erfassung von weiteren Symptomen, die mit der Tonsillitis einhergehen, wie Fieber, Schluckbeschwerden und allgemeines Krankheitsgefühl.
+
+**Anleitung:**  
+- Fragen zu Fieber, allgemeinem Unwohlsein, Husten, und Schluckbeschwerden stellen.
+
+**Beispielfragen:**  
+- „Haben Sie während der akuten Phasen Fieber?“  
+- „Leiden Sie unter starken Schluckbeschwerden oder Schmerzen beim Schlucken?“  
+- „Fühlen Sie sich allgemein abgeschlagen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ja, während der akuten Episoden habe ich oft Fieber und starke Schluckbeschwerden, und ich fühle mich sehr schwach.“  
+- *Arzt:* „Treffen diese Symptome gleichzeitig ein, oder gibt es Verzögerungen zwischen Fieber und den Halsschmerzen?“
+
+---
+
+**5. Lokalbefund und Sichtbarkeit**  
+**Ziel:**  
+- Erfassung von sichtbaren Veränderungen an den Mandeln, wie Rötung, Exsudate oder Vergrößerung.
+
+**Anleitung:**  
+- Fragen zur optischen Beurteilung der Tonsillen stellen (sofern bereits extern beurteilt).
+
+**Beispielfragen:**  
+- „Wurden bei früheren Untersuchungen Rötungen oder Eiteransammlungen an den Mandeln festgestellt?“  
+- „Fühlen sich Ihre Mandeln vergrößert an?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Bei früheren Untersuchungen wurde oft eine starke Rötung und gelegentlich auch Eiterbildung festgestellt.“  
+- *Arzt:* „Diese Befunde unterstützen den Verdacht auf chronische Tonsillitis.“
+
+---
+
+**6. Zusammenhang mit Allergien oder Reflux**  
+**Ziel:**  
+- Abklärung, ob andere Faktoren wie allergische Reaktionen oder gastroösophagealer Reflux die Symptome beeinflussen.
+
+**Anleitung:**  
+- Fragen zu bekannten Allergien oder Refluxsymptomen stellen.
+
+**Beispielfragen:**  
+- „Leiden Sie an allergischen Reaktionen, die Ihren Hals betreffen?“  
+- „Haben Sie Symptome, die auf einen sauren Reflux hindeuten, wie Sodbrennen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe keine bekannten Allergien, aber hin und wieder Sodbrennen, das meine Halsschmerzen verstärken könnte.“  
+- *Arzt:* „Wir sollten auch den Einfluss eines möglichen Refluxes in Betracht ziehen.“
+
+---
+
+**7. Vorherige Diagnostik und Behandlungen**  
+**Ziel:**  
+- Erfassen, ob bereits diagnostische Maßnahmen (z. B. Abstriche, Bluttests) oder Behandlungen durchgeführt wurden.
+
+**Anleitung:**  
+- Fragen zu bisherigen Untersuchungen und deren Ergebnissen stellen.
+
+**Beispielfragen:**  
+- „Wurden bereits Abstriche oder Blutuntersuchungen zur Abklärung der Tonsillitis durchgeführt?“  
+- „Welche Behandlungen haben Sie in der Vergangenheit erhalten – z. B. Antibiotika oder Kortikosteroide?“  
+- „Wie haben Sie auf diese Behandlungen reagiert?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe bereits mehrfach Antibiotika erhalten, die Beschwerden kehren aber regelmäßig zurück.“  
+- *Arzt:* „Gab es bei den Behandlungen eine signifikante Besserung während der akuten Phasen?“
+
+---
+
+**8. Zusammenhang mit Infektionen und Immunstatus**  
+**Ziel:**  
+- Erfassen, ob wiederkehrende Infektionen oder ein geschwächtes Immunsystem vorliegen.
+
+**Anleitung:**  
+- Fragen zu häufigen Infektionen im Hals- oder Atemwegsbereich und zum allgemeinen Gesundheitszustand stellen.
+
+**Beispielfragen:**  
+- „Hatten Sie in letzter Zeit häufige Infektionen im Halsbereich?“  
+- „Fühlen Sie sich generell anfällig für Infektionen?“  
+- „Wurde Ihr Immunsystem schon einmal genauer untersucht?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich hatte in den letzten Jahren vermehrt Halsentzündungen und fühle mich insgesamt etwas anfälliger.“  
+- *Arzt:* „Diese Information könnte auf einen möglichen Immunstatus hinweisen, den wir weiter abklären sollten.“
+
+---
+
+**9. Weitere relevante Anamneseaspekte**  
+**Ziel:**  
+- Erfassen von zusätzlichen Faktoren wie Stress, Lebensstil oder andere Erkrankungen, die zur chronisch rezidivierenden Tonsillitis beitragen können.
+
+**Anleitung:**  
+- Offene Fragen zu beruflichen und privaten Stressoren sowie zu weiteren Gesundheitsproblemen stellen.
+
+**Beispielfragen:**  
+- „Wie hoch schätzen Sie Ihren aktuellen Stresslevel ein?“  
+- „Gibt es andere chronische Erkrankungen, die Sie haben?“  
+- „Beeinflussen Ihre Lebensgewohnheiten Ihre Gesundheit?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Mein beruflicher Stress ist sehr hoch, und ich habe auch noch gelegentliche Erkältungen, die die Beschwerden verschlimmern.“  
+- *Arzt:* „Diese Faktoren sollten wir in unsere Gesamtbeurteilung einbeziehen.“
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese bei chronisch rezidivierender Tonsillitis**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Einschätzung des allgemeinen körperlichen Befindens und der Vitalität.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihren allgemeinen Gesundheitszustand beschreiben?“  
+- „Fühlen Sie sich häufig abgeschlagen oder energiearm?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich oft müde, besonders während der akuten Phasen.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Erfassung, ob die wiederkehrenden Infektionen zu Appetitverlust oder Veränderungen im Essverhalten führen.
+
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Appetit bemerkt?“  
+- „Essen Sie weniger, wenn Sie unter den akuten Symptomen leiden?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Während der Infektionen esse ich deutlich weniger und habe oft keinen großen Appetit.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Feststellen, ob es zu ungewolltem Gewichtsverlust kommt.
+
+**Beispielfragen:**  
+- „Haben Sie in letzter Zeit ungewollt an Gewicht verloren?“  
+- „Wie hat sich Ihr Gewicht in den letzten Monaten verändert?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir ist ein leichter Gewichtsverlust aufgefallen, besonders während der akuten Episoden.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität, da wiederkehrende Infektionen den Schlaf stören können.
+
+**Beispielfragen:**  
+- „Schlafen Sie gut?“  
+- „Haben Sie Schwierigkeiten beim Einschlafen oder Durchschlafen während Ihrer Erkrankungsphasen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich schlafe oft unruhig, besonders wenn ich starke Halsschmerzen habe.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Erfragen, ob es zu ungewöhnlichen Wärme- oder Kälteempfindungen kommt, z. B. Fieberschübe.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft zu warm oder zu kalt?“  
+- „Haben Sie Fieberschübe bemerkt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Während der akuten Phasen habe ich oft leichtes Fieber und fühle mich dann auch warm.“
+
+---
+
+**6. Energielevel und Antrieb**  
+**Ziel:**  
+- Erfassen, ob wiederkehrende Tonsillitis zu anhaltender Erschöpfung und reduziertem Antrieb führt.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr Energielevel beschreiben?“  
+- „Fühlen Sie sich nach einer akuten Phase auch weiterhin schwach?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich auch nach den Infektionen noch lange müde und kraftlos.“
+
+---
+
+**7. Vegetative Reaktionen (Herz-Kreislauf, Schwitzen)**  
+**Ziel:**  
+- Erfassung von autonomen Symptomen wie Herzklopfen oder vermehrtem Schwitzen während der akuten Erkrankungsphasen.
+
+**Beispielfragen:**  
+- „Haben Sie bemerkt, dass Ihr Herz schneller schlägt?“  
+- „Schwitzen Sie vermehrt während der Infektionen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Gelegentlich bemerke ich ein schnelleres Herzklopfen und leichtes Schwitzen während der akuten Episoden.“
+
+---
+
+**8. Allgemeines Wohlbefinden**  
+**Ziel:**  
+- Zusammenfassende Einschätzung des subjektiven Wohlbefindens und der Auswirkungen der chronischen Erkrankung.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden beschreiben?“  
+- „Beeinträchtigen die Symptome Ihren Alltag erheblich?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Während der akuten Phasen fühle ich mich sehr unwohl und stark beeinträchtigt.“
+
+---
+
+**9. Flüssigkeitsaufnahme und Durstgefühl**  
+**Ziel:**  
+- Erfassung, ob es zu Veränderungen in der Flüssigkeitsaufnahme kommt.
+
+**Beispielfragen:**  
+- „Trinken Sie mehr oder weniger als gewöhnlich?“  
+- „Haben Sie vermehrt Durst, besonders während der Infektionen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Während der Infektionsphasen trinke ich oft mehr, um Fieber und Schluckbeschwerden auszugleichen.“
+
+---
+
+**10. Weitere vegetative Symptome**  
+**Ziel:**  
+- Erfassen zusätzlicher vegetativer Beschwerden, die nicht direkt in andere Kategorien passen.
+
+**Beispielfragen:**  
+- „Gibt es noch weitere körperliche Beschwerden, die Sie wahrnehmen?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Abgesehen von den genannten Symptomen fühle ich mich insgesamt sehr angeschlagen.“
+
+---
+
+**11. Zusammenfassendes vegetatives Gesamtbild**  
+**Ziel:**  
+- Übergreifende Beurteilung des vegetativen Zustands im Zusammenhang mit der chronisch rezidivierenden Tonsillitis.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr vegetatives Befinden insgesamt beschreiben?“  
+- „Welche Symptome empfinden Sie als besonders belastend?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Insgesamt beeinträchtigen mich vor allem der Appetitverlust, die Schlafstörungen und die anhaltende Müdigkeit.“
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Vergangenheit bereits wiederkehrende Infektionen des Halses oder andere relevante Erkrankungen vorlagen, die das Risiko einer chronisch rezidivierenden Tonsillitis erhöhen.
+
+**Beispielfragen:**  
+- „Hatten Sie schon häufiger akute Tonsillitiden in der Vergangenheit?“  
+- „Gab es in Ihrer Vorgeschichte andere wiederkehrende Infektionen im Kopf- und Halsbereich?“  
+- „Wurde bei Ihnen schon einmal eine chronische Tonsillitis diagnostiziert?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich hatte schon mehrmals akute Tonsillitiden, die sich teilweise durch Antibiotikabehandlungen besserten, aber immer wieder zurückkamen.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob bereits operative Eingriffe an den Mandeln (Tonsillektomie) durchgeführt wurden.
+
+**Beispielfragen:**  
+- „Wurden Sie schon einmal an den Mandeln operiert?“  
+- „Gab es nach einer Tonsillektomie Komplikationen oder Wiederkehr der Beschwerden?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich wurde bisher nicht operiert, obwohl die Infektionen immer wiederkehrten.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche medikamentösen Therapien aktuell oder in der Vergangenheit zur Behandlung der Tonsillitis eingesetzt wurden.
+
+**Beispielfragen:**  
+- „Welche Medikamente haben Sie zur Behandlung Ihrer Tonsillitis eingenommen?“  
+- „Wurden Antibiotika eingesetzt, und wie gut spürten Sie deren Wirkung?“  
+- „Nehmen Sie derzeit irgendwelche Medikamente gegen die Beschwerden ein?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe in den akuten Phasen regelmäßig Antibiotika und Schmerzmittel eingenommen, allerdings treten die Infektionen immer wieder auf.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob Allergien oder Unverträglichkeiten vorliegen, die Einfluss auf die medikamentöse Therapie haben könnten.
+
+**Beispielfragen:**  
+- „Haben Sie bekannte Allergien gegen Antibiotika oder andere Medikamente?“  
+- „Gab es in der Vergangenheit allergische Reaktionen auf medikamentöse Therapien?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe keine bekannten Allergien gegen Medikamente.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von Risikofaktoren, die zur Entstehung einer chronisch rezidivierenden Tonsillitis beitragen können.
+
+**Beispiele:**  
+- Häufige Infektionen, schlechte Hygiene, berufliche oder private Stressfaktoren.
+
+**Beispielfragen:**  
+- „Hatten Sie in letzter Zeit vermehrt Halsinfektionen?“  
+- „Gibt es belastende Faktoren in Ihrem Alltag, die Ihre Immunabwehr beeinträchtigen könnten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich hatte in den letzten Monaten mehrere Halsinfektionen und arbeite in einem sehr stressigen Umfeld.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie Fälle von chronischen Halsinfektionen, Autoimmunerkrankungen oder anderen relevanten Erkrankungen vorkommen.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie wiederholt Fälle von Tonsillitis oder ähnlichen Infektionen?“  
+- „Leiden nahestehende Angehörige an chronischen Infektionen oder Autoimmunerkrankungen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „In meiner Familie gibt es vereinzelt Fälle von wiederkehrenden Infektionen, aber nichts Spezifisches.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen, beruflichen und privaten Lebensumstände, die Einfluss auf das Risiko und den Verlauf der chronisch rezidivierenden Tonsillitis haben können.
+
+**Relevante Bereiche:**  
+- Berufliche Belastungen, Stress, Lebensstil, Hygieneverhalten und soziale Unterstützung.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre aktuelle berufliche Situation beschreiben?“  
+- „Haben Sie genügend Erholungsphasen und Unterstützung im privaten Umfeld?“  
+- „Gibt es spezielle Stressfaktoren, die Ihre Infektionsanfälligkeit erhöhen könnten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite in einem sehr stressigen Umfeld und habe wenig Zeit für Erholung, was möglicherweise zu den wiederkehrenden Infektionen beiträgt.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung anderer Erkrankungen, die ähnliche Symptome wie eine chronisch rezidivierende Tonsillitis verursachen können.
+
+**Beispiele:**  
+1. Akute Tonsillitis – wenn es sich um isolierte, akute Episoden handelt.  
+2. Mononukleose – virale Infektion mit ähnlichen Symptomen.  
+3. Chronische Pharyngitis – langfristige Entzündung des Rachens.  
+4. Autoimmunerkrankungen – z. B. Sjögren-Syndrom, das zu chronischen Entzündungen führen kann.
+
+**Beispielfragen:**  
+- „Können die Beschwerden auch durch eine andere Infektion oder entzündliche Erkrankung erklärt werden?“  
+- „Wurden andere Ursachen durch diagnostische Maßnahmen ausgeschlossen?“  
+- „Gibt es Hinweise auf eine systemische Beteiligung, die auf Autoimmunerkrankungen hindeutet?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Die bisherigen Untersuchungen deuten auf eine chronisch rezidivierende Tonsillitis hin, ohne eindeutige Hinweise auf andere systemische Erkrankungen.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags basierend auf den anamnestischen Daten, klinischen Befunden und vegetativen Symptomen.
+
+**Kriterien:**  
+- Wiederkehrende Episoden akuter Tonsillitis über einen längeren Zeitraum.  
+- Begleitende Symptome wie Halsschmerzen, Fieber, Schluckbeschwerden und allgemeine Müdigkeit.  
+- Ausschluss anderer Ursachen durch bisherige Untersuchungen.
+
+**Beispielfazit:**  
+- „Aufgrund der wiederkehrenden akuten Infektionen und der typischen klinischen Symptomatik besteht der Verdacht auf eine chronisch rezidivierende Tonsillitis. Eine weiterführende Diagnostik ist indiziert.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung der weiteren diagnostischen und therapeutischen Schritte zur Bestätigung der Diagnose und zur Planung der Behandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Diagnostische Interventionen:**  
+- **Klinische Untersuchung:** Detaillierte Betrachtung und Palpation der Mandeln.  
+- **Laboruntersuchungen:** Blutbild, CRP und weitere Entzündungsparameter zur Beurteilung des Infektionsstatus.  
+- **Abstriche:** Rachenabstrich zur Identifikation von Erregern (z. B. Streptokokken).  
+- **Bildgebende Verfahren:** Bei unklaren Befunden ggf. Ultraschall des Halses.
+
+**Therapeutische Interventionen:**  
+- **Medikamentöse Therapie:** Einsatz von Antibiotika und ggf. Kortikosteroiden während der akuten Phase.  
+- **Langfristige Therapie:** Überlegungen zur Tonsillektomie bei wiederholten, schweren Infektionen.  
+- **Begleitende Maßnahmen:** Schmerztherapie und supportive Behandlung zur Verbesserung der allgemeinen Kondition.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, sich weiteren diagnostischen Tests wie einem Rachenabstrich zu unterziehen?“  
+- „Wären Sie offen für eine operative Intervention (Tonsillektomie), falls sich die Beschwerden wiederholt schwer manifestieren?“  
+- „Wie gut sprechen Sie auf die aktuell eingesetzten Antibiotika an?“
+    `
+  },
+},
+narbenhernie: {
+  name: "Narbenhernie",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Narbenhernie**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassen, warum der Patient den Arzt wegen Beschwerden im Zusammenhang mit einer Narbenhernie aufsucht.
+
+**Anleitung:**  
+- Offene Fragen stellen, um den Zeitpunkt und die Beschwerden im Zusammenhang mit der Hernie zu eruieren.
+
+**Beispielfragen:**  
+- „Was führt Sie heute zu uns?“  
+- „Haben Sie in der Nähe einer alten Operationsnarbe eine Schwellung oder Schmerzen bemerkt?“  
+- „Seit wann bestehen diese Beschwerden?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe seit einiger Zeit eine Schwellung an der Operationsnarbe, die bei Belastung schmerzhaft wird.“  
+- *Arzt:* „Wann wurde die Operation durchgeführt, und haben sich die Beschwerden allmählich entwickelt?“
+
+---
+
+**2. Schmerzlokalisation und -charakter**  
+**Ziel:**  
+- Detaillierte Erfassung der Schmerzlokalisation, -intensität und -qualität in der Nähe der Narbe.
+
+**Anleitung:**  
+- Fragen zur Lokalisation der Schmerzen und deren Ausstrahlung stellen.
+
+**Beispielfragen:**  
+- „Wo genau in der Nähe der Narbe verspüren Sie die Schmerzen?“  
+- „Wie würden Sie den Schmerz beschreiben – stechend, drückend oder ziehend?“  
+- „Verändern sich die Schmerzen bei Bewegung oder Belastung?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Schmerzen sind direkt an der Narbe lokalisiert, werden bei körperlicher Anstrengung stechender und drücken besonders beim Heben.“  
+- *Arzt:* „Sind die Schmerzen konstant oder intermittierend?“
+
+---
+
+**3. Zeitverlauf und Symptomdynamik**  
+**Ziel:**  
+- Klären, wann die Beschwerden erstmals auftraten und wie sich die Narbenhernie im Zeitverlauf entwickelt hat.
+
+**Anleitung:**  
+- Nach Beginn, Dauer und eventuellen Schwankungen der Symptome fragen.
+
+**Beispielfragen:**  
+- „Seit wann haben Sie diese Beschwerden in der Nähe Ihrer Narbe?“  
+- „Hat sich die Größe der Hernie verändert?“  
+- „Gab es Phasen, in denen die Beschwerden zu- oder abgenommen haben?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Beschwerden sind seit einigen Monaten vorhanden und scheinen sich bei wiederholter Belastung zu verstärken.“  
+- *Arzt:* „Haben Sie bemerkt, dass die Schwellung zu bestimmten Tageszeiten oder bei bestimmten Aktivitäten zunimmt?“
+
+---
+
+**4. Begleitende Symptome und Funktionseinschränkungen**  
+**Ziel:**  
+- Erfassen, ob die Narbenhernie zu weiteren Symptomen wie Übelkeit, Schwellungen oder Bewegungseinschränkungen führt.
+
+**Anleitung:**  
+- Fragen zu Begleitsymptomen und funktionellen Einschränkungen im Alltag stellen.
+
+**Beispielfragen:**  
+- „Beeinträchtigt die Hernie Ihre Beweglichkeit oder Ihren Alltag?“  
+- „Haben Sie zusätzlich Beschwerden wie Übelkeit oder ein Druckgefühl im Bauchbereich?“  
+- „Fühlen Sie sich in der betroffenen Region schwach?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Bei Belastung fühle ich ein starkes Druckgefühl und eingeschränkte Beweglichkeit, vor allem beim Heben schwerer Gegenstände.“  
+- *Arzt:* „Beeinträchtigt dies auch Ihre beruflichen oder privaten Aktivitäten?“
+
+---
+
+**5. Lokalbefund und Sichtbarkeit**  
+**Ziel:**  
+- Erfassung sichtbarer Veränderungen an der Operationsnarbe, wie Hervortreten der Hernie oder Hautveränderungen.
+
+**Anleitung:**  
+- Fragen zur visuellen Beurteilung der Narbe und der Hernie stellen.
+
+**Beispielfragen:**  
+- „Ist an der Narbe ein auffälliger Knoten oder eine Ausstülpung zu sehen?“  
+- „Haben sich die Hautfarbe oder die Beschaffenheit der Narbe verändert?“  
+- „Ist die Hernie bei bestimmten Positionen stärker sichtbar?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ja, in der Nähe der alten Narbe ist eine kleine Ausstülpung sichtbar, die bei Hohlkreuzbildung stärker hervorzutreten scheint.“  
+- *Arzt:* „Verändert sich das Ausmaß der Hernie in Abhängigkeit von der Körperhaltung?“
+
+---
+
+**6. Zusammenhang mit vorherigen Operationen**  
+**Ziel:**  
+- Klären, ob die Hernie im Zusammenhang mit einer früheren Operation entstanden ist.
+
+**Anleitung:**  
+- Fragen zur Operationshistorie und postoperativen Komplikationen stellen.
+
+**Beispielfragen:**  
+- „Wann wurde die Operation durchgeführt, an deren Narbe sich die Hernie befindet?“  
+- „Gab es in der Vergangenheit postoperativ Komplikationen wie Infektionen oder schlechte Wundheilung?“  
+- „Wurden bereits Revisionsoperationen oder andere Eingriffe geplant?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Operation liegt etwa fünf Jahre zurück, und es gab damals kleinere Komplikationen in der Wundheilung.“  
+- *Arzt:* „Diese Vorgeschichte kann ein Risikofaktor für die Entwicklung einer Narbenhernie sein.“
+
+---
+
+**7. Vorherige Diagnostik und Behandlungen**  
+**Ziel:**  
+- Erfassen, ob bereits Untersuchungen (z. B. Ultraschall, CT) oder therapeutische Maßnahmen erfolgt sind.
+
+**Anleitung:**  
+- Fragen zu bisherigen diagnostischen Verfahren und deren Ergebnissen sowie bisherigen Behandlungen stellen.
+
+**Beispielfragen:**  
+- „Wurden bereits bildgebende Untersuchungen zur Abklärung der Hernie durchgeführt?“  
+- „Gab es bereits konservative Behandlungsversuche, wie Schmerztherapie oder das Tragen eines speziellen Bandes?“  
+- „Wie haben Sie auf diese Maßnahmen reagiert?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich wurde mittels Ultraschall untersucht, der eine kleine Hernie bestätigte, aber bisher wurde keine operative Behandlung eingeleitet.“  
+- *Arzt:* „Haben Sie schon Schmerzmittel oder andere unterstützende Maßnahmen ausprobiert?“
+
+---
+
+**8. Weitere relevante Anamneseaspekte**  
+**Ziel:**  
+- Erfassen zusätzlicher Faktoren wie körperliche Belastung, Übergewicht oder Bindegewebsschwäche, die zur Narbenhernie beitragen können.
+
+**Anleitung:**  
+- Offene Fragen zu Lebensgewohnheiten und Risikofaktoren stellen.
+
+**Beispielfragen:**  
+- „Haben Sie in letzter Zeit vermehrt schwere Lasten gehoben?“  
+- „Ist Ihnen ein Übergewicht oder eine Bindegewebsschwäche bekannt?“  
+- „Gab es berufliche oder private Belastungen, die sich auf die Wundheilung auswirkten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich hebe regelmäßig schwere Lasten in meinem Beruf und habe leichtes Übergewicht, was wahrscheinlich zur Entstehung beiträgt.“  
+- *Arzt:* „Diese Faktoren fließen in unsere Gesamtbeurteilung ein.“
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese bei Narbenhernie**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Einschätzung des allgemeinen körperlichen Befindens und der Vitalität.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihren allgemeinen Gesundheitszustand beschreiben?“  
+- „Fühlen Sie sich aufgrund der Hernie körperlich eingeschränkt oder abgeschlagen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich meist in Ordnung, allerdings beeinträchtigen die Schmerzen bei Belastung meinen Alltag.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Erfassen, ob die Beschwerden indirekt das Essverhalten beeinflussen.
+
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Appetit festgestellt?“  
+- „Essen Sie weniger, weil Sie sich wegen der Schmerzen unwohl fühlen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mein Appetit ist weitgehend normal, es gibt keine signifikanten Veränderungen.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Feststellen, ob es zu ungewolltem Gewichtsverlust gekommen ist.
+
+**Beispielfragen:**  
+- „Haben Sie in letzter Zeit ungewollt an Gewicht verloren?“  
+- „Wie hat sich Ihr Gewicht in den letzten Monaten entwickelt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir ist kein signifikanter Gewichtsverlust aufgefallen.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität, da Schmerzen in der Nacht zu Schlafstörungen führen können.
+
+**Beispielfragen:**  
+- „Schlafen Sie gut?“  
+- „Werden Sie nachts durch Schmerzen geweckt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich schlafe grundsätzlich gut, aber bei starker Belastung können Schmerzen den Schlaf beeinträchtigen.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Erfragen, ob es zu ungewöhnlichen Wärme- oder Kälteempfindungen kommt.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft zu warm oder zu kalt?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir sind keine Auffälligkeiten in Bezug auf Temperaturempfindungen aufgefallen.“
+
+---
+
+**6. Energielevel und Antrieb**  
+**Ziel:**  
+- Erfassung, ob die Beschwerden zu verminderter Energie und Antriebslosigkeit führen.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr Energielevel tagsüber beschreiben?“  
+- „Fühlen Sie sich nach Belastungen besonders erschöpft?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich nach körperlicher Anstrengung in der Nähe der Hernie etwas erschöpft, ansonsten ist mein Energielevel normal.“
+
+---
+
+**7. Vegetative Reaktionen (Herz-Kreislauf, Schwitzen)**  
+**Ziel:**  
+- Erfassen von autonomen Symptomen, die als Reaktion auf Schmerzen oder Stress auftreten können.
+
+**Beispielfragen:**  
+- „Haben Sie bemerkt, dass Ihr Herz schneller schlägt, wenn Sie Schmerzen haben?“  
+- „Schwitzen Sie vermehrt in belastenden Situationen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Gelegentlich spüre ich ein leichtes Herzklopfen bei starker Belastung, sonst nichts Auffälliges.“
+
+---
+
+**8. Allgemeines Wohlbefinden**  
+**Ziel:**  
+- Zusammenfassende Einschätzung des subjektiven Wohlbefindens.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden beschreiben?“  
+- „Beeinträchtigen die Beschwerden Ihren Alltag wesentlich?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Insgesamt fühle ich mich gut, nur bei körperlicher Anstrengung treten gelegentlich Beschwerden auf.“
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob bereits vorbestehende Erkrankungen vorliegen, die das Risiko für die Entwicklung einer Narbenhernie erhöhen könnten, wie Bindegewebsschwäche oder frühere Wundheilungsstörungen.
+
+**Beispielfragen:**  
+- „Hatten Sie in der Vergangenheit Probleme mit der Wundheilung nach Operationen?“  
+- „Wurde bei Ihnen eine Bindegewebsschwäche diagnostiziert?“  
+- „Gab es frühere Narben, die sich verdickt oder verändert haben?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Nach meiner letzten Operation gab es Probleme mit der Wundheilung, und bei mir wurde eine Bindegewebsschwäche festgestellt.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob operative Eingriffe an der betroffenen Stelle durchgeführt wurden und wie der postoperative Verlauf war.
+
+**Beispielfragen:**  
+- „Wann wurde die Operation durchgeführt, an deren Narbe sich nun die Hernie zeigt?“  
+- „Gab es Komplikationen oder Probleme bei der Wundheilung?“  
+- „Wurden bereits Revisionseingriffe vorgenommen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Die Operation liegt etwa fünf Jahre zurück, und es gab damals eine verzögerte Wundheilung.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche medikamentösen Behandlungen aktuell oder in der Vergangenheit eingenommen wurden, insbesondere solche zur Schmerztherapie oder zur Unterstützung der Wundheilung.
+
+**Beispielfragen:**  
+- „Nehmen Sie regelmäßig Schmerzmittel ein?“  
+- „Wurden Medikamente zur Unterstützung der Wundheilung verabreicht?“  
+- „Gab es Veränderungen in Ihrer Medikation in Zusammenhang mit der Hernie?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich nehme bei Bedarf Ibuprofen zur Schmerzlinderung, ansonsten keine spezielle Medikation.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob Allergien oder Unverträglichkeiten vorliegen, die bei der medikamentösen Therapie berücksichtigt werden müssen.
+
+**Beispielfragen:**  
+- „Haben Sie bekannte Allergien gegen Medikamente, insbesondere Schmerzmittel?“  
+- „Gab es in der Vergangenheit allergische Reaktionen auf Medikamente?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir sind keine Allergien gegen Medikamente bekannt.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von Risikofaktoren, die zur Entwicklung einer Narbenhernie beitragen können.
+
+**Beispiele:**  
+- Körperlich anstrengende Tätigkeiten, schweres Heben, unzureichende postoperative Nachsorge.
+
+**Beispielfragen:**  
+- „Haben Sie in Ihrem Beruf regelmäßig schwere Lasten gehoben?“  
+- „Gab es postoperativ Mängel in der Nachsorge?“  
+- „Wurde Ihnen geraten, bestimmte Aktivitäten zu vermeiden?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich hebe regelmäßig schwere Lasten, und die postoperative Nachsorge war nicht optimal.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie Fälle von Bindegewebsschwäche, Narbenhernien oder anderen relevanten Erkrankungen vorkommen.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie Fälle von Narbenhernien oder ähnlichen Problemen?“  
+- „Leiden nahe Angehörige an Bindegewebsschwächen oder Wundheilungsstörungen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „In meiner Familie sind keine spezifischen Fälle von Narbenhernien bekannt, allerdings gibt es Hinweise auf eine generelle Bindegewebsschwäche.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen und beruflichen Lebensumstände, die Einfluss auf das Risiko und den Verlauf einer Narbenhernie haben können.
+
+**Relevante Bereiche:**  
+- Berufliche Belastungen, körperliche Aktivität, Unterstützung im Alltag und Nachsorge.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre aktuelle berufliche Situation beschreiben?“  
+- „Haben Sie ausreichend Unterstützung bei schweren körperlichen Tätigkeiten?“  
+- „Wie sieht Ihr Freizeitverhalten in Bezug auf körperliche Aktivität aus?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite in einem körperlich anspruchsvollen Beruf und erhalte nur begrenzt Unterstützung, was sich negativ auf meine Genesung auswirkt.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung anderer Ursachen für eine Schwellung an der Operationsnarbe, wie beispielsweise Rezidive von Infektionen oder Abszessen.
+
+**Beispiele:**  
+1. Abszessbildung an der Narbe – bei anhaltender Entzündung.  
+2. Rezidivierende Wundinfektion – als Ursache der Schwellung.  
+3. Narbenkallus oder hypertrophe Narbenbildung – ohne Herniencharakter.  
+4. Andere abdominale Hernienformen – wie ventrale Hernien.
+
+**Beispielfragen:**  
+- „Können die Beschwerden auch durch eine chronische Infektion oder einen Abszess erklärt werden?“  
+- „Wurden alternative Ursachen durch bildgebende Verfahren ausgeschlossen?“  
+- „Gibt es Hinweise auf eine rein narbige, hypertrophe Veränderung ohne echte Hernienbildung?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Die bisherigen Untersuchungen deuten auf eine echte Hernie in der Nähe der Narbe hin, ohne klare Anzeichen eines Abszesses.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags basierend auf den anamnestischen Daten, klinischen Befunden und vegetativen Symptomen.
+
+**Kriterien:**  
+- Nachweis einer herniaformigen Ausstülpung an der Operationsnarbe  
+- Lokalisierte Schmerzen bei Belastung und funktionellen Einschränkungen  
+- Vorliegen von Risikofaktoren wie unzureichender Nachsorge und schwerer körperlicher Belastung
+
+**Beispielfazit:**  
+- „Aufgrund der vorliegenden Befunde und Risikofaktoren besteht der Verdacht auf eine Narbenhernie, die durch weiterführende bildgebende Diagnostik bestätigt werden sollte.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung der weiteren diagnostischen und therapeutischen Schritte zur Bestätigung der Diagnose und zur Planung der Behandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Bildgebende Verfahren:**  
+- **Ultraschall des Abdomens/der betroffenen Region:** Zur Darstellung der Hernieninhalte und der Bruchpforte.  
+- **CT oder MRT:** Bei unklaren Befunden oder zur präoperativen Planung.
+
+**Diagnostische Interventionen:**  
+- Klinische Untersuchung und evtl. funktionelle Tests zur Beurteilung der Hernienbeweglichkeit.
+
+**Therapeutische Interventionen:**  
+- **Konservative Therapie:** Schmerzmedikation, Vermeidung von schwerem Heben, ggf. Einsatz eines speziellen Narbenbruchbandes.  
+- **Operative Therapie:** Bei zunehmender Beschwerde oder Komplikationen (z. B. Inkarzeration) Planung eines chirurgischen Eingriffs.  
+- **Physiotherapie:** Zur Stärkung der Bauch- und Rückenmuskulatur und Verbesserung der postoperativen Rehabilitation.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, sich einer Ultraschalluntersuchung zur weiteren Abklärung zu unterziehen?“  
+- „Wie gut vertragen Sie konservative Maßnahmen wie das Tragen eines Leistenbruchbandes?“  
+- „Wären Sie bereit, im Falle einer Verschlechterung eine operative Therapie in Betracht zu ziehen?“
+    `
+  },
+},
+knieverletzung: {
+  name: "Knieverletzung",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Knieverletzung**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassen, weshalb der Patient wegen Beschwerden im Kniebereich vorstellig wird.
+
+**Anleitung:**  
+- Offene Fragen stellen, um den Hergang der Verletzung und die aktuellen Beschwerden zu eruieren.
+
+**Beispielfragen:**  
+- „Was hat Sie dazu veranlasst, heute den Arzt aufzusuchen?“  
+- „Wie ist es zu Ihrer Knieverletzung gekommen?“  
+- „Wann traten die Schmerzen im Knie erstmals auf?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich bin beim Sport umgeknickt und habe seitdem starke Schmerzen im Knie.“  
+- *Arzt:* „Gab es einen akuten Schmerz oder trat der Schmerz schleichend auf?“
+
+---
+
+**2. Schmerzlokalisation und -charakter**  
+**Ziel:**  
+- Detaillierte Erfassung der Schmerzlokalisation (z. B. medial, lateral, anterior) und des Schmerzcharakters (dumpf, stechend, ziehend).
+
+**Anleitung:**  
+- Fragen zur genauen Lokalisation und Beschreibung der Schmerzen sowie möglicher Ausstrahlung stellen.
+
+**Beispielfragen:**  
+- „Wo genau im Knie spüren Sie den Schmerz?“  
+- „Wie würden Sie die Art des Schmerzes beschreiben – dumpf, stechend oder ziehend?“  
+- „Strahlen die Schmerzen in den Unterschenkel oder in den Oberschenkel aus?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Der Schmerz ist vor allem im vorderen Bereich des Knies zu spüren und zieht manchmal in den Unterschenkel.“  
+- *Arzt:* „Verstärken sich die Schmerzen bei bestimmten Bewegungen?“
+
+---
+
+**3. Zeitverlauf und Dynamik der Symptome**  
+**Ziel:**  
+- Klärung des zeitlichen Auftretens der Beschwerden, deren Verlauf und mögliche Schwankungen.
+
+**Anleitung:**  
+- Nach Beginn, Dauer und eventuellen Änderungen der Schmerzen fragen.
+
+**Beispielfragen:**  
+- „Seit wann haben Sie die Schmerzen im Knie?“  
+- „Sind die Beschwerden konstant oder treten sie in Schüben auf?“  
+- „Haben Sie Phasen der Besserung oder Verschlechterung bemerkt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Schmerzen bestehen seit dem Unfall vor zwei Tagen und bleiben nahezu konstant, wobei sie bei Belastung zunehmen.“  
+- *Arzt:* „Gab es seitdem schon Veränderungen im Schmerzverlauf?“
+
+---
+
+**4. Funktionseinschränkung und Bewegungsabläufe**  
+**Ziel:**  
+- Erfassung, inwiefern die Verletzung die Beweglichkeit und alltäglichen Aktivitäten beeinträchtigt.
+
+**Anleitung:**  
+- Fragen zu Bewegungseinschränkungen, Stabilität und Funktionalität des Knies stellen.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten, das Knie zu beugen oder zu strecken?“  
+- „Beeinträchtigt die Verletzung Ihre Gehfähigkeit oder sportlichen Aktivitäten?“  
+- „Fühlen Sie sich unsicher oder instabil beim Gehen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich kann das Knie nur eingeschränkt beugen und spüre eine gewisse Instabilität, besonders beim Gehen auf unebenem Untergrund.“  
+- *Arzt:* „Hat sich die Beweglichkeit seit dem Unfall verändert?“
+
+---
+
+**5. Begleitsymptome und Schwellung**  
+**Ziel:**  
+- Erfassen von begleitenden Symptomen wie Schwellungen, Blutergüssen oder Instabilitätsgefühlen.
+
+**Anleitung:**  
+- Fragen zu Schwellungen, Hämatomen und Veränderungen im Kniebereich stellen.
+
+**Beispielfragen:**  
+- „Ist das Knie geschwollen oder verfärbt?“  
+- „Haben Sie Blutergüsse im Knie bemerkt?“  
+- „Fühlt sich das Knie warm oder druckempfindlich an?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe eine deutliche Schwellung und leichte Blutergüsse am Knie, die Stelle ist druckempfindlich.“  
+- *Arzt:* „Hat sich die Schwellung im Laufe der Zeit verändert?“
+
+---
+
+**6. Mechanismus der Verletzung**  
+**Ziel:**  
+- Erfassung des genauen Unfallhergangs und möglicher Krafteinwirkungen, die zur Verletzung führten.
+
+**Anleitung:**  
+- Fragen zum Unfallmechanismus (z. B. Umknicken, Stoß, direkte Einwirkung) stellen.
+
+**Beispielfragen:**  
+- „Wie genau ist es zu Ihrer Knieverletzung gekommen?“  
+- „Gab es einen direkten Schlag oder ist das Knie umgeknickt?“  
+- „Welche Sportart haben Sie ausgeübt, als die Verletzung passierte?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich bin beim Basketball umgeknickt, dabei wurde das Knie verdreht.“  
+- *Arzt:* „Gab es dabei ein hörbares Geräusch oder einen akuten Schmerz?“
+
+---
+
+**7. Vorherige Behandlungen und Selbstmaßnahmen**  
+**Ziel:**  
+- Erfassen, welche Maßnahmen der Patient bereits zur Schmerzlinderung und Stabilisierung ergriffen hat.
+
+**Anleitung:**  
+- Fragen zu eigeninitiativ ergriffenen Maßnahmen (z. B. Eisbehandlung, Ruhigstellung, Schmerzmedikation) stellen.
+
+**Beispielfragen:**  
+- „Welche Maßnahmen haben Sie bereits unternommen, um die Beschwerden zu lindern?“  
+- „Haben Sie das Knie gekühlt oder schon Schmerzmittel eingenommen?“  
+- „Hat sich dadurch etwas verbessert?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe das Knie sofort gekühlt und Ibuprofen genommen, was kurzfristig etwas Linderung brachte.“  
+- *Arzt:* „Haben Sie das Knie auch ruhiggestellt, z. B. durch eine Bandage?“
+
+---
+
+**8. Vorherige Diagnostik und Befunde**  
+**Ziel:**  
+- Erfassen, ob bereits diagnostische Maßnahmen (z. B. Röntgen, MRT) durchgeführt wurden.
+
+**Anleitung:**  
+- Fragen zu bisherigen Untersuchungen und deren Ergebnissen stellen.
+
+**Beispielfragen:**  
+- „Wurden bereits bildgebende Verfahren zur Beurteilung des Knies durchgeführt?“  
+- „Gab es bisher Auffälligkeiten in einem Röntgenbild oder MRT?“  
+- „Haben Sie bereits eine Diagnose erhalten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich wurde noch nicht bildgebend untersucht, da es erst zwei Tage her ist.“  
+- *Arzt:* „Wir sollten eine Röntgenuntersuchung durchführen, um Frakturen oder andere strukturelle Veränderungen auszuschließen.“
+
+---
+
+**9. Zusammenhang mit vorbestehenden Knieproblemen**  
+**Ziel:**  
+- Erfragen, ob bereits Knieverletzungen, -operationen oder chronische Beschwerden vorliegen.
+
+**Anleitung:**  
+- Fragen zu vorangegangenen Knieproblemen oder operativen Eingriffen stellen.
+
+**Beispielfragen:**  
+- „Hatten Sie schon einmal Probleme oder Verletzungen im Knie?“  
+- „Gab es frühere Operationen am Knie?“  
+- „Leiden Sie an chronischen Kniebeschwerden?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich hatte vor einigen Jahren eine Meniskusverletzung, die behandelt wurde, ansonsten keine chronischen Beschwerden.“  
+- *Arzt:* „Hat sich der alte Befund in irgendeiner Weise auf die aktuelle Verletzung ausgewirkt?“
+
+---
+
+**10. Einschätzung der Schmerzintensität**  
+**Ziel:**  
+- Quantitative Bewertung der Schmerzen zur Einschätzung des Schweregrades der Verletzung.
+
+**Anleitung:**  
+- Den Patienten bitten, die Schmerzen auf einer Skala von 0 (keine Schmerzen) bis 10 (unerträgliche Schmerzen) zu bewerten.
+
+**Beispielfragen:**  
+- „Wie stark schmerzen Sie aktuell auf einer Skala von 0 bis 10?“  
+- „Ändert sich die Schmerzintensität bei bestimmten Bewegungen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich würde meine Schmerzen mit 7 bewerten, besonders bei Belastung steigen sie deutlich an.“  
+- *Arzt:* „Verändern sich die Schmerzen im Ruhezustand?“
+
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese bei Knieverletzung**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Einschätzung des allgemeinen körperlichen Befindens und der Vitalität.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihren allgemeinen Gesundheitszustand beschreiben?“  
+- „Fühlen Sie sich durch die Knieverletzung insgesamt geschwächt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich etwas erschöpft, besonders nach längerer Belastung, ansonsten ist mein Allgemeinzustand stabil.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Erfragen, ob sich durch den Schmerz oder Stress Veränderungen im Essverhalten ergeben haben.
+
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Appetit festgestellt?“  
+- „Essen Sie weniger, weil Sie Schmerzen haben?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mein Appetit ist weitgehend unverändert, da die Beschwerden auf das Knie beschränkt sind.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Ermitteln, ob ungewollter Gewichtsverlust durch reduzierte Aktivität stattgefunden hat.
+
+**Beispielfragen:**  
+- „Haben Sie in letzter Zeit ungewollt an Gewicht verloren?“  
+- „Wie hat sich Ihr Gewicht in den letzten Monaten verändert?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir ist kein signifikanter Gewichtsverlust aufgefallen.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität, da Schmerzen und Unbehagen den Schlaf beeinträchtigen können.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Einschlafen oder Durchschlafen?“  
+- „Fühlen Sie sich nach dem Schlaf erholt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich schlafe meist gut, jedoch stören akute Schmerzepisoden gelegentlich meinen Schlaf.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Erfragen, ob es zu ungewöhnlichen Wärme- oder Kälteempfindungen kommt.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft zu warm oder zu kalt?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir ist in Bezug auf Temperatur nichts Ungewöhnliches aufgefallen.“
+
+---
+
+**6. Energielevel und Antrieb**  
+**Ziel:**  
+- Erfassen, ob der Patient durch die Knieverletzung in seiner täglichen Leistungsfähigkeit eingeschränkt ist.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr Energielevel tagsüber beschreiben?“  
+- „Fühlen Sie sich oft kraftlos oder ohne Antrieb?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Nach längerer Belastung fühle ich mich etwas erschöpft, aber insgesamt ist mein Energielevel akzeptabel.“
+
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob bereits Knieprobleme oder muskuläre/knöcherne Vorerkrankungen vorliegen, die den aktuellen Zustand beeinflussen können.
+
+**Beispielfragen:**  
+- „Hatten Sie schon einmal Knieverletzungen oder chronische Kniebeschwerden?“  
+- „Gab es in der Vergangenheit Operationen am Knie?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich hatte vor einigen Jahren eine Meniskusverletzung, die operativ behandelt wurde, ansonsten keine chronischen Knieprobleme.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob operative Eingriffe am Knie oder in der Umgebung bereits durchgeführt wurden.
+
+**Beispielfragen:**  
+- „Wurden Sie schon einmal am Knie operiert?“  
+- „Gab es Komplikationen oder Narben, die den aktuellen Zustand beeinflussen könnten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich wurde vor einigen Jahren wegen einer Meniskusverletzung operiert, aktuell keine weiteren Eingriffe.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche medikamentösen Maßnahmen aktuell oder in der Vergangenheit zur Schmerzlinderung oder Behandlung anderer Knieprobleme eingenommen wurden.
+
+**Beispielfragen:**  
+- „Nehmen Sie regelmäßig Schmerzmittel ein?“  
+- „Gab es in der Vergangenheit medikamentöse Therapien zur Behandlung von Kniebeschwerden?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich nehme gelegentlich Ibuprofen, wenn die Schmerzen stark sind.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob Allergien oder Unverträglichkeiten gegen Medikamente bestehen, die bei der Behandlung berücksichtigt werden müssen.
+
+**Beispielfragen:**  
+- „Haben Sie Allergien gegen Schmerzmittel oder andere Medikamente?“  
+- „Gab es in der Vergangenheit unerwünschte Reaktionen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe keine bekannten Allergien gegen Medikamente.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von Risikofaktoren, die zur Entstehung der Knieverletzung beigetragen haben könnten.
+
+**Beispiele:**  
+- Körperlich anstrengende Arbeit, sportliche Aktivitäten, Übergewicht, unzureichendes Aufwärmen vor dem Sport.
+
+**Beispielfragen:**  
+- „Betreiben Sie regelmäßig sportliche Aktivitäten oder schweres Heben?“  
+- „Gab es in letzter Zeit vermehrte körperliche Belastungen?“  
+- „Leiden Sie unter Übergewicht?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich betreibe regelmäßig Sport, habe aber in letzter Zeit vermehrt schwere Lasten gehoben, was zur Verletzung beigetragen haben könnte.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie Fälle von Knieproblemen oder muskulären/knöchernen Erkrankungen vorkommen.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie Fälle von chronischen Knieproblemen oder Osteoarthritis?“  
+- „Leiden nahe Angehörige an Bindegewebsschwächen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „In meiner Familie gibt es vereinzelt Fälle von Arthrose, aber nichts Spezifisches, das direkt auf meine Verletzung hindeutet.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der beruflichen und privaten Lebensumstände, die Einfluss auf die Knieverletzung haben können.
+
+**Relevante Bereiche:**  
+- Berufliche Belastung, körperliche Aktivität, Freizeitgestaltung, Unterstützung im Alltag.
+
+**Beispielfragen:**  
+- „Wie sieht Ihr berufliches Umfeld aus – sind körperliche Belastungen typisch für Ihren Job?“  
+- „Haben Sie genügend Erholungsphasen und Unterstützung im privaten Umfeld?“  
+- „Welche Rolle spielt Sport in Ihrem Alltag?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite in einem körperlich fordernden Beruf und habe weniger Zeit für Erholung, was die Verletzung verschlimmern könnte.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung anderer Ursachen für Kniebeschwerden, die ähnliche Symptome wie eine Knieverletzung hervorrufen können.
+
+**Beispiele:**  
+1. Bänderverletzungen (z. B. Kreuzbandriss, Seitenbandverletzung)  
+2. Meniskusschäden  
+3. Patellofemorales Schmerzsyndrom  
+4. Arthrose oder andere degenerative Veränderungen
+
+**Beispielfragen:**  
+- „Können Ihre Symptome auch durch eine Bänderverletzung oder einen Meniskusschaden erklärt werden?“  
+- „Wurden andere Knieerkrankungen durch bildgebende Verfahren ausgeschlossen?“  
+- „Gibt es Hinweise auf degenerative Prozesse im Knie?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Die klinische Untersuchung spricht eher für eine akute Knieverletzung, ohne eindeutige Hinweise auf Bänderverletzungen oder Arthrose.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags auf Basis der gesammelten anamnestischen und klinischen Befunde.
+
+**Kriterien:**  
+- Akuter Schmerz im Knie nach einem traumatischen Ereignis  
+- Bewegungseinschränkung und Schwellung im Knie  
+- Vorliegen von Risikofaktoren (z. B. körperliche Belastung) und fehlender Hinweis auf chronische Erkrankungen
+
+**Beispielfazit:**  
+- „Aufgrund der Anamnese und klinischen Befunde besteht der Verdacht auf eine akute Knieverletzung (z. B. Prellung oder Weichteilschaden). Eine weiterführende bildgebende Diagnostik (Röntgen, MRT) ist zur Bestätigung erforderlich.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung der weiteren diagnostischen und therapeutischen Schritte zur Bestätigung der Diagnose und Planung der Behandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Bildgebende Verfahren:**  
+- **Röntgen des Knies:** Zum Ausschluss von Frakturen oder knöchernen Veränderungen.  
+- **MRT des Knies:** Bei unklaren Befunden oder Verdacht auf Weichteilverletzungen.
+
+**Labordiagnostik:**  
+- Keine spezifischen Laboruntersuchungen erforderlich, sofern keine systemischen Entzündungszeichen vorliegen.
+
+**Therapeutische Interventionen:**  
+- **Konservative Therapie:** Ruhigstellung, Kühlung, Schmerzmedikation (NSAR, Paracetamol) und ggf. physiotherapeutische Maßnahmen.  
+- **Physiotherapie:** Zur Wiederherstellung der Beweglichkeit und Stärkung der Muskulatur.  
+- **Operative Maßnahmen:** Bei schweren strukturellen Schäden, falls indiziert.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, sich einer Röntgenuntersuchung des Knies zu unterziehen?“  
+- „Wie reagieren Sie auf die aktuell eingenommenen Schmerzmittel?“  
+- „Wären Sie bereit, eine physiotherapeutische Behandlung zur Rehabilitation in Anspruch zu nehmen?“
+    `
+  },
+},
+influenza: {
+  name: "Influenza",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Influenza**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassen, warum der Patient den Arzt wegen grippeähnlicher Beschwerden aufsucht.
+
+**Anleitung:**  
+- Offene Fragen stellen, um den Beginn und die Art der Symptome zu eruieren.
+
+**Beispielfragen:**  
+- „Was führt Sie heute zu uns?“  
+- „Seit wann haben Sie grippeähnliche Symptome?“  
+- „Welche Beschwerden bereiten Ihnen aktuell am meisten Probleme?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe seit zwei Tagen hohes Fieber, Schüttelfrost und Gliederschmerzen.“  
+- *Arzt:* „Gab es einen plötzlichen Beginn der Symptome oder haben sich diese allmählich entwickelt?“
+
+---
+
+**2. Art und Intensität der Symptome**  
+**Ziel:**  
+- Detaillierte Erfassung der Symptome wie Fieber, Husten, Halsschmerzen, Gliederschmerzen und allgemeines Krankheitsgefühl.
+
+**Anleitung:**  
+- Fragen zur Intensität und Qualität der Beschwerden stellen.
+
+**Beispielfragen:**  
+- „Wie hoch war Ihr Fieber?“  
+- „Haben Sie starken Husten oder Halsschmerzen?“  
+- „Wie würden Sie die Gliederschmerzen beschreiben – dumpf oder stechend?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Mein Fieber lag bei etwa 39°C, und ich habe einen trockenen Husten sowie starke, ziehende Gliederschmerzen.“  
+- *Arzt:* „Sind die Schmerzen konstant oder treten sie in Schüben auf?“
+
+---
+
+**3. Zeitverlauf der Beschwerden**  
+**Ziel:**  
+- Klärung, wann die Symptome erstmals auftraten und wie sich diese im Tagesverlauf entwickeln.
+
+**Anleitung:**  
+- Nach Beginn, Dauer und möglichen Schwankungen der Symptome fragen.
+
+**Beispielfragen:**  
+- „Wann haben Sie die ersten Symptome bemerkt?“  
+- „Haben sich Ihre Beschwerden im Laufe des Tages verändert?“  
+- „Gab es Phasen, in denen Sie sich besser oder schlechter fühlten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Symptome traten plötzlich vor zwei Tagen auf und verschlechtern sich meist am Abend.“  
+- *Arzt:* „Haben Sie in dieser Zeit bereits etwas gegen die Beschwerden unternommen?“
+
+---
+
+**4. Begleitende Symptome und Allgemeinbefinden**  
+**Ziel:**  
+- Erfassen weiterer typischer Symptome wie Kopfschmerzen, Müdigkeit, Appetitverlust und allgemeines Unwohlsein.
+
+**Anleitung:**  
+- Fragen zu Begleitsymptomen stellen, um das Ausmaß der Erkrankung einzuschätzen.
+
+**Beispielfragen:**  
+- „Haben Sie Kopfschmerzen oder ein allgemeines Krankheitsgefühl?“  
+- „Fällt Ihnen der Appetit ab?“  
+- „Leiden Sie unter extremer Müdigkeit oder Schwäche?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ja, ich habe starke Kopfschmerzen, wenig Appetit und fühle mich sehr erschöpft.“  
+- *Arzt:* „Treffen diese Symptome gleichzeitig mit dem Fieber auf?“
+
+---
+
+**5. Atemwegsbeschwerden**  
+**Ziel:**  
+- Erfassung von Husten, Halsschmerzen und eventuellen Atemnot, die auf eine respiratorische Beteiligung hinweisen.
+
+**Anleitung:**  
+- Fragen zum Husten und zur Atemnot stellen.
+
+**Beispielfragen:**  
+- „Haben Sie einen trockenen oder produktiven Husten?“  
+- „Fällt es Ihnen schwer, normal zu atmen?“  
+- „Sind die Halsschmerzen stark ausgeprägt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe einen trockenen Husten und leichte Halsschmerzen, jedoch keine ausgeprägte Atemnot.“  
+- *Arzt:* „Verändern sich Ihre Atembeschwerden bei körperlicher Aktivität?“
+
+---
+
+**6. Zusammenhang mit Expositionsfaktoren**  
+**Ziel:**  
+- Erfassen, ob der Patient Kontakt zu infektiösen Personen hatte oder in einem Umfeld mit hoher Influenzaaktivität war.
+
+**Anleitung:**  
+- Fragen zu kürzlichen Kontakten und Aufenthalten in Gemeinschaftseinrichtungen stellen.
+
+**Beispielfragen:**  
+- „Hatten Sie in letzter Zeit Kontakt zu jemandem mit Grippe oder ähnlichen Symptomen?“  
+- „Waren Sie in einer Einrichtung, in der sich Influenza ausgebreitet hat?“  
+- „Gab es in Ihrem Umfeld aktuell einen Grippeausbruch?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ja, ein Kollege im Büro hatte kürzlich eine Grippe, und ich war in engem Kontakt.“  
+- *Arzt:* „Diese Information ist wichtig für die weitere Diagnostik.“
+
+---
+
+**7. Vorherige Diagnostik und Behandlungen**  
+**Ziel:**  
+- Erfassen, ob bereits diagnostische Maßnahmen durchgeführt wurden und welche Behandlungen eventuell schon erfolgten.
+
+**Anleitung:**  
+- Fragen zu vorangegangenen Arztbesuchen, Untersuchungen und Medikamenteneinnahmen stellen.
+
+**Beispielfragen:**  
+- „Wurden Sie bereits von einem Arzt untersucht oder behandelt?“  
+- „Haben Sie bereits Medikamente gegen Ihre Symptome eingenommen?“  
+- „Gab es in der Vergangenheit ähnliche Erkrankungen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe bereits einen Termin beim Hausarzt und nehme Paracetamol zur Fiebersenkung.“  
+- *Arzt:* „Welche Wirkung haben diese Maßnahmen bisher erzielt?“
+
+---
+
+**8. Weitere relevante Anamneseaspekte**  
+**Ziel:**  
+- Erfassen von Lebensgewohnheiten und Risikofaktoren, die den Krankheitsverlauf beeinflussen können.
+
+**Anleitung:**  
+- Fragen zu Rauchgewohnheiten, Alkoholkonsum und allgemeinem Stresslevel stellen.
+
+**Beispielfragen:**  
+- „Rauchen Sie, und wenn ja, wie viele Zigaretten pro Tag?“  
+- „Konsumieren Sie regelmäßig Alkohol?“  
+- „Wie hoch schätzen Sie Ihren aktuellen Stresslevel ein?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich rauche gelegentlich und trinke moderat Alkohol; mein Stresslevel ist momentan hoch, da ich beruflich stark belastet bin.“
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese bei Influenza**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Einschätzung des subjektiven Allgemeinbefindens und der Vitalität während der Erkrankung.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden aktuell einschätzen?“  
+- „Fühlen Sie sich insgesamt kraftlos oder energielos?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich sehr erschöpft und ausgelaugt, was mir den Alltag erschwert.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Erfassung von Veränderungen im Appetit, die häufig bei Influenza auftreten.
+
+**Beispielfragen:**  
+- „Haben Sie weniger Appetit als gewöhnlich?“  
+- „Haben sich Ihre Essgewohnheiten in letzter Zeit verändert?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe deutlich weniger Appetit und esse kaum etwas, was typisch für die Grippe ist.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Feststellen, ob es in Folge der Erkrankung zu ungewolltem Gewichtsverlust gekommen ist.
+
+**Beispielfragen:**  
+- „Haben Sie in den letzten Tagen Gewicht verloren?“  
+- „Wie hat sich Ihr Gewicht im Verlauf der Erkrankung verändert?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir ist ein leichter Gewichtsverlust aufgefallen, vermutlich durch Appetitlosigkeit.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität und -quantität, da Fieber und Unwohlsein den Schlaf beeinträchtigen können.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Einschlafen oder Durchschlafen?“  
+- „Fühlen Sie sich nach dem Schlaf erholt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich schlafe oft unruhig und werde durch Fieberschübe geweckt.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Erfragen, ob es zu veränderten Wärmeempfindungen (z. B. Schwitzen oder Frösteln) kommt.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft zu warm oder zu kalt?“  
+- „Haben Sie vermehrt geschwitzt oder Frösteln bemerkt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich schwitze viel, besonders nachts, und fühle mich oft fiebrig.“
+
+---
+
+**6. Energielevel und Antrieb**  
+**Ziel:**  
+- Erfassen, ob die Influenza zu einem spürbaren Verlust an Energie und Antrieb führt.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr Energielevel tagsüber beschreiben?“  
+- „Fühlen Sie sich kraftlos oder ohne Antrieb?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe kaum Energie und fühle mich den ganzen Tag über müde.“
+
+---
+
+**7. Vegetative Reaktionen (Herz-Kreislauf, Schwitzen)**  
+**Ziel:**  
+- Erfassung autonomer Symptome, wie Herzklopfen oder vermehrtes Schwitzen, als Reaktion auf Fieber und Infektion.
+
+**Beispielfragen:**  
+- „Haben Sie ein schneller schlagendes Herz bemerkt?“  
+- „Schwitzen Sie vermehrt, auch in Ruhe?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich merke, dass mein Herz oft schneller schlägt und ich sehr viel schwitze.“
+
+---
+
+**8. Allgemeines Wohlbefinden**  
+**Ziel:**  
+- Zusammenfassende Einschätzung des vegetativen Zustands und dessen Einfluss auf die Lebensqualität.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden beschreiben?“  
+- „Beeinträchtigen die vegetativen Symptome Ihren Alltag erheblich?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mein Wohlbefinden ist stark beeinträchtigt, ich fühle mich den ganzen Tag über unwohl.“
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Vergangenheit ähnliche Infektionen oder Grippewellen aufgetreten sind und ob es chronische Erkrankungen gibt, die den Krankheitsverlauf beeinflussen könnten.
+
+**Beispielfragen:**  
+- „Hatten Sie in der Vergangenheit bereits häufig Influenza- oder Erkältungsinfekte?“  
+- „Leiden Sie an chronischen Erkrankungen, wie z. B. Asthma oder Herz-Kreislauf-Problemen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich hatte schon öfter Erkältungen, aber sonst keine chronischen Erkrankungen.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- In der Regel sind bei Influenza keine operativen Eingriffe relevant, dennoch erfassen wir relevante vorangegangene operative Maßnahmen.
+
+**Beispielfragen:**  
+- „Wurden Sie in der Vergangenheit operiert, die für Ihren aktuellen Gesundheitszustand von Bedeutung sein könnten?“  
+- „Gab es chirurgische Eingriffe im Zusammenhang mit Atemwegsproblemen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Nein, ich wurde bisher nicht operiert.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche medikamentösen Maßnahmen zur Linderung der grippeähnlichen Symptome bereits eingeleitet wurden.
+
+**Beispielfragen:**  
+- „Nehmen Sie fiebersenkende oder schmerzlindernde Medikamente ein?“  
+- „Haben Sie antivirale Medikamente erhalten oder begonnen?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich nehme Paracetamol zur Fiebersenkung und Ibuprofen gegen die Schmerzen.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob Allergien oder Unverträglichkeiten gegen die eingenommenen Medikamente bestehen.
+
+**Beispielfragen:**  
+- „Haben Sie bekannte Allergien gegen fiebersenkende oder antivirale Medikamente?“  
+- „Gab es in der Vergangenheit unerwünschte Reaktionen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe keine bekannten Allergien gegen die Medikamente, die ich einnehme.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von Risikofaktoren, die den Erwerb einer Influenza begünstigen können.
+
+**Beispiele:**  
+- Kontakt zu Infizierten, Aufenthalt in Gemeinschaftseinrichtungen, berufliche Exposition (z. B. im Gesundheitswesen).
+
+**Beispielfragen:**  
+- „Hatten Sie in letzter Zeit Kontakt zu Personen, bei denen eine Grippe diagnostiziert wurde?“  
+- „Arbeiten Sie in einer Einrichtung mit hohem Infektionsrisiko?“  
+- „Gab es in Ihrem Umfeld einen Grippeausbruch?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ja, ich arbeite im Krankenhaus, wo aktuell viele Grippefälle gemeldet werden.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie eine höhere Anfälligkeit für Influenza oder Komplikationen (z. B. chronische Atemwegserkrankungen) vorliegt.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie häufige schwere Atemwegsinfekte?“  
+- „Leiden nahestehende Angehörige an chronischen Erkrankungen, die Influenza komplizieren könnten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „In meiner Familie gibt es vereinzelt Fälle von Asthma, aber sonst keine auffälligen Vorerkrankungen.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen und beruflichen Lebensumstände, die den Infektionsrisiko und Krankheitsverlauf beeinflussen können.
+
+**Relevante Bereiche:**  
+- Berufliche Situation, Kontakt zu vielen Menschen, Lebensstil und Hygienemaßnahmen.
+
+**Beispielfragen:**  
+- „Wie sieht Ihre berufliche Situation aus – haben Sie häufige Kontakte zu vielen Personen?“  
+- „Welche Hygienemaßnahmen ergreifen Sie im Alltag?“  
+- „Wie ist Ihr allgemeiner Lebensstil hinsichtlich Erholung und Stress?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite im Gesundheitswesen und habe viele direkte Kontakte, was mein Infektionsrisiko erhöht.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung anderer Erkrankungen mit ähnlicher Symptomatik, wie bakterielle Pneumonien oder Erkältungen.
+
+**Beispiele:**  
+1. Erkältung – häufige Symptome überlappen sich, jedoch in der Regel milder.  
+2. Bakterielle Pneumonie – insbesondere bei hohem Fieber und Atembeschwerden.  
+3. Bronchitis – vorherrschender Husten ohne hohes Fieber.
+
+**Beispielfragen:**  
+- „Können Ihre Symptome auch durch eine bakterielle Infektion erklärt werden?“  
+- „Wurden bei Ihnen Auskultation oder bildgebende Verfahren durchgeführt, um Pneumonie auszuschließen?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Die Symptome entsprechen eher einem klassischen Grippebild, ohne Hinweise auf eine schwerwiegende Lungenentzündung.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags basierend auf den anamnestischen Daten, klinischen Befunden und den vegetativen Symptomen.
+
+**Kriterien:**  
+- Vorliegen typischer grippeähnlicher Symptome (hohes Fieber, Husten, Gliederschmerzen)  
+- Kontakt zu Infizierten bzw. Aufenthalt in einem Risikoumfeld  
+- Begleitende Symptome wie Müdigkeit, Appetitlosigkeit und allgemeines Unwohlsein
+
+**Beispielfazit:**  
+- „Aufgrund der vorliegenden Symptome und des erhöhten Infektionsrisikos besteht der Verdacht auf eine Influenza. Eine weiterführende labordiagnostische Abklärung (z. B. PCR-Test) zur Bestätigung ist angezeigt.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung der weiteren diagnostischen und therapeutischen Schritte zur Bestätigung der Diagnose und zur Planung der Behandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Labordiagnostik:**  
+- **PCR-Test auf Influenza-Viren:** Zur virologischen Bestätigung der Influenza.  
+- **Blutuntersuchungen:** Komplettes Blutbild, Entzündungsparameter und eventuell Leberwerte zur Beurteilung des Allgemeinzustands.
+
+**Bildgebende Verfahren:**  
+- **Röntgen-Thorax:** Bei Verdacht auf Komplikationen wie Pneumonie (bei schwerem Krankheitsverlauf).
+
+**Therapeutische Interventionen:**  
+- **Medikamentöse Therapie:** Antivirale Medikamente (z. B. Oseltamivir) innerhalb des empfohlenen Zeitfensters, fiebersenkende Mittel und Schmerzmedikation.  
+- **Symptomatische Behandlung:** Ausreichende Flüssigkeitszufuhr, Bettruhe und ggf. unterstützende Maßnahmen zur Linderung von Gliederschmerzen.  
+- **Isolation und Hygienemaßnahmen:** Um eine Weiterverbreitung zu verhindern.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, sich einem PCR-Test zu unterziehen?“  
+- „Wie gut sprechen Sie auf die derzeitige medikamentöse Behandlung an?“  
+- „Wären Sie bereit, entsprechende Hygienemaßnahmen zu befolgen, um die Infektion einzudämmen?“
+    `
+  },
+},
+anorexia_neurosa: {
+  name: "Anorexia neurosa",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Anorexia neurosa**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassen des Grundes für den Arztbesuch im Zusammenhang mit Gewichtsverlust und Essverweigerung.
+
+**Anleitung:**  
+- Offene Fragen stellen, um die subjektiven Beschwerden, Ängste und den Anlass des Besuchs zu eruieren.
+
+**Beispielfragen:**  
+- „Was hat Sie dazu veranlasst, heute Hilfe zu suchen?“  
+- „Haben Sie in letzter Zeit einen deutlichen Gewichtsverlust festgestellt?“  
+- „Welche Veränderungen in Ihrem Essverhalten sind Ihnen aufgefallen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patientin:* „Ich habe in den letzten Monaten viel Gewicht verloren und esse kaum noch, weil ich Angst vor einer Gewichtszunahme habe.“  
+- *Arzt:* „Seit wann beobachten Sie diese Veränderungen und wie stark schätzen Sie den Gewichtsverlust ein?“
+
+---
+
+**2. Essverhalten und Körperbild**  
+**Ziel:**  
+- Detaillierte Erfassung des Essverhaltens, der Nahrungsaufnahme sowie des subjektiven Körperbildes.
+
+**Anleitung:**  
+- Fragen zur Art und Weise des Essens, zu restriktiven Diäten und zur Wahrnehmung des eigenen Körpers stellen.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr aktuelles Essverhalten beschreiben?“  
+- „Haben Sie Angst davor, an Gewicht zuzunehmen?“  
+- „Wie empfinden Sie Ihr Körperbild – fühlen Sie sich oft unzufrieden mit Ihrem Aussehen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patientin:* „Ich esse sehr wenig, weil ich ständig Angst habe, dicker zu werden, und empfinde meinen Körper als ungenügend.“  
+- *Arzt:* „Haben sich Ihre Essgewohnheiten in einem bestimmten Zeitraum drastisch verändert?“
+
+---
+
+**3. Zeitverlauf und Entwicklung**  
+**Ziel:**  
+- Klärung des Beginns und der Progression der Symptome, inklusive Dauer der Essverweigerung und Gewichtsverlust.
+
+**Anleitung:**  
+- Nach dem zeitlichen Auftreten und der Intensivierung der Symptome fragen.
+
+**Beispielfragen:**  
+- „Seit wann haben Sie bemerkt, dass sich Ihr Essverhalten verändert hat?“  
+- „Wie hat sich Ihr Gewicht im Laufe der Zeit entwickelt?“  
+- „Gab es Zeiten, in denen Sie sich besser oder schlechter gefühlt haben?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patientin:* „Die Probleme bestehen nun seit etwa einem Jahr und haben sich in den letzten sechs Monaten deutlich verschlechtert.“  
+- *Arzt:* „Gab es ein auslösendes Ereignis oder eine Phase, in der sich der Zustand stark verändert hat?“
+
+---
+
+**4. Emotionale Belastung und Selbstwertgefühl**  
+**Ziel:**  
+- Erfassung der psychischen Belastung, depressiver Verstimmungen und eines gestörten Selbstbildes.
+
+**Anleitung:**  
+- Fragen zu Gefühlen von Wertlosigkeit, Scham oder innerer Leere stellen.
+
+**Beispielfragen:**  
+- „Wie schätzen Sie Ihr Selbstwertgefühl ein?“  
+- „Fühlen Sie sich oft wertlos oder schämen Sie sich für Ihren Körper?“  
+- „Beeinträchtigt Ihre Wahrnehmung Ihres Körpers auch Ihre Stimmung?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patientin:* „Ich fühle mich oft minderwertig und habe das Gefühl, dass mein Körper nicht den gesellschaftlichen Idealen entspricht.“  
+- *Arzt:* „Haben diese Gefühle in einem bestimmten Zeitraum zugenommen?“
+
+---
+
+**5. Körperliche Beschwerden und Begleitsymptome**  
+**Ziel:**  
+- Erfassen von körperlichen Symptomen, die im Zusammenhang mit einer ausgeprägten Restriktion der Nahrungsaufnahme stehen können.
+
+**Anleitung:**  
+- Fragen zu Müdigkeit, Kälteempfinden, Schwindel oder Herzklopfen stellen.
+
+**Beispielfragen:**  
+- „Haben Sie häufig körperliche Beschwerden wie Schwindel oder Kältegefühl?“  
+- „Fühlen Sie sich oft müde, selbst bei geringem Aufwand?“  
+- „Treten Herzklopfen oder andere vegetative Reaktionen auf?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patientin:* „Ja, ich fühle mich ständig müde und oft friere ich, obwohl es normal temperiert ist.“  
+- *Arzt:* „Sind diese Symptome konstant oder variieren sie im Tagesverlauf?“
+
+---
+
+**6. Psychische Symptome und Suizidgedanken**  
+**Ziel:**  
+- Erfassen von begleitenden psychischen Symptomen wie Angst, Depression und suizidalen Gedanken.
+
+**Anleitung:**  
+- Sensible Fragen zu Stimmungsschwankungen und suizidalen Gedanken stellen.
+
+**Beispielfragen:**  
+- „Leiden Sie unter anhaltenden Angstgefühlen oder depressiven Verstimmungen?“  
+- „Haben Sie schon einmal an Selbstverletzung oder Suizid gedacht?“  
+- „Wie stark beeinträchtigen diese Gedanken Ihren Alltag?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patientin:* „Ich fühle mich oft hoffnungslos und habe schon gelegentlich an Selbstverletzung gedacht.“  
+- *Arzt:* „Diese Informationen sind sehr wichtig – wir müssen das gemeinsam weiter abklären.“
+
+---
+
+**7. Soziale Isolation und Alltagsaktivitäten**  
+**Ziel:**  
+- Erfassung, inwiefern das gestörte Essverhalten und das veränderte Körperbild zu sozialem Rückzug führen.
+
+**Anleitung:**  
+- Fragen zu sozialen Kontakten, beruflichen und privaten Aktivitäten stellen.
+
+**Beispielfragen:**  
+- „Haben Sie den Kontakt zu Freunden oder Familie reduziert?“  
+- „Beeinträchtigt Ihr Zustand Ihre beruflichen oder sozialen Aktivitäten?“  
+- „Fühlen Sie sich isoliert oder zurückgezogen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patientin:* „Ich vermeide gesellschaftliche Anlässe und fühle mich oft isoliert, weil ich mich in meinem Körper unwohl fühle.“  
+- *Arzt:* „Wie lange hat diese Isolation bereits angedauert?“
+
+---
+
+**8. Vorherige Behandlungsversuche und Therapieerfahrungen**  
+**Ziel:**  
+- Erfassen, ob bereits psychotherapeutische oder medikamentöse Maßnahmen zur Behandlung der Essstörung ergriffen wurden.
+
+**Anleitung:**  
+- Fragen zu bisherigen Therapieversuchen, stationären Behandlungen oder Selbsthilfegruppen stellen.
+
+**Beispielfragen:**  
+- „Haben Sie schon einmal eine Therapie wegen Ihrer Essstörung begonnen?“  
+- „Welche Erfahrungen haben Sie mit bisherigen Behandlungen gemacht?“  
+- „Gab es eine Verbesserung Ihrer Symptome durch therapeutische Maßnahmen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patientin:* „Ich war schon in ambulanter Therapie, aber bislang hat sich mein Zustand kaum verbessert.“  
+- *Arzt:* „Welche Therapieformen wurden ausprobiert, und wie lange dauerten diese?“
+
+---
+
+**9. Körperwahrnehmung und Selbstkontrolle**  
+**Ziel:**  
+- Untersuchung, inwieweit das Körperbild verzerrt ist und wie stark der Patient versucht, seine Nahrungsaufnahme zu kontrollieren.
+
+**Anleitung:**  
+- Fragen zur Wahrnehmung des eigenen Körpers und zu restriktiven Verhaltensweisen stellen.
+
+**Beispielfragen:**  
+- „Wie nehmen Sie Ihren eigenen Körper wahr?“  
+- „Wie stark kontrollieren Sie Ihre Nahrungsaufnahme oder Ihr Gewicht?“  
+- „Spüren Sie einen inneren Zwang, Kalorien zu zählen oder bestimmte Speisen zu meiden?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patientin:* „Ich sehe mich selbst als übergewichtig, obwohl ich deutlich untergewichtig bin, und kontrolliere jede Mahlzeit akribisch.“  
+- *Arzt:* „Welche Auswirkungen hat diese Selbstkontrolle auf Ihr tägliches Leben?“
+
+---
+
+**10. Weitere relevante Aspekte**  
+**Ziel:**  
+- Erfassen weiterer individueller Faktoren, die zur Entwicklung und Aufrechterhaltung der Essstörung beitragen.
+
+**Anleitung:**  
+- Offene Fragen zu familiären, sozialen oder beruflichen Belastungen stellen.
+
+**Beispielfragen:**  
+- „Gab es in Ihrem Leben belastende Ereignisse, die zu Ihrer Essstörung beigetragen haben könnten?“  
+- „Wie gehen Sie mit Stress um, und inwiefern beeinflusst dieser Ihr Essverhalten?“  
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patientin:* „Ich hatte in der Vergangenheit erhebliche familiäre Konflikte und hohen beruflichen Stress, der mein Essverhalten stark beeinflusst hat.“  
+- *Arzt:* „Diese Faktoren sind wichtig für die Therapieplanung – bitte erzählen Sie mir mehr darüber.“
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese bei Anorexia neurosa**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Erfassung des allgemeinen körperlichen Befindens und der Vitalität.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines körperliches Befinden beschreiben?“  
+- „Fühlen Sie sich körperlich oft schwach oder ausgelaugt?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich fühle mich häufig sehr schwach und habe kaum Energie für den Alltag.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Feststellung der Veränderungen im Essverhalten und Appetit, die charakteristisch für Anorexia neurosa sind.
+
+**Beispielfragen:**  
+- „Haben Sie eine Veränderung Ihres Appetits bemerkt?“  
+- „Essen Sie bewusst sehr wenig oder vermeiden Sie Mahlzeiten?“  
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich esse absichtlich sehr wenig und fühle mich nicht hungrig.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Dokumentation des ungewollten Gewichtsverlusts und der aktuellen Körpermasse.
+
+**Beispielfragen:**  
+- „Haben Sie in letzter Zeit ungewollt an Gewicht verloren?“  
+- „Wie hat sich Ihr Gewicht in den letzten Monaten verändert?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich habe in den letzten zwölf Monaten deutlich an Gewicht verloren.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität, da psychischer Stress und Unterernährung den Schlaf beeinträchtigen können.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Ein- oder Durchschlafen?“  
+- „Fühlen Sie sich nach dem Schlaf ausgeruht?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich schlafe unruhig und fühle mich oft nicht erholt.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Erfassung von Veränderungen im Wärmeempfinden, z. B. Kälteempfindlichkeit.
+
+**Beispielfragen:**  
+- „Haben Sie häufig das Gefühl, dass Ihnen kalt ist, selbst wenn es warm ist?“  
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ja, ich friere oft, selbst in warmen Räumen.“
+
+---
+
+**6. Energielevel und Antrieb**  
+**Ziel:**  
+- Feststellung der körperlichen und geistigen Erschöpfung.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich tagsüber oft energiearm oder antriebslos?“  
+- „Beeinträchtigt dieser Zustand Ihre alltäglichen Aktivitäten?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich fühle mich ständig erschöpft und habe kaum Antrieb, meine täglichen Aufgaben zu bewältigen.“
+
+---
+
+**7. Gastrointestinale Symptome**  
+**Ziel:**  
+- Erfassung von Verdauungsproblemen, die mit Unterernährung einhergehen können.
+
+**Beispielfragen:**  
+- „Haben Sie Übelkeit oder Verdauungsstörungen bemerkt?“  
+- „Gibt es Veränderungen im Stuhlgang?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Gelegentlich verspüre ich Übelkeit, aber gravierende Verdauungsprobleme habe ich nicht.“
+
+---
+
+**8. Allgemeines Wohlbefinden**  
+**Ziel:**  
+- Zusammenfassende Beurteilung des subjektiven Wohlbefindens.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Befinden derzeit beschreiben?“  
+- „Welche vegetativen Symptome stören Sie am meisten?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Mein allgemeines Wohlbefinden ist stark beeinträchtigt – ich fühle mich oft schwach und erschöpft.“
+
+---
+
+**9. Psychische Stressreaktion**  
+**Ziel:**  
+- Bewertung, ob die körperlichen Einschränkungen auch zu erhöhter psychischer Belastung führen.
+
+**Beispielfragen:**  
+- „Belasten Sie die körperlichen Symptome auch Ihre Stimmung?“  
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ja, der ständige Gewichtsverlust und die Essverweigerung setzen mich auch seelisch stark unter Druck.“
+
+---
+
+**10. Flüssigkeitsaufnahme und Durstgefühl**  
+**Ziel:**  
+- Erfassung von Veränderungen in der Trinkmenge und einem veränderten Durstempfinden.
+
+**Beispielfragen:**  
+- „Trinken Sie mehr oder weniger als früher?“  
+- „Haben Sie häufig Durst?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich trinke oft weniger, weil ich den ganzen Tag keinen Hunger verspüre.“
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Vergangenheit bereits Essstörungen, Depressionen oder Angststörungen diagnostiziert wurden, die das Risiko für Anorexia neurosa erhöhen.
+
+**Beispielfragen:**  
+- „Hatten Sie schon einmal ähnliche Essstörungen oder Probleme mit Ihrem Körperbild?“  
+- „Wurden in der Vergangenheit psychische Erkrankungen, wie Depression oder Angststörungen, diagnostiziert?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich hatte schon in der Jugend Phasen, in denen ich sehr restriktiv gegessen habe, und es wurde auch an einer leichten Depression gearbeitet.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob operative Eingriffe (z. B. Bauchchirurgie) erfolgt sind, die eventuell Einfluss auf das Essverhalten oder die Nährstoffaufnahme haben könnten.
+
+**Beispielfragen:**  
+- „Wurden Sie jemals operativ im Bauchbereich behandelt?“  
+- „Gab es Komplikationen, die Ihre Ernährungsgewohnheiten beeinflusst haben?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich wurde bisher nicht operiert, abgesehen von kleineren ambulanten Eingriffen.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche medikamentösen Behandlungen aktuell oder in der Vergangenheit eingenommen wurden, insbesondere zur Behandlung psychischer Symptome.
+
+**Beispielfragen:**  
+- „Nehmen Sie aktuell Medikamente, wie Antidepressiva oder Anxiolytika?“  
+- „Gab es in der Vergangenheit medikamentöse Behandlungen gegen Ihre Essstörung oder Begleiterscheinungen?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich nehme derzeit ein Antidepressivum, jedoch bisher keine spezifischen Medikamente gegen die Essstörung.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob Allergien oder Unverträglichkeiten vorliegen, die bei einer medikamentösen Therapie berücksichtigt werden müssen.
+
+**Beispielfragen:**  
+- „Haben Sie bekannte Allergien gegen Medikamente?“  
+- „Gab es in der Vergangenheit allergische Reaktionen, die relevant sein könnten?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Mir sind keine Allergien gegen Medikamente bekannt.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von Risikofaktoren und belastenden Umwelteinflüssen, die zur Entwicklung der Essstörung beitragen können.
+
+**Beispiele:**  
+- Chronischer Stress, gesellschaftlicher Leistungsdruck, familiäre Konflikte, unrealistische Schönheitsideale.
+
+**Beispielfragen:**  
+- „Erleben Sie anhaltenden Stress im Alltag, sei es beruflich oder privat?“  
+- „Gibt es familiäre oder gesellschaftliche Erwartungen, die Sie besonders belasten?“  
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ja, ich stehe unter großem Druck, einem bestimmten Schönheitsideal zu entsprechen, und mein familiäres Umfeld ist sehr kritisch.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie Essstörungen, Depressionen oder andere psychische Erkrankungen vorkommen, die das individuelle Risiko erhöhen können.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie Fälle von Essstörungen oder Depressionen?“  
+- „Wurden bei nahen Verwandten ähnliche Probleme beobachtet?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „In meiner Familie gibt es mehrere Fälle von Depression und Essstörungen, was mir Sorgen bereitet.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen, beruflichen und privaten Lebensumstände, die Einfluss auf die Entwicklung und den Verlauf der Essstörung haben.
+
+**Relevante Bereiche:**  
+- Soziale Isolation, Unterstützung durch Freunde und Familie, beruflicher Stress, Freizeitverhalten und Medienkonsum.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre aktuelle Lebenssituation beschreiben?“  
+- „Haben Sie ein stabiles soziales Netzwerk?“  
+- „Beeinflusst Ihr Beruf Ihre psychische Gesundheit?“
+
+**Mögliche Antworten:**  
+- *Patientin:* „Ich fühle mich oft isoliert und habe das Gefühl, dass mir die Unterstützung durch Freunde fehlt. Mein Beruf ist sehr stressig, was meine Essgewohnheiten zusätzlich belastet.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung von anderen Essstörungen und psychischen Erkrankungen, die ähnliche Symptome aufweisen können.
+
+**Beispiele:**  
+1. Bulimia nervosa – Wiederholte Essanfälle mit anschließender kompensatorischer Verhaltensweise.  
+2. Atypische Essstörungen – Essverhalten, das nicht alle Kriterien der Anorexia erfüllt.  
+3. Zwangsstörungen – mit übersteigertem Kontrollzwang in Bezug auf Ernährung.  
+4. Major Depression – mit sekundärem Gewichtsverlust, jedoch ohne ausgeprägte Essverweigerung.
+
+**Beispielfragen:**  
+- „Können Ihre Symptome auch durch eine Bulimie erklärt werden?“  
+- „Wurden andere psychische Erkrankungen bereits ausgeschlossen?“  
+
+**Mögliche Antworten:**  
+- *Patientin:* „Meine Symptome passen nicht zu wiederkehrenden Essanfällen – es geht ausschließlich um restriktives Essverhalten und eine verzerrte Körperwahrnehmung.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags auf Basis der anamnestischen und vegetativen Befunde.
+
+**Kriterien:**  
+- Deutlicher und anhaltender Gewichtsverlust bei gleichzeitiger Essverweigerung.  
+- Stark verzerrtes Körperbild und Angst vor Gewichtszunahme.  
+- Begleitende psychische Belastungen wie Depression und Angst.
+
+**Beispielfazit:**  
+- „Aufgrund der vorliegenden Symptome, des restriktiven Essverhaltens und des verzerrten Körperbildes besteht der Verdacht auf Anorexia neurosa, der einer umfassenden psychotherapeutischen und ernährungsmedizinischen Abklärung bedarf.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung weiterer diagnostischer und therapeutischer Schritte zur Bestätigung der Diagnose und zur Einleitung einer adäquaten Behandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Psychologische Diagnostik:**  
+- Einsatz standardisierter Essstörungsskalen, z. B. Eating Disorder Examination (EDE) oder Eating Disorder Inventory (EDI).  
+- Durchführung eines ausführlichen psychologischen Interviews zur Abklärung der Essstörung und begleitender psychischer Symptome.
+
+**Körperliche Untersuchungen:**  
+- Erfassung von Vitalparametern, BMI und Laboruntersuchungen (Blutbild, Elektrolyte, Hormonstatus) zur Bewertung des körperlichen Zustands.  
+- Regelmäßige Überwachung des Gewichtsverlaufs.
+
+**Ernährungsmedizinische Beratung:**  
+- Detaillierte Analyse des Ernährungsverhaltens und Erstellung eines individuellen Ernährungsplans.  
+- Beratung zu einer schrittweisen Normalisierung der Nahrungsaufnahme.
+
+**Therapeutische Interventionen:**  
+- Einleitung einer psychotherapeutischen Behandlung (z. B. kognitive Verhaltenstherapie, interpersonelle Therapie).  
+- Bei Bedarf medikamentöse Unterstützung zur Behandlung von begleitender Depression oder Angststörungen.  
+- Multidisziplinäre Zusammenarbeit zwischen Psychiater, Ernährungsberater und Hausarzt.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, an einem ausführlichen psychologischen Assessment teilzunehmen?“  
+- „Wären Sie offen für eine interdisziplinäre Behandlung, die sowohl psychotherapeutische als auch ernährungsmedizinische Maßnahmen umfasst?“  
+- „Haben Sie bereits Erfahrungen mit einer Therapie gegen Essstörungen gemacht?“
+    `
+  },
+},
+schenkelhalsfraktur: {
+  name: "Schenkelhalsfraktur",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Schenkelhalsfraktur**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassen, was den Patienten veranlasst hat, ärztliche Hilfe in Anspruch zu nehmen (z. B. Sturz, plötzliche Schmerzen im Hüftbereich).
+
+**Anleitung:**  
+- Offene Fragen stellen, um den Unfallhergang und die initialen Beschwerden zu eruieren.
+
+**Beispielfragen:**  
+- „Wie ist es zu Ihrer Verletzung gekommen?“  
+- „Wann genau ist der Unfall passiert?“  
+- „Welche Schmerzen haben Sie unmittelbar nach dem Sturz verspürt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich bin gestürzt, als ich die Treppe hinabstieg, und hatte sofort starke Schmerzen in der Hüfte.“  
+- *Arzt:* „Sind die Schmerzen konstant oder verändern sie sich mit Bewegung?“
+
+---
+
+**2. Schmerzlokalisation und -charakter**  
+**Ziel:**  
+- Detaillierte Beschreibung der Schmerzen im Hüft- und Oberschenkelbereich erfassen.
+
+**Anleitung:**  
+- Fragen zur genauen Schmerzlokalisation (Hüfte, Leiste, Oberschenkel) und Schmerzcharakter (dumpf, stechend, ziehend) stellen.
+
+**Beispielfragen:**  
+- „Wo genau spüren Sie den Schmerz – in der Hüfte oder im Oberschenkel?“  
+- „Wie würden Sie den Schmerz beschreiben?“  
+- „Strahlen die Schmerzen in den Fuß oder in den Rücken aus?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Der Schmerz ist vorwiegend in der Hüfte, dumpf und verstärkt sich bei Bewegung.“  
+- *Arzt:* „Beeinträchtigt der Schmerz auch Ihr Gehen oder Stehen?“
+
+---
+
+**3. Zeitverlauf und Entwicklung der Symptome**  
+**Ziel:**  
+- Klärung, ob die Schmerzen sofort nach dem Sturz begannen und wie sie sich seither entwickelt haben.
+
+**Anleitung:**  
+- Nach dem Zeitpunkt des Schmerzbeginns und der zeitlichen Progression der Beschwerden fragen.
+
+**Beispielfragen:**  
+- „Wann traten die Schmerzen genau auf?“  
+- „Haben sich die Beschwerden seit dem Unfall verändert?“  
+- „Gab es Phasen der Besserung oder Verschlechterung?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Schmerzen traten unmittelbar nach dem Sturz auf und sind seither konstant, wenn auch mit kleinen Schwankungen.“  
+- *Arzt:* „Haben Sie bereits Schmerzmittel eingenommen, und wenn ja, wie wirkte sich das aus?“
+
+---
+
+**4. Funktionseinschränkung und Mobilität**  
+**Ziel:**  
+- Erfassung, inwieweit die Fraktur die Mobilität und alltägliche Aktivitäten beeinträchtigt.
+
+**Anleitung:**  
+- Fragen zu Gehfähigkeit, Belastbarkeit und Einschränkungen bei alltäglichen Bewegungen stellen.
+
+**Beispielfragen:**  
+- „Können Sie noch selbstständig gehen oder stehen?“  
+- „Wie stark schränkt der Schmerz Ihre Beweglichkeit ein?“  
+- „Mussten Sie Ihren Alltag stark einschränken?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich kann kaum mehr stehen oder gehen, und jede Bewegung verursacht erhebliche Schmerzen.“  
+- *Arzt:* „Haben Sie Hilfe im Alltag in Anspruch genommen?“
+
+---
+
+**5. Begleitende Symptome und Komplikationen**  
+**Ziel:**  
+- Erfassen, ob weitere Symptome wie Schwellungen, Blutergüsse oder neurologische Ausfälle vorliegen.
+
+**Anleitung:**  
+- Fragen zu Schwellungen, Taubheitsgefühlen, Kribbeln oder unregelmäßiger Pulsation im betroffenen Bein stellen.
+
+**Beispielfragen:**  
+- „Haben Sie Schwellungen oder Blutergüsse im Hüft- oder Oberschenkelbereich bemerkt?“  
+- „Gibt es Taubheitsgefühle oder Kribbeln im Bein?“  
+- „Fällt Ihnen eine Veränderung der Durchblutung auf?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Es gibt deutliche Schwellungen und blaue Flecken, jedoch keine tauben Bereiche.“  
+- *Arzt:* „Wir sollten die Durchblutung und neurologische Funktion genau überprüfen.“
+
+---
+
+**6. Vorherige Verletzungen und Vorerkrankungen**  
+**Ziel:**  
+- Erfragen, ob der Patient schon einmal ähnliche Verletzungen oder Vorerkrankungen (z. B. Osteoporose) hatte.
+
+**Anleitung:**  
+- Fragen zu früheren Stürzen, Frakturen oder bekannten Knochenerkrankungen stellen.
+
+**Beispielfragen:**  
+- „Hatten Sie in der Vergangenheit schon einmal Knochenbrüche oder Stürze?“  
+- „Wurde bei Ihnen eine Osteoporose oder ein anderer Knochenschwund diagnostiziert?“  
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich hatte vor einigen Jahren schon einmal eine kleine Fraktur, und bei mir wurde eine beginnende Osteoporose festgestellt.“  
+- *Arzt:* „Diese Vorerkrankungen können das Frakturrisiko erhöhen.“
+
+---
+
+**7. Vorherige Behandlungen und Erste-Hilfe-Maßnahmen**  
+**Ziel:**  
+- Erfragen, welche Maßnahmen unmittelbar nach dem Unfall ergriffen wurden.
+
+**Anleitung:**  
+- Fragen zu Erste-Hilfe-Maßnahmen, Schmerzbehandlung und Notfalleinweisungen stellen.
+
+**Beispielfragen:**  
+- „Wurde Ihnen direkt nach dem Sturz Erste Hilfe geleistet?“  
+- „Haben Sie Schmerzmittel eingenommen?“  
+- „Wurden Sie unmittelbar ins Krankenhaus gebracht?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Am Unfallort wurde Erste Hilfe geleistet, und ich wurde zur weiteren Abklärung ins Krankenhaus eingeliefert.“  
+- *Arzt:* „Welche Behandlungen wurden dort bereits vorgenommen?“
+
+---
+
+**8. Medikamentenanamnese**  
+**Ziel:**  
+- Erfassen, welche Medikamente der Patient aktuell einnimmt, insbesondere solche, die die Knochenstärke beeinflussen können.
+
+**Anleitung:**  
+- Fragen zu regelmäßiger Medikamenteneinnahme, wie Vitamin D, Calcium oder Osteoporose-Medikamenten stellen.
+
+**Beispielfragen:**  
+- „Nehmen Sie Medikamente gegen Osteoporose oder andere Knochenerkrankungen ein?“  
+- „Haben Sie in letzter Zeit Medikamente eingenommen, die Ihre Knochenstärke beeinflussen könnten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich nehme derzeit Calcium und Vitamin D, jedoch keine spezifischen Osteoporose-Medikamente.“  
+- *Arzt:* „Das ist wichtig für die weitere Therapieplanung.“
+
+---
+
+**9. Unfallhergang und Risikofaktoren**  
+**Ziel:**  
+- Detaillierte Erfassung des Unfallhergangs und möglicher Risikofaktoren wie rutschige Oberflächen oder unzureichende Hilfsmittel.
+
+**Anleitung:**  
+- Fragen zum Unfallort, den Umständen und möglichen Gefahrenquellen stellen.
+
+**Beispielfragen:**  
+- „Wo genau ist der Unfall passiert – zuhause, am Arbeitsplatz oder im Freien?“  
+- „Gab es besondere Umstände, die zu dem Sturz geführt haben?“  
+- „Wurden Sicherheitsvorkehrungen nicht beachtet?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich bin zuhause auf nassem Boden ausgerutscht, weil die Treppe nicht ausreichend gesichert war.“  
+- *Arzt:* „Solche Risikofaktoren sind wichtig, um zukünftige Unfälle zu vermeiden.“
+
+---
+
+**10. Einschätzung der Schmerzintensität**  
+**Ziel:**  
+- Quantitative Bewertung der Schmerzintensität zur weiteren Behandlungsplanung.
+
+**Anleitung:**  
+- Den Patienten bitten, die Schmerzen auf einer Skala von 0 (keine Schmerzen) bis 10 (unerträgliche Schmerzen) zu bewerten.
+
+**Beispielfragen:**  
+- „Wie stark schmerzen Sie aktuell auf einer Skala von 0 bis 10?“  
+- „Verändern sich die Schmerzen in Ruhe oder bei Bewegung?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich würde meine Schmerzen mit 8 bewerten, besonders beim Versuch, das Bein zu belasten.“  
+- *Arzt:* „Das gibt uns wichtige Hinweise für die Schmerztherapie und Mobilisation.“
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese bei Schenkelhalsfraktur**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Einschätzung des allgemeinen körperlichen Zustands und der Vitalität nach dem Trauma.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines körperliches Befinden seit dem Unfall beschreiben?“  
+- „Fühlen Sie sich insgesamt geschwächt oder belastet?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich insgesamt sehr geschwächt und habe Schwierigkeiten, meinen Alltag zu bewältigen.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Feststellen, ob durch die Verletzung oder den Krankenhausaufenthalt Veränderungen im Essverhalten eingetreten sind.
+
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Appetit bemerkt?“  
+- „Essen Sie weniger als vor dem Unfall?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich esse seit dem Unfall deutlich weniger, da mir oft der Appetit fehlt.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Erfassung, ob ein ungewollter Gewichtsverlust vorliegt, bedingt durch reduzierten Appetit und Immobilität.
+
+**Beispielfragen:**  
+- „Haben Sie in letzter Zeit Gewicht verloren?“  
+- „Wie hat sich Ihr Gewicht seit dem Unfall verändert?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe bereits einige Kilogramm verloren, seit ich nicht mehr so aktiv sein kann.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität, da Schmerzen und Krankenhausaufenthalte oft zu Schlafstörungen führen.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Einschlafen oder Durchschlafen?“  
+- „Fühlen Sie sich nach dem Schlaf ausgeruht?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich schlafe oft unruhig und wache aufgrund der Schmerzen mehrmals in der Nacht auf.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Erfassung von Veränderungen im Wärmeempfinden, da Schmerzen und Immobilität den Körperstoffwechsel beeinflussen können.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft kalt oder warm, auch wenn es normal temperiert ist?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe manchmal ein Kältegefühl, besonders im betroffenen Bein.“
+
+---
+
+**6. Energielevel und Antrieb**  
+**Ziel:**  
+- Feststellung, inwieweit die Verletzung und die damit verbundene Immobilität das Energielevel und den Antrieb beeinflussen.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich tagsüber oft energiearm oder antriebslos?“  
+- „Beeinträchtigt der Mangel an Energie Ihren Alltag?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich ständig erschöpft und habe kaum die Kraft, mich zu bewegen.“
+
+---
+
+**7. Herz-Kreislauf-Reaktionen**  
+**Ziel:**  
+- Erfassen, ob Schmerzen oder Stress zu einer veränderten Herzfrequenz oder Blutdruckschwankungen führen.
+
+**Beispielfragen:**  
+- „Haben Sie bemerkt, dass Ihr Herz schneller schlägt?“  
+- „Gab es Veränderungen in Ihrem Blutdruck?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Gelegentlich spüre ich ein schnelleres Herzklopfen, besonders bei Schmerzen.“
+
+---
+
+**8. Atemverhalten**  
+**Ziel:**  
+- Untersuchung, ob Schmerzen beim Atmen (z. B. durch eingeschränkte Beweglichkeit) das normale Atemmuster beeinflussen.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten, tief zu atmen?“  
+- „Beeinträchtigt die Verletzung Ihre Atemfrequenz?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ja, tiefes Einatmen ist schmerzhaft, weshalb ich oft flacher atme.“
+
+---
+
+**9. Allgemeines Wohlbefinden**  
+**Ziel:**  
+- Zusammenfassende Bewertung des subjektiven vegetativen Zustands.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden derzeit beschreiben?“  
+- „Welche vegetativen Symptome stören Sie am meisten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mein allgemeines Befinden ist stark beeinträchtigt – ich fühle mich körperlich und seelisch ausgelaugt.“
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob vorbestehende Erkrankungen (z. B. Osteoporose, rheumatische Erkrankungen) vorliegen, die das Risiko einer Fraktur erhöhen.
+
+**Beispielfragen:**  
+- „Wurden bei Ihnen bereits Osteoporose oder andere Knochenerkrankungen diagnostiziert?“  
+- „Hatten Sie in der Vergangenheit bereits Knochenbrüche oder Frakturen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Bei mir wurde eine beginnende Osteoporose festgestellt, und ich hatte in der Vergangenheit bereits einen kleinen Frakturvorfall.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob bereits operative Eingriffe, insbesondere im Bereich des Bewegungsapparats, erfolgt sind.
+
+**Beispielfragen:**  
+- „Wurden Sie schon einmal operativ behandelt, etwa aufgrund von Frakturen oder Gelenkproblemen?“  
+- „Gab es nach früheren Eingriffen Komplikationen, die Ihre Mobilität beeinträchtigen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich wurde bisher nicht operiert, abgesehen von kleineren Eingriffen im Zusammenhang mit früheren Frakturen.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche Medikamente aktuell oder in der Vergangenheit eingenommen wurden, insbesondere solche zur Behandlung von Osteoporose oder zur Schmerztherapie.
+
+**Beispielfragen:**  
+- „Nehmen Sie regelmäßig Medikamente zur Behandlung von Osteoporose ein?“  
+- „Welche Schmerzmittel verwenden Sie derzeit?“  
+- „Gab es kürzlich Änderungen in Ihrer Medikation?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich nehme regelmäßig Calcium und Vitamin D, sowie Ibuprofen zur Schmerzlinderung.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob bekannte Allergien oder Unverträglichkeiten vorliegen, die bei der medikamentösen Therapie berücksichtigt werden müssen.
+
+**Beispielfragen:**  
+- „Haben Sie Allergien gegen bestimmte Schmerzmittel oder andere Medikamente?“  
+- „Gab es in der Vergangenheit unerwünschte Reaktionen auf Medikamente?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir sind keine relevanten Allergien gegen Medikamente bekannt.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von Risikofaktoren, die zur Fraktur beigetragen haben könnten, wie Sturzrisiken oder rutschige Oberflächen.
+
+**Beispielfragen:**  
+- „Arbeiten Sie in einem Umfeld mit erhöhter Sturzgefahr?“  
+- „Gab es besondere Umstände am Unfallort, die den Sturz begünstigten?“  
+- „Nehmen Sie Medikamente ein, die das Sturzrisiko erhöhen (z. B. Beruhigungsmittel)?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich stürzte auf nassem Boden zuhause; sonst gibt es keine besonderen Risikofaktoren.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie Erkrankungen wie Osteoporose oder andere Knochenerkrankungen vorkommen, die das Frakturrisiko erhöhen könnten.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie Fälle von Osteoporose oder häufigen Knochenbrüchen?“  
+- „Wurden bei nahen Verwandten bereits Knochenerkrankungen diagnostiziert?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Bei mehreren älteren Familienmitgliedern wurde Osteoporose festgestellt.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen und beruflichen Lebensumstände, die Einfluss auf das Unfallrisiko und den Heilungsverlauf haben.
+
+**Relevante Bereiche:**  
+- Berufliche Belastungen, Wohnsituation, Unterstützung im Alltag und Freizeitaktivitäten.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre aktuelle berufliche Situation beschreiben?“  
+- „Haben Sie Unterstützung im Haushalt oder bei alltäglichen Aktivitäten?“  
+- „Beeinflusst Ihre Wohnsituation Ihre Genesung?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite in einem körperlich fordernden Beruf und habe nur eingeschränkte Unterstützung im Alltag.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung anderer Verletzungen und Zustände, die ähnliche Symptome wie eine Schenkelhalsfraktur hervorrufen können.
+
+**Beispiele:**  
+1. Trochanterfraktur – Fraktur im Bereich des großen Rollhügels.  
+2. Intertrochanterische Fraktur – Fraktur zwischen dem Schenkelhals und dem Trochanter major.  
+3. Hüftgelenksluxation – Fehlstellung des Hüftgelenks.  
+4. Kontusionen und Weichteilverletzungen im Hüftbereich.
+
+**Beispielfragen:**  
+- „Können Ihre Beschwerden auch durch eine andere Frakturart erklärt werden?“  
+- „Wurden andere Verletzungen im Rahmen der bildgebenden Diagnostik ausgeschlossen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Die bildgebenden Befunde deuten eindeutig auf eine Schenkelhalsfraktur hin, andere Verletzungen konnten ausgeschlossen werden.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags auf Basis der anamnestischen Daten, der klinischen Untersuchung und der ersten Bildgebung.
+
+**Kriterien:**  
+- Vorliegen eines traumatischen Ereignisses mit akuten, starken Hüftschmerzen.  
+- Klinisch nachweisbare Bewegungseinschränkung und Schmerzen bei Belastung.  
+- Bildgebende Hinweise (Röntgen, ggf. CT) auf eine Fraktur im Bereich des Schenkelhalses.
+
+**Beispielfazit:**  
+- „Aufgrund des Unfallhergangs, der starken, belastungsabhängigen Schmerzen und der klinischen Befunde besteht der Verdacht auf eine Schenkelhalsfraktur, die durch weitere bildgebende Verfahren bestätigt werden muss.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung der weiteren diagnostischen und therapeutischen Schritte zur Bestätigung der Diagnose und Planung der Behandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Bildgebende Verfahren:**  
+- **Röntgenaufnahme des Hüftgelenks:** Zur initialen Beurteilung der Fraktur.  
+- **CT des Hüftbereichs:** Zur detaillierten Darstellung des Frakturtyps und zur Planung der operativen Therapie, falls notwendig.
+
+**Laboruntersuchungen:**  
+- Blutuntersuchungen zur allgemeinen Gesundheitsüberprüfung und zur Ausschlussdiagnostik von Begleitinfektionen.
+
+**Therapeutische Interventionen:**  
+- **Konservative Therapie:** Bei stabilen Frakturen mit Schienung und Schmerztherapie.  
+- **Operative Versorgung:** Bei instabilen Frakturen, z. B. mittels Schraubenosteosynthese oder Hüftendoprothese, je nach Alter und Aktivitätslevel des Patienten.  
+- **Physiotherapie:** Zur Wiederherstellung der Mobilität und Muskelkraft nach der Behandlung.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, sich einer operativen Behandlung zu unterziehen, falls dies notwendig ist?“  
+- „Wie gut vertragen Sie Schmerzmittel, und welche Medikamente nehmen Sie aktuell zur Schmerzlinderung?“  
+- „Würden Sie einer physiotherapeutischen Nachbehandlung zustimmen, um die Mobilität zu verbessern?“
+    `
+  },
+},
+anämie: {
+  name: "Anämie",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Anämie**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassen, weshalb sich der Patient vorstellt, z. B. aufgrund von Müdigkeit, Schwäche, Blässe oder anderer Beschwerden.
+
+**Anleitung:**  
+- Offene Fragen stellen, um den Hauptgrund des Arztbesuchs zu eruieren.
+
+**Beispielfragen:**  
+- „Was hat Sie veranlasst, heute bei uns vorstellig zu werden?“  
+- „Welche Symptome haben Sie bemerkt – z. B. anhaltende Müdigkeit, Kurzatmigkeit oder blasse Haut?“  
+- „Seit wann bestehen diese Beschwerden?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich fühle mich seit einigen Monaten ständig müde, habe oft Atemnot bei Anstrengung und meine Haut wirkt blass.“  
+- *Arzt:* „Seit wann beobachten Sie diese Symptome und haben Sie bereits etwas unternommen, um sie zu lindern?“
+
+---
+
+**2. Schmerz- und Belastungsempfinden**  
+**Ziel:**  
+- Erfassen, ob und inwieweit sich die Anämie in Form von körperlicher Belastungsintoleranz äußert.
+
+**Anleitung:**  
+- Fragen zum Aktivitätsniveau, zur Belastbarkeit und zu eventuellen Schmerzen stellen.
+
+**Beispielfragen:**  
+- „Fällt es Ihnen schwer, alltägliche Aktivitäten auszuführen?“  
+- „Haben Sie das Gefühl, bei körperlicher Anstrengung schneller außer Atem zu geraten?“  
+- „Spüren Sie auch muskuläre Schwäche oder allgemeine Schmerzen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich bin sehr schnell ermüdet und habe kaum noch Energie, selbst für leichte körperliche Aufgaben.“  
+- *Arzt:* „Beeinträchtigt das Ihren Alltag erheblich?“
+
+---
+
+**3. Zeitverlauf und Symptomdynamik**  
+**Ziel:**  
+- Klärung des Beginns, der Dauer und des Verlaufs der Symptome.
+
+**Anleitung:**  
+- Nach dem Zeitpunkt des Auftretens der Beschwerden und möglichen Schwankungen im Zeitverlauf fragen.
+
+**Beispielfragen:**  
+- „Wann haben Sie zum ersten Mal die genannten Symptome bemerkt?“  
+- „Haben sich die Symptome im Laufe der Zeit verstärkt?“  
+- „Gab es Phasen, in denen Sie sich besser gefühlt haben?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Symptome bestehen seit ungefähr sechs Monaten und haben sich in letzter Zeit verschlimmert.“  
+- *Arzt:* „Gab es Ereignisse, die den Verlauf beeinflusst haben könnten?“
+
+---
+
+**4. Allgemeine körperliche Beschwerden**  
+**Ziel:**  
+- Erfassen weiterer körperlicher Symptome, die auf eine Anämie hindeuten können, wie Schwindel, Kopfschmerzen oder Herzklopfen.
+
+**Anleitung:**  
+- Fragen zu begleitenden Symptomen stellen, die häufig bei Anämie auftreten.
+
+**Beispielfragen:**  
+- „Haben Sie häufig Schwindelgefühle oder Kopfschmerzen?“  
+- „Spüren Sie ein verstärktes Herzklopfen oder Herzrasen?“  
+- „Fällt Ihnen auch eine verminderte Leistungsfähigkeit in der Arbeit auf?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ja, ich leide regelmäßig unter Schwindel und manchmal auch unter Kopfschmerzen, besonders bei Belastung.“  
+- *Arzt:* „Diese Symptome sind typisch und sollten weiter untersucht werden.“
+
+---
+
+**5. Ernährung und Flüssigkeitszufuhr**  
+**Ziel:**  
+- Erfragen, ob es Veränderungen im Essverhalten oder in der Flüssigkeitsaufnahme gibt, die den Zustand beeinflussen könnten.
+
+**Anleitung:**  
+- Fragen zum Ernährungsverhalten und zu eventuellen Diäten oder Mangelernährungen stellen.
+
+**Beispielfragen:**  
+- „Haben Sie Ihre Ernährungsgewohnheiten in letzter Zeit verändert?“  
+- „Essen Sie ausreichend eisenreiche Lebensmittel?“  
+- „Trinken Sie genug Flüssigkeit?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich esse eher wenig und habe den Eindruck, dass meine Ernährung nicht ausgewogen ist.“  
+- *Arzt:* „Das könnte ein wesentlicher Faktor sein. Wir sollten das genauer untersuchen.“
+
+---
+
+**6. Medikamentenanamnese**  
+**Ziel:**  
+- Erfassen, ob Medikamente eingenommen werden, die zu einer Anämie beitragen können (z. B. NSAR, bestimmte Chemotherapeutika).
+
+**Anleitung:**  
+- Fragen zur aktuellen und vergangenen Medikamenteneinnahme stellen.
+
+**Beispielfragen:**  
+- „Nehmen Sie regelmäßig Medikamente ein, die Ihre Blutwerte beeinflussen könnten?“  
+- „Gab es in der Vergangenheit medikamentöse Behandlungen, die zu Blutverlust oder Mangelerscheinungen geführt haben?“  
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich nehme gelegentlich Schmerzmittel ein, aber sonst keine Medikamente, die mir bekannt sind, die Anämie verursachen könnten.“  
+- *Arzt:* „Wir sollten dennoch Ihre Medikamentengeschichte genau prüfen.“
+
+---
+
+**7. Vorherige Diagnostik und Behandlungen**  
+**Ziel:**  
+- Erfragen, ob bereits Untersuchungen (Blutbild, Eisenstatus, etc.) durchgeführt wurden und welche Befunde vorliegen.
+
+**Anleitung:**  
+- Fragen zu früheren Blutuntersuchungen und diagnostischen Maßnahmen stellen.
+
+**Beispielfragen:**  
+- „Wurden bei Ihnen schon einmal Blutuntersuchungen durchgeführt?“  
+- „Gab es Hinweise auf einen Mangel an Eisen, Vitamin B12 oder Folsäure?“  
+- „Wurden bereits therapeutische Maßnahmen gegen eine Anämie ergriffen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich hatte vor einigen Monaten ein Blutbild, bei dem ein niedriger Eisenwert festgestellt wurde.“  
+- *Arzt:* „Das ist ein wichtiger Hinweis, der weiter abgeklärt werden sollte.“
+
+---
+
+**8. Familiäre Vorgeschichte**  
+**Ziel:**  
+- Erfassen, ob es in der Familie Fälle von Anämie oder verwandten Erkrankungen gibt.
+
+**Anleitung:**  
+- Fragen zur Familienanamnese, insbesondere bezüglich erblich bedingter Mangelerscheinungen oder Blutkrankheiten, stellen.
+
+**Beispielfragen:**  
+- „Gibt es in Ihrer Familie bekannte Fälle von Anämie oder Blutkrankheiten?“  
+- „Wurden bei nahen Angehörigen ähnliche Symptome beobachtet?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „In meiner Familie gibt es vereinzelt Fälle von Eisenmangelanämie.“  
+- *Arzt:* „Diese Information ist wichtig für die Risikobewertung.“
+
+---
+
+**9. Unfallhergang und akute Ereignisse (falls relevant)**  
+**Ziel:**  
+- Bei plötzlichem Blutverlust oder akuten Ereignissen erfassen, ob diese zur Anämie geführt haben könnten.
+
+**Anleitung:**  
+- Fragen, ob es kürzlich zu Verletzungen oder Operationen kam, die zu einem Blutverlust geführt haben.
+
+**Beispielfragen:**  
+- „Gab es in letzter Zeit Verletzungen oder Operationen, bei denen Sie Blut verloren haben?“  
+- „Hatten Sie akute Erkrankungen, die zu einem Abfall der Blutwerte geführt haben könnten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich hatte in letzter Zeit keine Verletzungen oder Operationen, die einen signifikanten Blutverlust verursachten.“  
+- *Arzt:* „Das lässt eine chronische Ursache wahrscheinlicher erscheinen.“
+
+---
+
+**10. Weitere relevante Anamneseaspekte**  
+**Ziel:**  
+- Erfassen von zusätzlichen Faktoren wie chronischen Erkrankungen oder Ernährungsumstellungen, die zur Anämie beitragen können.
+
+**Anleitung:**  
+- Offene Fragen zu weiteren belastenden Umständen oder Veränderungen im Lebensstil stellen.
+
+**Beispielfragen:**  
+- „Gab es in letzter Zeit Änderungen in Ihrem Lebensstil, die Ihre Ernährung beeinflusst haben?“  
+- „Leiden Sie an chronischen Erkrankungen, die Ihre Blutwerte beeinträchtigen könnten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe meine Ernährung stark umgestellt, was eventuell zu einem Mangel geführt hat.“  
+- *Arzt:* „Diese Faktoren sollten wir in der weiteren Diagnostik berücksichtigen.“
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese bei Anämie**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Erfassung des allgemeinen körperlichen Befindens und der Belastbarkeit.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Befinden beschreiben?“  
+- „Fühlen Sie sich häufig schwach oder abgeschlagen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich oft sehr schwach und müde, selbst bei geringen Anstrengungen.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Feststellen, ob Veränderungen im Essverhalten vorliegen, die zu Mangelerscheinungen führen können.
+
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Appetit bemerkt?“  
+- „Essen Sie weniger als früher oder haben Sie bestimmte Nahrungsmittel gemieden?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich esse insgesamt weniger und habe den Eindruck, dass meine Ernährung nicht ausgewogen ist.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Dokumentation des Gewichtsverlusts und der körperlichen Veränderungen.
+
+**Beispielfragen:**  
+- „Haben Sie in letzter Zeit ungewollt Gewicht verloren?“  
+- „Wie hat sich Ihr Gewicht in den letzten Monaten verändert?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe in den letzten sechs Monaten deutlich an Gewicht verloren.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität, da Anämie häufig zu Müdigkeit und Schlafstörungen führt.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Einschlafen oder Durchschlafen?“  
+- „Fühlen Sie sich nach dem Schlaf ausgeruht?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich schlafe oft unruhig und wache ständig auf, ohne mich erholt zu fühlen.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Erfassung von Kälteempfindlichkeit, da Patienten mit Anämie häufig ein gesteigertes Kältegefühl haben.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich oft kalt, selbst in einer warmen Umgebung?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ja, ich friere häufig, auch wenn es anderen normal erscheint.“
+
+---
+
+**6. Energielevel und Antrieb**  
+**Ziel:**  
+- Bewertung der körperlichen und geistigen Energie, da Anämie oft zu ausgeprägter Erschöpfung führt.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich tagsüber oft energiearm oder antriebslos?“  
+- „Beeinträchtigt dieser Zustand Ihre täglichen Aktivitäten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich fast den ganzen Tag über müde und habe kaum Antrieb, etwas zu unternehmen.“
+
+---
+
+**7. Herz-Kreislauf-Reaktionen**  
+**Ziel:**  
+- Erfassen, ob der Patient Symptome wie Herzrasen oder Schwindel bei Belastung zeigt.
+
+**Beispielfragen:**  
+- „Haben Sie bemerkt, dass Ihr Herz schneller schlägt oder unregelmäßig pocht?“  
+- „Fühlen Sie sich bei leichter Belastung schwindelig?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ja, bei leichter körperlicher Aktivität bekomme ich schnell Schwindel und mein Herz schlägt schneller.“
+
+---
+
+**8. Allgemeines Wohlbefinden**  
+**Ziel:**  
+- Zusammenfassende Einschätzung des subjektiven vegetativen Zustands und der Lebensqualität.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden derzeit beschreiben?“  
+- „Welche vegetativen Symptome stören Sie am meisten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mein allgemeines Befinden ist stark beeinträchtigt – ich fühle mich körperlich und seelisch sehr angeschlagen.“
+
+---
+
+**9. Flüssigkeitsaufnahme und Durstgefühl**  
+**Ziel:**  
+- Erfassung von Veränderungen in der Trinkmenge, da ein veränderter Flüssigkeitshaushalt häufig bei Anämie beobachtet wird.
+
+**Beispielfragen:**  
+- „Trinken Sie mehr oder weniger als früher?“  
+- „Haben Sie ein verändertes Durstempfinden?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich trinke momentan weniger, da ich mich generell schwach fühle.“
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Vergangenheit bereits Anämie oder Erkrankungen, die zu Mangelzuständen führen können (z. B. chronische Nierenerkrankung, gastrointestinaler Blutverlust), diagnostiziert wurden.
+
+**Beispielfragen:**  
+- „Hatten Sie schon einmal Anämie oder wurden Sie aufgrund von Mangelerscheinungen behandelt?“  
+- „Leiden Sie an chronischen Erkrankungen, die zu einem Blutverlust führen können?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich hatte vor einiger Zeit bereits eine leichte Eisenmangelanämie, aber sonst keine schwerwiegenden chronischen Erkrankungen.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob operative Eingriffe, insbesondere im gastrointestinalen Bereich, erfolgt sind, die zu Blutverlust und folgender Anämie geführt haben könnten.
+
+**Beispielfragen:**  
+- „Wurden Sie jemals operiert, etwa aufgrund von Magen- oder Darmerkrankungen?“  
+- „Gab es postoperativ Komplikationen, die zu einem signifikanten Blutverlust führten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich wurde bisher nicht operiert, abgesehen von kleineren Eingriffen.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche Medikamente aktuell oder in der Vergangenheit eingenommen wurden, insbesondere solche, die den Eisen- oder Blutstatus beeinflussen können.
+
+**Beispielfragen:**  
+- „Nehmen Sie aktuell Medikamente ein, die Ihre Blutwerte beeinflussen könnten?“  
+- „Haben Sie in der Vergangenheit eisenhaltige Präparate oder andere blutbildverbessernde Mittel eingenommen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich nehme derzeit keine speziellen Medikamente für meine Blutwerte, habe aber in der Vergangenheit Eisenpräparate eingenommen.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob bekannte Allergien oder Unverträglichkeiten vorliegen, die für die medikamentöse Therapie relevant sein könnten.
+
+**Beispielfragen:**  
+- „Haben Sie Allergien gegen bestimmte Medikamente?“  
+- „Gab es in der Vergangenheit allergische Reaktionen, die berücksichtigt werden müssen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir sind keine Allergien gegen Medikamente bekannt.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von Risikofaktoren, die zur Entstehung einer Anämie beitragen können.
+
+**Beispiele:**  
+- Chronischer Blutverlust (z. B. durch Magen-Darm-Erkrankungen), schlechte Ernährung, regelmäßiger NSAR-Gebrauch.
+
+**Beispielfragen:**  
+- „Gab es in der Vergangenheit Blutverluste, etwa durch Magen-Darm-Blutungen?“  
+- „Wie würden Sie Ihre Ernährung beschreiben – bekommen Sie ausreichend Eisen und andere wichtige Nährstoffe?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Meine Ernährung ist nicht optimal, und ich hatte in der Vergangenheit gelegentlich Magen-Darm-Beschwerden, die zu einem leichten Blutverlust führten.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie Fälle von Anämie oder verwandten Mangelzuständen sowie Blutkrankheiten vorkommen.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie Fälle von Anämie oder anderen Blutkrankheiten?“  
+- „Wurden bei nahen Verwandten ähnliche Symptome beobachtet?“
+
+**Mögliche Antworten:**  
+- *Patient:* „In meiner Familie gibt es vereinzelte Fälle von Eisenmangelanämie.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen und beruflichen Lebensumstände, die Einfluss auf das Risiko und den Verlauf einer Anämie haben können.
+
+**Relevante Bereiche:**  
+- Ernährungsgewohnheiten, Lebensstil, Zugang zu gesunder Ernährung und Unterstützung im Alltag.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre aktuelle Lebenssituation und Ihre Ernährungsgewohnheiten beschreiben?“  
+- „Haben Sie Unterstützung beim Einkauf und Kochen gesunder Mahlzeiten?“  
+- „Beeinflusst Ihr Beruf Ihre Essgewohnheiten oder Ihren Zugang zu nährstoffreichen Lebensmitteln?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite sehr stressig und habe oft wenig Zeit zum Kochen – meine Ernährung lässt zu wünschen übrig.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung von anderen Ursachen für Müdigkeit und Schwäche, die ähnlich wie Anämie erscheinen können.
+
+**Beispiele:**  
+1. Chronische Infektionen – die zu einer Anämie führen können.  
+2. Endokrine Störungen, wie Hypothyreose.  
+3. Herzinsuffizienz – bei der verminderte Durchblutung zu Schwäche führt.  
+4. Depression – die ebenfalls zu Müdigkeit und Appetitlosigkeit führen kann.
+
+**Beispielfragen:**  
+- „Können Ihre Symptome auch durch eine Schilddrüsenunterfunktion oder eine chronische Infektion erklärt werden?“  
+- „Wurden andere Ursachen bereits ausgeschlossen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Die Blutuntersuchungen deuten hauptsächlich auf einen Eisenmangel hin, andere Ursachen wurden bislang nicht bestätigt.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags auf Basis der anamnestischen und vegetativen Befunde.
+
+**Kriterien:**  
+- Deutlicher Gewichtsverlust, chronische Müdigkeit und Schwäche.  
+- Blasse Haut, Schwindel und verminderte Belastbarkeit.  
+- Blutbildbefunde, die auf einen Eisenmangel oder andere Mangelerscheinungen hindeuten.
+
+**Beispielfazit:**  
+- „Aufgrund der vorliegenden Symptome und der initialen Laborbefunde besteht der Verdacht auf eine Eisenmangelanämie, die weiter differenzialdiagnostisch abgeklärt werden muss.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung weiterer diagnostischer und therapeutischer Schritte zur Bestätigung der Diagnose und Planung der Behandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Laboruntersuchungen:**  
+- **Vollblutbild und Eisenstatus:** Bestimmung von Hämoglobin, Hämatokrit, Ferritin, Transferrinsättigung und anderen relevanten Parametern.  
+- **Weitere Blutwerte:** Vitamin B12, Folsäure, CRP, um weitere Ursachen auszuschließen.
+
+**Ernährungsanalyse:**  
+- Detaillierte Untersuchung der Ernährungsgewohnheiten und ggf. Beratung durch einen Ernährungsberater.
+
+**Therapeutische Interventionen:**  
+- **Medikamentöse Therapie:** Eisenpräparate, ggf. Vitamin-B12- oder Folsäureergänzungen.  
+- **Lebensstiländerung:** Optimierung der Ernährung und Reduktion von Risikofaktoren.  
+- **Follow-up:** Regelmäßige Kontrolle der Blutwerte zur Überwachung des Therapieerfolgs.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, sich einer umfassenden Blutuntersuchung zu unterziehen?“  
+- „Wären Sie offen für eine Ernährungsberatung, um Ihre Essgewohnheiten zu verbessern?“  
+- „Wie stehen Sie zu einer medikamentösen Therapie zur Verbesserung Ihrer Blutwerte?“
+    `
+  },
 }
+
 
 };
 export default FallSpecificData;

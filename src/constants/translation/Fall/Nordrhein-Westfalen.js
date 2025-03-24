@@ -8654,7 +8654,7 @@ const NORDRHEIN_DATA = [
     id: 984,
     examDate: "29.07.2024",
     fullName: "Burnout-Syndrom",
-    specialty: "OBRABOTYTY!",
+    specialty: "burnout_syndrome",
     name: "Rosa",
     surname: "Pilcher",
     birthdate: "15.07.1963",

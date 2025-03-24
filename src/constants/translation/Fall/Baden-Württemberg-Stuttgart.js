@@ -86,7 +86,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 233,
     "fullName": "V.a. Ulcus duodeni",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "ulcus_duodeni",
     "name": "Heiner",
     "surname": "Hermann",
     "birthdate": "",
@@ -2078,7 +2078,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 258,
     "fullName": "V.a. Anorexia nervosa",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "anorexia_neurosa",
     "name": "Lukas",
     "surname": "Steigern",
     "birthdate": "",
@@ -2742,7 +2742,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 266,
     "fullName": "V.a. Metabolisches Syndrom",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "metabolisches_syndrom",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -3240,7 +3240,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 272,
     "fullName": "V.a. Gastroduodenale Blutung",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "ulcus_duodeni",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -4734,7 +4734,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 291,
     "fullName": "V.a. Influenza",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "influenza",
     "name": "Susanne",
     "surname": "Kleinmeier",
     "birthdate": "",
@@ -5813,7 +5813,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 304,
     "fullName": "V.a. Schenkelhalsfraktur",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "schenkelhalsfraktur",
     "name": "Michael",
     "surname": "Neumeister",
     "birthdate": "",
@@ -5979,7 +5979,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 306,
     "fullName": "V.a. Schenkelhalsfraktur",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "schenkelhalsfraktur",
     "name": "",
     "surname": "",
     "birthdate": "",

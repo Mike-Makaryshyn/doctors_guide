@@ -1496,7 +1496,7 @@ const HESSEN_DATA = [
   {
     "id": 646,
     "fullName": "V.a. Rippenkontusion",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "rippenfeaktur_prellung",
     "name": "Carl",
     "surname": "Braus",
     "birthdate": "",

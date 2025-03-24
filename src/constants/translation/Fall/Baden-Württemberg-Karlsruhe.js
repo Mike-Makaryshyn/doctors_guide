@@ -2825,7 +2825,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 70,
     "fullName": "V.a. Depression mit Suizidgedanken",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "depression",
     "name": "Thomas",
     "surname": "Heidenreich",
     "birthdate": "",
@@ -4402,7 +4402,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 88,
     "fullName": "V.a. Anorexia nervosa",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "anorexia_neurosa",
     "name": "Julia",
     "surname": "Springer",
     "birthdate": "19.09.2003",
@@ -5232,7 +5232,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 98,
     "fullName": "V.a. Depression",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "depression",
     "name": "Karl",
     "surname": "Heidenreich",
     "birthdate": "",
@@ -5647,7 +5647,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 103,
     "fullName": "V.a. Depression",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "depression",
     "name": "Theo",
     "surname": "Heidenreich",
     "birthdate": "",
@@ -5979,7 +5979,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 107,
     "fullName": "V.a. Depression",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "depression",
     "name": "X",
     "surname": "",
     "birthdate": "",

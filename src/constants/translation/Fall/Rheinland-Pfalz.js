@@ -1515,7 +1515,7 @@ const RHEINLAND_DATA = [
     "id": 1019,
     "examDate": "",
     "fullName": "V.a. Mammakarzinom",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "mamakarzinom",
     "name": "Sylvia",
     "surname": "Franz",
     "birthdate": "07.07.1973",
