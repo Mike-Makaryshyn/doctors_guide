@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { main_menu_items } from "../../constants/translation/main_menu";
 import Avatar from "../../components/Avatar/Avatar";
 import styles from "./SideMenu.module.scss";
@@ -12,9 +12,22 @@ function SideMenu({ language, isOpen, onClose }) {
   const [user] = useAuthState(auth);
   const location = useLocation();
 
-  const sortedSections = [...main_menu_items.sections].sort(
-    (a, b) => a.order - b.order
-  );
+  const sortedSections = React.useMemo(() => {
+    return [...main_menu_items.sections].sort((a, b) => a.order - b.order);
+  }, []);
+
+  // При зміні маршруту, відкриваємо категорію, якщо в ній є активний лінк
+  useEffect(() => {
+    setOpenSections((prev) => {
+      const newOpen = { ...prev };
+      sortedSections.forEach((section, index) => {
+        if (section.items.some((item) => item.link === location.pathname)) {
+          newOpen[index] = true;
+        }
+      });
+      return newOpen;
+    });
+  }, [location.pathname, sortedSections]);
 
   if (!isOpen) return null;
 
@@ -50,6 +63,9 @@ function SideMenu({ language, isOpen, onClose }) {
             <Link to="/dashboard" style={{ textDecoration: "none" }}>
               <Avatar stageId={1} />
             </Link>
+            {user && user.displayName && (
+              <span className={styles.userName}>{user.displayName}</span>
+            )}
           </div>
           {sortedSections.map((section, sectionIndex) => {
             const isSectionOpen = !!openSections[sectionIndex];

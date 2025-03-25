@@ -1,6 +1,4 @@
-/* SideMenu.module.scss */
-
-/* Оверлей (півпрозорий фон), який покриває весь екран */
+/* Оверлей */
 .overlay {
   position: fixed;
   top: 0;
@@ -14,11 +12,11 @@
   align-items: stretch;
 }
 
-/* Контейнер меню, що виїжджає зліва */
+/* Основний контейнер меню */
 .sideMenu {
   width: 280px;
   height: 100%;
-  background-color: #ffffff; /* білий фон */
+  background-color: #ffffff;
   color: #023c6f;
   transform: translateX(-100%);
   animation: slideIn 0.4s forwards ease;
@@ -38,6 +36,20 @@
 /* Вміст меню */
 .sideMenuContent {
   padding: 20px;
+}
+
+/* Блок аватара з ім'ям */
+.avatarBlock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.userName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #023c6f;
 }
 
 /* Акордеон */
@@ -87,12 +99,8 @@
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 .menuLink {
@@ -109,13 +117,13 @@
   background-color: rgba(2, 59, 110, 0.1);
 }
 
-/* Стиль для активного посилання (вказує, що це поточна сторінка) */
+/* Активне посилання */
 .activeLink {
   background-color: rgba(2, 59, 110, 0.2);
   font-weight: bold;
 }
 
-/* Блок для авторизації */
+/* Блок авторизації */
 .authBlock {
   margin-top: 20px;
   display: flex;
@@ -137,12 +145,4 @@
 
 .authButton:hover {
   background-color: #03528c;
-}
-
-/* Приклад для блоку аватара */
-.avatarBlock {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
