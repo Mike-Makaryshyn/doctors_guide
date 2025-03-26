@@ -407,7 +407,7 @@ export const parentTabs = [
       // 4tab id14
       {
         id: 14,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -1076,7 +1076,7 @@ export const parentTabs = [
       // 4tab 22
       {
         id: 22,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -1741,7 +1741,7 @@ export const parentTabs = [
       // 4tab 30
       {
         id: 30,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -2400,7 +2400,7 @@ export const parentTabs = [
       // 4tab 38
       {
         id: 38,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -3119,7 +3119,7 @@ export const parentTabs = [
       // 4tab 46
       {
         id: 46,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -3755,7 +3755,7 @@ export const parentTabs = [
       // 4tab 54
       {
         id: 54,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -4406,7 +4406,7 @@ export const parentTabs = [
       // 4tab 62
       {
         id: 62,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -5111,7 +5111,7 @@ export const parentTabs = [
       // 4tab 70
       {
         id: 70,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -5778,7 +5778,7 @@ export const parentTabs = [
       // 4tab 78
       {
         id: 78,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -6428,7 +6428,7 @@ export const parentTabs = [
       // 4tab 90
       {
         id: 90,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -7105,7 +7105,7 @@ export const parentTabs = [
       // 4tab 98
       {
         id: 98,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -7781,7 +7781,7 @@ export const parentTabs = [
       // 4tab 106
       {
         id: 106,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -8415,7 +8415,7 @@ export const parentTabs = [
       // 4tab 114
       {
         id: 114,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -9093,7 +9093,7 @@ export const parentTabs = [
       // 4tab 122
       {
         id: 122,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -9801,7 +9801,7 @@ export const parentTabs = [
       // 4tab 130
       {
         id: 130,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -10449,7 +10449,7 @@ export const parentTabs = [
       // 4tab 138
       {
         id: 138,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -11146,7 +11146,7 @@ export const parentTabs = [
       // 4ta
       {
         id: 146,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -11870,7 +11870,7 @@ export const parentTabs = [
       // 4tab 154
       {
         id: 154,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -12539,7 +12539,7 @@ export const parentTabs = [
       // 4tab 162
       {
         id: 162,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -13216,7 +13216,7 @@ export const parentTabs = [
       // 4tab 170
       {
         id: 170,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -13853,7 +13853,7 @@ export const parentTabs = [
       // 4tab 178
       {
         id: 178,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -14499,7 +14499,7 @@ export const parentTabs = [
       // 4tab 186
       {
         id: 186,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -15184,7 +15184,7 @@ export const parentTabs = [
       // 4tab 194
       {
         id: 194,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -15995,7 +15995,7 @@ export const parentTabs = [
       // 4tab 202
       {
         id: 202,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -16728,7 +16728,7 @@ export const parentTabs = [
       // 4tab 210
       {
         id: 210,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -17406,7 +17406,7 @@ export const parentTabs = [
       // 4tab 218
       {
         id: 218,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -18144,7 +18144,7 @@ export const parentTabs = [
       // 4tab 226
       {
         id: 226,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -18916,7 +18916,7 @@ export const parentTabs = [
       // 4tab 234
       {
         id: 234,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -19576,7 +19576,7 @@ export const parentTabs = [
       // 4tab 242
       {
         id: 242,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -20281,7 +20281,7 @@ export const parentTabs = [
       // 4tab 250
       {
         id: 250,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -20921,7 +20921,7 @@ export const parentTabs = [
       // 4tab 258
       {
         id: 258,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -21560,7 +21560,7 @@ export const parentTabs = [
       // 4tab 266
       {
         id: 266,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -22222,7 +22222,7 @@ export const parentTabs = [
       // 4tab 274
       {
         id: 274,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -22918,7 +22918,7 @@ export const parentTabs = [
       // 4tab 282
       {
         id: 282,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -23611,7 +23611,7 @@ export const parentTabs = [
       // 4tab 290
       {
         id: 290,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -24280,7 +24280,7 @@ export const parentTabs = [
       // 4tab 298
       {
         id: 298,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -25066,7 +25066,7 @@ export const parentTabs = [
       // 4tab 306
       {
         id: 306,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -25729,7 +25729,7 @@ export const parentTabs = [
       // 4tab 314
       {
         id: 314,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -26360,7 +26360,7 @@ export const parentTabs = [
       // 4tab 322
       {
         id: 322,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -27011,7 +27011,7 @@ export const parentTabs = [
       // 4tab 330
       {
         id: 330,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -27656,7 +27656,7 @@ export const parentTabs = [
       // 4tab 338
       {
         id: 338,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -28289,7 +28289,7 @@ export const parentTabs = [
       // 4tab 346
       {
         id: 346,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -28945,7 +28945,7 @@ export const parentTabs = [
       // 4tab 354
       {
         id: 354,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -29608,7 +29608,7 @@ export const parentTabs = [
       // 4tab 362
       {
         id: 362,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -30279,7 +30279,7 @@ export const parentTabs = [
       // 4tab 370
       {
         id: 370,
-        title: "Die pathologische Befunden und Normalbefund",
+        title: "Beispielbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
