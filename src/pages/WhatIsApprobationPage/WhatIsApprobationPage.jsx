@@ -59,12 +59,7 @@ const WhatIsApprobationPage = () => {
       <div className={cn("page", "page1", "containerBigger", "mt-20")}>
         <div className="firstPageImageBlock"></div>
         <div className={cn("main_menu__content", styles.what_is_approbation__content)}>
-          <button
-            className="main_menu_back"
-            onClick={() => handleChangePage("/main_menu")}
-          >
-            &#8592;
-          </button>
+      
 
           {/* Заголовок та вступ */}
           <section>

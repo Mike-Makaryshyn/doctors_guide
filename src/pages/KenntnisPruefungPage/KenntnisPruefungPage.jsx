@@ -58,9 +58,7 @@ const KenntnisPruefungPage = () => {
       <div className="page containerBigger mt-20">
         <div className="firstPageImageBlock"></div>
         <div className={cn("main_menu__content", styles.knowledge_examination_content)}>
-          <button className="main_menu_back" onClick={() => handleChangePage("/main_menu")}>
-            &#8592;
-          </button>
+ 
 
           {/* Title & Intro */}
           <section>

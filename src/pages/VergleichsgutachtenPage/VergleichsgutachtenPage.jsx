@@ -55,9 +55,7 @@ const VergleichsgutachtenPage = () => {
       <div className="page containerBigger mt-20">
         <div className="firstPageImageBlock"></div>
         <div className={cn("main_menu__content", styles.verglichsgutachten_content)}>
-          <button className="main_menu_back" onClick={() => handleChangePage("/main_menu")}>
-            &#8592;
-          </button>
+   
           
           {/* Заголовок, вступ та визначення */}
           <section>

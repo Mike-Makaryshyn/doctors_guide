@@ -55,9 +55,7 @@ const GleichwertigkeitPage = () => {
       <div className="page containerBigger mt-20">
         <div className="firstPageImageBlock"></div>
         <div className={cn("main_menu__content", styles.gleichwertigkeit_content)}>
-          <button className="main_menu_back" onClick={() => handleChangePage("/main_menu")}>
-            &#8592;
-          </button>
+    
 
           <section>
             <h1>{content.title || "Title not available"}</h1>

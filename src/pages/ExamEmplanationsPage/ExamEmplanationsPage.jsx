@@ -1,38 +1,53 @@
 import { useState, useEffect, useRef } from "react";
 import StaticTable from "../../components/StaticTable/StaticTable";
-import Checkbox from "../../components/Checkbox/Checkbox";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { exam_categories, parentTabs } from "../../constants/exam_explanations";
 import styles from "./styles.module.scss";
-import { localStorageGet, localStorageSet } from "../../utils/localStorage";
+import { localStorageGet } from "../../utils/localStorage";
 import cn from "classnames";
+
+// Приклад реалізації handleChangePage – замініть на вашу логіку роутингу
+const handleChangePage = (path) => {
+   window.location.href = path;
+};
 
 const ExamExplanationsPage = () => {
    const [parentTabOpen, setParentTabOpen] = useState(null);
    const [childTabOpen, setChildTabOpen] = useState(null);
-   const [checkedParentIds, setCheckedParentIds] = useState([]);
+   const [checkedParentIds, setCheckedParentIds] = useState([]); // Стан більше не використовується
    const [congrats, setCongrats] = useState(false);
    const activeTabRef = useRef(null);
 
-   const clickActiveParentTab = (e, tab, index) => {
-      e.stopPropagation();
+   // Відстеження мобільного режиму
+   const [isMobile, setIsMobile] = useState(false);
 
+   useEffect(() => {
+      const handleResize = () => {
+         setIsMobile(window.innerWidth < 768);
+      };
+      handleResize();
+      window.addEventListener("resize", handleResize);
+      return () => {
+         window.removeEventListener("resize", handleResize);
+      };
+   }, []);
+
+   const clickActiveParentTab = (e, tab) => {
+      e.stopPropagation();
       if (parentTabOpen?.id === tab?.id) {
          setParentTabOpen(null);
          setChildTabOpen(null);
       } else {
          setParentTabOpen(tab);
          setChildTabOpen(tab?.childTabs?.[0]);
-
          if (activeTabRef.current) {
             activeTabRef.current.scrollIntoView({
                behavior: "smooth",
                block: "start",
             });
-
             setTimeout(() => {
                const rect = activeTabRef.current.getBoundingClientRect();
-               const offset = 80; // Offset value
+               const offset = 80; // Відступ
                window.scrollBy({
                   top: rect.top - offset,
                   behavior: "smooth",
@@ -42,55 +57,12 @@ const ExamExplanationsPage = () => {
       }
    };
 
-   const renderTextWithLinks = (text) => {
-      // Helper function to process a single string
-      const processText = (textString) => {
-        const urlRegex = /(https?:\/\/[^\s]+)/g;
-        const parts = textString.split(urlRegex);
-    
-        return parts.map((part, index) => {
-          if (part.match(urlRegex)) {
-            return (
-              <a
-                className="link"
-                key={index}
-                href={part}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {part}
-              </a>
-            );
-          } else {
-            return <span key={index}>{part}</span>;
-          }
-        });
-      };
-    
-      if (Array.isArray(text)) {
-        return text.map((item, itemIndex) => (
-          <p key={itemIndex}>
-            {processText(item)}
-            {itemIndex < text.length - 1 && ' '}
-          </p>
-        ));
-      }
-    
-      if (typeof text === 'string') {
-        return processText(text);
-      }
-    
-      return null;
-    };
-
    const clickActiveChildTab = (e, tab) => {
       e.stopPropagation();
-
       if (tab?.link) {
          window.open(tab?.link, "_blank");
          return;
       }
-
       if (childTabOpen?.id === tab?.id) {
          setChildTabOpen(null);
       } else {
@@ -98,30 +70,7 @@ const ExamExplanationsPage = () => {
       }
    };
 
-   const handleCheckboxChange = (parentId) => {
-      setCheckedParentIds((prevCheckedParentIds) => {
-         if (prevCheckedParentIds.includes(parentId)) {
-            const updatedCheckedParentIds = prevCheckedParentIds.filter(
-               (id) => id !== parentId
-            );
-            localStorageSet(
-               "checkedParentTabIds",
-               JSON.stringify(updatedCheckedParentIds)
-            );
-            return updatedCheckedParentIds;
-         } else {
-            setCongrats(true);
-            const updatedCheckedParentIds = [...prevCheckedParentIds, parentId];
-            localStorageSet(
-               "checkedParentTabIds",
-               JSON.stringify(updatedCheckedParentIds)
-            );
-            return updatedCheckedParentIds;
-         }
-      });
-   };
-
-   // Initialize state from localStorage
+   // Ініціалізація даних з localStorage (якщо потрібна)
    useEffect(() => {
       const parentCheckedIds = localStorageGet("checkedParentTabIds");
       if (parentCheckedIds) {
@@ -129,35 +78,73 @@ const ExamExplanationsPage = () => {
       }
    }, []);
 
-   const renderChildTabContent = (childTab, childIdx) => {
-      if (childIdx === 0) {
-         return childTab?.list?.map((tab, idx) => (
-            <li className={styles.childTabContent} key={`${tab?.title}${idx}`}>
-               <div className={styles.option_title}>
-                  {idx + 1}. {tab.title}
-               </div>
+   // -----------------------------
+   // Мобільна реалізація “карткової” таблиці
+   // -----------------------------
+   const [mobileTableIndex, setMobileTableIndex] = useState(0);
 
+   const nextRow = (rowsLength) => {
+      setMobileTableIndex((prev) => (prev + 1 < rowsLength ? prev + 1 : 0));
+   };
+
+   const prevRow = (rowsLength) => {
+      setMobileTableIndex((prev) => (prev - 1 >= 0 ? prev - 1 : rowsLength - 1));
+   };
+
+   const renderTextWithLinks = (text) => {
+      if (!text) return null;
+      const processText = (txt) => {
+         const urlRegex = /(https?:\/\/[^\s]+)/g;
+         const parts = txt.split(urlRegex);
+         return parts.map((part, i) =>
+            part.match(urlRegex) ? (
+               <a
+                  className="link"
+                  key={i}
+                  href={part}
+                  target="_blank"
+                  rel="noopener noreferrer"
+               >
+                  {part}
+               </a>
+            ) : (
+               <span key={i}>{part}</span>
+            )
+         );
+      };
+      if (Array.isArray(text)) {
+         return text.map((item, idx) => <p key={idx}>{processText(item)}</p>);
+      } else if (typeof text === "string") {
+         return processText(text);
+      }
+      return null;
+   };
+
+   // Функція для рендерингу контенту дочірніх табів
+   const renderChildTabContent = (childTab, childIdx) => {
+      // childIdx === 0: простий список
+      if (childIdx === 0) {
+         return childTab?.list?.map((tabItem, idx) => (
+            <li className={styles.childTabContent} key={`${tabItem?.title}${idx}`}>
+               <div className={styles.option_title}>
+                  {idx + 1}. {tabItem.title}
+               </div>
                <ul>
-                  {tab?.items?.map((item, iidx) => (
-                     <li
-                        key={`${iidx}${item?.text}`}
-                        className={styles.options}
-                     >
-                        {item?.bold_link && (
+                  {tabItem?.items?.map((item, iidx) => (
+                     <li key={`${iidx}${item?.text}`} className={styles.options}>
+                        {item?.bold_link ? (
                            <a
-                              href={bold_link}
+                              href={item?.bold_link}
                               target="_blank"
+                              rel="noreferrer"
                               className={styles.bold}
                            >
                               {item?.bold_text}
                            </a>
+                        ) : (
+                           <span className={styles.bold}>{item?.bold_text}</span>
                         )}
-                        {!item?.bold_link && (
-                           <span className={styles.bold}>
-                              {item?.bold_text}
-                           </span>
-                        )}
-                        {!!item?.text?.length && (
+                        {item?.text?.length && (
                            <span>{renderTextWithLinks(item?.text)}</span>
                         )}
                      </li>
@@ -167,53 +154,87 @@ const ExamExplanationsPage = () => {
          ));
       }
 
-      if (childIdx === 1 || childIdx === 2 || childIdx === 3) {
-         return (
-            <div className={styles.table_wrapper}>
-               <StaticTable
-                  title={"test"}
-                  columns={childTab?.tableColumns}
-                  data={childTab?.tableRows}
-                  renderTextWithLinks={renderTextWithLinks}
-               />
-            </div>
-         );
+      // childIdx === 1,2,3: таблиці; десктоп – стандартна таблиця, мобільний – "картка" з даними з усіх колонок
+      if ([1, 2, 3].includes(childIdx)) {
+         const rows = childTab?.tableRows || [];
+         const columns = childTab?.tableColumns || [];
+
+         if (!rows.length) {
+            return <p>Тут немає даних для відображення.</p>;
+         }
+
+         if (!isMobile) {
+            // Десктоп – стандартна таблиця
+            return (
+               <div className={styles.table_wrapper}>
+                  <StaticTable
+                     title={childTab?.title || "Таблиця"}
+                     columns={columns}
+                     data={rows}
+                     renderTextWithLinks={renderTextWithLinks}
+                  />
+               </div>
+            );
+         } else {
+            // Мобільний режим – відображення "картки" для поточного рядка
+            const currentRow = rows[mobileTableIndex] || {};
+            return (
+               <div className={styles.mobileTable}>
+                  <h3>{childTab?.title}</h3>
+                  <div className={styles.mobileTableCard}>
+                     {columns.map((col, idx) => (
+                        <div key={idx} className={styles.cardItem}>
+                           {col.visualText && (
+                              <div className={styles.cardLabel}>
+                                 {renderTextWithLinks(col.visualText)}
+                              </div>
+                           )}
+                           <div className={styles.cardValue}>
+                              {renderTextWithLinks(currentRow[col.name] || "")}
+                           </div>
+                        </div>
+                     ))}
+                  </div>
+                  <div className={styles.arrows}>
+                     <button onClick={() => prevRow(rows.length)}>←</button>
+                     <span>
+                        {mobileTableIndex + 1}/{rows.length}
+                     </span>
+                     <button onClick={() => nextRow(rows.length)}>→</button>
+                  </div>
+               </div>
+            );
+         }
       }
 
+      // childIdx === 4: відображення лише тексту (без зображень)
       if (childIdx === 4) {
          return (
             <div className={styles.tabFive}>
                <div className={styles.tabFiveTop}>
-                  <div className={styles.images}>
-                     {childTab?.img && <img src={childTab?.img} alt="Schema" />}
-                     {childTab?.second_img && <img src={childTab?.img} alt="Schema" />}
-                  </div>
                   <div className={styles.text_top}>
-                     {!!childTab?.text?.length && (
+                     {childTab?.text?.length && (
                         <p className={styles.text}>
                            {renderTextWithLinks(childTab?.text)}
                         </p>
                      )}
-
                      <div className={styles.text_left}>
                         {childTab?.text_list?.map((item, idx) => (
-                           <p
-                              className={styles.bottom_item}
-                              key={`childTab${idx}`}
-                           >
+                           <p className={styles.bottom_item} key={`childTab${idx}`}>
                               <strong>
                                  {idx + 1}.
-                                 {item?.bold_link && (
+                                 {item?.bold_link ? (
                                     <a
-                                       className={"link"}
-                                       target={"_blank"}
+                                       className="link"
+                                       target="_blank"
+                                       rel="noreferrer"
                                        href={item?.bold_link}
                                     >
                                        {item?.bold}
                                     </a>
+                                 ) : (
+                                    renderTextWithLinks(item?.bold)
                                  )}
-                                 {!item?.bold_link &&
-                                    renderTextWithLinks(item?.bold)}
                               </strong>
                               {renderTextWithLinks(item?.other)}
                            </p>
@@ -225,34 +246,34 @@ const ExamExplanationsPage = () => {
          );
       }
 
+      // childIdx === 5,6: просто текст без зображень
       if (childIdx === 5 || childIdx === 6) {
          return (
             <div className={styles.tabFive}>
                <div className={styles.tabFiveTop}>
-                  {childTab?.img && <img src={childTab?.img} alt="Schema" />}
                   <div className={styles.text_top}>
-                     {!!childTab?.text?.length && (
+                     {childTab?.text?.length && (
                         <p className={styles.text}>
                            {renderTextWithLinks(childTab?.text)}
                         </p>
                      )}
-
                      <div className={styles.text_left}>
                         {childTab?.text_list?.map((item, idx) => (
                            <p className={styles.bottom_item} key={`ctab${idx}`}>
                               <strong>
                                  {idx + 1}.
-                                 {item?.bold_link && (
+                                 {item?.bold_link ? (
                                     <a
-                                       className={"link"}
-                                       target={"_blank"}
+                                       className="link"
+                                       target="_blank"
+                                       rel="noreferrer"
                                        href={item?.bold_link}
                                     >
                                        {item?.bold}
                                     </a>
+                                 ) : (
+                                    renderTextWithLinks(item?.bold)
                                  )}
-                                 {!item?.bold_link &&
-                                    renderTextWithLinks(item?.bold)}
                               </strong>
                               {renderTextWithLinks(item?.other)}
                            </p>
@@ -264,94 +285,100 @@ const ExamExplanationsPage = () => {
          );
       }
 
-      return null; // Handle other cases if needed
+      return null;
    };
 
    return (
       <MainLayout>
          <div className="page page1 containerBigger containerMax mt-20">
             <div className="firstPageImageBlock"></div>
-            <div className={"main_menu__content"}>
+            <div className="main_menu__content">
                <div className={styles.parentTabsWrapper}>
-               {parentTabs.map((parentTab, index) => {
-   
-            const category = exam_categories?.find(cat => cat?.show_before_id === parentTab.id);
-
-            return (
-               <div key={parentTab?.id}>
-                  {category && (
-                     <div className={styles.categoryTitle}>
-                        {category.title}
-                     </div>
-                  )}
-
-                  <div
-                     onClick={(e) => clickActiveParentTab(e, parentTab, index)}
-                     className={styles.parentTabItem}
-                     ref={parentTabOpen?.id === parentTab?.id ? activeTabRef : null}
-                  >
-                     <div className={cn(styles.pTab, "noselect")}>
-                        <div className={styles.pTitle}>
-                           {parentTab?.title}
-                        </div>
-                        <Checkbox
-                           label={"Gelernt"}
-                           value={checkedParentIds.includes(parentTab?.id)}
-                           onChange={() => handleCheckboxChange(parentTab?.id)}
-                           labelRight
-                        />
-                     </div>
-                     <div
-                        className={cn(
-                           styles.childTabsWrapper,
-                           parentTabOpen?.id === parentTab?.id ? styles.showChildTab : ""
-                        )}
-                     >
-                        <div
-                           onClick={(e) => e.stopPropagation()}
-                           className={styles.childTabs}
-                        >
-                           {parentTab?.childTabs?.map((childTab, childIdx) => (
-                              <div
-                                 className={cn(
-                                    styles.child_tab,
-                                    childTabOpen?.id === childTab?.id ? styles.active_child_tab : "",
-                                    childTab?.link ? styles.lessWidth : "",
-                                    "noselect"
-                                 )}
-                                 onClick={(e) => clickActiveChildTab(e, childTab)}
-                                 key={childTab?.id}
-                              >
-                                 {childTab?.title}
+                  {parentTabs.map((parentTab) => {
+                     const category = exam_categories?.find(
+                        (cat) => cat?.show_before_id === parentTab.id
+                     );
+                     return (
+                        <div key={parentTab?.id}>
+                           {category && (
+                              <div className={styles.categoryTitle}>
+                                 {category.title}
                               </div>
-                           ))}
-                        </div>
-
-                        {parentTab?.childTabs?.map((childTab, childIdx) => (
+                           )}
                            <div
-                              onClick={(e) => clickActiveChildTab(e, childTab)}
-                              key={`child${childIdx}`}
+                              onClick={(e) => clickActiveParentTab(e, parentTab)}
+                              className={styles.parentTabItem}
+                              ref={
+                                 parentTabOpen?.id === parentTab?.id
+                                    ? activeTabRef
+                                    : null
+                              }
                            >
+                              <div className={cn(styles.pTab, "noselect")}>
+                                 <div className={styles.pTitle}>
+                                    {parentTab?.title}
+                                 </div>
+                              </div>
                               <div
-                                 onClick={(e) => e.stopPropagation()}
                                  className={cn(
-                                    styles.childTabContentWrapper,
-                                    childTabOpen?.id === childTab?.id ? styles.showChildTab : ""
+                                    styles.childTabsWrapper,
+                                    parentTabOpen?.id === parentTab?.id
+                                       ? styles.showChildTab
+                                       : ""
                                  )}
                               >
-                                 {renderChildTabContent(childTab, childIdx)}
+                                 <div
+                                    onClick={(e) => e.stopPropagation()}
+                                    className={styles.childTabs}
+                                 >
+                                    {parentTab?.childTabs?.map((childTab) => (
+                                       <div
+                                          className={cn(
+                                             styles.child_tab,
+                                             childTabOpen?.id === childTab?.id
+                                                ? styles.active_child_tab
+                                                : "",
+                                             childTab?.link
+                                                ? styles.lessWidth
+                                                : "",
+                                             "noselect"
+                                          )}
+                                          onClick={(e) =>
+                                             clickActiveChildTab(e, childTab)
+                                          }
+                                          key={childTab?.id}
+                                       >
+                                          {childTab?.title}
+                                       </div>
+                                    ))}
+                                 </div>
+                                 {parentTab?.childTabs?.map((childTab, childIdx) => (
+                                    <div
+                                       onClick={(e) => clickActiveChildTab(e, childTab)}
+                                       key={`child${childIdx}`}
+                                    >
+                                       <div
+                                          onClick={(e) => e.stopPropagation()}
+                                          className={cn(
+                                             styles.childTabContentWrapper,
+                                             childTabOpen?.id === childTab?.id
+                                                ? styles.showChildTab
+                                                : ""
+                                          )}
+                                       >
+                                          {renderChildTabContent(childTab, childIdx)}
+                                       </div>
+                                    </div>
+                                 ))}
                               </div>
                            </div>
-                        ))}
-                     </div>
-                  </div>
-               </div>
-            );
-         })}
+                        </div>
+                     );
+                  })}
                </div>
             </div>
             <button
-               className={"main_menu_back"}
+               className="main_menu_back"
                onClick={() => handleChangePage("/main_menu")}
             >
                &#8592;
