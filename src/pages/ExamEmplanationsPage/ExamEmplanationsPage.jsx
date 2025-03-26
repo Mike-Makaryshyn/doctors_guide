@@ -154,7 +154,7 @@ const ExamExplanationsPage = () => {
          ));
       }
 
-      // childIdx === 1,2,3: таблиці; десктоп – стандартна таблиця, мобільний – "картка" з даними з усіх колонок
+      // childIdx === 1,2,3: таблиці; десктоп – стандартна таблиця, мобільний – "картка"
       if ([1, 2, 3].includes(childIdx)) {
          const rows = childTab?.tableRows || [];
          const columns = childTab?.tableColumns || [];
@@ -166,7 +166,7 @@ const ExamExplanationsPage = () => {
          if (!isMobile) {
             // Десктоп – стандартна таблиця
             return (
-               <div className={styles.table_wrapper}>
+               <div className={cn(styles.table_wrapper, styles.examTable)}>
                   <StaticTable
                      title={childTab?.title || "Таблиця"}
                      columns={columns}
@@ -182,18 +182,18 @@ const ExamExplanationsPage = () => {
                <div className={styles.mobileTable}>
                   <h3>{childTab?.title}</h3>
                   <div className={styles.mobileTableCard}>
-                     {columns.map((col, idx) => (
-                        <div key={idx} className={styles.cardItem}>
-                           {col.visualText && (
-                              <div className={styles.cardLabel}>
-                                 {renderTextWithLinks(col.visualText)}
-                              </div>
-                           )}
-                           <div className={styles.cardValue}>
-                              {renderTextWithLinks(currentRow[col.name] || "")}
-                           </div>
-                        </div>
-                     ))}
+                  {columns.map((col, idx) => (
+  <div key={idx} className={styles.cardPair}>
+    {col.visualText && (
+      <div className={styles.headerBlock}>
+        {renderTextWithLinks(col.visualText)}
+      </div>
+    )}
+    <div className={styles.textBlock}>
+      {renderTextWithLinks(currentRow[col.name] || "")}
+    </div>
+  </div>
+))}
                   </div>
                   <div className={styles.arrows}>
                      <button onClick={() => prevRow(rows.length)}>←</button>
