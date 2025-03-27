@@ -192,7 +192,9 @@ const TranslatorListPage = () => {
                 onChange={handleLanguageChange}
                 className={styles.modalSelect}
               >
-                {localLangOptions.map((opt) => (
+              {localLangOptions
+                .filter((opt) => opt.value !== "de")
+                .map((opt) => (
                   <option key={opt.value} value={opt.value}>
                     {opt.label}
                   </option>

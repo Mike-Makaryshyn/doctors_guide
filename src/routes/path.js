@@ -26,6 +26,9 @@ export const pathList = {
   what_is_fsp: {
     path: "/what-is-fsp",
   },
+  social_media: {
+    path: "/social-media",
+  },
   calendar: {
     path: "/calendar",
   },

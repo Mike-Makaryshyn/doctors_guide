@@ -20,6 +20,9 @@ const MainMenuPage = React.lazy(() =>
 const DocumentsPage = React.lazy(() =>
   import("../pages/DocumentsPage/DocumentsPage")
 );
+const SocialMediaListPage = React.lazy(() =>
+  import("../pages/SocialMediaListPage/SocialMediaListPage")
+);
 const WhatIsFSPPage = React.lazy(() =>
   import("../pages/WhatIsFSPPage/WhatIsFSPPage")
 );
@@ -259,6 +262,7 @@ export default function Routers() {
           path="/medications-learning"
           element={<MedicationsLearningPage />}
         />
+        <Route path={pathList.social_media.path} element={<SocialMediaListPage />} />
         <Route path={pathList.custom_map.path} element={<CustomGermanyMap />} />
         <Route path="/fill-in-blank-game" element={<FillInBlankGame />} />
         <Route path={pathList.lands.path} element={<GermanyLandsPage />} />
