@@ -64,9 +64,7 @@ const Header = () => {
     <>
       <header className={cn(styles.header, "flexBt")}>
         <div className={styles.leftSection}>
-          <span className={styles.languageLabel}>
-            {languages[selectedLanguage].language}
-          </span>
+      
           <select
             className={styles.langSelect}
             value={selectedLanguage}
@@ -81,7 +79,6 @@ const Header = () => {
             ))}
           </select>
         </div>
-
         <div
           className={styles.centerSection}
           onClick={() => navigate("/main_menu")}

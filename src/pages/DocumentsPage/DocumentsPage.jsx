@@ -519,6 +519,7 @@ const DocumentsPage = () => {
               <ProgressBarWithTooltip
                 progress={displayedProgress} // Використовуйте displayedProgress
                 getMessage={getMessage}
+                
               />
 
               <div ref={combinedRef}>

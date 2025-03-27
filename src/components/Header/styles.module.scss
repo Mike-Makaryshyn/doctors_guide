@@ -62,7 +62,7 @@
   padding: 10px;
   border-radius: 24px; /* округлий контейнер */
   background: #2a7c6f;
-  margin-top: 0;
+  margin-top: 8px;
   border: none;
   color: white;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
@@ -167,11 +167,20 @@ select::-ms-expand {
 .burgerButton {
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 30px;
   cursor: pointer;
   color: white;
   padding: 0;
-  margin-right: 10px; // невеликий відступ між бургером і логотипом
+  margin-right: 0px;
+  transition: transform 0.2s ease; // плавна анімація збільшення
+}
+
+.burgerButton:hover {
+  // Прибираємо зелене тло та зміну кольору
+  background: none; 
+  color: white;
+  border: none;
+  transform: scale(1.1); // Робимо іконку більшою
 }
 
 .leftSection {

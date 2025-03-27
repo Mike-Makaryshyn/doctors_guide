@@ -56,7 +56,7 @@ const Dashboard = () => {
   </div>
 )}
             <div className={styles.tile}>
-              <ProgressBar progress={progress} />
+            <ProgressBar stagesProgress={[progress]} />
             </div>
             <SavedCasesWidget className={styles.tile}/>
             {activeStage && (
