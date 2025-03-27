@@ -6,7 +6,6 @@ import styles from "./styles.module.scss";
 import { localStorageGet } from "../../utils/localStorage";
 import cn from "classnames";
 
-// Приклад реалізації handleChangePage – замініть на вашу логіку роутингу
 const handleChangePage = (path) => {
   window.location.href = path;
 };
@@ -14,11 +13,10 @@ const handleChangePage = (path) => {
 const ExamExplanationsPage = () => {
   const [parentTabOpen, setParentTabOpen] = useState(null);
   const [childTabOpen, setChildTabOpen] = useState(null);
-  const [checkedParentIds, setCheckedParentIds] = useState([]); // Стан більше не використовується
+  const [checkedParentIds, setCheckedParentIds] = useState([]);
   const [congrats, setCongrats] = useState(false);
   const activeTabRef = useRef(null);
 
-  // Відстежуємо, мобільний розмір екрану чи ні
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -70,7 +68,6 @@ const ExamExplanationsPage = () => {
     }
   };
 
-  // Ініціалізація даних з localStorage
   useEffect(() => {
     const parentCheckedIds = localStorageGet("checkedParentTabIds");
     if (parentCheckedIds) {
@@ -78,7 +75,6 @@ const ExamExplanationsPage = () => {
     }
   }, []);
 
-  // Мобільна реалізація “карткової” таблиці
   const [mobileTableIndex, setMobileTableIndex] = useState(0);
 
   const nextRow = (rowsLength) => {
@@ -119,9 +115,7 @@ const ExamExplanationsPage = () => {
     return null;
   };
 
-  // Основна функція для рендерингу дочірніх табів
   const renderChildTabContent = (childTab, childIdx) => {
-    // childIdx === 0: простий список
     if (childIdx === 0) {
       return childTab?.list?.map((tabItem, idx) => (
         <li className={styles.childTabContent} key={`${tabItem?.title}${idx}`}>
@@ -153,7 +147,6 @@ const ExamExplanationsPage = () => {
       ));
     }
 
-    // childIdx === 1,2,3: таблиці (десктоп) або картки (мобільний)
     if ([1, 2, 3].includes(childIdx)) {
       const rows = childTab?.tableRows || [];
       const columns = childTab?.tableColumns || [];
@@ -175,7 +168,6 @@ const ExamExplanationsPage = () => {
           </div>
         );
       } else {
-        // Мобільний
         const currentRow = rows[mobileTableIndex] || {};
         return (
           <div className={styles.mobileTable}>
@@ -190,18 +182,27 @@ const ExamExplanationsPage = () => {
 
               <div className={styles.mobileTableCard}>
                 {/* Вміст картки */}
-                {columns.map((col, idx) => (
-                  <div key={idx} className={styles.cardPair}>
-                    {col.visualText && (
-                      <div className={styles.headerBlock}>
-                        {renderTextWithLinks(col.visualText)}
+                {columns.map((col, idx) => {
+                  const isFirstColumn = col.name === "first";
+                  return (
+                    <div key={idx} className={styles.cardPair}>
+                      {col.visualText && (
+                        <div className={styles.headerBlock}>
+                          {renderTextWithLinks(col.visualText)}
+                        </div>
+                      )}
+                      <div
+                        className={
+                          isFirstColumn
+                            ? `${styles.textBlock} ${styles.textBlockFirst}`
+                            : styles.textBlock
+                        }
+                      >
+                        {renderTextWithLinks(currentRow[col.name] || "")}
                       </div>
-                    )}
-                    <div className={styles.textBlock}>
-                      {renderTextWithLinks(currentRow[col.name] || "")}
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
 
               {/* Права стрілка */}
@@ -222,7 +223,6 @@ const ExamExplanationsPage = () => {
       }
     }
 
-    // childIdx === 4: текст без зображень
     if (childIdx === 4) {
       return (
         <div className={styles.tabFive}>
@@ -261,7 +261,6 @@ const ExamExplanationsPage = () => {
       );
     }
 
-    // childIdx === 5,6: просто текст без зображень
     if (childIdx === 5 || childIdx === 6) {
       return (
         <div className={styles.tabFive}>
@@ -382,14 +381,6 @@ const ExamExplanationsPage = () => {
             })}
           </div>
         </div>
-
-        {/* Кнопка повернення (якщо потрібна) */}
-        <button
-          className="main_menu_back"
-          onClick={() => handleChangePage("/main_menu")}
-        >
-          &#8592;
-        </button>
       </div>
     </MainLayout>
   );

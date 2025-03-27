@@ -330,11 +330,39 @@
       font-weight: 600;
     }
 }
-
+.headerBlock {
+   font-weight: bold;
+   margin-bottom: 4px;
+   font-size: 16px;
+   color: #023c6f;
+ }
+ 
+ .headerBlockFirst {
+   font-size: 20px; /* Наприклад */
+   color: #023c6f;  /* або інший колір */
+   font-weight: 700;
+ }
+.categoryTitle {
+   font-size: 35px;   /* збільшуємо розмір шрифту */
+   font-weight: 700;  /* робимо текст жирним */
+   color: #ffffff;    /* білий колір */
+   margin-bottom: 20px; 
+   margin-top: 30px;/* додатковий відступ знизу, за потребою */
+ }
 .cardPair {
    margin-bottom: 10px;
 }
-
+.textBlock {
+   font-size: 14px;
+   line-height: 1.4;
+   /* базові стилі для всього тексту */
+ }
+ 
+ .textBlockFirst {
+   font-size: 24px;  /* бажаний розмір для заголовка першої колонки */
+   font-weight: 700;
+   color: #023c6f;   /* або інший колір, як потрібно */
+ }
 .headerBlock {
    font-weight: bold;
    margin-bottom: 4px;
