@@ -13,10 +13,10 @@ import Stage7Img from "../../assets/stages/man-stage-7.png";
 import Stage8Img from "../../assets/stages/man-stage-8.png";
 import Stage9Img from "../../assets/stages/man-stage-9.png";
 
-// Якщо файлу default-avatar.png немає, можна використати інший існуючий файл, наприклад:
+// Резервне зображення, якщо не знайдено відповідного етапу
 import DefaultAvatar from "../../assets/stages/woman-stage-1.png";
 
-const stageImages = {
+const stageImagesMap = {
   1: Stage1Img,
   2: Stage2Img,
   3: Stage3Img,
@@ -29,12 +29,13 @@ const stageImages = {
 };
 
 const Avatar = ({ stageId, className }) => {
-  const imageUrl = stageImages[stageId] || DefaultAvatar;
-
+  const numericStageId = Number(stageId);
+  console.log("Avatar receives stageId:", numericStageId);
+  const imageUrl = stageImagesMap[numericStageId] || DefaultAvatar;
   return (
     <img
       src={imageUrl}
-      alt={`Stage ${stageId}`}
+      alt={`Stage ${numericStageId}`}
       className={`${styles.avatarImage} ${className}`}
       onError={(e) => {
         e.target.onerror = null;

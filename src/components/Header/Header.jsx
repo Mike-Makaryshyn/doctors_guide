@@ -15,33 +15,11 @@ import Avatar from "../../components/Avatar/Avatar";
 import SideMenu from "../SideMenu/SideMenu"; // окремий компонент для сайд-меню
 import styles from "./styles.module.scss";
 
-const shortRegions = {
-  "Baden-Württemberg": "BW",
-  "Baden-Württemberg-Freiburg": "BW-FR",
-  "Baden-Württemberg-Karlsruhe": "BW-KA",
-  "Baden-Württemberg-Stuttgart": "BW-ST",
-  "Baden-Württemberg-Reutlingen": "BW-RE",
-  "Nordrhein-Westfalen": "NRW",
-  "Westfalen-Lippe": "W-L",
-  Bayern: "BY",
-  Hessen: "HE",
-  Niedersachsen: "NI",
-  "Rheinland-Pfalz": "RP",
-  Sachsen: "SA",
-  Brandenburg: "BB",
-  Bremen: "HB",
-  Saarland: "SL",
-  "Schleswig-Holstein": "SH",
-  Thüringen: "TH",
-  Berlin: "BE",
-  Hamburg: "HH",
-  "Mecklenburg Vorpommern": "MV",
-  "Sachsen-Anhalt": "ST",
-};
-
 const Header = () => {
   const selectedLanguage = localStorageGet("selectedLanguage", DEFAULT_LANGUAGE);
-  const { selectedRegion } = useGetGlobalInfo();
+  // Видаляємо роботу з регіоном, адже поле з регіоном тимчасово прибирається
+  // const { selectedRegion } = useGetGlobalInfo();
+  
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -55,15 +33,8 @@ const Header = () => {
     window.location.reload();
   };
 
-  // Перехід до мапи при кліку на регіон
-  const handleRegionClick = () => {
-    navigate("/custom-map");
-  };
-
-  // Перевірка, чи це сторінка реєстрації
   const isRegistrationPage = location?.pathname === "/auth/registration";
 
-  // Текстові переклади
   const translations = {
     registration: {
       en: "Registration",
@@ -89,59 +60,13 @@ const Header = () => {
     },
   };
 
-  const regionAbbrev = shortRegions[selectedRegion] || selectedRegion;
-  const regionFullOrAuth =
-    selectedRegion ||
-    translations.authRequired[selectedLanguage] ||
-    translations.authRequired.en;
-  const titleToShow = isRegistrationPage
-    ? translations.registration[selectedLanguage] || translations.registration.en
-    : regionFullOrAuth;
-
   return (
     <>
       <header className={cn(styles.header, "flexBt")}>
-        {/* Кнопка "бургер" з трьома рисочками, без фону */}
-        <button className={styles.burgerButton} onClick={toggleMenu}>
-          ☰
-        </button>
-
-        {/* Лого */}
-        <h2
-          onClick={() => navigate("/main_menu")}
-          className={cn(styles.mainLogo, "upcase", styles.glowAnimation)}
-        >
-          Germanmove
-        </h2>
-
-        {/* Назва регіону для десктопа */}
-        <span
-          className={cn(styles.sRegionFull, styles.sRegion)}
-          onClick={handleRegionClick}
-          style={{ cursor: "pointer" }}
-          data-testid="region-select-full"
-        >
-          {titleToShow}
-        </span>
-
-        {/* Назва регіону для мобільних */}
-        <span
-          className={cn(styles.sRegionShort, styles.sRegion)}
-          onClick={handleRegionClick}
-          style={{ cursor: "pointer" }}
-          data-testid="region-select-short"
-        >
-          {isRegistrationPage
-            ? translations.registration[selectedLanguage] ||
-              translations.registration.en
-            : regionAbbrev}
-        </span>
-
-        <div className="flexBt">
+        <div className={styles.leftSection}>
           <span className={styles.languageLabel}>
             {languages[selectedLanguage].language}
           </span>
-
           <select
             className={styles.langSelect}
             value={selectedLanguage}
@@ -155,16 +80,31 @@ const Header = () => {
               </option>
             ))}
           </select>
+        </div>
 
-    
+        <div
+          className={styles.centerSection}
+          onClick={() => navigate("/main_menu")}
+          style={{ cursor: "pointer" }}
+        >
+          <h2 className={cn(styles.mainLogo, "upcase", styles.glowAnimation)}>
+            Germanmove
+          </h2>
+          {/* Поле із регіоном видалено. Залишено, щоб згодом можна було перенести його в слайд-меню */}
+        </div>
+
+        <div className={styles.rightSection}>
+          <button className={styles.burgerButton} onClick={toggleMenu}>
+            ☰
+          </button>
         </div>
       </header>
 
-      {/* Рендер сайд-меню як окремого компонента */}
       <SideMenu
         language={selectedLanguage}
         isOpen={menuOpen}
         onClose={() => setMenuOpen(false)}
+        direction="right"
       />
     </>
   );

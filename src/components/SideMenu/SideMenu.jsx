@@ -3,20 +3,23 @@ import { main_menu_items } from "../../constants/translation/main_menu";
 import Avatar from "../../components/Avatar/Avatar";
 import styles from "./SideMenu.module.scss";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../firebase"; 
+import { auth } from "../../firebase";
 import { signOut } from "firebase/auth";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import useGetGlobalInfo from "../../hooks/useGetGlobalInfo"; // новий імпорт для регіону
 
-function SideMenu({ language, isOpen, onClose }) {
+function SideMenu({ language, isOpen, onClose, direction }) {
   const [openSections, setOpenSections] = useState({});
   const [user] = useAuthState(auth);
   const location = useLocation();
+  const navigate = useNavigate();
+  const { selectedRegion } = useGetGlobalInfo(); // отримуємо обраний регіон
 
   const sortedSections = React.useMemo(() => {
     return [...main_menu_items.sections].sort((a, b) => a.order - b.order);
   }, []);
 
-  // При зміні маршруту, відкриваємо категорію, якщо в ній є активний лінк
+  // При зміні маршруту відкриваємо категорію, якщо в ній є активний лінк
   useEffect(() => {
     setOpenSections((prev) => {
       const newOpen = { ...prev };
@@ -55,17 +58,27 @@ function SideMenu({ language, isOpen, onClose }) {
     }
   };
 
+  const handleRegionClick = () => {
+    navigate("/custom-map");
+    onClose();
+  };
+
   return (
     <div className={styles.overlay} onClick={handleOverlayClick}>
-      <div className={styles.sideMenu} onClick={handleMenuClick}>
+      <div className={`${styles.sideMenu} ${direction === "right" ? styles.right : ""}`} onClick={handleMenuClick}>
         <div className={styles.sideMenuContent}>
           <div className={styles.avatarBlock}>
             <Link to="/dashboard" style={{ textDecoration: "none" }}>
               <Avatar stageId={1} />
             </Link>
-            {user && user.displayName && (
-              <span className={styles.userName}>{user.displayName}</span>
-            )}
+            <div className={styles.avatarInfo}>
+              {user && user.displayName && (
+                <span className={styles.userName}>{user.displayName}</span>
+              )}
+              <div className={styles.regionSelection} onClick={handleRegionClick} style={{ cursor: "pointer" }}>
+                {selectedRegion || "Обрати регіон"}
+              </div>
+            </div>
           </div>
           {sortedSections.map((section, sectionIndex) => {
             const isSectionOpen = !!openSections[sectionIndex];

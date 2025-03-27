@@ -65,11 +65,13 @@ const effectiveCategory = educationCategory || "Non-EU";
   // Розрахунок загального прогресу (середнє значення)
   useEffect(() => {
     if (stagesProgress.length > 0) {
-      const total = stagesProgress.reduce((acc, cur) => acc + cur, 0);
-      const overall = Math.round(total / stagesProgress.length);
+      // Для EU використовуємо тільки перші 7 етапів, для Non-EU використовуємо всі 9
+      const relevantStages = effectiveCategory === "EU" ? stagesProgress.slice(0, 7) : stagesProgress;
+      const total = relevantStages.reduce((acc, cur) => acc + cur, 0);
+      const overall = Math.round(total / relevantStages.length);
       setOverallProgress(overall);
     }
-  }, [stagesProgress]);
+  }, [stagesProgress, effectiveCategory]);
 
   const handleProgressUpdate = (stageId, newProgress) => {
     setStagesProgress((prev) => {
@@ -187,13 +189,7 @@ const effectiveCategory = educationCategory || "Non-EU";
         </svg>
       </button>
 
-      {/* Main Menu Back Button */}
-      <button
-        className={styles.main_menu_back}
-        onClick={handleBack}
-      >
-        &#8592;
-      </button>
+ 
 
       {/* Підключення компоненту туторіалу */}
       <ApprobationTutorial run={tutorialActive} onFinish={() => setTutorialActive(false)} />

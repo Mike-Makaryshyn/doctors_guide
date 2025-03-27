@@ -1,22 +1,22 @@
 /* Використовуємо шрифт Papin для всієї сторінки */
 * {
    font-family: 'Papin', sans-serif;
-}
-
-/* Відступи, обгортка */
-.table_wrapper {
+ }
+ 
+ /* Відступи, обгортка */
+ .table_wrapper {
    margin-top: 20px;
    padding: 0px 8px;
-}
-
-/* Обгортка для всіх табів */
-.parentTabsWrapper {
+ }
+ 
+ /* Обгортка для всіх табів */
+ .parentTabsWrapper {
    color: black;
    overflow-y: auto;
-}
-
-/* Стилі для батьківських табів */
-.parentTabItem {
+ }
+ 
+ /* Стилі для батьківських табів */
+ .parentTabItem {
    background-color: #ffffff;
    font-weight: 500;
    padding: 16px;
@@ -24,338 +24,327 @@
    margin: 10px;
    position: relative;
    transition: all 0.1s ease;
-
-   span {
-      line-height: 18px;
-   }
-
-   p {
-      line-height: 22px;
-   }
-
    cursor: pointer;
-
-   &:hover {
-      transform: scale(100.3%);
+ 
+   span {
+     line-height: 18px;
    }
-}
-
-/* Жирний текст та колір заголовків */
-.bold,
-.headerBlock {
-  color: #023c6f;
-}
-
-/* Приховуємо дочірні таби, поки вони неактивні */
-.childTabsWrapper {
+ 
+   p {
+     line-height: 22px;
+   }
+ 
+   &:hover {
+     transform: scale(100.3%);
+   }
+ 
+   @media (max-width: 768px) {
+     /* Зменшуємо відступи на мобільному */
+     margin: 8px;
+     padding: 10px;
+   }
+ }
+ 
+ /* Жирний текст та колір заголовків */
+ .bold,
+ .headerBlock {
+   color: #023c6f;
+ }
+ 
+ /* Приховуємо дочірні таби, поки вони неактивні */
+ .childTabsWrapper {
    display: none;
    margin-top: 20px;
-}
-
-/* 
-   Горизонтальний/вертикальний скрол для дочірніх табів.
-   При ширині <= 909px (мобільна логіка) – робимо nowrap та overflow-x.
-*/
-.childTabs {
+ }
+ 
+ /* Горизонтальний/вертикальний скрол для дочірніх табів. */
+ .childTabs {
    display: flex;
    flex-wrap: nowrap;
    gap: 10px;
-   overflow-x: auto;  /* Додаємо горизонтальний скрол */
+   overflow-x: auto; /* Додаємо горизонтальний скрол */
    white-space: nowrap;
    overflow-y: hidden;
-
+ 
    @media (max-width: 909px) {
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      white-space: nowrap;
+     flex-wrap: nowrap;
+     overflow-x: auto;
+     white-space: nowrap;
    }
-}
-
-.showTab {
+ }
+ 
+ .showTab {
    display: flex;
-}
-
-/* Стилі для кожної дочірньої таби (ChildTab / Optional Tile) */
-.child_tab,
-.optionalTile {
-  font-size: 18px;       /* більший шрифт */
-  font-weight: 700;      /* жирніше */
-  color: #023c6f;        /* колір заголовків */
-  line-height: 1.4;      /* міжрядковий інтервал */
-}
-
-/* Додаткові стилі для optionalTile */
-.optionalTile {
+ }
+ 
+ /* Стилі для кожної дочірньої таби (ChildTab / Optional Tile) */
+ .child_tab,
+ .optionalTile {
+   font-size: 18px;  /* більший шрифт */
+   font-weight: 700; /* жирніше */
+   color: #023c6f;   /* колір заголовків */
+   line-height: 1.4; /* міжрядковий інтервал */
+ }
+ 
+ /* Додаткові стилі для optionalTile */
+ .optionalTile {
    border: 2px solid #023c6f;
    border-radius: 8px;
    padding: 10px;
    margin: 10px 0;
-}
-
-/* Неоморфний стиль для дочірніх табів */
-.child_tab {
+ }
+ 
+ /* Неоморфний стиль для дочірніх табів */
+ .child_tab {
    border-radius: 9px;
    background: #ffffff;
    box-shadow: 25px 25px 100px #d6d6d6,
                -25px -25px 100px #ffffff;
    cursor: pointer;
    transition: all 0.2s ease;
-
-   /* Ширина (мінімальна й максимальна) – підлаштовуємо під ваш дизайн */
    min-width: 180px;
    max-width: 280px;
    width: 100%;
    padding: 16px;
-
-   /* Дозволяємо перенос слів */
    white-space: normal;
    word-wrap: break-word;
    overflow-wrap: break-word;
-
+ 
    &:hover {
-      transform: scale(1.02);
+     transform: scale(1.02);
    }
-
+ 
    @media (max-width: 768px) {
-      min-width: 150px;
-      max-width: 220px;
-      padding: 12px;
-
-      white-space: normal;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
+     min-width: 150px;
+     max-width: 220px;
+     padding: 12px;
+     white-space: normal;
+     word-wrap: break-word;
+     overflow-wrap: break-word;
    }
-}
-
-/* Активний дочірній таб */
-.active_child_tab {
+ }
+ 
+ /* Активний дочірній таб */
+ .active_child_tab {
    border-bottom: 1px solid black;
-
+ 
    @media (max-width: 769px) {
-      box-shadow: rgba(128, 128, 240, 0.25) 0px 30px 60px -12px inset,
-                  rgba(208, 40, 40, 0.3) 0px 18px 36px -18px inset;
+     box-shadow: rgba(128, 128, 240, 0.25) 0px 30px 60px -12px inset,
+                 rgba(208, 40, 40, 0.3) 0px 18px 36px -18px inset;
    }
-
+ 
    &:hover {
-      border-bottom: 1px solid black;
+     border-bottom: 1px solid black;
    }
-}
-
-/* Обгортка контенту дочірніх табів */
-.childTabContentWrapper {
+ }
+ 
+ /* Обгортка контенту дочірніх табів */
+ .childTabContentWrapper {
    display: none;
-   padding: 10px;
+   padding: 10px;         /* Відступи на десктопі */
    padding-top: 42px;
    cursor: default;
-
-   li {
-      margin-left: 20px;
+ 
+   @media (max-width: 768px) {
+     /* Зменшуємо відступи на мобільному, щоб текст був ширше */
+     padding: 10px 15px 0;
    }
-}
-
-.showChildTab {
+ 
+   li {
+     margin-left: 0px;
+   }
+ }
+ 
+ .showChildTab {
    display: block;
-}
-
-/* Основний контент дочірнього табу */
-.childTabContent {
+ }
+ 
+ /* Основний контент дочірнього табу */
+ .childTabContent {
    display: block;
    cursor: default;
    font-weight: 400;
    font-size: 14px;
-
+ 
    @media (max-width: 768px) {
      font-size: 16px;
      line-height: 1.6;
    }
-}
-
-/* Заголовок (option_title) */
-.option_title {
+ }
+ 
+ /* Заголовок (option_title) */
+ .option_title {
    font-weight: 700;
    font-size: 18px;
-   margin-bottom: 20px;
+   margin-bottom: 10px; /* <-- Додаємо відступ між заголовком та текстом */
    color: #023c6f;
-}
-
-/* Список пунктів (options) */
-.options {
+ }
+ 
+ /* Список пунктів (options) */
+ .options {
    margin-bottom: 20px;
    padding-left: 20px;
    position: relative;
-
+ 
    &::after {
-      content: "•";
-      position: absolute;
-      left: 0;
-      top: 0;
+     content: "•";
+     position: absolute;
+     left: 0;
+     top: 0;
    }
-}
-
-/* Текст ліворуч */
-.text_left {
+ }
+ 
+ /* Текст ліворуч */
+ .text_left {
    text-align: left;
    font-size: 14px;
-}
-
-/* Стилі для childIdx 4,5,6 (tabFive) */
-.tabFiveTop {
+ }
+ 
+ /* Стилі для childIdx 4,5,6 (tabFive) */
+ .tabFiveTop {
    margin-bottom: 25px;
    cursor: default;
    display: flex;
    gap: 25px;
    font-size: 17px;
-
+ 
    .text {
-      margin-bottom: 32px;
+     margin-bottom: 32px;
    }
-
+ 
    @media (max-width: 769px) {
-      flex-direction: column;
+     flex-direction: column;
    }
-}
-
-.text_top {
+ }
+ 
+ .text_top {
    margin-top: 8px;
    display: flex;
    flex-direction: column;
    justify-content: flex-start;
-}
-
-.bottom_item {
+ }
+ 
+ .bottom_item {
    margin-bottom: 15px;
-
+ 
    strong {
-      margin-right: 5px;
+     margin-right: 5px;
    }
-}
-
-.lessWidth {
+ }
+ 
+ .lessWidth {
    width: 50px;
    margin-right: 20px;
-}
-
-/* Батьківський заголовок */
-.pTab {
+ }
+ 
+ /* Батьківський заголовок */
+ .pTab {
    display: flex;
    justify-content: space-between;
    padding: 10px 30px;
    font-size: 16px;
-
+ 
    @media (max-width: 509px) {
-      flex-direction: column;
+     flex-direction: column;
    }
-}
-
-.pTitle {
+ }
+ 
+ .pTitle {
    font-weight: 600;
    font-size: 17px;
-
+ 
    @media (max-width: 509px) {
-      margin-bottom: 20px;
+     margin-bottom: 20px;
    }
-
+ 
    label {
-      text-align: left !important;
+     text-align: left !important;
    }
-}
-
-/* --- Стилі для мобільних "карток" таблиці (childIdx 1,2,3) --- */
-.mobileTable {
+ }
+ 
+ /* --- Стилі для мобільних \"карток\" таблиці (childIdx 1,2,3) --- */
+ .mobileTable {
    margin: 20px 0;
    padding: 0 8px;
-
+ 
    .mobileTableCardWrapper {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 300px; /* Мінімальна висота контейнера */
-    }
-    
-    .mobileTableCard {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 10px;
-      margin-bottom: 10px;
-      background-color: #fff;
-      width: 100%;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    
-    /* Спільні стилі стрілок */
-    .arrowVertical {
-      position: absolute;
-      background: rgba(76, 175, 80, 0.7);
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      border-radius: 50%;
-      width: 32px;
-      height: 32px;
-      font-size: 18px;
-      font-weight: bold;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: background-color 0.3s ease;
-      z-index: 10;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    
-      &:hover {
-        background-color: rgba(76, 175, 80, 0.9);
-      }
-    }
-
-    .arrowLeftVertical {
-      left: 0;
-      top: 50%;
-      /* Зміщуємо кнопку повністю за межі лівого краю */
-      transform: translate(calc(-100% - 10px), -50%);
-    }
-    
-    .arrowRightVertical {
-      right: 0;
-      top: 50%;
-      /* Зміщуємо кнопку повністю за межі правого краю */
-      transform: translate(calc(100% + 10px), -50%);
-    }
-
-    .bottomCounter {
-      margin-top: 10px;
-      text-align: center;
-      font-size: 16px;
-      color: #023c6f;
-      font-weight: 600;
-    }
-}
-.headerBlock {
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 300px; /* Мінімальна висота контейнера */
+   }
+ 
+   .mobileTableCard {
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     padding: 10px;
+     margin-bottom: 10px;
+     background-color: #fff;
+     width: 100%;
+     max-width: 600px;
+     margin: 0 auto;
+   }
+ 
+   /* Спільні стилі стрілок */
+   .arrowVertical {
+     position: absolute;
+     background-color: transparent !important;
+  
+     color: #fff;
+     border: none;
+     cursor: pointer;
+     border-radius: 50%;
+     width: 32px;
+     height: 32px;
+     font-size: 18px;
+     font-weight: bold;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: background-color 0.3s ease;
+     z-index: 10;
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+ 
+     &:hover {
+       background-color: rgba(76, 175, 80, 0.9);
+     }
+   }
+ 
+   .arrowLeftVertical {
+     left: 0;
+     top: 50%;
+     transform: translate(calc(-100% - 10px), -50%);
+   }
+ 
+   .arrowRightVertical {
+     right: 0;
+     top: 50%;
+     transform: translate(calc(100% + 10px), -50%);
+   }
+ 
+   .bottomCounter {
+     margin-top: 10px;
+     text-align: center;
+     font-size: 16px;
+     color: #023c6f;
+     font-weight: 600;
+   }
+ }
+ 
+ .headerBlock {
    font-weight: bold;
    margin-bottom: 4px;
    font-size: 16px;
    color: #023c6f;
  }
- 
- .headerBlockFirst {
-   font-size: 20px; /* Наприклад */
-   color: #023c6f;  /* або інший колір */
-   font-weight: 700;
+ .bold {
+   color: #023c6f;
+   margin-right: 8px; /* або скільки тобі потрібно */
  }
-.categoryTitle {
-   font-size: 35px;   /* збільшуємо розмір шрифту */
-   font-weight: 700;  /* робимо текст жирним */
-   color: #ffffff;    /* білий колір */
-   margin-bottom: 20px; 
-   margin-top: 30px;/* додатковий відступ знизу, за потребою */
- }
-.cardPair {
-   margin-bottom: 10px;
-}
-.textBlock {
+ .textBlock {
    font-size: 14px;
    line-height: 1.4;
-   /* базові стилі для всього тексту */
  }
  
  .textBlockFirst {
@@ -363,104 +352,148 @@
    font-weight: 700;
    color: #023c6f;   /* або інший колір, як потрібно */
  }
-.headerBlock {
-   font-weight: bold;
-   margin-bottom: 4px;
-   font-size: 16px;
-   color: #023c6f;
-}
-
-.textBlock {
-   font-size: 14px;
-   line-height: 1.4;
-}
-
-/* --- Базовий стиль таблиці (DocumentsPage) --- */
-.tableBase {
+ 
+ /* --- Базовий стиль таблиці (DocumentsPage) --- */
+ .tableBase {
    width: 100%;
    border-collapse: separate;
    border-spacing: 0;
    table-layout: fixed;
    border-radius: 10px;
    overflow: hidden;
-
+ 
    thead {
-      background-color: #e0e0e0;
-      font-size: 1rem;
-      font-weight: 500;
-      color: #013b6e;
+     background-color: #e0e0e0;
+     font-size: 1rem;
+     font-weight: 500;
+     color: #013b6e;
    }
-
+ 
    th,
    td {
-      padding: 20px 10px;
-      border: none;
-      text-align: center;
-      vertical-align: middle;
-      color: #013b6e;
-      background-color: #ffffff;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
+     padding: 20px 10px;
+     border: none;
+     text-align: center;
+     vertical-align: middle;
+     color: #013b6e;
+     background-color: #ffffff;
+     word-wrap: break-word;
+     overflow-wrap: break-word;
    }
-
+ 
    th:first-child,
    td:first-child {
-      width: 30%;
-      text-align: left;
+     width: 30%;
+     text-align: left;
    }
-
+ 
    tr:hover td {
-      background-color: #f9f9f9;
+     background-color: #f9f9f9;
    }
+ }
+ .table_wrapper,
+.examTable,
+._table_container_1eh19_1,
+.no-page-break {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
-
-/* Для childIdx 1,2,3 (ExamExplanationsPage) */
-.examTable {
-   @extend .tableBase;
-
-   /* Приклад: синя лінія між рядками */
-   tbody tr:not(:last-child) td {
-      border-bottom: 2px solid #013b6e;
+ .examTable,
+.table_wrapper {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+}
+ /* Для childIdx 1,2,3 (ExamExplanationsPage) */
+ .examTable {
+   width: 100%;
+   border-collapse: collapse;   // щоб суміжні комірки зливалися
+   border-spacing: 0;
+   table-layout: fixed;
+ 
+   thead {
+     background-color: transparent;  // без фону заголовка
+     font-size: 1rem;
+     font-weight: 500;
+     color: #013b6e;
    }
-
-   /* Налаштування ширини колонок через nth-child */
+ 
+   th,
+   td {
+     padding: 16px 10px;
+     border: none;                 // повністю вимикаємо бордери
+     text-align: center;
+     vertical-align: middle;
+     color: #013b6e;
+     background-color: #ffffff;    // колір фону рядків
+   }
+ 
+   // Тоненька смужка між рядками тіла таблиці (крім останнього)
+   tbody tr:not(:last-child) td {
+     border-bottom: 1px solid #ddd;  // або інший колір/товщину
+   }
+ 
+   // Легенька підсвітка при hover
+   tr:hover td {
+     background-color: #f9f9f9;      // світлий фон
+   }
+ 
+   // Приклад налаштування ширини колонок
    th:nth-child(1),
    td:nth-child(1) {
-      width: 10%;
-      text-align: left;
+     width: 10%;
+     text-align: left;
    }
    th:nth-child(2),
    td:nth-child(2) {
-      width: 30%;
-      text-align: center;
+     width: 30%;
    }
    th:nth-child(3),
    td:nth-child(3) {
-      width: 30%;
-      text-align: center;
+     width: 30%;
    }
    th:nth-child(4),
    td:nth-child(4) {
-      width: 30%;
-      text-align: right;
+     width: 30%;
+     text-align: right;
    }
-}
-
-/* Рядки для завершених/незавершених станів */
-.rowCompleted {
+ }
+ 
+ /* Рядки для завершених/незавершених станів */
+ .rowCompleted {
    background-color: rgba(76, 175, 80, 0.1);
-}
-
-.rowIncomplete {
+ }
+ 
+ .rowIncomplete {
    background-color: rgba(255, 152, 0, 0.1);
-}
-
-.rowExcluded {
+ }
+ 
+ .rowExcluded {
    background-color: rgba(150, 150, 150, 0.2);
    color: rgba(50, 50, 50, 0.6);
    position: relative;
    cursor: default;
+ 
    &:hover {
-      background-color: rgba(150, 150, 150, 0.2);
+     background-color: rgba(150, 150, 150, 0.2);
    }
-}
+ }
+ 
+ /* --- Зменшуємо відступи заголовка категорії (categoryTitle) на мобільному --- */
+ .categoryTitle {
+   font-size: 35px;
+   font-weight: 700;
+   color: #ffffff;
+   margin-bottom: 20px;
+   margin-top: 30px;
+ 
+   @media (max-width: 768px) {
+     margin-top: 15px;  /* або 0, якщо взагалі хочеш прибрати */
+     margin-bottom: 10px;
+   }
+ }

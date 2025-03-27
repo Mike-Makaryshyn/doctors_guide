@@ -75,6 +75,7 @@ const ExamExplanationsPage = () => {
     }
   }, []);
 
+  // Для мобільних таблиць
   const [mobileTableIndex, setMobileTableIndex] = useState(0);
 
   const nextRow = (rowsLength) => {
@@ -116,6 +117,7 @@ const ExamExplanationsPage = () => {
   };
 
   const renderChildTabContent = (childTab, childIdx) => {
+    // 0) Перший таб
     if (childIdx === 0) {
       return childTab?.list?.map((tabItem, idx) => (
         <li className={styles.childTabContent} key={`${tabItem?.title}${idx}`}>
@@ -147,6 +149,7 @@ const ExamExplanationsPage = () => {
       ));
     }
 
+    // 1,2,3) Таблиця
     if ([1, 2, 3].includes(childIdx)) {
       const rows = childTab?.tableRows || [];
       const columns = childTab?.tableColumns || [];
@@ -156,7 +159,7 @@ const ExamExplanationsPage = () => {
       }
 
       if (!isMobile) {
-        // Десктоп
+        // Десктоп: залишаємо <StaticTable />
         return (
           <div className={cn(styles.table_wrapper, styles.examTable)}>
             <StaticTable
@@ -168,6 +171,7 @@ const ExamExplanationsPage = () => {
           </div>
         );
       } else {
+        // Мобільна версія
         const currentRow = rows[mobileTableIndex] || {};
         return (
           <div className={styles.mobileTable}>
@@ -223,6 +227,7 @@ const ExamExplanationsPage = () => {
       }
     }
 
+    // 4) ...
     if (childIdx === 4) {
       return (
         <div className={styles.tabFive}>
@@ -261,6 +266,7 @@ const ExamExplanationsPage = () => {
       );
     }
 
+    // 5,6) ...
     if (childIdx === 5 || childIdx === 6) {
       return (
         <div className={styles.tabFive}>

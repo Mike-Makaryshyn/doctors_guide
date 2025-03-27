@@ -114,7 +114,8 @@ select::-ms-expand {
 .mainLogo {
   font-weight: 600;
   cursor: pointer;
-  margin-left: 0;
+  margin-left: -230px;
+  text-align: center; 
   transition: all 0.2s ease;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -173,3 +174,19 @@ select::-ms-expand {
   margin-right: 10px; // невеликий відступ між бургером і логотипом
 }
 
+.leftSection {
+  display: flex;
+  align-items: center;
+}
+
+.centerSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* додано для центрованого вирівнювання тексту */
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+}
