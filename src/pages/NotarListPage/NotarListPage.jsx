@@ -120,14 +120,14 @@ const NotarListPage = () => {
                 className={styles.modalCloseButton}
                 onClick={() => setIsModalOpen(false)}
               >
-                <AiOutlineClose />
+                  ×
               </button>
               
+           
+
               {/* Все німецькою */}
-              <h2 className={styles.modalTitle}>Region auswählen</h2>
-              <p className={styles.modalSubtitle}>
-                Bitte wählen Sie Ihren gewünschten Region:
-              </p>
+              <h2 className={styles.modalTitle}>Region</h2>
+           
               <select
                 value={region}
                 onChange={handleRegionChange}

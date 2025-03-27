@@ -165,16 +165,14 @@ const TranslatorListPage = () => {
                 className={styles.modalCloseButton}
                 onClick={() => setIsModalOpen(false)}
               >
-                <AiOutlineClose />
+                ×
               </button>
 
-              <h2 className={styles.modalTitle}>Вибір фільтрів</h2>
-              <p className={styles.modalSubtitle}>
-                Оберіть ваш регіон та мову, з якої потрібно перекладати (→ Deutsch):
-              </p>
+              <h2 className={styles.modalTitle}>Einstellung</h2>
+            
 
               {/* Вибір регіону */}
-              <label className={styles.modalLabel}>Оберіть регіон:</label>
+              <label className={styles.modalLabel}>Region:</label>
               <select
                 value={region}
                 onChange={handleRegionChange}
@@ -188,7 +186,7 @@ const TranslatorListPage = () => {
               </select>
 
               {/* Вибір мови (код) */}
-              <label className={styles.modalLabel}>Оберіть мову:</label>
+              <label className={styles.modalLabel}>Sprache:</label>
               <select
                 value={translationLang}
                 onChange={handleLanguageChange}

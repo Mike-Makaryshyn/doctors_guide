@@ -10,12 +10,13 @@
 /* Кнопка (правий нижній кут) */
 .bottomRightSettings {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 0px;
+  right: 0px;
   z-index: 1000;
 }
 
 .settingsButton {
+
   background-color: #4caf50;
   color: #fff;
   border: none;
@@ -23,10 +24,11 @@
   width: 44px;
   height: 44px;
   cursor: pointer;
-  display: flex;
+  display: flex
+;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color .3s ease, transform .2s ease;
 }
 
 .settingsButton:hover {
@@ -98,34 +100,35 @@
 
 /* Для десктопа: */
 .popupContainerDesktop {
-  position: fixed;
-  bottom: 70px; /* Трошки вище кнопки */
-  right: 20px;
-  z-index: 2000;
+  font-family: Poppins, sans-serif;
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px #0003;
+  position: absolute;
+  bottom: 45px;
+  right: 45px;
+  text-align: center;
 }
 
 /* Для мобільних: на всю ширину знизу */
 .popupContainerMobile {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2000;
-  display: flex;
-  justify-content: center;
-  /* Без затемнення фону */
-}
-
-.popup {
+  font-family: Poppins, sans-serif;
   background: #fff;
   padding: 25px 20px 20px;
-  width: 300px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  position: relative;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 12px #0003;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2502;
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  animation: _popupBounce_chby0_1 .6s ease-out;
 }
+
+
 
 /* На мобільних робимо width: 100% */
 @media (max-width: 768px) {
@@ -179,14 +182,18 @@
 
 /* Селектор */
 .modalSelect {
-  width: 100%;
+  width: 200px;
+  height: 40px;
+
+  border-radius: 10px;
+  background: #013b6e;
+  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .3s ease;
+  text-align: center;
   font-size: 14px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  outline: none;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
-  transition: box-shadow 0.2s ease;
 }
 
 .modalSelect:focus {
