@@ -1,32 +1,182 @@
-.generalBannerContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Загальні стилі для контейнера сторінки */
+.container {
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
-.bannerWithDescription {
-    width: 200px;
-    text-align: center;
+.mainMenuBack {
+  margin-bottom: 20px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
 }
 
-.bannerWithDescription img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+/* Заголовки секцій */
+.sectionTitle {
+  font-size: 24px;
+  margin: 20px 0 10px;
+  color: #013b6e;
 }
 
-.bannerWithDescription img:hover {
-    transform: scale(1.05);
+.regionDescription {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.bannerDescription {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #2c3e50;
-    line-height: 1.5;
-    text-align: center;
+/* Контейнер плиток */
+.tilesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Стилізація плитки */
+.tile {
+  flex: 0 0 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tileImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.tileDescription {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.noResource {
+  font-size: 16px;
+  color: #999;
+  text-align: center;
+  width: 100%;
+}
+
+/* Кнопка налаштувань (правий нижній кут) */
+.bottomRightSettings {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.settingsButton {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.settingsButton:hover {
+  background-color: #4caf50;
+  transform: scale(1.1);
+}
+
+/* Контейнер модального вікна для десктопу */
+.popupContainerDesktop {
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: 45px;
+  right: 45px;
+  text-align: center;
+}
+
+/* Контейнер модального вікна для мобільних */
+.popupContainerMobile {
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2502;
+  text-align: center;
+}
+
+/* Стилізація самої модалки */
+.modal {
+  position: relative;
+}
+
+/* Кнопка закриття модалки */
+.modalCloseButton {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ed0a0a;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.modalCloseButton:hover {
+  background-color: rgba(237, 10, 10, 0.1);
+  transform: scale(0.9);
+}
+
+/* Заголовок модального вікна */
+.modalTitle {
+  margin-top: 0;
+  font-size: 20px;
+  color: #013b6e;
+  margin-bottom: 12px;
+}
+
+/* Стилізація селектора в модалці */
+.modalSelect {
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  background: #013b6e;
+  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 14px;
+}
+
+.modalSelect:focus {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
