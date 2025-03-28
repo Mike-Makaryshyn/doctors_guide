@@ -4,7 +4,6 @@ import styles from "./RegionalChatsPage.module.scss";
 import { chatData } from "./chatData";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { FaCog } from "react-icons/fa";
-import { AiOutlineClose } from "react-icons/ai";
 
 // Якщо вибрано регіон "Westfalen-Lippe", приводимо його до "Nordrhein-Westfalen"
 const unifyRegion = (r) => {
@@ -18,16 +17,20 @@ const RegionalChatsPage = () => {
 
   // 2) Локальний стан для регіону (за замовчуванням "Bayern")
   const [region, setRegion] = useState(unifyRegion(selectedRegion || "Bayern"));
+  
+  // Додати стан для зберігання обраного типу чату
+  const [chatType, setChatType] = useState("Telegram");
 
   // 3) Оновлюємо локальний регіон при зміні глобального
   useEffect(() => {
     setRegion(unifyRegion(selectedRegion || "Bayern"));
   }, [selectedRegion]);
 
-  // 4) Стан для модального вікна вибору регіону
+  // 4) Стан для модального вікна
   const [isModalOpen, setIsModalOpen] = useState(false);
   const modalRef = useRef(null);
 
+  // Обробник кліків поза модальним вікном
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
@@ -50,13 +53,23 @@ const RegionalChatsPage = () => {
     setRegion(unifyRegion(val));
   };
 
-  // 6) Отримуємо список чатів для вибраного регіону
-  const chatsList = chatData[region] || [];
+  // Обробник зміни типу чату
+  const handleChatTypeChange = (e) => {
+    setChatType(e.target.value);
+  };
 
-  // 7) Рендер компонента
+  // 6) Отримуємо список чатів для вибраного регіону
+  //    Фільтруємо їх за обраним типом чату
+  const chatsList = (chatData[region] || []).filter(
+    (chat) => chat.type === chatType
+  );
+
+  // 7) Рендер
   return (
     <MainLayout>
       <div className={styles.container}>
+
+        {/* Кнопка для відкриття модального вікна (правий нижній кут) */}
         <div className={styles.bottomRightSettings}>
           <button
             className={styles.settingsButton}
@@ -66,6 +79,7 @@ const RegionalChatsPage = () => {
           </button>
         </div>
 
+        {/* Список відфільтрованих чатів */}
         <div className={styles.tilesContainer}>
           {chatsList.map((chat) => (
             <div key={chat.id} className={styles.tile}>
@@ -88,6 +102,7 @@ const RegionalChatsPage = () => {
           ))}
         </div>
 
+        {/* Модальне вікно */}
         {isModalOpen && (
           <div
             className={
@@ -101,12 +116,11 @@ const RegionalChatsPage = () => {
                 className={styles.modalCloseButton}
                 onClick={() => setIsModalOpen(false)}
               >
-                <AiOutlineClose />
+                ×
               </button>
-              <h2 className={styles.modalTitle}>Region auswählen</h2>
-              <p className={styles.modalSubtitle}>
-                Bitte wählen Sie Ihren gewünschten Region:
-              </p>
+
+              <h2 className={styles.modalTitle}>Region</h2>
+         
               <select
                 value={region}
                 onChange={handleRegionChange}
@@ -117,6 +131,22 @@ const RegionalChatsPage = () => {
                     {r}
                   </option>
                 ))}
+              </select>
+
+              {/* Вибір типу чату */}
+              <h2 className={styles.modalTitle}>Chats:</h2>
+              <select
+                value={chatType}
+                onChange={handleChatTypeChange}
+                className={styles.modalSelect}
+              >
+                {["Telegram", "WhatsApp", "Facebook", "Viber", "Signal"].map(
+                  (type) => (
+                    <option key={type} value={type}>
+                      {type}
+                    </option>
+                  )
+                )}
               </select>
             </div>
           </div>
