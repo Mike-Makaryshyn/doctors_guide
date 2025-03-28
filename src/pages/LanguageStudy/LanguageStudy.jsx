@@ -54,7 +54,7 @@ const LanguageStudyPage = () => {
     };
   }, [isModalOpen]);
 
-  // Загальні ресурси завжди відображаються
+  // Загальні ресурси (з картинками), які відображаються завжди
   const generalResourcesBanners = [
     {
       imageUrl: vhsBanner,
@@ -76,11 +76,9 @@ const LanguageStudyPage = () => {
     },
   ];
 
-  // Отримання регіонального ресурсу для вибраного регіону
-  // Звертаємо увагу, що дані зберігаються у regional.resources[region].banner
-  const regionalResourceObj =
-    LANGUAGE_STUDY_INFO[language]?.regional?.resources?.[region];
-  const regionalBanner = regionalResourceObj?.banner;
+  // Отримання масиву шкіл для поточного регіону
+  const regionalSchools =
+    LANGUAGE_STUDY_INFO[language]?.regional?.resources?.[region] || [];
 
   return (
     <MainLayout>
@@ -88,22 +86,31 @@ const LanguageStudyPage = () => {
         {/* Регіональні ресурси (відображаються залежно від вибраного регіону) */}
         <section>
           <h2 className={styles.sectionTitle}>
-            {LANGUAGE_STUDY_INFO[language]?.regional?.title || "Regional Resources"}
+            {LANGUAGE_STUDY_INFO[language]?.regional?.title || "Regionale Ressourcen"}
           </h2>
-          {regionalBanner ? (
-            <div className={styles.tile}>
-              <a
-                href={regionalBanner.linkUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={regionalBanner.imageUrl}
-                  alt={regionalBanner.altText}
-                  className={styles.tileImage}
-                />
-              </a>
-              <p className={styles.tileDescription}>{regionalBanner.description}</p>
+          {regionalSchools.length > 0 ? (
+            <div className={styles.tilesContainer}>
+              {regionalSchools.map((school, idx) => (
+                <div key={idx} className={styles.tile}>
+                  <h3 className={styles.tileHeader}>{school.name}</h3>
+                  {/* Адреса */}
+                  {school.address && (
+                    <p className={styles.tileAddress}>{school.address}</p>
+                  )}
+                  {/* Телефон */}
+                  {school.phone && (
+                    <p className={styles.tilePhone}>Tel: {school.phone}</p>
+                  )}
+                  {/* Email */}
+                  {school.email && (
+                    <p className={styles.tileEmail}>E-Mail: {school.email}</p>
+                  )}
+                  {/* Додатковий опис (якщо потрібен) */}
+                  {school.description && (
+                    <p className={styles.tileDescription}>{school.description}</p>
+                  )}
+                </div>
+              ))}
             </div>
           ) : (
             <p className={styles.noResource}>
@@ -117,7 +124,7 @@ const LanguageStudyPage = () => {
         {/* Загальні ресурси */}
         <section>
           <h2 className={styles.sectionTitle}>
-            {LANGUAGE_STUDY_INFO[language]?.general?.title || "General Resources"}
+            {LANGUAGE_STUDY_INFO[language]?.general?.title || "Allgemeine Ressourcen"}
           </h2>
           <div className={styles.tilesContainer}>
             {generalResourcesBanners.map((banner, index) => (
