@@ -166,7 +166,7 @@ const LanguageStudyPage = () => {
                 className={styles.modalCloseButton}
                 onClick={() => setIsModalOpen(false)}
               >
-                <AiOutlineClose />
+                  ×
               </button>
               <h2 className={styles.modalTitle}>Region</h2>
               <select

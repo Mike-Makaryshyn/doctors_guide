@@ -8,9 +8,9 @@
 
 /* Заголовки секцій */
 .sectionTitle {
-  font-size: 24px;
-  margin: 20px 0 10px;
-  color: #013b6e;
+    font-size: 30px;
+    margin: 20px 0 10px;
+    color: #ffffff;
 }
 
 .noResource {
@@ -82,8 +82,8 @@
 /* Кнопка налаштувань (правий нижній кут) */
 .bottomRightSettings {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 0px;
+  right: 0px;
   z-index: 1000;
 }
 
@@ -108,32 +108,33 @@
 
 /* Контейнер модального вікна для десктопу */
 .popupContainerDesktop {
-  font-family: 'Poppins', sans-serif;
-  background: #fff;
-  padding: 25px 20px 20px;
-  width: 320px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  position: absolute;
-  bottom: 65px; /* трошки вище кнопки */
-  right: 45px;
-  text-align: center;
+    font-family: Poppins, sans-serif;
+    background: #fff;
+    padding: 25px 20px 20px;
+    width: 260px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 45px;
+    right: 45px;
+    text-align: center;
 }
 
 /* Контейнер модального вікна для мобільних */
 .popupContainerMobile {
-  font-family: 'Poppins', sans-serif;
-  background: #fff;
-  padding: 25px 20px 20px;
-  width: 100%;
-  border-radius: 12px 12px 0 0;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 2502;
-  text-align: center;
-}
+    font-family: Poppins, sans-serif;
+    background: #fff;
+    padding: 25px 20px 20px;
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -4px 12px #0003;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2502;
+    text-align: center;
+    animation: _popupBounce_chby0_1 .6s ease-out;
+  }
 
 /* Стилізація самої модалки */
 .modal {
@@ -142,23 +143,22 @@
 
 /* Кнопка закриття модалки */
 .modalCloseButton {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background-color: transparent;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #ed0a0a;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-  padding: 5px;
-  border-radius: 50%;
-}
-
-.modalCloseButton:hover {
-  background-color: rgba(237, 10, 10, 0.1);
-  transform: scale(0.9);
-}
+    position: absolute;
+    top: -42px;
+    right: -32px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ed0a0a;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    padding: 5px;
+    border-radius: 50%;
+  }
+  .modalCloseButton:hover {
+    background-color: rgba(237, 10, 10, 0);
+    transform: scale(0.9);
+  }
 
 /* Заголовок модального вікна */
 .modalTitle {
