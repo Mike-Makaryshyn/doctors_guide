@@ -159,4 +159,7 @@ export const pathList = {
   add_simulation: {
     path: "/add-simulation",
   },
+  mindmap: {
+    path: '/mindmap'
+  }
 };

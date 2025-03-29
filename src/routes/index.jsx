@@ -26,6 +26,9 @@ const SocialMediaListPage = React.lazy(() =>
 const WhatIsFSPPage = React.lazy(() =>
   import("../pages/WhatIsFSPPage/WhatIsFSPPage")
 );
+const MindMapPage = React.lazy(() =>
+  import("../pages/MindMapPage/MindMapPage")
+);
 const CustomGermanyMap = React.lazy(() =>
   import("../components/CustomGermanyMap/CustomGermanyMap")
 );
@@ -273,6 +276,7 @@ export default function Routers() {
           path={pathList.gleichwertigkeit.path}
           element={<GleichwertigkeitPage />}
         />
+        <Route path={pathList.mindmap.path} element={<MindMapPage />} />
         <Route
           path={pathList.medications_term_matching.path}
           element={<MedicationsTermMatchingGame />}
