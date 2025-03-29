@@ -1,61 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* Контейнер, що займає увесь екран */
 .fullScreenContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
   margin: 0;
   padding: 0;
-  position: relative;
-  /* Тут не задаємо фон – він може бути глобально зеленим */
+  overflow: hidden;
   font-family: 'Poppins', sans-serif;
 }
 
-/* Внутрішній контейнер (absolutely/relatively positioned),
-   де рендеряться вузли та лінії */
-.mapContent {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-/* Вузли MindMap */
-.nodeContainer {
-  text-align: center;
-  margin: 10px;
-  position: relative;
-}
-
-.node {
-  display: inline-block;
-  padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  min-width: 80px;
-  min-height: 80px;
-  line-height: 60px;
-  position: relative;
-  z-index: 1;
-  transition: background-color 0.3s ease;
-}
-
-.node:hover {
-  background-color: #e0e0e0;
-}
-
-.childrenContainer {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-/* Кнопка (правий нижній кут) */
+/* Кнопка налаштувань (правий нижній кут) */
 .bottomRightSettings {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
   z-index: 1000;
 }
 
@@ -78,38 +39,37 @@
   transform: scale(1.1);
 }
 
-/* Popup-модаль для вибору теми */
+/* Модальне вікно для вибору теми */
 
 /* Десктопна версія */
 .popupContainerDesktop {
-  font-family: 'Poppins', sans-serif;
-  background: #fff;
-  padding: 25px 20px 20px;
-  width: 320px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  position: fixed;
-  bottom: 45px;
-  right: 45px;
-  text-align: center;
-  z-index: 1100;
-}
-
-/* Мобільна версія */
-.popupContainerMobile {
-  font-family: 'Poppins', sans-serif;
-  background: #fff;
-  padding: 25px 20px 20px;
-  width: 100%;
-  border-radius: 12px 12px 0 0;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 1100;
-  text-align: center;
-  animation: popupBounce 0.6s ease-out;
-}
+    font-family: Poppins, sans-serif;
+    background: #fff;
+    padding: 25px 20px 20px;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #0003;
+    position: fixed;
+    bottom: 45px;
+    right: 45px;
+    text-align: center;
+  }
+  
+  /* Для мобільних: на всю ширину знизу */
+  .popupContainerMobile {
+    font-family: Poppins, sans-serif;
+    background: #fff;
+    padding: 25px 20px 20px;
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -4px 12px #0003;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2502;
+    text-align: center;
+    animation: _popupBounce_chby0_1 .6s ease-out;
+  }
 
 @keyframes popupBounce {
   0% { transform: translateY(100%); }
@@ -123,22 +83,22 @@
 }
 
 .modalCloseButton {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background-color: transparent;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #ed0a0a;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-  padding: 5px;
-  border-radius: 50%;
-}
-
-.modalCloseButton:hover {
-  transform: scale(0.9);
-}
+    position: absolute;
+    top: -40px;
+    right: -30px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ed0a0a;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    padding: 5px;
+    border-radius: 50%;
+  }
+  .modalCloseButton:hover {
+    background-color: rgba(237, 10, 10, 0);
+    transform: scale(0.9);
+  }
 
 .modalTitle {
   margin-top: 0;
