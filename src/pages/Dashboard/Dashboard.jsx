@@ -17,7 +17,6 @@ import Avatar from "../../components/Avatar/Avatar.jsx";
 
 const Dashboard = () => {
   const [user] = useAuthState(auth);
-  const [progress, setProgress] = useState(0);
   const [userData, setUserData] = useState(null);
   const [activeStage, setActiveStage] = useState(null);
   const { fetchFirebaseCases } = useContext(DataSourceContext);
@@ -27,10 +26,8 @@ const Dashboard = () => {
       if (!user) return;
       try {
         const userDoc = await getDoc(doc(db, "users", user.uid, "userData", "data"));
-        const progressDoc = await getDoc(doc(db, "users", user.uid, "data", "documents"));
         const mainDoc = await getDoc(doc(db, "users", user.uid));
         if (userDoc.exists()) setUserData(userDoc.data());
-        if (progressDoc.exists()) setProgress(progressDoc.data().progress || 0);
         if (mainDoc.exists()) setActiveStage(mainDoc.data().activeStage);
       } catch {
         toast.error("Error loading dashboard data");
@@ -56,7 +53,7 @@ const Dashboard = () => {
   </div>
 )}
             <div className={styles.tile}>
-            <ProgressBar stagesProgress={[progress]} />
+            <ProgressBar />
             </div>
             <SavedCasesWidget className={styles.tile}/>
             {activeStage && (

@@ -93,17 +93,41 @@ const LanguageStudyPage = () => {
               {regionalSchools.map((school, idx) => (
                 <div key={idx} className={styles.tile}>
                   <h3 className={styles.tileHeader}>{school.name}</h3>
-                  {/* Адреса */}
-                  {school.address && (
-                    <p className={styles.tileAddress}>{school.address}</p>
+                  {/* Website */}
+                  {school.website && (
+                    <p className={styles.tileWebsite}>
+                      <a
+                        href={school.website.startsWith('http') ? school.website : `https://${school.website}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {school.website}
+                      </a>
+                    </p>
                   )}
-                  {/* Телефон */}
+                  {/* Address */}
+                  {school.address && (
+                    <p className={styles.tileAddress}>
+                      <a
+                        href={`https://maps.google.com/?q=${encodeURIComponent(school.address)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {school.address}
+                      </a>
+                    </p>
+                  )}
+                  {/* Phone */}
                   {school.phone && (
-                    <p className={styles.tilePhone}>Tel: {school.phone}</p>
+                    <p className={styles.tilePhone}>
+                      Tel: <a href={`tel:${school.phone.replace(/\s+/g, '')}`}>{school.phone}</a>
+                    </p>
                   )}
                   {/* Email */}
                   {school.email && (
-                    <p className={styles.tileEmail}>E-Mail: {school.email}</p>
+                    <p className={styles.tileEmail}>
+                      E-Mail: <a href={`mailto:${school.email}`}>{school.email}</a>
+                    </p>
                   )}
                   {/* Додатковий опис (якщо потрібен) */}
                   {school.description && (

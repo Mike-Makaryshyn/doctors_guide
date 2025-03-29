@@ -37,6 +37,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   display: flex;
+  flex: 0 0 calc(25% - 20px);
   flex-direction: column;
   min-width: 220px;
   max-width: calc(25% - 20px);
@@ -114,7 +115,7 @@
     width: 260px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    position: absolute;
+    position: fixed;
     bottom: 45px;
     right: 45px;
     text-align: center;
@@ -140,7 +141,18 @@
 .modal {
   position: relative;
 }
+.tileWebsite {
+  color: #013b6e; 
+  /* або інший колір, який контрастує з фоном */
+ 
+  margin-bottom: 0.1rem; // Якщо треба відступ
+}
 
+/* Можна також задати стилі для всіх посилань у межах .tile */
+.tile a {
+  color: #013b6e;
+
+}
 /* Кнопка закриття модалки */
 .modalCloseButton {
     position: absolute;
