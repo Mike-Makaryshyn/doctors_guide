@@ -11,13 +11,14 @@
   padding: 0;
   overflow: hidden;
   font-family: 'Poppins', sans-serif;
+  z-index: 1; /* Mindmap is behind the UI elements */
 }
 
 .bottomRightSettings {
-  position: absolute;
+  position: fixed; /* FIXED, so it's always visible on mobile */
   bottom: 10px;
   right: 10px;
-  z-index: 1000;
+  z-index: 2000; /* Above mindmap */
 }
 
 .settingsButton {
@@ -28,6 +29,7 @@
   width: 44px;
   height: 44px;
   cursor: pointer;
+  margin-bottom: 116px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,21 +41,30 @@
   transform: scale(1.1);
 }
 
+/* Вертикальний слайдер зуму */
 .zoomSliderContainer {
-  position: absolute;
-  bottom: 70px;
-  right: 10px;
-  width: 150px;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  bottom: 70px; /* чуть вище кнопки */
+  right: 20px;
+  z-index: 2000;
+  width: 40px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.85);
   border-radius: 8px;
   padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .zoomSlider {
-  width: 100%;
+  -webkit-appearance: none;
+  width: 150px; /* use as 'height' after rotation */
+  transform: rotate(-90deg);
+  cursor: pointer;
 }
 
+/* Popup-модаль */
 .popupContainerDesktop {
   font-family: 'Poppins', sans-serif;
   background: #fff;
@@ -65,7 +76,7 @@
   bottom: 45px;
   right: 45px;
   text-align: center;
-  z-index: 1100;
+  z-index: 3000; /* Above everything else */
 }
 
 .popupContainerMobile {
@@ -78,7 +89,7 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 2502;
+  z-index: 3000;
   text-align: center;
   animation: popupBounce 0.6s ease-out;
 }

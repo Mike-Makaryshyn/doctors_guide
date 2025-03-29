@@ -1,9 +1,10 @@
 // src/pages/MindMapPage/MindMapPage.jsx
+
 import React, { useState, useEffect, useRef } from "react";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import D3MindMap from "./D3MindMap";
 import { headacheMindMap } from "./topics/headache";
-import { strokeMindMap } from "./topics/stroke"; // нова тема
+import { strokeMindMap } from "./topics/stroke";
 import { FaCog } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import styles from "./MindMapPage.module.scss";
@@ -44,12 +45,20 @@ export default function MindMapPage() {
   return (
     <MainLayout>
       <div className={styles.fullScreenContainer}>
+        {/* Сам mindmap */}
         <D3MindMap data={selectedTopic.data} externalZoom={zoomValue} />
+
+        {/* Кнопка для виклику модалки (завжди поверх) */}
         <div className={styles.bottomRightSettings}>
-          <button className={styles.settingsButton} onClick={() => setIsModalOpen(true)}>
+          <button
+            className={styles.settingsButton}
+            onClick={() => setIsModalOpen(true)}
+          >
             <FaCog />
           </button>
         </div>
+
+        {/* Слайдер зуму, лише на мобільних */}
         {window.innerWidth < 768 && (
           <div className={styles.zoomSliderContainer}>
             <input
@@ -63,6 +72,8 @@ export default function MindMapPage() {
             />
           </div>
         )}
+
+        {/* Модалка вибору теми */}
         {isModalOpen && (
           <div
             className={
@@ -72,11 +83,18 @@ export default function MindMapPage() {
             }
           >
             <div className={styles.popup} ref={modalRef}>
-              <button className={styles.modalCloseButton} onClick={() => setIsModalOpen(false)}>
+              <button
+                className={styles.modalCloseButton}
+                onClick={() => setIsModalOpen(false)}
+              >
                 <AiOutlineClose />
               </button>
               <h2 className={styles.modalTitle}>Thema</h2>
-              <select value={selectedTopicId} onChange={handleTopicChange} className={styles.modalSelect}>
+              <select
+                value={selectedTopicId}
+                onChange={handleTopicChange}
+                className={styles.modalSelect}
+              >
                 {topics.map((topic) => (
                   <option key={topic.id} value={topic.id}>
                     {topic.label}
