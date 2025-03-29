@@ -16,14 +16,18 @@ const loadD3 = () => {
   });
 };
 
-function collectNodesAndLinks(node, nodes = [], links = [], parent = null) {
+// Модифікована функція collectNodesAndLinks з параметром depth
+function collectNodesAndLinks(node, depth = 0, nodes = [], links = [], parent = null) {
+  node.depth = depth; // встановлюємо глибину
   nodes.push(node);
+
   if (parent) {
     links.push({ source: parent, target: node });
   }
+
   if (node.children && node.children.length > 0) {
     node.children.forEach((child) =>
-      collectNodesAndLinks(child, nodes, links, node)
+      collectNodesAndLinks(child, depth + 1, nodes, links, node)
     );
   }
   return { nodes, links };
@@ -73,6 +77,7 @@ const D3MindMap = ({ data }) => {
             merge.append("feMergeNode").attr("in", "shadowBlur");
             merge.append("feMergeNode").attr("in", "SourceGraphic");
           });
+
           const filterPressed = defs
             .append("filter")
             .attr("id", "filterPressed")
@@ -104,15 +109,21 @@ const D3MindMap = ({ data }) => {
             merge.append("feMergeNode").attr("in", "SourceGraphic");
           });
 
+          // ------ Створюємо дані з урахуванням глибини ------
+          const { nodes, links } = collectNodesAndLinks(data, 0);
+
+          // ------ Шкала кольорів ------
+          const colorScale = d3.scale.category10();
+
           // ------ Force Layout Setup ------
-          const { nodes, links } = collectNodesAndLinks(data);
           const force = d3.layout
             .force()
             .nodes(nodes)
             .links(links)
             .size([width, height])
-            .charge(-3000)       // ще сильніше відштовхування
-            .linkDistance(500)   // збільшена відстань між вузлами
+            .charge(-3000)
+            // Залежно від глибини збільшуємо відстань між вузлами
+            .linkDistance((d) => 140 + d.target.depth * 50)
             .on("tick", tick)
             .start();
 
@@ -127,7 +138,8 @@ const D3MindMap = ({ data }) => {
             .enter()
             .append("line")
             .attr("class", "link")
-            .style("stroke", "#1a4d45")
+            // Використовуємо depth дочірнього вузла для задання кольору
+            .style("stroke", (d) => colorScale(d.target.depth))
             .style("stroke-width", 3);
 
           // ------ Draw Nodes ------
@@ -154,7 +166,7 @@ const D3MindMap = ({ data }) => {
             })
             .call(force.drag);
 
-          // Make nodes larger (100x100) and with less rounded corners (rx,ry=20)
+          // Збільшуємо прямокутник вузла та налаштовуємо скруглення
           node
             .append("rect")
             .attr("x", -50)
@@ -167,10 +179,10 @@ const D3MindMap = ({ data }) => {
             .style("fill", "#ffffff")
             .style("filter", "url(#filterNormal)");
 
-          // Text: Bold, using Poppins, color #013b6e, wrap inside 90px width, centered
+          // Текст усередині вузла
           node
             .append("text")
-            .attr("x", 0) // додано для центрування тексту всередині вузла
+            .attr("x", 0)
             .attr("dy", ".31em")
             .attr("text-anchor", "middle")
             .text((d) => d.label)
@@ -220,11 +232,12 @@ const D3MindMap = ({ data }) => {
               .attr("y1", (d) => d.source.y)
               .attr("x2", (d) => d.target.x)
               .attr("y2", (d) => d.target.y);
+
             node.attr("transform", (d) => `translate(${d.x},${d.y})`);
           }
 
-          // Виключаємо автоцентр (autoCenter) після завершення розташування, щоб не відбувалося раптове зближення
-          // force.on("end", autoCenter); // закоментовано, щоб користувач міг сам керувати зумом
+          // Якщо потрібно – можна увімкнути/вимкнути автоцентр
+          // force.on("end", autoCenter);
 
           const zoom = d3.behavior
             .zoom()
