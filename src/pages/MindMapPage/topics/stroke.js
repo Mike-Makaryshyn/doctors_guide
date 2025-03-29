@@ -125,3 +125,16 @@ export const strokeMindMap = {
       }
     ]
   };
+  
+  // Функція трансформації для створення даних для спискового відображення
+  const transformForList = (node) => {
+    return {
+      ...node,
+      // Можна додати будь-які властивості за замовчуванням для спискового відображення
+      // Наприклад, властивість expanded (за замовчуванням false)
+      expanded: false,
+      children: node.children ? node.children.map(transformForList) : []
+    };
+  };
+  
+  export const strokeListData = transformForList(strokeMindMap);

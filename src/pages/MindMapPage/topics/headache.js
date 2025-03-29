@@ -44,3 +44,14 @@ export const headacheMindMap = {
       }
     ]
   };
+  // Функція трансформації для спискового відображення
+const transformForList = (node) => {
+    return {
+      ...node,
+      expanded: false,
+      children: node.children ? node.children.map(transformForList) : []
+    };
+  };
+  
+  // Константа з даними для спискового відображення
+  export const headacheListData = transformForList(headacheMindMap);

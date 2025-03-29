@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
+import MindMapListView from "./MindMapListView";
 
 const loadD3 = () => {
   return new Promise((resolve, reject) => {
@@ -18,13 +19,11 @@ const loadD3 = () => {
 
 // Модифікована функція collectNodesAndLinks з параметром depth
 function collectNodesAndLinks(node, depth = 0, nodes = [], links = [], parent = null) {
-  node.depth = depth; // встановлюємо глибину
+  node.depth = depth;
   nodes.push(node);
-
   if (parent) {
     links.push({ source: parent, target: node });
   }
-
   if (node.children && node.children.length > 0) {
     node.children.forEach((child) =>
       collectNodesAndLinks(child, depth + 1, nodes, links, node)
@@ -33,10 +32,24 @@ function collectNodesAndLinks(node, depth = 0, nodes = [], links = [], parent = 
   return { nodes, links };
 }
 
-const D3MindMap = ({ data }) => {
+const D3MindMap = ({ data, externalViewMode }) => {
+  console.log("D3MindMap externalViewMode:", externalViewMode);
+
+  // Якщо режим списку – повертаємо компонент спискового відображення
+  if (externalViewMode === "list") {
+    return (
+      <div style={{ padding: "20px", overflowY: "auto", maxHeight: "100vh" }}>
+        <MindMapListView data={data} />
+      </div>
+    );
+  }
+
   const d3Container = useRef(null);
 
   useEffect(() => {
+    console.log("useEffect externalViewMode:", externalViewMode);
+    // Запускаємо D3-візуалізацію лише якщо режим "mindmap"
+    if (externalViewMode !== "mindmap") return;
     let isCancelled = false;
 
     loadD3()
@@ -122,7 +135,6 @@ const D3MindMap = ({ data }) => {
             .links(links)
             .size([width, height])
             .charge(-3000)
-            // Залежно від глибини збільшуємо відстань між вузлами
             .linkDistance((d) => 140 + d.target.depth * 50)
             .on("tick", tick)
             .start();
@@ -138,7 +150,6 @@ const D3MindMap = ({ data }) => {
             .enter()
             .append("line")
             .attr("class", "link")
-            // Використовуємо depth дочірнього вузла для задання кольору
             .style("stroke", (d) => colorScale(d.target.depth))
             .style("stroke-width", 3);
 
@@ -169,9 +180,9 @@ const D3MindMap = ({ data }) => {
           // Збільшуємо прямокутник вузла та налаштовуємо скруглення
           node
             .append("rect")
-            .attr("x", -50)
+            .attr("x", -60)
             .attr("y", -50)
-            .attr("width", 100)
+            .attr("width", 120)
             .attr("height", 100)
             .attr("rx", 20)
             .attr("ry", 20)
@@ -189,7 +200,9 @@ const D3MindMap = ({ data }) => {
             .style("font", "14px 'Poppins', sans-serif")
             .style("font-weight", "bold")
             .style("fill", "#013b6e")
-            .call(wrapText, 90);
+            .style("overflow-wrap", "break-word")
+            .style("word-wrap", "break-word")
+            .call(wrapText, 110);
 
           function wrapText(textSelection, width) {
             textSelection.each(function () {
@@ -232,12 +245,8 @@ const D3MindMap = ({ data }) => {
               .attr("y1", (d) => d.source.y)
               .attr("x2", (d) => d.target.x)
               .attr("y2", (d) => d.target.y);
-
             node.attr("transform", (d) => `translate(${d.x},${d.y})`);
           }
-
-          // Якщо потрібно – можна увімкнути/вимкнути автоцентр
-          // force.on("end", autoCenter);
 
           const zoom = d3.behavior
             .zoom()
@@ -249,34 +258,6 @@ const D3MindMap = ({ data }) => {
               );
             });
           svg.call(zoom);
-
-          function autoCenter() {
-            const allElements = gContainer.selectAll("*");
-            const bounds = getBounds(allElements);
-            const centerX = bounds.x + bounds.width / 2;
-            const centerY = bounds.y + bounds.height / 2;
-            let initialScale = 1.0;
-            let offsetX = width / 2 - initialScale * centerX;
-            let offsetY = height / 2 - initialScale * centerY;
-            zoom.scale(initialScale);
-            zoom.translate([offsetX, offsetY]);
-            zoom.event(svg);
-          }
-
-          function getBounds(selection) {
-            let minX = Infinity,
-              minY = Infinity,
-              maxX = -Infinity,
-              maxY = -Infinity;
-            selection.each(function () {
-              const bbox = this.getBBox();
-              if (bbox.x < minX) minX = bbox.x;
-              if (bbox.y < minY) minY = bbox.y;
-              if (bbox.x + bbox.width > maxX) maxX = bbox.x + bbox.width;
-              if (bbox.y + bbox.height > maxY) maxY = bbox.y + bbox.height;
-            });
-            return { x: minX, y: minY, width: maxX - minX, height: maxY - minY };
-          }
         }
       })
       .catch((err) => {
@@ -285,13 +266,20 @@ const D3MindMap = ({ data }) => {
     return () => {
       isCancelled = true;
     };
-  }, [data]);
+  }, [data, externalViewMode]);
 
-  return <div ref={d3Container} style={{ width: "100vw", height: "100vh" }} />;
+  const d3ContainerStyle = {
+    width: "100vw",
+    height: "100vh",
+    overscrollBehavior: "none"
+  };
+
+  return <div ref={d3Container} style={d3ContainerStyle} />;
 };
 
 D3MindMap.propTypes = {
   data: PropTypes.object.isRequired,
+  externalViewMode: PropTypes.string.isRequired,
 };
 
 export default D3MindMap;

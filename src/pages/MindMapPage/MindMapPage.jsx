@@ -1,24 +1,24 @@
-// src/pages/MindMapPage/MindMapPage.jsx
-
 import React, { useState, useEffect, useRef } from "react";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import D3MindMap from "./D3MindMap";
-import { headacheMindMap } from "./topics/headache";
-import { strokeMindMap } from "./topics/stroke";
+import { headacheMindMap, headacheListData } from "./topics/headache";
+import { strokeMindMap, strokeListData } from "./topics/stroke"; // додано strokeListData
 import { FaCog } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import styles from "./MindMapPage.module.scss";
-
-const topics = [
-  { id: "headache", label: "Болі голови", data: headacheMindMap },
-  { id: "stroke", label: "Schlaganfall", data: strokeMindMap },
-];
 
 export default function MindMapPage() {
   const [selectedTopicId, setSelectedTopicId] = useState("headache");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [zoomValue, setZoomValue] = useState(1.0);
+  const [viewMode, setViewMode] = useState("mindmap");
   const modalRef = useRef(null);
+
+  // Тепер для обох топіків при режимі "list" використовуються відповідні трансформовані дані
+  const topics = [
+    { id: "headache", label: "Болі голови", data: viewMode === "list" ? headacheListData : headacheMindMap },
+    { id: "stroke", label: "Schlaganfall", data: viewMode === "list" ? strokeListData : strokeMindMap },
+  ];
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -45,10 +45,8 @@ export default function MindMapPage() {
   return (
     <MainLayout>
       <div className={styles.fullScreenContainer}>
-        {/* Сам mindmap */}
-        <D3MindMap data={selectedTopic.data} externalZoom={zoomValue} />
+        <D3MindMap data={selectedTopic.data} externalZoom={zoomValue} externalViewMode={viewMode} />
 
-        {/* Кнопка для виклику модалки (завжди поверх) */}
         <div className={styles.bottomRightSettings}>
           <button
             className={styles.settingsButton}
@@ -58,7 +56,6 @@ export default function MindMapPage() {
           </button>
         </div>
 
-        {/* Слайдер зуму, лише на мобільних */}
         {window.innerWidth < 768 && (
           <div className={styles.zoomSliderContainer}>
             <input
@@ -73,7 +70,6 @@ export default function MindMapPage() {
           </div>
         )}
 
-        {/* Модалка вибору теми */}
         {isModalOpen && (
           <div
             className={
@@ -100,6 +96,16 @@ export default function MindMapPage() {
                     {topic.label}
                   </option>
                 ))}
+              </select>
+
+              <h2 className={styles.modalTitle}>Відображення</h2>
+              <select
+                value={viewMode}
+                onChange={(e) => setViewMode(e.target.value)}
+                className={styles.modalSelect}
+              >
+                <option value="mindmap">Mind Map</option>
+                <option value="list">Список</option>
               </select>
             </div>
           </div>
