@@ -7,47 +7,70 @@
     padding: 20px;
     overflow-y: auto;
     box-sizing: border-box;
-}
+  }
   
-/* ======== Рівень 1 (rootList) ======== */
-.rootList {
+  /* ======== Кореневий список (рівень 1) ======== */
+  .rootList {
     list-style: none;
     margin: 0;
     padding: 0;
-}
+  }
   
-/* Елементи 1-го рівня */
-.rootList > .listItem {
+  /* Кореневий елемент — без вертикальних ліній */
+  .rootList > .listItem {
     position: relative;
     margin: 10px 0;
     padding: 0;
-}
+  }
   
-/* Вимикаємо лінії для кореневого рівня */
-.rootList > .listItem::before {
+  /* Вимикаємо псевдоелементи для кореневого рівня */
+  .rootList > .listItem::before {
     content: none;
-}
+  }
+  .rootList > .listItem > .nodeContainer::before {
+    content: none;
+  }
+  .rootList > .listItem > .nodeContainer > .tileWrapper::after {
+    content: none;
+  }
   
-/* ======== Рівень 2 ======== */
-.rootList .nestedList {
+  /* Якщо хочете центрований root-вузол, розкоментуйте:
+  .rootList > .listItem {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  */
+  
+  /* ======== Загальні стилі для всіх вкладених списків (2-й рівень і глибше) ======== */
+  .nestedList {
     list-style: none;
     margin: 0;
     padding: 0;
     position: relative;
-}
+  }
   
-/* Відступ для елементів 2-го рівня */
-.rootList .nestedList .listItem {
+  /* Елементи вкладеного списку */
+  .nestedList .listItem {
     position: relative;
     margin: 10px 0 10px 60px;
     padding: 0;
-}
-
-/* Переміщуємо відображення вертикальної лінії на контейнер плитки (.nodeContainer) для 2-го рівня */
-.rootList .nestedList .listItem > .nodeContainer {
+  }
+  
+  /* Вертикальна лінія для вкладених вузлів */
+  .nestedList .listItem > .nodeContainer {
     position: relative;
-}
-.rootList .nestedList .listItem > .nodeContainer::before {
+  }
+  
+  /* 
+    ========== КОЛЬОРИ ВЕРТИКАЛЬНИХ ЛІНІЙ ==========
+    - 2-й рівень (перша вкладеність): зелений (#2ecc71)
+    - 3-й рівень: червоний (#e74c3c)
+    - 4-й рівень: фіолетовий (#9b59b6)
+    - 5-й рівень: жовтий (#f1c40f)
+    - Далі можна продовжувати за тим же принципом
+  */
+  .nestedList .listItem > .nodeContainer::before {
+    /* 2-й рівень */
     content: "";
     position: absolute;
     left: -30px;
@@ -55,49 +78,74 @@
     width: 2px;
     height: 100%;
     background-color: #2ecc71;
-}
-
-/* Якщо елемент є останнім у групі (2-й рівень), обрізаємо вертикальну лінію */
-.rootList .nestedList .listItem.lastItem > .nodeContainer::before {
-    height: 50%;
-}
-
-/* ======== Рівень 3 ======== */
-.rootList .nestedList .nestedList {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
+  }
+  .nestedList .nestedList .listItem > .nodeContainer::before {
+    /* 3-й рівень */
+    background-color: #e74c3c;
+  }
+  .nestedList .nestedList .nestedList .listItem > .nodeContainer::before {
+    /* 4-й рівень */
+    background-color: #9b59b6;
+  }
+  .nestedList .nestedList .nestedList .nestedList .listItem > .nodeContainer::before {
+    /* 5-й рівень */
+    background-color: #f1c40f;
+  }
   
-/* Відступ для елементів 3-го рівня */
-.rootList .nestedList .nestedList .listItem {
+  /* ===== Обрізання вертикальної лінії для останнього елемента ===== */
+  /* Кореневий рівень (рівень 1) */
+  .rootList .listItem.lastItem > .nodeContainer::before {
+    height: 50%;
+  }
+  
+  /* 2-й, 3-й, 4-й, 5-й рівні і далі */
+  .nestedList .listItem.lastItem > .nodeContainer::before,
+  .nestedList .nestedList .listItem.lastItem > .nodeContainer::before,
+  .nestedList .nestedList .nestedList .listItem.lastItem > .nodeContainer::before,
+  .nestedList .nestedList .nestedList .nestedList .listItem.lastItem > .nodeContainer::before,
+  .nestedList .nestedList .nestedList .nestedList .nestedList .listItem.lastItem > .nodeContainer::before {
+    height: 50%;
+  }
+  
+  /* ===== Горизонтальна лінія (зв’язок плитки з вузлом) ===== */
+  .tileWrapper {
     position: relative;
-    margin: 10px 0 10px 60px;
-    padding: 0;
-}
-
-/* Переміщуємо відображення вертикальної лінії на .nodeContainer для 3-го рівня */
-.rootList .nestedList .nestedList .listItem > .nodeContainer {
-    position: relative;
-}
-.rootList .nestedList .nestedList .listItem > .nodeContainer::before {
+  }
+  
+  /* 
+    ========== КОЛЬОРИ ГОРИЗОНТАЛЬНИХ ЛІНІЙ ==========
+    Відповідають тому ж рівню, що й вертикальна лінія
+  */
+  
+  /* 2-й рівень: зелена горизонтальна лінія */
+  .tileWrapper::after {
     content: "";
     position: absolute;
     left: -30px;
-    top: 0;
-    width: 2px;
-    height: 100%;
+    top: 50%;
+    width: 30px;
+    height: 2px;
+    background-color: #2ecc71;
+    transform: translateY(-50%);
+  }
+  
+  /* 3-й рівень: червона */
+  .nestedList .nestedList .tileWrapper::after {
     background-color: #e74c3c;
-}
-
-/* Для останнього елемента 3-го рівня обрізаємо вертикальну лінію */
-.rootList .nestedList .nestedList .listItem.lastItem > .nodeContainer::before {
-    height: 50%;
-}
-
-/* ===== Плитка ===== */
-.tile {
+  }
+  
+  /* 4-й рівень: фіолетова */
+  .nestedList .nestedList .nestedList .tileWrapper::after {
+    background-color: #9b59b6;
+  }
+  
+  /* 5-й рівень: жовта */
+  .nestedList .nestedList .nestedList .nestedList .tileWrapper::after {
+    background-color: #f1c40f;
+  }
+  
+  /* ===== Плитка (кнопка/елемент) ===== */
+  .tile {
     display: inline-block;
     padding: 15px;
     min-height: 50px;
@@ -114,36 +162,11 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1;
-}
+  }
   
-/* Стан «натиснутої» плитки */
-.tilePressed {
+  .tilePressed {
     background: #2a7c6f;
     color: #ffffff;
     transform: translateY(1px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-  
-/* ===== Нова реалізація горизонтальної «гілки» ===== */
-.tileWrapper {
-    position: relative;
-}
-  
-.tileWrapper::after {
-    content: "";
-    position: absolute;
-    left: -30px;
-    top: 50%;
-    width: 30px;
-    height: 2px;
-    background-color: #2ecc71; /* Колір зеленої лінії для 2-го рівня */
-    transform: translateY(-50%);
-}
-  
-/* Для 3-го рівня змінюємо колір горизонтальної лінії */
-.rootList .nestedList .nestedList .tileWrapper::after {
-    background-color: #e74c3c;
-}
-
-/* Якщо потрібно, можна залишити інші правила для обрізання ліній за допомогою :last-of-type,
-   але тепер ми керуємо цим через клас lastItem, який встановлюється в React. */
+  }

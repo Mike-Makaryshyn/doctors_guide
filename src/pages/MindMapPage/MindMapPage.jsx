@@ -79,20 +79,7 @@ export default function MindMapPage() {
           </button>
         </div>
 
-        {/* Вертикальний слайдер зуму (відображається тільки на вузьких екранах) */}
-        {window.innerWidth < 768 && (
-          <div className={styles.zoomSliderContainer}>
-            <input
-              type="range"
-              min="0.2"
-              max="5"
-              step="0.1"
-              value={zoomValue}
-              onChange={(e) => setZoomValue(+e.target.value)}
-              className={styles.zoomSlider}
-            />
-          </div>
-        )}
+   
 
         {/* Модальне вікно налаштувань */}
         {isModalOpen && (

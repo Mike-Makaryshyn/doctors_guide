@@ -10,6 +10,13 @@ const MindMapListView = ({ data }) => {
     setPressedNodes((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
+  /**
+   * Рекурсивно рендеримо вузли списку.
+   * @param {Object} node - поточний вузол
+   * @param {number} index - індекс вузла серед "братів"
+   * @param {Array} siblings - масив "братів" поточного вузла
+   * @returns {JSX.Element}
+   */
   const renderList = (node, index, siblings) => {
     const isLastItem = index === siblings.length - 1;
 
@@ -20,7 +27,7 @@ const MindMapListView = ({ data }) => {
           [styles.lastItem]: isLastItem,
         })}
       >
-        {/* Основний контейнер для плитки */}
+        {/* Контейнер вузла */}
         <div className={styles.nodeContainer}>
           <div className={styles.tileWrapper}>
             <div
@@ -33,7 +40,7 @@ const MindMapListView = ({ data }) => {
             </div>
           </div>
 
-          {/* Якщо є діти — обгортаємо їх у childrenContainer */}
+          {/* Якщо є діти, обгортаємо їх у <ul> */}
           {node.children && node.children.length > 0 && (
             <div className={styles.childrenContainer}>
               <ul className={styles.nestedList}>
@@ -49,6 +56,8 @@ const MindMapListView = ({ data }) => {
   return (
     <div className={styles.container}>
       <ul className={styles.rootList}>
+        {/* Для кореневого вузла теж викликаємо renderList,
+            але siblings буде [data], щоб index 0 === length-1 */}
         {renderList(data, 0, [data])}
       </ul>
     </div>

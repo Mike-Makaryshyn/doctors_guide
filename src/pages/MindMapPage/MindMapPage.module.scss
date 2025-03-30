@@ -16,8 +16,8 @@
 /* Кнопка налаштувань у правому нижньому куті */
 .bottomRightSettings {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 0px;
+  right: 0px;
   z-index: 2000;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .zoomSlider {
-  -webkit-appearance: none;
+
   width: 150px; /* Використовується як \"height\" після повороту */
   transform: rotate(-90deg);
   cursor: pointer;
