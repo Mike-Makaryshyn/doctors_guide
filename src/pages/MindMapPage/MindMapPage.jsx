@@ -6,6 +6,7 @@ import { strokeMindMap, strokeListData } from "./topics/stroke";
 import { subarachnoidMindMap, subarachnoidListData } from "./topics/subarachnoid";
 import { migraeneMindMap, migraeneListData } from "./topics/migrean";
 import { sampleMindMap, sampleListData } from "./topics/sampler";
+import { atemmusterMindMap, atemmusterListData } from "./topics/atemmuster";
 import { FaCog, FaList, FaSitemap } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import styles from "./MindMapPage.module.scss";
@@ -23,6 +24,11 @@ export default function MindMapPage() {
       id: "headache",
       label: "Kopfschmerz",
       data: viewMode === "list" ? headacheListData : headacheMindMap
+    },
+    {
+      id: "atemmuster",
+      label: "Atemmuster",
+      data: viewMode === "list" ? atemmusterListData : atemmusterMindMap
     },
     {
       id: "stroke",
