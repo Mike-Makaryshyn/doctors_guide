@@ -4,7 +4,7 @@ import D3MindMap from "./D3MindMap";
 import { headacheMindMap, headacheListData } from "./topics/headache";
 import { strokeMindMap, strokeListData } from "./topics/stroke"; 
 import { subarachnoidMindMap, subarachnoidListData } from "./topics/subarachnoid";
-import { FaCog } from "react-icons/fa";
+import { FaCog, FaList, FaSitemap } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import styles from "./MindMapPage.module.scss";
 
@@ -79,8 +79,6 @@ export default function MindMapPage() {
           </button>
         </div>
 
-   
-
         {/* Модальне вікно налаштувань */}
         {isModalOpen && (
           <div
@@ -95,7 +93,7 @@ export default function MindMapPage() {
                 className={styles.modalCloseButton}
                 onClick={() => setIsModalOpen(false)}
               >
-                <AiOutlineClose />
+                      ×
               </button>
               <h2 className={styles.modalTitle}>Thema</h2>
               <select
@@ -110,15 +108,21 @@ export default function MindMapPage() {
                 ))}
               </select>
 
-              <h2 className={styles.modalTitle}>Відображення</h2>
-              <select
-                value={viewMode}
-                onChange={(e) => setViewMode(e.target.value)}
-                className={styles.modalSelect}
-              >
-                <option value="mindmap">Mind Map</option>
-                <option value="list">Список</option>
-              </select>
+              <h2 className={styles.modalTitle}>Mindmap / List</h2>
+              <div className={styles.iconSelectorContainer}>
+                <div
+                  className={`${styles.iconSelector} ${viewMode === "mindmap" ? styles.active : ""}`}
+                  onClick={() => setViewMode("mindmap")}
+                >
+                  <FaSitemap size={24} />
+                </div>
+                <div
+                  className={`${styles.iconSelector} ${viewMode === "list" ? styles.active : ""}`}
+                  onClick={() => setViewMode("list")}
+                >
+                  <FaList size={24} />
+                </div>
+              </div>
             </div>
           </div>
         )}

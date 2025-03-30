@@ -17,7 +17,6 @@ const loadD3 = () => {
   });
 };
 
-// Модифікована функція collectNodesAndLinks з параметром depth
 function collectNodesAndLinks(node, depth = 0, nodes = [], links = [], parent = null) {
   node.depth = depth;
   nodes.push(node);
@@ -33,9 +32,6 @@ function collectNodesAndLinks(node, depth = 0, nodes = [], links = [], parent = 
 }
 
 const D3MindMap = ({ data, externalViewMode }) => {
-  console.log("D3MindMap externalViewMode:", externalViewMode);
-
-  // Якщо режим списку – повертаємо компонент спискового відображення
   if (externalViewMode === "list") {
     return (
       <div style={{ padding: "20px", overflowY: "auto", maxHeight: "100vh" }}>
@@ -47,8 +43,6 @@ const D3MindMap = ({ data, externalViewMode }) => {
   const d3Container = useRef(null);
 
   useEffect(() => {
-    console.log("useEffect externalViewMode:", externalViewMode);
-    // Запускаємо D3-візуалізацію лише якщо режим "mindmap"
     if (externalViewMode !== "mindmap") return;
     let isCancelled = false;
 
@@ -66,7 +60,10 @@ const D3MindMap = ({ data, externalViewMode }) => {
             .attr("width", width)
             .attr("height", height);
 
-          // ------ Filters for Normal/Pressed States ------
+          // ------ Disable double-click zoom (якщо потрібно) ------
+          // svg.on("dblclick.zoom", null);
+
+          // ------ Filters ------
           const defs = svg.append("defs");
           const filterNormal = defs
             .append("filter")
@@ -122,11 +119,9 @@ const D3MindMap = ({ data, externalViewMode }) => {
             merge.append("feMergeNode").attr("in", "SourceGraphic");
           });
 
-          // ------ Створюємо дані з урахуванням глибини ------
+          // ------ Data ------
           const { nodes, links } = collectNodesAndLinks(data, 0);
-
-          // ------ Шкала кольорів ------
-          const colorScale = d3.scale.category10();
+          const colorScale = d3.scale.category20();
 
           // ------ Force Layout Setup ------
           const force = d3.layout
@@ -134,26 +129,28 @@ const D3MindMap = ({ data, externalViewMode }) => {
             .nodes(nodes)
             .links(links)
             .size([width, height])
-            .charge(-3000)
-            .linkDistance((d) => 140 + d.target.depth * 50)
-            .on("tick", tick)
-            .start();
+            .charge(-8000) // Збільшена сила відштовхування
+            .linkDistance((d) => 250 + d.target.depth * 80) // Збільшено відстань між вузлами
+            .on("tick", tick);
 
+          force.start();
+
+          // ------ Контейнер для групування елементів ------
           const gContainer = svg
             .append("g")
             .attr("class", "mindmap-force-container");
 
-          // ------ Draw Links ------
+          // ------ Малюємо лінії ------
           const link = gContainer
             .selectAll(".link")
             .data(links)
             .enter()
             .append("line")
             .attr("class", "link")
-            .style("stroke", (d) => colorScale(d.target.depth))
+            .style("stroke", (d) => colorScale(d.source.label))
             .style("stroke-width", 3);
 
-          // ------ Draw Nodes ------
+          // ------ Малюємо вузли ------
           const node = gContainer
             .selectAll(".node")
             .data(nodes)
@@ -174,36 +171,35 @@ const D3MindMap = ({ data, externalViewMode }) => {
                   .style("fill", "#4caf50")
                   .style("filter", "url(#filterPressed)");
               }
-            })
-            .call(force.drag);
+            });
 
-          // Збільшуємо прямокутник вузла та налаштовуємо скруглення
+          // Використовуємо drag – можна вимкнути, якщо "сіпання" турбує
+          node.call(force.drag);
+
           node
             .append("rect")
-            .attr("x", d => d.depth === 0 ? -100 : -60)
-            .attr("y", d => d.depth === 0 ? -90 : -50)
-            .attr("width", d => d.depth === 0 ? 200 : 120)
-            .attr("height", d => d.depth === 0 ? 180 : 100)
+            .attr("x", (d) => (d.depth === 0 ? -100 : -60))
+            .attr("y", (d) => (d.depth === 0 ? -90 : -50))
+            .attr("width", (d) => (d.depth === 0 ? 200 : 120))
+            .attr("height", (d) => (d.depth === 0 ? 180 : 100))
             .attr("rx", 20)
             .attr("ry", 20)
             .attr("data-pressed", "false")
             .style("fill", "#ffffff")
             .style("filter", "url(#filterNormal)");
 
-          // Текст усередині вузла
+          // ------ Текст (центрований) ------
           node
             .append("text")
-            .attr("x", 0)
-            .attr("dy", ".31em")
             .attr("text-anchor", "middle")
-            .text((d) => d.label)
+            .attr("dominant-baseline", "middle")
             .style("font", "14px 'Poppins', sans-serif")
             .style("font-weight", "bold")
             .style("fill", "#013b6e")
-            .style("overflow-wrap", "break-word")
-            .style("word-wrap", "break-word")
-            .call(wrapText, 110);
+            .text((d) => d.label)
+            .call(wrapText, 100);
 
+          // Функція для перенесення рядків тексту
           function wrapText(textSelection, width) {
             textSelection.each(function () {
               const textNode = d3.select(this);
@@ -212,15 +208,7 @@ const D3MindMap = ({ data, externalViewMode }) => {
                 line = [],
                 lineNumber = 0,
                 lineHeight = 1.1,
-                x = textNode.attr("x") || 0,
-                y = textNode.attr("y") || 0,
-                dy = parseFloat(textNode.attr("dy")) || 0,
-                tspan = textNode
-                  .text(null)
-                  .append("tspan")
-                  .attr("x", x)
-                  .attr("y", y)
-                  .attr("dy", dy + "em");
+                tspan = textNode.text(null).append("tspan").attr("x", 0).attr("y", 0);
               while ((word = words.pop())) {
                 line.push(word);
                 tspan.text(line.join(" "));
@@ -230,39 +218,80 @@ const D3MindMap = ({ data, externalViewMode }) => {
                   line = [word];
                   tspan = textNode
                     .append("tspan")
-                    .attr("x", x)
-                    .attr("y", y)
-                    .attr("dy", ++lineNumber * lineHeight + dy + "em")
+                    .attr("x", 0)
+                    .attr("y", ++lineNumber * lineHeight + "em")
                     .text(word);
                 }
               }
             });
           }
 
-          function tick() {
+          // Функція для обробки колізій (щоб вузли не накладалися)
+          function collide(alpha) {
+            const quadtree = d3.geom.quadtree(nodes);
+            return function(d) {
+              // Визначаємо радіус вузла (приблизно)
+              const r = d.depth === 0 ? 100 : 60;
+              const padding = 10; // відступ між вузлами
+              const rb = r + padding;
+              const nx1 = d.x - rb,
+                    nx2 = d.x + rb,
+                    ny1 = d.y - rb,
+                    ny2 = d.y + rb;
+              quadtree.visit(function(quad, x1, y1, x2, y2) {
+                if (!quad.point || quad.point === d) return false;
+                if (x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1) return false;
+                let x = d.x - quad.point.x;
+                let y = d.y - quad.point.y;
+                let l = Math.sqrt(x * x + y * y);
+                const r2 = quad.point.depth === 0 ? 100 : 60;
+                const rSum = r + r2 + padding;
+                if (l < rSum) {
+                  l = (l - rSum) / l * alpha;
+                  x *= l;
+                  y *= l;
+                  d.x -= x;
+                  d.y -= y;
+                  quad.point.x += x;
+                  quad.point.y += y;
+                }
+                return false;
+              });
+            };
+          }
+
+          // Функція tick для оновлення позицій
+          function tick(e) {
+            // Оновлюємо позиції ліній
             link
               .attr("x1", (d) => d.source.x)
               .attr("y1", (d) => d.source.y)
               .attr("x2", (d) => d.target.x)
               .attr("y2", (d) => d.target.y);
+            // Викликаємо колізії
+            node.each(collide(e.alpha));
+            // Оновлюємо позиції вузлів
             node.attr("transform", (d) => `translate(${d.x},${d.y})`);
           }
 
+          // ------ Налаштування масштабування ------
           const zoom = d3.behavior
             .zoom()
-            .scaleExtent([0.2, 5])
+            .scaleExtent([0.2, 5]) // Тепер можна віддаляти далі
             .on("zoom", function () {
               gContainer.attr(
                 "transform",
                 `translate(${d3.event.translate}) scale(${d3.event.scale})`
               );
             });
+
           svg.call(zoom);
         }
       })
       .catch((err) => {
         console.error("Error loading D3:", err);
       });
+
     return () => {
       isCancelled = true;
     };
@@ -271,7 +300,7 @@ const D3MindMap = ({ data, externalViewMode }) => {
   const d3ContainerStyle = {
     width: "100vw",
     height: "100vh",
-    overscrollBehavior: "none"
+    overscrollBehavior: "none",
   };
 
   return <div ref={d3Container} style={d3ContainerStyle} />;

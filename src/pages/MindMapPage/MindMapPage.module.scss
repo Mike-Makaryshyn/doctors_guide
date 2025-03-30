@@ -20,6 +20,35 @@
   right: 0px;
   z-index: 2000;
 }
+.iconSelectorContainer {
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.iconSelector {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
+  /* Remove border */
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+  color: #013b6e;
+}
+
+.active {
+  background-color: #013b6e;
+  color: #ffffff;
+}
 
 .settingsButton {
   background-color: #4caf50;
