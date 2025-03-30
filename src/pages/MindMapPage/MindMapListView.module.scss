@@ -39,6 +39,7 @@
 /* ======== Загальні стилі для всіх вкладених списків (2-й рівень і глибше) ======== */
 .nestedList {
   list-style: none;
+
   margin: 0;
   padding: 0;
   position: relative;
@@ -61,7 +62,7 @@
   content: "";
   position: absolute;
   left: -30px;
-  top: -20px;
+  top: -19px;
   bottom: -30px;
   width: 2px;
   background-color: #2ecc71; /* 2-й рівень — зелений */
@@ -69,16 +70,21 @@
 
 /* 3-й рівень: червоний (#e74c3c) */
 .nestedList .nestedList .listItem > .nodeContainer::before {
+  top: -19px;
+  bottom: -30px;
   background-color: #e74c3c;
 }
 
 /* Прибираємо горизонтальну лінію для найпершого (root) елемента */
 .rootList > .listItem > .nodeContainer > .tileWrapper::after {
+  
   content: none;
 }
 
 /* 4-й рівень: фіолетовий (#9b59b6) */
 .nestedList .nestedList .nestedList .listItem > .nodeContainer::before {
+  top: -19px;
+  bottom: -30px;
   background-color: #9b59b6;
 }
 
@@ -89,6 +95,10 @@
   .nestedList
   .listItem
   > .nodeContainer::before {
+    position: absolute;
+    
+    top: -20px;
+    bottom: -33px;
   background-color: #f1c40f;
 }
 
