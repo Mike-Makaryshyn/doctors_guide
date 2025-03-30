@@ -5,9 +5,14 @@ import styles from './MindMapListView.module.scss';
 
 const MindMapListView = ({ data }) => {
   const [pressedNodes, setPressedNodes] = useState({});
+  const [collapsedNodes, setCollapsedNodes] = useState({});
 
   const togglePressed = (id) => {
     setPressedNodes((prev) => ({ ...prev, [id]: !prev[id] }));
+  };
+
+  const toggleCollapse = (id) => {
+    setCollapsedNodes((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
   /**
@@ -18,7 +23,6 @@ const MindMapListView = ({ data }) => {
    * @returns {JSX.Element}
    */
   const renderList = (node, index, siblings) => {
-    // Останній елемент визначається лише за індексом
     const isLastItem = (index === siblings.length - 1);
 
     return (
@@ -28,7 +32,6 @@ const MindMapListView = ({ data }) => {
           [styles.lastItem]: isLastItem,
         })}
       >
-        {/* Контейнер вузла */}
         <div className={styles.nodeContainer}>
           <div className={styles.tileWrapper}>
             <div
@@ -38,12 +41,29 @@ const MindMapListView = ({ data }) => {
               onClick={() => togglePressed(node.id)}
             >
               {node.label}
+
+              {node.children && node.children.length > 0 && (
+                <span
+                  className={styles.arrow}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleCollapse(node.id);
+                  }}
+                >
+                  {collapsedNodes[node.id] ? '▶' : '▼'}
+                </span>
+              )}
             </div>
           </div>
 
-          {/* Якщо є діти, обгортаємо їх у <ul> */}
+          {/* Рендеримо дітей завжди, а видимість контролюємо через CSS-класи collapsed/expanded */}
           {node.children && node.children.length > 0 && (
-            <div className={styles.childrenContainer}>
+            <div
+              className={classNames(
+                styles.childrenContainer,
+                collapsedNodes[node.id] ? styles.collapsed : styles.expanded
+              )}
+            >
               <ul className={styles.nestedList}>
                 {node.children.map((child, i) => renderList(child, i, node.children))}
               </ul>

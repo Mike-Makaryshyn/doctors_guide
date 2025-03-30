@@ -1,175 +1,200 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    padding: 20px;
-    overflow-y: auto;
-    box-sizing: border-box;
+  /* Якщо хочемо лише вертикальний скрол */
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  /* решта властивостей */
+  min-width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ======== Кореневий список (рівень 1) ======== */
+.rootList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Кореневий елемент — без вертикальних ліній */
+.rootList > .listItem {
+  position: relative;
+  margin: 10px 0;
+  padding: 0;
+}
+
+/* Вимикаємо псевдоелементи для кореневого рівня */
+.rootList > .listItem::before {
+  content: none;
+}
+
+/* Якщо це останній елемент (lastItem), обрізаємо вертикальну лінію */
+.listItem.lastItem > .nodeContainer::before {
+  height: 0 !important;
+  background: none !important;
+}
+
+/* ======== Загальні стилі для всіх вкладених списків (2-й рівень і глибше) ======== */
+.nestedList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Мінімізуємо відступи між елементами, щоб не було візуальних «пробілів» */
+.nestedList .listItem {
+  margin: 0 0 0 60px; /* Тільки відступ ліворуч */
+  padding: 0;
+  position: relative;
+}
+
+.nestedList .listItem > .nodeContainer {
+  position: relative;
+  padding: 0;
+}
+
+/* Вертикальна лінія (2-й рівень) */
+.nestedList .listItem > .nodeContainer::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: -20px;
+  bottom: -30px;
+  width: 2px;
+  background-color: #2ecc71; /* 2-й рівень — зелений */
+}
+
+/* 3-й рівень: червоний (#e74c3c) */
+.nestedList .nestedList .listItem > .nodeContainer::before {
+  background-color: #e74c3c;
+}
+
+/* Прибираємо горизонтальну лінію для найпершого (root) елемента */
+.rootList > .listItem > .nodeContainer > .tileWrapper::after {
+  content: none;
+}
+
+/* 4-й рівень: фіолетовий (#9b59b6) */
+.nestedList .nestedList .nestedList .listItem > .nodeContainer::before {
+  background-color: #9b59b6;
+}
+
+/* 5-й рівень: жовтий (#f1c40f) */
+.nestedList
+  .nestedList
+  .nestedList
+  .nestedList
+  .listItem
+  > .nodeContainer::before {
+  background-color: #f1c40f;
+}
+
+/* ===== Горизонтальна лінія (зв’язок плитки з вузлом) ===== */
+.tileWrapper {
+  position: relative;
+}
+
+/* 2-й рівень: зелена горизонтальна лінія */
+.tileWrapper::after {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  width: 30px;
+  height: 2px;
+  background-color: #2ecc71;
+  transform: translateY(-50%);
+}
+
+/* 3-й рівень: червона горизонтальна лінія */
+.nestedList .nestedList .tileWrapper::after {
+  background-color: #e74c3c;
+}
+
+/* 4-й рівень: фіолетова горизонтальна лінія */
+.nestedList .nestedList .nestedList .tileWrapper::after {
+  background-color: #9b59b6;
+}
+
+/* 5-й рівень: жовта горизонтальна лінія */
+.nestedList .nestedList .nestedList .nestedList .tileWrapper::after {
+  background-color: #f1c40f;
+}
+
+/* ===== Плитка (кнопка/елемент) ===== */
+.tile {
+  display: inline-block;
+  padding: 15px;
+  min-height: 50px;
+  border-radius: 10px;
+  background: #ffffff;
+  transition: transform 0.2s ease, background 0.3s ease;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: bold;
+  color: #013b6e;
+  text-align: center;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.tilePressed {
+  background: #4caf50;
+  color: #ffffff;
+  transform: translateY(1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Анімація згортання/розгортання ===== */
+.childrenContainer {
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.collapsed {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none; /* щоб у згорнутому стані не можна було клікнути */
+}
+
+.expanded {
+  max-height: 9999px; // або інше велике число
+  opacity: 1;
+}
+
+/* ===== Стрілочка справа від плитки ===== */
+.arrow {
+  display: inline-block;
+  margin-left: 8px; /* Тепер ліворуч від стрілки буде невеликий відступ */
+  cursor: pointer;
+  font-size: 16px;
+
+}
+
+/* =================== Медіа-запити для мобільних пристроїв =================== */
+@media (max-width: 768px) {
+  /* Зменшуємо масштаб усього контейнера */
+  .container {
+    transform: scale(0.85);
+    transform-origin: top left;
+    width: 120%;
   }
-  
-  /* ======== Кореневий список (рівень 1) ======== */
-  .rootList {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Кореневий елемент — без вертикальних ліній */
-  .rootList > .listItem {
-    position: relative;
-    margin: 10px 0;
-    padding: 0;
-  }
-  
-  /* Вимикаємо псевдоелементи для кореневого рівня */
-  .rootList > .listItem::before {
-    content: none;
-  }
-  
-  /* Якщо це останній елемент (lastItem), обрізаємо вертикальну лінію (при бажанні можна видалити) */
-  .listItem.lastItem > .nodeContainer::before {
-    height: 0 !important;
-    background: none !important;
-  }
-  
-  /* ======== Загальні стилі для всіх вкладених списків (2-й рівень і глибше) ======== */
-  .nestedList {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-  }
-  
-  /* 
-    Мінімізуємо відступи між елементами, щоб не було візуальних "пробілів".
-    Тут можна підлаштувати margin/padding за смаком. 
-  */
+
+  /* Зменшуємо відступи для вкладених списків */
   .nestedList .listItem {
-    margin: 0 0 0 60px; /* Тільки відступ ліворуч, аби зберегти "гілку" */
-    padding: 0;        /* Прибираємо вертикальні падінги */
-    position: relative;
+    margin-left: 30px;
   }
-  
-  /* Контейнер вузла: теж забираємо зайві падінги */
-  .nestedList .listItem > .nodeContainer {
-    position: relative;
-    padding: 0; /* Прибираємо падінги зверху/знизу */
-  }
-  
-  /* 
-    Вертикальна лінія:
-    - left: -30px, щоб зберегти відступ 
-    - top: -20px та bottom: -30px дозволяє їй виходити за контейнер 
-      і таким чином "з'єднуватися" з лінією попереднього/наступного елемента.
-  */
-  .nestedList .listItem > .nodeContainer::before {
-    content: "";
-    position: absolute;
-    left: -30px;
-    top: -20px;      
-    bottom: -30px;   
-    width: 2px;
-    background-color: #2ecc71; /* 2-й рівень — зелений */
-  }
-  
-  /* 3-й рівень: червоний (#e74c3c) */
-  .nestedList .nestedList .listItem > .nodeContainer::before {
-    background-color: #e74c3c;
-  }
-  
-  /* Прибираємо горизонтальну лінію для найпершого (root) елемента */
-  .rootList > .listItem > .nodeContainer > .tileWrapper::after {
-    content: none;
-  }
-  
-  /* 4-й рівень: фіолетовий (#9b59b6) */
-  .nestedList .nestedList .nestedList .listItem > .nodeContainer::before {
-    background-color: #9b59b6;
-  }
-  
-  /* 5-й рівень: жовтий (#f1c40f) */
-  .nestedList .nestedList .nestedList .nestedList .listItem > .nodeContainer::before {
-    background-color: #f1c40f;
-  }
-  
-  /* ===== Горизонтальна лінія (зв’язок плитки з вузлом) ===== */
-  .tileWrapper {
-    position: relative;
-  }
-  
-  /* 2-й рівень: зелена горизонтальна лінія */
-  .tileWrapper::after {
-    content: "";
-    position: absolute;
-    left: -30px;
-    top: 50%;
-    width: 30px;
-    height: 2px;
-    background-color: #2ecc71;
-    transform: translateY(-50%);
-  }
-  
-  /* 3-й рівень: червона горизонтальна лінія */
-  .nestedList .nestedList .tileWrapper::after {
-    background-color: #e74c3c;
-  }
-  
-  /* 4-й рівень: фіолетова горизонтальна лінія */
-  .nestedList .nestedList .nestedList .tileWrapper::after {
-    background-color: #9b59b6;
-  }
-  
-  /* 5-й рівень: жовта горизонтальна лінія */
-  .nestedList .nestedList .nestedList .nestedList .tileWrapper::after {
-    background-color: #f1c40f;
-  }
-  
-  /* ===== Плитка (кнопка/елемент) ===== */
+
+  /* Зменшуємо розміри плитки */
   .tile {
-    display: inline-block;
-    padding: 15px;
-    min-height: 50px;
-    border-radius: 10px;
-    background: #ffffff;
-    transition: transform 0.2s ease, background 0.3s ease;
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: bold;
-    color: #013b6e;
-    text-align: center;
-    overflow: hidden;
-    border: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 1;
+    font-size: 14px;
+    padding: 10px;
   }
-  
-  .tilePressed {
-    background: #4caf50;
-    color: #ffffff;
-    transform: translateY(1px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* =================== Медіа-запити для мобільних пристроїв =================== */
-  @media (max-width: 768px) {
-    /* Зменшуємо масштаб усього контейнера */
-    .container {
-      transform: scale(0.85);
-      transform-origin: top left;
-      /* Додатково розширюємо контейнер, щоб масштаб не обрізав контент */
-      width: 120%;
-    }
-  
-    /* Зменшуємо відступи для вкладених списків */
-    .nestedList .listItem {
-      margin-left: 30px;
-    }
-  
-    /* Зменшуємо розміри плитки */
-    .tile {
-      font-size: 14px;
-      padding: 10px;
-    }
-  }
+}
