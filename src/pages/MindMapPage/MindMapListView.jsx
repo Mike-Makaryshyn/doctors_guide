@@ -3,6 +3,22 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './MindMapListView.module.scss';
 
+const ArrowIcon = ({ isCollapsed }) => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {isCollapsed ? (
+      <path d="M9 18l6-6-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    ) : (
+      <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    )}
+  </svg>
+);
+
 const MindMapListView = ({ data }) => {
   const [pressedNodes, setPressedNodes] = useState({});
   const [collapsedNodes, setCollapsedNodes] = useState({});
@@ -15,13 +31,6 @@ const MindMapListView = ({ data }) => {
     setCollapsedNodes((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
-  /**
-   * Рекурсивно рендеримо вузли списку.
-   * @param {Object} node - поточний вузол
-   * @param {number} index - індекс вузла серед "братів"
-   * @param {Array} siblings - масив "братів" поточного вузла
-   * @returns {JSX.Element}
-   */
   const renderList = (node, index, siblings) => {
     const isLastItem = (index === siblings.length - 1);
 
@@ -50,13 +59,12 @@ const MindMapListView = ({ data }) => {
                     toggleCollapse(node.id);
                   }}
                 >
-                  {collapsedNodes[node.id] ? '▶' : '▼'}
+                  <ArrowIcon isCollapsed={collapsedNodes[node.id]} />
                 </span>
               )}
             </div>
           </div>
 
-          {/* Рендеримо дітей завжди, а видимість контролюємо через CSS-класи collapsed/expanded */}
           {node.children && node.children.length > 0 && (
             <div
               className={classNames(
