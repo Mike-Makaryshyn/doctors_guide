@@ -388,7 +388,20 @@ export const main_menu_items = {
           ro: "Cazuri",
           link: "/cases",
         },
-     
+        {
+          en: "Mindmap",
+          fr: "Carte mentale",
+          es: "Mapa mental",
+          ar: "خريطة ذهنية",
+          tr: "Zihin haritası",
+          pl: "Mapa myśli",
+          uk: "Майндмеп",
+          ru: "Майндмэп",
+          de: "Mindmap",
+          el: "Χάρτης σκέψης",
+          ro: "Hartă mentală",
+          link: "/mindmap",
+        },
         {
           en: "Frequent Cases in Region",
           fr: "Cas fréquents dans la région",

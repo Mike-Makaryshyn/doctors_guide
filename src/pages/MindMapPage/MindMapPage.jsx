@@ -4,6 +4,7 @@ import D3MindMap from "./D3MindMap";
 import { headacheMindMap, headacheListData } from "./topics/headache";
 import { strokeMindMap, strokeListData } from "./topics/stroke"; 
 import { subarachnoidMindMap, subarachnoidListData } from "./topics/subarachnoid";
+import { migraeneMindMap, migraeneListData } from "./topics/migrean";
 import { FaCog, FaList, FaSitemap } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import styles from "./MindMapPage.module.scss";
@@ -19,7 +20,7 @@ export default function MindMapPage() {
   const topics = [
     {
       id: "headache",
-      label: "Болі голови",
+      label: "Kopfschmerz",
       data: viewMode === "list" ? headacheListData : headacheMindMap
     },
     {
@@ -29,9 +30,14 @@ export default function MindMapPage() {
     },
     {
       id: "subarachnoid",
-      label: "SAB",
+      label: "Subarachnoidalblutung",
       data: viewMode === "list" ? subarachnoidListData : subarachnoidMindMap
     },
+    {
+      id: "migraen",
+      label: "Migräne",
+      data: viewMode === "list" ? migraeneListData : migraeneMindMap
+    }
   ];
 
   // Закриваємо модалку при кліку поза її межами
