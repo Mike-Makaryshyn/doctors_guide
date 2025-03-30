@@ -171,7 +171,7 @@ const D3MindMap = ({ data, externalViewMode }) => {
               } else {
                 rect
                   .attr("data-pressed", "true")
-                  .style("fill", "#2a7c6f")
+                  .style("fill", "#4caf50")
                   .style("filter", "url(#filterPressed)");
               }
             })
@@ -180,10 +180,10 @@ const D3MindMap = ({ data, externalViewMode }) => {
           // Збільшуємо прямокутник вузла та налаштовуємо скруглення
           node
             .append("rect")
-            .attr("x", -60)
-            .attr("y", -50)
-            .attr("width", 120)
-            .attr("height", 100)
+            .attr("x", d => d.depth === 0 ? -100 : -60)
+            .attr("y", d => d.depth === 0 ? -90 : -50)
+            .attr("width", d => d.depth === 0 ? 200 : 120)
+            .attr("height", d => d.depth === 0 ? 180 : 100)
             .attr("rx", 20)
             .attr("ry", 20)
             .attr("data-pressed", "false")

@@ -18,7 +18,8 @@ const MindMapListView = ({ data }) => {
    * @returns {JSX.Element}
    */
   const renderList = (node, index, siblings) => {
-    const isLastItem = index === siblings.length - 1;
+    // Останній елемент визначається лише за індексом
+    const isLastItem = (index === siblings.length - 1);
 
     return (
       <li
@@ -56,8 +57,6 @@ const MindMapListView = ({ data }) => {
   return (
     <div className={styles.container}>
       <ul className={styles.rootList}>
-        {/* Для кореневого вузла теж викликаємо renderList,
-            але siblings буде [data], щоб index 0 === length-1 */}
         {renderList(data, 0, [data])}
       </ul>
     </div>
