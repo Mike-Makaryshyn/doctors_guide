@@ -1,24 +1,24 @@
-/* src/pages/MindMapPage/MindMapPage.module.scss */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+/* Контейнер, що займає всю сторінку, але дозволяє прокрутку */
 .fullScreenContainer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  position: relative;    /* Замість fixed */
+  width: 100%;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-y: auto;      /* Дозволяємо вертикальний скрол */
+  overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
-  z-index: 1; /* Mindmap is behind the UI elements */
+  z-index: 1;
 }
 
+/* Кнопка налаштувань у правому нижньому куті */
 .bottomRightSettings {
-  position: fixed; /* FIXED, so it's always visible on mobile */
+  position: fixed;
   bottom: 10px;
   right: 10px;
-  z-index: 2000; /* Above mindmap */
+  z-index: 2000;
 }
 
 .settingsButton {
@@ -41,10 +41,10 @@
   transform: scale(1.1);
 }
 
-/* Вертикальний слайдер зуму */
+/* Вертикальний слайдер зуму (для мобільних) */
 .zoomSliderContainer {
   position: fixed;
-  bottom: 70px; /* чуть вище кнопки */
+  bottom: 70px;
   right: 20px;
   z-index: 2000;
   width: 40px;
@@ -59,12 +59,12 @@
 
 .zoomSlider {
   -webkit-appearance: none;
-  width: 150px; /* use as 'height' after rotation */
+  width: 150px; /* Використовується як \"height\" після повороту */
   transform: rotate(-90deg);
   cursor: pointer;
 }
 
-/* Popup-модаль */
+/* Модальне вікно */
 .popupContainerDesktop {
   font-family: 'Poppins', sans-serif;
   background: #fff;
@@ -76,7 +76,7 @@
   bottom: 45px;
   right: 45px;
   text-align: center;
-  z-index: 3000; /* Above everything else */
+  z-index: 3000;
 }
 
 .popupContainerMobile {

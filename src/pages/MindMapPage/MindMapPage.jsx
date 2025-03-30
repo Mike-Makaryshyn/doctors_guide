@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import D3MindMap from "./D3MindMap";
 import { headacheMindMap, headacheListData } from "./topics/headache";
-import { strokeMindMap, strokeListData } from "./topics/stroke"; // додано strokeListData
+import { strokeMindMap, strokeListData } from "./topics/stroke"; 
+import { subarachnoidMindMap, subarachnoidListData } from "./topics/subarachnoid";
 import { FaCog } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import styles from "./MindMapPage.module.scss";
@@ -14,12 +15,26 @@ export default function MindMapPage() {
   const [viewMode, setViewMode] = useState("mindmap");
   const modalRef = useRef(null);
 
-  // Тепер для обох топіків при режимі "list" використовуються відповідні трансформовані дані
+  // Підбираємо дані залежно від вибраного режиму (list або mindmap)
   const topics = [
-    { id: "headache", label: "Болі голови", data: viewMode === "list" ? headacheListData : headacheMindMap },
-    { id: "stroke", label: "Schlaganfall", data: viewMode === "list" ? strokeListData : strokeMindMap },
+    {
+      id: "headache",
+      label: "Болі голови",
+      data: viewMode === "list" ? headacheListData : headacheMindMap
+    },
+    {
+      id: "stroke",
+      label: "Schlaganfall",
+      data: viewMode === "list" ? strokeListData : strokeMindMap
+    },
+    {
+      id: "subarachnoid",
+      label: "SAB",
+      data: viewMode === "list" ? subarachnoidListData : subarachnoidMindMap
+    },
   ];
 
+  // Закриваємо модалку при кліку поза її межами
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
@@ -44,9 +59,17 @@ export default function MindMapPage() {
 
   return (
     <MainLayout>
+      {/* Контейнер, що тягнеться на всю висоту та дозволяє прокрутку */}
       <div className={styles.fullScreenContainer}>
-        <D3MindMap data={selectedTopic.data} externalZoom={zoomValue} externalViewMode={viewMode} />
+        {/* D3MindMap рендерить або майндмеп, або список (через MindMapListView) */}
+        <D3MindMap
+          key={viewMode}
+          data={selectedTopic.data}
+          externalZoom={zoomValue}
+          externalViewMode={viewMode}
+        />
 
+        {/* Кнопка налаштувань в правому нижньому куті */}
         <div className={styles.bottomRightSettings}>
           <button
             className={styles.settingsButton}
@@ -56,6 +79,7 @@ export default function MindMapPage() {
           </button>
         </div>
 
+        {/* Вертикальний слайдер зуму (відображається тільки на вузьких екранах) */}
         {window.innerWidth < 768 && (
           <div className={styles.zoomSliderContainer}>
             <input
@@ -70,6 +94,7 @@ export default function MindMapPage() {
           </div>
         )}
 
+        {/* Модальне вікно налаштувань */}
         {isModalOpen && (
           <div
             className={

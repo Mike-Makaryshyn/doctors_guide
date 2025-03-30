@@ -1,27 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
-// Utility function to flatten the tree structure
-const flattenTree = (node, level = 0) => {
-  let items = [{ id: node.id, label: node.label, level }];
-  if (node.children && node.children.length > 0) {
-    node.children.forEach(child => {
-      items = items.concat(flattenTree(child, level + 1));
-    });
-  }
-  return items;
-};
+import styles from './MindMapListView.module.scss';
 
 const MindMapListView = ({ data }) => {
-  const items = flattenTree(data);
+  // Стан для відстеження «натиснутих» плиток за їхнім ID
+  const [pressedNodes, setPressedNodes] = useState({});
+
+  // Функція для перемикання стану конкретного вузла
+  const togglePressed = (id) => {
+    setPressedNodes((prev) => ({ ...prev, [id]: !prev[id] }));
+  };
+
+  // Рекурсивна функція, яка відображає поточний вузол і його дітей
+  const renderList = (node) => (
+    <li key={node.id} className={styles.listItem}>
+      <div
+        className={`${styles.tile} ${
+          pressedNodes[node.id] ? styles.tilePressed : ''
+        }`}
+        onClick={() => togglePressed(node.id)}
+      >
+        {node.label}
+      </div>
+      {node.children && node.children.length > 0 && (
+        <ul className={styles.nestedList}>
+          {node.children.map((child) => renderList(child))}
+        </ul>
+      )}
+    </li>
+  );
 
   return (
-    <div style={{ padding: '10px', overflowY: 'auto', maxHeight: '100vh' }}>
-      {items.map(item => (
-        <div key={item.id} style={{ paddingLeft: item.level * 20, margin: '4px 0' }}>
-          <span style={{ fontWeight: 'bold' }}>{item.label}</span>
-        </div>
-      ))}
+    <div className={styles.container}>
+      <ul className={styles.rootList}>
+        {renderList(data)}
+      </ul>
     </div>
   );
 };
