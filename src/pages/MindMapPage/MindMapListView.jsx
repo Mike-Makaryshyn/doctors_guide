@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './MindMapListView.module.scss';
@@ -38,6 +38,10 @@ const getInitialCollapsed = (node, isRoot = true) => {
 const MindMapListView = ({ data }) => {
   const [pressedNodes, setPressedNodes] = useState({});
   const [collapsedNodes, setCollapsedNodes] = useState(() => getInitialCollapsed(data));
+
+  useEffect(() => {
+    setCollapsedNodes(getInitialCollapsed(data));
+  }, [data]);
 
   const togglePressed = (id) => {
     setPressedNodes((prev) => ({ ...prev, [id]: !prev[id] }));
