@@ -19,9 +19,25 @@ const ArrowIcon = ({ isCollapsed }) => (
   </svg>
 );
 
+const getInitialCollapsed = (node, isRoot = true) => {
+  let result = {};
+  // Якщо вузол має дітей
+  if (node.children && node.children.length > 0) {
+    // для кореневого вузла ставимо false, щоб він був розгорнутим
+    // для всіх інших — true
+    result[node.id] = !isRoot;
+
+    // Рекурсивно обходимо дітей
+    node.children.forEach((child) => {
+      result = { ...result, ...getInitialCollapsed(child, false) };
+    });
+  }
+  return result;
+};
+
 const MindMapListView = ({ data }) => {
   const [pressedNodes, setPressedNodes] = useState({});
-  const [collapsedNodes, setCollapsedNodes] = useState({});
+  const [collapsedNodes, setCollapsedNodes] = useState(() => getInitialCollapsed(data));
 
   const togglePressed = (id) => {
     setPressedNodes((prev) => ({ ...prev, [id]: !prev[id] }));
