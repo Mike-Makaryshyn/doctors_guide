@@ -5,6 +5,7 @@ import { headacheMindMap, headacheListData } from "./topics/headache";
 import { strokeMindMap, strokeListData } from "./topics/stroke"; 
 import { subarachnoidMindMap, subarachnoidListData } from "./topics/subarachnoid";
 import { migraeneMindMap, migraeneListData } from "./topics/migrean";
+import { sampleMindMap, sampleListData } from "./topics/sampler";
 import { FaCog, FaList, FaSitemap } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import styles from "./MindMapPage.module.scss";
@@ -13,7 +14,7 @@ export default function MindMapPage() {
   const [selectedTopicId, setSelectedTopicId] = useState("headache");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [zoomValue, setZoomValue] = useState(1.0);
-  const [viewMode, setViewMode] = useState("mindmap");
+  const [viewMode, setViewMode] = useState("list");
   const modalRef = useRef(null);
 
   // Підбираємо дані залежно від вибраного режиму (list або mindmap)
@@ -37,6 +38,11 @@ export default function MindMapPage() {
       id: "migraen",
       label: "Migräne",
       data: viewMode === "list" ? migraeneListData : migraeneMindMap
+    },
+    {
+      id: "sampler",
+      label: "SAMPLE-Schema",
+      data: viewMode === "list" ? sampleListData : sampleMindMap
     }
   ];
 
