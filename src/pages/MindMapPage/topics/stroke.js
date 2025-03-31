@@ -72,7 +72,7 @@ export const strokeMindMap = {
         { id: "bilateral_infarkt", label: "Bilateraler Infarkt in Fissura calcarina" },
         { id: "isch_mediainfarkt", label: "Ischämischer Mediainfarkt" }
       ]
-    }
+    },
     // Етіологія
     {
       id: "ätiologie",
