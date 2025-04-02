@@ -6,6 +6,7 @@ import { strokeMindMap, strokeListData } from "./topics/stroke";
 import { subarachnoidMindMap, subarachnoidListData } from "./topics/subarachnoid";
 import { migraeneMindMap, migraeneListData } from "./topics/migrean";
 import { sampleMindMap, sampleListData } from "./topics/sampler";
+import { liquorMindMap, liquorListData } from "./topics/liquor";
 import { atemmusterMindMap, atemmusterListData } from "./topics/atemmuster";
 import { FaCog, FaList, FaSitemap } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
@@ -44,6 +45,11 @@ export default function MindMapPage() {
       id: "migraen",
       label: "Migräne",
       data: viewMode === "list" ? migraeneListData : migraeneMindMap
+    },
+    {
+      id: "liquor_diagnostik",
+      label: "Liquordiagnostik",
+      data: viewMode === "list" ? liquorListData : liquorMindMap
     },
     {
       id: "sampler",
