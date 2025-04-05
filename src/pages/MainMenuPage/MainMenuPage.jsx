@@ -25,6 +25,21 @@ const MainMenuPage = () => {
          <div className="page page1 containerSmall mt-20">
             <div className="firstPageImageBlock"></div>
             <div className="main_menu__content">
+              <div className="main_menu__intro">
+                <img
+                  src={require("../../assets/logometagen.jpeg")}
+                  alt="GermanMove Logo"
+                  className="intro_logo"
+                />
+                <div className="intro_description">
+                  <h2>{language === "de" ? "Ihr Wegweiser zur Approbation" : "Your guide to Approbation"}</h2>
+                  <p>
+                    {language === "de"
+                      ? "GermanMove hilft Ihnen bei jedem Schritt auf dem Weg zur medizinischen Anerkennung in Deutschland."
+                      : "GermanMove helps you through every step of the medical licensing journey in Germany."}
+                  </p>
+                </div>
+              </div>
                <div className="main_menu_wrapper">
                   {!selectedRegion && (
                      <div className="main_menu_text__wrapper">
