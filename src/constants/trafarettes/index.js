@@ -7,11 +7,15 @@ import scc from "./subpages/scc";
 import kolorektaleskarzinom from "./subpages/kolorektaleskarzinom";
 import uicc from "./subpages/uicc";
 import tnm from "./subpages/tnm";
-
+import morbusbasedow from "./subpages/schilddruese/morbusbasedow";
 import aorta from "./subpages/anatomie/aorta";
 import koerperachsen from "./subpages/koerperachsen";
 import bewegungall from "./subpages/bewegungall";
 import richtungen from "./subpages/richtungen";
+import czellen from "./subpages/anatomie/czellen";
+import nebenschilddruesen from "./subpages/anatomie/nebenschilddruesen";
+import trachea from "./subpages/anatomie/trachea";
+import schilddruese from "./subpages/anatomie/schilddruese";
 
 import gerinnung from "./subpages/gerinnung/gerinnung";
 import fibrinolyse from "./subpages/gerinnung/fibrinolyse";
@@ -91,57 +95,26 @@ import lachgas from "./subpages/anesthesia/lachgas";
 import sevofluran from "./subpages/anesthesia/sevofluran";
 import isofluran from "./subpages/anesthesia/isofluran";
 import desfluran from "./subpages/anesthesia/desfluran";
-
+import hyperthyreose from "./subpages/schilddruese/hyperthyreose";
 import natriumkaliumatpase from "./subpages/physiologie/natriumkaliumatpase";
 import natriumkanaele from "./subpages/physiologie/natriumkanaele";
 import adrenozeptoren from "./subpages/physiologie/adrenozeptoren";
 import gproteine from "./subpages/physiologie/gproteine";
 import tachykardie from "./subpages/physiologie/tachykardie";
-
+import trak from "./subpages/schilddruese/trak";
 import natriumkanalblocker from "./subpages/medikamente/natriumkanalblocker";
 import lidocain from "./subpages/medikamente/lidocain";
 import laxantien from "./subpages/medikamente/laxantien";
-
+import merseburgertrias from "./subpages/schilddruese/merseburgertrias";
 import mensyndrom from "./subpages/endokrinilogie/mensyndrom";
-
-import schilddruese from "./subpages/anatomie/schilddruese";
+import struma from "./subpages/schilddruese/struma";
+import exophthalmus from "./subpages/schilddruese/exophthalmus";
 import schilddruesenhormone from "./subpages/schilddruese/schilddruesenhormone";
 import t3 from "./subpages/schilddruese/t3";
 import t4 from "./subpages/schilddruese/t4";
 import trh from "./subpages/schilddruese/trh";
 import tsh from "./subpages/schilddruese/tsh";
 import calcitonin from "./subpages/schilddruese/calcitonin";
-import czellen from "./subpages/anatomie/czellen";
-import nebenschilddruesen from "./subpages/anatomie/nebenschilddruesen";
-import trachea from "./subpages/anatomie/trachea";
-import hyperthyreose from "./subpages/schilddruese/hyperthyreose";
-import morbusbasedow from "./subpages/schilddruese/morbusbasedow";
-import trak from "./subpages/schilddruese/trak";
-import merseburgertrias from "./subpages/schilddruese/merseburgertrias";
-import struma from "./subpages/schilddruese/struma";
-import exophthalmus from "./subpages/schilddruese/exophthalmus";
-import thyreoiditis from "./subpages/schilddruese/thyreoiditis";
-import hypothyreose from "./subpages/schilddruese/hypothyreose";
-import hashimoto from "./subpages/schilddruese/hashimoto";
-import thyreoperoxidase from "./subpages/schilddruese/thyreoperoxidase";
-import thyreoglobulin from "./subpages/schilddruese/thyreoglobulin";
-import hyperthyreosisfactitia from "./subpages/schilddruese/hyperthyreosisfactitia";
-import levothyroxin from "./subpages/schilddruese/levothyroxin";
-import hypothyreotekoma from "./subpages/schilddruese/hypothyreotekoma";
-import myxoedem from "./subpages/schilddruese/myxoedem";
-import schilddruesenautonomie from "./subpages/schilddruese/schilddruesenautonomie";
-import schilddruesenadenom from "./subpages/schilddruese/schilddruesenadenom";
-import schilddruesenkarzinome from "./subpages/schilddruese/schilddruesenkarzinome";
-import papillaereschilddruesenkarzinom from "./subpages/schilddruese/papillaereschilddruesenkarzinom";
-import folikulaereschilddruesenkarzinom from "./subpages/schilddruese/folikulaereschilddruesenkarzinom";
-import medullaereschilddruesenkarzinom from "./subpages/schilddruese/medullaereschilddruesenkarzinom";
-import anaplastischeschilddruesenkarzinom from "./subpages/schilddruese/anaplastischeschilddruesenkarzinom";
-import huerthlezellkarzinom from "./subpages/schilddruese/huerthlezellkarzinom";
-import schilddruesenresektionen from "./subpages/schilddruese/schilddruesenresektionen";
-
-import mitose from "./subpages/zellen/mitose";
-import zellzyklus from "./subpages/zellen/zellzyklus";
-
 import jodmangel from "./subpages/schilddruese/jodmangel";
 import iod from "./subpages/schilddruese/iod";
 import plummereffekt from "./subpages/schilddruese/plummereffekt";
@@ -152,12 +125,11 @@ import thyreostatika from "./subpages/schilddruese/thyreostatika";
 import perchlorate from "./subpages/schilddruese/perchlorate";
 import thiamazol from "./subpages/schilddruese/thiamazol";
 import carbimazol from "./subpages/schilddruese/carbimazol";
-
 import antitpo from "./subpages/schilddruese/antitpo";
 import antitg from "./subpages/schilddruese/antitg";
-
+import thyreoiditis from "./subpages/schilddruese/thyreoiditis";
 import feinnadelbiopsie from "./subpages/operation/feinnadelbiopsie";
-
+import hypothyreose from "./subpages/schilddruese/hypothyreose";
 import whostufenschema from "./subpages/schmerzen/whostufenschema";
 import analgetika from "./subpages/schmerzen/analgetika";
 import schmerztherapie from "./subpages/schmerzen/schmerztherapie";
@@ -165,208 +137,216 @@ import coanalgetika from "./subpages/schmerzen/coanalgetika";
 import nsar from "./subpages/schmerzen/nsar";
 import cox1 from "./subpages/schmerzen/cox1";
 import cox2 from "./subpages/schmerzen/cox2";
-
+import hashimoto from "./subpages/schilddruese/hashimoto";
 import hereditäresangioödem from "./subpages/allergie/hereditäresangioödem";
 import allergien from "./subpages/allergie/allergien";
 import c1esteraseinhibitor from "./subpages/allergie/c1esteraseinhibitor";
 import immunantwort from "./subpages/allergie/immunantwort";
 import typiiiallergie from "./subpages/allergie/typiiiallergie";
 import typiiiiAllergie from "./subpages/allergie/typiiiiallergie";
+import thyreoperoxidase from "./subpages/schilddruese/thyreoperoxidase";
+import thyreoglobulin from "./subpages/schilddruese/thyreoglobulin";
+import hyperthyreosisfactitia from "./subpages/schilddruese/hyperthyreosisfactitia";
+import levothyroxin from "./subpages/schilddruese/levothyroxin";
+import hypothyreotekoma from "./subpages/schilddruese/hypothyreotekoma";
+import myxoedem from "./subpages/schilddruese/myxoedem";
+import schilddruesenautonomie from "./subpages/schilddruese/schilddruesenautonomie";
+import schilddruesenadenom from "./subpages/schilddruese/schilddruesenadenom";
+import mitose from "./subpages/zellen/mitose";
+import zellzyklus from "./subpages/zellen/zellzyklus";
 
-
-// Тут формуємо єдиний масив, додаючи до кожного імпорту поле category
-
+import schilddruesenkarzinome from "./subpages/schilddruese/schilddruesenkarzinome";
+import papillaereschilddruesenkarzinom from "./subpages/schilddruese/papillaereschilddruesenkarzinom";
+import folikulaereschilddruesenkarzinom from "./subpages/schilddruese/folikulaereschilddruesenkarzinom";
+import medullaereschilddruesenkarzinom from "./subpages/schilddruese/medullaereschilddruesenkarzinom";
+import anaplastischeschilddruesenkarzinom from "./subpages/schilddruese/anaplastischeschilddruesenkarzinom";
+import huerthlezellkarzinom from "./subpages/schilddruese/huerthlezellkarzinom";
+import schilddruesenresektionen from "./subpages/schilddruese/schilddruesenresektionen";
+// Тут формуємо єдиний масив, додаючи до кожного імпорту додаткові поля mainCategory та category (підкатегорія)
 const all_pages_data = [
   // *** Trafarete ***
-  { ...first_trafarette_page, category: "Trafarete" },
-  { ...second_trafarette_page, category: "Trafarete" },
+  { ...first_trafarette_page, mainCategory: "Innere Medizin", category: "Trafarete" },
+  { ...second_trafarette_page, mainCategory: "Innere Medizin", category: "Trafarete" },
 
   // *** Onkologie ***
-  { ...scc, category: "Onkologie" },
-  { ...kolorektaleskarzinom, category: "Onkologie" },
-  { ...uicc, category: "Onkologie" },
-  { ...tnm, category: "Onkologie" },
+  { ...scc, mainCategory: "Innere Medizin", category: "Onkologie" },
+  { ...kolorektaleskarzinom, mainCategory: "Innere Medizin", category: "Onkologie" },
+  { ...uicc, mainCategory: "Innere Medizin", category: "Onkologie" },
+  { ...tnm, mainCategory: "Innere Medizin", category: "Onkologie" },
 
   // *** Anatomie ***
-  { ...aorta, category: "Anatomie" },
-  { ...koerperachsen, category: "Anatomie" },
-  { ...bewegungall, category: "Anatomie" },
-  { ...richtungen, category: "Anatomie" },
-  { ...czellen, category: "Anatomie" },
-  { ...nebenschilddruesen, category: "Anatomie" },
-  { ...trachea, category: "Anatomie" },
-  { ...schilddruese, category: "Anatomie" }, // Якщо ти хочеш винести в окрему "Schilddrüse", перенеси, але для прикладу залишив тут
+  { ...aorta, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },
+  { ...koerperachsen, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },
+  { ...bewegungall, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },
+  { ...richtungen, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },
+  { ...czellen, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },
+  { ...nebenschilddruesen, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },
+  { ...trachea, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },
+  // Якщо бажаєш винести Schilddrüse окремо, можна змінити mainCategory; тут приклад винесення в Endokrinologie:
+  { ...schilddruese, mainCategory: "Endokrinologie", category: "Schilddrüse" },
 
   // *** Gerinnung (включно з гемофіліями, факторами тощо) ***
-  { ...gerinnung, category: "Gerinnung" },
-  { ...fibrinolyse, category: "Gerinnung" },
-  { ...antikoagulanzien, category: "Gerinnung" },
-  { ...citratantikoagulation, category: "Gerinnung" },
-  { ...citrat, category: "Gerinnung" },
-  { ...ass, category: "Gerinnung" },
-  { ...vonwillebrant, category: "Gerinnung" },
-  { ...willebrandjürgenssyndrom, category: "Gerinnung" },
-  { ...vonicogalfa, category: "Gerinnung" },
-  { ...glykoproteinIIb, category: "Gerinnung" },
-  { ...faktorI, category: "Gerinnung" },
-  { ...faktorII, category: "Gerinnung" },
-  { ...faktorIII, category: "Gerinnung" },
-  { ...faktorIV, category: "Gerinnung" },
-  { ...faktorV, category: "Gerinnung" },
-  { ...faktorVII, category: "Gerinnung" },
-  { ...faktorVIII, category: "Gerinnung" },
-  { ...faktorIX, category: "Gerinnung" },
-  { ...faktorX, category: "Gerinnung" },
-  { ...faktorXI, category: "Gerinnung" },
-  { ...faktorXII, category: "Gerinnung" },
-  { ...faktorXIII, category: "Gerinnung" },
-  { ...proteinc, category: "Gerinnung" },
-  { ...proteins, category: "Gerinnung" },
-  { ...antithrombin, category: "Gerinnung" },
-  { ...plasmin, category: "Gerinnung" },
-  { ...plasminogen, category: "Gerinnung" },
-  { ...virchowtrias, category: "Gerinnung" },
-  { ...haemophiliaa, category: "Gerinnung" },
-  { ...haemophiliab, category: "Gerinnung" },
-  { ...emicizumab, category: "Gerinnung" },
-  { ...faktorxmangel, category: "Gerinnung" },
-  { ...faktorvmangel, category: "Gerinnung" },
-  { ...rosenthalsyndrom, category: "Gerinnung" },
-  { ...vitaminall, category: "Gerinnung" },
-  { ...vitamink, category: "Gerinnung" },
-  { ...vitaminkmangel, category: "Gerinnung" },
+  { ...gerinnung, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...fibrinolyse, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...antikoagulanzien, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...citratantikoagulation, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...citrat, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...ass, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...vonwillebrant, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...willebrandjürgenssyndrom, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...vonicogalfa, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...glykoproteinIIb, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...faktorI, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...faktorII, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...faktorIII, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...faktorIV, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...faktorV, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...faktorVII, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...faktorVIII, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...faktorIX, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...faktorX, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...faktorXI, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...faktorXII, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...faktorXIII, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...proteinc, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...proteins, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...antithrombin, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...plasmin, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...plasminogen, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...virchowtrias, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...haemophiliaa, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...haemophiliab, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...emicizumab, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...faktorxmangel, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...faktorvmangel, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...rosenthalsyndrom, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...vitaminall, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...vitamink, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...vitaminkmangel, mainCategory: "Innere Medizin", category: "Gerinnung" },
 
-
-  
-  // Якщо тобі треба окремо ці генні терапії:
-  { ...valoctocogenroxaparvovec, category: "Gerinnung" },
-  { ...etranacogendezaparvovec, category: "Gerinnung" },
-
-
-
-  // *** (ПРИМІТКА: Якщо правильно, то import proteinz from "./subpages/gerinnung/proteinz";
-  // отже ставиш { ...proteinz, category: "Gerinnung" }, заміни на потрібне) ***
+  // Генна терапія:
+  { ...valoctocogenroxaparvovec, mainCategory: "Innere Medizin", category: "Gerinnung" },
+  { ...etranacogendezaparvovec, mainCategory: "Innere Medizin", category: "Gerinnung" },
 
   // *** Labor ***
-  { ...gerinnungsdiagnostik, category: "Labor" },
-  { ...edta, category: "Labor" },
-  { ...kleinesblutbild, category: "Labor" },
+  { ...gerinnungsdiagnostik, mainCategory: "Labordiagnostik", category: "Labor" },
+  { ...edta, mainCategory: "Labordiagnostik", category: "Labor" },
+  { ...kleinesblutbild, mainCategory: "Labordiagnostik", category: "Labor" },
 
   // *** Anamnese ***
-  { ...anamnese, category: "Anamnese" },
-  { ...gerinnungsanamnese, category: "Anamnese" },
+  { ...anamnese, mainCategory: "Klinische Untersuchung", category: "Anamnese" },
+  { ...gerinnungsanamnese, mainCategory: "Klinische Untersuchung", category: "Anamnese" },
 
   // *** Anesthesia ***
-  { ...anesthesia, category: "Anesthesia" },
-  { ...analgesie, category: "Anesthesia" },
-  { ...hypnose, category: "Anesthesia" },
-  { ...muskelrelaxation, category: "Anesthesia" },
-  { ...oberflaechenanaesthesie, category: "Anesthesia" },
-  { ...Infiltrationsanaesthesie, category: "Anesthesia" },
-  { ...lokalanaesthesie, category: "Anesthesia" },
-  { ...leitungsanaesthesie, category: "Anesthesia" },
-  { ...plexusanaesthesie, category: "Anesthesia" },
-  { ...spinalanaesthesie, category: "Anesthesia" },
-  { ...periduralanaesthesie, category: "Anesthesia" },
-  { ...allgemeinanaesthesie, category: "Anesthesia" },
-  { ...tiva, category: "Anesthesia" },
-  { ...balancierteanaesthesie, category: "Anesthesia" },
-  { ...intubationsnarkose, category: "Anesthesia" },
-  { ...regionalanaesthesie, category: "Anesthesia" },
-  { ...periphereregionalanaesthesie, category: "Anesthesia" },
-  { ...thorakaleepiduralanaesthesie, category: "Anesthesia" },
-  { ...kombiniertespinaleepiduraleanaesthesie, category: "Anesthesia" },
-  { ...inhalationsnarkose, category: "Anesthesia" },
-  { ...maskennarkose, category: "Anesthesia" },
-  { ...larynxmaskennarkose, category: "Anesthesia" },
-  { ...lachgas, category: "Anesthesia" },
-  { ...sevofluran, category: "Anesthesia" },
-  { ...isofluran, category: "Anesthesia" },
-  { ...desfluran, category: "Anesthesia" },
+  { ...anesthesia, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...analgesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...hypnose, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...muskelrelaxation, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...oberflaechenanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...Infiltrationsanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...lokalanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...leitungsanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...plexusanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...spinalanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...periduralanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...allgemeinanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...tiva, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...balancierteanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...intubationsnarkose, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...regionalanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...periphereregionalanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...thorakaleepiduralanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...kombiniertespinaleepiduraleanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...inhalationsnarkose, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...maskennarkose, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...larynxmaskennarkose, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...lachgas, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...sevofluran, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...isofluran, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...desfluran, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
 
   // *** Physiologie ***
-  { ...natriumkaliumatpase, category: "Physiologie" },
-  { ...natriumkanaele, category: "Physiologie" },
-  { ...adrenozeptoren, category: "Physiologie" },
-  { ...gproteine, category: "Physiologie" },
-  { ...tachykardie, category: "Physiologie" },
+  { ...natriumkaliumatpase, mainCategory: "Anatomie & Physiologie", category: "Physiologie" },
+  { ...natriumkanaele, mainCategory: "Anatomie & Physiologie", category: "Physiologie" },
+  { ...adrenozeptoren, mainCategory: "Anatomie & Physiologie", category: "Physiologie" },
+  { ...gproteine, mainCategory: "Anatomie & Physiologie", category: "Physiologie" },
+  { ...tachykardie, mainCategory: "Anatomie & Physiologie", category: "Physiologie" },
 
   // *** Medikamente ***
-  { ...natriumkanalblocker, category: "Medikamente" },
-  { ...lidocain, category: "Medikamente" },
-  { ...laxantien, category: "Medikamente" },
+  { ...natriumkanalblocker, mainCategory: "Therapie & Medikamente", category: "Medikamente" },
+  { ...lidocain, mainCategory: "Therapie & Medikamente", category: "Medikamente" },
+  { ...laxantien, mainCategory: "Therapie & Medikamente", category: "Medikamente" },
 
   // *** Endokrinologie ***
-  { ...mensyndrom, category: "Endokrinologie" },
+  { ...mensyndrom, mainCategory: "Endokrinologie", category: "Endokrinologie" },
 
-  // *** Schilddrüse (якщо хочеш винести окремо) – приклад:
-  { ...schilddruesenhormone, category: "Schilddrüse" },
-  { ...t3, category: "Schilddrüse" },
-  { ...t4, category: "Schilddrüse" },
-  { ...trh, category: "Schilddrüse" },
-  { ...tsh, category: "Schilddrüse" },
-  { ...calcitonin, category: "Schilddrüse" },
-  { ...hyperthyreose, category: "Schilddrüse" },
-  { ...morbusbasedow, category: "Schilddrüse" },
-  { ...trak, category: "Schilddrüse" },
-  { ...merseburgertrias, category: "Schilddrüse" },
-  { ...struma, category: "Schilddrüse" },
-  { ...exophthalmus, category: "Schilddrüse" },
-  { ...thyreoiditis, category: "Schilddrüse" },
-  { ...hypothyreose, category: "Schilddrüse" },
-  { ...hashimoto, category: "Schilddrüse" },
-  { ...thyreoperoxidase, category: "Schilddrüse" },
-  { ...thyreoglobulin, category: "Schilddrüse" },
-  { ...hyperthyreosisfactitia, category: "Schilddrüse" },
-  { ...levothyroxin, category: "Schilddrüse" },
-  { ...hypothyreotekoma, category: "Schilddrüse" },
-  { ...myxoedem, category: "Schilddrüse" },
-  { ...schilddruesenautonomie, category: "Schilddrüse" },
-  { ...schilddruesenadenom, category: "Schilddrüse" },
-  { ...schilddruesenkarzinome, category: "Schilddrüse" },
-  { ...papillaereschilddruesenkarzinom, category: "Schilddrüse" },
-  { ...folikulaereschilddruesenkarzinom, category: "Schilddrüse" },
-  { ...medullaereschilddruesenkarzinom, category: "Schilddrüse" },
-  { ...anaplastischeschilddruesenkarzinom, category: "Schilddrüse" },
-  { ...huerthlezellkarzinom, category: "Schilddrüse" },
-  { ...schilddruesenresektionen, category: "Schilddrüse" },
-  { ...jodmangel, category: "Schilddrüse" },
-  { ...iod, category: "Schilddrüse" },
-  { ...plummereffekt, category: "Schilddrüse" },
-  { ...wolffchaikoffeffekt, category: "Schilddrüse" },
-  { ...radiojodtherapie, category: "Schilddrüse" },
-  { ...schilddruesemedikamente, category: "Schilddrüse" },
-  { ...thyreostatika, category: "Schilddrüse" },
-  { ...perchlorate, category: "Schilddrüse" },
-  { ...thiamazol, category: "Schilddrüse" },
-  { ...carbimazol, category: "Schilddrüse" },
-  { ...antitpo, category: "Schilddrüse" },
-  { ...antitg, category: "Schilddrüse" },
+  // *** Schilddrüse – винесено окремо ***
+  { ...schilddruesenhormone, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...t3, mainCategory: "Endokринologie", category: "Schilddrüse" },
+  { ...t4, mainCategory: "Endokринologie", category: "Schilddrüse" },
+  { ...trh, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...tsh, mainCategory: "Endokринologie", category: "Schilddrüse" },
+  { ...calcitonin, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...hyperthyreose, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...morbusbasedow, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...trak, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...merseburgertrias, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...struma, mainCategory: "Endokринologie", category: "Schilddrüse" },
+  { ...exophthalmus, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...thyreoiditis, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...hypothyreose, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...hashimoto, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...thyreoperoxidase, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...thyreoglobulin, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...hyperthyreosisfactitia, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...levothyroxin, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...hypothyreotekoma, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...myxoedem, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...schilddruesenautonomie, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...schilddruesenadenom, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...schilddruesenkarzinome, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...papillaereschilddruesenkarzinom, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...folikulaereschilddruesenkarzinom, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...medullaereschilddruesenkarzinom, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...anaplastischeschilddruesenkarzinom, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...huerthlezellkarzinom, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...schilddruesenresektionen, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...jodmangel, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...iod, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...plummereffekt, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...wolffchaikoffeffekt, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...radiojodtherapie, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...schilddruesemedikamente, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...thyreostatika, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  { ...perchlorate, mainCategory: "Endokринologie", category: "Schilddrüse" },
+  { ...thiamazol, mainCategory: "Endокринologie", category: "Schilddrüse" },
+  { ...carbimazol, mainCategory: "Endокринologie", category: "Schilddrüse" },
+  { ...antitpo, mainCategory: "Endокринologie", category: "Schilddrüse" },
+  { ...antitg, mainCategory: "Endокринologie", category: "Schilddrüse" },
 
   // *** Zellen ***
-  { ...mitose, category: "Zellen" },
-  { ...zellzyklus, category: "Zellen" },
+  { ...mitose, mainCategory: "Anatomie & Physiologie", category: "Zellen" },
+  { ...zellzyklus, mainCategory: "Anatomie & Physiologie", category: "Zellen" },
 
   // *** Operation ***
-  { ...feinnadelbiopsie, category: "Operation" },
+  { ...feinnadelbiopsie, mainCategory: "Chirurgie & Anästhesie", category: "Operation" },
 
   // *** Schmerzen (Pain) ***
-  { ...whostufenschema, category: "Schmerzen" },
-  { ...analgetika, category: "Schmerzen" },
-  { ...schmerztherapie, category: "Schmerzen" },
-  { ...coanalgetika, category: "Schmerzen" },
-  { ...nsar, category: "Schmerzen" },
-  { ...cox1, category: "Schmerzen" },
-  { ...cox2, category: "Schmerzen" },
+  { ...whostufenschema, mainCategory: "Chirurgie & Anästhesie", category: "Schmerzen" },
+  { ...analgetika, mainCategory: "Chirurgie & Anästhesie", category: "Schmerzen" },
+  { ...schmerztherapie, mainCategory: "Chirurgie & Anästhesie", category: "Schmerzen" },
+  { ...coanalgetika, mainCategory: "Chirurgie & Anästhesie", category: "Schmerzen" },
+  { ...nsar, mainCategory: "Chirurgie & Anästhesie", category: "Schmerzen" },
+  { ...cox1, mainCategory: "Chirurgie & Anästhesie", category: "Schmerzen" },
+  { ...cox2, mainCategory: "Chirurgie & Anästhesie", category: "Schmerzen" },
 
   // *** Allergie ***
-  { ...hereditäresangioödem, category: "Allergie" },
-  { ...allergien, category: "Allergie" },
-  { ...c1esteraseinhibitor, category: "Allergie" },
-  { ...immunantwort, category: "Allergie" },
-  { ...typiiiallergie, category: "Allergie" },
-  { ...typiiiiAllergie, category: "Allergie" },
+  { ...hereditäresangioödem, mainCategory: "Innere Medizin", category: "Allergie" },
+  { ...allergien, mainCategory: "Innere Medizin", category: "Allergie" },
+  { ...c1esteraseinhibitor, mainCategory: "Innere Medizin", category: "Allergie" },
+  { ...immunantwort, mainCategory: "Innere Medizin", category: "Allergie" },
+  { ...typiiiallergie, mainCategory: "Innere Medizin", category: "Allergie" },
+  { ...typiiiiAllergie, mainCategory: "Innere Medizin", category: "Allergie" },
 ];
 
-// Експортуємо цей масив
 export default all_pages_data;

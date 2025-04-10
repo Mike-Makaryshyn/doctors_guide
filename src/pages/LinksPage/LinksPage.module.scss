@@ -2,13 +2,14 @@
   position: relative;
   padding: 20px;
   font-family: "Poppins", sans-serif;
+/* фон всієї сторінки (можеш змінити або видалити) */
 }
 
 /* Контейнер для пошуку */
 .searchContainer {
   position: fixed;
   top: 60px;
-  right: 0px;
+  right: 0;
   z-index: 3000;
   display: flex;
   align-items: center;
@@ -34,7 +35,7 @@
   opacity: 1;
 }
 
-/* Кнопка (лупа / хрестик) */
+/* Кнопка пошуку */
 .searchToggleButton {
   background-color: #4caf50;
   color: #fff;
@@ -53,7 +54,7 @@
   transform: scale(1.1);
 }
 
-/* Акордеон */
+/* Основний акордеон */
 .accordionContainer {
   display: flex;
   flex-direction: column;
@@ -61,32 +62,110 @@
   margin-top: 80px; /* відступ, щоб не закривала кнопка пошуку */
 }
 
+/* Батьківські плитки */
 .accordionItem {
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: max-height 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
   cursor: pointer;
+  border: 1px solid #ddd;
 }
 
+.accordionItem:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок плитки */
 .accordionHeader {
-  background-color: #f2f2f2;
+  position: relative;
   padding: 16px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
-/* Відключаємо дефолтні margin для h2, бо вставляємо dangerouslySetInnerHTML */
+/* Контейнер для "літаючих" іконок праворуч */
+.floatingIconsContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* іконки не реагують на курсор */
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Кожна іконка */
+.floatingIcon {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.15); /* слабка контрастність */
+  font-size: 1.5rem; /* Можеш підлаштувати */
+}
+
+/* Анімація "плавання" */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.floatingAnim {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Текст назви категорії */
 .accordionHeader h2 {
   margin: 0;
-  font-size: 18px;
-  color: #013b6e;
+  font-size: 20px;
+  color: #6a0dad; /* Фіолетовий */
+  position: relative;
+  z-index: 2; /* над іконками */
 }
 
-/* Контент, що розгортається */
+/* Контент акордеону */
 .accordionContent {
   padding: 16px;
-  background-color: #fff;
+  background-color: #fdfdfd;
+}
+
+/* Підакордеон (підкатегорії) */
+.subAccordionItem {
+  background-color: #f1f9ff;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  border: 1px solid #cce5ff;
+  transition: box-shadow 0.3s ease;
+}
+
+.subAccordionItem:hover {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subAccordionHeader {
+  background-color: #d0eaff;
+  padding: 12px 16px;
+  border-bottom: 1px solid #b0d4f5;
+}
+
+.subAccordionHeader h3 {
+  margin: 0;
+  font-size: 17px;
+  color: #03396c;
+}
+
+.subAccordionContent {
+  padding: 12px 16px;
+  background-color: #fafafa;
 }
 
 /* Список сторінок */
@@ -95,31 +174,37 @@
   margin: 0;
   padding: 0;
 }
+
 .pageListItem {
   margin-bottom: 12px;
   padding-bottom: 10px;
-  border-bottom: 1px dashed #ccc;
+  border-bottom: 1px dashed #ddd;
 }
 
 .folderName {
   font-weight: 600;
   margin-bottom: 5px;
+  color: #555;
 }
 
 .pageLink {
   text-decoration: none;
   color: #007bff;
   font-size: 15px;
-}
-.pageLink:hover {
-  text-decoration: underline;
+  transition: color 0.2s;
 }
 
+.pageLink:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Для відкритих плиток */
 .open {
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Підсвічування результатів пошуку */
+/* Підсвічування пошуку */
 .highlight {
   background-color: yellow;
 }
