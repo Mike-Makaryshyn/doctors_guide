@@ -263,71 +263,103 @@ export default {
       title: "Faktenfragen",
       questions: [
         {
-            "title": "Welche Funktion hat die Inhalationsnarkose in der Anästhesie?",
-            "hidden_answer": "Die Inhalationsnarkose dient der Steuerung von Bewusstlosigkeit und Schmerzfreiheit durch das Einatmen von Anästhetika über die Atemwege."
+          id: 301,
+          title: "Welche Funktion hat die Inhalationsnarkose in der Anästhesie?",
+          hidden_answer:
+            "Die Inhalationsnarkose dient der Steuerung von Bewusstlosigkeit und Schmerzfreiheit durch das Einatmen von Anästhetika über die Atemwege."
         },
         {
-            "title": "Was beschreibt die Spinalanästhesie?",
-            "hidden_answer": "Die Spinalanästhesie ist eine Form der Regionalanästhesie, bei der das Anästhetikum in den Subarachnoidalraum injiziert wird, um den Unterkörper zu betäuben."
+          id: 302,
+          title: "Was beschreibt die Spinalanästhesie?",
+          hidden_answer:
+            "Die Spinalanästhesie ist eine Form der Regionalanästhesie, bei der das Anästhetikum in den Subarachnoidalraum injiziert wird, um den Unterkörper zu betäuben."
         },
         {
-            "title": "Welche Substanz wird häufig für eine TIVA verwendet?",
-            "hidden_answer": "Propofol wird häufig als injizierbares Anästhetikum bei der totalen intravenösen Anästhesie (TIVA) verwendet."
+          id: 303,
+          title: "Welche Substanz wird häufig für eine TIVA verwendet?",
+          hidden_answer:
+            "Propofol wird häufig als injizierbares Anästhetikum bei der totalen intravenösen Anästhesie (TIVA) verwendet."
         },
         {
-            "title": "Was ist die Hauptanwendung der Larynxmaske?",
-            "hidden_answer": "Die Larynxmaske wird verwendet, um während einer Narkose die Atemwege offen zu halten, insbesondere bei kürzeren oder ambulanten Eingriffen."
+          id: 304,
+          title: "Was ist die Hauptanwendung der Larynxmaske?",
+          hidden_answer:
+            "Die Larynxmaske wird verwendet, um während einer Narkose die Atemwege offen zu halten, insbesondere bei kürzeren oder ambulanten Eingriffen."
         },
         {
-            "title": "Welches Anästhetikum hat eine besonders kurze Aufwachzeit?",
-            "hidden_answer": "Desfluran ist bekannt für seine kurze Aufwachzeit, was es ideal für Eingriffe mit schneller Erholung macht."
+          id: 305,
+          title: "Welches Anästhetikum hat eine besonders kurze Aufwachzeit?",
+          hidden_answer:
+            "Desfluran ist bekannt für seine kurze Aufwachzeit, was es ideal für Eingriffe mit schneller Erholung macht."
         },
         {
-            "title": "Wie wirkt Lidocain in der Anästhesie?",
-            "hidden_answer": "Lidocain blockiert die Natriumkanäle in den Nerven, was die Schmerzweiterleitung unterbricht und somit eine lokale Anästhesie ermöglicht."
+          id: 306,
+          title: "Wie wirkt Lidocain in der Anästhesie?",
+          hidden_answer:
+            "Lidocain blockiert die Natriumkanäle in den Nerven, was die Schmerzweiterleitung unterbricht und somit eine lokale Anästhesie ermöglicht."
         },
         {
-            "title": "Welche Vorteile bietet die periphere Regionalanästhesie?",
-            "hidden_answer": "Die periphere Regionalanästhesie ermöglicht gezielte Schmerzlinderung in einer bestimmten Körperregion und verringert die Notwendigkeit für systemische Schmerzmittel."
+          id: 307,
+          title: "Welche Vorteile bietet die periphere Regionalanästhesie?",
+          hidden_answer:
+            "Die periphere Regionalanästhesie ermöglicht gezielte Schmerzlinderung in einer bestimmten Körperregion und verringert die Notwendigkeit für systemische Schmerzmittel."
         },
         {
-            "title": "Welche Form der Anästhesie wird häufig bei Kaiserschnitten eingesetzt?",
-            "hidden_answer": "Die Periduralanästhesie wird häufig bei Kaiserschnitten eingesetzt, um eine effektive Schmerzfreiheit während der Geburt zu gewährleisten."
+          id: 308,
+          title: "Welche Form der Anästhesie wird häufig bei Kaiserschnitten eingesetzt?",
+          hidden_answer:
+            "Die Periduralanästhesie wird häufig bei Kaiserschnitten eingesetzt, um eine effektive Schmerzfreiheit während der Geburt zu gewährleisten."
         },
         {
-            "title": "Wie wird die Maskennarkose typischerweise durchgeführt?",
-            "hidden_answer": "Bei der Maskennarkose atmet der Patient Anästhetikagase über eine Maske ein, um eine schmerzfreie und kontrollierte Bewusstlosigkeit zu erreichen."
+          id: 309,
+          title: "Wie wird die Maskennarkose typischerweise durchgeführt?",
+          hidden_answer:
+            "Bei der Maskennarkose atmet der Patient Anästhetikagase über eine Maske ein, um eine schmerzfreie und kontrollierte Bewusstlosigkeit zu erreichen."
         },
         {
-            "title": "Was ist ein typisches Risiko der Spinalanästhesie?",
-            "hidden_answer": "Ein häufiges Risiko der Spinalanästhesie sind postpunktionale Kopfschmerzen, die durch den Austritt von Liquor verursacht werden können."
+          id: 310,
+          title: "Was ist ein typisches Risiko der Spinalanästhesie?",
+          hidden_answer:
+            "Ein häufiges Risiko der Spinalanästhesie sind postpunktionale Kopfschmerzen, die durch den Austritt von Liquor verursacht werden können."
         },
         {
-            "title": "Welche Technik wird bei der thorakalen Epiduralanästhesie verwendet?",
-            "hidden_answer": "Bei der thorakalen Epiduralanästhesie wird das Anästhetikum in den Epiduralraum des Brustbereichs injiziert, um eine gezielte Schmerzlinderung zu erreichen."
+          id: 311,
+          title: "Welche Technik wird bei der thorakalen Epiduralanästhesie verwendet?",
+          hidden_answer:
+            "Bei der thorakalen Epiduralanästhesie wird das Anästhetikum in den Epiduralraum des Brustbereichs injiziert, um eine gezielte Schmerzlinderung zu erreichen."
         },
         {
-            "title": "Was ist die Hauptfunktion der Plexusanästhesie?",
-            "hidden_answer": "Die Plexusanästhesie dient der Betäubung eines Nervengeflechts (Plexus), um Schmerzen bei Operationen an den Extremitäten zu blockieren."
+          id: 312,
+          title: "Was ist die Hauptfunktion der Plexusanästhesie?",
+          hidden_answer:
+            "Die Plexusanästhesie dient der Betäubung eines Nervengeflechts (Plexus), um Schmerzen bei Operationen an den Extremitäten zu blockieren."
         },
         {
-            "title": "Warum ist die Inhalationsnarkose in der Kinderchirurgie beliebt?",
-            "hidden_answer": "Die Inhalationsnarkose ist in der Kinderchirurgie beliebt, weil sie eine sanfte und nicht-invasive Einführung in die Narkose ermöglicht."
+          id: 313,
+          title: "Warum ist die Inhalationsnarkose in der Kinderchirurgie beliebt?",
+          hidden_answer:
+            "Die Inhalationsnarkose ist in der Kinderchirurgie beliebt, weil sie eine sanfte und nicht-invasive Einführung in die Narkose ermöglicht."
         },
         {
-            "title": "Was ist der Vorteil der balancierten Anästhesie?",
-            "hidden_answer": "Die balancierte Anästhesie kombiniert verschiedene Anästhetika, um die Dosis einzelner Medikamente zu verringern und Nebenwirkungen zu minimieren."
+          id: 314,
+          title: "Was ist der Vorteil der balancierten Anästhesie?",
+          hidden_answer:
+            "Die balancierte Anästhesie kombiniert verschiedene Anästhetika, um die Dosis einzelner Medikamente zu verringern und Nebenwirkungen zu minimieren."
         },
         {
-            "title": "Welche Funktion hat der Epiduralkatheter in der Periduralanästhesie?",
-            "hidden_answer": "Der Epiduralkatheter ermöglicht die kontinuierliche oder intermittierende Verabreichung von Anästhetika zur Schmerztherapie während und nach einer Operation."
+          id: 315,
+          title: "Welche Funktion hat der Epiduralkatheter in der Periduralanästhesie?",
+          hidden_answer:
+            "Der Epiduralkatheter ermöglicht die kontinuierliche oder intermittierende Verabreichung von Anästhetika zur Schmerztherapie während und nach einer Operation."
         },
         {
-            "title": "Was beschreibt die totale intravenöse Anästhesie (TIVA)?",
-            "hidden_answer": "Die TIVA ist eine Form der Narkose, bei der ausschließlich injizierbare Anästhetika verwendet werden, um eine kontrollierte Bewusstlosigkeit zu erzielen."
+          id: 316,
+          title: "Was beschreibt die totale intravenöse Anästhesie (TIVA)?",
+          hidden_answer:
+            "Die TIVA ist eine Form der Narkose, bei der ausschließlich injizierbare Anästhetika verwendet werden, um eine kontrollierte Bewusstlosigkeit zu erzielen."
         }
-    ],
-    },
+      ]
+    }
     //  End of parent tab 3
   ],
 };

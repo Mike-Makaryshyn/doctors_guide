@@ -1,0 +1,343 @@
+.trafarettePage {
+   position: relative;
+   padding: 20px;
+   font-family: "Poppins", sans-serif;
+ }
+ 
+ /* Кнопка Back внизу ліворуч */
+ .main_menu_back {
+   margin-top: auto;
+   width: 35px;
+   height: 28px;
+   position: fixed;
+   display: flex
+;
+   align-items: center;
+   justify-content: center;
+   left: 20px;
+   bottom: 0;
+   z-index: 2000;
+ }
+ .main_menu_back:hover {
+   transform: scale(1.1);
+ }
+ 
+ /* Контейнер вкладок (вигляд "папок") */
+ .tabsContainer {
+   display: flex;
+   align-items: flex-end;
+   gap: 2px;
+   margin-bottom: -1px;
+   flex-wrap: wrap; /* щоб на мобільному вкладки переносились */
+ }
+ 
+ /* Кожна батьківська вкладка (parentTab) */
+ .tab {
+   background-color: #e6e6e6;
+   padding: 10px 15px;
+   border: 1px solid #ccc;
+   border-bottom: none;
+   border-top-left-radius: 8px;
+   border-top-right-radius: 8px;
+   cursor: pointer;
+   color: #013b6e;            /* Hier statt #333 => #013b6e */
+   font-weight: 600;
+   transition: background-color 0.3s ease;
+ }
+ .childTab_content a {
+   color: #013b6e !important;
+   text-decoration: none !important;
+   font-weight: 600;
+   display: inline-block;               /* WICHTIG: So „greift” das Transform sichtbarer */
+   transition: transform 0.2s ease;     /* Animation: transform über 0.2s */
+ }
+ 
+ .childTab_content a:hover {
+   transform: scale(1.01);  /* z.B. leicht auf 105 % vergrößern */
+ }
+
+ /* Активна вкладка (виглядає піднятою над білим блоком) */
+ .activeTab {
+   background-color: #fff;
+   border-bottom: 1px solid #fff;
+   color: #013b6e; /* ggf. noch mal hier setzen, falls nötig */
+ }
+ .tab:not(.activeTab):hover {
+   background-color: #dcdcdc;
+ }
+ 
+ /* Білий блок контенту під "папками" */
+ .tabContentWrapper {
+   border: 1px solid #ccc;
+   border-radius: 0 8px 8px 8px;
+   background-color: #fff;
+   padding: 20px;
+   min-height: 200px;
+   margin-bottom: 40px;
+   width: 100%;
+   box-sizing: border-box;
+ }
+ 
+ /* Приховано / видно */
+ .parentTabItem {
+   display: none;
+ }
+ .showTab {
+   display: block;
+ }
+ 
+ /* Обгортка всередині відкритої вкладки */
+ .childTabsWrapper {
+   margin-top: 20px;
+   width: 100%;
+ }
+ 
+ /* Питання (Questions) */
+ .questions {
+   background-color: #fafafa;
+   padding: 16px;
+   margin-bottom: 15px;
+   border-radius: 10px;
+   transition: box-shadow 0.2s;
+   text-align: left;
+ }
+ .questions:hover {
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .questionTitle {
+   font-weight: 600;
+   font-size: 18px;
+   margin-bottom: 10px;
+   color: #013b6e;
+ }
+ 
+ .answers {
+   margin-bottom: 10px;
+   padding-left: 20px;
+   text-align: left;
+ }
+ 
+ /* Варіанти відповіді */
+ .answerOption {
+   margin: 6px 0;
+   font-size: 16px;
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   color: #013b6e; /* як і questionTitle */
+   font-weight: normal; /* не жирний */
+ }
+ 
+ /* Richtig/falsch => rot/grün + fett + größer */
+ .correctAnswer {
+   color: #2a7c6f !important;
+   font-weight: 700;
+   font-size: 18px;
+ }
+ .wrongAnswer {
+   color: #e53935 !important;
+   font-weight: 700;
+   font-size: 18px;
+ }
+ 
+ .feedback {
+   margin-left: 20px;
+   font-weight: 700;
+   /* Kann man noch größer machen, falls du möchtest */
+   font-size: 18px;
+ }
+ 
+ /* Прихована відповідь */
+ .hidden_answer {
+   background-color: #000;
+   color: transparent;
+   padding: 10px;
+   border-radius: 8px;
+   margin-top: 10px;
+   position: relative;
+   cursor: pointer;
+ }
+ .hidden_answer::before {
+   content: "???";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 18px;
+   color: rgba(255, 255, 255, 0.6);
+   z-index: 1;
+ }
+ .hidden_answer:hover::before {
+   opacity: 0;
+ }
+ .hidden_answer::after {
+   content: "Hidden Content";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: #0ff;
+   z-index: 0;
+   opacity: 0;
+   transition: opacity 0.5s ease;
+   text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+ }
+ .hidden_answer:hover::after {
+   opacity: 1;
+ }
+ 
+ /* Кнопка Show all answers */
+ .showAnswersBtn {
+   background-color: #4caf50;
+   border: none;
+   border-radius: 8px;
+   color: #fff;
+   padding: 8px 12px;
+   cursor: pointer;
+   font-weight: 600;
+   margin-top: 10px;
+   transition: background-color 0.2s, transform 0.2s;
+ }
+ .showAnswersBtn:hover {
+   background-color: #43a047;
+   transform: scale(1.02);
+ }
+ 
+ /* Дитячі вкладки */
+ .childTabsWrapp {
+   margin-top: 10px;
+   background-color: #f3f3f3;
+   padding: 12px;
+   border-radius: 10px;
+   margin-bottom: 10px;
+   cursor: pointer;
+   transition: background-color 0.2s ease, box-shadow 0.2s ease;
+   text-align: left;
+ }
+ .childTabsWrapp:hover {
+   background-color: #e8e8e8;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+ 
+ /* Titel der childTab – jetzt größer und immer blau */
+ .child_tab {
+   font-weight: 600;
+   font-size: 18px; /* vergrößert */
+   margin-bottom: 5px;
+   border: 2px solid transparent;
+   display: inline-block;
+   padding: 6px 12px;
+   border-radius: 6px;
+ }
+ .lessWidth {
+   width: auto;
+   margin-right: 20px;
+ }
+ 
+ /* Контейнер childTab-у */
+ .childTabContentWrapper {
+   background-color: transparent;
+   border-radius: 8px;
+   padding: 16px;
+   margin-top: 10px;
+   text-align: left;
+ }
+ 
+ /* Контент childTab */
+ .childTab_content {
+   max-width: 100%;
+   margin: 0 auto;
+   font-size: 15px;
+   line-height: 1.6;
+   color: #333;
+   text-align: left;
+ }
+ 
+ /* Посилання у контенті */
+ .link {
+   color: #013b6e !important;          /* fixierte Farbe */
+   font-weight: 600;
+   text-decoration: none;
+ }
+ .link:hover,
+ .link:focus,
+ .link:active,
+ .link:visited {
+   color: #013b6e !important;          /* nicht grün/weiß werden */
+   text-decoration: none;              /* kein Unterstreichen */
+   transform: scale(1.03);            /* falls gewünscht */
+ }
+ 
+ /* Зображення в контенті по центру */
+ .childTab_content img {
+   display: block;
+   margin: 20px auto;
+   max-width: 100%;
+   height: auto;
+ }
+ 
+ /* Факти */
+
+ .factTitle {
+   font-weight: 600;
+   color: #013b6e;
+ }
+ .factContent {
+   /* gleicher Blauton wie Titel */
+   color: #013b6e;
+   margin-top: 5px;
+ }
+ 
+ /* Адаптивність */
+ @media (max-width: 768px) {
+   .tab {
+     font-size: 14px;
+     padding: 8px 10px;
+   }
+   .tabContentWrapper {
+     padding: 10px;
+   }
+   .childTabsWrapp {
+     margin-top: 8px;
+   }
+   .answers {
+     padding-left: 10px;
+   }
+   .answerOption {
+     font-size: 14px;
+   }
+   .child_tab {
+     font-size: 14px;
+   }
+ }
+ /* ... dein bestehendes CSS, NICHT löschen ... */
+
+/* ============ NEU für Facts (Tab 3) ============ */
+.factItem {
+   background-color: #fafafa;
+   padding: 16px;
+   margin-bottom: 15px;
+   border-radius: 10px;
+   transition: box-shadow 0.2s;
+   text-align: left;
+   cursor: pointer;
+ }
+ 
+ .factItem:hover {
+   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+ }
+ 
+ .factTitle {
+   font-weight: 600;
+   color: #013b6e;
+   font-size: 18px;
+   margin-bottom: 8px;
+ }
+ 
+ .factContent {
+   color: #013b6e;
+   font-size: 16px;
+   line-height: 1.4;
+   margin-top: 5px;
+ }
