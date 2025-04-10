@@ -2,20 +2,52 @@ import { useState, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import all_pages_data from "../../constants/trafarettes";
-import styles from "./Trafarette.module.scss";
+import styles from "./Trafarette.module.scss"; // не забудь додати наші нові стилі
 import cn from "classnames";
+
+// === Проста іконка-стрілочка (▲ / ▼), схожа на MindMapListView ===
+const ArrowIcon = ({ isCollapsed }) => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={styles.arrowIconSvg}
+  >
+    {isCollapsed ? (
+      // Якщо закрито – стрілка вправо
+      <path
+        d="M9 18l6-6-6-6"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    ) : (
+      // Якщо відкрито – стрілка вниз
+      <path
+        d="M6 9l6 6 6-6"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    )}
+  </svg>
+);
 
 const Trafarette = () => {
   const navigate = useNavigate();
 
-  // Holt die Daten zur aktuellen Seite
+  // 1. Визначаємо потрібну сторінку за URL
   const params = useParams();
   const page = all_pages_data?.find((p) => p?.path === params?.name)?.content;
 
-  // Falls es Parent-Tabs gibt, zunächst die erste öffnen
+  // 2. Відкриваємо за замовчуванням першу вкладку (parentTab)
   const [parentTabOpen, setParentTabOpen] = useState(page?.[0] || null);
 
-  // Falls die erste Parent-Tab Child-Tabs hat, öffne sie standardmäßig
+  // Якщо в першій вкладці є childTabs, відкриємо їх
   const [childTabOpen, setChildTabOpen] = useState(() => {
     if (page?.[0]?.childTabs) {
       return [...page[0].childTabs];
@@ -23,22 +55,23 @@ const Trafarette = () => {
     return [];
   });
 
-  // Fragen/Antworten-Feedback
+  // 3. Multiple choice (Tab 2): feedback на правильну/неправильну відповідь
   const [feedback, setFeedback] = useState({});
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const timeoutRef = useRef(null);
 
-  // State für offene Fakten (Tab 3)
-  const [openFacts, setOpenFacts] = useState({});
+  // 4. Tab 3: факти з прихованим контентом
+  //    Ключ = `${parentTab.id}_${index}`
+  const [openFactItems, setOpenFactItems] = useState({});
 
-  // State für einzelne versteckte Antworten (falls vorhanden)
+  // 5. Якщо в Tab 2 є додаткове поле hidden_answer, інколи хочеться його відкривати/закривати
   const [openAnswers, setOpenAnswers] = useState({});
 
   // =========================
   // Handlers
   // =========================
 
-  // Klick auf Parent-Tab (Öffnen/Schließen)
+  // Натиск на parent tab
   const clickActiveParentTab = (e, tab) => {
     e.stopPropagation();
     if (parentTabOpen?.id === tab?.id) {
@@ -54,7 +87,7 @@ const Trafarette = () => {
     }
   };
 
-  // Klick auf Child-Tab
+  // Натиск на child tab (Tab 1)
   const clickActiveChildTab = (e, tab) => {
     e.stopPropagation();
     if (tab?.link) {
@@ -63,15 +96,13 @@ const Trafarette = () => {
     }
     setChildTabOpen((prevTabs) => {
       const isOpen = prevTabs.some((openTab) => openTab.id === tab.id);
-      if (isOpen) {
-        return prevTabs.filter((openTab) => openTab.id !== tab.id);
-      } else {
-        return [...prevTabs, tab];
-      }
+      return isOpen
+        ? prevTabs.filter((openTab) => openTab.id !== tab.id)
+        : [...prevTabs, tab];
     });
   };
 
-  // Frage-Antwort-Auswertung
+  // Tab 2 multiple choice: опрацювання вибору правильної/неправильної відповіді
   const handleAnswerChange = (e, answer) => {
     e.stopPropagation();
     if (timeoutRef.current) {
@@ -88,15 +119,7 @@ const Trafarette = () => {
     setSelectedAnswer(answer.name);
   };
 
-  // Toggle einzelner Fakt (Tab 3)
-  const toggleFact = (factId) => {
-    setOpenFacts((prev) => ({
-      ...prev,
-      [factId]: !prev[factId],
-    }));
-  };
-
-  // Toggle einer versteckten Antwort (wenn vorhanden)
+  // Tab 2: якщо є окреме питання з hidden_answer
   const toggleAnswer = (questionId) => {
     setOpenAnswers((prev) => ({
       ...prev,
@@ -104,44 +127,16 @@ const Trafarette = () => {
     }));
   };
 
-  // Kleine Hilfsfunktion, um ggf. Texte mit Links zu parsen
-  const renderTextWithLinks = (text) => {
-    const processText = (textString) => {
-      const urlRegex = /(https?:\/\/[^\s]+)/g;
-      const parts = textString.split(urlRegex);
-      return parts.map((part, index) => {
-        if (part.match(urlRegex)) {
-          return (
-            <a
-              className={styles.link}
-              key={index}
-              href={part}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {part}
-            </a>
-          );
-        } else {
-          return <span key={index}>{part}</span>;
-        }
-      });
-    };
-    if (Array.isArray(text)) {
-      return text.map((item, idx) => (
-        <p key={idx}>
-          {processText(item)}
-          {idx < text.length - 1 && " "}
-        </p>
-      ));
-    }
-    if (typeof text === "string") {
-      return processText(text);
-    }
-    return null;
+  // Tab 3: розгортання факту
+  const toggleFactItem = (parentTabId, index) => {
+    const factKey = `${parentTabId}_${index}`;
+    setOpenFactItems((prev) => ({
+      ...prev,
+      [factKey]: !prev[factKey],
+    }));
   };
 
-  // Inhalt eines Child-Tabs (HTML via dangerouslySetInnerHTML)
+  // HTML-вміст для child tab
   const renderChildTabContent = (childTab) => {
     return (
       <div
@@ -151,9 +146,8 @@ const Trafarette = () => {
     );
   };
 
-  // Wenn keine Daten gefunden, Abbruch
-  const currentPageData = page;
-  if (!currentPageData) {
+  // Якщо немає даних, повертаємо Not found
+  if (!page) {
     return (
       <MainLayout>
         <div style={{ padding: "40px" }}>
@@ -170,7 +164,7 @@ const Trafarette = () => {
   return (
     <MainLayout>
       <div className={styles.trafarettePage}>
-        {/* Back-Button */}
+        {/* "Back"-Button */}
         <button
           className={styles.main_menu_back}
           onClick={() => navigate("/links")}
@@ -179,9 +173,9 @@ const Trafarette = () => {
           &#8592;
         </button>
 
-        {/* Parent-Tabs (z. B. Anästhesie / Fragen / Faktenfragen) */}
+        {/* Parent Tabs */}
         <div className={styles.tabsContainer}>
-          {currentPageData?.map((parentTab) => {
+          {page.map((parentTab) => {
             const isActive = parentTabOpen?.id === parentTab.id;
             return (
               <div
@@ -195,9 +189,9 @@ const Trafarette = () => {
           })}
         </div>
 
-        {/* Weißer Bereich mit dem Inhalt der aktiven Parent-Tab */}
+        {/* Контент вибраної вкладки */}
         <div className={styles.tabContentWrapper}>
-          {currentPageData?.map((parentTab) => {
+          {page.map((parentTab) => {
             const isActiveTab = parentTabOpen?.id === parentTab?.id;
             return (
               <div
@@ -209,82 +203,113 @@ const Trafarette = () => {
               >
                 {isActiveTab && (
                   <div className={styles.childTabsWrapper}>
-                    {/* ================================
-                        1) Fragen-Block (Tab 2)
-                        ================================ */}
-                    {parentTab?.questions?.map((q, qIdx) => (
-                      <div
-                        key={qIdx}
-                        className={styles.questions}
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <div className={styles.questionTitle}>{q?.title}</div>
-                        {q?.answers && (
+                    {parentTab?.questions?.map((q, qIdx) => {
+                      // === Якщо це multiple choice (Tab 2):
+                      if (q?.answers) {
+                        return (
                           <div
-                            className={styles.answers}
+                            key={qIdx}
+                            className={styles.questions}
                             onClick={(e) => e.stopPropagation()}
                           >
-                            {q?.answers?.map((ans, ansIdx) => {
-                              let answerClass = "";
-                              if (
-                                feedback?.answer?.name === ans.name &&
-                                feedback?.msg === "✔"
-                              ) {
-                                answerClass = styles.correctAnswer; // grün
-                              } else if (
-                                feedback?.answer?.name === ans.name &&
-                                feedback?.msg === "✘"
-                              ) {
-                                answerClass = styles.wrongAnswer; // rot
-                              }
-                              return (
-                                <div
-                                  key={ansIdx}
-                                  className={cn(
-                                    styles.answerOption,
-                                    answerClass
-                                  )}
-                                >
-                                  <label>
-                                    <input
-                                      type="radio"
-                                      name={`answer_${parentTab?.id}_${qIdx}`}
-                                      value={ans.name}
-                                      checked={selectedAnswer === ans.name}
-                                      onChange={(e) =>
-                                        handleAnswerChange(e, ans)
-                                      }
-                                    />
-                                    {ans.name}
-                                  </label>
-                                  {feedback?.answer?.name === ans.name && (
-                                    <div className={styles.feedback}>
-                                      {feedback?.msg}
-                                    </div>
-                                  )}
-                                </div>
-                              );
-                            })}
-                          </div>
-                        )}
+                            <div className={styles.questionTitle}>
+                              {q?.title}
+                            </div>
 
-                        {/* Versteckte einzelne Antwort (falls vorhanden) */}
-                        {q?.hidden_answer && (
+                            <div
+                              className={styles.answers}
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              {q?.answers.map((ans, ansIdx) => {
+                                let answerClass = "";
+                                if (
+                                  feedback?.answer?.name === ans.name &&
+                                  feedback?.msg === "✔"
+                                ) {
+                                  answerClass = styles.correctAnswer;
+                                } else if (
+                                  feedback?.answer?.name === ans.name &&
+                                  feedback?.msg === "✘"
+                                ) {
+                                  answerClass = styles.wrongAnswer;
+                                }
+                                return (
+                                  <div
+                                    key={ansIdx}
+                                    className={cn(
+                                      styles.answerOption,
+                                      answerClass
+                                    )}
+                                  >
+                                    <label>
+                                      <input
+                                        type="radio"
+                                        name={`answer_${parentTab?.id}_${qIdx}`}
+                                        value={ans.name}
+                                        checked={selectedAnswer === ans.name}
+                                        onChange={(e) =>
+                                          handleAnswerChange(e, ans)
+                                        }
+                                      />
+                                      {ans.name}
+                                    </label>
+                                    {/* Позначка ✔ чи ✘ */}
+                                    {feedback?.answer?.name === ans.name && (
+                                      <div className={styles.feedback}>
+                                        {feedback?.msg}
+                                      </div>
+                                    )}
+                                  </div>
+                                );
+                              })}
+                            </div>
+
+                            {/* Можливо, у питанні є й hidden_answer? */}
+                            {q?.hidden_answer && (
+                              <div
+                                className={styles.hidden_answer}
+                                onClick={() => toggleAnswer(qIdx)}
+                              >
+                                {openAnswers[qIdx]
+                                  ? q.hidden_answer
+                                  : "Answer is hidden (click to reveal)"}
+                              </div>
+                            )}
+                          </div>
+                        );
+                      } else {
+                        // === Якщо це фактичне питання з hidden_answer (Tab 3):
+                        const factKey = `${parentTab.id}_${qIdx}`;
+                        const isOpen = !!openFactItems[factKey];
+                        return (
                           <div
-                            className={styles.hidden_answer}
-                            onClick={() => toggleAnswer(q.id)}
+                            key={qIdx}
+                            className={styles.factItem}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              toggleFactItem(parentTab.id, qIdx);
+                            }}
                           >
-                            {openAnswers[q.id]
-                              ? q.hidden_answer
-                              : "Answer is hidden (click to reveal)"}
-                          </div>
-                        )}
-                      </div>
-                    ))}
+                            {/* Тайтл + іконка */}
+                            <div className={styles.factTitle}>
+                              <span>{q.title}</span>
+                              <span className={styles.arrowIconWrapper}>
+                                <ArrowIcon isCollapsed={!isOpen} />
+                              </span>
+                            </div>
 
-                    {/* ================================
-                        2) Child-Tabs (Tab 1 z.B. Anästhesie-Childs)
-                        ================================ */}
+                            {/* При відкритті показуємо анімований блок */}
+                            {isOpen && (
+                              <div className={cn(styles.factContent, styles.factContentAnimation)}>
+                                {q.hidden_answer}
+                              </div>
+                            )}
+                          </div>
+                        );
+                      }
+                    })}
+
+                    {/* ============= Tab 1 (childTabs: Definition, Anatomie тощо) ============= */}
                     {parentTab?.childTabs?.map((childTab, childIdx) => {
                       const isChildOpen = childTabOpen.some(
                         (openTab) => openTab?.id === childTab?.id
@@ -315,33 +340,6 @@ const Trafarette = () => {
                         </div>
                       );
                     })}
-
-                    {/* ================================
-                        3) Faktenfragen (Tab 3) einzeln aufklappbar
-                        ================================ */}
-{parentTab?.facts?.map((fact) => {
-  const isOpen = openFacts[fact.id];
-  return (
-    <div
-      key={fact.id}
-      className={styles.factItem}      // <--- eigener Stil, NICHT hidden_answer
-      onClick={(e) => {
-        e.stopPropagation();
-        toggleFact(fact.id);
-      }}
-    >
-      <div className={styles.factTitle}>
-        {fact.title} {isOpen ? "▲" : "▼"}
-      </div>
-
-      {isOpen && (
-        <div className={styles.factContent}>
-          {fact.text}
-        </div>
-      )}
-    </div>
-  );
-})}
                   </div>
                 )}
               </div>
