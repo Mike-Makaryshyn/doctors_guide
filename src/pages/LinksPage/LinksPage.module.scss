@@ -2,7 +2,7 @@
   position: relative;
   padding: 20px;
   font-family: "Poppins", sans-serif;
-/* фон всієї сторінки (можеш змінити або видалити) */
+  background-color: #f7f7f7; /* фон всієї сторінки (можеш змінити або видалити) */
 }
 
 /* Контейнер для пошуку */
@@ -207,4 +207,14 @@
 /* Підсвічування пошуку */
 .highlight {
   background-color: yellow;
+}
+/* Посилання на найглибше вкладений заголовок (третій рівень) */
+.subAccordionHeader h4 {
+  margin: 0;
+  padding: 8px 12px;
+  font-size: 15px;
+  color: #044e7c;       /* або будь-який інший колір, який вам подобається */
+  background-color: #eaf6ff; /* фоновий колір, якщо хочете підсвітити блок */
+  border-bottom: 1px solid #b0d4f5;
+  border-radius: 4px;
 }

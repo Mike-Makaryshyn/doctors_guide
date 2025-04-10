@@ -1,6 +1,6 @@
 // /constants/trafarettes/index.js
 
-// Усі твої імпорти:
+// Усіх імпортів (вони залишаються такими, як є):
 import first_trafarette_page from "./subpages/first_trafarette_page";
 import second_trafarette_page from "./subpages/second_trafarette_page";
 import scc from "./subpages/scc";
@@ -106,6 +106,7 @@ import natriumkanalblocker from "./subpages/medikamente/natriumkanalblocker";
 import lidocain from "./subpages/medikamente/lidocain";
 import laxantien from "./subpages/medikamente/laxantien";
 import merseburgertrias from "./subpages/schilddruese/merseburgertrias";
+// Ендокринологічні теми – групуємо їх під "Innere Medizin":
 import mensyndrom from "./subpages/endokrinilogie/mensyndrom";
 import struma from "./subpages/schilddruese/struma";
 import exophthalmus from "./subpages/schilddruese/exophthalmus";
@@ -130,6 +131,7 @@ import antitg from "./subpages/schilddruese/antitg";
 import thyreoiditis from "./subpages/schilddruese/thyreoiditis";
 import feinnadelbiopsie from "./subpages/operation/feinnadelbiopsie";
 import hypothyreose from "./subpages/schilddruese/hypothyreose";
+
 import whostufenschema from "./subpages/schmerzen/whostufenschema";
 import analgetika from "./subpages/schmerzen/analgetika";
 import schmerztherapie from "./subpages/schmerzen/schmerztherapie";
@@ -152,6 +154,7 @@ import hypothyreotekoma from "./subpages/schilddruese/hypothyreotekoma";
 import myxoedem from "./subpages/schilddruese/myxoedem";
 import schilddruesenautonomie from "./subpages/schilddruese/schilddruesenautonomie";
 import schilddruesenadenom from "./subpages/schilddruese/schilddruesenadenom";
+
 import mitose from "./subpages/zellen/mitose";
 import zellzyklus from "./subpages/zellen/zellzyklus";
 
@@ -162,7 +165,13 @@ import medullaereschilddruesenkarzinom from "./subpages/schilddruese/medullaeres
 import anaplastischeschilddruesenkarzinom from "./subpages/schilddruese/anaplastischeschilddruesenkarzinom";
 import huerthlezellkarzinom from "./subpages/schilddruese/huerthlezellkarzinom";
 import schilddruesenresektionen from "./subpages/schilddruese/schilddruesenresektionen";
-// Тут формуємо єдиний масив, додаючи до кожного імпорту додаткові поля mainCategory та category (підкатегорія)
+
+// Формуємо основний масив даних
+// /constants/trafarettes/index.js
+// (Імпорти залишаються незмінними)
+
+//
+// Формування основного масиву даних з оновленою категоризацією
 const all_pages_data = [
   // *** Trafarete ***
   { ...first_trafarette_page, mainCategory: "Innere Medizin", category: "Trafarete" },
@@ -182,8 +191,8 @@ const all_pages_data = [
   { ...czellen, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },
   { ...nebenschilddruesen, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },
   { ...trachea, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },
-  // Якщо бажаєш винести Schilddrüse окремо, можна змінити mainCategory; тут приклад винесення в Endokrinologie:
-  { ...schilddruese, mainCategory: "Endokrinologie", category: "Schilddrüse" },
+  // Оновлено: сторінка щитовидної залози тепер у Endokринології з підкатегорією "Schilddrüse"
+  { ...schilddruese, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
 
   // *** Gerinnung (включно з гемофіліями, факторами тощо) ***
   { ...gerinnung, mainCategory: "Innere Medizin", category: "Gerinnung" },
@@ -244,26 +253,26 @@ const all_pages_data = [
   { ...muskelrelaxation, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
   { ...oberflaechenanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
   { ...Infiltrationsanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
-  { ...lokalanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
-  { ...leitungsanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...lokalanaesthesie, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
+  { ...leitungsanaesthesie, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
   { ...plexusanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
   { ...spinalanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
-  { ...periduralanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
-  { ...allgemeinanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...periduralanaesthesie, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
+  { ...allgemeinanaesthesie, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
   { ...tiva, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
   { ...balancierteanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
-  { ...intubationsnarkose, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
-  { ...regionalanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
-  { ...periphereregionalanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
-  { ...thorakaleepiduralanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
-  { ...kombiniertespinaleepiduraleanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
-  { ...inhalationsnarkose, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
-  { ...maskennarkose, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
-  { ...larynxmaskennarkose, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
-  { ...lachgas, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
-  { ...sevofluran, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
-  { ...isofluran, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
-  { ...desfluran, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...intubationsnarkose, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
+  { ...regionalanaesthesie, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
+  { ...periphereregionalanaesthesie, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
+  { ...thorakaleepiduralanaesthesie, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
+  { ...kombiniertespinaleepiduraleanaesthesie, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
+  { ...inhalationsnarkose, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
+  { ...maskennarkose, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
+  { ...larynxmaskennarkose, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
+  { ...lachgas, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
+  { ...sevofluran, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
+  { ...isofluran, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
+  { ...desfluran, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
 
   // *** Physiologie ***
   { ...natriumkaliumatpase, mainCategory: "Anatomie & Physiologie", category: "Physiologie" },
@@ -277,52 +286,52 @@ const all_pages_data = [
   { ...lidocain, mainCategory: "Therapie & Medikamente", category: "Medikamente" },
   { ...laxantien, mainCategory: "Therapie & Medikamente", category: "Medikamente" },
 
-  // *** Endokrinologie ***
-  { ...mensyndrom, mainCategory: "Endokrinologie", category: "Endokrinologie" },
+  // *** Ендокринологія (загальна) – підкатегорія Endokrinologie всередині Innere Medizin ***
+  { ...mensyndrom, mainCategory: "Innere Medizin", category: "Endokrinologie" },
 
-  // *** Schilddrüse – винесено окремо ***
-  { ...schilddruesenhormone, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...t3, mainCategory: "Endokринologie", category: "Schilddrüse" },
-  { ...t4, mainCategory: "Endokринologie", category: "Schilddrüse" },
-  { ...trh, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...tsh, mainCategory: "Endokринologie", category: "Schilddrüse" },
-  { ...calcitonin, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...hyperthyreose, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...morbusbasedow, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...trak, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...merseburgertrias, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...struma, mainCategory: "Endokринologie", category: "Schilddrüse" },
-  { ...exophthalmus, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...thyreoiditis, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...hypothyreose, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...hashimoto, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...thyreoperoxidase, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...thyreoglobulin, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...hyperthyreosisfactitia, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...levothyroxin, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...hypothyreotekoma, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...myxoedem, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...schilddruesenautonomie, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...schilddruesenadenom, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...schilddruesenkarzinome, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...papillaereschilddruesenkarzinom, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...folikulaereschilddruesenkarzinom, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...medullaereschilddruesenkarzinom, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...anaplastischeschilddruesenkarzinom, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...huerthlezellkarzinom, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...schilddruesenresektionen, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...jodmangel, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...iod, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...plummereffekt, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...wolffchaikoffeffekt, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...radiojodtherapie, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...schilddruesemedikamente, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...thyreostatika, mainCategory: "Endokrinologie", category: "Schilddrüse" },
-  { ...perchlorate, mainCategory: "Endokринologie", category: "Schilddrüse" },
-  { ...thiamazol, mainCategory: "Endокринologie", category: "Schilddrüse" },
-  { ...carbimazol, mainCategory: "Endокринologie", category: "Schilddrüse" },
-  { ...antitpo, mainCategory: "Endокринologie", category: "Schilddrüse" },
-  { ...antitg, mainCategory: "Endокринologie", category: "Schilddrüse" },
+  // *** Thyroid pages у контексті Endokринології – підкатегорія "Schilddrüse" ***
+  { ...schilddruesenhormone, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...t3, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...t4, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...trh, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...tsh, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...calcitonin, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...hyperthyreose, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...morbusbasedow, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...trak, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...merseburgertrias, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...struma, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...exophthalmus, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...thyreoiditis, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...hypothyreose, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...hashimoto, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...thyreoperoxidase, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...thyreoglobulin, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...hyperthyreosisfactitia, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...levothyroxin, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...hypothyreotekoma, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...myxoedem, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...schilddruesenautonomie, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...schilddruesenadenom, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...schilddruesenkarzinome, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...papillaereschilddruesenkarzinom, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...folikulaereschilddruesenkarzinom, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...medullaereschilddruesenkarzinom, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...anaplastischeschilddruesenkarzinom, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...huerthlezellkarzinom, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...schilddruesenresektionen, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...jodmangel, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...iod, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...plummereffekt, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...wolffchaikoffeffekt, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...radiojodtherapie, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...schilddruesemedikamente, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...thyreostatika, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...perchlorate, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...thiamazol, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...carbimazol, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...antitpo, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
+  { ...antitg, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
 
   // *** Zellen ***
   { ...mitose, mainCategory: "Anatomie & Physiologie", category: "Zellen" },
@@ -350,3 +359,62 @@ const all_pages_data = [
 ];
 
 export default all_pages_data;
+
+// Глибока (трирівнева) групування:
+// Якщо сторінка має властивість subCategory – вона використовується;
+// інакше дані групуються під ключем "Ohne Unterkategorie".
+// Замість колишнього:
+// const subCat = page.subCategory || "Ohne Unterkategorie";
+
+// Робимо так:
+const deepGroupedData = (() => {
+  const result = {};
+
+  all_pages_data.forEach((page) => {
+    const mainCat = page.mainCategory || "KeineHauptkategorie";
+    const cat = page.category || "KeineKategorie";
+    const subCat = page.subCategory || null; // null якщо subCategory нема
+
+    // Ініціалізуємо структуру
+    if (!result[mainCat]) result[mainCat] = {};
+    if (!result[mainCat][cat]) {
+      // Тут зберігатимемо підкатегорії (якщо є) і сторінки без підкатегорій
+      result[mainCat][cat] = {
+        noSubCatPages: [], // сюди складемо сторінки БЕЗ підкатегорії
+        subCatsMap: {}     // сюди складемо сторінки з підкатегорією
+      };
+    }
+
+    if (subCat) {
+      // Якщо є підкатегорія
+      if (!result[mainCat][cat].subCatsMap[subCat]) {
+        result[mainCat][cat].subCatsMap[subCat] = [];
+      }
+      result[mainCat][cat].subCatsMap[subCat].push(page);
+    } else {
+      // Якщо підкатегорії немає — кладемо в noSubCatPages
+      result[mainCat][cat].noSubCatPages.push(page);
+    }
+  });
+
+  // Перетворюємо result у зручний масив
+  return Object.entries(result).map(([mainCatName, catsObj]) => ({
+    mainCatName,
+    categories: Object.entries(catsObj).map(([catName, { noSubCatPages, subCatsMap }]) => {
+      // Масив підкатегорій
+      const subCategories = Object.entries(subCatsMap).map(([subCatName, pages]) => ({
+        subCatName,
+        pages
+      }));
+      return {
+        catName,
+        // Якщо noSubCatPages не порожній — додамо особливу «підкатегорію» з subCatName=null
+        // або ж можна відображати їх без заголовка підкатегорії в компонентах
+        noSubCatPages,
+        subCategories,
+      };
+    }),
+  }));
+})();
+
+export { deepGroupedData };

@@ -1,9 +1,10 @@
+// LinksPage.jsx
+// (Імпорти залишаються такими, як є)
+
 import React, { useState, useMemo, useEffect, useRef } from "react";
 import all_pages_data from "../../constants/trafarettes";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./LinksPage.module.scss";
-
-/* react-icons */
 import {
   FaSearch, FaTimes, FaStethoscope, FaHeartbeat, FaProcedures,
   FaBone, FaDna, FaMicroscope, FaFlask, FaVial, FaUserMd, FaUserNurse,
@@ -11,22 +12,13 @@ import {
   FaCut, FaHandHoldingMedical, FaPrescriptionBottleAlt
 } from "react-icons/fa";
 
-/**
- * Функція підсвічування: замінює всі збіги (без врахування регістру)
- * на <span class="highlight">...</span>.
- */
+// Функція підсвічування тексту
 function highlightText(text, search) {
   if (!search) return text;
   const regex = new RegExp(`(${search})`, "gi");
   return text.replace(regex, (match) => `<span class="highlight">${match}</span>`);
 }
 
-/**
- * Об’єкт із ключами = mainCategory, 
- * де зберігаємо:
- * - backgroundColor: щоб задати легкий градієнт або колір
- * - floatingIcons: масив із info про іконки (кожна іконка + стиль і анімація)
- */
 const categoryVisuals = {
   "Innere Medizin": {
     backgroundColor: "#f9d6d8",
@@ -58,7 +50,7 @@ const categoryVisuals = {
       { icon: <FaCapsules />, style: { top: "40%", right: "10%" } },
     ],
   },
-  Labordiagnostik: {
+  "Labordiagnostik": {
     backgroundColor: "#f2ffe6",
     floatingIcons: [
       { icon: <FaMicroscope />, style: { top: "15%", right: "3%" } },
@@ -113,12 +105,12 @@ const categoryVisuals = {
 const LinksPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [openMainCat, setOpenMainCat] = useState(null);
+  const [openCat, setOpenCat] = useState(null);
   const [openSubCat, setOpenSubCat] = useState(null);
   const [isSearchActive, setIsSearchActive] = useState(false);
-
   const pageRef = useRef(null);
 
-  // Закриваємо пошук при кліку поза сторінкою
+  // Закриття пошуку при кліку поза елементом
   useEffect(() => {
     function handleClickOutside(event) {
       if (isSearchActive && pageRef.current && !pageRef.current.contains(event.target)) {
@@ -130,84 +122,150 @@ const LinksPage = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isSearchActive]);
 
-  // Групуємо сторінки за mainCategory, потім за category
+  // Групування сторінок за трьома рівнями.
+  // Якщо page.subCategory немає, зберігаємо сторінки у noSubCatPages.
   const groupedData = useMemo(() => {
-    return all_pages_data.reduce((acc, page) => {
+    const result = {};
+    all_pages_data.forEach((page) => {
       const mainCat = page.mainCategory || "NoMainCategory";
-      const subCat = page.category || "NoCategory";
-      if (!acc[mainCat]) acc[mainCat] = {};
-      if (!acc[mainCat][subCat]) acc[mainCat][subCat] = [];
-      acc[mainCat][subCat].push(page);
-      return acc;
-    }, {});
+      const cat = page.category || "NoCategory";
+      const subCat = page.subCategory || null;
+      if (!result[mainCat]) result[mainCat] = {};
+      if (!result[mainCat][cat]) {
+        result[mainCat][cat] = { 
+          noSubCatPages: [], 
+          subCategories: {} 
+        };
+      }
+      if (subCat) {
+        if (!result[mainCat][cat].subCategories[subCat]) {
+          result[mainCat][cat].subCategories[subCat] = [];
+        }
+        result[mainCat][cat].subCategories[subCat].push(page);
+      } else {
+        result[mainCat][cat].noSubCatPages.push(page);
+      }
+    });
+
+    // Перетворюємо в масив для зручності рендерингу
+    return Object.entries(result).map(([mainCatName, catsObj]) => ({
+      mainCatName,
+      categories: Object.entries(catsObj).map(([catName, dataObj]) => ({
+        catName,
+        noSubCatPages: dataObj.noSubCatPages,
+        subCategories: Object.entries(dataObj.subCategories).map(([subCatName, pages]) => ({
+          subCatName,
+          pages,
+        })),
+      })),
+    }));
   }, []);
 
-  // Обробка пошуку — підсвічування, фільтрація
+  // Підготовка даних для пошуку.
+  // Якщо пошуковий запит порожній, просто повертаємо дані без модифікацій.
   const processedData = useMemo(() => {
     const search = searchTerm.trim().toLowerCase();
     if (!search) {
-      return Object.entries(groupedData).map(([mainCat, subCats]) => ({
-        mainCatName: mainCat,
-        mainCatHighlighted: mainCat,
+      return groupedData.map(mainItem => ({
+        mainCatName: mainItem.mainCatName,
+        mainCatHighlighted: mainItem.mainCatName,
         mainMatches: false,
-        subCategories: Object.entries(subCats).map(([subCat, pages]) => ({
-          subCatName: subCat,
-          subCatHighlighted: subCat,
-          subMatches: false,
-          matchedPages: pages,
+        categories: mainItem.categories.map(catItem => ({
+          catName: catItem.catName,
+          catHighlighted: catItem.catName,
+          catMatches: false,
+          noSubCatPages: catItem.noSubCatPages,
+          subCategories: catItem.subCategories.map(subItem => ({
+            subCatName: subItem.subCatName,
+            subCatHighlighted: subItem.subCatName,
+            subMatches: false,
+            matchedPages: subItem.pages,
+          })),
         })),
       }));
     }
-    return Object.entries(groupedData).map(([mainCat, subCats]) => {
-      const mainMatches = mainCat.toLowerCase().includes(search);
-      const processedSub = Object.entries(subCats).map(([subCat, pages]) => {
-        const subMatches = subCat.toLowerCase().includes(search);
-        const matchedPages = pages.filter((page) => {
+    return groupedData.map(mainItem => {
+      const mainMatches = mainItem.mainCatName.toLowerCase().includes(search);
+      const categories = mainItem.categories.map(catItem => {
+        const catMatches = catItem.catName.toLowerCase().includes(search);
+        // Фільтруємо сторінки з noSubCatPages по заголовку
+        const filteredNoSubPages = catItem.noSubCatPages.filter(page => {
           const title = (page?.content?.[0]?.title || "").toLowerCase();
           return title.includes(search);
         });
+        const subCategories = catItem.subCategories.map(subItem => {
+          const subMatches = subItem.subCatName.toLowerCase().includes(search);
+          const matchedPages = subItem.pages.filter(page => {
+            const title = (page?.content?.[0]?.title || "").toLowerCase();
+            return title.includes(search);
+          });
+          return {
+            subCatName: subItem.subCatName,
+            subCatHighlighted: subMatches ? highlightText(subItem.subCatName, search) : subItem.subCatName,
+            subMatches,
+            matchedPages,
+          };
+        });
         return {
-          subCatName: subCat,
-          subCatHighlighted: subMatches ? highlightText(subCat, search) : subCat,
-          subMatches,
-          matchedPages,
+          catName: catItem.catName,
+          catHighlighted: catMatches ? highlightText(catItem.catName, search) : catItem.catName,
+          catMatches,
+          noSubCatPages: filteredNoSubPages,
+          subCategories,
         };
       });
       return {
-        mainCatName: mainCat,
-        mainCatHighlighted: mainMatches ? highlightText(mainCat, search) : mainCat,
+        mainCatName: mainItem.mainCatName,
+        mainCatHighlighted: mainMatches ? highlightText(mainItem.mainCatName, search) : mainItem.mainCatName,
         mainMatches,
-        subCategories: processedSub,
+        categories,
       };
     });
   }, [groupedData, searchTerm]);
 
-  // Фільтрація: залишаємо лише ті, де є збіг
+  // Фільтрація: залишаємо лише ті групи, де є збіги
   const filteredData = useMemo(() => {
     const search = searchTerm.trim().toLowerCase();
     if (!search) return processedData;
     return processedData
-      .map((mainItem) => {
-        const filteredSub = mainItem.subCategories.filter(
-          (sub) => sub.subMatches || sub.matchedPages.length > 0
-        );
-        return { ...mainItem, subCategories: filteredSub };
+      .map(mainItem => {
+        const filteredCats = mainItem.categories.map(catItem => {
+          const filteredSub = catItem.subCategories.filter(
+            sub => sub.subMatches || sub.matchedPages.length > 0
+          );
+          // Якщо є результати у noSubCatPages або у підкатегоріях, беремо цю категорію
+          if (catItem.catMatches || catItem.noSubCatPages.length > 0 || filteredSub.length > 0) {
+            return { ...catItem, subCategories: filteredSub };
+          }
+          return null;
+        }).filter(x => x);
+        if (mainItem.mainMatches || filteredCats.length > 0) {
+          return { ...mainItem, categories: filteredCats };
+        }
+        return null;
       })
-      .filter((mainItem) => mainItem.mainMatches || mainItem.subCategories.length > 0);
+      .filter(x => x);
   }, [processedData, searchTerm]);
 
-  // Логіка відкриття/закриття
-  const isMainCatOpen = (mainCatName) => (searchTerm.trim() ? true : openMainCat === mainCatName);
-  const isSubCatOpen = (subCatName) => (searchTerm.trim() ? true : openSubCat === subCatName);
+  // Логіка відкриття/закриття для кожного рівня.
+  // Якщо пошук активний, автоматично розкриваємо всі рівні.
+  const isMainCatOpen = mainCatName => (searchTerm.trim() ? true : openMainCat === mainCatName);
+  const isCatOpen = catName => (searchTerm.trim() ? true : openCat === catName);
+  const isSubCatOpen = subCatName => (searchTerm.trim() ? true : openSubCat === subCatName);
 
-  const handleMainCatClick = (mainCatName) => {
+  const handleMainCatClick = mainCatName => {
     if (searchTerm.trim()) return;
-    setOpenMainCat((prev) => (prev === mainCatName ? null : mainCatName));
+    setOpenMainCat(prev => (prev === mainCatName ? null : mainCatName));
   };
 
-  const handleSubCatClick = (subCatName) => {
+  const handleCatClick = catName => {
     if (searchTerm.trim()) return;
-    setOpenSubCat((prev) => (prev === subCatName ? null : subCatName));
+    setOpenCat(prev => (prev === catName ? null : catName));
+  };
+
+  const handleSubCatClick = subCatName => {
+    if (searchTerm.trim()) return;
+    setOpenSubCat(prev => (prev === subCatName ? null : subCatName));
   };
 
   const toggleSearch = () => {
@@ -229,7 +287,7 @@ const LinksPage = () => {
             placeholder="Suche..."
             className={`${styles.searchInput} ${isSearchActive ? styles.active : ""}`}
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={e => setSearchTerm(e.target.value)}
             autoFocus={isSearchActive}
           />
           <button className={styles.searchToggleButton} onClick={toggleSearch}>
@@ -237,9 +295,9 @@ const LinksPage = () => {
           </button>
         </div>
 
-        {/* Акордеон */}
+        {/* Рендеринг трирівневого акордеону */}
         <div className={styles.accordionContainer}>
-          {filteredData.map((mainItem) => {
+          {filteredData.map(mainItem => {
             const mainOpen = isMainCatOpen(mainItem.mainCatName);
             const visuals = categoryVisuals[mainItem.mainCatName] || {};
             return (
@@ -249,52 +307,81 @@ const LinksPage = () => {
                   style={{ backgroundColor: visuals.backgroundColor || "#fff" }}
                   onClick={() => handleMainCatClick(mainItem.mainCatName)}
                 >
-                  {/* Блок фонових іконок (праворуч) */}
                   <div className={styles.floatingIconsContainer}>
                     {visuals.floatingIcons &&
                       visuals.floatingIcons.map((flo, idx) => (
-                        <span
-                          key={idx}
-                          className={`${styles.floatingIcon} ${styles.floatingAnim}`}
-                          style={flo.style}
-                        >
+                        <span key={idx} className={`${styles.floatingIcon} ${styles.floatingAnim}`} style={flo.style}>
                           {flo.icon}
                         </span>
                       ))}
                   </div>
-
-                  {/* Назва категорії (зліва) */}
                   <h2 dangerouslySetInnerHTML={{ __html: mainItem.mainCatHighlighted }} />
                 </div>
                 {mainOpen && (
                   <div className={styles.accordionContent}>
-                    {mainItem.subCategories.map((subItem) => {
-                      const subOpen = isSubCatOpen(subItem.subCatName);
+                    {mainItem.categories.map(catItem => {
+                      const catOpen = isCatOpen(catItem.catName);
                       return (
-                        <div key={subItem.subCatName} className={`${styles.subAccordionItem} ${subOpen ? styles.open : ""}`}>
+                        <div key={catItem.catName} className={`${styles.subAccordionItem} ${catOpen ? styles.open : ""}`}>
                           <div
                             className={styles.subAccordionHeader}
-                            onClick={() => handleSubCatClick(subItem.subCatName)}
-                            dangerouslySetInnerHTML={{ __html: `<h3>${subItem.subCatHighlighted}</h3>` }}
+                            onClick={() => handleCatClick(catItem.catName)}
+                            dangerouslySetInnerHTML={{ __html: `<h3>${catItem.catHighlighted}</h3>` }}
                           />
-                          {subOpen && (
+                          {catOpen && (
                             <div className={styles.subAccordionContent}>
-                              <ul className={styles.pageList}>
-                                {subItem.matchedPages.map((page) => {
-                                  const subTitle = page?.content?.[0]?.title || "no title";
-                                  const highlightedTitle = highlightText(subTitle, searchTerm.trim());
-                                  return (
-                                    <li key={page.path} className={styles.pageListItem}>
-                                      <div className={styles.folderName}>{page.folder}</div>
-                                      <a
-                                        href={`/trafarette/${page.path}`}
-                                        className={styles.pageLink}
-                                        dangerouslySetInnerHTML={{ __html: highlightedTitle }}
-                                      />
-                                    </li>
-                                  );
-                                })}
-                              </ul>
+                              {/* Рендеримо сторінки без підкатегорій, якщо вони є */}
+                              {catItem.noSubCatPages.length > 0 && (
+                                <ul className={styles.pageList}>
+                                  {catItem.noSubCatPages.map(page => {
+                                    const subTitle = page?.content?.[0]?.title || "no title";
+                                    const highlightedTitle = highlightText(subTitle, searchTerm.trim());
+                                    return (
+                                      <li key={page.path} className={styles.pageListItem}>
+                                        <div className={styles.folderName}>{page.folder}</div>
+                                        <a
+                                          href={`/trafarette/${page.path}`}
+                                          className={styles.pageLink}
+                                          dangerouslySetInnerHTML={{ __html: highlightedTitle }}
+                                        />
+                                      </li>
+                                    );
+                                  })}
+                                </ul>
+                              )}
+                              {/* Рендеримо підкатегорії, якщо вони є */}
+                              {catItem.subCategories.map(subItem => {
+                                const subOpen = isSubCatOpen(subItem.subCatName);
+                                return (
+                                  <div key={subItem.subCatName} className={`${styles.subAccordionItem} ${subOpen ? styles.open : ""}`}>
+                                    <div
+                                      className={styles.subAccordionHeader}
+                                      onClick={() => handleSubCatClick(subItem.subCatName)}
+                                      dangerouslySetInnerHTML={{ __html: `<h4>${subItem.subCatHighlighted}</h4>` }}
+                                    />
+                                    {subOpen && (
+                                      <div className={styles.subAccordionContent}>
+                                        <ul className={styles.pageList}>
+                                          {subItem.matchedPages.map(page => {
+                                            const subTitle = page?.content?.[0]?.title || "no title";
+                                            const highlightedTitle = highlightText(subTitle, searchTerm.trim());
+                                            return (
+                                              <li key={page.path} className={styles.pageListItem}>
+                                                <div className={styles.folderName}>{page.folder}</div>
+                                                <a
+                                                  href={`/trafarette/${page.path}`}
+                                                  className={styles.pageLink}
+                                                  dangerouslySetInnerHTML={{ __html: highlightedTitle }}
+                                                />
+                                              </li>
+                                            );
+                                          })}
+                                        </ul>
+                                      </div>
+                                    )}
+                                  </div>
+                                );
+                              })}
                             </div>
                           )}
                         </div>
