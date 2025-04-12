@@ -145,15 +145,10 @@ export default {
       </ul>
     </p>
   </div>`
-          }
-        ],
-      },
-      {
-        id: 2,
-        title: "Diagnostik & Fokus-/Erregersuche",
-        childTabs: [
+          },
+          
           {
-            id: 1,
+            id: 5,
             title: "Erkennen einer Sepsis",
             textWithFormatting: `<div>
     <p><strong>Frühe Erkennung:</strong> Eine zügige klinische Beurteilung (Gesamteindruck, Vitalparameter) ist essenziell.</p>
@@ -167,7 +162,7 @@ export default {
   </div>`
           },
           {
-            id: 2,
+            id: 6,
             title: "Blutkultur & Weitere Diagnostik",
             textWithFormatting: `<div>
     <p><strong>Blutkulturdiagnostik:</strong></p>
@@ -214,7 +209,7 @@ export default {
   </div>`
           },
           {
-            id: 3,
+            id: 7,
             title: "Fokus- und Erregersuche im Detail",
             textWithFormatting: `<div>
     <p><strong>Fokus- und Erregersuche:</strong> Nach der klinischen Diagnose erfolgt die systematische Suche nach dem Infektionsfokus.</p>
@@ -240,13 +235,425 @@ export default {
       </li>
     </ul>
   </div>`
-          }
-        ],
-      },
-      {
-        id: 3,
-        title: "Therapie, Management & Komplikationen",
-        childTabs: [
+          },
+          {
+            id: 4,
+            title: "Fokus",
+            textWithFormatting: `<div>
+    <!-- Unbekannter Fokus -->
+    <section>
+      <h3>Unbekannter Fokus </h3>
+      <h4>Häufigste Erreger</h4>
+      <table border="1" cellspacing="0" cellpadding="4">
+        <thead>
+          <tr>
+            <th>Erreger</th>
+            <th>Nosokomiale Infektion</th>
+            <th>Ambulant erworbene Infektion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Typische Erreger</td>
+            <td>
+              Staphylococcus aureus<br/>
+              Streptococcusspp.<br/>
+              Escherichia coli<br/>
+              Enterococcusspp.<br/>
+              Klebsiella spp.<br/>
+              Pseudomonasspp.
+            </td>
+            <td>(entspricht zumeist ähnlichen Erregern)</td>
+          </tr>
+        </tbody>
+      </table>
+      <h4>Therapieoptionen</h4>
+      <ul>
+        <li>
+          Option 1:
+          <ul>
+            <li>Piperacillin/Tazobactam   oder</li>
+            <li>Cefepim   oder</li>
+            <li>Meropenem   bzw. Imipenem/Cilastatin  </li>
+          </ul>
+        </li>
+        <li>
+          Ggf. Kombination mit:
+          <ul>
+            <li>Ciprofloxacin   bzw. Levofloxacin   oder</li>
+            <li>Fosfomycin  </li>
+          </ul>
+        </li>
+        <li>
+          Weitere Optionen:
+          <ul>
+            <li>Cefuroxim   bzw. Ceftriaxon   bzw. Cefotaxim   oder</li>
+            <li>Ampicillin/Sulbactam   oder Piperacillin/Tazobactam  </li>
+          </ul>
+        </li>
+      </ul>
+      <h4>Hinweise</h4>
+      <ul>
+        <li>Bei septischem Schock und Risikofaktoren für MRE bzw. MRSA: Zusätzlich Daptomycin   oder Vancomycin  </li>
+        <li>Bei septischem Schock und Möglichkeit einer invasiven Pilzinfektion: Zusätzlich Echinocandin, z. B. Anidulafungin  </li>
+      </ul>
+    </section>
+  
+    <hr/>
+  
+    <!-- Fokus: Atemwege -->
+    <section>
+      <h3>Fokus: Atemwege </h3>
+      <h4>Häufigste Erreger</h4>
+      <table border="1" cellspacing="0" cellpadding="4">
+        <thead>
+          <tr>
+            <th>Erreger</th>
+            <th>Nosokomiale Infektion</th>
+            <th>Ambulant erworbene Infektion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Typische Erreger</td>
+            <td>
+              Streptococcus pneumoniae<br/>
+              Haemophilus influenzae<br/>
+              Staphylococcus aureus<br/>
+              Enterobacterales<br/>
+              Anaerobier<br/>
+              Pseudomonas aeruginosa<br/>
+              Acinetobacter spp.<br/>
+              Stenotrophomonas maltophilia
+            </td>
+            <td>(ähnliche Erreger in ambulant erworbenen Fällen)</td>
+          </tr>
+        </tbody>
+      </table>
+      <h4>Therapieoptionen</h4>
+      <ul>
+        <li>
+          Option 1:
+          <ul>
+            <li>Cefepim   bzw. Ceftazidim   oder</li>
+            <li>Piperacillin/Tazobactam   oder</li>
+            <li>Meropenem   bzw. Imipenem/Cilastatin  </li>
+          </ul>
+        </li>
+        <li>
+          Kombination mit:
+          <ul>
+            <li>Ciprofloxacin   bzw. Levofloxacin   oder</li>
+            <li>Fosfomycin  </li>
+          </ul>
+        </li>
+        <li>
+          Option 2:
+          <ul>
+            <li>Cefuroxim   bzw. Ceftriaxon   bzw. Cefotaxim   oder</li>
+            <li>Piperacillin/Tazobactam   oder</li>
+            <li>Meropenem   bzw. Imipenem/Cilastatin  </li>
+          </ul>
+        </li>
+        <li>
+          Ggf. Kombination mit Makrolid (z. B. Clarithromycin  ) und weitere Optionen (Levofloxacin, Moxifloxacin).
+        </li>
+      </ul>
+      <h4>Hinweise</h4>
+      <ul>
+        <li>Bei septischem Schock und Risikofaktoren für MRSA/MRE: Zusätzlich Linezolid  </li>
+        <li>Siehe auch: Medikamentöse Therapie der ambulant erworbenen bzw. nosokomialen Pneumonie</li>
+      </ul>
+    </section>
+  
+    <hr/>
+  
+    <!-- Fokus: Harnwege -->
+    <section>
+      <h3>Fokus: Harnwege </h3>
+      <h4>Häufigste Erreger</h4>
+      <table border="1" cellspacing="0" cellpadding="4">
+        <thead>
+          <tr>
+            <th>Erreger</th>
+            <th>Nosokomiale Infektion</th>
+            <th>Ambulant erworbene Infektion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Typische Erreger</td>
+            <td>
+              Enterobacterales (z. B. Escherichia coli, Proteus mirabilis)<br/>
+              Pseudomonas aeruginosa<br/>
+              Enterococcusspp.<br/>
+              Staphylococcus spp.
+            </td>
+            <td>(ähnliche Erreger)</td>
+          </tr>
+        </tbody>
+      </table>
+      <h4>Therapieoptionen</h4>
+      <ul>
+        <li>
+          Option 1:
+          <ul>
+            <li>Cefotaxim   bzw. Ceftriaxon   bzw. Ceftazidim   bzw. Cefepim   oder</li>
+            <li>Piperacillin/Tazobactam   oder</li>
+            <li>Meropenem   bzw. Imipenem/Cilastatin  </li>
+          </ul>
+        </li>
+        <li>
+          Option 2:
+          <ul>
+            <li>Ampicillin/Sulbactam  , ggf. plus Aminoglykosid (z. B. Gentamicin  ) oder</li>
+            <li>Ceftriaxon   bzw. Cefotaxim   oder</li>
+            <li>Ertapenem  </li>
+          </ul>
+        </li>
+      </ul>
+      <h4>Hinweise</h4>
+      <ul>
+        <li>Nach urologischen Eingriffen oder invasiver Harnableitung: Häufiger Nachweis von Staphylokokken, Pseudomonaden, Enterokokken</li>
+        <li>Lokales Resistenzspektrum für E. coli ist zu beachten</li>
+        <li>Siehe auch: Nosokomiale Harnwegsinfektion – Antibiotische Therapie, Therapie der Urozystitis, Pyelonephritis</li>
+      </ul>
+    </section>
+  
+    <hr/>
+  
+    <!-- Fokus: Darm und gynäkologische Organe -->
+    <section>
+      <h3>Fokus: Darm und gynäkologische Organe </h3>
+      <h4>Häufigste Erreger</h4>
+      <table border="1" cellspacing="0" cellpadding="4">
+        <thead>
+          <tr>
+            <th>Erreger</th>
+            <th>Nosokomiale Infektion</th>
+            <th>Ambulant erworbene Infektion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Typische Erreger</td>
+            <td>
+              Enterobacterales<br/>
+              Anaerobier<br/>
+              Enterococcusspp.<br/>
+              Staphylococcus aureus<br/>
+              Pseudomonas aeruginosa
+            </td>
+            <td>(ähnliche Erreger)</td>
+          </tr>
+        </tbody>
+      </table>
+      <h4>Therapieoptionen</h4>
+      <ul>
+        <li>
+          Option 1:
+          <ul>
+            <li>Piperacillin/Tazobactam   oder</li>
+            <li>Meropenem   bzw. Imipenem/Cilastatin  </li>
+          </ul>
+        </li>
+        <li>
+          Oder Kombinationstherapien mit Metronidazol   plus:
+          <ul>
+            <li>Ceftazidim   bzw. Cefepim   oder</li>
+            <li>Ciprofloxacin   bzw. Levofloxacin  </li>
+          </ul>
+        </li>
+        <li>
+          Option 2:
+          <ul>
+            <li>Piperacillin/Tazobactam   oder Ertapenem   oder</li>
+            <li>Kombinationstherapie aus Ceftriaxon   bzw. Cefotaxim   plus Metronidazol  </li>
+          </ul>
+        </li>
+      </ul>
+      <h4>Hinweise</h4>
+      <ul>
+        <li>Bei septischem Schock und Risiko für MRE: Ggf. zusätzlich Tigecyclin  </li>
+        <li>Siehe auch: Antibiotische Therapie bei sekundärer Peritonitis, stationäre Antibiotikatherapie bei Divertikulitis, Therapie der Appendizitis</li>
+      </ul>
+    </section>
+  
+    <hr/>
+  
+    <!-- Fokus: Gallenwege -->
+    <section>
+      <h3>Fokus: Gallenwege </h3>
+      <h4>Häufigste Erreger</h4>
+      <table border="1" cellspacing="0" cellpadding="4">
+        <thead>
+          <tr>
+            <th>Erreger</th>
+            <th>Nosokomiale Infektion</th>
+            <th>Ambulant erworbene Infektion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Typische Erreger</td>
+            <td>
+              Enterobacterales<br/>
+              Enterococcusspp.<br/>
+              Pseudomonas aeruginosa<br/>
+              Anaerobier
+            </td>
+            <td>(ähnliche Erreger)</td>
+          </tr>
+        </tbody>
+      </table>
+      <h4>Therapieoptionen</h4>
+      <ul>
+        <li>
+          Option 1:
+          <ul>
+            <li>Piperacillin/Tazobactam   oder</li>
+            <li>Meropenem   bzw. Imipenem/Cilastatin  </li>
+          </ul>
+        </li>
+        <li>
+          Oder Kombinationstherapie mit Aminopenicillin (z. B. Ampicillin  ) plus:
+          <ul>
+            <li>Ceftriaxon   bzw. Cefotaxim   oder</li>
+            <li>Ciprofloxacin   bzw. Levofloxacin  </li>
+          </ul>
+        </li>
+        <li>
+          Option 2:
+          <ul>
+            <li>Piperacillin/Tazobactam   oder Ertapenem   oder</li>
+            <li>Kombinationstherapie aus Ceftriaxon/Cefotaxim   plus Aminopenicillin (Ampicillin  )</li>
+          </ul>
+        </li>
+      </ul>
+      <h4>Hinweise</h4>
+      <ul>
+        <li>Bei septischem Schock: Zusätzlich Tigecyclin erwägen  </li>
+        <li>Siehe auch: Akute Pankreatitis – medikamentöse Therapie, Cholelithiasis, Cholezystitis und Cholangitis</li>
+      </ul>
+    </section>
+  
+    <hr/>
+  
+    <!-- Fokus: Haut und Weichteile -->
+    <section>
+      <h3>Fokus: Haut und Weichteile </h3>
+      <h4>Häufigste Erreger</h4>
+      <table border="1" cellspacing="0" cellpadding="4">
+        <thead>
+          <tr>
+            <th>Erreger</th>
+            <th>Nosokomiale Infektion</th>
+            <th>Ambulant erworbene Infektion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Typische Erreger</td>
+            <td>
+              Streptococcus pyogenes<br/>
+              Staphylococcus aureus<br/>
+              Anaerobier<br/>
+              Enterobacterales<br/>
+              Pseudomonasspp.
+            </td>
+            <td>(ähnliche Erreger)</td>
+          </tr>
+        </tbody>
+      </table>
+      <h4>Therapieoptionen</h4>
+      <ul>
+        <li>
+          Option:
+          <ul>
+            <li>Ceftazidim   bzw. Cefepim   oder</li>
+            <li>Piperacillin/Tazobactam   oder</li>
+            <li>Ciprofloxacin   bzw. Levofloxacin   oder</li>
+            <li>Meropenem   bzw. Imipenem/Cilastatin  </li>
+          </ul>
+        </li>
+        <li>
+          Ggf. Kombination mit:
+          <ul>
+            <li>Clindamycin   oder</li>
+            <li>Cefuroxim  </li>
+          </ul>
+        </li>
+        <li>
+          Kombinationstherapie: Cefuroxim   bzw. Cefazolin   plus Clindamycin  .
+        </li>
+      </ul>
+      <h4>Hinweise</h4>
+      <ul>
+        <li>Siehe auch: Nosokomiale Wundinfektion, bakterielle Infektionen von Haut und Weichteilen</li>
+      </ul>
+    </section>
+  
+    <hr/>
+  
+    <!-- Fokus: Intravasale Fremdkörper -->
+    <section>
+      <h3>Fokus: Intravasale Fremdkörper </h3>
+      <h4>Häufigste Erreger</h4>
+      <table border="1" cellspacing="0" cellpadding="4">
+        <thead>
+          <tr>
+            <th>Erreger</th>
+            <th>Nosokomiale Infektion</th>
+            <th>Ambulant erworbene Infektion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Typische Erreger</td>
+            <td>
+              Koagulasenegative Staphylokokken<br/>
+              Staphylococcus aureus<br/>
+              Corynebacterium jeikeium<br/>
+              Propionibacterium spp.<br/>
+              Gramnegative Stäbchenbakterien
+            </td>
+            <td>(ähnliche Erreger)</td>
+          </tr>
+        </tbody>
+      </table>
+      <h4>Therapieoptionen</h4>
+      <ul>
+        <li>
+          Option:
+          <ul>
+            <li>Vancomycin   oder</li>
+            <li>Daptomycin  </li>
+          </ul>
+        </li>
+        <li>
+          Ggf. Kombination mit:
+          <ul>
+            <li>Piperacillin/Tazobactam   oder</li>
+            <li>Ceftriaxon   bzw. Cefepim   bzw. Cefotaxim   oder</li>
+            <li>Meropenem   bzw. Imipenem/Cilastatin  </li>
+          </ul>
+        </li>
+        <li>
+          Weitere Option:
+          <ul>
+            <li>Vancomycin   (erneut als Standard)</li>
+            <li>Ggf. Kombination mit denselben Substanzen wie oben</li>
+          </ul>
+        </li>
+      </ul>
+      <h4>Hinweise</h4>
+      <ul>
+        <li>Möglichkeit einer invasiven Pilzinfektion bedenken</li>
+      </ul>
+    </section>
+  
+  </div>`
+          },
           {
             id: 1,
             title: "Initialtherapie & Sepsis-Bundles",
@@ -363,7 +770,7 @@ export default {
       <li>Beobachtung von Risikofaktoren für multiresistente Erreger (z. B. vorherige Antibiotikatherapie, Reha-/Pflegeeinrichtungen, Liegedauer, Vorerkrankungen, Fremdmaterialien)</li>
       <li>Berücksichtigung des lokalen Erreger- und Resistenzspektrums</li>
       <li>Schneller Therapiebeginn ("Hit hard and early") – idealerweise innerhalb einer Stunde</li>
-      <li>Hohe Initialdosis und ggf. Einsatz kontinuierlicher Dauerinfusionen, um einen adäquaten Wirkspiegel zu erzielen</li>
+      <li>Hohe Initial  und ggf. Einsatz kontinuierlicher Dauerinfusionen, um einen adäquaten Wirkspiegel zu erzielen</li>
       <li>Schnelle Deeskalation und Sequenztherapie (Wechsel von i.v. auf p.o.), sobald Erregernachweis und Resistenzprofile vorliegen</li>
     </ul>
   </div>`
@@ -414,6 +821,148 @@ export default {
   </div>`
           }
         ],
+      },
+      {
+        id: 2,
+        title: "Fragen",
+        questions: [
+          {
+            title: "Welche Maßnahme gehört NICHT zur Initialtherapie bei Sepsis?",
+            answers: [
+              { name: "Lactatmessung und -kontrolle", isCorrect: false },
+              { name: "Blutkulturdiagnostik vor Antibiotikagabe", isCorrect: false },
+              { name: "Kalkulierte Breitbandantibiotikatherapie", isCorrect: false },
+              { name: "Verzicht auf Volumensubstitution", isCorrect: true }
+            ]
+          },
+          {
+            title: "Welcher Zielwert gehört zur Kreislaufstabilisierung bei Sepsis?",
+            answers: [
+              { name: "Arterieller Mitteldruck (MAP) von 65 mmHg", isCorrect: true },
+              { name: "ZVD unter 5 cmH₂O", isCorrect: false },
+              { name: "Lactat > 4 mmol/L", isCorrect: false },
+              { name: "Diurese < 0,5 mL/kgKG/h", isCorrect: false }
+            ]
+          },
+          {
+            title: "Was beschreibt das Prinzip 'Hit hard and early' in der Antibiotikatherapie?",
+            answers: [
+              { name: "Sofortiger Beginn einer kalkulierten Breitbandtherapie", isCorrect: true },
+              { name: "Abwarten der Blutkulturergebnisse", isCorrect: false },
+              { name: "Langsamer Anstieg der Dosierung", isCorrect: false },
+              { name: "Begrenzte Antibiotikatherapie nur bei schweren Verläufen", isCorrect: false }
+            ]
+          },
+          {
+            title: "Welche Option gehört zur Therapie bei unbekanntem Fokus?",
+            answers: [
+              { name: "Kombinationstherapie mit Piperacillin/Tazobactam und Ciprofloxacin", isCorrect: true },
+              { name: "Alleinig monotherapeutische Gabe von Cefepim", isCorrect: false },
+              { name: "Zielgerichtete Therapie ohne Kombination", isCorrect: false },
+              { name: "Verzicht auf Antibiotika", isCorrect: false }
+            ]
+          },
+          {
+            title: "Welche Parameter sind kritisch für die Überwachung während der Kreislaufstabilisierung?",
+            answers: [
+              { name: "ZVD, MAP, Lactat, szvO₂ und Diurese", isCorrect: true },
+              { name: "Nur Blutdruck und Puls", isCorrect: false },
+              { name: "Nur Sauerstoffsättigung", isCorrect: false },
+              { name: "Nur Diurese und Temperatur", isCorrect: false }
+            ]
+          },
+          {
+            title: "Welche Aussage zur antibiotischen Therapie bei Fokus Atemwege ist korrekt?",
+            answers: [
+              { name: "Makrolide können als Zusatz zur Breitbandtherapie genutzt werden", isCorrect: true },
+              { name: "Es wird ausschließlich monotherapeutisch vorgegangen", isCorrect: false },
+              { name: "Antibiotika sind nur bei bakterieller Pneumonie indiziert", isCorrect: false },
+              { name: "Die initiale Therapie wird verzögert, bis mikrobiologische Befunde vorliegen", isCorrect: false }
+            ]
+          },
+          {
+            title: "Welche Maßnahme ist Teil der Fokussanierung bei Kathetersepsis?",
+            answers: [
+              { name: "Entfernung aller intravasalen Katheter", isCorrect: true },
+              { name: "Verlängerte Volumentherapie", isCorrect: false },
+              { name: "Erhöhung der Antibiotikadosis", isCorrect: false },
+              { name: "Zielgerichtete antifungale Therapie", isCorrect: false }
+            ]
+          },
+          {
+            title: "Welche Kombination kann zur Therapie bei Fokus Darm und gynäkologische Organe eingesetzt werden?",
+            answers: [
+              { name: "Piperacillin/Tazobactam in Kombination mit Metronidazol", isCorrect: true },
+              { name: "Ausschließlich Meropenem als Monotherapie", isCorrect: false },
+              { name: "Nur Ceftriaxon ohne Kombinationspartner", isCorrect: false },
+              { name: "Kombinationstherapie mit Clindamycin allein", isCorrect: false }
+            ]
+          },
+          {
+            title: "Welche ergänzende Maßnahme gehört zur Therapie bei Fokus Gallenwege?",
+            answers: [
+              { name: "Kombinationstherapie mit Aminopenicillin und Ceftriaxon", isCorrect: true },
+              { name: "Einmalige Gabe von Piperacillin/Tazobactam", isCorrect: false },
+              { name: "Monotherapie mit Meropenem", isCorrect: false },
+              { name: "Verzicht auf Kombinationstherapie", isCorrect: false }
+            ]
+          },
+          {
+            title: "Welche Aussage trifft auf die supportive Therapie in der Sepsis-Initialtherapie zu?",
+            answers: [
+              { name: "Blutzuckermanagement und Thromboseprophylaxe sind essentielle Bestandteile", isCorrect: true },
+              { name: "Nur die antibiotische Therapie ist entscheidend", isCorrect: false },
+              { name: "Stressulkusprophylaxe ist optional", isCorrect: false },
+              { name: "Beatmungstherapie wird unabhängig von lungenprotektiven Strategien angewendet", isCorrect: false }
+            ]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "Faktenfragen",
+        questions: [
+          {
+            title: "Was ist das Ziel der frühen Lactatmessung in der Sepsis-Initialtherapie?",
+            hidden_answer: "Ein Lactatwert unter 2 mmol/L bzw. ein fallender Wert deutet auf eine verbesserte Mikrozirkulation hin."
+          },
+          {
+            title: "Welcher MAP-Wert wird als Ziel für die Kreislaufstabilisierung angestrebt?",
+            hidden_answer: "Der arteriellen Mitteldruck (MAP) soll bei 65 mmHg liegen."
+          },
+          {
+            title: "Was bedeutet das Prinzip 'Hit hard and early' in der antibiotischen Therapie?",
+            hidden_answer: "Unmittelbarer Beginn einer kalkulierten Breitbandtherapie noch vor Erhalt der mikrobiologischen Befunde."
+          },
+          {
+            title: "Welche Rolle spielen Vasopressoren in der Sepsistherapie?",
+            hidden_answer: "Sie werden eingesetzt, um trotz Flüssigkeitsgabe eine Hypotonie zu korrigieren und einen MAP von 65 mmHg zu erreichen."
+          },
+          {
+            title: "Nennen Sie ein Beispiel für eine Kombinationstherapie bei einem unbekannten Fokus.",
+            hidden_answer: "Die Kombination von Piperacillin/Tazobactam mit Ciprofloxacin bzw. Levofloxacin ist ein Beispiel."
+          },
+          {
+            title: "Welche Parameter werden zur Überwachung der Kreislaufstabilisierung herangezogen?",
+            hidden_answer: "Zu den Zielparametern gehören ZVD, MAP, Lactat, zentralvenöse Sauerstoffsättigung (szvO₂) und Diurese."
+          },
+          {
+            title: "Welche ergänzende antibiotische Maßnahme kann bei Fokus Atemwege hinzugefügt werden?",
+            hidden_answer: "Zusätzlich zur Basistherapie kann ein Makrolid wie Clarithromycin eingesetzt werden."
+          },
+          {
+            title: "Welche diagnostische Maßnahme ist essentiell vor Beginn einer antibiotischen Therapie?",
+            hidden_answer: "Die Blutkulturdiagnostik sollte vor Beginn der Antibiotikagabe durchgeführt werden."
+          },
+          {
+            title: "Wie wird bei Kathetersepsis der Katheter als Infektionsquelle bestätigt?",
+            hidden_answer: "Durch die Bestimmung der Differential Time to Positivity (DTP), wobei ein zentraler Befund 2–3 Stunden früher positiv wird (Ratio >5:1)."
+          },
+          {
+            title: "Was kennzeichnet das '1-Hour-Bundle' in der Sepsis-Initialtherapie?",
+            hidden_answer: "Es umfasst Maßnahmen wie Lactatmessung, Blutkulturdiagnostik, kalkulierte Breitbandantibiotikatherapie und Volumensubstitution innerhalb der ersten Stunde."
+          }
+        ]
       }
-    ],
+    ]
   };
