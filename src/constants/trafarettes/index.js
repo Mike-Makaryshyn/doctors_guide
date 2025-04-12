@@ -165,7 +165,7 @@ import medullaereschilddruesenkarzinom from "./subpages/schilddruese/medullaeres
 import anaplastischeschilddruesenkarzinom from "./subpages/schilddruese/anaplastischeschilddruesenkarzinom";
 import huerthlezellkarzinom from "./subpages/schilddruese/huerthlezellkarzinom";
 import schilddruesenresektionen from "./subpages/schilddruese/schilddruesenresektionen";
-
+import sepsis from "./subpages/inneremedizin/sepsis";
 // Формуємо основний масив даних
 // /constants/trafarettes/index.js
 // (Імпорти залишаються незмінними)
@@ -173,6 +173,7 @@ import schilddruesenresektionen from "./subpages/schilddruese/schilddruesenresek
 //
 // Формування основного масиву даних з оновленою категоризацією
 const all_pages_data = [
+  { ...sepsis, mainCategory: "Innere Medizin", category: "Trafarete" },
   // *** Trafarete ***
   { ...first_trafarette_page, mainCategory: "Innere Medizin", category: "Trafarete" },
   { ...second_trafarette_page, mainCategory: "Innere Medizin", category: "Trafarete" },
