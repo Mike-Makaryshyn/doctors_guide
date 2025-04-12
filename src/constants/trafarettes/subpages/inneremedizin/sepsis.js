@@ -4,7 +4,7 @@ export default {
     content: [
       {
         id: 1,
-        title: "Definition & Grundlagen",
+        title: "Sepsis",
         childTabs: [
           {
             id: 1,
