@@ -173,7 +173,7 @@ import sepsis from "./subpages/inneremedizin/sepsis";
 //
 // Формування основного масиву даних з оновленою категоризацією
 const all_pages_data = [
-  { ...sepsis, mainCategory: "Innere Medizin", category: "Trafarete" },
+  { ...sepsis, mainCategory: "Innere Medizin", category: "Infektiologie" },
   // *** Trafarete ***
   { ...first_trafarette_page, mainCategory: "Innere Medizin", category: "Trafarete" },
   { ...second_trafarette_page, mainCategory: "Innere Medizin", category: "Trafarete" },

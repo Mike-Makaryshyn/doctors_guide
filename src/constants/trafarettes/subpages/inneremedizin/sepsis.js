@@ -829,80 +829,80 @@ export default {
           {
             title: "Welche Maßnahme gehört NICHT zur Initialtherapie bei Sepsis?",
             answers: [
-              { name: "Lactatmessung und -kontrolle", isCorrect: false },
               { name: "Blutkulturdiagnostik vor Antibiotikagabe", isCorrect: false },
               { name: "Kalkulierte Breitbandantibiotikatherapie", isCorrect: false },
-              { name: "Verzicht auf Volumensubstitution", isCorrect: true }
+              { name: "Verzicht auf Volumensubstitution", isCorrect: true },
+              { name: "Lactatmessung und -kontrolle", isCorrect: false }
             ]
           },
           {
             title: "Welcher Zielwert gehört zur Kreislaufstabilisierung bei Sepsis?",
             answers: [
-              { name: "Arterieller Mitteldruck (MAP) von 65 mmHg", isCorrect: true },
               { name: "ZVD unter 5 cmH₂O", isCorrect: false },
               { name: "Lactat > 4 mmol/L", isCorrect: false },
+              { name: "Arterieller Mitteldruck (MAP) von 65 mmHg", isCorrect: true },
               { name: "Diurese < 0,5 mL/kgKG/h", isCorrect: false }
             ]
           },
           {
-            title: "Was beschreibt das Prinzip 'Hit hard and early' in der Antibiotikatherapie?",
+            title: "Was bedeutet das Prinzip 'Hit hard and early' in der Antibiotikatherapie?",
             answers: [
               { name: "Sofortiger Beginn einer kalkulierten Breitbandtherapie", isCorrect: true },
-              { name: "Abwarten der Blutkulturergebnisse", isCorrect: false },
               { name: "Langsamer Anstieg der Dosierung", isCorrect: false },
-              { name: "Begrenzte Antibiotikatherapie nur bei schweren Verläufen", isCorrect: false }
+              { name: "Abwarten der Blutkulturergebnisse", isCorrect: false },
+              { name: "Begrenzte Therapie nur bei schweren Verläufen", isCorrect: false }
             ]
           },
           {
             title: "Welche Option gehört zur Therapie bei unbekanntem Fokus?",
             answers: [
+              { name: "Allein monotherapeutische Gabe von Cefepim", isCorrect: false },
               { name: "Kombinationstherapie mit Piperacillin/Tazobactam und Ciprofloxacin", isCorrect: true },
-              { name: "Alleinig monotherapeutische Gabe von Cefepim", isCorrect: false },
               { name: "Zielgerichtete Therapie ohne Kombination", isCorrect: false },
               { name: "Verzicht auf Antibiotika", isCorrect: false }
             ]
           },
           {
-            title: "Welche Parameter sind kritisch für die Überwachung während der Kreislaufstabilisierung?",
+            title: "Welche Parameter sind entscheidend für die Überwachung während der Kreislaufstabilisierung?",
             answers: [
-              { name: "ZVD, MAP, Lactat, szvO₂ und Diurese", isCorrect: true },
               { name: "Nur Blutdruck und Puls", isCorrect: false },
+              { name: "ZVD, MAP, Lactat, szvO₂ und Diurese", isCorrect: true },
               { name: "Nur Sauerstoffsättigung", isCorrect: false },
-              { name: "Nur Diurese und Temperatur", isCorrect: false }
+              { name: "Nur Temperatur und Diurese", isCorrect: false }
             ]
           },
           {
             title: "Welche Aussage zur antibiotischen Therapie bei Fokus Atemwege ist korrekt?",
             answers: [
-              { name: "Makrolide können als Zusatz zur Breitbandtherapie genutzt werden", isCorrect: true },
-              { name: "Es wird ausschließlich monotherapeutisch vorgegangen", isCorrect: false },
-              { name: "Antibiotika sind nur bei bakterieller Pneumonie indiziert", isCorrect: false },
-              { name: "Die initiale Therapie wird verzögert, bis mikrobiologische Befunde vorliegen", isCorrect: false }
+              { name: "Antibiotika werden erst nach Befundabklärung verabreicht", isCorrect: false },
+              { name: "Makrolide können als Zusatz eingesetzt werden", isCorrect: true },
+              { name: "Es erfolgt ausschließlich eine monotherapeutische Behandlung", isCorrect: false },
+              { name: "Die Behandlung beschränkt sich auf eine Einzeldosis", isCorrect: false }
             ]
           },
           {
-            title: "Welche Maßnahme ist Teil der Fokussanierung bei Kathetersepsis?",
+            title: "Welche Maßnahme gehört zur Fokussanierung bei Kathetersepsis?",
             answers: [
-              { name: "Entfernung aller intravasalen Katheter", isCorrect: true },
               { name: "Verlängerte Volumentherapie", isCorrect: false },
               { name: "Erhöhung der Antibiotikadosis", isCorrect: false },
+              { name: "Entfernung aller intravasalen Katheter", isCorrect: true },
               { name: "Zielgerichtete antifungale Therapie", isCorrect: false }
             ]
           },
           {
-            title: "Welche Kombination kann zur Therapie bei Fokus Darm und gynäkologische Organe eingesetzt werden?",
+            title: "Welche Kombinationstherapie kann bei Fokus Darm und gynäkologische Organe eingesetzt werden?",
             answers: [
-              { name: "Piperacillin/Tazobactam in Kombination mit Metronidazol", isCorrect: true },
-              { name: "Ausschließlich Meropenem als Monotherapie", isCorrect: false },
-              { name: "Nur Ceftriaxon ohne Kombinationspartner", isCorrect: false },
-              { name: "Kombinationstherapie mit Clindamycin allein", isCorrect: false }
+              { name: "Monotherapie mit Meropenem", isCorrect: false },
+              { name: "Begrenzt Clindamycin allein", isCorrect: false },
+              { name: "Ausschließlich Ceftriaxon", isCorrect: false },
+              { name: "Piperacillin/Tazobactam in Kombination mit Metronidazol", isCorrect: true }
             ]
           },
           {
             title: "Welche ergänzende Maßnahme gehört zur Therapie bei Fokus Gallenwege?",
             answers: [
+              { name: "Alleinige Gabe von Piperacillin/Tazobactam", isCorrect: false },
               { name: "Kombinationstherapie mit Aminopenicillin und Ceftriaxon", isCorrect: true },
-              { name: "Einmalige Gabe von Piperacillin/Tazobactam", isCorrect: false },
               { name: "Monotherapie mit Meropenem", isCorrect: false },
               { name: "Verzicht auf Kombinationstherapie", isCorrect: false }
             ]
@@ -910,14 +910,168 @@ export default {
           {
             title: "Welche Aussage trifft auf die supportive Therapie in der Sepsis-Initialtherapie zu?",
             answers: [
-              { name: "Blutzuckermanagement und Thromboseprophylaxe sind essentielle Bestandteile", isCorrect: true },
-              { name: "Nur die antibiotische Therapie ist entscheidend", isCorrect: false },
-              { name: "Stressulkusprophylaxe ist optional", isCorrect: false },
-              { name: "Beatmungstherapie wird unabhängig von lungenprotektiven Strategien angewendet", isCorrect: false }
+              { name: "Nur die Antibiotikatherapie ist entscheidend", isCorrect: false },
+              { name: "Stressulkusprophylaxe ist entbehrlich", isCorrect: false },
+              { name: "Blutzuckermanagement und Thromboseprophylaxe sind zentral", isCorrect: true },
+              { name: "Beatmungstherapie erfolgt ohne lungenprotektive Maßnahmen", isCorrect: false }
+            ]
+          },
+          {
+            title: "Welche diagnostische Maßnahme darf bei Sepsis nicht vernachlässigt werden?",
+            answers: [
+              { name: "Lungensonographie", isCorrect: false },
+              { name: "Unmittelbare CT-Untersuchung", isCorrect: false },
+              { name: "Blutkulturdiagnostik vor Antibiotikagabe", isCorrect: true },
+              { name: "Röntgen des Thorax", isCorrect: false }
+            ]
+          },
+          {
+            title: "Was ist ein typischer Indikator für eine erfolgreiche Volumentherapie?",
+            answers: [
+              { name: "Ein ansteigender Blutdruckwert über 90 mmHg", isCorrect: false },
+              { name: "Ein Abfall der Körpertemperatur", isCorrect: false },
+              { name: "Ein fallender Lactatwert (< 2 mmol/L)", isCorrect: true },
+              { name: "Ein signifikanter Anstieg des Pulses", isCorrect: false }
+            ]
+          },
+          {
+            title: "Welcher Wert ist typisch für eine Hyperkaliämie bei Sepsis?",
+            answers: [
+              { name: "Ein dynamisch verändernder Kaliumwert", isCorrect: false },
+              { name: "Ein erhöhter Kaliumwert über 5,5 mmol/L", isCorrect: true },
+              { name: "Ein konstanter Kaliumwert von 4,0 mmol/L", isCorrect: false },
+              { name: "Ein Kaliumwert unter 3,5 mmol/L", isCorrect: false }
+            ]
+          },
+          {
+            title: "Welche Maßnahme wird zur Fokussanierung bei Kathetersepsis empfohlen?",
+            answers: [
+              { name: "Erhöhung der Infusionsrate", isCorrect: false },
+              { name: "Entfernung des betroffenen Katheters", isCorrect: true },
+              { name: "Ausschließliche Gabe von Antikoagulanzien", isCorrect: false },
+              { name: "Verlängerter Antibiotikaverband", isCorrect: false }
+            ]
+          },
+          {
+            title: "Welcher Aspekt gehört nicht zur Überwachung der Kreislaufstabilisierung?",
+            answers: [
+              { name: "Monitoring des Blutzuckerspiegels", isCorrect: true },
+              { name: "Regelmäßige Kontrolle der zentralvenösen Sauerstoffsättigung", isCorrect: false },
+              { name: "Überwachung des Blutdrucks und Pulses", isCorrect: false },
+              { name: "Beurteilung der Diurese", isCorrect: false }
+            ]
+          },
+          {
+            title: "Wie wird die Differential Time to Positivity (DTP) in der Kathetersepsis genutzt?",
+            answers: [
+              { name: "Ein langsamer positiver Befund bestätigt eine katheterunabhängige Infektion", isCorrect: false },
+              { name: "DTP wird zur Dosismodifikation der Antibiotika genutzt", isCorrect: false },
+              { name: "DTP hat keinen Einfluss auf die Therapie", isCorrect: false },
+              { name: "Ein schneller positiver Befund (2–3 Stunden früher, Ratio >5:1) weist auf den Katheter als Infektionsquelle hin", isCorrect: true }
+            ]
+          },
+          {
+            title: "Welche Rolle spielt die Reevaluation der Therapie in der Sepsis-Initialtherapie?",
+            answers: [
+              { name: "Sie ersetzt die initiale Diagnose", isCorrect: false },
+              { name: "Sie ist nur bei invasiven Infektionen relevant", isCorrect: false },
+              { name: "Sie wird erst nach der Therapie durchgeführt", isCorrect: false },
+              { name: "Sie ermöglicht die Anpassung der Therapie basierend auf aktuellen Befunden", isCorrect: true }
+            ]
+          },
+          {
+            title: "Welche Aussage beschreibt die rationale Volumentherapie bei Sepsis am besten?",
+            answers: [
+              { name: "Fluid-Challenge-Prinzip ist veraltet", isCorrect: false },
+              { name: "Ein schneller Flüssigkeitsbolus, gefolgt von kontrollierter Gabe, solange Zeichen der Hypoperfusion vorliegen", isCorrect: true },
+              { name: "Flüssigkeitsgabe sollte ganz vermieden werden", isCorrect: false },
+              { name: "Kontinuierliche, unlimitierte Flüssigkeitsgabe ist ideal", isCorrect: false }
+            ]
+          },
+          {
+            title: "Welche Kombination wird häufig als Zusatz zur antibiotischen Therapie bei Fokus Atemwege verwendet?",
+            answers: [
+              { name: "Makrolide wie Clarithromycin als Zusatz", isCorrect: true },
+              { name: "Monotherapie mit Beta-Lactamen", isCorrect: false },
+              { name: "Aminoglycoside als Einzeltherapie", isCorrect: false },
+              { name: "Fluorchinolone ohne weitere Therapie", isCorrect: false }
+            ]
+          },
+          {
+            title: "Welche Zielparameter sind bei der Kreislaufstabilisierung besonders wichtig?",
+            answers: [
+              { name: "Nur der MAP-Wert", isCorrect: false },
+              { name: "Blutbildwerte und Leberparameter", isCorrect: false },
+              { name: "Körpertemperatur und Puls", isCorrect: false },
+              { name: "ZVD, MAP, Lactat, szvO₂ und Diurese", isCorrect: true }
+            ]
+          },
+          {
+            title: "Welche Maßnahme verbessert direkt die Mikrozirkulation in der Sepsis-Initialtherapie?",
+            answers: [
+              { name: "Ein Abfall des Lactatwerts", isCorrect: true },
+              { name: "Erhöhung der Diurese", isCorrect: false },
+              { name: "Steigerung des ZVD", isCorrect: false },
+              { name: "Senkung der Körpertemperatur", isCorrect: false }
+            ]
+          },
+          {
+            title: "Wie sollte bei Verdacht auf sepsisbedingte Organversagen vorgegangen werden?",
+            answers: [
+              { name: "Abwarten der Laborergebnisse, bevor Maßnahmen ergriffen werden", isCorrect: false },
+              { name: "Frühzeitige Identifikation des Infektionsfokus und sofortige Intervention", isCorrect: true },
+              { name: "Ausschließliche Überwachung ohne sofortige Intervention", isCorrect: false },
+              { name: "Verzicht auf Antibiotika, wenn Vitalparameter normal erscheinen", isCorrect: false }
+            ]
+          },
+          {
+            title: "Welche Rolle spielt das '1-Hour-Bundle' in der Sepsis-Initialtherapie?",
+            answers: [
+              { name: "Es wird nach Abschluss aller diagnostischen Maßnahmen initiiert", isCorrect: false },
+              { name: "Es dient nur der Dokumentation", isCorrect: false },
+              { name: "Es ist ein veraltetes Konzept", isCorrect: false },
+              { name: "Es fasst alle Maßnahmen zusammen, die innerhalb der ersten Stunde durchgeführt werden müssen", isCorrect: true }
+            ]
+          },
+          {
+            title: "Welche der folgenden Maßnahmen gehört NICHT zum '1-Hour-Bundle'?",
+            answers: [
+              { name: "Abwarten auf endgültige Blutkulturergebnisse", isCorrect: true },
+              { name: "Blutkulturdiagnostik vor Antibiotikagabe", isCorrect: false },
+              { name: "Sofortiger Beginn einer Breitbandtherapie", isCorrect: false },
+              { name: "Volumensubstitution innerhalb von 3 Stunden", isCorrect: false }
+            ]
+          },
+          {
+            title: "Warum ist die regelmäßige Reevaluation der Therapie wichtig?",
+            answers: [
+              { name: "Weil sie die Notwendigkeit der Intensivtherapie ausschließt", isCorrect: false },
+              { name: "Weil die initiale Therapie immer ausreichend ist", isCorrect: false },
+              { name: "Weil sie ermöglicht, die Therapie an aktuelle Befunde anzupassen", isCorrect: true },
+              { name: "Weil sie erst nach der Therapie durchgeführt wird", isCorrect: false }
+            ]
+          },
+          {
+            title: "Welche Aussage zu Vasopressoren in der Sepsistherapie trifft zu?",
+            answers: [
+              { name: "Ihr Einsatz verzögert die Antibiotikatherapie", isCorrect: false },
+              { name: "Sie ersetzen die Volumensubstitution", isCorrect: false },
+              { name: "Sie werden ausschließlich bei normovolem Patienten eingesetzt", isCorrect: false },
+              { name: "Sie werden eingesetzt, um einen MAP von 65 mmHg zu erreichen", isCorrect: true }
+            ]
+          },
+          {
+            title: "Welche zusätzliche Maßnahme kann zur Verbesserung der organischen Funktion beitragen?",
+            answers: [
+              { name: "Erhöhung der Flüssigkeitsgabe ohne Kontrolle", isCorrect: false },
+              { name: "Nur empirische Antibiotikatherapie ohne Reevaluation", isCorrect: false },
+              { name: "Stressulkusprophylaxe", isCorrect: true },
+              { name: "Verzicht auf Sedierung", isCorrect: false }
             ]
           }
         ]
       },
+      // Розділ з фактографічними питаннями (Faktenfragen)
       {
         id: 3,
         title: "Faktenfragen",
@@ -927,20 +1081,20 @@ export default {
             hidden_answer: "Ein Lactatwert unter 2 mmol/L bzw. ein fallender Wert deutet auf eine verbesserte Mikrozirkulation hin."
           },
           {
-            title: "Welcher MAP-Wert wird als Ziel für die Kreislaufstabilisierung angestrebt?",
-            hidden_answer: "Der arteriellen Mitteldruck (MAP) soll bei 65 mmHg liegen."
+            title: "Welcher arterieller Mitteldruck (MAP) wird als Ziel angestrebt?",
+            hidden_answer: "Der MAP soll bei 65 mmHg liegen."
           },
           {
-            title: "Was bedeutet das Prinzip 'Hit hard and early' in der antibiotischen Therapie?",
-            hidden_answer: "Unmittelbarer Beginn einer kalkulierten Breitbandtherapie noch vor Erhalt der mikrobiologischen Befunde."
+            title: "Was bedeutet 'Hit hard and early' in der antibiotischen Therapie?",
+            hidden_answer: "Sofortiger Beginn einer kalkulierten Breitbandtherapie noch vor Erhalt der Blutkulturbefunde."
           },
           {
-            title: "Welche Rolle spielen Vasopressoren in der Sepsistherapie?",
-            hidden_answer: "Sie werden eingesetzt, um trotz Flüssigkeitsgabe eine Hypotonie zu korrigieren und einen MAP von 65 mmHg zu erreichen."
+            title: "Welche Rolle haben Vasopressoren in der Sepsistherapie?",
+            hidden_answer: "Vasopressoren werden eingesetzt, um trotz Volumensubstitution eine Hypotonie zu beheben und einen MAP von 65 mmHg zu erreichen."
           },
           {
-            title: "Nennen Sie ein Beispiel für eine Kombinationstherapie bei einem unbekannten Fokus.",
-            hidden_answer: "Die Kombination von Piperacillin/Tazobactam mit Ciprofloxacin bzw. Levofloxacin ist ein Beispiel."
+            title: "Nennen Sie ein Beispiel für eine Kombinationstherapie bei unbekanntem Fokus.",
+            hidden_answer: "Beispielsweise Piperacillin/Tazobactam in Kombination mit Ciprofloxacin oder Levofloxacin."
           },
           {
             title: "Welche Parameter werden zur Überwachung der Kreislaufstabilisierung herangezogen?",
@@ -948,19 +1102,39 @@ export default {
           },
           {
             title: "Welche ergänzende antibiotische Maßnahme kann bei Fokus Atemwege hinzugefügt werden?",
-            hidden_answer: "Zusätzlich zur Basistherapie kann ein Makrolid wie Clarithromycin eingesetzt werden."
+            hidden_answer: "Zusätzlich kann ein Makrolid wie Clarithromycin zur Breitbandtherapie eingesetzt werden."
           },
           {
-            title: "Welche diagnostische Maßnahme ist essentiell vor Beginn einer antibiotischen Therapie?",
-            hidden_answer: "Die Blutkulturdiagnostik sollte vor Beginn der Antibiotikagabe durchgeführt werden."
+            title: "Warum ist die Blutkulturdiagnostik vor Beginn der Antibiotikatherapie wichtig?",
+            hidden_answer: "Um den Erreger zu identifizieren und eine gezielte Therapie zu ermöglichen, ohne die initialen Maßnahmen zu verzögern."
           },
           {
             title: "Wie wird bei Kathetersepsis der Katheter als Infektionsquelle bestätigt?",
-            hidden_answer: "Durch die Bestimmung der Differential Time to Positivity (DTP), wobei ein zentraler Befund 2–3 Stunden früher positiv wird (Ratio >5:1)."
+            hidden_answer: "Durch die Differential Time to Positivity (DTP), wobei ein zentraler Befund 2–3 Stunden früher positiv wird (Ratio >5:1)."
           },
           {
-            title: "Was kennzeichnet das '1-Hour-Bundle' in der Sepsis-Initialtherapie?",
-            hidden_answer: "Es umfasst Maßnahmen wie Lactatmessung, Blutkulturdiagnostik, kalkulierte Breitbandantibiotikatherapie und Volumensubstitution innerhalb der ersten Stunde."
+            title: "Was fasst das '1-Hour-Bundle' in der Sepsis-Initialtherapie zusammen?",
+            hidden_answer: "Es kombiniert Maßnahmen wie Lactatmessung, Blutkulturdiagnostik, kalkulierte Breitbandantibiotikatherapie und Volumensubstitution in der ersten Stunde."
+          },
+          {
+            title: "Wie lange sollen Blutkulturpaare idealerweise vor Antibiotikagabe abgenommen werden?",
+            hidden_answer: "Mindestens 2 Blutkulturpaare, idealerweise an separaten Punktionsstellen."
+          },
+          {
+            title: "Was signalisiert ein fallender Lactatwert in der Therapie?",
+            hidden_answer: "Eine verbesserte Mikrozirkulation und Therapieeffekt."
+          },
+          {
+            title: "Welche Konsequenz hat ein MAP unter 65 mmHg bei Sepsis?",
+            hidden_answer: "Ein MAP unter 65 mmHg ist ein Hinweis auf unzureichende Kreislaufstabilisierung und erhöht das Risiko für Organversagen."
+          },
+          {
+            title: "Welche Maßnahme ist elementar für die frühzeitige Erkennung von Sepsis?",
+            hidden_answer: "Die Erfassung der Vitalparameter und Anwendung von Sepsis-Scores wie qSOFA."
+          },
+          {
+            title: "Was ist ein typischer Indikator für eine erfolgreiche antibiotische Therapie?",
+            hidden_answer: "Ein Absinken der Entzündungsparameter (z. B. PCT, CRP) in Kombination mit klinischer Besserung."
           }
         ]
       }
