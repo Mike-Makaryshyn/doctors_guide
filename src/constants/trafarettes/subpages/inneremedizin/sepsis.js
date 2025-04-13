@@ -10,7 +10,7 @@ export default {
           id: 1,
           title: "Definition",
           textWithFormatting: `<div>
-    <h3>Definition</h3>
+    <h3></h3>
     <p><strong>Sepsis:</strong> Akut lebensbedrohliche Organdysfunktion infolge einer dysregulierten Immunantwort auf eine (mutmaßliche) Infektion.</p>
     <p><strong>Sepsisassoziierte Organdysfunktion:</strong> Eine Änderung des SOFA-Scores um ≥2 Punkte für das jeweils betroffene Organsystem.</p>
     <p><strong>Septischer Schock:</strong> Die Maximalvariante der Sepsis, gekennzeichnet durch Hypotonie (MAP &lt;65 mmHg), die trotz adäquater Volumensubstitution nur durch den Einsatz von Katecholaminen korrigierbar ist, sowie einen Serum-Lactatwert &gt;2 mmol/L (&gt;18 mg/dL).</p>
@@ -27,7 +27,7 @@ export default {
           id: 2,
           title: "Epidemiologie",
           textWithFormatting: `<div>
-    <h3>Epidemiologie</h3>
+    <h3></h3>
     <p>Die Sepsis ist weltweit eine sehr häufige Erkrankung, die erheblich zur Sterblichkeit beiträgt.</p>
     <ul>
       <li><strong>Deutschland:</strong> ca. 158 von 100.000 gemeldeten Fällen</li>
@@ -43,7 +43,7 @@ export default {
           id: 3,
           title: "Ätiologie",
           textWithFormatting: `<div>
-    <h3>Ätiologie</h3>
+    <h3></h3>
     <p>Die Sepsis resultiert aus einer Infektion, die zu einer überwältigenden und dysregulierten Immunantwort führt.</p>
     <h4>Infektionsfokus:</h4>
     <ul>
@@ -71,7 +71,7 @@ export default {
           id: 4,
           title: "Pathophysiologie",
           textWithFormatting: `<div>
-    <h3>Pathophysiologie</h3>
+    <h3></h3>
     <h4>Auslöser und Immunreaktion:</h4>
     <p>Die Sepsis wird in der Regel durch bakterielle Erreger ausgelöst. Seltener können auch Pilze, Viren oder Parasiten eine Rolle spielen.</p>
     <ul>
@@ -106,7 +106,7 @@ export default {
           id: 5,
           title: "Symptome",
           textWithFormatting: `<div>
-    <h3>Symptome</h3>
+    <h3></h3>
     <p>Da es kein pathognomonisches Leitsymptom gibt, basiert die Diagnose der Sepsis auf einer Gesamteinschätzung von klinischen und laborchemischen Parametern.</p>
     <h4>Kardinalsymptome:</h4>
     <ul>
@@ -136,7 +136,7 @@ export default {
           id: 6,
           title: "Diagnostik & Erkennen einer Sepsis",
           textWithFormatting: `<div>
-    <h3>Diagnostik</h3>
+    <h3></h3>
     <p>Die Diagnostik erfolgt parallel zur Einleitung der Therapie, um den klinischen Zustand rasch beurteilen zu können.</p>
     <h4>Erste klinische Beurteilung:</h4>
     <ul>
@@ -658,7 +658,7 @@ export default {
           id: 8,
           title: "Katheterassoziierte Sepsis",
           textWithFormatting: `<div>
-    <h3>Katheterassoziierte Sepsis</h3>
+    <h3></h3>
     <p>Zentrale Venenkatheter können als potenzielle Eintrittspforten für Erreger dienen und dadurch das Infektionsrisiko sowie die Morbidität erhöhen.</p>
     <h4>Diagnostik:</h4>
     <ul>
@@ -701,7 +701,7 @@ export default {
           id: 10,
           title: "Tarragona-Strategie",
           textWithFormatting: `<div>
-    <p><strong>Tarragona-Strategie:</strong> Diese Strategie fasst fünf Leitsätze für die antibiotische Therapie im Intensivbereich zusammen:</p>
+    <p><strong></strong> Diese Strategie fasst fünf Leitsätze für die antibiotische Therapie im Intensivbereich zusammen:</p>
     <ul>
       <li>Beobachtung von Risikofaktoren für multiresistente Erreger (z. B. vorherige Antibiotikatherapie, Reha-/Pflegeeinrichtungen, Liegedauer, Vorerkrankungen, Fremdmaterialien)</li>
       <li>Berücksichtigung des lokalen Erreger- und Resistenzspektrums</li>

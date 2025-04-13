@@ -166,6 +166,7 @@ import anaplastischeschilddruesenkarzinom from "./subpages/schilddruese/anaplast
 import huerthlezellkarzinom from "./subpages/schilddruese/huerthlezellkarzinom";
 import schilddruesenresektionen from "./subpages/schilddruese/schilddruesenresektionen";
 import sepsis from "./subpages/inneremedizin/sepsis";
+import pneumonie from "./subpages/inneremedizin/pneumologie/pneumonie";
 // Формуємо основний масив даних
 // /constants/trafarettes/index.js
 // (Імпорти залишаються незмінними)
@@ -173,6 +174,7 @@ import sepsis from "./subpages/inneremedizin/sepsis";
 //
 // Формування основного масиву даних з оновленою категоризацією
 const all_pages_data = [
+  { ...pneumonie, mainCategory: "Innere Medizin", category: "Pneumologie" },
   { ...sepsis, mainCategory: "Innere Medizin", category: "Infektiologie" },
   // *** Trafarete ***
   { ...first_trafarette_page, mainCategory: "Innere Medizin", category: "Trafarete" },
