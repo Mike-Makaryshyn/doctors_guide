@@ -208,6 +208,9 @@ const SimulationPage = React.lazy(() =>
 const StudyPlanPage = React.lazy(() =>
   import("../pages/StudyPlanPage/StudyPlanPage")
 );
+const NecessaryDocumentsPage = React.lazy(() =>
+  import("../pages/EmploymentDocsPage/EmploymentDocsPage")
+);
 export default function Routers() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -245,6 +248,10 @@ export default function Routers() {
         <Route
   path={pathList.abbreviations_term_matching.path}
   element={<AbbreviationsTermMatchingGame />}
+/>
+<Route
+  path={pathList.necessary_documents.path}
+  element={<NecessaryDocumentsPage />}
 />
         <Route
           path={pathList.medications_fill_in_blank.path}

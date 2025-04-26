@@ -1,0 +1,56 @@
+/* src/pages/EmploymentDocsPage/EmploymentDocsPage.module.scss */
+
+/* Підтягуємо готові мікси та базові стилі DocumentsPage */
+@import "../../pages/DocumentsPage/DocumentsPage.module.scss";
+
+/* ——— Лише те, чого нема у спільному файлі ——— */
+
+.page {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #013b6e;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* прогрес-бар (залишається як був) */
+.progressWrap {
+  margin: 0 auto 25px;
+  max-width: 95%;
+}
+.progressBar {
+  background: #fff;
+  border-radius: 50px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .15);
+  height: 40px;
+  overflow: hidden;
+}
+.progressFill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4caf50;
+  height: 100%;
+  border-radius: 50px;
+  transition: width .4s;
+  span { color: #fff; font-weight: 600; }
+}
+
+/* Тайл-стилі (як у DocumentsPage) */
+.tileContainer { display: flex; flex-wrap: wrap; gap: 12px; }
+.tile {
+  @extend .tile;          /* успадковує повний стиль із DocumentsPage */
+}
+.tileCompleted {
+  @extend .tileCompleted; /* зелена заливка при готовності */
+}
+
+/* Сховати таблицю на мобільних: (DOM додається умовно, але на випадок ширини) */
+@media (max-width: 768px) {
+  .table { display: none; }
+}

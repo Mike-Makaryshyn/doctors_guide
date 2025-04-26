@@ -164,5 +164,8 @@ export const pathList = {
   },
   mindmap: {
     path: '/mindmap'
+  },
+  necessary_documents: {
+    path: "/necessary-documents",
   }
 };
