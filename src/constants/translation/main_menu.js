@@ -1,9 +1,5 @@
-import docIcon from "../../assets/doc.svg";
-import examIcon from "../../assets/exam.svg";
-import linksIcon from "../../assets/links.svg";
-import learnLangIcon from "../../assets/exam_prep.svg";
-import workIcon from "../../assets/work.svg";
-import unique from "../../assets/unique.svg";
+
+import { FaClipboardList, FaFileAlt, FaLanguage, FaLink, FaBriefcaseMedical, FaStar } from "react-icons/fa";
 
 export const languagesMainMenu = {
   de: {
@@ -69,7 +65,7 @@ export const main_menu_items = {
   sections: [
     {
       order: 1,
-      icon: docIcon,
+      icon: FaClipboardList,
       title: {
         en: "Process and Support",
         fr: "Processus et support",
@@ -187,7 +183,7 @@ export const main_menu_items = {
     },
     {
       order: 2,
-      icon: docIcon,
+      icon: FaFileAlt,
       title: {
         en: "Documents",
         fr: "Documents",
@@ -246,7 +242,7 @@ export const main_menu_items = {
     },
     {
       order: 3,
-      icon: learnLangIcon,
+      icon: FaLanguage,
       title: {
         en: "Language Examination",
         fr: "Examen de langue",
@@ -462,7 +458,7 @@ export const main_menu_items = {
     },
     {
       order: 4,
-      icon: linksIcon,
+      icon: FaLink,
       title: {
         en: "Important Links",
         fr: "Liens importants",
@@ -608,7 +604,7 @@ export const main_menu_items = {
   
     {
       order: 6,
-      icon: workIcon,
+      icon: FaBriefcaseMedical,
       title: {
         en: "Job Search",
         fr: "Recherche d'emploi",
@@ -657,7 +653,7 @@ export const main_menu_items = {
     },
     {
       order: 7,
-      icon: unique,
+      icon: FaStar,
       title: {
         en: "Unique Services",
         fr: "Services uniques",
