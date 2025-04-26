@@ -1,5 +1,5 @@
 
-import { FaClipboardList, FaFileAlt, FaLanguage, FaLink, FaBriefcaseMedical, FaStar } from "react-icons/fa";
+import { FaUserMd, FaFileMedical, FaNotesMedical, FaLink, FaBriefcaseMedical, FaHeartbeat } from "react-icons/fa";
 
 export const languagesMainMenu = {
   de: {
@@ -65,7 +65,7 @@ export const main_menu_items = {
   sections: [
     {
       order: 1,
-      icon: FaClipboardList,
+      icon: FaUserMd,
       title: {
         en: "Process and Support",
         fr: "Processus et support",
@@ -183,7 +183,7 @@ export const main_menu_items = {
     },
     {
       order: 2,
-      icon: FaFileAlt,
+      icon: FaFileMedical,
       title: {
         en: "Documents",
         fr: "Documents",
@@ -242,7 +242,7 @@ export const main_menu_items = {
     },
     {
       order: 3,
-      icon: FaLanguage,
+      icon: FaNotesMedical,
       title: {
         en: "Language Examination",
         fr: "Examen de langue",
@@ -653,7 +653,7 @@ export const main_menu_items = {
     },
     {
       order: 7,
-      icon: FaStar,
+      icon: FaHeartbeat,
       title: {
         en: "Unique Services",
         fr: "Services uniques",

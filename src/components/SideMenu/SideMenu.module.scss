@@ -64,7 +64,17 @@
   /* keep last items visible above the fixed auth block */
   padding-bottom: 100px;
 }
-
+.sideMenu {
+  overflow-x: hidden;
+}
+.sideMenuContent {
+  overflow-x: hidden;
+  padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px));
+}
+  .authBlock {
+    bottom: env(safe-area-inset-bottom, 0px);
+    padding-bottom: calc( env(safe-area-inset-bottom, 0px) + 2px );
+  }
 /* Блок аватара з ім'ям */
 .avatarBlock {
   position: sticky;
