@@ -138,6 +138,9 @@ export const pathList = {
   cover_letter: {
     path: "/cover-letter",
   },
+  study_plan: {
+    path: "/study-plan"
+  },
   abbreviations_flashcard: {
     path: "/abbreviations-flashcard-game",
   },

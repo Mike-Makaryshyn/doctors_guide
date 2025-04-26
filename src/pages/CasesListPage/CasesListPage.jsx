@@ -576,7 +576,7 @@ const CasesListPage = () => {
               className={styles.closeButton}
               onClick={() => setIsSettingsOpen(false)}
             >
-              <FaTimes />
+               ×
             </button>
 
             <div className={styles.settingsContent}>
@@ -589,10 +589,11 @@ const CasesListPage = () => {
                     toggleAccordion("cases");
                   }}
                 >
-                  <span style={{ color: "#013b6e", fontWeight: "bold" }}>
+                 <span style={{ fontWeight: "bold" }}>
                     Local / Online Fälle
                   </span>
                 </button>
+                
                 <div
                   className={`${styles.accordionContent} ${
                     openAccordion === "cases" ? styles.expanded : ""
@@ -614,39 +615,35 @@ const CasesListPage = () => {
                       ))}
                   </select>
                   {/* Тумблер Local/Online */}
-                  <div className={styles.toggleRow}>
-                    <span
-                      style={{
-                        color: sourceType === "local" ? "#013b6e" : "#999",
-                        fontWeight:
-                          sourceType === "local" ? "bold" : "normal",
-                      }}
-                    >
-                      Local
-                    </span>
-                    <label className={styles.toggleSwitch}>
-                      <input
-                        type="checkbox"
-                        className={styles.toggleInput}
-                        checked={sourceType === "firebase"}
-                        onChange={() =>
-                          setSourceType(
-                            sourceType === "local" ? "firebase" : "local"
-                          )
-                        }
-                      />
-                      <span className={styles.toggleLabel} />
-                    </label>
-                    <span
-                      style={{
-                        color: sourceType === "firebase" ? "#013b6e" : "#999",
-                        fontWeight:
-                          sourceType === "firebase" ? "bold" : "normal",
-                      }}
-                    >
-                      Online
-                    </span>
-                  </div>
+                  <div className={styles["data-source-toggle"]}>
+  <span
+    className={`${styles["label-left"]} ${
+      sourceType === "local" ? styles["label-active"] : ""
+    }`}
+  >
+    Local
+  </span>
+
+  <label className={styles.switch}>
+    <input
+      type="checkbox"
+      checked={sourceType === "firebase"}
+      onChange={() =>
+        setSourceType(sourceType === "local" ? "firebase" : "local")
+      }
+      aria-label="Umschalter für Datenquelle"
+    />
+    <span className={styles.slider}></span>
+  </label>
+
+  <span
+    className={`${styles["label-right"]} ${
+      sourceType === "firebase" ? styles["label-active"] : ""
+    }`}
+  >
+    Online
+  </span>
+</div>
                 </div>
               </div>
 
@@ -659,7 +656,7 @@ const CasesListPage = () => {
                     toggleAccordion("collections");
                   }}
                 >
-                  <span style={{ color: "#013b6e", fontWeight: "bold" }}>
+               <span style={{ fontWeight: "bold" }}>
                     Sammlungen
                   </span>
                 </button>
@@ -681,7 +678,7 @@ const CasesListPage = () => {
                     toggleAccordion("myCases");
                   }}
                 >
-                  <span style={{ color: "#013b6e", fontWeight: "bold" }}>
+                <span style={{ fontWeight: "bold" }}>
                     Meine Fälle
                   </span>
                 </button>

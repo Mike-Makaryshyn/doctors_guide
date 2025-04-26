@@ -679,13 +679,7 @@ const FSPFormularPage = () => {
       ) : (
         <>
           {/* Back Button */}
-          <button
-            className={styles["main_menu_back"]}
-            onClick={() => navigate("/main_menu")}
-            aria-label="Zurück"
-          >
-            &#8592;
-          </button>
+   
 
           {/* Settings Button */}
           <button

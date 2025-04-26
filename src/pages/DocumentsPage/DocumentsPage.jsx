@@ -641,13 +641,7 @@ const DocumentsPage = () => {
             {/* Приховані або відключені лінки для неавторизованих користувачів */}
             {user && (
               <>
-                <button
-                  className={styles.backButton}
-                  onClick={() => handleChangePage("/main_menu")}
-                  data-tutorial="backButton"
-                >
-                  &#8592;
-                </button>
+              
                 {/* Додати кнопку друку */}
                 <button
                   className={styles.printButton}

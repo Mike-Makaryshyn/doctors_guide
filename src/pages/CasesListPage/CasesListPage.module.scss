@@ -8,18 +8,18 @@
 /* Button "Einstellungen" (links unten) */
 .bottomControls {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
+  bottom: 0;
+  right: 0;
   z-index: 1000;
 }
 
 .settingsButton {
-  background-color: #4caf50;
+  background-color: rgba(125, 199, 34, 0.8);
   color: #fff;
   border: none;
   border-radius: 50%;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -27,7 +27,7 @@
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .settingsButton:hover {
-  background-color: #4caf50;
+  background-color: #7dc722;
   transform: scale(1.1);
 }
 
@@ -105,10 +105,10 @@
 /* Modal "Einstellungen" */
 .settingsModal {
   position: fixed;
-  bottom: 80px;
-  left: 65px;
-  width: 260px;
-  background-color: rgba(255,255,255,0.95);
+  bottom: 45px;
+  right: 45px;
+  width: 350px;
+  background: #fff;
   border: 1px solid #ccc;
   border-radius: 12px;
   padding: 20px;
@@ -119,26 +119,24 @@
 /* Schließen-Button bleibt rot */
 .closeButton {
   position: absolute;
-  top: 10px;
-  right: 10px;
-
-  width: 30px;
-  height: 30px;
+  top: -17px;
+  right: -11px;
+  background-color: transparent;
   border: none;
-  border-radius: 4px;
-  background-color: #da1818; /* Rot */
-  color: #f9f9f9;
+  font-size: 24px;
   cursor: pointer;
-  font-size: 16px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: #ed0a0a;
+  transition: transform 0.2s ease;
+  padding: 5px;
+  border-radius: 50%;
+  z-index: 2000;
+  pointer-events: auto;
 }
 
 /* Keine Farbänderung auf Hover (bleibt rot) */
 .closeButton:hover {
-  background-color: #da1818;
+  transform: scale(0.9);
+  background-color: transparent;
 }
 
 /* Inhalt des Modals */
@@ -153,24 +151,29 @@
 }
 
 .accordionHeader {
-  background-color: #4caf50;
-  border: none;
   width: 100%;
-  text-align: left;
-  padding: 10px;
-  border-radius: 4px;
+  max-width: 100%;
+  height: 40px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: #013b6e;
+  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
+  border: none;
+  margin-bottom: 0px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  display: flex
+;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   cursor: pointer;
-  font-weight: bold;
-  margin-bottom: 5px;
-  transition: background-color 0.3s ease;
 
-  /* Neu: Weißer Text für "Local / Online Fälle", "Sammlungen", "Meine Fälle" */
-  color: #fff;
+
 }
 
-.accordionHeader:hover {
-  background-color: #4caf50;
-}
+
 
 .accordionContent {
   max-height: 0;
@@ -179,15 +182,26 @@
   opacity: 0;
   margin-bottom: 8px;
 }
+/* Hover für die blauen Header komplett neutralisieren */
+.accordionHeader:hover {
+  background: #013b6e;   /* залишається той самий синій */
+  color: #ffffff;        /* текст лишається білим */
+}
 .accordionContent.expanded {
   max-height: 500px;
   opacity: 1;
 }
+.accordionHeader--inactive {
+  background: #fff;
+  color: #013b6e;
+  border: 1px solid #013b6e;
+}
+
 
 /* Select "Region" */
 .regionSelect {
   width: 100%;
-  margin: 6px 0;
+  margin: 14px 0;
   padding: 6px 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
@@ -306,8 +320,77 @@
 }
 
 /* Bei Hover nicht ins Grüne wechseln, sondern je nach Button-Farbe */
+/* ---------- new Local / Online switch ---------- */
+.data-source-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.label-left,
+.label-right {
+  margin: 0 0.5em;
+  font-size: 14px;
+  color: #555;
+  font-weight: normal;
+  transition: font-weight 0.3s ease;
+}
+
+.label-active {
+  font-weight: bold;
+  color: #013b6e;
+}
+
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.4s;
+    border-radius: 5px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 1.4em;
+      width: 0.1em;
+      border-radius: 0;
+      left: 0.3em;
+      bottom: 0.3em;
+      background-color: white;
+      transition: 0.4s;
+    }
+  }
+
+  input:checked + .slider {
+    background-color: #171717;
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 1);
+
+    &::before {
+      transform: translateX(2.8em) rotate(360deg);
+    }
+  }
+}
+/* ---------- end switch ---------- */
 .button:hover {
-  /* Standard-Hover für alle Buttons (z.B. #039E5D) */
   background-color: #039E5D;
 }
 
@@ -404,6 +487,7 @@
   .settingsModal {
     bottom: 0;
     left: 0;
+    right: 0;
     width: 100%;
     height: 60vh;
     border-radius: 12px 12px 0 0;

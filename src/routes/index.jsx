@@ -205,6 +205,9 @@ const AddSimulationEntryPage = React.lazy(() =>
 const SimulationPage = React.lazy(() =>
   import("../pages/SimulationPage/SimulationPage")
 );
+const StudyPlanPage = React.lazy(() =>
+  import("../pages/StudyPlanPage/StudyPlanPage")
+);
 export default function Routers() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -235,6 +238,7 @@ export default function Routers() {
           path="/elective-language-game"
           element={<ElectiveLanguageGame />}
         />
+        <Route path={pathList.study_plan.path} element={<StudyPlanPage />} />
         <Route path={pathList.add_simulation.path} element={<AddSimulationEntryPage />} />
         <Route path={pathList.simulation.path} element={<SimulationPage />} />
         <Route path={pathList.region_cases.path} element={<RegionCasesPage />} />
