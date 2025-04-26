@@ -85,13 +85,7 @@ const RegionCasesPage = () => {
   return (
     <MainLayout>
       {/* Button "Zurück" zum Hauptmenü */}
-      <button
-        className={styles.main_menu_back}
-        onClick={() => navigate("/main_menu")}
-        aria-label="Zurück"
-      >
-        &#8592;
-      </button>
+    
 
       <div className={styles.container}>
         <h1>Fälle für Region: {region}</h1>

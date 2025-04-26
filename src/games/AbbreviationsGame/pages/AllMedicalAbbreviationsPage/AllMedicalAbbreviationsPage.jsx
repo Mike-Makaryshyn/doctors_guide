@@ -244,9 +244,7 @@ const AllMedicalAbbreviationsPageContent = () => {
 
       <div className={styles.allMedicalAbbreviationsPage} ref={pageRef}>
         {/* Кнопка "Назад" */}
-        <button className={styles.main_menu_back} onClick={handleBack}>
-          &#8592;
-        </button>
+
 
         {/* Поле пошуку (додаємо data-tutorial) */}
         <div className={styles.searchContainer} data-tutorial="searchField">

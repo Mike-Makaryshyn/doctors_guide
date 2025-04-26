@@ -298,9 +298,7 @@ const AllMedicalTerminologyContent = () => {
           </Helmet>
 
           <div className={styles.allMedicalTerminologyPage} ref={pageRef}>
-            <button className={styles.main_menu_back} onClick={handleBack}>
-              &#8592;
-            </button>
+         
 
             <div className={styles.searchContainer} data-tutorial="searchField">
               <input
