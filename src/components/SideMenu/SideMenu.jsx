@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { main_menu_items } from "../../constants/translation/main_menu";
 import Avatar from "../../components/Avatar/Avatar";
+import { LANDS_INFO } from "../../constants/lands";
 import styles from "./SideMenu.module.scss";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase";
@@ -98,21 +99,47 @@ function SideMenu({ language, isOpen, onClose, direction }) {
                 {isSectionOpen && (
                   <div className={styles.accordionBody}>
                     {section.items.map((item, i) => {
-                      const isActive = location.pathname === item.link;
-                      return (
+                      // dynamic link handling for region‑dependent external pages
+                      let targetLink = item.link;
+                      if (selectedRegion) {
+                        const landInfo = LANDS_INFO.find(l => l.name === selectedRegion);
+                        if (landInfo) {
+                          if (item.link === "/approbation-authorities") {
+                            targetLink = landInfo.main_link;
+                          } else if (item.link === "/medical-chambers") {
+                            targetLink = landInfo.doctor_palat;
+                          }
+                        }
+                      } else if (
+                        item.link === "/approbation-authorities" ||
+                        item.link === "/medical-chambers"
+                      ) {
+                        // if region not chosen yet, send user to map to pick one
+                        targetLink = "/custom-map";
+                      }
+                      const isActive   = location.pathname === targetLink;
+                      const isExternal = targetLink?.startsWith("http");
+                      const classes    = `${styles.menuLink} ${isActive ? styles.activeLink : ""}`;
+
+                      return isExternal ? (
                         <a
                           key={i}
-                          className={`${styles.menuLink} ${
-                            isActive ? styles.activeLink : ""
-                          }`}
-                          href={item.link}
-                          target={
-                            item.link?.startsWith("https") ? "_blank" : "_self"
-                          }
-                          rel="noreferrer"
+                          href={targetLink}
+                          className={classes}
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           {item[language]}
                         </a>
+                      ) : (
+                        <Link
+                          key={i}
+                          to={targetLink}
+                          className={classes}
+                          onClick={onClose}
+                        >
+                          {item[language]}
+                        </Link>
                       );
                     })}
                   </div>
