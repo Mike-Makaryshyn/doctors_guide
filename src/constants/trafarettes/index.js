@@ -130,6 +130,7 @@ import antitpo from "./subpages/schilddruese/antitpo";
 import antitg from "./subpages/schilddruese/antitg";
 import thyreoiditis from "./subpages/schilddruese/thyreoiditis";
 import feinnadelbiopsie from "./subpages/operation/feinnadelbiopsie";
+import pneumothorax from "./subpages/chirurgie/pneumothorax";
 import hypothyreose from "./subpages/schilddruese/hypothyreose";
 
 import whostufenschema from "./subpages/schmerzen/whostufenschema";
@@ -256,26 +257,26 @@ const all_pages_data = [
   { ...muskelrelaxation, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
   { ...oberflaechenanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
   { ...Infiltrationsanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
-  { ...lokalanaesthesie, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
-  { ...leitungsanaesthesie, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
+  { ...lokalanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...leitungsanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
   { ...plexusanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
   { ...spinalanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
-  { ...periduralanaesthesie, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
-  { ...allgemeinanaesthesie, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
+  { ...periduralanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...allgemeinanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
   { ...tiva, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
   { ...balancierteanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
-  { ...intubationsnarkose, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
-  { ...regionalanaesthesie, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
-  { ...periphereregionalanaesthesie, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
-  { ...thorakaleepiduralanaesthesie, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
-  { ...kombiniertespinaleepiduraleanaesthesie, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
-  { ...inhalationsnarkose, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
-  { ...maskennarkose, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
-  { ...larynxmaskennarkose, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
-  { ...lachgas, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
-  { ...sevofluran, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
-  { ...isofluran, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
-  { ...desfluran, mainCategory: "Chирurgie & Anästhesie", category: "Anesthesia" },
+  { ...intubationsnarkose, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...regionalanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...periphereregionalanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...thorakaleepiduralanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...kombiniertespinaleepiduraleanaesthesie, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...inhalationsnarkose, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...maskennarkose, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...larynxmaskennarkose, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...lachgas, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...sevofluran, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...isofluran, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
+  { ...desfluran, mainCategory: "Chirurgie & Anästhesie", category: "Anesthesia" },
 
   // *** Physiologie ***
   { ...natriumkaliumatpase, mainCategory: "Anatomie & Physiologie", category: "Physiologie" },
@@ -342,6 +343,7 @@ const all_pages_data = [
 
   // *** Operation ***
   { ...feinnadelbiopsie, mainCategory: "Chirurgie & Anästhesie", category: "Operation" },
+  { ...pneumothorax, mainCategory: "Chirurgie & Anästhesie", category: "Thoraxchirurgie" },
 
   // *** Schmerzen (Pain) ***
   { ...whostufenschema, mainCategory: "Chirurgie & Anästhesie", category: "Schmerzen" },

@@ -59,9 +59,10 @@
  
  /* Горизонтальний/вертикальний скрол для дочірніх табів. */
  .childTabs {
+  scrollbar-width: none;
    display: flex;
    flex-wrap: nowrap;
-   gap: 10px;
+   gap: 20px;
    overflow-x: auto; /* Додаємо горизонтальний скрол */
    white-space: nowrap;
    overflow-y: hidden;
@@ -70,6 +71,7 @@
      flex-wrap: nowrap;
      overflow-x: auto;
      white-space: nowrap;
+     
    }
  }
  
@@ -98,7 +100,7 @@
  .child_tab {
    border-radius: 9px;
    background: #ffffff;
-   box-shadow: 25px 25px 100px #d6d6d6,
+   box-shadow: 
                -25px -25px 100px #ffffff;
    cursor: pointer;
    transition: all 0.2s ease;
@@ -251,6 +253,8 @@
  
  .pTitle {
    font-weight: 600;
+   word-break: break-word;
+   white-space: normal;
    font-size: 17px;
  
    @media (max-width: 509px) {
@@ -276,7 +280,7 @@
    }
  
    .mobileTableCard {
-     border: 1px solid #ccc;
+   
      border-radius: 8px;
      padding: 10px;
      margin-bottom: 10px;
@@ -289,7 +293,7 @@
    /* Спільні стилі стрілок */
    .arrowVertical {
      position: absolute;
-     background-color: transparent !important;
+  
   
      color: #fff;
      border: none;
@@ -312,7 +316,7 @@
    }
  
    .arrowLeftVertical {
-     left: 0;
+     left: 15px;
      top: 50%;
      transform: translate(calc(-100% - 10px), -50%);
    }
