@@ -87,10 +87,19 @@
 
 /* Сховати таблицю на мобільних: (DOM додається умовно, але на випадок ширини) */
 @media (max-width: 768px) {
-  .table {
-    display: none;
+  /* …ваші існуючі мобільні правила… */
+
+  /* підказка: легке похитування, поки не виконано */
+  .tile:not(.tileCompleted) {
+    animation: nudge 4s ease-in-out infinite !important;
+  }
+
+  @keyframes nudge {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-4px); }
   }
 }
+  
 
 // ─────────── Кнопка‑чекбокс у мобільних плитках ───────────
 .mobileCheckboxLabel {

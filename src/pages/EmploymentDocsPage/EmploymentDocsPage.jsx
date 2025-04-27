@@ -187,6 +187,11 @@ export default function EmploymentDocsPage() {
               {employmentDocs.map((doc) => (
                 <div
                   key={doc.id}
+                  role="button"
+                  aria-pressed={checks[doc.id]}
+                  tabIndex={0}
+                  onClick={() => toggle(doc.id)}
+                  onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && toggle(doc.id)}
                   className={cn(styles.tile, {
                     [styles.tileCompleted]: checks[doc.id],
                   })}
@@ -194,13 +199,6 @@ export default function EmploymentDocsPage() {
                   <div className={styles.tileTitle}>
                     {doc.name[language] || doc.name.de}
                   </div>
-                  <Checkbox
-                    checked={checks[doc.id]}
-                    onChange={() => toggle(doc.id)}
-                    id={`mobile-checkbox-${doc.id}`}
-                    name={`mobile-checkbox-${doc.id}`}
-                    label=""
-                  />
                 </div>
               ))}
             </div>
