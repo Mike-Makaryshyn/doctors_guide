@@ -14,6 +14,8 @@ import { FaFilePdf } from "react-icons/fa";
 // custom fonts for multilingual PDF
 import notoSansFont from "../../assets/fonts/NotoSans-VariableFont.ttf";
 import notoNaskhArabicFont from "../../assets/fonts/NotoNaskhArabic.ttf";
+import { Helmet } from "react-helmet";
+import jobDocMeta from "../../assets/jobdocumeta.jpeg";
 
 /* ─────────── Таблиця заголовків для PDF ─────────── */
 const pdfHeaders = {
@@ -255,77 +257,100 @@ export default function EmploymentDocsPage() {
   };
 
   return (
-    <MainLayout>
-      <div className={styles.page}>
-        <h1 className={styles.title}>
-          {pageTitle[language] || pageTitle.en}
-        </h1>
-        <button
-          className={styles.printButton}
-          onClick={() => handleExportPDF()}
-          title="PDF"
-        >
-          <FaFilePdf />
-        </button>
-
-        {/* прогрес-бар (оновлений) */}
-        <ProgressBarWithTooltip
-          progress={displayedProgress}
-          getMessage={getMessage}
+    <>
+      <Helmet>
+        <title>{pageTitle[language] || pageTitle.en} – GermanMove</title>
+        <meta
+          name="description"
+          content="Dokumente für die Bewerbung als Arzt in Deutschland – vollständiger Überblick zu erforderlichen Unterlagen."
         />
+        <meta property="og:title" content="Dokumente für die Bewerbung in Deutschland" />
+        <meta
+          property="og:description"
+          content="Vollständige Checkliste der notwendigen Unterlagen für Ihre Bewerbung als Arzt in Deutschland."
+        />
+        <meta property="og:image" content={jobDocMeta} />
+        <meta property="og:image:alt" content="Dokumente für Bewerbung – GermanMove" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dokumente für die Bewerbung in Deutschland" />
+        <meta
+          name="twitter:description"
+          content="Alles, was Sie für Ihre Bewerbung als Arzt in Deutschland benötigen."
+        />
+        <meta name="twitter:image" content={jobDocMeta} />
+      </Helmet>
+      <MainLayout>
+        <div className={styles.page}>
+          <h1 className={styles.title}>
+            {pageTitle[language] || pageTitle.en}
+          </h1>
+          <button
+            className={styles.printButton}
+            onClick={() => handleExportPDF()}
+            title="PDF"
+          >
+            <FaFilePdf />
+          </button>
 
-        {/* таблиця або плитки */}
-        <div className={styles.tableWrap}>
-          {!isMobile && (
-            <table className={styles.table}>
-              <thead>
-                <tr>
-                  <th>{tHead.doc[language]}</th>
-                  <th>{tHead.have[language]}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {employmentDocs.map((doc) => (
-                  <tr key={doc.id}>
-                    <td>{doc.name[language] || doc.name.de}</td>
-                    <td>
-                      <Checkbox
-                        checked={checks[doc.id]}
-                        onChange={() => toggle(doc.id)}
-                        id={`table-checkbox-${doc.id}`}
-                        name={`table-checkbox-${doc.id}`}
-                        label=""
-                      />
-                    </td>
+          {/* прогрес-бар (оновлений) */}
+          <ProgressBarWithTooltip
+            progress={displayedProgress}
+            getMessage={getMessage}
+          />
+
+          {/* таблиця або плитки */}
+          <div className={styles.tableWrap}>
+            {!isMobile && (
+              <table className={styles.table}>
+                <thead>
+                  <tr>
+                    <th>{tHead.doc[language]}</th>
+                    <th>{tHead.have[language]}</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          )}
+                </thead>
+                <tbody>
+                  {employmentDocs.map((doc) => (
+                    <tr key={doc.id}>
+                      <td>{doc.name[language] || doc.name.de}</td>
+                      <td>
+                        <Checkbox
+                          checked={checks[doc.id]}
+                          onChange={() => toggle(doc.id)}
+                          id={`table-checkbox-${doc.id}`}
+                          name={`table-checkbox-${doc.id}`}
+                          label=""
+                        />
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            )}
 
-          {isMobile && (
-            <div className={styles.tileContainer}>
-              {employmentDocs.map((doc) => (
-                <div
-                  key={doc.id}
-                  role="button"
-                  aria-pressed={checks[doc.id]}
-                  tabIndex={0}
-                  onClick={() => toggle(doc.id)}
-                  onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && toggle(doc.id)}
-                  className={cn(styles.tile, {
-                    [styles.tileCompleted]: checks[doc.id],
-                  })}
-                >
-                  <div className={styles.tileTitle}>
-                    {doc.name[language] || doc.name.de}
+            {isMobile && (
+              <div className={styles.tileContainer}>
+                {employmentDocs.map((doc) => (
+                  <div
+                    key={doc.id}
+                    role="button"
+                    aria-pressed={checks[doc.id]}
+                    tabIndex={0}
+                    onClick={() => toggle(doc.id)}
+                    onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && toggle(doc.id)}
+                    className={cn(styles.tile, {
+                      [styles.tileCompleted]: checks[doc.id],
+                    })}
+                  >
+                    <div className={styles.tileTitle}>
+                      {doc.name[language] || doc.name.de}
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          )}
+                ))}
+              </div>
+            )}
+          </div>
         </div>
-      </div>
-    </MainLayout>
+      </MainLayout>
+    </>
   );
 }
