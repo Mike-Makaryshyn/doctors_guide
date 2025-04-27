@@ -8,8 +8,53 @@ import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import Checkbox from "../../components/Checkbox/Checkbox";
+import { jsPDF } from "jspdf";
+import autoTable from "jspdf-autotable";
+import { FaFilePdf } from "react-icons/fa";
+// custom fonts for multilingual PDF
+import notoSansFont from "../../assets/fonts/NotoSans-VariableFont.ttf";
+import notoNaskhArabicFont from "../../assets/fonts/NotoNaskhArabic.ttf";
 
+/* ─────────── Таблиця заголовків для PDF ─────────── */
+const pdfHeaders = {
+  de: { document: "Dokument", available: "Vorhanden" },
+  en: { document: "Document", available: "Available" },
+  uk: { document: "Документ", available: "Наявно" },
+  ru: { document: "Документ", available: "Наличие" },
+  tr: { document: "Belge",     available: "Mevcut"   },
+  ar: { document: "مستند",     available: "متوفر"    },
+  fr: { document: "Document",  available: "Disponible"},
+  es: { document: "Documento", available: "Disponible"},
+  pl: { document: "Dokument",  available: "Dostępne" },
+  el: { document: "Έγγραφο",   available: "Διαθέσιμο"},
+  ro: { document: "Document",  available: "Disponibil"},
+};
+
+// helper to fetch a local font file and convert to base64 for jsPDF
+const loadFont = async (url, fontName) => {
+  const response = await fetch(url);
+  const fontData = await response.arrayBuffer();
+  const base64Font = btoa(
+    new Uint8Array(fontData).reduce(
+      (data, byte) => data + String.fromCharCode(byte),
+      ""
+    )
+  );
+  return { base64Font, fontName };
+};
+
+/* ─────────── PDF footer slogan ─────────── */
+const footer = (doc) => (data) => {
+  const pageHeight = doc.internal.pageSize.getHeight();
+  doc.setFontSize(10);
+  doc.text("GermanMove – makes your journey to German approbation easier",
+           data.settings.margin.left,
+           pageHeight - 20);
+};
+
+// key for localStorage persistence
 const STORAGE_KEY = "employmentDocState";
+
 const isMobileScreen = () =>
   typeof window !== "undefined" &&
   window.matchMedia("(max-width: 768px)").matches;
@@ -85,6 +130,75 @@ export default function EmploymentDocsPage() {
   const progress = Math.round((done / total) * 100);
   const [displayedProgress, setDisplayedProgress] = useState(progress);
   const isInitialLoad = useRef(true);
+
+  // ─────────── PDF export (with embedded fonts) ───────────
+  const handleExportPDF = async () => {
+    const docPDF = new jsPDF("l", "pt", "a4");
+    // load fonts
+    const notoSans = await loadFont(notoSansFont, "NotoSans");
+    const notoNaskhArabic = await loadFont(notoNaskhArabicFont, "NotoNaskhArabic");
+
+    docPDF.addFileToVFS("NotoSans.ttf", notoSans.base64Font);
+    docPDF.addFont("NotoSans.ttf", "NotoSans", "normal");
+
+    docPDF.addFileToVFS("NotoNaskhArabic.ttf", notoNaskhArabic.base64Font);
+    docPDF.addFont("NotoNaskhArabic.ttf", "NotoNaskhArabic", "normal");
+
+    // choose current font
+    const currentFontName = language === "ar" ? "NotoNaskhArabic" : "NotoSans";
+    docPDF.setFont(currentFontName, "normal");
+
+    const hdr = pdfHeaders[language] || pdfHeaders.en;
+
+    // build rows
+    const rows = employmentDocs.map((d) => [
+      d.name[language] || d.name.de,
+      checks[d.id] ? "X" : ""
+    ]);
+
+    // first page
+    docPDF.setFontSize(16);
+    docPDF.text(pageTitle[language] || pageTitle.en, 40, 30);
+
+    docPDF.autoTable({
+      head: [[hdr.document, hdr.available]],
+      body: rows,
+      startY: 50,
+      margin: { left: 40, right: 40 },
+      theme: "grid",
+      styles: { font: currentFontName, fontSize: 10 },
+      headStyles: { fillColor: [230, 230, 230], textColor: [0, 0, 0] },
+      columnStyles: { 1: { halign: "center" } },
+      didDrawPage: footer(docPDF),
+    });
+
+    // second page in German
+    docPDF.addPage("l");
+    docPDF.setFont("NotoSans", "normal");
+    const hdrDE = pdfHeaders.de;
+    const rowsDE = employmentDocs.map((d) => [
+      d.name.de,
+      checks[d.id] ? "X" : ""
+    ]);
+
+    docPDF.setFontSize(16);
+    docPDF.text(pageTitle.de, 40, 30);
+
+    docPDF.autoTable({
+      head: [[hdrDE.document, hdrDE.available]],
+      body: rowsDE,
+      startY: 50,
+      margin: { left: 40, right: 40 },
+      theme: "grid",
+      styles: { font: "NotoSans", fontSize: 10 },
+      headStyles: { fillColor: [230, 230, 230], textColor: [0, 0, 0] },
+      columnStyles: { 1: { halign: "center" } },
+      didDrawPage: footer(docPDF),
+    });
+
+    docPDF.save(`employment_docs_${language}_and_de.pdf`);
+  };
+
   const toggle = (id) => setChecks((p) => ({ ...p, [id]: !p[id] }));
 
   useEffect(() => {
@@ -146,6 +260,13 @@ export default function EmploymentDocsPage() {
         <h1 className={styles.title}>
           {pageTitle[language] || pageTitle.en}
         </h1>
+        <button
+          className={styles.printButton}
+          onClick={() => handleExportPDF()}
+          title="PDF"
+        >
+          <FaFilePdf />
+        </button>
 
         {/* прогрес-бар (оновлений) */}
         <ProgressBarWithTooltip
