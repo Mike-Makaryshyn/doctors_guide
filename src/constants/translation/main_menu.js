@@ -631,7 +631,7 @@ export const main_menu_items = {
           de: "Wo man nach Jobs suchen kann",
           el: "Πού να αναζητήσετε θέσεις εργασίας",
           ro: "Unde să cauți locuri de muncă",
-          link: "/job-search",
+          link: "/resources",
         },
      
         {

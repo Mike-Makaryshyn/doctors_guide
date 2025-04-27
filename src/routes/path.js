@@ -167,5 +167,8 @@ export const pathList = {
   },
   necessary_documents: {
     path: "/necessary-documents",
+  },
+  resource_list: {
+    path: "/resources",      // ← назву URL можна змінити за бажанням
   }
 };

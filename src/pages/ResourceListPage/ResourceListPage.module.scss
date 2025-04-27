@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+.container {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Floating settings button */
+.bottomRightSettings {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.settingsButton {
+  background-color: #013b6e;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.settingsButton:hover {
+  background-color: #014d9d;
+  transform: scale(1.1);
+}
+
+/* Tiles */
+.tilesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.tile {
+  flex: 0 0 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+}
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tileHeader {
+  font-size: 18px;
+  color: #013b6e;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.tileDescription {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+a.tileLink {
+  font-size: 14px;
+  color: #013b6e;
+  text-decoration: none;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+a.tileLink:hover {
+  color: #014d9d;
+}
+
+/* Modal */
+.popupContainerDesktop {
+  font-family: Poppins, sans-serif;
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px #0003;
+  position: fixed;
+  bottom: 45px;
+  right: 45px;
+  text-align: center;
+}
+
+.popupContainerMobile {
+  font-family: Poppins, sans-serif;
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 12px #0003;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2502;
+  text-align: center;
+}
+
+.modalCloseButton {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ed0a0a;
+  padding: 5px;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+.modalCloseButton:hover {
+  transform: scale(0.9);
+}
+
+.modalTitle {
+  margin: 0 0 12px;
+  font-size: 20px;
+  color: #013b6e;
+}
+
+.modalSelect {
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  background: #013b6e;
+  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  transition: box-shadow 0.3s ease;
+}
+.modalSelect:focus {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive: tiles stack on mobile */
+@media (max-width: 768px) {
+  .tile {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

@@ -208,6 +208,9 @@ const SimulationPage = React.lazy(() =>
 const StudyPlanPage = React.lazy(() =>
   import("../pages/StudyPlanPage/StudyPlanPage")
 );
+const ResourceListPage = React.lazy(() =>
+  import("../pages/ResourceListPage/ResourceListPage")
+);
 const NecessaryDocumentsPage = React.lazy(() =>
   import("../pages/EmploymentDocsPage/EmploymentDocsPage")
 );
@@ -252,6 +255,10 @@ export default function Routers() {
 <Route
   path={pathList.necessary_documents.path}
   element={<NecessaryDocumentsPage />}
+/>
+<Route
+  path={pathList.resource_list.path}
+  element={<ResourceListPage />}
 />
         <Route
           path={pathList.medications_fill_in_blank.path}
