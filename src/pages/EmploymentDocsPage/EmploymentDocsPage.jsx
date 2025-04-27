@@ -7,6 +7,7 @@ import MainLayout from "../../layouts/MainLayout/MainLayout";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
+import Checkbox from "../../components/Checkbox/Checkbox";
 
 const STORAGE_KEY = "employmentDocState";
 const isMobileScreen = () =>
@@ -95,16 +96,56 @@ export default function EmploymentDocsPage() {
     }
   }, [progress]);
 
+  /* ─────────── Заголовок сторінки (усі мови) ─────────── */
+  const pageTitle = {
+    de: "Dokumente für die Beschäftigung",
+    en: "Documents for Employment",
+    uk: "Документи для працевлаштування",
+    ru: "Документы для трудоустройства",
+    tr: "İstihdam Belgeleri",
+    ar: "وثائق التوظيف",
+    fr: "Documents pour l'emploi",
+    es: "Documentos para el empleo",
+    pl: "Dokumenty do zatrudnienia",
+    el: "Έγγραφα για εργασία",
+    ro: "Documente pentru angajare",
+  };
   /* ─────────── Тексти заголовків ─────────── */
   const tHead = {
-    doc:  { de: "Dokument",   en: "Document",  uk: "Документ"  },
-    have: { de: "Vorhanden",  en: "Available", uk: "Наявно"    },
+    doc: {
+      de: "Dokument",
+      en: "Document",
+      uk: "Документ",
+      ru: "Документ",
+      tr: "Belge",
+      ar: "مستند",
+      fr: "Document",
+      es: "Documento",
+      pl: "Dokument",
+      el: "Έγγραφο",
+      ro: "Document",
+    },
+    have: {
+      de: "Vorhanden",
+      en: "Available",
+      uk: "Наявно",
+      ru: "Наличие",
+      tr: "Mevcut",
+      ar: "متوفر",
+      fr: "Disponible",
+      es: "Disponible",
+      pl: "Dostępne",
+      el: "Διαθέσιμο",
+      ro: "Disponibil",
+    },
   };
 
   return (
     <MainLayout>
       <div className={styles.page}>
-        <h1 className={styles.title}>Документи для працевлаштування</h1>
+        <h1 className={styles.title}>
+          {pageTitle[language] || pageTitle.en}
+        </h1>
 
         {/* прогрес-бар (оновлений) */}
         <ProgressBarWithTooltip
@@ -127,10 +168,12 @@ export default function EmploymentDocsPage() {
                   <tr key={doc.id}>
                     <td>{doc.name[language] || doc.name.de}</td>
                     <td>
-                      <input
-                        type="checkbox"
+                      <Checkbox
                         checked={checks[doc.id]}
                         onChange={() => toggle(doc.id)}
+                        id={`table-checkbox-${doc.id}`}
+                        name={`table-checkbox-${doc.id}`}
+                        label=""
                       />
                     </td>
                   </tr>
@@ -151,13 +194,13 @@ export default function EmploymentDocsPage() {
                   <div className={styles.tileTitle}>
                     {doc.name[language] || doc.name.de}
                   </div>
-                  <label className={styles.mobileCheckboxLabel}>
-                    <input
-                      type="checkbox"
-                      checked={checks[doc.id]}
-                      onChange={() => toggle(doc.id)}
-                    />
-                  </label>
+                  <Checkbox
+                    checked={checks[doc.id]}
+                    onChange={() => toggle(doc.id)}
+                    id={`mobile-checkbox-${doc.id}`}
+                    name={`mobile-checkbox-${doc.id}`}
+                    label=""
+                  />
                 </div>
               ))}
             </div>
