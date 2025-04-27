@@ -24,11 +24,11 @@
   max-width: 95%;
 }
 .progressBar {
-  background: #fff;
-  border-radius: 50px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, .15);
-  height: 40px;
   overflow: hidden;
+  width: 100%;
+  height: 40px;
+  border-radius: 50px;
+  position: relative;
 }
 .progressFill {
   display: flex;
@@ -37,8 +37,11 @@
   background: #4caf50;
   height: 100%;
   border-radius: 50px;
-  transition: width .4s;
-  span { color: #fff; font-weight: 600; }
+  transition: width 0.4s;
+  span {
+    color: #fff;
+    font-weight: 600;
+  }
 }
 
 /* ==== desktop table (копія стилю з DocumentsPage) ==== */
@@ -89,9 +92,13 @@
 }
 
 /* Тайл-стилі (як у DocumentsPage) */
-.tileContainer { display: flex; flex-wrap: wrap; gap: 12px; }
+.tileContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
 .tile {
-  @extend .tile;          /* успадковує повний стиль із DocumentsPage */
+  @extend .tile; /* успадковує повний стиль із DocumentsPage */
 }
 .tileCompleted {
   @extend .tileCompleted; /* зелена заливка при готовності */
@@ -99,5 +106,7 @@
 
 /* Сховати таблицю на мобільних: (DOM додається умовно, але на випадок ширини) */
 @media (max-width: 768px) {
-  .table { display: none; }
+  .table {
+    display: none;
+  }
 }
