@@ -146,6 +146,97 @@ export const resourcesData = {
         },
         url: "https://www.stepstone.de"
       }
+      ,
+      {
+        id: "res-portal-9",
+        name: "arztjobs.de",
+        descriptions: {
+          uk: "Нішевий портал лише з лікарськими вакансіями: фільтри за спеціальністю та регіоном, оголошення зі стаціонару й амбулаторії.",
+          en: "Niche job site dedicated exclusively to physician roles; classifieds are organised by specialty and region across Germany.",
+          de: "Nischen-Stellenportal ausschließlich für Ärzt*innen; alle Anzeigen nach Fachrichtung und Region sortiert.",
+          es: "Portal de empleo de nicho dedicado exclusivamente a puestos médicos; clasificados organizados por especialidad y región en toda Alemania.",
+          fr: "Site d’emploi de niche consacré exclusivement aux postes de médecins ; annonces classées par spécialité et région dans toute l’Allemagne.",
+          tr: "Sadece doktor pozisyonlarına özel niş iş sitesi; ilanlar Almanya genelinde branş ve bölgeye göre düzenlenmiştir.",
+          ar: "موقع وظائف متخصص مكرّس حصريًا لمناصب الأطباء؛ الإعلانات مصنفة حسب التخصص والمنطقة في جميع أنحاء ألمانيا.",
+          pl: "Niszowy portal pracy przeznaczony wyłącznie dla lekarzy; ogłoszenia uporządkowane według specjalizacji i regionu w całych Niemczech.",
+          ru: "Узкоспециализированный сайт вакансий только для врачей; объявления классифицированы по специальности и региону по всей Германии.",
+          el: "Εξειδικευμένη ιστοσελίδα αγγελιών αποκλειστικά για ιατρικές θέσεις· οι αγγελίες ταξινομούνται ανά ειδικότητα και περιοχή σε όλη τη Γερμανία.",
+          ro: "Portal de joburi de nișă dedicat exclusiv pozițiilor de medic; anunțurile sunt organizate pe specialitate și regiune în toată Germania."
+        },
+        url: "https://arztjobs.de"
+      },
+      {
+        id: "res-portal-10",
+        name: "Medi-Karriere",
+        descriptions: {
+          uk: "Велика медична біржа вакансій для Німеччини, Австрії та Швейцарії; тисячі пропозицій, зокрема для лікарів.",
+          en: "Large healthcare job exchange covering Germany, Austria and Switzerland; thousands of listings, many for doctors.",
+          de: "Große Jobbörse für Gesundheitsberufe in D-A-CH mit tausenden Stellen, u. a. für Ärzt*innen.",
+          es: "Gran bolsa de trabajo sanitaria que cubre Alemania, Austria y Suiza; miles de ofertas, muchas para médicos.",
+          fr: "Grande bourse d’emploi santé couvrant l’Allemagne, l’Autriche et la Suisse ; des milliers d’annonces, dont beaucoup pour médecins.",
+          tr: "Almanya, Avusturya ve İsviçre’yi kapsayan büyük sağlık borsası; binlerce ilan, çoğu doktorlar için.",
+          ar: "منصة توظيف صحية كبرى تغطي ألمانيا والنمسا وسويسرا؛ آلاف الإعلانات، العديد منها للأطباء.",
+          pl: "Duża giełda pracy w ochronie zdrowia obejmująca Niemcy, Austrię i Szwajcarię; tysiące ofert, wiele dla lekarzy.",
+          ru: "Крупная медицинская биржа вакансий, охватывающая Германию, Австрию и Швейцарию; тысячи объявлений, многие — для врачей.",
+          el: "Μεγάλη αγορά εργασίας υγείας σε Γερμανία, Αυστρία και Ελβετία· χιλιάδες αγγελίες, πολλές για γιατρούς.",
+          ro: "Mare bursă de locuri de muncă în sănătate ce acoperă Germania, Austria și Elveția; mii de anunțuri, multe pentru medici."
+        },
+        url: "https://www.medi-karriere.de"
+      },
+      {
+        id: "res-portal-11",
+        name: "Springer Medizin Jobs (Ärzte Zeitung)",
+        descriptions: {
+          uk: "Портал вакансій видавництва Springer Medizin / Ärzte Zeitung: оголошення для лікарів і медсестер по всій Німеччині.",
+          en: "Job platform by Springer Medizin / Ärzte Zeitung with high‑quality listings for doctors and nurses across Germany.",
+          de: "Jobportal von Springer Medizin (Ärzte Zeitung) mit hochwertigen Stellenangeboten für Ärzt*innen und Pflege.",
+          es: "Plataforma de empleo de Springer Medizin / Ärzte Zeitung con ofertas de alta calidad para médicos y enfermeras en toda Alemania.",
+          fr: "Plateforme d’emploi Springer Medizin / Ärzte Zeitung proposant des annonces de qualité pour médecins et infirmiers dans toute l’Allemagne.",
+          tr: "Springer Medizin / Ärzte Zeitung’in iş platformu; Almanya genelinde doktor ve hemşireler için nitelikli ilanlar.",
+          ar: "منصة وظائف تابعة لـ Springer Medizin / Ärzte Zeitung تقدم إعلانات عالية الجودة للأطباء والممرضين في جميع أنحاء ألمانيا.",
+          pl: "Platforma pracy Springer Medizin / Ärzte Zeitung z wysokiej jakości ofertami dla lekarzy i pielęgniarek w całych Niemczech.",
+          ru: "Платформа вакансий Springer Medizin / Ärzte Zeitung с качественными объявлениями для врачей и медсестёр по всей Германии.",
+          el: "Πλατφόρμα εργασίας της Springer Medizin / Ärzte Zeitung με ποιοτικές αγγελίες για γιατρούς και νοσηλευτές σε όλη τη Γερμανία.",
+          ro: "Platformă de joburi a Springer Medizin / Ärzte Zeitung cu anunțuri de înaltă calitate pentru medici și asistente în toată Germania."
+        },
+        url: "https://jobs.springermedizin.de"
+      },
+      {
+        id: "res-portal-12",
+        name: "Stellenbörse (Virchowbund)",
+        descriptions: {
+          uk: "Біржа вакансій від об’єднання приватнопрактикуючих лікарів Virchowbund; акцент на амбулаторний сектор.",
+          en: "Job board run by Virchowbund (association of outpatient physicians) focused on vacancies in private practices & MVZs.",
+          de: "Stellenbörse des Virchowbunds – spezialisiert auf ambulante Medizin (Praxen, MVZ).",
+          es: "Bolsa de trabajo gestionada por Virchowbund centrada en vacantes en consultas privadas y MVZ.",
+          fr: "Bourse d’emploi du Virchowbund axée sur les postes en cabinet et MVZ.",
+          tr: "Virchowbund’ün iş panosu; ağırlık ambulatuvar sektöründeki ilanlara (muayenehaneler, MVZ).",
+          ar: "لوحة وظائف يديرها Virchowbund تركز على وظائف الممارسات الخاصة و MVZ.",
+          pl: "Giełda pracy Virchowbund skupiona na ofertach w praktykach i MVZ.",
+          ru: "Доска вакансий Virchowbund, ориентированная на амбулаторный сектор.",
+          el: "Πίνακας αγγελιών του Virchowbund με θέσεις σε ιατρείο και MVZ.",
+          ro: "Bursă de joburi Virchowbund axată pe posturi în cabinete private și MVZ."
+        },
+        url: "https://www.virchowbund.de/stellenboerse"
+      },
+      {
+        id: "res-portal-13",
+        name: "MBZ-Stellenmarkt (Marburger Bund)",
+        descriptions: {
+          uk: "Розділ вакансій профспілки лікарів Marburger Bund Zeitung із пропозиціями у клініках і держустановах.",
+          en: "Job section of the doctors’ union journal MBZ (Marburger Bund) featuring hospital and public‑health posts nationwide.",
+          de: "Stellenmarkt der MBZ (Marburger Bund Zeitung) mit Kliniken- & ÖGD-Stellen in ganz Deutschland.",
+          es: "Sección de empleo del periódico MBZ del Marburger Bund con vacantes hospitalarias y de salud pública en toda Alemania.",
+          fr: "Rubrique emploi du journal syndical MBZ (Marburger Bund) proposant des postes hospitaliers et de santé publique dans toute l’Allemagne.",
+          tr: "Marburger Bund gazetesinin MBZ iş bölümü; ülke çapında hastane ve kamu sağlığı pozisyonları.",
+          ar: "قسم الوظائف في صحيفة MBZ (Marburger Bund) يعرض وظائف في المستشفيات والصحة العامة في جميع أنحاء ألمانيا.",
+          pl: "Dział ofert pracy pisma MBZ (Marburger Bund) z wakatami w szpitalach i zdrowiu publicznym w całych Niemczech.",
+          ru: "Раздел вакансий журнала MBZ (Marburger Bund) с предложениями в клиниках и госучреждениях по всей Германии.",
+          el: "Ενότητα αγγελιών της εφημερίδας MBZ (Marburger Bund) με θέσεις σε νοσοκομεία και δημόσια υγεία πανεθνικά.",
+          ro: "Secțiunea de joburi a ziarului MBZ (Marburger Bund) cu posturi în spitale și sănătate publică la nivel național."
+        },
+        url: "https://www.marburger-bund.de/mbz/stellenmarkt"
+      }
     ],
   
     Agenturen: [
@@ -238,6 +329,115 @@ export const resourcesData = {
           ro: "Companie intermediară – 100 % gratuită pentru medici; asistă cu Approbation și potrivirea joburilor."
         },
         url: "https://www.job-medic.de"
+      }
+      ,
+      {
+        id: "res-ag-6",
+        name: "Hire a Doctor",
+        descriptions: {
+          uk: "Рекрутингова компанія для лікарів: тимчасові та постійні контракти у клініках, практиках, службах невідкладної допомоги.",
+          en: "Specialised recruiter for physicians offering temporary or permanent contracts in hospitals, practices and emergency services.",
+          de: "Spezialisierte Personalvermittlung für Ärzt*innen: temporäre und feste Einsätze in Kliniken, Praxen und Notdiensten.",
+          es: "Empresa de reclutamiento especializada en médicos que ofrece contratos temporales y permanentes en hospitales, consultas y servicios de urgencias.",
+          fr: "Cabinet de recrutement spécialisé pour médecins, proposant des contrats temporaires ou permanents dans hôpitaux, cabinets et services d’urgence.",
+          tr: "Doktorlara yönelik uzman işe alım şirketi; hastanelerde, muayenehanelerde ve acil servislerde geçici ya da daimi sözleşmeler sunar.",
+          ar: "شركة توظيف متخصصة للأطباء توفر عقوداً مؤقتة أو دائمة في المستشفيات والعيادات وخدمات الطوارئ.",
+          pl: "Wyspecjalizowana agencja rekrutująca lekarzy, oferująca kontrakty tymczasowe i stałe w szpitalach, prywatnych praktykach i pogotowiu.",
+          ru: "Кадровое агентство для врачей, предлагающее временные или постоянные контракты в больницах, клиниках и службах неотложной помощи.",
+          el: "Εξειδικευμένος σύμβουλος στελέχωσης για ιατρούς, προσφέροντας προσωρινές ή μόνιμες συμβάσεις σε νοσοκομεία, ιατρεία και επείγοντα.",
+          ro: "Firmă de recrutare specializată pentru medici, oferind contracte temporare și permanente în spitale, cabinete și servicii de urgență."
+        },
+        url: "https://www.hireadoctor.de"
+      },
+      {
+        id: "res-ag-7",
+        name: "Doctari (Ärztevermittlung)",
+        descriptions: {
+          uk: "Одна з найбільших агенцій з тимчасового працевлаштування медиків у Німеччині; понад 3500 лікарів щороку.",
+          en: "One of Germany’s largest staffing agencies for doctors; arranges locum and permanent posts, placing 3 500+ physicians yearly.",
+          de: "Größte Zeitarbeits-/Vermittlungsagentur für Ärzt*innen: 3 500+ Einsätze pro Jahr.",
+          es: "Una de las mayores agencias de personal médico de Alemania; gestiona puestos temporales y permanentes y coloca a más de 3 500 médicos al año.",
+          fr: "L’une des plus grandes agences allemandes de staffing médical ; place plus de 3 500 médecins par an en missions temporaires ou postes fixes.",
+          tr: "Almanya’nın en büyük sağlık istihdam ajanslarından; yılda 3 500’den fazla doktoru geçici veya kalıcı pozisyonlara yerleştirir.",
+          ar: "إحدى أكبر وكالات توظيف الأطباء في ألمانيا؛ توظف أكثر من 3500 طبيب سنوياً في عقود مؤقتة ودائمة.",
+          pl: "Jedna z największych niemieckich agencji zatrudnienia lekarzy; rocznie obsadza ponad 3 500 medyków w kontraktach tymczasowych i stałych.",
+          ru: "Одна из крупнейших немецких кадровых компаний для врачей; ежегодно трудоустраивает более 3 500 медиков на временные и постоянные должности.",
+          el: "Μία από τις μεγαλύτερες γερμανικές εταιρείες στελέχωσης ιατρών· τοποθετεί πάνω από 3 500 γιατρούς ετησίως σε προσωρινές ή μόνιμες θέσεις.",
+          ro: "Una dintre cele mai mari agenții de personal medical din Germania; plasează anual peste 3 500 de medici pe contracte temporare și permanente."
+        },
+        url: "https://www.doctari.de"
+      },
+      {
+        id: "res-ag-8",
+        name: "tw.con. GmbH",
+        descriptions: {
+          uk: "Консалтингова компанія-посередник (з 2007 р.) у галузі охорони здоров’я; підбирає лікарів і фармацевтів по всій ФРН.",
+          en: "Consultancy and recruitment firm (since 2007) matching physicians and pharmacists with positions throughout Germany.",
+          de: "Beratungs- und Vermittlungsunternehmen (seit 2007) für Ärzt*innen und Apotheker*innen in ganz Deutschland.",
+          es: "Consultora y empresa de selección (desde 2007) que coloca médicos y farmacéuticos en puestos de toda Alemania.",
+          fr: "Cabinet de conseil et recrutement (depuis 2007) plaçant médecins et pharmaciens dans toute l’Allemagne.",
+          tr: "2007’den beri faaliyet gösteren danışmanlık ve işe alım firması; Almanya genelinde doktor ve eczacıları konumlandırır.",
+          ar: "شركة استشارات وتوظيف (منذ 2007) توفق بين الأطباء والصيادلة والوظائف في أنحاء ألمانيا.",
+          pl: "Firma doradczo-rekrutacyjna (od 2007 r.) dopasowująca lekarzy i farmaceutów do ofert w całych Niemczech.",
+          ru: "Консалтингово-рекрутинговая компания (с 2007 г.) подбирающая врачей и фармацевтов по всей Германии.",
+          el: "Συμβουλευτική και εταιρεία στελέχωσης (από το 2007) που τοποθετεί ιατρούς και φαρμακοποιούς σε όλη τη Γερμανία.",
+          ro: "Firmă de consultanță și recrutare (din 2007) care plasează medici și farmaciști în toată Germania."
+        },
+        url: "https://www.twcon.de"
+      },
+      {
+        id: "res-ag-9",
+        name: "EuroSynapses",
+        descriptions: {
+          uk: "Європейський кадровий портал: постійні позиції лікарів у німецьких клініках із зарплатою до ~150 000 € на рік.",
+          en: "European recruitment portal placing doctors in German hospitals; permanent roles with salaries up to ~€150 000 / yr.",
+          de: "Europäisches Recruiting-Portal für Ärzt*innen: Festanstellungen in deutschen Kliniken (bis ca. 150 000 €/Jahr).",
+          es: "Portal europeo de reclutamiento que ofrece puestos permanentes de médicos en hospitales alemanes con salarios de hasta 150 000 € anuales.",
+          fr: "Portail européen de recrutement proposant des postes permanents de médecins dans des hôpitaux allemands avec salaires jusqu’à 150 000 € / an.",
+          tr: "Avrupa merkezli portal; Alman hastanelerinde doktorlara kalıcı pozisyonlar (maaşlar ~150 000 € / yıl) sunar.",
+          ar: "بوابة توظيف أوروبية توفر وظائف دائمة للأطباء في مستشفيات ألمانية برواتب تصل إلى 150 000 € سنوياً.",
+          pl: "Europejski portal rekrutacyjny oferujący stałe posady dla lekarzy w niemieckich szpitalach z wynagrodzeniem do 150 000 € rocznie.",
+          ru: "Европейский рекрутинговый портал, предлагающий врачам постоянную работу в немецких клиниках с зарплатой до 150 000 € в год.",
+          el: "Ευρωπαϊκή πύλη στελέχωσης που προσφέρει μόνιμες θέσεις ιατρών σε γερμανικά νοσοκομεία με αποδοχές έως ~150 000 € ετησίως.",
+          ro: "Portal european de recrutare ce oferă posturi permanente pentru medici în spitale germane, salarii până la 150 000 € pe an."
+        },
+        url: "https://www.eurosynapses.eu"
+      },
+      {
+        id: "res-ag-10",
+        name: "pvmed Personalvermittlung",
+        descriptions: {
+          uk: "Агенція з підбору лікарів і медсестер у Німеччині, Швейцарії й Австрії; повний безкоштовний супровід кандидатів і сімей.",
+          en: "Specialist recruiter for doctors & nurses in Germany, Switzerland and Austria, offering free end-to-end support for candidates.",
+          de: "Spezialisierte Vermittlung für Ärzt*innen & Pflege in D-CH-A mit kostenfreier Rundum-Betreuung.",
+          es: "Agencia especializada en la colocación de médicos y enfermeras en Alemania, Suiza y Austria; acompañamiento integral y gratuito.",
+          fr: "Cabinet spécialisé dans le placement de médecins et infirmiers en Allemagne, Suisse et Autriche ; accompagnement gratuit et complet.",
+          tr: "Almanya, İsviçre ve Avusturya’da doktor ve hemşire yerleştiren uzman ajans; adaylara ücretsiz tam destek.",
+          ar: "وكالة متخصصة في توظيف الأطباء والممرضين في ألمانيا وسويسرا والنمسا؛ دعم مجاني وشامل للمرشحين.",
+          pl: "Specjalistyczna agencja rekrutująca lekarzy i pielęgniarki w Niemczech, Szwajcarii i Austrii; pełne bezpłatne wsparcie.",
+          ru: "Специализированное агентство по подбору врачей и медсестёр в Германии, Швейцарии и Австрии; бесплатное комплексное сопровождение.",
+          el: "Εξειδικευμένος μεσάζων για γιατρούς & νοσηλευτές σε Γερμανία, Ελβετία και Αυστρία με δωρεάν πλήρη υποστήριξη υποψηφίων.",
+          ro: "Agenție specializată în recrutarea medicilor și asistentelor în Germania, Elveția și Austria; suport complet și gratuit."
+        },
+        url: "https://www.pvmed.de"
+      },
+      {
+        id: "res-ag-11",
+        name: "1a-Ärztevermittlung",
+        descriptions: {
+          uk: "Онлайн-платформа з великим вибором лікарських вакансій по всій Німеччині; 15+ років на ринку.",
+          en: "Online platform and recruiter with a wide range of doctor vacancies across Germany; in business for 15+ years.",
+          de: "Online-Plattform & Vermittler mit breitem Stellenangebot für Ärzt*innen in ganz Deutschland; seit über 15 Jahren aktiv.",
+          es: "Plataforma online con amplia oferta de vacantes médicas en toda Alemania; más de 15 años de experiencia como intermediario.",
+          fr: "Plateforme en ligne offrant un large éventail de postes pour médecins dans toute l’Allemagne ; plus de 15 ans d’expérience.",
+          tr: "Almanya genelinde geniş doktor ilanlarına sahip çevrim içi platform; 15+ yıllık aracı deneyimi.",
+          ar: "منصة إلكترونية تضم مجموعة واسعة من وظائف الأطباء في جميع أنحاء ألمانيا؛ خبرة تفوق 15 عاماً كوسيط.",
+          pl: "Internetowa platforma z szeroką gamą ofert dla lekarzy w całych Niemczech; ponad 15 lat doświadczenia pośrednika.",
+          ru: "Онлайн-платформа с широким выбором вакансий для врачей по всей Германии; более 15 лет на рынке.",
+          el: "Διαδικτυακή πλατφόρμα με μεγάλη γκάμα θέσεων για γιατρούς σε όλη τη Γερμανία· πάνω από 15 χρόνια εμπειρίας.",
+          ro: "Platformă online cu o gamă largă de posturi pentru medici în toată Germania; peste 15 ani de experiență ca intermediar."
+        },
+        url: "https://www.1a-aerztevermittlung.de"
       }
     ]
   };
