@@ -265,13 +265,15 @@
  }
  
  /* Контейнер childTab-у */
- .childTabContentWrapper {
-   background-color: transparent;
-   border-radius: 8px;
-   padding: 16px;
-   margin-top: 10px;
-   text-align: left;
- }
+.childTabContentWrapper {
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 10px;
+  text-align: left;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
  
  /* Контент childTab */
  .childTab_content {
@@ -415,3 +417,34 @@
      opacity: 1;
    }
  }
+ 
+/* Only tables scroll horizontally, not the entire tab */
+.childTab_content table {
+  display: block;
+  width: max-content;             /* allow table to define its own width */
+  overflow-x: auto;               /* enable horizontal scroll */
+  -webkit-overflow-scrolling: touch;
+  margin: 0 auto;                 /* center table container if smaller than viewport */
+}
+
+.scrollToTop {
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  background: rgba(1, 59, 110, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  z-index: 2000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scrollToTop:hover {
+  opacity: 1;
+}

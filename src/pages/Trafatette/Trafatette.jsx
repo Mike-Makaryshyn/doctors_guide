@@ -55,9 +55,9 @@ const Trafarette = () => {
     return [];
   });
 
-  // 3. Multiple choice (Tab 2): feedback на правильну/неправильну відповідь
-  const [feedback, setFeedback] = useState({});
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  // per-question feedback and selection
+  const [feedbacks, setFeedbacks] = useState({});
+  const [selectedAnswers, setSelectedAnswers] = useState({});
   const timeoutRef = useRef(null);
 
   // 4. Tab 3: факти з прихованим контентом
@@ -102,21 +102,25 @@ const Trafarette = () => {
     });
   };
 
-  // Tab 2 multiple choice: опрацювання вибору правильної/неправильної відповіді
-  const handleAnswerChange = (e, answer) => {
+  // qIdx identifies the question index
+  const handleAnswerChange = (e, answer, qIdx) => {
     e.stopPropagation();
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
     const isCorrect = answer?.isCorrect;
-    setFeedback({
-      msg: isCorrect ? "✔" : "✘",
-      answer,
-    });
+    setFeedbacks(prev => ({
+      ...prev,
+      [qIdx]: { msg: isCorrect ? "✔" : "✘", answer }
+    }));
     timeoutRef.current = setTimeout(() => {
-      setFeedback({});
+      setFeedbacks(prev => {
+        const copy = { ...prev };
+        delete copy[qIdx];
+        return copy;
+      });
     }, 3000);
-    setSelectedAnswer(answer.name);
+    setSelectedAnswers(prev => ({ ...prev, [qIdx]: answer.name }));
   };
 
   // Tab 2: якщо є окреме питання з hidden_answer
@@ -223,13 +227,13 @@ const Trafarette = () => {
                               {q?.answers.map((ans, ansIdx) => {
                                 let answerClass = "";
                                 if (
-                                  feedback?.answer?.name === ans.name &&
-                                  feedback?.msg === "✔"
+                                  feedbacks[qIdx]?.answer?.name === ans.name &&
+                                  feedbacks[qIdx]?.msg === "✔"
                                 ) {
                                   answerClass = styles.correctAnswer;
                                 } else if (
-                                  feedback?.answer?.name === ans.name &&
-                                  feedback?.msg === "✘"
+                                  feedbacks[qIdx]?.answer?.name === ans.name &&
+                                  feedbacks[qIdx]?.msg === "✘"
                                 ) {
                                   answerClass = styles.wrongAnswer;
                                 }
@@ -246,17 +250,17 @@ const Trafarette = () => {
                                         type="radio"
                                         name={`answer_${parentTab?.id}_${qIdx}`}
                                         value={ans.name}
-                                        checked={selectedAnswer === ans.name}
+                                        checked={selectedAnswers[qIdx] === ans.name}
                                         onChange={(e) =>
-                                          handleAnswerChange(e, ans)
+                                          handleAnswerChange(e, ans, qIdx)
                                         }
                                       />
                                       {ans.name}
                                     </label>
                                     {/* Позначка ✔ чи ✘ */}
-                                    {feedback?.answer?.name === ans.name && (
+                                    {feedbacks[qIdx]?.answer?.name === ans.name && (
                                       <div className={styles.feedback}>
-                                        {feedback?.msg}
+                                        {feedbacks[qIdx]?.msg}
                                       </div>
                                     )}
                                   </div>
@@ -347,6 +351,15 @@ const Trafarette = () => {
           })}
         </div>
       </div>
+      <button
+        className={styles.scrollToTop}
+        onClick={() =>
+          window.scrollTo({ top: 0, behavior: "smooth" })
+        }
+        aria-label="Scroll to top"
+      >
+        ↑
+      </button>
     </MainLayout>
   );
 };
