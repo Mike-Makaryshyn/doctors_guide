@@ -30,6 +30,7 @@
 
 /* Стилізація плитки */
 .tile {
+  position: relative;
   background: #ffffff;
   border-radius: 20px;
   padding: 20px;
@@ -205,4 +206,28 @@
     flex: 1 1 100%;
     max-width: 100%;
   }
+}
+
+.linkIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  color: #013b6e;
+  cursor: pointer;
+}
+.tileFormat {
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+.tileType {
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+.linkIcon a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
