@@ -4,6 +4,7 @@
 .container {
   padding: 20px;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
 /* Заголовки секцій */
@@ -29,6 +30,7 @@
 }
 
 /* Стилізація плитки */
+// src/pages/FachsprachPruefung/styles.module.scss
 .tile {
   position: relative;
   background: #ffffff;
@@ -40,8 +42,8 @@
   display: flex;
   flex: 0 0 calc(25% - 20px);
   flex-direction: column;
-  min-width: 220px;
-  max-width: calc(25% - 20px);
+  aspect-ratio: 1 / 1;
+  /* removed min-width/min-height */
 }
 
 .tile:hover {
@@ -205,6 +207,10 @@
   .tile {
     flex: 1 1 100%;
     max-width: 100%;
+  }
+  .tilesContainer {
+    padding: -1px 10px;
+    box-sizing: border-box;
   }
 }
 

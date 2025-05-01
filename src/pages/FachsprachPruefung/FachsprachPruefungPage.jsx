@@ -85,19 +85,19 @@ const MedicalLanguageStudyPage = () => {
           {regionalResources.length > 0 ? (
             <div className={styles.tilesContainer}>
               {regionalResources.map((school, idx) => (
-                <div key={idx} className={styles.tile}>
+                <a
+                  key={idx}
+                  className={styles.tile}
+                  href={
+                    school.website?.startsWith("http")
+                      ? school.website
+                      : `https://${school.website}`
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className={styles.linkIcon}>
-                    <a
-                      href={
-                        school.website?.startsWith("http")
-                          ? school.website
-                          : `https://${school.website}`
-                      }
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaExternalLinkAlt />
-                    </a>
+                    <FaExternalLinkAlt />
                   </div>
                   <h3 className={styles.tileHeader}>{school.name}</h3>
                   <p className={styles.tileFormat}>
@@ -123,7 +123,7 @@ const MedicalLanguageStudyPage = () => {
                       {school.description}
                     </p>
                   )}
-                </div>
+                </a>
               ))}
             </div>
           ) : (
