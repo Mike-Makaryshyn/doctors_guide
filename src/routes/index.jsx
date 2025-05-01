@@ -184,6 +184,9 @@ const AbbreviationsLearningPage = React.lazy(() =>
 const LetterFormPage = React.lazy(() =>
   import("../pages/LetterFormPage/LetterFormPage")
 );
+const FachsprachPruefungPage = React.lazy(() =>
+  import("../pages/FachsprachPruefung/FachsprachPruefungPage")
+);
 const AbbreviationsSimpleChoiceGame = React.lazy(() =>
   import("../games/AbbreviationsGame/pages/SimpleChoiceGame/AbbreviationsSimpleChoiceGame.jsx")
 );
@@ -259,6 +262,10 @@ export default function Routers() {
 <Route
   path={pathList.resource_list.path}
   element={<ResourceListPage />}
+/>
+<Route
+  path={pathList.fachsprachpruefung.path}
+  element={<FachsprachPruefungPage />}
 />
         <Route
           path={pathList.medications_fill_in_blank.path}

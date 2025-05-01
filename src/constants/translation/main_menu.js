@@ -603,7 +603,7 @@ export const main_menu_items = {
           de: "Studium der medizinischen Sprache",
           el: "Μελέτη Ιατρικής Ορολογίας",
           ro: "Studiul limbajului medical",
-          link: "/medical-language-study",
+          link: "/fachsprachpruefung",
         },
           {
           en: "Chat in Region",

@@ -105,28 +105,58 @@ export default {
             </div>`,
         },
         {
-          id: 5,
-          title: "5. Diagnostik",
-          textWithFormatting: `<div>
-              <h4>Anamnese & körperliche Untersuchung</h4>
-              <ul>
-                <li>Erfassung von Schmerztyp, Lokalisation und Risikofaktoren</li>
-                <li>Inspektion: Hautfarbe, trophische Veränderungen</li>
-                <li>Auskultation: systolische Gefäßgeräusche</li>
-                <li>Palpation: Pulsstatus aller Gefäßabschnitte (inkl. Kapillarpuls)</li>
-              </ul>
-              <h4>Funktionsdiagnostik</h4>
-              <p><b>Knöchel-Arm-Index (ABI)</b>: systolischer RR Unterschenkel / Oberarm – Werte: &gt;0,9 normal, 0,5–0,75 mittel, &lt;0,5 schwer.</p>
-              <h4>Ratschow-Lagerungsprobe</h4>
-              <p>Der Patient liegt in Rückenlage, hebt beide Beine 45° an und öffnet/fährt die Füße 1–2 Minuten. Anschließend tief lagern und den perfusionellen Rückfluss beobachten. Eine ausgeprägte Blässe oder Schmerzen sprechen für eine relevante Ischämie.</p>
-              <p><i>Referenzwerte und Durchführung nach ESC-Leitlinien.</i></p>
-              <h4>Bildgebung</h4>
-              <ul>
-                <li>Farbkodierte Duplexsonografie: Erste Wahl von Aorta bis Fußarterien.</li>
-                <li>CT-/MR-Angiografie: Detaillierte Planung bei komplexen Befunden.</li>
-                <li>Digitale Subtraktionsangiografie (DSA): Goldstandard unter Intervention.</li>
-              </ul>
-            </div>`,
+      id: 5,
+      title: "5. Diagnostik",
+      textWithFormatting: `<div>
+    <h4>Anamnese &amp; körperliche Untersuchung</h4>
+    <ul>
+      <li><b>Anamnese:</b> Erfragen von Schmerzcharakter, -lokalisation sowie arteriosklerotischen Risikofaktoren.</li>
+      <li><b>Inspektion:</b> Hautfarbe (blass, ggf. zyanotisch), verminderte Schweißbildung, trophische Störungen.</li>
+      <li><b>Auskultation:</b> systolisches Stenosegeräusch über dem betroffenen Gefäß im Seitenvergleich.</li>
+      <li><b>Palpation:</b> Pulsstatus aller Gefäßgebiete inkl. Kapillarpuls an Zehen und Fingern, Temperaturminderung.</li>
+      <li><b>Fußpulse:</b>
+        <ul>
+          <li>A. dorsalis pedis: lateral der Sehne des M. extensor hallucis longus zwischen 1. und 2. Strahl</li>
+          <li>A. tibialis posterior: hinter dem Innenknöchel palpierbar</li>
+        </ul>
+      </li>
+      <li><b>Blutdruckmessung:</b> obere Extremitäten im Seitenvergleich.</li>
+    </ul>
+    <h4>Funktionsdiagnostik</h4>
+    <h5>Knöchel-Arm-Index (ABI)</h5>
+    <p><b>Definition:</b> systolischer RR Unterschenkel / systolischer RR Oberarm.</p>
+    <p><b>Durchführung:</b> Im Liegen nach 10 Minuten Ruhe mit Doppler-Sonografie an Oberarm und Unterschenkel.</p>
+    <table>
+      <tr><th>Wert</th><th>Bedeutung</th></tr>
+      <tr><td>> 0,9–1,2</td><td>Normwert</td></tr>
+      <tr><td>0,75–0,9</td><td>leichte pAVK</td></tr>
+      <tr><td>0,5–0,75</td><td>mittelschwere pAVK</td></tr>
+      <tr><td>< 0,5</td><td>schwere pAVK</td></tr>
+      <tr><td>> 1,3</td><td>Hinweis auf Mediasklerose</td></tr>
+    </table>
+    <p>Variante: Belastungs-ABI 1 Min. nach Gehbelastung – Abfall um ≥ 20 % beweisend für pAVK. Falsch-hohe Werte bei Mönckeberg-Mediasklerose (Diabetiker).</p>
+    <h5>Ratschow-Lagerungsprobe</h5>
+    <p>Der Patient hebt in Rückenlage beide Beine 45 ° an und bewegt die Füße 1–2 Min. Anschließend tief lagern und Perfusionsrückfluss beobachten. Blässe/Schmerz spricht für relevante Ischämie.</p>
+    <h4>Ergänzende Untersuchungen</h4>
+    <ul>
+      <li><b>Doppler-Sonografie:</b> Analyse der Strömungsgeschwindigkeit und Pulsatilitätsindex.</li>
+      <li><b>Zehen-Arm-Index (TBI):</b> bei ABI > 1,3 (z.  B. Diabetiker) – ≤ 0,7 pathologisch.</li>
+      <li><b>Oszillografie:</b> Volumenschwankungen der Extremitäten – seitendifferenz > 30 % oder stenosehafter Puls.</li>
+      <li><b>Photoplethysmografie:</b> Messung des Füllungsstands der Arterien mittels Lichtabsorption.</li>
+      <li><b>Transkutane Sauerstoffmessung (TcPO₂):</b> Beurteilung des Amputationsrisikos.</li>
+    </ul>
+    <h4>Belastungsuntersuchung</h4>
+    <p>Laufbandergometrie oder definierte Gehstrecke: Erfassung schmerzfreier/maximaler Gehstrecke, Gehzeit und ABI vor/nach Belastung.</p>
+    <p><i>Ein Abfall des ABI um ≥ 20 % nach Belastung gilt als beweisend für pAVK.</i></p>
+    <h4>Bildgebung</h4>
+    <ul>
+      <li><b>Farbkodierte Duplexsonografie (FKDS):</b> erste Wahl, Beurteilung Aorta bis Fußarterien.</li>
+      <li><b>CT-/MR-Angiografie:</b> detaillierte Planung bei komplexen Befunden.</li>
+      <li><b>Digitale Subtraktionsangiografie (DSA):</b> Goldstandard unter Intervention.</li>
+      <li><b>CO₂-Angiografie:</b> Alternative bei Niereninsuffizienz, nicht für thorakale Aorta.</li>
+    </ul>
+  </div>
+`,
         },
         {
           id: 6,
@@ -495,69 +525,69 @@ export default {
         },
       ]
     },
-    {
+   {
       id: 3,
       title: "Faktenfragen",
       questions: [
         {
           title: "Die pAVK ist in über 90 % der Fälle eine Erkrankung der unteren Extremität.",
-          hidden_answer: "Die unteren Extremitätenarterien sind am häufigsten betroffen."
+          hidden_answer: "Ja: Die unteren Extremitätenarterien sind am häufigsten betroffen."
         },
         {
           title: "Atherosklerose ist in rund 95 % der Fälle Ursache einer chronischen pAVK.",
-          hidden_answer: "Plaquebildung in den Gefäßwänden führt zu Stenosen oder Okklusion."
+          hidden_answer: "Ja: Plaquebildung in den Gefäßwänden führt zu Stenosen oder Okklusion."
         },
         {
           title: "Rauchen erhöht das Risiko für pAVK signifikant.",
-          hidden_answer: "Nikotinabusus fördert Atherosklerose und Durchblutungsstörungen."
+          hidden_answer: "Ja: Nikotinabusus fördert Atherosklerose und Durchblutungsstörungen."
         },
         {
           title: "Der Knöchel-Arm-Index (ABI) im Liegen und nach Belastung ist diagnostisch entscheidend.",
-          hidden_answer: "ABI-Werte < 0,9 weisen auf eine pAVK hin."
+          hidden_answer: "Ja: ABI-Werte < 0,9 weisen auf eine pAVK hin."
         },
         {
           title: "Claudicatio intermittens bezeichnet belastungsabhängige Beinschmerzen.",
-          hidden_answer: "Schmerzen treten bei Gehbelastung auf und bessern sich in Ruhe."
+          hidden_answer: "Ja: Schmerzen treten bei Gehbelastung auf und bessern sich in Ruhe."
         },
         {
           title: "Das Leriche-Syndrom ist eine Form der aortoiliakalen pAVK mit Impotenz.",
-          hidden_answer: "Verschluss an der Aortenbifurkation führt zu Becken- und Oberschenkelschmerzen sowie Impotenz."
+          hidden_answer: "Ja: Verschluss an der Aortenbifurkation führt zu Becken- und Oberschenkelschmerzen sowie Impotenz."
         },
         {
           title: "Die Fontaine-Klassifikation unterteilt die pAVK in vier Stadien.",
-          hidden_answer: "Stadium I–IV beschreiben asymptomatisch bis Nekrose."
+          hidden_answer: "Ja: Stadium I–IV beschreiben asymptomatisch bis Nekrose."
         },
         {
           title: "Bei kritischer Extremitätenischämie ist Gehtraining kontraindiziert.",
-          hidden_answer: "Fortgesetzte Belastung verschlimmert Gewebeschäden und Schmerz."
+          hidden_answer: "Ja: Fortgesetzte Belastung verschlimmert Gewebeschäden und Schmerz."
         },
         {
           title: "Interventionelle Verfahren umfassen PTCA mit optionaler Stent-Implantation.",
-          hidden_answer: "PTA (Ballondilatation) ist erste Wahl bei geeigneten Läsionen."
+          hidden_answer: "Ja: PTA (Ballondilatation) ist erste Wahl bei geeigneten Läsionen."
         },
         {
           title: "Eine digitale Subtraktionsangiografie (DSA) gilt als Goldstandard.",
-          hidden_answer: "DSA liefert exakte Darstellung der stenosierten Gefäßabschnitte."
+          hidden_answer: "Ja: DSA liefert exakte Darstellung der stenosierten Gefäßabschnitte."
         },
         {
           title: "Prostanoide wie Iloprost werden bei pAVK im Stadium III eingesetzt.",
-          hidden_answer: "Iloprost-Infusionen verbessern Mikrozirkulation und Claudicatio."
+          hidden_answer: "Ja: Iloprost-Infusionen verbessern Mikrozirkulation und Claudicatio."
         },
         {
           title: "Statine stabilisieren atherosklerotische Plaques auch bei pAVK.",
-          hidden_answer: "Statine reduzieren Lipide und Entzündung in den Gefäßwänden."
+          hidden_answer: "Ja: Statine reduzieren Lipide und Entzündung in den Gefäßwänden."
         },
         {
           title: "Die 5‑Jahres‑Mortalität bei symptomatischer pAVK beträgt etwa 24 %.",
-          hidden_answer: "Symptomatische Gefäßerkrankung erhöht kardiovaskuläre Mortalität."
+          hidden_answer: "Ja: Symptomatische Gefäßerkrankung erhöht kardiovaskuläre Mortalität."
         },
         {
           title: "Fibromuskuläre Dysplasie ist eine seltene Ursache der pAVK.",
-          hidden_answer: "Genetisch bedingte Gefäßwandveränderung führt zu segmentalen Stenosen."
+          hidden_answer: "Ja: Genetisch bedingte Gefäßwandveränderung führt zu segmentalen Stenosen."
         },
         {
           title: "Die Ratschow-Lagerungsprobe dient der klinischen Funktionsdiagnostik.",
-          hidden_answer: "Blässe und Schmerz beim Ablagern deuten auf relevante Ischämie hin."
+          hidden_answer: "Ja: Blässe und Schmerz beim Ablagern deuten auf relevante Ischämie hin."
         }
       ]
     }

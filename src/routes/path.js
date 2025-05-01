@@ -170,5 +170,8 @@ export const pathList = {
   },
   resource_list: {
     path: "/resources",      // ← назву URL можна змінити за бажанням
+  },
+  fachsprachpruefung: {
+    path: "/fachsprachpruefung",
   }
 };

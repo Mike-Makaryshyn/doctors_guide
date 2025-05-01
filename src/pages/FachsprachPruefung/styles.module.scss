@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Загальні стилі для контейнера сторінки */
+.container {
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Заголовки секцій */
+.sectionTitle {
+    font-size: 30px;
+    margin: 20px 0 10px;
+    color: #ffffff;
+}
+
+.noResource {
+  font-size: 16px;
+  color: #999;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Контейнер для плиток */
+.tilesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+/* Стилізація плитки */
+.tile {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex: 0 0 calc(25% - 20px);
+  flex-direction: column;
+  min-width: 220px;
+  max-width: calc(25% - 20px);
+}
+
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tileImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Заголовок плитки (жирний, синій колір) */
+.tileHeader {
+  font-size: 18px;
+  font-weight: 600; /* жирний шрифт */
+  color: #013b6e;   /* синій колір, як в нотарях */
+  margin-bottom: 8px;
+}
+
+/* Додаткові поля для школи */
+.tileAddress,
+.tilePhone,
+.tileEmail {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Опис */
+.tileDescription {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+  margin-top: auto; /* щоб опис був внизу, якщо плитка тягнеться */
+}
+
+/* Кнопка налаштувань (правий нижній кут) */
+.bottomRightSettings {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 1000;
+}
+
+.settingsButton {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.settingsButton:hover {
+  background-color: #4caf50;
+  transform: scale(1.1);
+}
+
+/* Контейнер модального вікна для десктопу */
+.popupContainerDesktop {
+    font-family: Poppins, sans-serif;
+    background: #fff;
+    padding: 25px 20px 20px;
+    width: 260px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 45px;
+    right: 45px;
+    text-align: center;
+}
+
+/* Контейнер модального вікна для мобільних */
+.popupContainerMobile {
+    font-family: Poppins, sans-serif;
+    background: #fff;
+    padding: 25px 20px 20px;
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -4px 12px #0003;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2502;
+    text-align: center;
+    animation: _popupBounce_chby0_1 .6s ease-out;
+  }
+
+/* Стилізація самої модалки */
+.modal {
+  position: relative;
+}
+.tileWebsite {
+  color: #013b6e; 
+  /* або інший колір, який контрастує з фоном */
+ 
+  margin-bottom: 0.1rem; // Якщо треба відступ
+}
+
+/* Можна також задати стилі для всіх посилань у межах .tile */
+.tile a {
+  color: #013b6e;
+
+}
+/* Кнопка закриття модалки */
+.modalCloseButton {
+    position: absolute;
+    top: -42px;
+    right: -32px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ed0a0a;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    padding: 5px;
+    border-radius: 50%;
+  }
+  .modalCloseButton:hover {
+    background-color: rgba(237, 10, 10, 0);
+    transform: scale(0.9);
+  }
+
+/* Заголовок модального вікна */
+.modalTitle {
+  margin-top: 0;
+  font-size: 20px;
+  color: #013b6e;
+  margin-bottom: 12px;
+}
+
+/* Стилізація селектора в модалці */
+.modalSelect {
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  background: #013b6e;
+  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 14px;
+}
+
+.modalSelect:focus {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Для мобільних (адаптив) */
+@media (max-width: 768px) {
+  .tile {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
