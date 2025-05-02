@@ -25,13 +25,7 @@ const TerminologyLearningPage = () => {
       <div className={styles.container}>
         <h1>Games</h1>
 
-        {/* --- Main Menu Back Button --- */}
-        <button
-          className={styles.main_menu_back}
-          onClick={() => navigate("/main_menu")}
-        >
-          &#8592;
-        </button>
+
 
         <div className={styles.gamesGrid}>
           {/* 1. Medical Terminology */}

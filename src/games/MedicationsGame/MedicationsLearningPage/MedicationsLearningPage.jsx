@@ -50,13 +50,7 @@ const MedicationsLearningPage = () => {
       <div className={styles.container}>
         <h1>Medications Games</h1>
 
-        {/* --- Кнопка повернення в головне меню --- */}
-        <button
-          className={styles.main_menu_back}
-          onClick={() => navigate("/main_menu")}
-        >
-          &#8592;
-        </button>
+  
 
         <div className={styles.gamesGrid}>
           {/* 1. Flashcard */}
