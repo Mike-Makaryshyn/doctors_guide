@@ -108,6 +108,7 @@ import laxantien from "./subpages/medikamente/laxantien";
 import merseburgertrias from "./subpages/schilddruese/merseburgertrias";
 // Ендокринологічні теми – групуємо їх під "Innere Medizin":
 import mensyndrom from "./subpages/endokrinilogie/mensyndrom";
+import hypoglykaemie from "./subpages/inneremedizin/endokrinologie/hypoglykaemie";
 import struma from "./subpages/schilddruese/struma";
 import exophthalmus from "./subpages/schilddruese/exophthalmus";
 import schilddruesenhormone from "./subpages/schilddruese/schilddruesenhormone";
@@ -293,6 +294,7 @@ const all_pages_data = [
 
   // *** Ендокринологія (загальна) – підкатегорія Endokrinologie всередині Innere Medizin ***
   { ...mensyndrom, mainCategory: "Innere Medizin", category: "Endokrinologie" },
+  { ...hypoglykaemie, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Hypoglykämie" },
 
   // *** Thyroid pages у контексті Endokринології – підкатегорія "Schilddrüse" ***
   { ...schilddruesenhormone, mainCategory: "Innere Medizin", category: "Endokrinologie", subCategory: "Schilddrüse" },
