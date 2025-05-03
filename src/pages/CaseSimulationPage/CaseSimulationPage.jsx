@@ -16,6 +16,9 @@ const CaseSimulationPage = () => {
   const [simulationEnded, setSimulationEnded] = useState(false);
   const [timeLeft, setTimeLeft] = useState(null); // seconds
   const recognitionRef = React.useRef(null);
+  const audioRef = React.useRef(null);
+  const recorderRef = React.useRef(null);
+  const chunksRef = React.useRef([]);
 
   useEffect(() => {
     const storedData = localStorage.getItem("simulation_case_data");
@@ -69,8 +72,10 @@ ${Object.entries(cleanedData)
 - Wenn eine Frage außerhalb des Falles liegt, antworten Sie mit "Ich habe diese Information nicht".
 
 📌 INTERVIEWVERLAUF:
-0. Falls sich der Arzt nicht vorgestellt hat, bitten Sie ihn höflich um eine Vorstellung, z.B.  
-   „Entschuldigung, könnten Sie sich bitte vorstellen?“
+0. Zu Beginn bitten Sie immer höflich:  
+   „Guten Tag, könnten Sie sich bitte kurz vorstellen?“  
+   (Falls der Arzt sich bereits vorstellt, bedanken Sie sich stattdessen kurz:  
+   „Danke, Herr/Frau Doktor.“)
 
 1. Der Arzt stellt sich vor (z.B. „Guten Tag, ich bin Dr. …“).
 
@@ -105,42 +110,98 @@ Beginnen Sie erst, wenn Sie eine Frage vom Arzt erhalten.
     setMessages([]); // system prompt not shown in chat
   }, [caseId, navigate]);
 
-  useEffect(() => {
-    if (!('webkitSpeechRecognition' in window)) return;
-    const SpeechRecognition = window.webkitSpeechRecognition;
-    recognitionRef.current = new SpeechRecognition();
-    recognitionRef.current.lang = 'de-DE';
-    recognitionRef.current.continuous = false;
-    recognitionRef.current.interimResults = true;
+  const transcribeWhisper = async (blob) => {
+    try {
+      const formData = new FormData();
+      formData.append("file", blob, "speech.webm");
+      formData.append("model", "whisper-1");
+      formData.append("language", "de");
 
-    recognitionRef.current.onresult = e => {
-      let transcript = '';
-      for (let i = e.resultIndex; i < e.results.length; ++i) {
-        transcript += e.results[i][0].transcript;
+      const res = await fetch("https://api.openai.com/v1/audio/transcriptions", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`
+        },
+        body: formData
+      });
+      const data = await res.json();
+      return data.text || "";
+    } catch (err) {
+      console.error("Whisper error:", err);
+      return "";
+    }
+  };
+
+  const playTTS = async (text) => {
+    try {
+      const res = await fetch("https://api.openai.com/v1/audio/speech", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`
+        },
+        body: JSON.stringify({
+          model: "tts-1",
+          voice: "alloy",
+          input: text,
+          format: "wav"          // smaller than pcm, easy to play
+        })
+      });
+      if (!res.ok) throw new Error("TTS request failed");
+      const arrayBuf = await res.arrayBuffer();
+      const blob = new Blob([arrayBuf], { type: "audio/wav" });
+      const url = URL.createObjectURL(blob);
+      if (audioRef.current) {
+        audioRef.current.pause();
+        URL.revokeObjectURL(audioRef.current.src);
+      } else {
+        audioRef.current = new Audio();
       }
-      setInput(transcript.trim());
-    };
-    recognitionRef.current.onend = () => {
-      setIsListening(false);
-      if (input.trim()) handleSend();
-    };
-  }, []);
-
-  const startRecording = () => {
-    if (!recognitionRef.current || simulationEnded) return;
-    recognitionRef.current.start();
-    setIsListening(true);
+      audioRef.current.src = url;
+      audioRef.current.play();
+    } catch (err) {
+      console.error("OpenAI TTS error:", err);
+    }
   };
 
-  const stopRecording = () => {
-    if (!recognitionRef.current || !isListening) return;
-    recognitionRef.current.stop();
+  const toggleRecording = async () => {
+    if (simulationEnded) return;
+
+    if (isListening) {
+      // stop current recording
+      if (recorderRef.current) recorderRef.current.stop();
+      return;
+    }
+
+    // start a new recording
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const recorder = new MediaRecorder(stream);
+      recorderRef.current = recorder;
+      chunksRef.current = [];
+      recorder.ondataavailable = (e) => chunksRef.current.push(e.data);
+      recorder.onstop = async () => {
+        setIsListening(false);
+        const blob = new Blob(chunksRef.current, { type: "audio/webm" });
+        const text = await transcribeWhisper(blob);
+        if (text && text.trim().length > 2) {
+          setInput(text.trim());
+          handleSend(text.trim());
+        }
+        stream.getTracks().forEach((t) => t.stop());
+      };
+      recorder.start();
+      setIsListening(true);
+    } catch (err) {
+      console.error("Mic error:", err);
+    }
   };
 
-  const handleSend = async () => {
-    if (!input.trim()) return;
+  const handleSend = async (preset) => {
+    if (!preset && !input.trim()) return;
+    const content = preset || input.trim();
 
-    const userMessage = { role: "user", content: input };
+    const userMessage = { role: "user", content };
     const newMessages = [...messages, userMessage];
     setMessages(newMessages);
     setInput("");
@@ -179,18 +240,20 @@ Beginnen Sie erst, wenn Sie eine Frage vom Arzt erhalten.
       setMessages([...newMessages, { role: "assistant", content: assistantContent }]);
 
       // TTS
-      if ("speechSynthesis" in window) {
-        const u = new SpeechSynthesisUtterance(assistantContent);
-        const voices = window.speechSynthesis.getVoices();
-        u.voice = voices.find((v) => v.lang.startsWith("de")) || voices[0];
-        u.rate = 1;
-        u.pitch = 1.1;
-        window.speechSynthesis.speak(u);
-      }
+      await playTTS(assistantContent);
     } catch (e) {
       console.error("OpenAI error:", e);
     }
   };
+
+  useEffect(() => {
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        URL.revokeObjectURL(audioRef.current.src);
+      }
+    };
+  }, []);
 
   if (!caseData) return <p>Завантаження даних...</p>;
 
@@ -237,17 +300,15 @@ Beginnen Sie erst, wenn Sie eine Frage vom Arzt erhalten.
             disabled={simulationEnded}
           />
           <button
-            className={`${styles.micBtn} ${isListening ? "recording" : ""} ${isListening ? "pressed" : ""} ${simulationEnded ? styles.disabledInput : ""}`}
-            onPointerDown={startRecording}
-            onPointerUp={stopRecording}
-            onPointerLeave={stopRecording}
+            className={`${styles.micBtn} ${isListening ? styles.recordingState : ""} ${simulationEnded ? styles.disabledInput : ""}`}
+            onClick={toggleRecording}
             disabled={simulationEnded}
           >
             <svg viewBox="0 0 24 24">
               <path d="M12 14a4 4 0 0 0 4-4V6a4 4 0 1 0-8 0v4a4 4 0 0 0 4 4zm6-4a6 6 0 0 1-12 0H5a7 7 0 0 0 14 0h-1zM11 18h2v3h-2v-3z"/>
             </svg>
           </button>
-          <button onClick={handleSend} disabled={simulationEnded}>▶️</button>
+          <button onClick={() => handleSend()} disabled={simulationEnded}>▶️</button>
         </div>
 
         <div className={styles.promptToggle}>
