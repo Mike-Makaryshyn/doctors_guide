@@ -1,6 +1,6 @@
 // src/games/TerminologyGame/pages/AudioChoiceGame/AudioChoiceGameContent.jsx
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import MainLayout from "../../../../layouts/MainLayout/MainLayout";
 import { medicalTerms } from "../../../../constants/medicalTerms";
@@ -128,6 +128,8 @@ const AudioChoiceGameContent = () => {
   );
   const [gameStarted, setGameStarted] = useState(false);
 
+  const audioRef = useRef(null);
+
   useEffect(() => {
     setRegion(selectedRegion || "Bayern");
   }, [selectedRegion]);
@@ -188,6 +190,11 @@ const AudioChoiceGameContent = () => {
   };
 
   const handleStart = () => {
+    // Pause any playing audio
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
     setGameStarted(true);
     setSettingsOpen(false);
     loadQuestions();
@@ -198,6 +205,11 @@ const AudioChoiceGameContent = () => {
   };
 
   const finishGame = () => {
+    // Pause any playing audio
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
     if (!questionsCompleted[currentIndex]) {
       alert("Bitte beantworten Sie die aktuelle Frage!");
       return;
@@ -233,6 +245,11 @@ const AudioChoiceGameContent = () => {
   };
 
   const handleNavigation = (dir) => {
+    // Pause any playing audio
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
     if (dir === "prev" && currentIndex > 0) setCurrentIndex((i) => i - 1);
     if (dir === "next") {
       if (!questionsCompleted[currentIndex]) {
@@ -243,7 +260,17 @@ const AudioChoiceGameContent = () => {
     }
   };
 
-  const playAudio = (src) => new Audio(src).play();
+  const playAudio = (src) => {
+    // stop previous audio if playing
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+    // start new audio
+    const audio = new Audio(src);
+    audioRef.current = audio;
+    audio.play();
+  };
 
   const getRegionLabel = (r) => regionAbbreviations[r] || r;
 
