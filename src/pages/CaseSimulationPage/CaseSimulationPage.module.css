@@ -6,46 +6,20 @@
 }
 
 .chatContainer {
-  background: transparent;                     /* no solid white block */
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 8px;
-
-  padding: 16px;
-  height: 400px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-
-
-}
-.chatContainer::-webkit-scrollbar {
-  width: 10px;
-}
-.chatContainer::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.4);
+  padding: 0;
+  font-size: 0.8rem;
+  overflow: auto;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* ---------- MESSAGE BUBBLES ---------- */
 .message {
-  max-width: 70%;
-  padding: 10px 14px;
-  border-radius: 16px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  font: 1em/1.4 Arial, sans-serif;
-  clear: both;
-  color: #0055aa; /* blue text */
-}
-.user {
-  background: #e1ffc7;
-  align-self: flex-end;
-  text-align: right;
-}
-.assistant {
-  background: #ffffff;
-  align-self: flex-start;
-  text-align: left;
+  border-radius: 50px;
+  padding: 10px 20px;
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
 }
 
 /* ---------- INPUT BAR ---------- */
@@ -191,4 +165,41 @@
 .recordingState svg {
   fill: #ffffff;
   animation: pulseIcon 1.2s infinite;
+}
+
+/* Assistant (in) messages */
+.assistant {
+  float: left;
+  margin-left: 20px;
+  width: 70%;
+}
+.assistant .message {
+  background: #5a99ee;
+}
+.assistant .message:before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: -12px;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid #5a99ee;
+}
+
+/* User (out) messages */
+.user {
+  float: right;
+  margin-right: 20px;
+  width: 70%;
+  text-align: right;
+}
+.user .message {
+  background: #fc6d4c;
+}
+.user .message:before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: -12px;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #fc6d4c;
 }

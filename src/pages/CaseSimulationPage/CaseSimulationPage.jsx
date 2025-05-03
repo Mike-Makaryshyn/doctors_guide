@@ -3,6 +3,9 @@ import { useParams, useNavigate } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./CaseSimulationPage.module.css";
 
+// Web Speech API for real-time recognition
+const SpeechRecognitionClass = window.SpeechRecognition || window.webkitSpeechRecognition;
+
 const CaseSimulationPage = () => {
   const { caseId } = useParams();
   const [caseData, setCaseData] = useState(null);
@@ -19,6 +22,8 @@ const CaseSimulationPage = () => {
   const audioRef = React.useRef(null);
   const recorderRef = React.useRef(null);
   const chunksRef = React.useRef([]);
+  const [recognition, setRecognition] = useState(null);
+  const silenceTimerRef = React.useRef(null);
 
   useEffect(() => {
     const storedData = localStorage.getItem("simulation_case_data");
@@ -74,7 +79,7 @@ ${Object.entries(cleanedData)
 📌 INTERVIEWVERLAUF:
 0. Zu Beginn bitten Sie immer höflich:  
    „Guten Tag, könnten Sie sich bitte kurz vorstellen?“  
-   (Falls der Arzt sich bereits vorstellt, bedanken Sie sich stattdessen kurz:  
+   (Falls der Arzt sich bereits vorstellt oder Sie sich bereits kurz vorgestellt haben, bedanken Sie sich stattdessen kurz:
    „Danke, Herr/Frau Doktor.“)
 
 1. Der Arzt stellt sich vor (z.B. „Guten Tag, ich bin Dr. …“).
@@ -108,6 +113,33 @@ Beginnen Sie erst, wenn Sie eine Frage vom Arzt erhalten.
 
     setSystemPrompt(promptText);
     setMessages([]); // system prompt not shown in chat
+
+    // Initialize Web Speech API if available
+    if (SpeechRecognitionClass) {
+      const recog = new SpeechRecognitionClass();
+      recog.continuous = true;
+      recog.interimResults = true;
+      recog.lang = "de-DE";
+      recog.onresult = (event) => {
+        const transcript = Array.from(event.results)
+          .map((r) => r[0].transcript)
+          .join("");
+        setInput(transcript);
+        // reset silence detection timer
+        if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
+        silenceTimerRef.current = setTimeout(() => {
+          const text = transcript.trim();
+          if (text) {
+            handleSend(text);
+            setInput("");
+          }
+        }, 1000);
+      };
+      recog.onend = () => {
+        setIsListening(false);
+      };
+      setRecognition(recog);
+    }
   }, [caseId, navigate]);
 
   const transcribeWhisper = async (blob) => {
@@ -164,39 +196,6 @@ Beginnen Sie erst, wenn Sie eine Frage vom Arzt erhalten.
     }
   };
 
-  const toggleRecording = async () => {
-    if (simulationEnded) return;
-
-    if (isListening) {
-      // stop current recording
-      if (recorderRef.current) recorderRef.current.stop();
-      return;
-    }
-
-    // start a new recording
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      const recorder = new MediaRecorder(stream);
-      recorderRef.current = recorder;
-      chunksRef.current = [];
-      recorder.ondataavailable = (e) => chunksRef.current.push(e.data);
-      recorder.onstop = async () => {
-        setIsListening(false);
-        const blob = new Blob(chunksRef.current, { type: "audio/webm" });
-        const text = await transcribeWhisper(blob);
-        if (text && text.trim().length > 2) {
-          setInput(text.trim());
-          handleSend(text.trim());
-        }
-        stream.getTracks().forEach((t) => t.stop());
-      };
-      recorder.start();
-      setIsListening(true);
-    } catch (err) {
-      console.error("Mic error:", err);
-    }
-  };
-
   const handleSend = async (preset) => {
     if (!preset && !input.trim()) return;
     const content = preset || input.trim();
@@ -246,6 +245,23 @@ Beginnen Sie erst, wenn Sie eine Frage vom Arzt erhalten.
     }
   };
 
+
+  const toggleRecording = () => {
+    if (!recognition || simulationEnded) return;
+    if (isListening) {
+      recognition.stop();
+      setIsListening(false);
+      if (input.trim()) {
+        handleSend(input.trim());
+        setInput("");
+      }
+      if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
+    } else {
+      recognition.start();
+      setIsListening(true);
+    }
+  };
+
   useEffect(() => {
     return () => {
       if (audioRef.current) {
@@ -282,11 +298,11 @@ Beginnen Sie erst, wenn Sie eine Frage vom Arzt erhalten.
             .map((m, i) => (
               <div
                 key={i}
-                className={`${styles.message} ${
-                  m.role === "user" ? styles.user : styles.assistant
-                }`}
+                className={m.role === "user" ? styles.user : styles.assistant}
               >
-                <strong>{m.role === "user" ? "Лікар" : "Пацієнт"}:</strong> {m.content}
+                <div className={styles.message}>
+                  {m.content}
+                </div>
               </div>
             ))}
         </div>
@@ -308,7 +324,6 @@ Beginnen Sie erst, wenn Sie eine Frage vom Arzt erhalten.
               <path d="M12 14a4 4 0 0 0 4-4V6a4 4 0 1 0-8 0v4a4 4 0 0 0 4 4zm6-4a6 6 0 0 1-12 0H5a7 7 0 0 0 14 0h-1zM11 18h2v3h-2v-3z"/>
             </svg>
           </button>
-          <button onClick={() => handleSend()} disabled={simulationEnded}>▶️</button>
         </div>
 
         <div className={styles.promptToggle}>
