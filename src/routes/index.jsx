@@ -220,6 +220,9 @@ const ResourceListPage = React.lazy(() =>
 const NecessaryDocumentsPage = React.lazy(() =>
   import("../pages/EmploymentDocsPage/EmploymentDocsPage")
 );
+const CaseSimulationPage = React.lazy(() =>
+  import("../pages/CaseSimulationPage/CaseSimulationPage")
+);
 export default function Routers() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -266,6 +269,7 @@ export default function Routers() {
   path={pathList.resource_list.path}
   element={<ResourceListPage />}
 />
+<Route path="/case-simulation/:caseId" element={<CaseSimulationPage />} />
 <Route
   path={pathList.fachsprachpruefung.path}
   element={<FachsprachPruefungPage />}
@@ -274,6 +278,7 @@ export default function Routers() {
   path={pathList.audio_choice.path}
   element={<AudioChoiceGame />}
 />
+
         <Route
           path={pathList.medications_fill_in_blank.path}
           element={<MedicationFillInBlankGame />}

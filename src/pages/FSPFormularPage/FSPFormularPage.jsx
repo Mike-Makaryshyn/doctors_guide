@@ -665,6 +665,18 @@ const FSPFormularPage = () => {
     }
   }, [selectedCase, localRegion, dataSources]);
 
+  // ---- Симуляція: функція ----
+  const handleStartSimulation = () => {
+    if (!parsedData || Object.keys(parsedData).length === 0) {
+      toast.error("Дані не завантажені!");
+      return;
+    }
+    // Зберегти в localStorage
+    localStorage.setItem("simulation_case_data", JSON.stringify(parsedData));
+    // Перейти на сторінку симуляції
+    navigate(`/case-simulation/${selectedCase}`);
+  };
+
   return (
     <MainLayout>
       {!user ? (
@@ -834,8 +846,13 @@ const FSPFormularPage = () => {
                   <button className={styles["actionButton"]} onClick={handlePrintPreview} aria-label="PDF Vorschau">
                     <FaFilePdf className={styles["icon-common"]} />
                   </button>
-        
-                  
+                  <button
+                    className={styles["actionButton"]}
+                    onClick={handleStartSimulation}
+                    aria-label="Simulation starten"
+                  >
+                    ➡️ Симуляція
+                  </button>
                 </div>
 
                 {/* Close Button */}
