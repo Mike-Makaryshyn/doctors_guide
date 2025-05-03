@@ -630,3 +630,58 @@
 .playing .playIcon {
   animation: speakerIconPulse 1s infinite ease-in-out;
 }
+/* ---- Language selection styling ---- */
+.languageCell,
+.languageCellFixed,
+.languageSelect {
+  width: 120px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.2),
+              -5px -5px 9px #ffffff;
+  color: #013b6e;
+  font-weight: 600;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+.languageCellFixed {
+  /* inherits .languageCell */
+}
+.languageSelect {
+  /* inherits .languageCell */
+}
+
+/* Optional: if you reintroduce a swap button */
+.languageSwapContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.swapButton {
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+.swapButton:hover {
+  transform: rotate(180deg) scale(1.1);
+}
+.swapIcon {
+  font-size: 20px;
+  color: #013b6e;
+  transition: transform 0.3s ease;
+}

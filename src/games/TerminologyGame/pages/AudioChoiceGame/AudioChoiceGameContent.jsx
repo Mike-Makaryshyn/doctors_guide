@@ -15,6 +15,7 @@ import {
   FaPen,
   FaArrowLeft,
   FaArrowRight,
+  FaExchangeAlt,
 } from "react-icons/fa";
 import { FaVolumeUp } from "react-icons/fa";
 import { useTermStatus, TermStatusProvider } from "../../../../contexts/TermStatusContext";
@@ -64,12 +65,21 @@ const filterModes = [
 // Anzahl Fragen
 const questionCountOptions = [20, 40, 60, 100, 200, "all"];
 
-// Anzeige-Modi
-const displayModeOptions = [
-  { value: "GermanLat", label: "Ger→Lat" },   // Audio (Ger) → Antwort (Lat)
-  { value: "LatGerman", label: "Ger→Ger" },   // Audio (Ger) → Antwort (Ger)
-  { value: "Mixed",      label: "Mixed" },
-];
+// Mapping for selectable languages
+const languageMap = {
+  lat: "Latein",
+  de:  "Deutsch",
+  en:  "Englisch",
+  uk:  "Ukrainisch",
+  ru:  "Russisch",
+  tr:  "Türkisch",
+  ar:  "Arabisch",
+  fr:  "Französisch",
+  es:  "Spanisch",
+  pl:  "Polnisch",
+  ro:  "Rumänisch",
+  el:  "Griechisch",
+};
 
 const AudioChoiceGameContent = () => {
   const navigate = useNavigate();
@@ -93,8 +103,13 @@ const AudioChoiceGameContent = () => {
   const [selectedCategory, setSelectedCategory] = useState("Alle");
   const [filterMode, setFilterMode] = useState("unlearned");
   const [allowEdit, setAllowEdit] = useState(false);
-  const [displayMode, setDisplayMode] = useState("GermanLat");
   const [questionCount, setQuestionCount] = useState(20);
+  // Which German audio to play: term name or explanation
+  const [deField, setDeField] = useState("de"); // values: "de" or "deExplanation"
+  // Only selectable language state (answer language)
+  const [selectableLang, setSelectableLang] = useState(
+    selectedLanguage && selectedLanguage !== "de" ? selectedLanguage : "lat"
+  );
 
   // Spiel-State
   const [questions, setQuestions] = useState([]);
@@ -149,20 +164,20 @@ const AudioChoiceGameContent = () => {
     setShownCounts(newCounts);
 
     const qData = selected.map((term) => {
-      const audioKey = term.deAudioKey; // je nach Sprache
+      const audioKey =
+        deField === "de" ? term.deAudioKey : term.deExplanationKey;
       const audioSrc = audioFiles[audioKey];
-      let mode = displayMode;
-      if (displayMode === "Mixed") {
-        mode = Math.random() < 0.5 ? "LatGerman" : "GermanLat";
-      }
-      const correct = mode === "LatGerman" ? term.de : term.lat;
-      const wrongs = medicalTerms
+      // Always: "de" (German) is question language, selectableLang is answer language
+      const questionLang = "de";
+      const answerLang   = selectableLang;
+      const richtigeAntwort = term[answerLang]   || term.de;
+      const falscheAntworten = medicalTerms
         .filter((t) => t.id !== term.id)
         .sort(() => Math.random() - 0.5)
         .slice(0, 3)
-        .map((t) => (mode === "LatGerman" ? t.de : t.lat));
-      const options = [...wrongs, correct].sort(() => Math.random() - 0.5);
-      return { id: term.id, audioSrc, richtigeAntwort: correct, optionen: options, term };
+        .map((t) => t[answerLang] || t.de);
+      const optionen = [...falscheAntworten, richtigeAntwort].sort(() => Math.random() - 0.5);
+      return { id: term.id, audioSrc, richtigeAntwort, optionen, term };
     });
 
     setQuestions(qData);
@@ -407,15 +422,42 @@ const AudioChoiceGameContent = () => {
                   </button>
                 </div>
               </div>
-              <div className={styles.modalField}>
-                <div className={styles.displayModeContainer} data-tutorial="displayModeContainer">
-                  {displayModeOptions.map((opt) => (
-                    <div
-                      key={opt.value}
-                      className={`${styles.displayModeIcon} ${(displayMode === opt.value) ? styles.selected : ''}`}
-                      onClick={() => { if (!requireAuth()) setDisplayMode(opt.value); }}
-                    >{opt.label}</div>
-                  ))}
+              <div className={styles.modalField} data-tutorial="languageSelectContainer">
+                <label className={styles.fieldLabel}>Audio → Ziel:</label>
+                <div className={styles.languageSwapContainer}>
+                  {/* Left: German audio field */}
+                  <div className={styles.languageCellFixed}>
+                    <select
+                      className={styles.languageSelect}
+                      value={deField}
+                      onChange={(e) => {
+                        if (requireAuth()) return;
+                        setDeField(e.target.value);
+                      }}
+                    >
+                      <option value="de">Begriff</option>
+                      <option value="deExplanation">Erklärung</option>
+                    </select>
+                  </div>
+                  {/* Arrow */}
+                  <FaArrowRight className={styles.swapIcon} />
+                  {/* Right: target language */}
+                  <div className={styles.languageCell}>
+                    <select
+                      className={styles.languageSelect}
+                      value={selectableLang}
+                      onChange={(e) => {
+                        if (requireAuth()) return;
+                        setSelectableLang(e.target.value);
+                      }}
+                    >
+                      {Object.entries(languageMap)
+                        .filter(([code]) => code !== "de")
+                        .map(([code, label]) => (
+                          <option key={code} value={code}>{label}</option>
+                        ))}
+                    </select>
+                  </div>
                 </div>
               </div>
               <div className={styles.modalField}>
@@ -467,9 +509,11 @@ const AudioChoiceGameContent = () => {
               <div className={styles.progress}>Frage {currentIndex+1} von {questions.length}</div>
             </div>
             <div className={styles.questionSection}>
-              <button className={styles.playButton} onClick={() => playAudio(q.audioSrc)}>
-                <FaVolumeUp className={styles.playIcon} />
-              </button>
+              <div className={styles.frageContainer}>
+                <button className={styles.playButton} onClick={() => playAudio(q.audioSrc)}>
+                  <FaVolumeUp className={styles.playIcon} />
+                </button>
+              </div>
               <div className={styles.optionsContainer}>
                 {q.optionen.map((opt, i) => {
                   const isCorrect = done && opt === q.richtigeAntwort;
