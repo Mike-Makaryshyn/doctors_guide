@@ -17,7 +17,11 @@ const tutorialTranslations = {
         questionCount:
           "Select the number of questions to be displayed in the game.",
         startButton:
-          "Press Start to begin the game."
+          "Press Start to begin the game.",
+        fieldSelectContainer:
+          "Choose whether to play the term (Begriff) audio or the explanation (Erklärung) audio.",
+        languageSelectContainer:
+          "Select the target language for translation.",
       },
       buttons: {
         back: "Back",
@@ -44,7 +48,11 @@ const tutorialTranslations = {
         questionCount:
           "Wählen Sie die Anzahl der Fragen, die im Spiel angezeigt werden sollen.",
         startButton:
-          "Drücken Sie auf Start, um das Spiel zu beginnen."
+          "Drücken Sie auf Start, um das Spiel zu beginnen.",
+        fieldSelectContainer:
+          "Wähle, ob der Begriff oder die Erklärung als Audio abgespielt wird.",
+        languageSelectContainer:
+          "Wähle die Zielsprache für die Übersetzung.",
       },
       buttons: {
         back: "Zurück",
@@ -71,7 +79,11 @@ const tutorialTranslations = {
         questionCount:
           "Виберіть кількість питань, які будуть відображатися в грі.",
         startButton:
-          "Натисніть Старт, щоб розпочати гру."
+          "Натисніть Старт, щоб розпочати гру.",
+        fieldSelectContainer:
+          "Виберіть, чи відтворювати аудіо з терміном (Begriff) чи з поясненням (Erklärung).",
+        languageSelectContainer:
+          "Виберіть цільову мову для перекладу.",
       },
       buttons: {
         back: "Назад",
@@ -98,7 +110,11 @@ const tutorialTranslations = {
         questionCount:
           "Выберите количество вопросов, которые будут отображаться в игре.",
         startButton:
-          "Нажмите Старт, чтобы начать игру."
+          "Нажмите Старт, чтобы начать игру.",
+        fieldSelectContainer:
+          "Выберите, воспроизводить ли аудио с термином (Begriff) или с объяснением (Erklärung).",
+        languageSelectContainer:
+          "Выберите целевой язык для перевода.",
       },
       buttons: {
         back: "Назад",
@@ -125,7 +141,11 @@ const tutorialTranslations = {
         questionCount:
           "Wybierz liczbę pytań, które mają być wyświetlane w grze.",
         startButton:
-          "Naciśnij Start, aby rozpocząć grę."
+          "Naciśnij Start, aby rozpocząć grę.",
+        fieldSelectContainer:
+          "Wybierz, czy odtwarzać audio z terminem (Begriff) czy z wyjaśnieniem (Erklärung).",
+        languageSelectContainer:
+          "Wybierz język docelowy tłumaczenia.",
       },
       buttons: {
         back: "Wstecz",
@@ -152,7 +172,11 @@ const tutorialTranslations = {
         questionCount:
           "اختر عدد الأسئلة التي ستظهر في اللعبة.",
         startButton:
-          "اضغط على بدء لبدء اللعبة."
+          "اضغط على بدء لبدء اللعبة.",
+        fieldSelectContainer:
+          "اختر ما إذا كان سيتم تشغيل الصوت بالمصطلح (Begriff) أو بالشرح (Erklärung).",
+        languageSelectContainer:
+          "اختر اللغة الهدف للترجمة.",
       },
       buttons: {
         back: "رجوع",
@@ -179,7 +203,11 @@ const tutorialTranslations = {
         questionCount:
           "Oyunda gösterilecek soru sayısını seçin.",
         startButton:
-          "Oyunu başlatmak için Başlat'a basın."
+          "Oyunu başlatmak için Başlat'a basın.",
+        fieldSelectContainer:
+          "Terim (Begriff) mi yoksa açıklama (Erklärung) mı oynatılacağını seçin.",
+        languageSelectContainer:
+          "Çeviri için hedef dili seçin.",
       },
       buttons: {
         back: "Geri",
@@ -206,7 +234,11 @@ const tutorialTranslations = {
         questionCount:
           "Sélectionnez le nombre de questions à afficher dans le jeu.",
         startButton:
-          "Appuyez sur Démarrer pour commencer le jeu."
+          "Appuyez sur Démarrer pour commencer le jeu.",
+        fieldSelectContainer:
+          "Choisissez si l’audio joue le terme (Begriff) ou son explication (Erklärung).",
+        languageSelectContainer:
+          "Sélectionnez la langue cible pour la traduction.",
       },
       buttons: {
         back: "Retour",
@@ -233,7 +265,11 @@ const tutorialTranslations = {
         questionCount:
           "Selecciona la cantidad de preguntas que se mostrarán en el juego.",
         startButton:
-          "Presiona Iniciar para comenzar el juego."
+          "Presiona Iniciar para comenzar el juego.",
+        fieldSelectContainer:
+          "Elige si reproducir el audio del término (Begriff) o de la explicación (Erklärung).",
+        languageSelectContainer:
+          "Selecciona el idioma de destino para la traducción.",
       },
       buttons: {
         back: "Atrás",
@@ -260,7 +296,11 @@ const tutorialTranslations = {
         questionCount:
           "Επιλέξτε τον αριθμό των ερωτήσεων που θα εμφανίζονται στο παιχνίδι.",
         startButton:
-          "Πατήστε Έναρξη για να ξεκινήσετε το παιχνίδι."
+          "Πατήστε Έναρξη για να ξεκινήσετε το παιχνίδι.",
+        fieldSelectContainer:
+          "Επιλέξτε αν θα αναπαραχθεί ο όρος (Begriff) ή η εξήγηση (Erklärung) ως ήχος.",
+        languageSelectContainer:
+          "Επιλέξτε τη γλώσσα-στόχο για τη μετάφραση.",
       },
       buttons: {
         back: "Πίσω",
@@ -287,7 +327,11 @@ const tutorialTranslations = {
         questionCount:
           "Selectează numărul de întrebări care vor fi afișate în joc.",
         startButton:
-          "Apasă Start pentru a începe jocul."
+          "Apasă Start pentru a începe jocul.",
+        fieldSelectContainer:
+          "Alege dacă să redai audio cu termenul (Begriff) sau cu explicația (Erklärung).",
+        languageSelectContainer:
+          "Selectează limba țintă pentru traducere.",
       },
       buttons: {
         back: "Înapoi",

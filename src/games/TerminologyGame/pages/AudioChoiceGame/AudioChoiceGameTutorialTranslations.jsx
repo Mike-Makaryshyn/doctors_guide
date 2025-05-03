@@ -55,10 +55,14 @@ const AudioChoiceGameTutorial = ({ run, onFinish }) => {
         disableBeacon: true,
       },
       {
-        target: '[data-tutorial="displayModeContainer"]',
-        content:
-          stepsContent.displayMode ||
-          "Here you can choose the language mode – whether to translate from Latin to German, from German to Latin, or use a mixed mode.",
+        target: '[data-tutorial="fieldSelectContainer"]',
+        content: stepsContent.fieldSelectContainer,
+        placement: "top",
+        disableBeacon: true,
+      },
+      {
+        target: '[data-tutorial="languageSelectContainer"]',
+        content: stepsContent.languageSelectContainer,
         placement: "top",
         disableBeacon: true,
       },

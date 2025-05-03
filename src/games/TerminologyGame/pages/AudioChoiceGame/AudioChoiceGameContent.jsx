@@ -426,7 +426,7 @@ const AudioChoiceGameContent = () => {
                 <label className={styles.fieldLabel}>Audio → Ziel:</label>
                 <div className={styles.languageSwapContainer}>
                   {/* Left: German audio field */}
-                  <div className={styles.languageCellFixed}>
+                  <div className={styles.languageCellFixed} data-tutorial="fieldSelectContainer">
                     <select
                       className={styles.languageSelect}
                       value={deField}
@@ -442,7 +442,7 @@ const AudioChoiceGameContent = () => {
                   {/* Arrow */}
                   <FaArrowRight className={styles.swapIcon} />
                   {/* Right: target language */}
-                  <div className={styles.languageCell}>
+                  <div className={styles.languageCell} data-tutorial="languageSelectContainer">
                     <select
                       className={styles.languageSelect}
                       value={selectableLang}
