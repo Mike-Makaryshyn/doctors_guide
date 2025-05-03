@@ -38,7 +38,7 @@ import { parseData } from "../../utils/dataParser";
 import useIsMobile from "../../hooks/useIsMobile";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { DataSourceContext } from "../../contexts/DataSourceContext";
-import { FaCheck, FaPause, FaCog, FaPlus, FaSync } from "react-icons/fa";
+import { FaCheck, FaPause, FaCog, FaPlus, FaSync, FaPlay } from "react-icons/fa";
 import { previewFSPPDF, downloadFSPPDF } from "./pdfFSPFormular"; // <-- Імпорт
 import { FaPrint, FaDownload, FaFilePdf } from "react-icons/fa";
 // Firebase
@@ -851,7 +851,7 @@ const FSPFormularPage = () => {
                     onClick={handleStartSimulation}
                     aria-label="Simulation starten"
                   >
-                    ➡️ Симуляція
+                    <FaPlay className={styles["icon-common"]} />
                   </button>
                 </div>
 
