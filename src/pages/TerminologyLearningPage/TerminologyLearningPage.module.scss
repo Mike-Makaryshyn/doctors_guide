@@ -420,3 +420,48 @@
   75%  { transform: translate(50%, 50%); }
   100% { transform: translate(100%, 100%); }
 }
+
+/* ----------------------------
+   Audio Quiz Game
+---------------------------- */
+.audioQuizContainer {
+  width: 100%;
+  height: 100%;
+  background-color: #3498db;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: audioPulse 4s ease-in-out infinite;
+}
+
+.speakerLeft,
+.speakerRight {
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.speakerLeft {
+  background-image: url("../../assets/speaker-left.svg");
+  margin-right: 8px;
+}
+
+.speakerRight {
+  background-image: url("../../assets/speaker-right.svg");
+  margin-left: 8px;
+}
+
+@keyframes audioPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.letter {
+  color: #023c6f;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}

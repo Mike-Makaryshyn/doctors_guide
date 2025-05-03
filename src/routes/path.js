@@ -156,6 +156,9 @@ export const pathList = {
   region_cases: {
     path: "/region-cases",
   },
+  audio_choice: {
+    path: "/audio-choice-game",
+  },
   simulation: {
     path: "/simulation",
   },

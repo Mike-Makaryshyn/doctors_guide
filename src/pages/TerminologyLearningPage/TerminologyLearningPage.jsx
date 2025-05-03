@@ -11,6 +11,7 @@ import fillInBlankBg from "../../assets/fill-in-blank-bg.jpg";
 import translatorBg from "../../assets/translator-bg.jpg";
 import medicalTerminologyBg from "../../assets/medical-terminology-bg.jpg";
 import matchingGameBg from "../../assets/matching-game-bg.jpg";
+import audioQuizBg from "../../assets/audio-quiz-bg.jpg";
 
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { pathList } from "../../routes/path";
@@ -125,6 +126,30 @@ const TerminologyLearningPage = () => {
             </div>
           </Link>
 
+          {/* 8. Audio Quiz */}
+          <Link
+            to={`${pathList.audio_choice.path}?region=${regionParam}&category=Alle&filterMode=unlearned`}
+            className={styles.gameTile}
+            style={{ backgroundImage: `url(${audioQuizBg})` }}
+          >
+            <div className={styles.innerTile}>
+              <div className={styles.audioQuizContainer}>
+                <div className={styles.speakerLeft}></div>
+                <div className={styles.audioQuizText}>
+                  {"Audio Quiz".split('').map((char, i) => (
+                    <span
+                      key={i}
+                      className={styles.letter}
+                      style={{ animationDelay: `${i * 0.3}s` }}
+                    >
+                      {char}
+                    </span>
+                  ))}
+                </div>
+                <div className={styles.speakerRight}></div>
+              </div>
+            </div>
+          </Link>
        
         </div>
       </div>

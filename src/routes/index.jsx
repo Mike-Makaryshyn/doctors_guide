@@ -130,6 +130,9 @@ const AllMedicationsPage = React.lazy(() =>
     "../games/MedicationsGame/pages/AllMedicationsPage/AllMedicationsPage.jsx"
   )
 );
+const AudioChoiceGame = React.lazy(() =>
+  import("../games/TerminologyGame/pages/AudioChoiceGame/AudioChoiceGameContent.jsx")
+);
 const TermMatchingGame = React.lazy(() =>
   import("../games/TerminologyGame/pages/TermMatchingGame/TermMatchingGame.jsx")
 );
@@ -266,6 +269,10 @@ export default function Routers() {
 <Route
   path={pathList.fachsprachpruefung.path}
   element={<FachsprachPruefungPage />}
+/>
+<Route
+  path={pathList.audio_choice.path}
+  element={<AudioChoiceGame />}
 />
         <Route
           path={pathList.medications_fill_in_blank.path}
