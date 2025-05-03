@@ -284,9 +284,34 @@ const AudioChoiceGameContent = () => {
   return (
     <MainLayout>
       <Helmet>
-        <title>Fachbegriffe hören und auswählen – Medizin Audio-Prüfung</title>
-        <meta name="description" content="Lerne medizinische Fachbegriffe akustisch mit Multiple-Choice-Antworten." />
+        <title>Audio Choice Game – Medizinische Fachbegriffe hören und meistern</title>
+
+        {/* Primary description / keywords */}
+        <meta
+          name="description"
+          content="Audio‑basiertes Multiple‑Choice‑Quiz: Höre medizinische Fachbegriffe auf Deutsch und wähle die korrekte Übersetzung. Ideal zum Üben für die Fachsprachenprüfung, die Anerkennung als Arzt in Deutschland und zur Verbesserung der Aussprache."
+        />
+        <meta
+          name="keywords"
+          content="medizinische Fachbegriffe, Audio Quiz, Fachsprachenprüfung, medizinische Terminologie, Ärzte Deutsch, Hörverständnis, German medical terms, pronunciation training, TerminologyGame"
+        />
+
+        {/* Open Graph for social media */}
+        <meta property="og:title" content="Audio Choice Game – Medizinische Fachbegriffe hören und meistern" />
+        <meta
+          property="og:description"
+          content="Trainiere dein medizinisches Deutsch auditiv: Höre Fachbegriffe, wähle die richtige Übersetzung und markiere Begriffe automatisch als gelernt. Perfekt für Medizinerinnen und Mediziner."
+        />
         <meta property="og:image" content={audioQuizBg} />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Audio Choice Game – Medizinische Fachbegriffe hören" />
+        <meta
+          name="twitter:description"
+          content="Audio‑basiertes Quiz für medizinische Terminologie. Höre Begriffe auf Deutsch und teste dein Wissen – ideal zur Vorbereitung auf die Fachsprachenprüfung."
+        />
         <meta name="twitter:image" content={audioQuizBg} />
       </Helmet>
       <div className={styles.audioChoiceGame}>
