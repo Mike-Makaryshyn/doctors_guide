@@ -205,18 +205,17 @@ Beginnen Sie erst, wenn Sie eine Frage vom Arzt erhalten.
     }
 
     try {
-      const res = await fetch("https://api.openai.com/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.VITE_OPENAI_API_KEY}`,
-        },
-        body: JSON.stringify({
-          model: "gpt-3.5-turbo",
-          temperature: 0.8,
-          messages: [{ role: "system", content: systemPrompt }, ...newMessages],
-        }),
-      });
+      const res = await fetch("/api/secret-proxy", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    model: "gpt-3.5-turbo",
+    temperature: 0.8,
+    messages: [{ role: "system", content: systemPrompt }, ...newMessages],
+  }),
+});
       const data = await res.json();
       const assistantContent = data.choices[0].message.content.trim();
       // quick filter: remove forbidden counter‑questions
