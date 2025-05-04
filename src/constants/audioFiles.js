@@ -1,4 +1,4 @@
-// ⚡️ Этот файл сгенерирован автоматически. НЕ РЕДАКТИРУЙТЕ ВРУЧНУЮ!
+
 
 import id1_de from "../assets/output/1_de.mp3";
 import id1_deExplanation from "../assets/output/1_deExplanation.mp3";

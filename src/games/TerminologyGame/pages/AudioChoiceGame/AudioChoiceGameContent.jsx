@@ -168,7 +168,7 @@ const AudioChoiceGameContent = () => {
     const qData = selected.map((term) => {
       const audioKey =
         deField === "de" ? term.deAudioKey : term.deExplanationKey;
-      const audioSrc = audioFiles[audioKey];
+        const audioSrc = audioFiles[audioKey?.replace("id", "")];
       // Always: "de" (German) is question language, selectableLang is answer language
       const questionLang = "de";
       const answerLang   = selectableLang;
@@ -260,7 +260,7 @@ const AudioChoiceGameContent = () => {
     }
   };
 
-  const playAudio = (src) => {
+  const playAudio = async (src) => {
     // stop previous audio if playing
     if (audioRef.current) {
       audioRef.current.pause();
@@ -269,7 +269,14 @@ const AudioChoiceGameContent = () => {
     // start new audio
     const audio = new Audio(src);
     audioRef.current = audio;
-    audio.play();
+    try {
+      await audio.play();
+    } catch (error) {
+      // ignore AbortError when play is interrupted by pause
+      if (error.name !== 'AbortError') {
+        console.error('audio.play() failed:', error);
+      }
+    }
   };
 
   const getRegionLabel = (r) => regionAbbreviations[r] || r;
@@ -591,8 +598,11 @@ const AudioChoiceGameContent = () => {
   );
 };
 
-export default () => (
+// Wrap content with provider
+const AudioChoiceGameWithProvider = () => (
   <TermStatusProvider>
     <AudioChoiceGameContent />
   </TermStatusProvider>
 );
+
+export default AudioChoiceGameWithProvider;
