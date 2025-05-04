@@ -1,40 +1,45 @@
 // api/secret-proxy.js
+
 import { Configuration, OpenAIApi } from "openai";
 
 export default async function handler(req, res) {
-  // 1) Перевірка методу (якщо треба)
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method Not Allowed" });
+  // Дозволяємо GET для швидкого тесту
+  if (req.method === "GET") {
+    return res.status(200).json({ ok: true, info: "GET працює" });
   }
 
-  // 2) Забираємо ключ із середовища
+  // Приймаємо лише POST для справжнього виклику
+  if (req.method !== "POST") {
+    // Вказуємо, які методи дозволені
+    res.setHeader("Allow", ["GET", "POST"]);
+    return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
+  }
+
+  // Ось тут – ваш справжній POST-обробник:
   const openaiKey = process.env.OPENAI_API_KEY;
   if (!openaiKey) {
     return res.status(500).json({ error: "API key not configured." });
   }
 
-  // 3) Ініціалізуємо клієнт OpenAI
   const configuration = new Configuration({ apiKey: openaiKey });
   const openai = new OpenAIApi(configuration);
 
-  // 4) Беремо prompt з тіла запиту
-  const { prompt } = req.body;
-  if (!prompt) {
-    return res.status(400).json({ error: "Prompt is required." });
+  const { model, temperature, messages } = req.body;
+  if (!messages) {
+    return res.status(400).json({ error: "Missing messages in body" });
   }
 
   try {
-    // 5) Звертаємося до OpenAI
-    const completion = await openai.createCompletion({
-      model: "text-davinci-003",
-      prompt,
-      max_tokens: 100,
+    const completion = await openai.createChatCompletion({
+      model: model || "gpt-3.5-turbo",
+      temperature: temperature ?? 0.8,
+      messages,
     });
-
-    // 6) Повертаємо результат клієнту
-    return res.status(200).json({ text: completion.data.choices[0].text });
-  } catch (error) {
-    console.error("OpenAI error:", error);
+    return res
+      .status(200)
+      .json({ choices: completion.data.choices });
+  } catch (err) {
+    console.error(err);
     return res.status(500).json({ error: "OpenAI request failed." });
   }
 }
