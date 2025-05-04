@@ -3,6 +3,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./CaseSimulationPage.module.css";
 
+const OPENAI_API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
+
 // Web Speech API for real-time recognition
 const SpeechRecognitionClass = window.SpeechRecognition || window.webkitSpeechRecognition;
 
@@ -205,18 +207,18 @@ Beginnen Sie erst, wenn Sie eine Frage vom Arzt erhalten.
     }
 
     try {
-      const res = await fetch("https://api.openai.com/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
-        },
-        body: JSON.stringify({
-          model: "gpt-3.5-turbo",
-          temperature: 0.8,
-          messages: [{ role: "system", content: systemPrompt }, ...newMessages],
-        }),
-      });
+        const res = await fetch("/api/chat", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${OPENAI_API_KEY}`
+          },
+          body: JSON.stringify({
+            model: "gpt-3.5-turbo",
+            temperature: 0.8,
+            messages: [{ role: "system", content: systemPrompt }, ...newMessages],
+          }),
+        });
       const data = await res.json();
       const assistantContent = data.choices[0].message.content.trim();
       // quick filter: remove forbidden counter‑questions

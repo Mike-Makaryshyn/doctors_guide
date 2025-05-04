@@ -1,5 +1,10 @@
 import { Configuration, OpenAIApi } from "openai";
 
+// API base URL: use Vercel in production, else local
+const API_BASE_URL = import.meta.env.MODE === "production"
+  ? "https://neusteapp.vercel.app/api"
+  : "/api";
+
 export default async function handler(req, res) {
   console.log("DEBUG secret-proxy: OPENAI_API_KEY=", process.env.OPENAI_API_KEY);
   // —— Налаштування CORS ——
