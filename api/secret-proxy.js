@@ -3,6 +3,15 @@
 import { Configuration, OpenAIApi } from "openai";
 
 export default async function handler(req, res) {
+  // —— Налаштування CORS ——
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  // Обробка preflight-запитів
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
   // Дозволяємо GET для швидкого тесту
   if (req.method === "GET") {
     return res.status(200).json({ ok: true, info: "GET працює" });
@@ -11,7 +20,7 @@ export default async function handler(req, res) {
   // Приймаємо лише POST для справжнього виклику
   if (req.method !== "POST") {
     // Вказуємо, які методи дозволені
-    res.setHeader("Allow", ["GET", "POST"]);
+    res.setHeader("Allow", ["GET", "POST", "OPTIONS"]);
     return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
   }
 
