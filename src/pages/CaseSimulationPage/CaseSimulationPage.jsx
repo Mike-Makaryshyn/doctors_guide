@@ -209,7 +209,7 @@ Beginnen Sie erst, wenn Sie eine Frage vom Arzt erhalten.
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
+          Authorization: `Bearer ${process.env.VITE_OPENAI_API_KEY}`,
         },
         body: JSON.stringify({
           model: "gpt-3.5-turbo",
