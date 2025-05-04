@@ -20,10 +20,7 @@ const CaseSimulationPage = () => {
   const [timeLeft, setTimeLeft] = useState(null); // seconds
   const recognitionRef = React.useRef(null);
   const audioRef = React.useRef(null);
-  const recorderRef = React.useRef(null);
-  const chunksRef = React.useRef([]);
   const [recognition, setRecognition] = useState(null);
-  const silenceTimerRef = React.useRef(null);
 
   useEffect(() => {
     const storedData = localStorage.getItem("simulation_case_data");
@@ -66,9 +63,12 @@ ${Object.entries(cleanedData)
 - Antworten Sie wie ein realer Patient.
 - Erwähnen Sie nicht, dass es sich um eine Simulation oder GPT handelt.
 - Erfinden Sie keine Fakten außerhalb der bereitgestellten Daten.
+- Alle personenbezogenen Angaben (Name, Alter, Gewicht, Geburtsdatum) bleiben während des gesamten Gesprächs unverändert.
+- Wenn nach weiteren/anderen Symptomen gefragt wird, nennen Sie **höchstens EIN Symptom**.  Falls der Arzt eine Liste möchte, fragen Sie zurück: „Welches Symptom meinen Sie genau?“
+- **Keine Fragen an den Arzt. NIEMALS Formulierungen wie „Wie kann ich Ihnen helfen?“ – das gilt als FEHLER.**
+- Sie dürfen gelegentlich kleine Füllwörter („äh“, „hm“) benutzen (max. 1 × pro Antwort), um natürlicher zu klingen. Tippfehler des Arztes ignorieren Sie bitte.
 - Wenn die Informationen nicht ausreichen, antworten Sie mit "Ich weiß nicht".
-- Verwenden Sie einfache, alltägliche Sprache.
-- Wenn der Arzt fragt "Was ist Ihre Aufgabe?", antworten Sie auf Deutsch: "Ich spiele die Rolle des Patienten in dieser Simulation."
+- Wenn der Arzt fragt "Was ist Ihre Aufgabe?", antworten Sie: "Ich bin Patient." (keine Erwähnung der Simulation).
 
 📌 VERBOTEN:
 - Diskutieren Sie nicht die Abschnitte "Examiner Questions" und "Summary".
@@ -125,75 +125,53 @@ Beginnen Sie erst, wenn Sie eine Frage vom Arzt erhalten.
           .map((r) => r[0].transcript)
           .join("");
         setInput(transcript);
-        // reset silence detection timer
-        if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
-        silenceTimerRef.current = setTimeout(() => {
-          const text = transcript.trim();
-          if (text) {
-            handleSend(text);
-            setInput("");
-          }
-        }, 1000);
       };
       recog.onend = () => {
         setIsListening(false);
+        setInput("");   // ensure the input field clears when recording stops
       };
       setRecognition(recog);
     }
   }, [caseId, navigate]);
 
-  const transcribeWhisper = async (blob) => {
-    try {
-      const formData = new FormData();
-      formData.append("file", blob, "speech.webm");
-      formData.append("model", "whisper-1");
-      formData.append("language", "de");
 
-      const res = await fetch("https://api.openai.com/v1/audio/transcriptions", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`
-        },
-        body: formData
-      });
-      const data = await res.json();
-      return data.text || "";
-    } catch (err) {
-      console.error("Whisper error:", err);
-      return "";
+  const playTTS = (text) => {
+    if (!window.speechSynthesis) {
+      console.warn("SpeechSynthesis API не підтримується");
+      return;
     }
-  };
-
-  const playTTS = async (text) => {
-    try {
-      const res = await fetch("https://api.openai.com/v1/audio/speech", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`
-        },
-        body: JSON.stringify({
-          model: "tts-1",
-          voice: "alloy",
-          input: text,
-          format: "wav"          // smaller than pcm, easy to play
-        })
-      });
-      if (!res.ok) throw new Error("TTS request failed");
-      const arrayBuf = await res.arrayBuffer();
-      const blob = new Blob([arrayBuf], { type: "audio/wav" });
-      const url = URL.createObjectURL(blob);
-      if (audioRef.current) {
-        audioRef.current.pause();
-        URL.revokeObjectURL(audioRef.current.src);
-      } else {
-        audioRef.current = new Audio();
-      }
-      audioRef.current.src = url;
-      audioRef.current.play();
-    } catch (err) {
-      console.error("OpenAI TTS error:", err);
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    // Force German language
+    utterance.lang = 'de-DE';
+    // Enhanced voice selection logic
+    const setGermanVoice = () => {
+      const voices = window.speechSynthesis.getVoices();
+      const preferredVoices = voices.filter(v =>
+        v.lang.startsWith('de') &&
+        (
+          v.name.toLowerCase().includes('google') ||
+          v.name.toLowerCase().includes('microsoft') ||
+          v.name.toLowerCase().includes('anna') ||
+          v.name.toLowerCase().includes('hans')
+        )
+      );
+      const voice =
+        preferredVoices[0] ||
+        voices.find(v => v.lang === 'de-DE') ||
+        voices.find(v => v.lang.startsWith('de')) ||
+        voices[0];
+      if (voice) utterance.voice = voice;
+    };
+    setGermanVoice();
+    // If voices are not yet loaded, listen for the event
+    if (window.speechSynthesis.getVoices().length === 0) {
+      window.speechSynthesis.addEventListener('voiceschanged', setGermanVoice);
     }
+    utterance.rate = 0.9;
+    utterance.pitch = 1.1;
+    utterance.volume = 1;
+    window.speechSynthesis.speak(utterance);
   };
 
   const handleSend = async (preset) => {
@@ -204,6 +182,11 @@ Beginnen Sie erst, wenn Sie eine Frage vom Arzt erhalten.
     const newMessages = [...messages, userMessage];
     setMessages(newMessages);
     setInput("");
+    // stop recognition if it's still running so the assistant reply isn't transcribed
+    if (recognition && isListening) {
+      recognition.stop();
+      setIsListening(false);
+    }
 
     if (!timerStarted) {
       setTimerStarted(true);
@@ -229,17 +212,29 @@ Beginnen Sie erst, wenn Sie eine Frage vom Arzt erhalten.
           Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
         },
         body: JSON.stringify({
-          model: "gpt-4-turbo",
+          model: "gpt-3.5-turbo",
           temperature: 0.8,
           messages: [{ role: "system", content: systemPrompt }, ...newMessages],
         }),
       });
       const data = await res.json();
       const assistantContent = data.choices[0].message.content.trim();
-      setMessages([...newMessages, { role: "assistant", content: assistantContent }]);
+      // quick filter: remove forbidden counter‑questions
+      const bannedQuestion = /wie kann ich ihnen (heute )?helfen\?/i;
+      let safeContent = assistantContent.replace(bannedQuestion, "").trim();
+      if (safeContent === "") safeContent = assistantContent; // fallback if entire message removed
+
+      // Wenn die vorherige Arztfrage nach "Symptom(en)" fragt, maximal ein Symptom nennen
+      const symptomQuestion = /symptom(e)?/i;
+      if (symptomQuestion.test(content) && safeContent.includes(",")) {
+        // nimm nur den ersten Teil vor Komma / Punkt / Strichpunkt
+        safeContent = safeContent.split(/[.,;]/)[0].trim();
+      }
+
+      setMessages([...newMessages, { role: "assistant", content: safeContent }]);
 
       // TTS
-      await playTTS(assistantContent);
+      playTTS(safeContent);
     } catch (e) {
       console.error("OpenAI error:", e);
     }
@@ -251,11 +246,6 @@ Beginnen Sie erst, wenn Sie eine Frage vom Arzt erhalten.
     if (isListening) {
       recognition.stop();
       setIsListening(false);
-      if (input.trim()) {
-        handleSend(input.trim());
-        setInput("");
-      }
-      if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
     } else {
       recognition.start();
       setIsListening(true);
@@ -293,38 +283,69 @@ Beginnen Sie erst, wenn Sie eine Frage vom Arzt erhalten.
         {showPrompt && <div className={styles.promptBox}>{systemPrompt}</div>}
 
         <div className={styles.chatContainer}>
-          {messages
-            .filter((m) => m.role !== "system")
-            .map((m, i) => (
-              <div
-                key={i}
-                className={m.role === "user" ? styles.user : styles.assistant}
-              >
-                <div className={styles.message}>
-                  {m.content}
-                </div>
-              </div>
-            ))}
-        </div>
+          <div className={styles.messages} id="messages">
+            {messages
+              .filter((m) => m.role !== "system")
+              .map((m, i) => (
+                <div
+                  key={i}
+                  className={`${styles.messageRow} ${
+                    m.role === "user" ? styles.userRow : styles.botRow
+                  }`}
+                >
+                  {m.role !== "user" && (
+                    <div className={`${styles.avatar} ${styles.botAvatar}`}>👨‍⚕️</div>
+                  )}
 
-        <div className={styles.inputWrapper}>
-          <input
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && handleSend()}
-            placeholder="Напишіть повідомлення..."
-            disabled={simulationEnded}
-          />
-          <button
-            className={`${styles.micBtn} ${isListening ? styles.recordingState : ""} ${simulationEnded ? styles.disabledInput : ""}`}
-            onClick={toggleRecording}
-            disabled={simulationEnded}
-          >
-            <svg viewBox="0 0 24 24">
-              <path d="M12 14a4 4 0 0 0 4-4V6a4 4 0 1 0-8 0v4a4 4 0 0 0 4 4zm6-4a6 6 0 0 1-12 0H5a7 7 0 0 0 14 0h-1zM11 18h2v3h-2v-3z"/>
-            </svg>
-          </button>
-        </div>
+                  <div
+                    className={`${styles.bubble} ${
+                      m.role === "user" ? styles.userBubble : styles.botBubble
+                    }`}
+                  >
+                    {m.content}
+                  </div>
+
+                  {m.role === "user" && (
+                    <div className={`${styles.avatar} ${styles.userAvatar}`}>🧑</div>
+                  )}
+                </div>
+              ))}
+          </div>
+
+          <div className={styles.inputPanel}>
+            <input
+              id="chatInput"
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+              placeholder="Напишіть повідомлення..."
+              disabled={simulationEnded}
+            />
+            <button
+              id="voiceBtn"
+              title="Натисніть, щоб почати/зупинити запис"
+              onClick={toggleRecording}
+              disabled={simulationEnded}
+              className={styles.micBtn + (isListening ? ` ${styles.recordingState}` : '')}
+            >
+              <svg viewBox="0 0 24 24">
+                <path d="M12 14a4 4 0 0 0 4-4V6a4 4 0 1 0-8 0v4a4 4 0 0 0 4 4zm6-4a6 6 0 0 1-12 0H5a7 7 0 0 0 14 0h-1zM11 18h2v3h-2v-3z"/>
+              </svg>
+            </button>
+            <button
+              id="sendBtn"
+              title="Надіслати повідомлення"
+              onClick={() => handleSend()}
+              disabled={simulationEnded || !input.trim()}
+              className={styles.sendBtn}
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+              </svg>
+            </button>
+          </div>
+      </div>
 
         <div className={styles.promptToggle}>
           <button onClick={() => setShowPrompt((s) => !s)}>?</button>

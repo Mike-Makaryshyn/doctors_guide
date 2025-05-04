@@ -6,11 +6,16 @@
 }
 
 .chatContainer {
-  padding: 0;
-  font-size: 0.8rem;
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
   max-width: 600px;
   margin: 0 auto;
+  height: calc(100vh - 60px); /* adjust based on header height */
+}
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
 }
 
 /* ---------- MESSAGE BUBBLES ---------- */
@@ -20,33 +25,6 @@
   display: inline-block;
   position: relative;
   color: #ffffff;
-}
-
-/* ---------- INPUT BAR ---------- */
-.inputWrapper {
-  position: fixed;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  display: flex;
-  gap: 8px;
-}
-.inputWrapper input {
-  flex: 1;
-  padding: 10px 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-.inputWrapper button {
-  padding: 10px 20px;
-  background: #5cab7d;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.inputWrapper button:hover {
-  background: #4a8a61;
 }
 
 /* ---------- PROMPT TOGGLE & BOX ---------- */
@@ -84,6 +62,47 @@
   font-size: 0.85em;
   white-space: pre-wrap;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- INPUT PANEL ---------- */
+.inputPanel {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-top: 1px solid #ddd;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+}
+.inputPanel input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 1rem;
+  outline: none;
+}
+.inputPanel button {
+  margin-left: 0.5rem;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #007bff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.inputPanel button:active {
+  background: #0056b3;
+}
+.inputPanel button svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -168,6 +187,7 @@
 }
 
 /* Assistant (in) messages */
+/*
 .assistant {
   float: left;
   margin-left: 20px;
@@ -186,6 +206,7 @@
 }
 
 /* User (out) messages */
+/*
 .user {
   float: right;
   margin-right: 20px;
@@ -202,4 +223,130 @@
   right: -12px;
   border-bottom: 20px solid transparent;
   border-left: 20px solid #fc6d4c;
+}
+*/
+
+/* ---------- MESSAGE BUBBLES ---------- */
+/*
+.message {
+  border-radius: 12px;
+  padding: 0.6rem 0.8rem;
+  line-height: 1.4;
+  max-width: 70%;
+  margin-bottom: 0.8rem;
+  color: #000;
+}
+.user {
+  background: #DCF8C6;
+  align-self: flex-end;
+}
+.bot {
+  background: #eee;
+  align-self: flex-start;
+}
+*/
+/* ---------- MOBILE ADJUSTMENTS ---------- */
+@media (max-width: 600px) {
+  .inputPanel input { font-size: 1.1rem; }
+  .inputPanel button { width: 48px; height: 48px; }
+}
+/* ---------- SEND BUTTON ---------- */
+.sendBtn {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.1s;
+}
+.sendBtn svg {
+  width: 42px;
+  height: 42px;
+}
+.sendBtn:disabled {
+  background: #94d3a2;
+  cursor: default;
+}
+.sendBtn:active {
+  background: #218838;
+}
+
+/* ---------- APPLE / iMessage CHAT STYLE ---------- */
+.messageRow {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 0.75rem;
+  gap: 6px;
+}
+
+.botRow {
+  justify-content: flex-start;
+}
+
+.userRow {
+  justify-content: flex-end;
+}
+
+.bubble {
+  max-width: 90%;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  border-radius: 18px;
+  word-wrap: break-word;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  margin-top: 0px; /* drop bubble ~4px so tail emerges from avatar */
+}
+
+.botBubble {
+  background: #e5e5ea; /* light gray like iMessage */
+  color: #000;
+  border-top-left-radius: 0;
+}
+
+.userBubble {
+  background: #0b93ff; /* blue like iMessage */
+  color: #fff;
+  border-top-right-radius: 0;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.botAvatar {
+  background: #5a99ee;
+  color: #fff;
+}
+
+.userAvatar {
+  background: #28a745;
+  color: #fff;
+}
+.timer {
+  position: fixed;
+  top: 70px;
+  left: 6px;
+  z-index: 1000;             /* stay above scrolling content */
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-family: "SFMono-Regular", monospace;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
