@@ -11,7 +11,11 @@ export async function askOpenAI(prompt) {
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({ prompt })
+    body: JSON.stringify({
+      model: "gpt-3.5-turbo",
+      temperature: 0.8,
+      messages: [{ role: "user", content: prompt }]
+    })
   });
 
   if (!res.ok) {
@@ -19,6 +23,6 @@ export async function askOpenAI(prompt) {
     throw new Error(error);
   }
 
-  const { text } = await res.json();
-  return text;
+  const { choices } = await res.json();
+  return choices[0].message.content;
 }

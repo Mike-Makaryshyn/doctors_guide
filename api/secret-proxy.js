@@ -3,6 +3,7 @@
 import { Configuration, OpenAIApi } from "openai";
 
 export default async function handler(req, res) {
+  console.log("DEBUG secret-proxy: OPENAI_API_KEY=", process.env.OPENAI_API_KEY);
   // —— Налаштування CORS ——
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
@@ -14,7 +15,12 @@ export default async function handler(req, res) {
   }
   // Дозволяємо GET для швидкого тесту
   if (req.method === "GET") {
-    return res.status(200).json({ ok: true, info: "GET працює" });
+    const hasKey = Boolean(process.env.OPENAI_API_KEY);
+    return res.status(200).json({
+      ok: true,
+      info: "GET працює",
+      hasApiKey: hasKey
+    });
   }
 
   // Приймаємо лише POST для справжнього виклику
