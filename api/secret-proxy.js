@@ -1,5 +1,3 @@
-// api/secret-proxy.js
-
 import { Configuration, OpenAIApi } from "openai";
 
 export default async function handler(req, res) {
