@@ -82,6 +82,8 @@ const AllMedicalTerminologyContent = () => {
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isSearchActive, setIsSearchActive] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  // Guests (not logged in) can see only this many terms per category
+  const GUEST_CATEGORY_LIMIT = 3;
 
   // Туторіал: початково не запускається
   const [showTutorial, setShowTutorial] = useState(false);
@@ -357,8 +359,11 @@ const AllMedicalTerminologyContent = () => {
                         {collapsedCategories[category] ? "▼" : "▲"}
                       </span>
                     </h2>
-                    {!collapsedCategories[category] &&
-                      termsByCategory[category].map((term) => {
+                    {!collapsedCategories[category] && (() => {
+                      const categoryTerms = user
+                        ? termsByCategory[category]
+                        : termsByCategory[category].slice(0, GUEST_CATEGORY_LIMIT);
+                      return categoryTerms.map((term) => {
                         const statusObj = termStatuses[term.id] || {};
                         const status = statusObj.status || "unlearned";
                         return (
@@ -438,7 +443,8 @@ const AllMedicalTerminologyContent = () => {
                             )}
                           </div>
                         );
-                      })}
+                      });
+                    })()}
                   </div>
                 ))}
               </div>
@@ -493,87 +499,92 @@ const AllMedicalTerminologyContent = () => {
                         </tr>
                       </thead>
                       <tbody>
-                        {termsByCategory[category].map((term) => {
-                          const statusObj = termStatuses[term.id] || {};
-                          const status = statusObj.status || "unlearned";
-                          return (
-                            <tr
-                              key={term.id}
-                              className={
-                                status === "learned"
-                                  ? styles.learned
-                                  : status === "paused"
-                                  ? styles.paused
-                                  : ""
-                              }
-                            >
-                              <td className={styles.termCell}>
-                                <div className={styles.iconWrapper}>
-                                  <span
-                                    data-tutorial="checkIcon"
-                                    className={styles.checkIconDesktop}
-                                    onClick={() => toggleLearned(term.id)}
-                                    title="Gelernt"
-                                  >
-                                    <FaCheck />
-                                  </span>
-                                  <span
-                                    data-tutorial="pauseIconDesktop"
-                                    className={styles.pauseIconDesktop}
-                                    onClick={() => togglePaused(term.id)}
-                                    title="Pausiert"
-                                  >
-                                    <FaPause />
-                                  </span>
-                                </div>
-                                <div className={styles.termContent}>
-                                  {term.lat}
-                                </div>
-                              </td>
-                              <td data-tutorial="germanDefinition">
-                                {translationLanguage !== "de" ? (
-                                  <Tippy
-                                    content={
-                                      term[translationLanguage] ||
-                                      "Keine Übersetzung vorhanden"
-                                    }
-                                    trigger="click"
-                                    interactive={true}
-                                    placement="right"
-                                  >
-                                    <span className={styles.clickableCell}>
-                                      {term.de}
-                                    </span>
-                                  </Tippy>
-                                ) : (
-                                  term.de
-                                )}
-                              </td>
-                              {showDefinition && (
-                                <td data-tutorial="explanationCell">
-                                  {translationLanguage !== "de" ? (
-                                    <Tippy
-                                      content={
-                                        term[
-                                          translationLanguage + "Explanation"
-                                        ] || "Keine Übersetzung vorhanden"
-                                      }
-                                      trigger="click"
-                                      interactive={true}
-                                      placement="right"
-                                    >
-                                      <span className={styles.clickableCell}>
-                                        {term.deExplanation}
+                        {(() => {
+                             const categoryTerms = user
+                               ? termsByCategory[category]
+                               : termsByCategory[category].slice(0, GUEST_CATEGORY_LIMIT);
+                             return categoryTerms.map((term) => {
+                              const statusObj = termStatuses[term.id] || {};
+                              const status = statusObj.status || "unlearned";
+                              return (
+                                <tr
+                                  key={term.id}
+                                  className={
+                                    status === "learned"
+                                      ? styles.learned
+                                      : status === "paused"
+                                      ? styles.paused
+                                      : ""
+                                  }
+                                >
+                                  <td className={styles.termCell}>
+                                    <div className={styles.iconWrapper}>
+                                      <span
+                                        data-tutorial="checkIcon"
+                                        className={styles.checkIconDesktop}
+                                        onClick={() => toggleLearned(term.id)}
+                                        title="Gelernt"
+                                      >
+                                        <FaCheck />
                                       </span>
-                                    </Tippy>
-                                  ) : (
-                                    term.deExplanation
+                                      <span
+                                        data-tutorial="pauseIconDesktop"
+                                        className={styles.pauseIconDesktop}
+                                        onClick={() => togglePaused(term.id)}
+                                        title="Pausiert"
+                                      >
+                                        <FaPause />
+                                      </span>
+                                    </div>
+                                    <div className={styles.termContent}>
+                                      {term.lat}
+                                    </div>
+                                  </td>
+                                  <td data-tutorial="germanDefinition">
+                                    {translationLanguage !== "de" ? (
+                                      <Tippy
+                                        content={
+                                          term[translationLanguage] ||
+                                          "Keine Übersetzung vorhanden"
+                                        }
+                                        trigger="click"
+                                        interactive={true}
+                                        placement="right"
+                                      >
+                                        <span className={styles.clickableCell}>
+                                          {term.de}
+                                        </span>
+                                      </Tippy>
+                                    ) : (
+                                      term.de
+                                    )}
+                                  </td>
+                                  {showDefinition && (
+                                    <td data-tutorial="explanationCell">
+                                      {translationLanguage !== "de" ? (
+                                        <Tippy
+                                          content={
+                                            term[
+                                              translationLanguage + "Explanation"
+                                            ] || "Keine Übersetzung vorhanden"
+                                          }
+                                          trigger="click"
+                                          interactive={true}
+                                          placement="right"
+                                        >
+                                          <span className={styles.clickableCell}>
+                                            {term.deExplanation}
+                                          </span>
+                                        </Tippy>
+                                      ) : (
+                                        term.deExplanation
+                                      )}
+                                    </td>
                                   )}
-                                </td>
-                              )}
-                            </tr>
-                          );
-                        })}
+                                </tr>
+                              );
+                            });
+                        })()}
                       </tbody>
                     </table>
                   )}

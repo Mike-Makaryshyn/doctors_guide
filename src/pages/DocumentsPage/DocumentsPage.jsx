@@ -621,14 +621,6 @@ const DocumentsPage = () => {
                       title="Подача заяв" // Встановлюємо заголовок
                       data-tutorial="mainTable" // Додаємо атрибут туторіалу
                     />
-
-                    {/* Повідомлення для неавторизованих користувачів */}
-                    <div className={styles.noAccessMessage} data-tutorial="noAccessMessage">
-                      <p>
-                        Bitte melden Sie sich an oder registrieren Sie sich, um
-                        mit den Dokumenten zu interagieren.
-                      </p>
-                    </div>
                   </>
                 ) : (
                   <div className={styles.loadingMessage} data-tutorial="loadingMessage">

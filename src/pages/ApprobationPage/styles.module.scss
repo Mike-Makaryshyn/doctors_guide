@@ -41,20 +41,19 @@
   }
 }
 
-/* Фіксована кнопка, яка використовується для відображення кругового прогрес-бару */
+/* Фіксована кнопка з круговим прогрес‑баром */
 .printButton {
   position: fixed;
-  right: 5px;
-  bottom: 50px;
+  right: 10px;
+  bottom: 10px;   /* притискаємо ближче до нижнього краю */
   z-index: 1000;
-  /* Зроблено прозорим, адже всередині SVG відображається бублик */
   background: transparent;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 70px;  /* Можна налаштувати розмір */
-  height: 70px;
+  width: 60px;    /* зменшили розмір */
+  height: 60px;
   cursor: default;
 }
 
@@ -110,6 +109,11 @@
 }
 
 @media (max-width: 768px) {
+  .printButton {
+    bottom: 5px;  /* ще ближче до краю на мобільних */
+    width: 55px;   /* трохи менше, ніж на десктопі */
+    height: 55px;
+  }
   .tutorialButton {
     top: 43px;
     right: -11px; /* Інший відступ для мобільних пристроїв */

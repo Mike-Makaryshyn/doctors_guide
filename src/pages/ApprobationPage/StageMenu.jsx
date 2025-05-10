@@ -10,6 +10,7 @@ import classNames from "classnames";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import { useSwipeable } from "react-swipeable";
+import AuthModal from "../AuthPage/AuthModal";
 
 import Stage1Img from "../../assets/stages/man-stage-1.png";
 import Stage2Img from "../../assets/stages/man-stage-2.png";
@@ -77,6 +78,7 @@ const StageMenu = ({
   const stagesWrapperRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
   const [visibleIndex, setVisibleIndex] = useState(0);
+  const [showAuthModal, setShowAuthModal] = useState(false);
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 768);
@@ -125,9 +127,19 @@ const StageMenu = ({
   }, [visibleIndex, stages, onStageVisible, isMobile]);
 
   const handleStageClick = (stageId) => {
+    // If the user is NOT authenticated, always keep them on stage 1
+    if (!user) {
+      if (stageId !== 1) {
+        setShowAuthModal(true); // show login / register modal
+      }
+      return;
+    }
+
+    // Authenticated users keep the existing behaviour
     onStageSelect(stageId);
+
     if (!isRegistration && user) {
-      const update = async () => {
+      (async () => {
         try {
           const docRef = doc(db, "users", user.uid);
           await setDoc(docRef, { activeStage: stageId }, { merge: true });
@@ -135,8 +147,7 @@ const StageMenu = ({
         } catch (error) {
           console.error("Помилка при оновленні активного етапу:", error);
         }
-      };
-      update();
+      })();
     }
   };
 
@@ -223,6 +234,10 @@ const StageMenu = ({
       {isMobile && (
         <div className={styles.activeStageTitle}>{activeStageObj.title}</div>
       )}
+      <AuthModal
+        isOpen={showAuthModal}
+        onClose={() => setShowAuthModal(false)}
+      />
     </>
   );
 };
