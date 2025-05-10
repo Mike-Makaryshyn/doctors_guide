@@ -105,6 +105,7 @@ import trak from "./subpages/schilddruese/trak";
 import natriumkanalblocker from "./subpages/medikamente/natriumkanalblocker";
 import lidocain from "./subpages/medikamente/lidocain";
 import laxantien from "./subpages/medikamente/laxantien";
+import cytostatika from "./subpages/medikamente/cytostatika";
 import merseburgertrias from "./subpages/schilddruese/merseburgertrias";
 // Ендокринологічні теми – групуємо їх під "Innere Medizin":
 import mensyndrom from "./subpages/endokrinilogie/mensyndrom";
@@ -291,6 +292,7 @@ const all_pages_data = [
   { ...natriumkanalblocker, mainCategory: "Therapie & Medikamente", category: "Medikamente" },
   { ...lidocain, mainCategory: "Therapie & Medikamente", category: "Medikamente" },
   { ...laxantien, mainCategory: "Therapie & Medikamente", category: "Medikamente" },
+  { ...cytostatika, mainCategory: "Therapie & Medikamente", category: "Medikamente" },
 
   // *** Ендокринологія (загальна) – підкатегорія Endokrinologie всередині Innere Medizin ***
   { ...mensyndrom, mainCategory: "Innere Medizin", category: "Endokrinologie" },

@@ -1,0 +1,44 @@
+/* ────────── cytostatika.css ──────────
+   Простий, але читабельний стиль:
+   • «зебра»-рядки
+   • тонкі бордюри
+   • липкий заголовок
+   • мін-ширина, щоб таблиця не стискалася
+   (за бажанням можна обгорнути <table> у
+   <div class="table-scroll"> для горизонтального
+   скролу на дуже вузьких екранах)
+-------------------------------------- */
+
+/* базова таблиця */
+.zyto{
+  width:100%;
+  min-width:900px;       /* не дати зжатися до вузької колонки */
+  border-collapse:collapse;
+  font-size:0.9em;
+}
+
+/* комірки */
+.zyto th,
+.zyto td{
+  padding:4px 6px;
+  border:1px solid #ddd;
+  word-break:break-word;
+}
+
+/* чергування кольорів рядків */
+.zyto tr:nth-child(even){
+  background:#f8f9ff;
+}
+
+/* «липкий» thead – лишається видно при вертикальному скролі */
+.zyto thead{
+  position:sticky;
+  top:0;
+  background:#fff;
+  z-index:2;
+}
+
+/* (опціонально) якщо обгорнете в .table-scroll — авто-скрол x */
+.table-scroll{
+  overflow-x:auto;
+}
