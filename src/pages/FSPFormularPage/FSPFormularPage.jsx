@@ -68,6 +68,7 @@ import { fetchDataFromFirebase } from "../../utils/firebaseUtils";
 import SelectDataSourceModal from "../../components/SelectDataSourceModal";
 import AdditionalInfoModal from "./components/AdditionalInfoModal";
 import UserCasesModal from "../../components/UserCasesModal";
+import AuthModal from "../AuthPage/AuthModal";
 
 // Import кастомного хука
 import useRegionData from "../../hooks/useRegionData";
@@ -119,6 +120,17 @@ const FSPFormularPage = () => {
   const [userCasesData, setUserCasesData] = useState([]);
   const [fallType, setFallType] = useState("");
   const [userData, setUserData] = useState(null);
+  // Auth modal visibility
+  const [showAuthModal, setShowAuthModal] = useState(false);
+
+  // Helper: show AuthModal if guest tries to interact
+  const requireAuth = () => {
+    if (!user) {
+      setShowAuthModal(true);
+      return true; // block the interaction
+    }
+    return false;
+  };
 
   // Settings Menu
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -128,6 +140,7 @@ const FSPFormularPage = () => {
 
   // Region auswählen
   const handleRegionSelect = (regionId) => {
+    if (requireAuth()) return;
     setLocalRegion(regionId, false);
     setSelectedCase("");
     setParsedData({});
@@ -137,6 +150,17 @@ const FSPFormularPage = () => {
       fetchFirebaseCases(regionId);
     }
   };
+  // ---- Guests get fixed defaults (Berlin & local) ----
+  useEffect(() => {
+    if (!user) {
+      if (localRegion !== "Berlin") {
+        setLocalRegion("Berlin", false);
+      }
+      if (sourceType !== "local") {
+        setSourceType("local");
+      }
+    }
+  }, [user, localRegion, sourceType, setLocalRegion, setSourceType]);
 
   // ---- Auth-Überwachung ----
   useEffect(() => {
@@ -280,6 +304,7 @@ const FSPFormularPage = () => {
     saveSelectedCase();
   }, [selectedCase, localRegion, user, dataSources]);
   const handlePrintPreview = () => {
+    if (requireAuth()) return;
     if (!parsedData || Object.keys(parsedData).length === 0) {
       alert("Daten fehlen oder sind noch nicht geladen!");
       return;
@@ -289,6 +314,7 @@ const FSPFormularPage = () => {
   };
 
   const handlePrintDownload = () => {
+    if (requireAuth()) return;
     if (!parsedData || Object.keys(parsedData).length === 0) {
       alert("Daten fehlen oder sind noch nicht geladen!");
       return;
@@ -406,6 +432,7 @@ const FSPFormularPage = () => {
 
   // ---- InfoModal öffnen ----
   const handleOpenInfoModal = (type) => {
+    if (requireAuth()) return;
     if (isLoading) {
       toast.info("Data is still loading. Please wait.");
       return;
@@ -496,10 +523,7 @@ const FSPFormularPage = () => {
 
   // ---- Fall als erledigt markieren ----
   const handleMarkAsCompleted = async () => {
-    if (!user) {
-      toast.error("User is not authenticated.");
-      return;
-    }
+    if (requireAuth()) return;
     if (!localRegion || !selectedCase) {
       toast.error("Please select a case and a region.");
       return;
@@ -548,10 +572,7 @@ const FSPFormularPage = () => {
 
   // ---- Fall verschieben ----
   const handleDeferCase = async () => {
-    if (!user) {
-      toast.error("User is not authenticated.");
-      return;
-    }
+    if (requireAuth()) return;
     if (!localRegion || !selectedCase) {
       toast.error("Please select a case and a region.");
       return;
@@ -600,6 +621,7 @@ const FSPFormularPage = () => {
 
   // ---- Auswahl zurücksetzen ----
   const handleReset = () => {
+    if (requireAuth()) return;
     setSelectedCase("");
     setParsedData({});
     setFallType("");
@@ -667,6 +689,7 @@ const FSPFormularPage = () => {
 
   // ---- Симуляція: функція ----
   const handleStartSimulation = () => {
+    if (requireAuth()) return;
     if (!parsedData || Object.keys(parsedData).length === 0) {
       toast.error("Дані не завантажені!");
       return;
@@ -679,17 +702,7 @@ const FSPFormularPage = () => {
 
   return (
     <MainLayout>
-      {!user ? (
-        <div className={styles["unauthenticated-container"]}>
-          <p className={styles["error-message"]}>
-            Sie sind nicht eingeloggt. Bitte melden Sie sich an.
-          </p>
-          <Link to="/login">
-            <button className={styles["login-button"]}>Einloggen</button>
-          </Link>
-        </div>
-      ) : (
-        <>
+      <>
           {/* Back Button */}
    
 
@@ -725,11 +738,12 @@ const FSPFormularPage = () => {
                       <input
                         type="checkbox"
                         checked={sourceType === "firebase"}
-                        onChange={() =>
+                        onChange={(e) => {
+                          if (requireAuth()) { e.preventDefault(); return; }
                           setSourceType((prev) =>
                             prev === "local" ? "firebase" : "local"
-                          )
-                        }
+                          );
+                        }}
                         aria-label="Umschalter für Datenquelle"
                       />
                       <span className={styles["slider"]}></span>
@@ -739,7 +753,7 @@ const FSPFormularPage = () => {
                         sourceType === "firebase" ? styles["label-active"] : ""
                       }`}
                     >
-                      Firebase
+                      Online
                     </span>
                   </div>
                 </div>
@@ -792,7 +806,8 @@ const FSPFormularPage = () => {
                 <div className={styles["buttons-container"]}>
                   <Link to="/data-collection">
                     <button
-                      className={styles["actionButton"]}
+                      className={styles.actionButton}
+                      onClick={(e) => { if (requireAuth()) { e.preventDefault(); } }}
                       aria-label="Neuen Fall hinzufügen"
                     >
                       <FaPlus className={styles["icon-common"]} />
@@ -843,7 +858,11 @@ const FSPFormularPage = () => {
                   >
                     <FaSync className={styles["icon-common"]} />
                   </button>
-                  <button className={styles["actionButton"]} onClick={handlePrintPreview} aria-label="PDF Vorschau">
+                  <button
+                    className={styles["actionButton"]}
+                    onClick={handlePrintPreview}
+                    aria-label="PDF Vorschau"
+                  >
                     <FaFilePdf className={styles["icon-common"]} />
                   </button>
                   <button
@@ -1080,9 +1099,12 @@ const FSPFormularPage = () => {
             userCases={userCasesData}
           />
 
+          <AuthModal
+            isOpen={showAuthModal}
+            onClose={() => setShowAuthModal(false)}
+          />
           <ToastContainer />
-        </>
-      )}
+      </>
     </MainLayout>
   );
 };
