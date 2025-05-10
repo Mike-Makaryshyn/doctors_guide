@@ -1,0 +1,36 @@
+/*  ==========  ausreifung.css  ==========  */
+.chain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+}
+.node {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background: #f9f9f9;
+}
+.node.highlight {
+  background: #e0f2ff;
+  font-weight: 600;
+}
+.arrow {
+  font-weight: 700;
+}
+.aus {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.8rem;
+}
+.aus th,
+.aus td {
+  border: 1px solid #ccc;
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+}
+.aus thead {
+  background: #edf6ff;
+}
+.mt-2 { margin-top: 0.6rem; }

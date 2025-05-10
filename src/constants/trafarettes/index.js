@@ -161,6 +161,7 @@ import schilddruesenadenom from "./subpages/schilddruese/schilddruesenadenom";
 
 import mitose from "./subpages/zellen/mitose";
 import zellzyklus from "./subpages/zellen/zellzyklus";
+import ausreifung from "./subpages/zellen/ausreifung";
 
 import schilddruesenkarzinome from "./subpages/schilddruese/schilddruesenkarzinome";
 import papillaereschilddruesenkarzinom from "./subpages/schilddruese/papillaereschilddruesenkarzinom";
@@ -345,6 +346,7 @@ const all_pages_data = [
   // *** Zellen ***
   { ...mitose, mainCategory: "Anatomie & Physiologie", category: "Zellen" },
   { ...zellzyklus, mainCategory: "Anatomie & Physiologie", category: "Zellen" },
+  { ...ausreifung, mainCategory: "Anatomie & Physiologie", category: "Zellen" },
 
   // *** Operation ***
   { ...feinnadelbiopsie, mainCategory: "Chirurgie & Anästhesie", category: "Operation" },
