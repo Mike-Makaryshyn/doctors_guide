@@ -158,7 +158,7 @@ export default {
     <li><b>Thrombozytopathien</b> (Bernard‑Soulier, Glanzmann)</li>
   </ul>
   <img
-    src="https://commons.wikimedia.org/wiki/Special:FilePath/Megakaryocyte_and_platelets.jpg?width=800"
+    src="https://commons.wikimedia.org/wiki/Special:FilePath/Megakaryocyte_(Marrow).jpg?width=800"
     alt="Thrombopoese Diagramm"
     style="max-width:100%;height:auto;margin-top:0.6rem"
   />
