@@ -9,6 +9,7 @@ import uicc from "./subpages/uicc";
 import tnm from "./subpages/tnm";
 import morbusbasedow from "./subpages/schilddruese/morbusbasedow";
 import aorta from "./subpages/anatomie/aorta";
+import inguinalcanal from "./subpages/anatomie/inguinalcanal";
 import koerperachsen from "./subpages/koerperachsen";
 import bewegungall from "./subpages/bewegungall";
 import richtungen from "./subpages/richtungen";
@@ -193,6 +194,7 @@ const all_pages_data = [
 
   // *** Anatomie ***
   { ...aorta, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },
+  { ...inguinalcanal, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },
   { ...koerperachsen, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },
   { ...bewegungall, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },
   { ...richtungen, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },

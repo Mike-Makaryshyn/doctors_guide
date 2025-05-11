@@ -1,9 +1,14 @@
-import { useState, useRef } from "react";
+import React, { useState, useRef, Suspense } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import all_pages_data from "../../constants/trafarettes";
 import styles from "./Trafarette.module.scss"; // не забудь додати наші нові стилі
 import cn from "classnames";
+
+// lazy‑load 3‑D компонент (пахвинний канал)
+const InguinalCanal3D = React.lazy(() =>
+  import("../../components/three/InguinalCanal")
+);
 
 // === Проста іконка-стрілочка (▲ / ▼), схожа на MindMapListView ===
 const ArrowIcon = ({ isCollapsed }) => (
@@ -66,6 +71,8 @@ const Trafarette = () => {
 
   // 5. Якщо в Tab 2 є додаткове поле hidden_answer, інколи хочеться його відкривати/закривати
   const [openAnswers, setOpenAnswers] = useState({});
+
+  const [show3DModal, setShow3DModal] = useState(false);
 
   // =========================
   // Handlers
@@ -140,15 +147,21 @@ const Trafarette = () => {
     }));
   };
 
-  // HTML-вміст для child tab
-  const renderChildTabContent = (childTab) => {
-    return (
-      <div
-        className={styles.childTab_content}
-        dangerouslySetInnerHTML={{ __html: childTab?.textWithFormatting }}
-      />
-    );
-  };
+// HTML-вміст для child tab
+const renderChildTabContent = (childTab) => {
+  // Якщо вкладка запитує компонент, а не HTML
+  if (childTab?.component === "InguinalCanal3D") {
+    // Model is opened via the header button, so no in-content button is needed
+    return null;
+  }
+  // Інакше – рендеримо HTML‑рядок (старий функціонал)
+  return (
+    <div
+      className={styles.childTab_content}
+      dangerouslySetInnerHTML={{ __html: childTab?.textWithFormatting }}
+    />
+  );
+};
 
   // Якщо немає даних, повертаємо Not found
   if (!page) {
@@ -332,6 +345,17 @@ const Trafarette = () => {
                             style={{ color: "#013b6e" }}
                           >
                             {childTab?.title}
+                            {childTab.component === "InguinalCanal3D" && (
+                              <button
+                                className={styles.threeBtn}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setShow3DModal(true);
+                                }}
+                              >
+                                3D
+                              </button>
+                            )}
                           </div>
                           {isChildOpen && (
                             <div
@@ -360,6 +384,27 @@ const Trafarette = () => {
       >
         ↑
       </button>
+      {show3DModal && (
+        <div
+          className={styles.modalOverlay}
+          onClick={() => setShow3DModal(false)}
+        >
+          <div
+            className={styles.modalContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className={styles.modalClose}
+              onClick={() => setShow3DModal(false)}
+            >
+              ✕
+            </button>
+            <Suspense fallback={<p style={{ padding: 20 }}>Завантаження 3‑D…</p>}>
+              <InguinalCanal3D />
+            </Suspense>
+          </div>
+        </div>
+      )}
     </MainLayout>
   );
 };
