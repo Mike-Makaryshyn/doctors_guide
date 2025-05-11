@@ -1,5 +1,5 @@
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Html, Text } from '@react-three/drei';
+import { OrbitControls, Text } from '@react-three/drei';
 import { Suspense, useMemo, useState, useRef, useEffect } from 'react';
 import * as THREE from 'three';
 
@@ -227,43 +227,37 @@ export default function InguinalCanal3D() {
   const [explode, setExplode] = useState(false);
 
   return (
-    <Canvas camera={{ position: [0, 0, 5], fov: 45 }} style={{ width: '100vw', height: '100vh' }}>
-      <ambientLight intensity={0.6} />
-      <directionalLight position={[5, 5, 5]} intensity={0.9} />
-      {/* орієнтири */}
-      {/* <Text billboard fontSize={0.12} position={[0, H/2 + 0.4, 0]}>Cranial</Text>
-      <Text billboard fontSize={0.12} position={[0, -H/2 - 0.4, 0]}>Caudal</Text>
-      <Text billboard fontSize={0.12} position={[-W/2 - 0.7, 0, 0]} rotation={[0, Math.PI / 2, 0]}>
-        Medial
-      </Text>
-      <Text billboard fontSize={0.12} position={[W/2 + 0.7, 0, 0]} rotation={[0, -Math.PI / 2, 0]}>
-        Lateral
-      </Text> */}
-      <Suspense fallback={null}>
-        <Canal explode={explode} />
-      </Suspense>
-      <OrbitControls
-        enablePan={false}
-        minPolarAngle={Math.PI * 0.15}
-        maxPolarAngle={Math.PI * 0.85}
-      />
-      {/* HTML‑кнопка поверх Canvas */}
-      <Html position={[0, -H - 0.8, 0]} style={{ pointerEvents: 'auto' }}>
-        <button
-          onClick={() => setExplode(prev => !prev)}   // toggle explode state
-          style={{
-            padding: '8px 14px',
-            fontWeight: 600,
-            borderRadius: 6,
-            border: 'none',
-            background: '#013b6e',
-            color: '#fff',
-            cursor: 'pointer',
-          }}
-        >
-          {explode ? 'Скласти канал' : 'Розгорнути стінки'}
-        </button>
-      </Html>
-    </Canvas>
+    <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
+      <Canvas camera={{ position: [0, 0, 5], fov: 45 }} style={{ width: '100%', height: '100%' }}>
+        <ambientLight intensity={0.6} />
+        <directionalLight position={[5, 5, 5]} intensity={0.9} />
+        <Suspense fallback={null}>
+          <Canal explode={explode} />
+        </Suspense>
+        <OrbitControls
+          enablePan={false}
+          minPolarAngle={Math.PI * 0.15}
+          maxPolarAngle={Math.PI * 0.85}
+        />
+      </Canvas>
+      <button
+        onClick={() => setExplode(prev => !prev)}
+        style={{
+          position: 'absolute',
+          bottom: '80px',
+          right: '20px',
+          padding: '8px 14px',
+          fontWeight: 600,
+          borderRadius: 6,
+          border: 'none',
+          background: '#013b6e',
+          color: '#fff',
+          cursor: 'pointer',
+          zIndex: 1
+        }}
+      >
+        {explode ? 'Kanal zusammenklappen' : 'Wände entfalten'}
+      </button>
+    </div>
   );
 }
