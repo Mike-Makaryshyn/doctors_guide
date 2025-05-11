@@ -149,12 +149,7 @@ const Trafarette = () => {
 
 // HTML-вміст для child tab
 const renderChildTabContent = (childTab) => {
-  // Якщо вкладка запитує компонент, а не HTML
-  if (childTab?.component === "InguinalCanal3D") {
-    // Model is opened via the header button, so no in-content button is needed
-    return null;
-  }
-  // Інакше – рендеримо HTML‑рядок (старий функціонал)
+  // Render HTML content for all child tabs
   return (
     <div
       className={styles.childTab_content}

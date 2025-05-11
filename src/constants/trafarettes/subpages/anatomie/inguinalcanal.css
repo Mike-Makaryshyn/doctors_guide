@@ -1,0 +1,39 @@
+/* Styles for Inguinalkanal subpage */
+.inguinal-container {
+  max-width: 800px;
+  margin: 1rem 0;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.inguinal-container p {
+  margin-bottom: 1rem;
+}
+
+.inguinal-container p > strong {
+  display: block;
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+  color: #00529B;
+}
+
+.inguinal-container ul {
+  margin: 0.5rem 0 1rem 1.5rem;
+}
+
+.inguinal-container ul ul {
+  margin-left: 1.5rem;
+}
+
+.inguinal-container li {
+  margin-bottom: 0.4rem;
+}
+
+.inguinal-container img {
+  max-width: 100%;
+  height: auto;
+  margin: 0.8rem 0;
+  border-radius: 4px;
+}
