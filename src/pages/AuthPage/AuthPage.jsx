@@ -1,3 +1,16 @@
+// Function to restore an existing session by tokens
+const restoreSession = async (access_token, refresh_token) => {
+  // Supabase v2 API to set the session directly
+  const { data, error } = await supabase.auth.setSession({
+    access_token,
+    refresh_token
+  });
+  if (error) {
+    console.error('Error restoring session:', error);
+    return false;
+  }
+  return true;
+};
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../../supabaseClient";
@@ -60,6 +73,23 @@ const AuthPage = () => {
           <button onClick={handleGoogleSignIn} className={styles.googleButton}>
             <FaGoogle style={{ marginRight: "8px" }} />
             {t.googleLogin}
+          </button>
+          <button
+            onClick={async () => {
+              // Example tokens; replace with your actual ones
+              const ok = await restoreSession(
+                'YOUR_ACCESS_TOKEN_HERE',
+                'YOUR_REFRESH_TOKEN_HERE'
+              );
+              if (ok) {
+                navigate('/dashboard');
+              } else {
+                alert('Не вдалося відновити сесію.');
+              }
+            }}
+            className={styles.switchButton}
+          >
+            Restore Session
           </button>
         </div>
 
