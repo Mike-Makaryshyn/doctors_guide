@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { supabase } from "../../supabaseClient";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./CaseSimulationPage.module.css";
 
-const OPENAI_API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
+// const OPENAI_API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
 
 // Web Speech API for real-time recognition
 const SpeechRecognitionClass = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -207,20 +208,22 @@ Beginnen Sie erst, wenn Sie eine Frage vom Arzt erhalten.
     }
 
     try {
-        const res = await fetch("/api/chat", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${OPENAI_API_KEY}`
-          },
-          body: JSON.stringify({
+      const { data: proxyRes, error } = await supabase
+        .functions
+        .invoke("openai-proxy", {
+          body: {
             model: "gpt-3.5-turbo",
             temperature: 0.8,
             messages: [{ role: "system", content: systemPrompt }, ...newMessages],
-          }),
+          },
         });
-      const data = await res.json();
-      const assistantContent = data.choices[0].message.content.trim();
+
+      if (error) {
+        console.error("Supabase Edge Function error:", error);
+        return;
+      }
+      const assistantContent = proxyRes.choices[0].message.content.trim();
+
       // quick filter: remove forbidden counter‑questions
       const bannedQuestion = /wie kann ich ihnen (heute )?helfen\?/i;
       let safeContent = assistantContent.replace(bannedQuestion, "").trim();

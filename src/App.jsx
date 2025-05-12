@@ -41,36 +41,31 @@ function App() {
       {/* AuthProvider тепер зовні, що забезпечує доступ до auth контексту */}
       <AuthProvider>
    
-          {/* Обгортаємо додаток у DataSourceProvider */}
-          <DataSourceProvider>
-            <CasesProvider>
-              {/* Обгортаємо додаток у ModalProvider */}
-              <ModalProvider>
-                <div className="App">
-                  {/* Ви можете розмістити Header тут, якщо він потрібен */}
-                  {/* <Header /> */}
+          {/* Обгортаємо додаток у ModalProvider */}
+          <ModalProvider>
+            <div className="App">
+              {/* Ви можете розмістити Header тут, якщо він потрібен */}
+              {/* <Header /> */}
 
-                  {/* Основний контент */}
-                  <div className="content">
-                    <Routers />
+              {/* Основний контент */}
+              <div className="content">
+                <Routers />
 
-                    {/* Контейнер для Toast повідомлень */}
-                    <ToastContainer
-                      position="top-right"
-                      autoClose={3000}
-                      hideProgressBar={false}
-                      newestOnTop={false}
-                      closeOnClick
-                      rtl={false}
-                      pauseOnFocusLoss
-                      draggable
-                      pauseOnHover
-                    />
-                  </div>
-                </div>
-              </ModalProvider>
-            </CasesProvider>
-          </DataSourceProvider>
+                {/* Контейнер для Toast повідомлень */}
+                <ToastContainer
+                  position="top-right"
+                  autoClose={3000}
+                  hideProgressBar={false}
+                  newestOnTop={false}
+                  closeOnClick
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                  pauseOnHover
+                />
+              </div>
+            </div>
+          </ModalProvider>
    
       
       </AuthProvider>

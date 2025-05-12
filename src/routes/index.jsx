@@ -5,6 +5,8 @@ import { Routes, Route } from "react-router-dom";
 import { pathList } from "./path";
 import MainLayout from "../layouts/MainLayout/MainLayout";
 import { localStorageGet } from "../utils/localStorage";
+import { DataSourceProvider } from "../contexts/DataSourceContext";
+import { CasesProvider } from "../contexts/CasesContext";
 
 // Lazy-loaded components
 const IntroductionPage = React.lazy(() =>
@@ -380,7 +382,16 @@ export default function Routers() {
           element={<SimpleChoiceGame />}
         />
         {/* Сторінка зі списком кейсів (MY CASES входить сюди) */}
-        <Route path="/cases" element={<CasesListPage />} />
+        <Route
+          path="/cases"
+          element={
+            <DataSourceProvider>
+              <CasesProvider>
+                <CasesListPage />
+              </CasesProvider>
+            </DataSourceProvider>
+          }
+        />
 
         {/* Сторінка редагування кейсу */}
         <Route path="/edit-case" element={<EditCasePage />} />
@@ -392,13 +403,25 @@ export default function Routers() {
         {/* Динамічний маршрут для FSPFormularPage з параметром caseId */}
         <Route
           path="/information-sources/:sourceType/:caseId"
-          element={<FSPFormularPage />}
+          element={
+            <DataSourceProvider>
+              <CasesProvider>
+                <FSPFormularPage />
+              </CasesProvider>
+            </DataSourceProvider>
+          }
         />
         <Route path="/custom-map" element={<CustomGermanyMap />} />
         {/* Статичний маршрут для FSPFormularPage */}
         <Route
           path={pathList.informationSources.path}
-          element={<FSPFormularPage />}
+          element={
+            <DataSourceProvider>
+              <CasesProvider>
+                <FSPFormularPage />
+              </CasesProvider>
+            </DataSourceProvider>
+          }
         />
         <Route
           path={pathList.terminology_learning.path}

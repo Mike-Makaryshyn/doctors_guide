@@ -1,8 +1,7 @@
 // doctors_guide/src/pages/LetterFormPage/LetterFormPage.jsx
 
 import React, { useState, useEffect, useCallback, useRef } from "react";
-import { doc, getDoc } from "firebase/firestore";
-import { db } from "../../firebase";
+import { supabase } from "../../supabaseClient";
 import { useNavigate, Link } from "react-router-dom";
 import { previewLetterPDF, downloadLetterPDF } from "./LetterPDFGenerator.jsx";
 import {
@@ -124,29 +123,25 @@ const LetterFormPage = () => {
     }));
   };
 
-  // Завантаження даних із Firestore (чекбокси, категорія)
+  // Завантаження даних із Supabase (чекбокси, категорія)
   const fetchData = useCallback(async () => {
     if (!user) return;
     try {
-      const selectionDocRef = doc(db, "users", user.uid, "userData", "selectionData");
-      const selectionSnap = await getDoc(selectionDocRef);
-      if (selectionSnap.exists()) {
-        const fetchedData = selectionSnap.data();
-        setCheckboxes(fetchedData.checkboxes || {});
-      }
+      // Load user metadata from Supabase
+      const { data: { user: supUser }, error: userError } = await supabase.auth.getUser();
+      if (userError) throw userError;
+      const metadata = supUser.user_metadata || {};
 
-      const dataDocRef = doc(db, "users", user.uid, "userData", "data");
-      const dataSnap = await getDoc(dataDocRef);
-      if (dataSnap.exists()) {
-        const userData = dataSnap.data();
-        setCategory(
-          userData.educationRegion === "EU" || userData.educationRegion === "Non-EU"
-            ? userData.educationRegion
-            : "Non-EU"
-        );
-      }
+      // Read selectionData and educationRegion from metadata
+      const selection = metadata.selectionData || {};
+      setCheckboxes(selection.checkboxes || {});
+
+      const eduRegion = metadata.educationRegion;
+      setCategory(
+        eduRegion === "EU" || eduRegion === "Non-EU" ? eduRegion : "Non-EU"
+      );
     } catch (error) {
-      console.error("Помилка при отриманні даних з Firestore:", error);
+      console.error("Error loading data from Supabase:", error);
     }
   }, [user]);
 

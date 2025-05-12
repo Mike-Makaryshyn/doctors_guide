@@ -7,8 +7,7 @@ import React, {
   useCallback,
   useMemo,
 } from "react";
-import { collection, doc, setDoc, onSnapshot } from "firebase/firestore";
-import { db } from "../../firebase";
+import { supabase } from "../../supabaseClient";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./DocumentsPage.module.scss";
@@ -159,99 +158,53 @@ const DocumentsPage = () => {
     });
   }, []);
 
-  // Завантажуємо дані з Firestore за допомогою onSnapshot для selectionData
-  const fetchSelectionDataFromFirestore = useCallback(() => {
-    if (!user) return;
+  // Завантаження selectionData з Supabase та підписка на зміни (оновлено: auth metadata)
+  const fetchSelectionDataFromSupabase = useCallback(() => {
+    let isMounted = true;
 
-    const selectionDocRef = doc(
-      collection(doc(collection(db, "users"), user.uid), "userData"),
-      "selectionData"
-    );
-
-    const unsubscribe = onSnapshot(selectionDocRef, (docSnap) => {
-      if (docSnap.exists()) {
-        const data = docSnap.data();
-        console.log("Fetched selectionData from Firestore:", data);
-
-        setDynamicData({
-          checkboxes: data.checkboxes || {},
-          progress:
-            typeof data.progress === "string"
-              ? parseInt(data.progress, 10)
-              : data.progress || 0,
-        });
-      } else {
-        // Ініціалізація selectionData документу, якщо він відсутній
-        const initialCheckboxes = {};
-        documentsOptional.forEach((doc) => {
-          initialCheckboxes[doc.id.toString()] = { hide: true };
-        });
-
-        setDoc(selectionDocRef, {
-          checkboxes: initialCheckboxes,
-          progress: 0,
-        })
-          .then(() => {
-            setDynamicData({
-              checkboxes: initialCheckboxes,
-              progress: 0,
-            });
-          })
-          .catch((error) => {
-            console.error("Error initializing selectionData:", error);
-          });
-      }
+    supabase.auth.getUser().then(({ data: { user: sessionUser } }) => {
+      if (!sessionUser) return;
+      const metadata = sessionUser.user_metadata || {};
+      const sel = metadata.selectionData || { checkboxes: {}, progress: 0 };
+      if (isMounted) setDynamicData(sel);
     });
 
-    return unsubscribe; // Повертаємо функцію відписки
-  }, [user]);
-
-  // Завантажуємо educationRegion з Firestore за допомогою onSnapshot для data
-  const fetchEducationRegionFromFirestore = useCallback(() => {
-    if (!user) return;
-
-    const dataDocRef = doc(
-      collection(doc(collection(db, "users"), user.uid), "userData"),
-      "data"
-    );
-
-    const unsubscribe = onSnapshot(dataDocRef, (docSnap) => {
-      if (docSnap.exists()) {
-        const data = docSnap.data();
-        console.log("Fetched educationRegion from Firestore:", data);
-
-        const fetchedCategory = data.educationRegion;
-        console.log("Fetched educationRegion:", fetchedCategory);
-        if (fetchedCategory === "EU" || fetchedCategory === "Non-EU") {
-          setCategory(fetchedCategory);
-        } else {
-          // Обробка випадку, коли educationRegion відсутній або некоректний
-          console.warn(
-            "Invalid or missing educationRegion. Defaulting to Non-EU."
-          );
-          setCategory("Non-EU"); // Встановлюємо значення за замовчуванням
-        }
-      } else {
-        // Ініціалізація data документу, якщо він відсутній
-        setDoc(dataDocRef, {
-          educationRegion: "Non-EU", // Встановлюємо значення за замовчуванням
-        })
-          .then(() => {
-            setCategory("Non-EU");
-          })
-          .catch((error) => {
-            console.error("Error initializing data document:", error);
-          });
-      }
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      const metadata = session?.user?.user_metadata || {};
+      const sel = metadata.selectionData || { checkboxes: {}, progress: 0 };
+      setDynamicData(sel);
     });
 
-    return unsubscribe; // Повертаємо функцію відписки
-  }, [user]);
+    return () => {
+      isMounted = false;
+      subscription?.unsubscribe();
+    };
+  }, []);
+
+  // Завантаження educationRegion з Supabase та підписка на зміни (оновлено: auth metadata)
+  const fetchEducationRegionFromSupabase = useCallback(() => {
+    let isMounted = true;
+
+    supabase.auth.getUser().then(({ data: { user: sessionUser } }) => {
+      if (!sessionUser) return;
+      const region = sessionUser.user_metadata?.educationRegion;
+      if (isMounted) setCategory(region === "EU" || region === "Non-EU" ? region : "Non-EU");
+    });
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      const region = session?.user?.user_metadata?.educationRegion;
+      setCategory(region === "EU" || region === "Non-EU" ? region : "Non-EU");
+    });
+
+    return () => {
+      isMounted = false;
+      subscription?.unsubscribe();
+    };
+  }, []);
 
   useEffect(() => {
-    const unsubscribeSelection = fetchSelectionDataFromFirestore();
-    const unsubscribeData = fetchEducationRegionFromFirestore();
-
+    const unsubscribeSelection = fetchSelectionDataFromSupabase();
+    const unsubscribeData = fetchEducationRegionFromSupabase();
     return () => {
       if (typeof unsubscribeSelection === "function") {
         unsubscribeSelection();
@@ -260,7 +213,7 @@ const DocumentsPage = () => {
         unsubscribeData();
       }
     };
-  }, [fetchSelectionDataFromFirestore, fetchEducationRegionFromFirestore]);
+  }, [fetchSelectionDataFromSupabase, fetchEducationRegionFromSupabase]);
 
   // Рахуємо прогрес
   const calculateProgress = useCallback(
@@ -350,22 +303,18 @@ const DocumentsPage = () => {
     }
   }, [dynamicData.checkboxes, category, language, calculateProgress]);
 
-  // Оновлюємо Firestore з checkboxes та progress, не чіпаючи educationRegion
+  // Оновлюємо Supabase user metadata з checkboxes та progress (оновлено)
   const updateFirestoreData = useCallback(
     async (updatedData) => {
       if (!user) return;
       if (JSON.stringify(lastSavedData) === JSON.stringify(updatedData)) return;
 
-      const selectionDocRef = doc(
-        collection(doc(collection(db, "users"), user.uid), "userData"),
-        "selectionData"
-      );
       try {
-        await setDoc(selectionDocRef, updatedData, { merge: true });
+        await supabase.auth.updateUser({ data: { selectionData: updatedData } });
         setLastSavedData(updatedData);
-        console.log("Firestore dynamic data updated:", updatedData);
+        console.log("Supabase dynamic data updated:", updatedData);
       } catch (error) {
-        console.error("Error updating dynamic data in Firestore:", error);
+        console.error("Error updating dynamic data in Supabase:", error);
       }
     },
     [user, lastSavedData]
