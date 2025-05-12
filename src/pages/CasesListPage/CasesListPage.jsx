@@ -8,6 +8,7 @@ import { DataSourceContext } from "../../contexts/DataSourceContext";
 import { useAuth } from "../../contexts/AuthContext";
 import { useCases } from "../../contexts/CasesContext"; // Імпорт useCases
 import MainLayout from "../../layouts/MainLayout/MainLayout";
+import { supabase } from "../../supabaseClient";
 import {
   FaCog,
   FaMapMarkerAlt,
@@ -113,83 +114,65 @@ const CasesListPage = () => {
     }
   }, [location.search, currentUser]);
 
-  // Завантаження колекцій (collections)
+  // Load collections from Supabase (authors with ≥2 cases)
   useEffect(() => {
     if (activeMenu !== "collections") return;
     setCollectionsLoading(true);
-
     (async () => {
       try {
-        const dynRegions = Object.keys(dataSources).filter(
-          (r) => dataSources[r].type === "dynamic"
+        // Fetch all region records with JSONB cases
+        const { data: regionRecords, error: regionError } = await supabase
+          .from("cases")
+          .select("id, cases");
+        if (regionError) throw regionError;
+        // Flatten all cases from each region record
+        const allCases = regionRecords.flatMap(rec =>
+          (rec.cases || []).map(c => ({
+            ...c,
+            region: rec.id,
+          }))
         );
-        let allCases = [];
-
-        // Збираємо всі кейси з різних region (dynamic)
-        for (const rg of dynRegions) {
-          const docRef = doc(db, "cases", rg);
-          const docSnap = await getDoc(docRef);
-          if (docSnap.exists()) {
-            const docData = docSnap.data();
-            const fetched = docData.cases || [];
-            const mapped = fetched.map((caseItem) => ({
-              ...caseItem,
-              region: rg,
-            }));
-            allCases = [...allCases, ...mapped];
-          }
-        }
-
-        // Групуємо кейси за authorId
+        console.log("AllCases flattened for collections:", allCases);
+        // Group by author
         const authorMap = {};
-        for (const c of allCases) {
-          if (!c.authorId) continue;
-          if (!authorMap[c.authorId]) authorMap[c.authorId] = [];
-          authorMap[c.authorId].push(c);
-        }
-
-        // Беремо тільки тих авторів, у яких >= 2 кейсів
-        const authors2plus = Object.keys(authorMap).filter(
-          (aid) => authorMap[aid].length >= 2
+        allCases.forEach(c => {
+          const aid = c.authorid || c.authorId;
+          if (!aid) return;
+          if (!authorMap[aid]) authorMap[aid] = [];
+          authorMap[aid].push(c);
+        });
+        console.log("AuthorMap keys:", Object.keys(authorMap), authorMap);
+        // Filter authors with ≥2 cases
+        const authors2 = Object.entries(authorMap).filter(
+          ([, arr]) => arr.length >= 2
         );
-
-        if (!authors2plus.length) {
+        if (!authors2.length) {
           setCollectionsData([]);
-          setCollectionsLoading(false);
           return;
         }
-
-        // Завантажуємо імена авторів (таблиця "users")
-        const usersRef = collection(db, "users");
-        const q_ = query(usersRef, where(documentId(), "in", authors2plus));
-        const qSnap = await getDocs(q_);
-
-        const authorsMapTemp = {};
-        qSnap.forEach((snapDoc) => {
-          const d = snapDoc.data();
-          authorsMapTemp[snapDoc.id] = d.firstName || "Autor?";
-        });
-
-        const finalArr = authors2plus.map((aId) => ({
-          authorId: aId,
-          authorName: authorsMapTemp[aId],
-          cases: authorMap[aId],
+        // Use author IDs as names (no profiles table)
+        const nameMap = authors2.reduce((map, [aid]) => {
+          map[aid] = aid;
+          return map;
+        }, {});
+        // Build collections array
+        const finalArr = authors2.map(([aid, casesArr]) => ({
+          authorId: aid,
+          authorName: nameMap[aid] || aid,
+          cases: casesArr.map((c) => ({ ...c, region: c.region || c.id })),
         }));
-
         setCollectionsData(finalArr);
-
-        // Якщо прийшли по ?colId
         if (sharingColId) {
           const found = finalArr.find((x) => x.authorId === sharingColId);
           if (found) setSelectedAuthor(sharingColId);
         }
       } catch (err) {
-        console.error("Fehler beim Laden der Sammlungen:", err);
+        console.error("Error loading collections from Supabase:", err);
       } finally {
         setCollectionsLoading(false);
       }
     })();
-  }, [activeMenu, dataSources, sharingColId]);
+  }, [activeMenu, sharingColId]);
 
   // Функція сортування кейсів
   const statusOrder = (st) => {
@@ -322,7 +305,7 @@ const CasesListPage = () => {
                 if (!arr.length) {
                   return <p>Keine Fälle in dieser Quelle.</p>;
                 }
-                return (
+                return (  
                   <div className={styles.tilesContainer}>
                     {arr.map((cItem) => {
                       const st = getCaseStatus(cItem.id, selectedRegion);

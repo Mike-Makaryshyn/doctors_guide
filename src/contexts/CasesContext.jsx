@@ -62,13 +62,26 @@ export const CasesProvider = ({ children }) => {
       }
       setLoading(true);
       try {
-        const { data: cases, error } = await supabase
+        // Fetch all region records
+        const { data: regionRecords, error } = await supabase
           .from('cases')
-          .select('*')
-          .eq('authorid', currentUser.id);
+          .select('*');
         if (error) throw error;
-        // Assuming each record has a 'region' field
-        setUserCases(cases);
+        console.log("Fetched regionRecords:", regionRecords);
+        // Flatten all cases from all region records
+        const allCases = Array.isArray(regionRecords)
+          ? regionRecords.flatMap(record =>
+              Array.isArray(record.cases)
+                ? record.cases.map(c => ({ ...c, region: record.id }))
+                : []
+            )
+          : [];
+        console.log("Flattened cases sample:", allCases.slice(0, 5));
+        // Filter cases authored by the current user (handle both authorid and authorId)
+        const userOwnCases = allCases.filter(
+          (c) => String(c.authorid || c.authorId) === currentUser.id
+        );
+        setUserCases(userOwnCases);
       } catch (err) {
         console.error("Fehler beim Laden Ihrer Fälle:", err);
         setError("Fehler beim Laden Ihrer Fälle.");

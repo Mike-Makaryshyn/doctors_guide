@@ -41,17 +41,7 @@ import { DataSourceContext } from "../../contexts/DataSourceContext";
 import { FaCheck, FaPause, FaCog, FaPlus, FaSync, FaPlay } from "react-icons/fa";
 import { previewFSPPDF, downloadFSPPDF } from "./pdfFSPFormular"; // <-- Імпорт
 import { FaPrint, FaDownload, FaFilePdf } from "react-icons/fa";
-// Firebase
-import { db, auth } from "../../firebase";
-import {
-  doc,
-  setDoc,
-  getDoc,
-  updateDoc,
-  arrayUnion,
-  arrayRemove,
-} from "firebase/firestore";
-import { onAuthStateChanged } from "firebase/auth";
+import { supabase } from "../../supabaseClient";
 
 // Toast
 import { toast, ToastContainer } from "react-toastify";
@@ -62,7 +52,7 @@ import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 
 // Other data
 import FallSpecificData from "../../constants/translation/FallSpecificData";
-import { fetchDataFromFirebase } from "../../utils/firebaseUtils";
+import { fetchDataFromSupabase } from "../../utils/firebaseUtils";
 
 // Import Modals
 import SelectDataSourceModal from "../../components/SelectDataSourceModal";
@@ -80,7 +70,7 @@ const FSPFormularPage = () => {
   const { sourceType: routeSourceType, caseId: routeCaseId } = useParams();
 
   // Data from DataSourceContext
-  const { dataSources, fetchFirebaseCases } = useContext(DataSourceContext);
+  const { dataSources, fetchSupabaseCases } = useContext(DataSourceContext);
 
   // Global hook
   const {
@@ -122,6 +112,25 @@ const FSPFormularPage = () => {
   const [userData, setUserData] = useState(null);
   // Auth modal visibility
   const [showAuthModal, setShowAuthModal] = useState(false);
+  // Track if supabase cases have been loaded once
+  const [hasLoadedSupabase, setHasLoadedSupabase] = useState(false);
+  // Track local cases for local mode
+  const [localCases, setLocalCases] = useState([]);
+
+  // Load Supabase cases only once when switching to online mode
+  useEffect(() => {
+    if (sourceType === "supabase" && localRegion && !hasLoadedSupabase) {
+      fetchSupabaseCases(localRegion);
+      setHasLoadedSupabase(true);
+    }
+  }, [sourceType, localRegion, fetchSupabaseCases, hasLoadedSupabase]);
+
+  // Update local cases immediately when in local mode
+  useEffect(() => {
+    if (sourceType === "local" && localRegion) {
+      setLocalCases(dataSources[localRegion]?.sources?.local || []);
+    }
+  }, [sourceType, localRegion, dataSources]);
 
   // Helper: show AuthModal if guest tries to interact
   const requireAuth = () => {
@@ -145,74 +154,61 @@ const FSPFormularPage = () => {
     setSelectedCase("");
     setParsedData({});
     setFallType("");
-
-    if (sourceType === "firebase") {
-      fetchFirebaseCases(regionId);
+    setHasLoadedSupabase(false);
+    if (sourceType === "supabase") {
+      fetchSupabaseCases(regionId);
+      setHasLoadedSupabase(true);
     }
   };
-  // ---- Guests get fixed defaults (Berlin & local) ----
+
+  // ---- Ensure initial region is respected on mount ----
   useEffect(() => {
-    if (!user) {
-      if (localRegion !== "Berlin") {
-        setLocalRegion("Berlin", false);
-      }
-      if (sourceType !== "local") {
-        setSourceType("local");
-      }
+    if (!localRegion) {
+      setLocalRegion(selectedRegion || (routeSourceType === "local" ? "Berlin" : selectedRegion));
     }
-  }, [user, localRegion, sourceType, setLocalRegion, setSourceType]);
+    // eslint-disable-next-line
+  }, []);
 
   // ---- Auth-Überwachung ----
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
-      if (currentUser) {
-        const userDocRef = doc(db, "users", currentUser.uid);
-        try {
-          const userDocSnap = await getDoc(userDocRef);
-          if (userDocSnap.exists()) {
-            setUserData(userDocSnap.data());
-          } else {
-            await setDoc(userDocRef, {});
-            setUserData({});
-          }
-        } catch (error) {
-          console.error("Error accessing user document:", error);
-          toast.error("Failed to retrieve user data.");
-          setUserData(null);
-        }
-      } else {
-        setSelectedCase("");
-        setParsedData({});
-        setFallType("");
+    const loadUserData = async () => {
+      const { data: { user }, error } = await supabase.auth.getUser();
+      if (error) {
+        console.error("Error getting user:", error);
         setUserData(null);
+        return;
       }
+      setUserData(user.user_metadata || {});
+      // Initialize metadata if needed
+      if (!user.user_metadata) {
+        await supabase.auth.updateUser({ data: {} });
+      }
+    };
+    loadUserData();
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      loadUserData();
     });
-    return () => unsubscribe();
+    return () => subscription.unsubscribe();
   }, []);
 
-  // ---- Loading Firebase Cases, wenn sourceType oder localRegion wechselt ----
+  // ---- Loading flag and error state ----
   const [isLoading, setIsLoading] = useState(false);
   const [errorState, setErrorState] = useState(null);
 
+  // Load Supabase cases only once, when switching to online mode
   useEffect(() => {
-    const loadFirebaseCases = async () => {
-      if (sourceType === "firebase" && localRegion) {
-        setIsLoading(true);
-        try {
-          await fetchFirebaseCases(localRegion);
-          console.log(
-            `Firebase cases for region ${localRegion} loaded successfully.`
-          );
-        } catch (e) {
-          console.error("Error loading from Firebase:", e);
-          setErrorState("Failed to fetch data from Firebase.");
-        } finally {
-          setIsLoading(false);
-        }
-      }
-    };
-    loadFirebaseCases();
-  }, [sourceType, localRegion, fetchFirebaseCases]);
+    if (sourceType === "supabase" && localRegion && !hasLoadedSupabase) {
+      fetchSupabaseCases(localRegion);
+      setHasLoadedSupabase(true);
+    }
+  }, [sourceType, localRegion, fetchSupabaseCases, hasLoadedSupabase]);
+
+  // Load local cases immediately when in local mode
+  useEffect(() => {
+    if (sourceType === "local" && localRegion) {
+      setLocalCases(dataSources[localRegion]?.sources?.local || []);
+    }
+  }, [sourceType, localRegion, dataSources]);
 
   // ---- URL: caseId -> Fall suchen ----
   useEffect(() => {
@@ -240,7 +236,7 @@ const FSPFormularPage = () => {
     routeCaseId,
     isCaseIdHandled,
     sourceType,
-    fetchFirebaseCases,
+    fetchSupabaseCases,
     setLocalRegion,
   ]);
 
@@ -262,47 +258,20 @@ const FSPFormularPage = () => {
         setIsCaseIdHandled(true);
       }
     }
-  }, [dataSources, user, routeCaseId, isCaseIdHandled]);
+  }, [dataSources, user, routeCaseId, isCaseIdHandled, fetchSupabaseCases]);
 
-  // ---- Speichere ausgewählten Fall in Firestore ----
+  // ---- Speichere ausgewählten Fall in Supabase ----
   useEffect(() => {
     const saveSelectedCase = async () => {
-      if (!user) return;
-      const regionKey = localRegion;
-      if (selectedCase && regionKey) {
-        const isValidLocal = dataSources[regionKey]?.sources?.local?.some(
-          (file) => String(file.id) === String(selectedCase)
-        );
-        const isValidFirebase = dataSources[regionKey]?.sources?.firebase?.some(
-          (file) => String(file.id) === String(selectedCase)
-        );
-        const isValidCase = isValidLocal || isValidFirebase;
-
-        if (!isValidCase) {
-          return;
-        }
-        const userDocRef = doc(db, "users", user.uid);
-        try {
-          await updateDoc(userDocRef, {
-            [`selectedCase_${regionKey}`]: selectedCase,
-          });
-        } catch (error) {
-          console.error("Error saving case:", error);
-          toast.error("Failed to save case.");
-        }
-      } else if (!selectedCase && localRegion) {
-        const userDocRef = doc(db, "users", user.uid);
-        try {
-          await updateDoc(userDocRef, { [`selectedCase_${localRegion}`]: "" });
-        } catch (error) {
-          console.error("Error clearing case:", error);
-          toast.error("Failed to clear case.");
-        }
-      }
+      if (!userData || !userData.id || !localRegion) return;
+      const key = `selectedCase_${localRegion}`;
+      const value = selectedCase || "";
+      await supabase.auth.updateUser({
+        data: { [key]: value }
+      });
     };
-
     saveSelectedCase();
-  }, [selectedCase, localRegion, user, dataSources]);
+  }, [selectedCase, localRegion, userData]);
   const handlePrintPreview = () => {
     if (requireAuth()) return;
     if (!parsedData || Object.keys(parsedData).length === 0) {
@@ -354,14 +323,14 @@ const FSPFormularPage = () => {
         let data = [];
         if (sourceType === "local" && source.sources?.local) {
           data = await parseData(sourceId, "local", null, fileId, dataSources);
-        } else if (sourceType === "firebase" && source.sources?.firebase) {
-          data = source.sources.firebase.map((firebaseFile) => ({
-            ...firebaseFile,
-            fileDisplayName: firebaseFile.fullName || "Без Імені",
-            specialty: firebaseFile.specialty || "",
-            summary: firebaseFile.summary || "",
-            examinerQuestions: firebaseFile.examinerQuestions || "",
-            patientQuestions: firebaseFile.patientQuestions || "",
+        } else if (sourceType === "supabase" && source.sources?.supabase) {
+          data = source.sources.supabase.map((supabaseFile) => ({
+            ...supabaseFile,
+            fileDisplayName: supabaseFile.fullName || "Без Імені",
+            specialty: supabaseFile.specialty || "",
+            summary: supabaseFile.summary || "",
+            examinerQuestions: supabaseFile.examinerQuestions || "",
+            patientQuestions: supabaseFile.patientQuestions || "",
           }));
         } else {
           throw new Error("Invalid data source type");
@@ -508,16 +477,16 @@ const FSPFormularPage = () => {
   // ---- User Cases Modal öffnen (optional) ----
   const handleOpenUserCasesModal = async (sourceId, fileId) => {
     const source = dataSources[sourceId];
-    if (!source.type || source.type !== "firebase") return;
+    if (!source.type || source.type !== "supabase") return;
 
     try {
-      const data = await fetchDataFromFirebase(source.collection, fileId);
+      const data = await fetchDataFromSupabase(sourceId, fileId);
       setUserCasesData(data);
       setUserCasesModal(true);
     } catch (error) {
-      console.error("Error loading data from Firebase:", error);
-      setErrorState("An error occurred while loading data from Firebase.");
-      toast.error("An error occurred while loading data from Firebase.");
+      console.error("Error loading data from Supabase:", error);
+      setErrorState("An error occurred while loading data from Supabase.");
+      toast.error("An error occurred while loading data from Supabase.");
     }
   };
 
@@ -528,7 +497,6 @@ const FSPFormularPage = () => {
       toast.error("Please select a case and a region.");
       return;
     }
-    const userDocRef = doc(db, "users", user.uid);
     try {
       const completedCasesKey = `completedCases_${localRegion}`;
       const deferredCasesKey = `deferredCases_${localRegion}`;
@@ -536,31 +504,45 @@ const FSPFormularPage = () => {
         String(selectedCase)
       );
 
+      let newCompletedArray = Array.isArray(userData?.[completedCasesKey])
+        ? [...userData[completedCasesKey]]
+        : [];
+      let newDeferredArray = Array.isArray(userData?.[deferredCasesKey])
+        ? [...userData[deferredCasesKey]]
+        : [];
+
       if (isCompleted) {
-        await updateDoc(userDocRef, {
-          [completedCasesKey]: arrayRemove(String(selectedCase)),
+        newCompletedArray = newCompletedArray.filter(
+          (id) => id !== String(selectedCase)
+        );
+        await supabase.auth.updateUser({
+          data: {
+            [completedCasesKey]: newCompletedArray,
+            [deferredCasesKey]: newDeferredArray
+          }
         });
         setUserData((prev) => ({
           ...prev,
-          [completedCasesKey]: prev[completedCasesKey].filter(
-            (id) => id !== String(selectedCase)
-          ),
+          [completedCasesKey]: newCompletedArray,
         }));
         toast.success("Status 'erledigt' entfernt.");
       } else {
-        await updateDoc(userDocRef, {
-          [completedCasesKey]: arrayUnion(String(selectedCase)),
-          [deferredCasesKey]: arrayRemove(String(selectedCase)),
+        if (!newCompletedArray.includes(String(selectedCase))) {
+          newCompletedArray.push(String(selectedCase));
+        }
+        newDeferredArray = newDeferredArray.filter(
+          (id) => id !== String(selectedCase)
+        );
+        await supabase.auth.updateUser({
+          data: {
+            [completedCasesKey]: newCompletedArray,
+            [deferredCasesKey]: newDeferredArray
+          }
         });
         setUserData((prev) => ({
           ...prev,
-          [completedCasesKey]: [
-            ...(prev[completedCasesKey] || []),
-            String(selectedCase),
-          ],
-          [deferredCasesKey]: prev[deferredCasesKey]?.filter(
-            (id) => id !== String(selectedCase)
-          ),
+          [completedCasesKey]: newCompletedArray,
+          [deferredCasesKey]: newDeferredArray,
         }));
         toast.success("Status 'erledigt' hinzugefügt.");
       }
@@ -577,7 +559,6 @@ const FSPFormularPage = () => {
       toast.error("Please select a case and a region.");
       return;
     }
-    const userDocRef = doc(db, "users", user.uid);
     try {
       const deferredCasesKey = `deferredCases_${localRegion}`;
       const completedCasesKey = `completedCases_${localRegion}`;
@@ -585,31 +566,45 @@ const FSPFormularPage = () => {
         String(selectedCase)
       );
 
+      let newDeferredArray = Array.isArray(userData?.[deferredCasesKey])
+        ? [...userData[deferredCasesKey]]
+        : [];
+      let newCompletedArray = Array.isArray(userData?.[completedCasesKey])
+        ? [...userData[completedCasesKey]]
+        : [];
+
       if (isDeferred) {
-        await updateDoc(userDocRef, {
-          [deferredCasesKey]: arrayRemove(String(selectedCase)),
+        newDeferredArray = newDeferredArray.filter(
+          (id) => id !== String(selectedCase)
+        );
+        await supabase.auth.updateUser({
+          data: {
+            [completedCasesKey]: newCompletedArray,
+            [deferredCasesKey]: newDeferredArray
+          }
         });
         setUserData((prev) => ({
           ...prev,
-          [deferredCasesKey]: prev[deferredCasesKey].filter(
-            (id) => id !== String(selectedCase)
-          ),
+          [deferredCasesKey]: newDeferredArray,
         }));
         toast.success("Status 'verschoben' entfernt.");
       } else {
-        await updateDoc(userDocRef, {
-          [deferredCasesKey]: arrayUnion(String(selectedCase)),
-          [completedCasesKey]: arrayRemove(String(selectedCase)),
+        if (!newDeferredArray.includes(String(selectedCase))) {
+          newDeferredArray.push(String(selectedCase));
+        }
+        newCompletedArray = newCompletedArray.filter(
+          (id) => id !== String(selectedCase)
+        );
+        await supabase.auth.updateUser({
+          data: {
+            [completedCasesKey]: newCompletedArray,
+            [deferredCasesKey]: newDeferredArray
+          }
         });
         setUserData((prev) => ({
           ...prev,
-          [deferredCasesKey]: [
-            ...(prev[deferredCasesKey] || []),
-            String(selectedCase),
-          ],
-          [completedCasesKey]: prev[completedCasesKey]?.filter(
-            (id) => id !== String(selectedCase)
-          ),
+          [deferredCasesKey]: newDeferredArray,
+          [completedCasesKey]: newCompletedArray,
         }));
         toast.success("Status 'verschoben' hinzugefügt.");
       }
@@ -737,12 +732,15 @@ const FSPFormularPage = () => {
                     <label className={styles["switch"]}>
                       <input
                         type="checkbox"
-                        checked={sourceType === "firebase"}
+                        checked={sourceType === "supabase"}
                         onChange={(e) => {
                           if (requireAuth()) { e.preventDefault(); return; }
-                          setSourceType((prev) =>
-                            prev === "local" ? "firebase" : "local"
-                          );
+                          setSourceType((prev) => {
+                            const next = prev === "local" ? "supabase" : "local";
+                            // If switching to local, reset the supabase loaded flag
+                            if (next === "local") setHasLoadedSupabase(false);
+                            return next;
+                          });
                         }}
                         aria-label="Umschalter für Datenquelle"
                       />
@@ -750,7 +748,7 @@ const FSPFormularPage = () => {
                     </label>
                     <span
                       className={`${styles["label-right"]} ${
-                        sourceType === "firebase" ? styles["label-active"] : ""
+                        sourceType === "supabase" ? styles["label-active"] : ""
                       }`}
                     >
                       Online
@@ -787,19 +785,19 @@ const FSPFormularPage = () => {
                   >
                     <option value="">-- Fall wählen --</option>
                     {sourceType === "local" &&
-                      dataSources[localRegion]?.sources?.local.map((file) => (
+                      localCases.map((file) => (
                         <option key={file.id} value={file.id}>
                           {file.fileDisplayName || file.name || "Ohne Namen"}
                         </option>
                       ))}
-                    {sourceType === "firebase" &&
-                      dataSources[localRegion]?.sources?.firebase.map(
-                        (file) => (
+                    {sourceType === "supabase" &&
+                      dataSources[localRegion]?.files
+                        ?.filter(f => f.sourceType === "supabase")
+                        .map((file) => (
                           <option key={file.id} value={file.id}>
                             {file.fileDisplayName || file.name || "Ohne Namen"}
                           </option>
-                        )
-                      )}
+                        ))}
                   </select>
                 </div>
 

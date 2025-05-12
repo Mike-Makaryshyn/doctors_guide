@@ -1,5 +1,7 @@
 // src/utils/dataParser.js
 
+import { supabase } from "../supabaseClient";
+
 export const parseData = async (sourceId, type, collection = null, fileId = null) => {
   console.log(">>> parseData called with sourceId =", sourceId, "type =", type, "collection =", collection, "fileId =", fileId);
 
@@ -15,16 +17,22 @@ export const parseData = async (sourceId, type, collection = null, fileId = null
       console.error(`❌ Error loading local data for sourceId ${sourceId}:`, error);
       return [];
     }
-  } else if (type === "firebase") {
-    // тут ваша логіка
-    // Наприклад:
+  } else if (type === "supabase") {
+    // Fetch case JSONB array for this region and return the specific case
     try {
-      const response = await fetch(`https://your-firebase-url.com/${collection}/${fileId}`);
-      const data = await response.json();
-      return data;
+      const { data: record, error } = await supabase
+        .from("cases")
+        .select("cases")
+        .eq("id", sourceId)
+        .single();
+      if (error) throw error;
+      const casesArray = record?.cases || [];
+      // Find the specific case by fileId
+      const found = casesArray.find((c) => String(c.id) === String(fileId));
+      return found ? [found] : [];
     } catch (error) {
-      console.error(`❌ Error loading Firebase data for collection ${collection}, fileId ${fileId}:`, error);
-      return null;
+      console.error(`❌ Error loading Supabase data for sourceId ${sourceId}, fileId ${fileId}:`, error);
+      return [];
     }
   }
 

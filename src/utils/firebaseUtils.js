@@ -1,25 +1,24 @@
 // src/utils/firebaseUtils.js
 
-import { db } from "../firebase"; // Переконайтесь, що db експортується з firebase.js
-import { doc, getDoc } from "firebase/firestore";
+import { supabase } from "../supabaseClient";
 
 /**
- * Завантажує дані з Firebase Firestore.
- * @param {string} collection - Назва колекції.
- * @param {string} fileId - Ідентифікатор документу.
- * @returns {Promise<Object>} - Дані документу.
+ * Loads data from Supabase.
+ * @param {string} table - Name of the table.
+ * @param {string|number} id - Record identifier.
+ * @returns {Promise<Object>} - The record data.
  */
-export const fetchDataFromFirebase = async (collection, fileId) => {
+export const fetchDataFromSupabase = async (table, id) => {
   try {
-    const docRef = doc(db, collection, fileId);
-    const docSnap = await getDoc(docRef);
-    if (docSnap.exists()) {
-      return docSnap.data();
-    } else {
-      throw new Error("Документ не знайдено!");
-    }
+    const { data, error } = await supabase
+      .from(table)
+      .select("*")
+      .eq("id", id)
+      .single();
+    if (error) throw error;
+    return data;
   } catch (error) {
-    console.error("Помилка завантаження даних з Firebase:", error);
+    console.error("Error loading data from Supabase:", error);
     throw error;
   }
 };
