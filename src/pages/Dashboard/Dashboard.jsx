@@ -1,8 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth, db } from "../../firebase";
-import { doc, getDoc } from "firebase/firestore";
-import { signOut } from "firebase/auth";
+import { useAuth } from "../../contexts/AuthContext";
+import { supabase } from "../../supabaseClient";
 import ProgressBar from "./ProgressBar.jsx";
 import { Link } from "react-router-dom";
 import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
@@ -16,19 +14,31 @@ import StageTasksWidget from "../../components/StageTasksWidget.jsx";
 import Avatar from "../../components/Avatar/Avatar.jsx";
 
 const Dashboard = () => {
-  const [user] = useAuthState(auth);
+  const { currentUser: user } = useAuth();
   const [userData, setUserData] = useState(null);
   const [activeStage, setActiveStage] = useState(null);
   const { fetchFirebaseCases } = useContext(DataSourceContext);
 
   useEffect(() => {
     const fetchData = async () => {
-      if (!user) return;
       try {
-        const userDoc = await getDoc(doc(db, "users", user.uid, "userData", "data"));
-        const mainDoc = await getDoc(doc(db, "users", user.uid));
-        if (userDoc.exists()) setUserData(userDoc.data());
-        if (mainDoc.exists()) setActiveStage(mainDoc.data().activeStage);
+        const { data: { user: supaUser }, error } = await supabase.auth.getUser();
+        if (error) throw error;
+        const md = supaUser.user_metadata || {};
+        const mappedUserData = {
+          firstName: md.first_name || '',
+          lastName: md.last_name || '',
+          email: supaUser.email || '',
+          birthDate: md.birth_date || '',
+          educationRegion: md.education_region || '',
+          specialty: md.specialty || '',
+          germanLevel: md.german_level || '',
+          procedureType: md.procedure_type || '',
+          avatarUrl: md.avatar_url || '',
+          active_stage: md.active_stage,
+        };
+        setUserData(mappedUserData);
+        setActiveStage(mappedUserData.active_stage);
       } catch {
         toast.error("Error loading dashboard data");
       }
@@ -37,7 +47,7 @@ const Dashboard = () => {
   }, [user]);
 
   const handleSignOut = async () => {
-    try { await signOut(auth); } catch { toast.error("Error signing out"); }
+    try { await supabase.auth.signOut(); } catch { toast.error("Error signing out"); }
   };
 
   return (
@@ -47,7 +57,7 @@ const Dashboard = () => {
           <div className={styles.dashboardGrid}>
           {userData && (
   <div className={styles.userTile}>
-    <Avatar src={userData.avatarUrl} alt={`${userData.name}`} size="large" />
+    <Avatar src={userData.avatarUrl} alt={`${userData.firstName} ${userData.lastName}`} size="large" />
     <Link to="/edit-profile" className={styles.editButton} title="Редагувати профіль">✏️</Link>
     <RegistrationTile data={userData} />
   </div>

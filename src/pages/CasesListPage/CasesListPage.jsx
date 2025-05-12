@@ -56,7 +56,7 @@ const CasesListPage = () => {
   const location = useLocation();
 
   // Контексти
-  const { dataSources, fetchFirebaseCases } = useContext(DataSourceContext);
+  const { dataSources } = useContext(DataSourceContext);
   const { currentUser } = useAuth();
 
   // Використання CasesContext
@@ -267,12 +267,7 @@ const CasesListPage = () => {
     };
   }, [isSettingsOpen]);
 
-  // Автоматичне завантаження випадків з Firebase при встановленому sourceType = "firebase"
-  useEffect(() => {
-    if (activeMenu === "cases" && sourceType === "firebase" && selectedRegion) {
-      fetchFirebaseCases(selectedRegion);
-    }
-  }, [activeMenu, sourceType, selectedRegion, fetchFirebaseCases]);
+
 
   // Рендер
   return (
@@ -319,14 +314,8 @@ const CasesListPage = () => {
 
             {selectedRegion ? (
               (() => {
-                const regionObj = dataSources[selectedRegion];
-                if (!regionObj) {
-                  return <p>Unbekannte Region.</p>;
-                }
-                let arr =
-                  sourceType === "local"
-                    ? regionObj.sources?.local || []
-                    : regionObj.sources?.firebase || [];
+                // Use regionalCases from context (handles both local and supabase sources)
+                let arr = regionalCases || [];
 
                 arr = sortedCases(arr, selectedRegion);
 

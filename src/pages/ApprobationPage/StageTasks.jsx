@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { db } from "../../firebase";
-import { doc, setDoc, getDoc, onSnapshot } from "firebase/firestore";
+import React, { useState, useEffect, useRef } from "react";
+import { supabase } from "../../supabaseClient";
 import { APPROBATION_STAGES_NON_EU } from "../../constants/translation/stagesTranslationNonEU";
 import { APPROBATION_STAGES_EU } from "../../constants/translation/stagesTranslationEU";
 import { LANDS_INFO } from "../../constants/lands";
@@ -15,37 +14,13 @@ const StageTasks = ({ selectedStageId, user, onProgressUpdate, language = "en" }
   const [progress, setProgress] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [showAuthModal, setShowAuthModal] = useState(false);
-  const [localCategory, setLocalCategory] = useState(null); // локальний стан для категорії з Firebase
 
-  const { selectedRegion, redirectToRegionPage } = useGetGlobalInfo();
+  const { selectedRegion, redirectToRegionPage, educationCategory } = useGetGlobalInfo();
 
-  useEffect(() => {
-    if (!user) {
-      setLocalCategory("Non-EU");
-      return;
-    }
-    const dataDocRef = doc(db, "users", user.uid, "userData", "data");
-    const unsubscribe = onSnapshot(dataDocRef, (docSnap) => {
-      if (docSnap.exists()) {
-        const data = docSnap.data();
-        console.log('Fetched educationRegion:', data.educationRegion);
-        const fetchedCategory = data.educationRegion;
-        if (fetchedCategory === "EU" || fetchedCategory === "Non-EU") {
-          setLocalCategory(fetchedCategory);
-        } else {
-          console.warn("Invalid or missing educationRegion. Defaulting to Non-EU.");
-          setLocalCategory("Non-EU");
-        }
-      } else {
-        setDoc(dataDocRef, { educationRegion: "Non-EU" })
-          .then(() => setLocalCategory("Non-EU"))
-          .catch((error) => console.error("Error initializing educationRegion:", error));
-      }
-    });
-    return () => unsubscribe();
-  }, [user]);
+  const updateTimerRef = useRef(null);
+  let pendingUpdate = useRef(null);
 
-  const effectiveCategory = localCategory || "Non-EU";
+  const effectiveCategory = educationCategory || "Non-EU";
   const normalizedCategory = effectiveCategory.trim().toUpperCase();
 
   useEffect(() => {
@@ -61,16 +36,20 @@ const StageTasks = ({ selectedStageId, user, onProgressUpdate, language = "en" }
         setTasks(currentStage?.tasks || []);
 
         if (user) {
-          const docRef = doc(db, "users", user.uid, "stages", `stage_${selectedStageId}`);
-          const docSnap = await getDoc(docRef);
-          if (docSnap.exists()) {
-            const data = docSnap.data();
-            setSelectedTasks(data?.selectedTasks || []);
-            setProgress(data?.progress || 0);
-          } else {
-            await setDoc(docRef, { selectedTasks: [], progress: 0 });
-            setSelectedTasks([]);
-            setProgress(0);
+          try {
+            const meta = user.user_metadata || {};
+            const stageKey = `stage_${selectedStageId}`;
+            const stageData = meta[stageKey] || { selectedTasks: [], progress: 0 };
+            setSelectedTasks(stageData.selectedTasks);
+            setProgress(stageData.progress);
+            // Ensure metadata initialized
+            if (!meta[stageKey]) {
+              await supabase.auth.updateUser({
+                data: { [stageKey]: stageData }
+              });
+            }
+          } catch (error) {
+            console.error("Error loading stage data:", error);
           }
         } else {
           setSelectedTasks([]);
@@ -83,6 +62,10 @@ const StageTasks = ({ selectedStageId, user, onProgressUpdate, language = "en" }
       }
     };
     loadStageData();
+
+    return () => {
+      clearTimeout(updateTimerRef.current);
+    };
   }, [user, selectedStageId, language, normalizedCategory]);
 
   const calculateProgress = (updatedTasks) => {
@@ -100,17 +83,25 @@ const StageTasks = ({ selectedStageId, user, onProgressUpdate, language = "en" }
       ? selectedTasks.filter((id) => id !== taskId)
       : [...selectedTasks, taskId];
     const newProgress = calculateProgress(updatedTasks);
-    try {
-      const docRef = doc(db, "users", user.uid, "stages", `stage_${selectedStageId}`);
-      await setDoc(docRef, { selectedTasks: updatedTasks, progress: newProgress }, { merge: true });
-      setSelectedTasks(updatedTasks);
-      setProgress(newProgress);
-      if (onProgressUpdate) {
-        onProgressUpdate(selectedStageId, newProgress);
-      }
-    } catch (error) {
-      console.error("Error updating Firestore data:", error);
+    const stageKey = `stage_${selectedStageId}`;
+    // Set pending update for debounce
+    pendingUpdate.current = { [stageKey]: { selectedTasks: updatedTasks, progress: newProgress } };
+    // Debounce metadata update to avoid rate limits
+    if (updateTimerRef.current) {
+      clearTimeout(updateTimerRef.current);
     }
+    updateTimerRef.current = setTimeout(async () => {
+      try {
+        await supabase.auth.updateUser({
+          data: pendingUpdate.current
+        });
+        if (onProgressUpdate) onProgressUpdate(selectedStageId, newProgress);
+      } catch (error) {
+        console.error("Error updating data:", error);
+      }
+    }, 1000);
+    setSelectedTasks(updatedTasks);
+    setProgress(newProgress);
   };
 
   const handleInfoClick = (e, task) => {

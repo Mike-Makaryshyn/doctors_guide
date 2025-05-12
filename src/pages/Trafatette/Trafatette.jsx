@@ -9,6 +9,9 @@ import cn from "classnames";
 const InguinalCanal3D = React.lazy(() =>
   import("../../components/three/InguinalCanal")
 );
+const DetailedEsophagealCanal3D = React.lazy(() =>
+  import("../../components/three/EsophagealHiatus")
+);
 
 // === Проста іконка-стрілочка (▲ / ▼), схожа на MindMapListView ===
 const ArrowIcon = ({ isCollapsed }) => (
@@ -72,7 +75,7 @@ const Trafarette = () => {
   // 5. Якщо в Tab 2 є додаткове поле hidden_answer, інколи хочеться його відкривати/закривати
   const [openAnswers, setOpenAnswers] = useState({});
 
-  const [show3DModal, setShow3DModal] = useState(false);
+  const [active3DComponent, setActive3DComponent] = useState(null);
 
   // =========================
   // Handlers
@@ -340,12 +343,12 @@ const renderChildTabContent = (childTab) => {
                             style={{ color: "#013b6e" }}
                           >
                             {childTab?.title}
-                            {childTab.component === "InguinalCanal3D" && (
+                            {childTab.component && (
                               <button
                                 className={styles.threeBtn}
                                 onClick={(e) => {
                                   e.stopPropagation();
-                                  setShow3DModal(true);
+                                  setActive3DComponent(childTab.component);
                                 }}
                               >
                                 3D
@@ -379,10 +382,10 @@ const renderChildTabContent = (childTab) => {
       >
         ↑
       </button>
-      {show3DModal && (
+      {active3DComponent && (
         <div
           className={styles.modalOverlay}
-          onClick={() => setShow3DModal(false)}
+          onClick={() => setActive3DComponent(null)}
         >
           <div
             className={styles.modalContent}
@@ -390,12 +393,13 @@ const renderChildTabContent = (childTab) => {
           >
             <button
               className={styles.modalClose}
-              onClick={() => setShow3DModal(false)}
+              onClick={() => setActive3DComponent(null)}
             >
               ✕
             </button>
             <Suspense fallback={<p style={{ padding: 20 }}>Завантаження 3‑D…</p>}>
-              <InguinalCanal3D />
+              {active3DComponent === "InguinalCanal3D" && <InguinalCanal3D />}
+              {active3DComponent === "DetailedEsophagealCanal3D" && <DetailedEsophagealCanal3D />}
             </Suspense>
           </div>
         </div>

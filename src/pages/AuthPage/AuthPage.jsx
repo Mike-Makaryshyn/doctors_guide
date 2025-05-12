@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  signInWithEmailAndPassword,
-  signInWithPopup,
-  GoogleAuthProvider
-} from "firebase/auth";
-import { auth } from "../../firebase";
+import { supabase } from "../../supabaseClient";
 import styles from "./AuthPage.module.scss";
 import { languages, DEFAULT_LANGUAGE } from "../../constants/translation/AuthPage";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
@@ -22,24 +17,17 @@ const AuthPage = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    if (error) {
+      alert(t.errorLogin.replace("{{message}}", error.message));
+    } else {
       alert(t.successLogin);
       navigate("/dashboard");
-    } catch (error) {
-      alert(t.errorLogin.replace("{{message}}", error.message));
     }
   };
 
   const handleGoogleSignIn = async () => {
-    const provider = new GoogleAuthProvider();
-    try {
-      await signInWithPopup(auth, provider);
-      alert(t.successLogin);
-      navigate("/dashboard");
-    } catch (error) {
-      alert(t.errorLogin.replace("{{message}}", error.message));
-    }
+    alert("Google login not implemented");
   };
 
   return (

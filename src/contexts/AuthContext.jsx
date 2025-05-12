@@ -1,8 +1,7 @@
 // src/contexts/AuthContext.jsx
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from '../firebase'; // Переконайтеся, що шлях до firebase.js правильний
+import { supabase } from '../supabaseClient';
 
 const AuthContext = createContext();
 
@@ -13,13 +12,24 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      console.log("onAuthStateChanged:", user); // Логування користувача
-      setCurrentUser(user);
+    // Fetch initial session
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setCurrentUser(session?.user || null);
       setLoading(false);
-    });
+    }).catch(() => setLoading(false));
 
-    return unsubscribe;
+    // Listen for future auth state changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      (_event, session) => {
+        console.log('Auth state change:', session?.user);
+        setCurrentUser(session?.user || null);
+        setLoading(false);
+      }
+    );
+
+    return () => {
+      subscription.unsubscribe();
+    };
   }, []);
 
   const value = {

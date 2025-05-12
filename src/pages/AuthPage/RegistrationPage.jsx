@@ -1,10 +1,8 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { auth, db } from "../../firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import { supabase } from "../../supabaseClient";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import StageMenu from "../ApprobationPage/StageMenu";
 import styles from "./RegistrationPage.module.scss";
@@ -66,51 +64,35 @@ const RegistrationPage = () => {
     validationSchema,
     onSubmit: async (values) => {
       setIsLoading(true);
-      try {
-        // Створюємо користувача та отримуємо user
-        const userCredential = await createUserWithEmailAndPassword(
-          auth,
-          values.email,
-          values.password
-        );
-        const user = userCredential.user;
-
-        // Записуємо activeStage та localRegion в один виклик
-        await setDoc(
-          doc(db, "users", user.uid),
-          {
-            activeStage: selectedStage || 1,
-            selectedRegion: localRegion,
-          },
-          { merge: true }
-        );
-
-        // Збереження інших даних користувача
-        await setDoc(doc(db, "users", user.uid, "userData", "data"), {
-          firstName: values.firstName,
-          lastName: values.lastName,
-          email: values.email,
-          birthDate: values.birthDate,
-          educationRegion: values.educationRegion,
-          region: localRegion, // використовуємо локальний стан
-          specialty: values.specialty || null,
-          germanLevel: values.germanLevel || null,
-          procedureType: values.procedureType || null,
-          subscribe: values.subscribe,
-          agreeTerms: values.agreeTerms,
-          agreePrivacy: values.agreePrivacy,
-          activeStep: "completed",
-        });
-
-        localStorage.removeItem("tempSelectedStage");
-
-        alert("Registrierung erfolgreich!");
-        navigate("/dashboard");
-      } catch (error) {
-        console.error("Error registering user:", error.message);
-        alert(`Registrierung fehlgeschlagen: ${error.message}`);
-      } finally {
-        setIsLoading(false);
+      const { data, error: signUpError } = await supabase.auth.signUp({
+        email: values.email,
+        password: values.password,
+        options: {
+          emailRedirectTo: window.location.origin + "/auth/confirm",
+          data: {
+            first_name:       values.firstName,
+            last_name:        values.lastName,
+            birth_date:       values.birthDate,
+            education_region: values.educationRegion,
+            region:           localRegion,
+            specialty:        values.specialty || null,
+            german_level:     values.germanLevel || null,
+            procedure_type:   values.procedureType || null,
+            subscribe:        values.subscribe,
+            agree_terms:      values.agreeTerms,
+            agree_privacy:    values.agreePrivacy,
+            active_step:      "completed",
+            active_stage:     selectedStage || 1,
+          }
+        }
+      });
+      setIsLoading(false);
+      if (signUpError) {
+        console.error("Error signing up:", signUpError.message);
+        alert(`Registrierung fehlgeschlagen: ${signUpError.message}`);
+      } else {
+        alert("Danke fürs Registrieren! Bitte prüfe deine E-Mails und klicke auf den Bestätigungslink.");
+        navigate("/check-email");
       }
     },
   });

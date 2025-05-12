@@ -3,8 +3,8 @@
 import React, { useEffect, useState, useContext } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { db, auth } from "../../firebase";
-import { doc, getDoc, updateDoc, arrayUnion } from "firebase/firestore";
+import { supabase } from "../../supabaseClient";
+import { useAuth } from "../../contexts/AuthContext";
 import styles from "./DataCollectionPage.module.scss";
 
 import MainLayout from "../../layouts/MainLayout/MainLayout";
@@ -49,25 +49,8 @@ const DataCollectionPage = () => {
   const { selectedRegion: globalRegion } = useGetGlobalInfo();
   const navigate = useNavigate();
 
-  // Отримуємо дані користувача
-  const [userData, setUserData] = useState({
-    firstName: "",
-    lastName: ""
-  });
-
-  useEffect(() => {
-    const fetchUserData = async () => {
-      const user = auth.currentUser;
-      if (user) {
-        const userDocRef = doc(db, "users", user.uid);
-        const userDoc = await getDoc(userDocRef);
-        if (userDoc.exists()) {
-          setUserData(userDoc.data());
-        }
-      }
-    };
-    fetchUserData();
-  }, []);
+  // Отримуємо дані користувача з контексту
+  const { currentUser, userData } = useAuth();
 
   // Стан для збереження значень полів
   const [localData, setLocalData] = useState(() => {
@@ -165,11 +148,10 @@ const DataCollectionPage = () => {
     updateIncludedFieldsTab2(field, !includedFieldsTab2[field]);
   };
 
-  // Збереження даних до Firebase
-  const saveAllToFirebase = async () => {
+  // Збереження даних до Supabase
+  const saveAllToSupabase = async () => {
     try {
-      const user = auth.currentUser;
-      if (!user) {
+      if (!currentUser) {
         throw new Error("Користувач не автентифікований.");
       }
 
@@ -185,11 +167,9 @@ const DataCollectionPage = () => {
         }
       }
 
-      const docRef = doc(db, "cases", selectedRegion || "default_region");
-
       let newCase = {
         id: uuidv4(),
-        authorId: user.uid,
+        authorId: currentUser.id,
       };
 
       // Вкладка 1
@@ -207,7 +187,7 @@ const DataCollectionPage = () => {
       }
 
       // Додаткове поле FullName
-      const fullName = `${localData.theme} by ${userData.firstName}`;
+      const fullName = `${localData.theme} by ${userData?.firstName || ""}`;
       newCase.fullName = fullName;
 
       // Вкладки 3-5
@@ -226,9 +206,19 @@ const DataCollectionPage = () => {
       console.log("Local Data:", localData);
       console.log("Included Fields Tab2:", includedFieldsTab2);
 
-      await updateDoc(docRef, {
-        cases: arrayUnion(newCase),
-      });
+      // Upsert the region record with a new case appended
+      const { data: existing, error: selectError } = await supabase
+        .from('cases')
+        .select('cases')
+        .eq('id', selectedRegion)
+        .single();
+      if (selectError && selectError.code !== 'PGRST116') throw selectError;
+      const updatedCases = (existing?.cases || []).concat(newCase);
+
+      const { error: updateError } = await supabase
+        .from('cases')
+        .upsert({ id: selectedRegion, cases: updatedCases }, { onConflict: 'id' });
+      if (updateError) throw updateError;
 
       // Очищення даних
       if (isRegionIncluded) {
@@ -271,7 +261,7 @@ const DataCollectionPage = () => {
 
       toast.success("Всі дані успішно збережено!");
     } catch (error) {
-      console.error("Помилка при збереженні даних до Firebase:", error);
+      console.error("Помилка при збереженні даних до Supabase:", error);
       toast.error(error.message || "Сталася помилка при збереженні даних.");
     }
   };
@@ -279,7 +269,7 @@ const DataCollectionPage = () => {
   // Кнопка збереження
   const handleSaveButtonClick = () => {
     if (window.confirm("Ви дійсно хочете зберегти всі дані?")) {
-      saveAllToFirebase();
+      saveAllToSupabase();
     }
   };
 

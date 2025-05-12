@@ -163,7 +163,7 @@ import schilddruesenadenom from "./subpages/schilddruese/schilddruesenadenom";
 import mitose from "./subpages/zellen/mitose";
 import zellzyklus from "./subpages/zellen/zellzyklus";
 import ausreifung from "./subpages/zellen/ausreifung";
-
+import esophagealhiatus from "./subpages/anatomie/esophagealhiatus";
 import schilddruesenkarzinome from "./subpages/schilddruese/schilddruesenkarzinome";
 import papillaereschilddruesenkarzinom from "./subpages/schilddruese/papillaereschilddruesenkarzinom";
 import folikulaereschilddruesenkarzinom from "./subpages/schilddruese/folikulaereschilddruesenkarzinom";
@@ -195,6 +195,7 @@ const all_pages_data = [
   // *** Anatomie ***
   { ...aorta, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },
   { ...inguinalcanal, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },
+   { ...esophagealhiatus, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },
   { ...koerperachsen, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },
   { ...bewegungall, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },
   { ...richtungen, mainCategory: "Anatomie & Physiologie", category: "Anatomie" },

@@ -1,8 +1,7 @@
 // src/contexts/DataSourceContext.jsx
 
 import React, { createContext, useState, useCallback, useMemo } from "react";
-import { doc, getDoc } from "firebase/firestore";
-import { db } from "../firebase";
+import { supabase } from "../supabaseClient";
 
 // ==========================
 //  Import vorhandener Daten
@@ -45,7 +44,7 @@ export const DataSourceProvider = ({ children }) => {
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
-        firebase: [],
+        supabase: [],
       },
       files: THUERINGEN_DATA.map((item) => ({
         id: item.id,
@@ -70,7 +69,7 @@ export const DataSourceProvider = ({ children }) => {
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
-        firebase: [],
+        supabase: [],
       },
       files: BW_FREIBURG_DATA.map((item) => ({
         id: item.id,
@@ -93,7 +92,7 @@ export const DataSourceProvider = ({ children }) => {
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
-        firebase: [],
+        supabase: [],
       },
       files: BW_KARLSRUHE_DATA.map((item) => ({
         id: item.id,
@@ -116,7 +115,7 @@ export const DataSourceProvider = ({ children }) => {
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
-        firebase: [],
+        supabase: [],
       },
       files: BW_STUTTGART_DATA.map((item) => ({
         id: item.id,
@@ -139,7 +138,7 @@ export const DataSourceProvider = ({ children }) => {
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
-        firebase: [],
+        supabase: [],
       },
       files: BW_REUTLINGEN_DATA.map((item) => ({
         id: item.id,
@@ -160,7 +159,7 @@ export const DataSourceProvider = ({ children }) => {
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
-        firebase: [],
+        supabase: [],
       },
       files: BAYERN_DATA.map((item) => ({
         id: item.id,
@@ -179,7 +178,7 @@ export const DataSourceProvider = ({ children }) => {
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
-        firebase: [],
+        supabase: [],
       },
       files: BERLIN_DATA.map((item) => ({
         id: item.id,
@@ -198,7 +197,7 @@ export const DataSourceProvider = ({ children }) => {
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
-        firebase: [],
+        supabase: [],
       },
       files: BRANDENBURG_DATA.map((item) => ({
         id: item.id,
@@ -217,7 +216,7 @@ export const DataSourceProvider = ({ children }) => {
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
-        firebase: [],
+        supabase: [],
       },
       files: BREMEN_DATA.map((item) => ({
         id: item.id,
@@ -236,7 +235,7 @@ export const DataSourceProvider = ({ children }) => {
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
-        firebase: [],
+        supabase: [],
       },
       files: HAMBURG_DATA.map((item) => ({
         id: item.id,
@@ -255,7 +254,7 @@ export const DataSourceProvider = ({ children }) => {
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
-        firebase: [],
+        supabase: [],
       },
       files: HESSEN_DATA.map((item) => ({
         id: item.id,
@@ -274,7 +273,7 @@ export const DataSourceProvider = ({ children }) => {
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
-        firebase: [],
+        supabase: [],
       },
       files: MECKLENBURG_DATA.map((item) => ({
         id: item.id,
@@ -293,7 +292,7 @@ export const DataSourceProvider = ({ children }) => {
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
-        firebase: [],
+        supabase: [],
       },
       files: NIEDERSACHSEN_DATA.map((item) => ({
         id: item.id,
@@ -312,7 +311,7 @@ export const DataSourceProvider = ({ children }) => {
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
-        firebase: [],
+        supabase: [],
       },
       files: NRW_DATA.map((item) => ({
         id: item.id,
@@ -331,7 +330,7 @@ export const DataSourceProvider = ({ children }) => {
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
-        firebase: [],
+        supabase: [],
       },
       files: WESTFALEN_DATA.map((item) => ({
         id: item.id,
@@ -350,7 +349,7 @@ export const DataSourceProvider = ({ children }) => {
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
-        firebase: [],
+        supabase: [],
       },
       files: RHEINLAND_DATA.map((item) => ({
         id: item.id,
@@ -369,7 +368,7 @@ export const DataSourceProvider = ({ children }) => {
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
-        firebase: [],
+        supabase: [],
       },
       files: SAARLAND_DATA.map((item) => ({
         id: item.id,
@@ -388,7 +387,7 @@ export const DataSourceProvider = ({ children }) => {
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
-        firebase: [],
+        supabase: [],
       },
       files: SACHSEN_DATA.map((item) => ({
         id: item.id,
@@ -407,7 +406,7 @@ export const DataSourceProvider = ({ children }) => {
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
-        firebase: [],
+        supabase: [],
       },
       files: SACHSENANHALT_DATA.map((item) => ({
         id: item.id,
@@ -426,7 +425,7 @@ export const DataSourceProvider = ({ children }) => {
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
-        firebase: [],
+        supabase: [],
       },
       files: SCHLESWIGHOLSTEIN_DATA.map((item) => ({
         id: item.id,
@@ -436,28 +435,25 @@ export const DataSourceProvider = ({ children }) => {
     },
   });
 
-  // Funktion, die Daten aus Firebase lädt
-  const fetchFirebaseCases = useCallback(async (regionKey) => {
+  // Funktion, die Daten aus Supabase lädt
+  const fetchSupabaseCases = useCallback(async (regionKey) => {
     try {
-      const docRef = doc(db, "cases", regionKey);
-      const docSnap = await getDoc(docRef);
-
-      if (!docSnap.exists()) {
-        console.error(`Dokument "${regionKey}" nicht in Firestore gefunden.`);
+      const { data: regionData, error } = await supabase
+        .from('cases')
+        .select('cases')
+        .eq('id', regionKey)
+        .single();
+      if (error) {
+        console.error(`Error fetching cases for region ${regionKey}:`, error);
         return;
       }
-
-      const docData = docSnap.data();
-      const fetchedCases = docData.cases || [];
-
-      console.log(`Firebase-Fälle erhalten [${regionKey}]:`, fetchedCases);
-
+      const fetchedCases = regionData.cases || [];
+      console.log(`Supabase cases fetched [${regionKey}]:`, fetchedCases);
       const mapped = fetchedCases.map((caseItem) => ({
         ...caseItem,
         fileDisplayName: caseItem.fullName || "Без Імені",
-        sourceType: "firebase",
+        sourceType: "supabase",
       }));
-
       setDataSources((prev) => {
         const localCases = prev[regionKey]?.sources?.local || [];
         return {
@@ -466,17 +462,14 @@ export const DataSourceProvider = ({ children }) => {
             ...prev[regionKey],
             sources: {
               ...prev[regionKey].sources,
-              firebase: mapped,
+              supabase: mapped,
             },
             files: [...localCases, ...mapped],
           },
         };
       });
     } catch (error) {
-      console.error(
-        `Fehler beim Laden aus Firebase für Region ${regionKey}:`,
-        error
-      );
+      console.error(`Error fetching from Supabase for region ${regionKey}:`, error);
     }
   }, []);
 
@@ -492,10 +485,10 @@ export const DataSourceProvider = ({ children }) => {
   const contextValue = useMemo(
     () => ({
       dataSources,
-      fetchFirebaseCases,
+      fetchSupabaseCases,
       getCurrentCases,
     }),
-    [dataSources, fetchFirebaseCases, getCurrentCases]
+    [dataSources, fetchSupabaseCases, getCurrentCases]
   );
 
   return (

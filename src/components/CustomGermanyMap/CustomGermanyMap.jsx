@@ -8,6 +8,8 @@ import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { useNavigate } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 
+import { supabase } from "../../supabaseClient";
+
 import BadenWuerttembergCoat from "../../assets/coats/Baden-Württember.svg";
 import BayernCoat from "../../assets/coats/Bayer.svg";
 import BerlinCoat from "../../assets/coats/Berlin.svg";
@@ -110,7 +112,7 @@ const regionCoatsOfArms = {
 };
 
 const CustomGermanyMap = ({ registrationMode = false, onRegionSelect }) => {
-  const { selectedRegion, handleChangeRegion } = useGetGlobalInfo();
+  const { selectedRegion, handleChangeRegion, user } = useGetGlobalInfo();
   const [pendingRegion, setPendingRegion] = useState(null);
   const [hoveredRegion, setHoveredRegion] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -144,7 +146,7 @@ const CustomGermanyMap = ({ registrationMode = false, onRegionSelect }) => {
     }
   };
 
-  const handleDashboardClick = () => {
+  const handleDashboardClick = async () => {
     if (pendingRegion) {
       if (!registrationMode) {
         const confirmChange = window.confirm(
@@ -157,6 +159,14 @@ const CustomGermanyMap = ({ registrationMode = false, onRegionSelect }) => {
       } else {
         // У режимі реєстрації просто оновлюємо регіон без підтвердження
         handleChangeRegion(pendingRegion);
+        // Persist region in Supabase for newly registered user
+        if (user) {
+          const { error } = await supabase
+            .from('profiles')
+            .update({ region: pendingRegion })
+            .eq('id', user.id);
+          if (error) console.error('Error updating region in Supabase:', error.message);
+        }
       }
     }
   };

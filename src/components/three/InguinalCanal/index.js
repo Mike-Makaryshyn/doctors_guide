@@ -4,3 +4,4 @@ export { default } from './InguinalCanal3D';
 
 // Optional named export (both ways will work):
 export { default as InguinalCanal3D } from './InguinalCanal3D';
+// src/components/anatomie/index.js

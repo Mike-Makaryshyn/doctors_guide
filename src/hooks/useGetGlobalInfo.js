@@ -3,9 +3,7 @@ import { languages, DEFAULT_LANGUAGE } from "../constants/translation/global";
 import { localStorageGet, localStorageSet } from "../utils/localStorage";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { auth, db } from "../firebase";
-import { onAuthStateChanged } from "firebase/auth";
-import { doc, setDoc, getDoc } from "firebase/firestore";
+import { supabase } from "../supabaseClient";
 
 const useGetGlobalInfo = () => {
   // 1) States для користувача, educationCategory та регіону
@@ -24,30 +22,16 @@ const useGetGlobalInfo = () => {
   const saveSelectedRegionToFirebase = async (region) => {
     if (!user) return;
     try {
-      await setDoc(doc(db, "users", user.uid), { selectedRegion: region }, { merge: true });
-      console.log("Selected region saved to Firebase.");
+      const { error } = await supabase.auth.updateUser({
+        data: { selectedRegion: region }
+      });
+      if (error) console.error("Error saving selected region to Supabase:", error);
+      else console.log("Selected region saved to Supabase.");
     } catch (error) {
-      console.error("Error saving selected region to Firebase: ", error);
+      console.error("Error saving selected region to Supabase:", error);
     }
   };
 
-  const fetchSelectedRegionFromFirebase = async () => {
-    if (!user) return;
-    try {
-      const docRef = doc(db, "users", user.uid);
-      const docSnap = await getDoc(docRef);
-      if (docSnap.exists()) {
-        const firebaseRegion = docSnap.data().selectedRegion;
-        // Оновлюємо лише, якщо стан ще порожній
-        if (firebaseRegion && firebaseRegion !== selectedRegion) {
-          setSelectedRegion(firebaseRegion);
-          localStorageSet("selectedRegion", firebaseRegion);
-        }
-      }
-    } catch (error) {
-      console.error("Error fetching selected region from Firebase: ", error);
-    }
-  };
 
   const handleChangeRegion = (newRegion) => {
     setSelectedRegion(newRegion); // оновлюємо стан
@@ -62,32 +46,6 @@ const useGetGlobalInfo = () => {
   // ===========================
   // NEU: Логіка для EU / Non‑EU
   // ===========================
-  const fetchEducationCategoryFromFirebase = async () => {
-    if (!user) return;
-    try {
-      // Документ, де зберігається educationRegion:
-      const docRef = doc(db, "users", user.uid, "userData", "data");
-      const docSnap = await getDoc(docRef);
-
-      if (docSnap.exists()) {
-        const data = docSnap.data();
-        console.log("Fetched educationRegion:", data.educationRegion);
-        const fetchedCategory = data.educationRegion;
-        if (fetchedCategory === "EU" || fetchedCategory === "Non-EU") {
-          setEducationCategory(fetchedCategory);
-        } else {
-          console.warn("Invalid or missing educationRegion. Defaulting to Non-EU.");
-          setEducationCategory("Non-EU");
-        }
-      } else {
-        // Якщо документ не існує, створюємо його з дефолтним значенням
-        await setDoc(docRef, { educationRegion: "Non-EU" });
-        setEducationCategory("Non-EU");
-      }
-    } catch (error) {
-      console.error("Error fetching educationRegion from Firebase:", error);
-    }
-  };
 
   // OPTIONAL: Функція для зміни educationRegion
   const handleChangeEducationCategory = async (newCategory) => {
@@ -100,11 +58,13 @@ const useGetGlobalInfo = () => {
       return;
     }
     try {
-      const docRef = doc(db, "users", user.uid, "userData", "data");
-      await setDoc(docRef, { educationRegion: newCategory }, { merge: true });
-      setEducationCategory(newCategory);
+      const { error } = await supabase.auth.updateUser({
+        data: { education_region: newCategory }
+      });
+      if (error) console.error("Error updating educationRegion in Supabase:", error);
+      else setEducationCategory(newCategory);
     } catch (error) {
-      console.error("Error updating educationRegion in Firebase:", error);
+      console.error("Error updating educationRegion in Supabase:", error);
     }
   };
 
@@ -132,20 +92,36 @@ const useGetGlobalInfo = () => {
   };
 
   // =====================
-  // onAuthStateChanged - відслідковуємо авторизацію
+  // onAuthStateChanged - відслідковуємо авторизацію (Supabase)
   // =====================
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-      if (currentUser) {
-        // Отримання даних про регіон
-        fetchSelectedRegionFromFirebase();
-        // Отримання даних про educationRegion (EU / Non-EU)
-        fetchEducationCategoryFromFirebase();
-      }
+    // Initial session fetch
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setUser(session?.user || null);
+    }).catch(console.error);
+
+    // Listen for auth changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_, session) => {
+      setUser(session?.user || null);
     });
-    return () => unsubscribe();
+
+    return () => {
+      subscription.unsubscribe();
+    };
   }, []);
+
+  useEffect(() => {
+    if (!user) return;
+    const meta = user.user_metadata || {};
+    // Sync selectedRegion
+    if (meta.selectedRegion && meta.selectedRegion !== selectedRegion) {
+      setSelectedRegion(meta.selectedRegion);
+      localStorageSet("selectedRegion", meta.selectedRegion);
+    }
+    // Sync educationCategory
+    const educ = meta.education_region;
+    setEducationCategory(educ === "EU" || educ === "Non-EU" ? educ : "Non-EU");
+  }, [user]);
 
   // =====================
   // Повертаємо дані

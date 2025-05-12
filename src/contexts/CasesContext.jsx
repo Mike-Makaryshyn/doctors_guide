@@ -2,17 +2,7 @@
 
 import React, { createContext, useState, useEffect, useContext, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { db } from "../firebase";
-import {
-  doc,
-  getDoc,
-  updateDoc,
-  arrayUnion,
-  arrayRemove,
-  collection,
-  getDocs,
-  onSnapshot,
-} from "firebase/firestore";
+import { supabase } from "../supabaseClient";
 import { useAuth } from "./AuthContext";
 import { DataSourceContext } from "./DataSourceContext";
 import useGetGlobalInfo from "../hooks/useGetGlobalInfo"; // Імпорт існуючого хуку
@@ -72,20 +62,13 @@ export const CasesProvider = ({ children }) => {
       }
       setLoading(true);
       try {
-        const casesSnapshot = await getDocs(collection(db, "cases"));
-        const myCases = [];
-
-        casesSnapshot.forEach((snapDoc) => {
-          const regionKey = snapDoc.id;
-          const { cases = [] } = snapDoc.data();
-          cases.forEach((c) => {
-            if (c.authorId === currentUser.uid) {
-              myCases.push({ ...c, region: regionKey });
-            }
-          });
-        });
-
-        setUserCases(myCases);
+        const { data: cases, error } = await supabase
+          .from('cases')
+          .select('*')
+          .eq('authorid', currentUser.id);
+        if (error) throw error;
+        // Assuming each record has a 'region' field
+        setUserCases(cases);
       } catch (err) {
         console.error("Fehler beim Laden Ihrer Fälle:", err);
         setError("Fehler beim Laden Ihrer Fälle.");
@@ -97,9 +80,7 @@ export const CasesProvider = ({ children }) => {
     fetchMyCases();
   }, [currentUser]);
 
-  // Функція для фетчингу регіональних випадків
-// src/contexts/CasesContext.jsx
-
+// Функція для фетчингу регіональних випадків
 const fetchRegionalCases = useCallback(async () => {
   if (!localRegion) {
     setRegionalCases([]);
@@ -111,29 +92,27 @@ const fetchRegionalCases = useCallback(async () => {
     if (localSourceType === "local") {
       const localCases = dataSources[localRegion]?.sources?.local.map(c => ({
         ...c,
-        source: "local", // Додаємо поле source
-        region: localRegion // Переконуємось, що region встановлено
+        source: "local",
+        region: localRegion
       })) || [];
       setRegionalCases(localCases);
-    } else if (localSourceType === "firebase") {
-      const regionDocRef = doc(db, "cases", localRegion);
-      const regionDocSnap = await getDoc(regionDocRef);
-      if (!regionDocSnap.exists()) {
-        console.error("Регіон не знайдено:", localRegion);
-        setRegionalCases([]);
-        return;
-      }
-
-      const { cases = [] } = regionDocSnap.data();
-
-      // Додаємо поле 'region' та 'source' до кожного випадку
-      const casesWithRegion = cases.map((caseItem) => ({
-        ...caseItem,
-        region: localRegion,
-        source: "firebase" // Вказуємо джерело
+      console.log("💾 localCases for", localRegion, "=", localCases);
+    } else {
+      // Fetch the full record and extract its JSONB field
+      const { data: record, error } = await supabase
+        .from('cases')
+        .select('*')
+        .eq('id', localRegion)
+        .single();
+      if (error && error.code !== 'PGRST116') throw error;
+      const supCases = record?.cases || [];
+      const annotated = supCases.map(c => ({
+        ...c,
+        source: "supabase",
+        region: localRegion
       }));
-
-      setRegionalCases(casesWithRegion);
+      setRegionalCases(annotated);
+      console.log("💾 regionalCases for", localRegion, "=", annotated);
     }
   } catch (error) {
     console.error("Error fetching regional cases:", error);
@@ -158,15 +137,12 @@ const fetchRegionalCases = useCallback(async () => {
     if (!currentUser || !localRegion) return;
 
     try {
-      const userDocRef = doc(db, "users", currentUser.uid);
-      const userDocSnap = await getDoc(userDocRef);
-      if (!userDocSnap.exists()) {
-        setDeferredCases([]);
-        setCompletedCases([]);
-        return;
-      }
-
-      const userDataFetched = userDocSnap.data();
+      const {
+        data: { user },
+        error: userError
+      } = await supabase.auth.getUser();
+      if (userError) throw userError;
+      const userDataFetched = user.user_metadata || {};
       setUserData(userDataFetched); // Оновлюємо userData
 
       const allDeferred = [];
@@ -193,46 +169,7 @@ const fetchRegionalCases = useCallback(async () => {
     reloadStatuses();
   }, [reloadStatuses]);
 
-  // Слухач змін у користувацькому документі для оновлення статусів в реальному часі
-  useEffect(() => {
-    if (!currentUser) return;
-
-    const userDocRef = doc(db, "users", currentUser.uid);
-    const unsubscribe = onSnapshot(
-      userDocRef,
-      (docSnap) => {
-        if (docSnap.exists()) {
-          const userDataFetched = docSnap.data();
-          setUserData(userDataFetched);
-
-          const allDeferred = [];
-          const allCompleted = [];
-
-          Object.keys(dataSources)
-            .filter((r) => dataSources[r]?.type === "dynamic")
-            .forEach((region) => {
-              const defArr = userDataFetched[`deferredCases_${region}`] || [];
-              const compArr = userDataFetched[`completedCases_${region}`] || [];
-              defArr.forEach((cid) => allDeferred.push({ caseId: String(cid), region }));
-              compArr.forEach((cid) => allCompleted.push({ caseId: String(cid), region }));
-            });
-
-          setDeferredCases(allDeferred);
-          setCompletedCases(allCompleted);
-        } else {
-          setDeferredCases([]);
-          setCompletedCases([]);
-          setUserData(null);
-        }
-      },
-      (error) => {
-        console.error("Error listening to user document:", error);
-        setError("Error listening to user document.");
-      }
-    );
-
-    return () => unsubscribe();
-  }, [currentUser, dataSources]);
+  // (Realtime Firestore listener removed)
 
   // **Функції: handleMarkAsCompleted та handleDeferCase**
   const handleMarkAsCompleted = useCallback(
@@ -245,35 +182,31 @@ const fetchRegionalCases = useCallback(async () => {
         toast.error("Please select a case and a region.");
         return;
       }
-      const userDocRef = doc(db, "users", currentUser.uid);
       try {
-        const completedCasesKey = `completedCases_${region}`;
-        const deferredCasesKey = `deferredCases_${region}`;
-        const isCompleted = userData?.[completedCasesKey]?.includes(String(caseId));
-
-        if (isCompleted) {
-          // Видалити з completedCases
-          await updateDoc(userDocRef, {
-            [completedCasesKey]: arrayRemove(String(caseId)),
-          });
-          setUserData((prev) => ({
-            ...prev,
-            [completedCasesKey]: prev[completedCasesKey].filter((id) => id !== String(caseId)),
-          }));
-          toast.success("Статус виконано видалено.");
-        } else {
-          // Додати до completedCases і видалити з deferredCases (якщо є)
-          await updateDoc(userDocRef, {
-            [completedCasesKey]: arrayUnion(String(caseId)),
-            [deferredCasesKey]: arrayRemove(String(caseId)),
-          });
-          setUserData((prev) => ({
-            ...prev,
-            [completedCasesKey]: [...(prev[completedCasesKey] || []), String(caseId)],
-            [deferredCasesKey]: prev[deferredCasesKey]?.filter((id) => id !== String(caseId)),
-          }));
-          toast.success("Статус виконано додано.");
-        }
+        const completedKey = `completedCases_${region}`;
+        const deferredKey = `deferredCases_${region}`;
+        const isCompleted = userData?.[completedKey]?.includes(String(caseId));
+        const { error } = await supabase.auth.updateUser({
+          data: {
+            [completedKey]: isCompleted
+              ? (userData[completedKey] || []).filter(id => id !== String(caseId))
+              : [...(userData[completedKey] || []), String(caseId)],
+            [deferredKey]: isCompleted
+              ? userData[deferredKey]
+              : (userData[deferredKey] || []).filter(id => id !== String(caseId))
+          }
+        });
+        if (error) throw error;
+        setUserData((prev) => ({
+          ...prev,
+          [completedKey]: isCompleted
+            ? (prev[completedKey] || []).filter(id => id !== String(caseId))
+            : [...(prev[completedKey] || []), String(caseId)],
+          [deferredKey]: isCompleted
+            ? prev[deferredKey]
+            : (prev[deferredKey] || []).filter(id => id !== String(caseId))
+        }));
+        toast.success(isCompleted ? "Статус виконано видалено." : "Статус виконано додано.");
       } catch (error) {
         console.error("Error marking case as completed:", error);
         toast.error("Failed to mark case as completed.");
@@ -292,35 +225,31 @@ const fetchRegionalCases = useCallback(async () => {
         toast.error("Please select a case and a region.");
         return;
       }
-      const userDocRef = doc(db, "users", currentUser.uid);
       try {
-        const deferredCasesKey = `deferredCases_${region}`;
-        const completedCasesKey = `completedCases_${region}`;
-        const isDeferred = userData?.[deferredCasesKey]?.includes(String(caseId));
-
-        if (isDeferred) {
-          // Видалити з deferredCases
-          await updateDoc(userDocRef, {
-            [deferredCasesKey]: arrayRemove(String(caseId)),
-          });
-          setUserData((prev) => ({
-            ...prev,
-            [deferredCasesKey]: prev[deferredCasesKey].filter((id) => id !== String(caseId)),
-          }));
-          toast.success("Статус відкладено видалено.");
-        } else {
-          // Додати до deferredCases і видалити з completedCases (якщо є)
-          await updateDoc(userDocRef, {
-            [deferredCasesKey]: arrayUnion(String(caseId)),
-            [completedCasesKey]: arrayRemove(String(caseId)),
-          });
-          setUserData((prev) => ({
-            ...prev,
-            [deferredCasesKey]: [...(prev[deferredCasesKey] || []), String(caseId)],
-            [completedCasesKey]: prev[completedCasesKey]?.filter((id) => id !== String(caseId)),
-          }));
-          toast.success("Статус відкладено додано.");
-        }
+        const deferredKey = `deferredCases_${region}`;
+        const completedKey = `completedCases_${region}`;
+        const isDeferred = userData?.[deferredKey]?.includes(String(caseId));
+        const { error } = await supabase.auth.updateUser({
+          data: {
+            [deferredKey]: isDeferred
+              ? (userData[deferredKey] || []).filter(id => id !== String(caseId))
+              : [...(userData[deferredKey] || []), String(caseId)],
+            [completedKey]: isDeferred
+              ? userData[completedKey]
+              : (userData[completedKey] || []).filter(id => id !== String(caseId))
+          }
+        });
+        if (error) throw error;
+        setUserData((prev) => ({
+          ...prev,
+          [deferredKey]: isDeferred
+            ? (prev[deferredKey] || []).filter(id => id !== String(caseId))
+            : [...(prev[deferredKey] || []), String(caseId)],
+          [completedKey]: isDeferred
+            ? prev[completedKey]
+            : (prev[completedKey] || []).filter(id => id !== String(caseId))
+        }));
+        toast.success(isDeferred ? "Статус відкладено видалено." : "Статус відкладено додано.");
       } catch (error) {
         console.error("Error deferring case:", error);
         toast.error("Failed to defer case.");
@@ -346,24 +275,19 @@ const fetchRegionalCases = useCallback(async () => {
       if (!confirmDel) return;
 
       try {
-        const regionDocRef = doc(db, "cases", caseItem.region);
-        const regionSnap = await getDoc(regionDocRef);
-        if (!regionSnap.exists()) {
-          setError("Region not found.");
-          return;
-        }
-
-        const { cases = [] } = regionSnap.data();
-        const updatedCases = cases.filter((c) => String(c.id) !== String(caseItem.id));
-
-        if (localSourceType === "firebase") {
-          await updateDoc(regionDocRef, { cases: updatedCases });
-          setUserCases((prev) => prev.filter((c) => String(c.id) !== String(caseItem.id)));
-          setRegionalCases((prev) => prev.filter((c) => String(c.id) !== String(caseItem.id)));
-        } else if (localSourceType === "local") {
+        if (localSourceType === "local") {
           const updatedLocalCases =
             dataSources[localRegion]?.sources.local?.filter((c) => String(c.id) !== String(caseItem.id)) || [];
           setRegionalCases(updatedLocalCases);
+        } else {
+          // Delete case from Supabase
+          const { error } = await supabase
+            .from('cases')
+            .delete()
+            .eq('id', caseItem.id);
+          if (error) throw error;
+          setUserCases(prev => prev.filter(c => String(c.id) !== String(caseItem.id)));
+          setRegionalCases(prev => prev.filter(c => String(c.id) !== String(caseItem.id)));
         }
       } catch (err) {
         console.error("Error deleting case:", err);
@@ -378,8 +302,8 @@ const fetchRegionalCases = useCallback(async () => {
     async (caseId, source, region) => {
       try {
         setNavigating(true);
-        if (source === "firebase") {
-          await fetchFirebaseCases(region);
+        if (source !== "local") {
+          // load from Supabase if needed
         }
         navigate(`/information-sources/${source}/${caseId}`);
       } catch (err) {

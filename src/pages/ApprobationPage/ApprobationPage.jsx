@@ -4,9 +4,10 @@ import StageMenu from "./StageMenu";
 import StageTasks from "./StageTasks";
 import ApprobationTutorial from "./ApprobationTutorial";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
-import { doc, getDoc, setDoc } from "firebase/firestore";
-import { db } from "../../firebase";
+import { supabase } from "../../supabaseClient";
 import styles from "./styles.module.scss";
+
+let supabaseRequestCount = 0;
 
 const ApprobationPage = () => {
 const { selectedLanguage: language, user, educationCategory } = useGetGlobalInfo();
@@ -17,49 +18,11 @@ const effectiveCategory = educationCategory || "Non-EU";
   const [overallProgress, setOverallProgress] = useState(0);
   const [tutorialActive, setTutorialActive] = useState(false);
 
-  // Завантаження активного етапу з Firebase
+  // Ініціалізація activeStage з user_metadata
   useEffect(() => {
-    if (!user) return;
-    const fetchActiveStage = async () => {
-      try {
-        const docRef = doc(db, "users", user.uid);
-        const docSnap = await getDoc(docRef);
-        if (docSnap.exists()) {
-          const data = docSnap.data();
-          if (data.activeStage) {
-            setActiveStage(data.activeStage);
-          }
-        }
-      } catch (error) {
-        console.error("Помилка при зчитуванні activeStage:", error);
-      }
-    };
-    fetchActiveStage();
-  }, [user]);
-
-  // Завантаження прогресу всіх етапів з Firebase
-  useEffect(() => {
-    const fetchStagesProgress = async () => {
-      if (!user) return;
-      try {
-        const progressArray = [];
-        for (let i = 1; i <= 9; i++) {
-          const docRef = doc(db, "users", user.uid, "stages", `stage_${i}`);
-          const docSnap = await getDoc(docRef);
-          if (docSnap.exists()) {
-            const stageData = docSnap.data();
-            const progress = stageData?.progress || 0;
-            progressArray.push(Math.min(progress, 100));
-          } else {
-            progressArray.push(0);
-          }
-        }
-        setStagesProgress(progressArray);
-      } catch (error) {
-        console.error("Помилка при завантаженні прогресу етапів:", error);
-      }
-    };
-    fetchStagesProgress();
+    if (user && user.user_metadata?.active_stage) {
+      setActiveStage(user.user_metadata.active_stage);
+    }
   }, [user]);
 
   // Розрахунок загального прогресу (середнє значення)
@@ -70,10 +33,12 @@ const effectiveCategory = educationCategory || "Non-EU";
       const total = relevantStages.reduce((acc, cur) => acc + cur, 0);
       const overall = Math.round(total / relevantStages.length);
       setOverallProgress(overall);
+      console.log(`Recalculated overall progress: ${overall}% based on ${relevantStages.length} stages (values: [${relevantStages.join(', ')}])`);
     }
   }, [stagesProgress, effectiveCategory]);
 
   const handleProgressUpdate = (stageId, newProgress) => {
+    console.log(`Progress update for stage ${stageId}: ${newProgress}%`);
     setStagesProgress((prev) => {
       const updated = [...prev];
       updated[stageId - 1] = newProgress || 0;
@@ -86,8 +51,11 @@ const effectiveCategory = educationCategory || "Non-EU";
     setActiveStage(stageId);
     if (user) {
       try {
-        const docRef = doc(db, "users", user.uid, "stages", `stage_${stageId}`);
-        await setDoc(docRef, { activeStage: stageId }, { merge: true });
+        supabaseRequestCount++;
+        console.log(`Supabase request #${supabaseRequestCount}: updateUser in handleStageSelect`);
+        await supabase.auth.updateUser({
+          data: { active_stage: stageId }
+        });
       } catch (error) {
         console.error("Помилка при оновленні активного етапу:", error);
       }

@@ -108,6 +108,12 @@ const AuthPage = React.lazy(() => import("../pages/AuthPage/AuthPage"));
 const RegistrationPage = React.lazy(() =>
   import("../pages/AuthPage/RegistrationPage")
 );
+const CheckEmailPage = React.lazy(() =>
+  import("../pages/AuthPage/CheckEmailPage")
+);
+const ConfirmEmailPage = React.lazy(() =>
+  import("../pages/AuthPage/ConfirmEmailPage")
+);
 const Dashboard = React.lazy(() => import("../pages/Dashboard/Dashboard"));
 
 // Protected Route
@@ -433,6 +439,8 @@ export default function Routers() {
         {/* Сторінки авторизації */}
         <Route path="/auth" element={<AuthPage />} />
         <Route path="/auth/registration" element={<RegistrationPage />} />
+        <Route path="/check-email" element={<CheckEmailPage />} />
+        <Route path="/auth/confirm" element={<ConfirmEmailPage />} />
 
         {/* Сторінка не знайдена */}
         <Route
