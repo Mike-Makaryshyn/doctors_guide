@@ -3,18 +3,36 @@ import { main_menu_items } from "../../constants/translation/main_menu";
 import Avatar from "../../components/Avatar/Avatar";
 import { LANDS_INFO } from "../../constants/lands";
 import styles from "./SideMenu.module.scss";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../firebase";
-import { signOut } from "firebase/auth";
+import { supabase } from "../../supabaseClient";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo"; // новий імпорт для регіону
 
 function SideMenu({ language, isOpen, onClose, direction }) {
   const [openSections, setOpenSections] = useState({});
-  const [user] = useAuthState(auth);
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
   const location = useLocation();
   const navigate = useNavigate();
   const { selectedRegion } = useGetGlobalInfo(); // отримуємо обраний регіон
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+      setUser(session?.user ?? null);
+      setLoading(false);
+    };
+    fetchUser();
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null);
+    });
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const displayName = user?.user_metadata?.display_name ?? user?.email ?? "";
 
   const sortedSections = React.useMemo(() => {
     return [...main_menu_items.sections].sort((a, b) => a.order - b.order);
@@ -52,7 +70,7 @@ function SideMenu({ language, isOpen, onClose, direction }) {
 
   const handleLogout = async () => {
     try {
-      await signOut(auth);
+      await supabase.auth.signOut();
       onClose();
     } catch (error) {
       console.error("Error signing out:", error);
@@ -73,8 +91,8 @@ function SideMenu({ language, isOpen, onClose, direction }) {
               <Avatar stageId={1} />
             </Link>
             <div className={styles.avatarInfo}>
-              {user && user.displayName && (
-                <span className={styles.userName}>{user.displayName}</span>
+              {user && displayName && (
+                <span className={styles.userName}>{displayName}</span>
               )}
               <div className={styles.regionSelection} onClick={handleRegionClick} style={{ cursor: "pointer" }}>
                 {selectedRegion || "Обрати регіон"}
@@ -162,7 +180,7 @@ function SideMenu({ language, isOpen, onClose, direction }) {
             );
           })}
           <div className={styles.authBlock}>
-            {user ? (
+            {!loading && (user ? (
               <button onClick={handleLogout} className={styles.authButton}>
                 Вийти
               </button>
@@ -170,7 +188,7 @@ function SideMenu({ language, isOpen, onClose, direction }) {
               <Link to="/auth" className={styles.authButton}>
                 Увійти
               </Link>
-            )}
+            ))}
           </div>
         </div>
       </div>
