@@ -17,6 +17,11 @@ import { ToastContainer, toast } from "react-toastify"; // Імпорт ToastCon
 import "react-toastify/dist/ReactToastify.css"; // Імпорт стилів toast
 
 const SavedCasesWidget = () => {
+  const casesContext = useCases();
+  if (!casesContext) {
+    console.error("useCases returned undefined in SavedCasesWidget");
+    return null;
+  }
   const {
     userCases,
     regionalCases,
@@ -27,7 +32,7 @@ const SavedCasesWidget = () => {
     handleDelete,
     deferredCases,
     completedCases,
-  } = useCases();
+  } = casesContext;
 
   const navigate = useNavigate();
 

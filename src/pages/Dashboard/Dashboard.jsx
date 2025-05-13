@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
 import { supabase } from "../../supabaseClient";
 import ProgressBar from "./ProgressBar.jsx";
@@ -7,7 +7,6 @@ import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
 import MainLayout from "../../layouts/MainLayout/MainLayout.jsx";
 import SavedCasesWidget from "../../components/SavedCasesWidget.jsx";
 import RegistrationTile from "../../pages/AuthPage/RegistrationTile.jsx";
-import { DataSourceContext } from "../../contexts/DataSourceContext";
 import styles from "./Dashboard.module.scss";
 import { toast } from "react-toastify";
 import StageTasksWidget from "../../components/StageTasksWidget.jsx";
@@ -17,7 +16,6 @@ const Dashboard = () => {
   const { currentUser: user } = useAuth();
   const [userData, setUserData] = useState(null);
   const [activeStage, setActiveStage] = useState(null);
-  const { fetchFirebaseCases } = useContext(DataSourceContext);
 
   useEffect(() => {
     const fetchData = async () => {

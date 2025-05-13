@@ -2,8 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import MainLayout from "../../../../layouts/MainLayout/MainLayout";
 import { medicalTerms } from "../../../../constants/medicalTerms";
 import styles from "./AllMedicalTerminologyPage.module.scss";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../../firebase";
+import { supabase } from "../../../../supabaseClient";
 import {
   FaCog,
   FaCheck,
@@ -64,7 +63,28 @@ const AllMedicalTerminologyContent = () => {
   const navigate = useNavigate();
   const { termStatuses, toggleStatus, scheduleFlushChanges } = useTermStatus();
   const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
-  const [user, loading] = useAuthState(auth);
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+      setUser(session?.user ?? null);
+      setLoading(false);
+    };
+
+    fetchUser();
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
 
   // =========================
   // STATES
