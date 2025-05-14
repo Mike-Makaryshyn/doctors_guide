@@ -1,59 +1,58 @@
-import React, { createContext, useContext, useState, useEffect, useRef } from "react";
-import { auth, db } from "../firebase";
-import { doc, getDoc, setDoc, updateDoc, deleteField } from "firebase/firestore";
-import { useAuthState } from "react-firebase-hooks/auth";
+import { useState, useEffect, useRef, createContext, useContext } from "react";
+import { supabase } from "../supabaseClient";
+import { useAuth } from "../hooks/useAuth"; // or your existing hook that provides current user
 
 const TermStatusContext = createContext();
 
 export const TermStatusProvider = ({ children }) => {
-  const [user, loading] = useAuthState(auth);
+  const { user } = useAuth();
   const [termStatuses, setTermStatuses] = useState({});
   const unsavedChanges = useRef({});
 
   // Реф для debounce-таймера
   const flushTimeoutRef = useRef(null);
 
-  // Завантаження даних з Firestore та LocalStorage
+  // Завантаження даних з Supabase та LocalStorage
   useEffect(() => {
-    if (loading) return;
-    if (!user) {
-      setTermStatuses({});
-      return;
-    }
     const fetchData = async () => {
-      try {
-        const docRef = doc(db, "users", user.uid, "termStatuses", "allTerms");
-        const docSnap = await getDoc(docRef);
-        let firebaseData = {};
-        if (docSnap.exists()) {
-          firebaseData = docSnap.data()?.statuses || {};
-        }
-        console.log("Дані з Firestore:", firebaseData);
-        const localData = localStorage.getItem("termStatuses");
-        const localStatuses = localData ? JSON.parse(localData) : {};
-        const merged = Object.keys(localStatuses).length > 0 ? localStatuses : firebaseData;
-        setTermStatuses(merged);
-        localStorage.setItem("termStatuses", JSON.stringify(merged));
-        unsavedChanges.current = {};
-      } catch (error) {
-        console.error("Помилка при зчитуванні даних:", error);
+      if (!user) {
+        setTermStatuses({});
+        return;
       }
+      const { data, error } = await supabase
+        .from("term_statuses")
+        .select("term_id, status, correct_count, updated_at")
+        .eq("user_id", user.id);
+      if (error) {
+        console.error("Error fetching term statuses:", error);
+        return;
+      }
+      const loaded = {};
+      data.forEach(row => {
+        loaded[row.term_id] = {
+          status: row.status,
+          correctCount: row.correct_count,
+          updatedAt: new Date(row.updated_at).getTime(),
+        };
+      });
+      setTermStatuses(loaded);
+      localStorage.setItem("termStatuses", JSON.stringify(loaded));
+      unsavedChanges.current = {};
     };
     fetchData();
-  }, [user, loading]);
+  }, [user]);
 
   useEffect(() => {
     localStorage.setItem("termStatuses", JSON.stringify(termStatuses));
   }, [termStatuses]);
 
   // Оновлена функція збереження змін – тепер ми НЕ видаляємо записи для "unlearned"
-  const saveChangesToFirebase = async () => {
+  const saveChangesToSupabase = async () => {
     if (!user) {
-      console.log("Немає користувача, зберігаємо лише в LocalStorage.");
-      setTermStatuses((prev) => {
+      // only localStorage
+      setTermStatuses(prev => {
         const newStatuses = { ...prev };
         for (const [termId, data] of Object.entries(unsavedChanges.current)) {
-          // Завжди записуємо дані, навіть якщо статус "unlearned"
           newStatuses[termId] = data;
         }
         localStorage.setItem("termStatuses", JSON.stringify(newStatuses));
@@ -62,49 +61,29 @@ export const TermStatusProvider = ({ children }) => {
       unsavedChanges.current = {};
       return;
     }
-    const changes = { ...unsavedChanges.current };
-    if (Object.keys(changes).length === 0) {
-      console.log("Немає незбережених змін.");
+    const entries = Object.entries(unsavedChanges.current);
+    if (entries.length === 0) return;
+    const upserts = entries.map(([termId, data]) => ({
+      user_id: user.id,
+      term_id: termId,
+      status: data.status,
+      correct_count: data.correctCount,
+      updated_at: new Date(data.updatedAt).toISOString(),
+    }));
+    const { error } = await supabase
+      .from("term_statuses")
+      .upsert(upserts, { onConflict: ["user_id", "term_id"] });
+    if (error) {
+      console.error("Error upserting term statuses:", error);
       return;
     }
     unsavedChanges.current = {};
-    try {
-      console.log("Зберігаємо зміни у Firestore (миттєво):", changes);
-
-      // Оновлюємо локальний state – тепер кожен термін зберігається, незалежно від статусу
-      const newTermStatuses = { ...termStatuses };
-      for (const [termId, data] of Object.entries(changes)) {
-        newTermStatuses[termId] = data;
-      }
-      setTermStatuses(() => {
-        localStorage.setItem("termStatuses", JSON.stringify(newTermStatuses));
-        return newTermStatuses;
-      });
-
-      const docRef = doc(db, "users", user.uid, "termStatuses", "allTerms");
-
-      // Якщо FlashcardGame – використовуємо updateDoc, інакше – setDoc з merge: true.
-      const isFlashcardGame = window.location.pathname.toLowerCase().includes("flashcard");
-      if (isFlashcardGame) {
-        const updateData = {};
-        for (const [termId, data] of Object.entries(changes)) {
-          // Завжди записуємо дані, навіть якщо status === "unlearned"
-          updateData[`statuses.${termId}`] = data;
-        }
-        await updateDoc(docRef, updateData);
-      } else {
-        await setDoc(docRef, { statuses: newTermStatuses }, { merge: true });
-      }
-      console.log("Зміни успішно збережені у Firestore.");
-    } catch (error) {
-      console.error("Помилка при збереженні у Firebase:", error);
-      unsavedChanges.current = { ...changes, ...unsavedChanges.current };
-    }
+    console.log("Term statuses saved to Supabase.");
   };
 
   const flushChanges = () => {
     console.log("flushChanges() викликано. Зберігаємо негайно.");
-    saveChangesToFirebase();
+    saveChangesToSupabase();
   };
 
   const scheduleFlushChanges = () => {
