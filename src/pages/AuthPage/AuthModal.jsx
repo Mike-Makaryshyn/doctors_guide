@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { auth } from "../../firebase";
+import { supabase } from "../../supabaseClient";
 import { useNavigate } from "react-router-dom";
 import styles from "./AuthModal.module.scss";
 import { languages, DEFAULT_LANGUAGE } from "../../constants/translation/AuthPage";
@@ -22,7 +21,8 @@ const AuthModal = ({ isOpen, onClose }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      if (error) throw error;
       alert(t.successLogin);
       onClose();
       // Видаляємо перенаправлення: navigate("/dashboard");
@@ -32,9 +32,9 @@ const AuthModal = ({ isOpen, onClose }) => {
   };
 
   const handleGoogleSignIn = async () => {
-    const provider = new GoogleAuthProvider();
     try {
-      await signInWithPopup(auth, provider);
+      const { error } = await supabase.auth.signInWithOAuth({ provider: "google" });
+      if (error) throw error;
       alert(t.successLogin);
       onClose();
       // Видаляємо перенаправлення: navigate("/dashboard");

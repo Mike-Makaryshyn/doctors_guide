@@ -80,9 +80,7 @@ const useQuery = () => new URLSearchParams(useLocation().search);
 
 import FlashCardGameTutorial from "./FlashCardGameTutorial";
 
-// --- Firebase Auth: ---
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../../firebase";
+import { useAuth } from "../../../../hooks/useAuth";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
 
 const FlashcardGameContent = () => {
@@ -90,12 +88,13 @@ const FlashcardGameContent = () => {
   const query = useQuery();
   const { selectedRegion } = useGetGlobalInfo();
 
-  // Firebase Auth State
-  const [user, loading] = useAuthState(auth);
+  // Supabase Auth State
+  const { user, loading } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
 
   // Функція перевірки авторизації: якщо користувач не авторизований – викликаємо AuthModal
   const requireAuth = () => {
+    if (loading) return true;
     if (!user) {
       setShowAuthModal(true);
       return true;
@@ -322,6 +321,9 @@ const FlashcardGameContent = () => {
     }
   }, [progress, currentCard, recordCorrectAnswer]);
 
+  if (loading) {
+    return <MainLayout><p>Lädt...</p></MainLayout>;
+  }
   return (
     <MainLayout>
       <Helmet>
