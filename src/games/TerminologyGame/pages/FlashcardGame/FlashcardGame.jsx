@@ -85,6 +85,11 @@ import AuthModal from "../../../../pages/AuthPage/AuthModal";
 
 const FlashcardGameContent = () => {
   const navigate = useNavigate();
+  // Handler for back button: navigates and reloads
+  const handleBack = () => {
+    navigate("/terminology-learning");
+    window.location.reload();
+  };
   const query = useQuery();
   const { selectedRegion } = useGetGlobalInfo();
 
@@ -352,7 +357,7 @@ const FlashcardGameContent = () => {
         {/* Zurück-Button */}
         <button
           className="main_menu_back"
-          onClick={() => navigate("/terminology-learning")}
+          onClick={handleBack}
         >
           &#8592;
         </button>

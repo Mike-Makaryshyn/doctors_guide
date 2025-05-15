@@ -364,7 +364,7 @@ const AudioChoiceGameContent = () => {
         <meta name="twitter:image" content={audioQuizBg} />
       </Helmet>
       <div className={styles.audioChoiceGame}>
-        <button className="main_menu_back" onClick={() => navigate("/terminology-learning")}>
+        <button className="main_menu_back" onClick={() => { navigate("/terminology-learning"); window.location.reload(); }}>
           ←
         </button>
 

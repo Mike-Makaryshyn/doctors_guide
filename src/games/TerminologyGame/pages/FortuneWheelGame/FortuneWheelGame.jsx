@@ -368,7 +368,13 @@ function FortuneWheelGameContent() {
         )}
 
         {/* Back-Button */}
-        <button className="main_menu_back" onClick={() => navigate("/terminology-learning")}>
+        <button
+          className="main_menu_back"
+          onClick={() => {
+            navigate("/terminology-learning");
+            window.location.reload();
+          }}
+        >
           &#8592;
         </button>
 

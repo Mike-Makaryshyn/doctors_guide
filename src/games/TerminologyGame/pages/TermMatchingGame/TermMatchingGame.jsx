@@ -315,7 +315,13 @@ function TermMatchingGameContent() {
       </Helmet>
 
       <div className={styles.electiveLanguageGame}>
-        <button className="main_menu_back" onClick={() => navigate("/terminology-learning")}>
+        <button
+          className="main_menu_back"
+          onClick={() => {
+            navigate("/terminology-learning");
+            window.location.reload();
+          }}
+        >
           &#8592;
         </button>
 
@@ -583,6 +589,14 @@ function TermMatchingGameContent() {
 
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
       <TermMatchingGameTutorial run={showTutorial} onFinish={() => setShowTutorial(false)} />
+      <button
+        style={{ display: "none" }}
+        className="main_menu_back"
+        onClick={() => {
+          navigate("/terminology-learning");
+          window.location.reload();
+        }}
+      />
     </MainLayout>
   );
 }

@@ -391,7 +391,10 @@ const SimpleChoiceGameContent = () => {
         {/* Кнопка для повернення */}
         <button
           className="main_menu_back"
-          onClick={() => navigate("/terminology-learning")}
+          onClick={() => {
+            navigate("/terminology-learning");
+            window.location.reload();
+          }}
         >
           &#8592;
         </button>
