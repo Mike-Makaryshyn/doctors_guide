@@ -26,8 +26,7 @@ import { Helmet } from "react-helmet";
 import audioQuizBg from "../../../../assets/audio-quiz-bg.jpg";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../../firebase";
+import { useAuth } from "../../../../hooks/useAuth";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
 
 // Abkürzungen für Regionen
@@ -85,9 +84,10 @@ const AudioChoiceGameContent = () => {
   const navigate = useNavigate();
   const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
 
-  const [user, loading] = useAuthState(auth);
+  const { user, loading } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
   const requireAuth = () => {
+    if (loading) return true;
     if (!user) {
       setShowAuthModal(true);
       return true;

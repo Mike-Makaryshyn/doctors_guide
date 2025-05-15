@@ -23,8 +23,7 @@ import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 
 // Firebase Auth Imports для логіки неавторизованих користувачів
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../../firebase";
+import { useAuth } from "../../../../hooks/useAuth";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
 
 // Abkürzungen für Regionen
@@ -76,11 +75,12 @@ const SimpleChoiceGameContent = () => {
   const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
 
   // Firebase Auth State
-  const [user, loading] = useAuthState(auth);
+  const { user, loading } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
 
   // Функція перевірки авторизації: якщо користувач не авторизований – відкриваємо AuthModal
   const requireAuth = () => {
+    if (loading) return true;
     if (!user) {
       setShowAuthModal(true);
       return true;
