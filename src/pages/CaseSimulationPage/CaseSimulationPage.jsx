@@ -24,6 +24,8 @@ const CaseSimulationPage = () => {
   const recognitionRef = React.useRef(null);
   const audioRef = React.useRef(null);
   const [recognition, setRecognition] = useState(null);
+  const [tokenCount, setTokenCount] = useState(0);
+  const [costUsd, setCostUsd] = useState(0);
 
   useEffect(() => {
     const storedData = localStorage.getItem("simulation_case_data");
@@ -147,24 +149,32 @@ Beginnen Sie erst, wenn Sie eine Frage vom Arzt erhalten.
     const utterance = new SpeechSynthesisUtterance(text);
     // Force German language
     utterance.lang = 'de-DE';
-    // Enhanced voice selection logic
+    // Enhanced voice selection logic with ordered preference
     const setGermanVoice = () => {
       const voices = window.speechSynthesis.getVoices();
-      const preferredVoices = voices.filter(v =>
-        v.lang.startsWith('de') &&
-        (
-          v.name.toLowerCase().includes('google') ||
-          v.name.toLowerCase().includes('microsoft') ||
-          v.name.toLowerCase().includes('anna') ||
-          v.name.toLowerCase().includes('hans')
-        )
-      );
-      const voice =
-        preferredVoices[0] ||
-        voices.find(v => v.lang === 'de-DE') ||
-        voices.find(v => v.lang.startsWith('de')) ||
-        voices[0];
-      if (voice) utterance.voice = voice;
+      // Ordered list of preferred realistic German voice names
+      const preferredNames = [
+        "Google Deutsch",
+        "Google Deutsch Male",
+        "Microsoft Hedda Desktop",
+        "Microsoft Katja Desktop",
+        "Anna (Enhanced)",
+        "Anna",
+        "Markus"
+      ];
+      // Filter for German-language voices
+      const deVoices = voices.filter(v => v.lang.startsWith("de"));
+      // Find the first available preferred voice
+      let voice = null;
+      for (const name of preferredNames) {
+        voice = deVoices.find(v => v.name.includes(name));
+        if (voice) break;
+      }
+      // Fallbacks if none of the preferred voices found
+      voice = voice || deVoices.find(v => v.lang === "de-DE") || deVoices[0] || voices[0];
+      if (voice) {
+        utterance.voice = voice;
+      }
     };
     setGermanVoice();
     // If voices are not yet loaded, listen for the event
@@ -222,6 +232,15 @@ Beginnen Sie erst, wenn Sie eine Frage vom Arzt erhalten.
         console.error("Supabase Edge Function error:", error);
         return;
       }
+
+      // Update token usage counter if usage info is available
+      if (proxyRes.usage && typeof proxyRes.usage.total_tokens === 'number') {
+        setTokenCount(prev => prev + proxyRes.usage.total_tokens);
+        // Calculate and update cost (Assuming $0.002 per 1k tokens)
+        const costForThisCall = (proxyRes.usage.total_tokens / 1000) * 0.002;
+        setCostUsd(prev => prev + costForThisCall);
+      }
+
       const assistantContent = proxyRes.choices[0].message.content.trim();
 
       // quick filter: remove forbidden counter‑questions
@@ -274,6 +293,12 @@ Beginnen Sie erst, wenn Sie eine Frage vom Arzt erhalten.
         <h1>Симуляція для випадку ID: {caseId}</h1>
 
         <h2>Чат</h2>
+        <div className={styles.tokenCounter}>
+          Використано токенів: {tokenCount}
+        </div>
+        <div className={styles.tokenCost}>
+          Загальна вартість: ${costUsd.toFixed(4)}
+        </div>
 
         {timeLeft !== null && (
           <div className={styles.timer}>
