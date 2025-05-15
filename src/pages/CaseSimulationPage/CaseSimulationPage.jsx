@@ -35,9 +35,21 @@ const CaseSimulationPage = () => {
     }
 
     const parsed = JSON.parse(storedData);
-    setCaseData(parsed);
+    // Remove keys with null, undefined, empty string values, or forbidden sections
+    const filteredData = Object.fromEntries(
+      Object.entries(parsed)
+        .filter(([key, v]) =>
+          v !== null &&
+          v !== undefined &&
+          v !== "" &&
+          key !== "examinerQuestions" &&
+          key !== "summary"
+        )
+    );
+    setCaseData(filteredData);
 
-    const cleanedData = { ...parsed };
+    // Prepare cleanedData by copying filtered data and removing sections (these deletes are now redundant but kept for safety)
+    const cleanedData = { ...filteredData };
     delete cleanedData["Examiner Questions"];
     delete cleanedData["Summary"];
 
