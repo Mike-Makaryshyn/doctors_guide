@@ -13,8 +13,7 @@ import medicalTerminologyBg from "../../../../assets/fortune-wheel-bg.jpg";
 import FortuneWheelGameTutorial from "./FortuneWheelGameTutorial";
 
 // Додаткові імпорти для авторизації
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../../firebase";
+import { useAuth } from "../../../../hooks/useAuth";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
 
 /** Допоміжні функції для очищення тексту */
@@ -72,9 +71,10 @@ function FortuneWheelGameContent() {
   const { termStatuses, recordCorrectAnswer, flushChanges } = useTermStatus();
 
   // Авторизація
-  const [user] = useAuthState(auth);
+  const { user, loading } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
   const requireAuth = () => {
+    if (loading) return false;
     if (!user) {
       setShowAuthModal(true);
       return false;

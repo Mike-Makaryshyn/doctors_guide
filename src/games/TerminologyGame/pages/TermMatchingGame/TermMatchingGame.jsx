@@ -5,8 +5,7 @@ import { medicalTerms } from "../../../../constants/medicalTerms";
 import { TermStatusProvider } from "../../../../contexts/TermStatusContext";
 import { useTermStatus } from "../../../../contexts/TermStatusContext";
 import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../../firebase";
+import { useAuth } from "../../../../hooks/useAuth";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
 import { Helmet } from "react-helmet";
 import {
@@ -94,9 +93,10 @@ function TermMatchingGameContent() {
   const { termStatuses, flushChanges } = useTermStatus();
 
   // Авторизація
-  const [user] = useAuthState(auth);
+  const { user, loading } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
   const requireAuth = () => {
+    if (loading) return true;
     if (!user) {
       setShowAuthModal(true);
       return true;

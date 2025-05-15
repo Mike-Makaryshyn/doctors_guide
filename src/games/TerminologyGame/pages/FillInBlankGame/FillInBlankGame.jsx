@@ -17,8 +17,7 @@ import { useTermStatus, TermStatusProvider } from "../../../../contexts/TermStat
 import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
 import { categoryIcons } from "../../../../constants/CategoryIcons";
 import { Helmet } from "react-helmet";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../../firebase";
+import { useAuth } from "../../../../hooks/useAuth";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
 import FillInBlankGameTutorial from "./FillInBlankGameTutorial";
 import fillInBlankBg from "../../../../assets/fill-in-blank-bg.jpg";
@@ -69,9 +68,10 @@ const FillInBlankGameContent = () => {
   const { termStatuses, toggleStatus, flushChanges, recordCorrectAnswer } = useTermStatus();
 
   // Firebase Auth логіка
-  const [user, loading] = useAuthState(auth);
+  const { user, loading } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
   const requireAuth = () => {
+    if (loading) return true;
     if (!user) {
       setShowAuthModal(true);
       return true;

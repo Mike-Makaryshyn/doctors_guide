@@ -21,8 +21,7 @@ import { Helmet } from "react-helmet";
 import translatorBg from "../../../../assets/translator-bg.jpg";
 import { categoryIcons } from "../../../../constants/CategoryIcons";
 import ElectiveLanguageGameTutorial from "./ElectiveLanguageGameTutorial";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../../firebase";
+import { useAuth } from "../../../../hooks/useAuth";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
@@ -86,10 +85,11 @@ const ElectiveLanguageGameContent = () => {
   const { termStatuses, toggleStatus, recordCorrectAnswer, flushChanges } = useTermStatus();
 
   // Firebase Auth State
-  const [user] = useAuthState(auth);
+  const { user, loading } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
 
   const requireAuth = () => {
+    if (loading) return true;
     if (!user) {
       setShowAuthModal(true);
       return true;
