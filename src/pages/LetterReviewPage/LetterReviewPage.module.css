@@ -208,22 +208,33 @@ pre {
 /* Popover direkt unter dem Button */
 .feedbackPopover {
   position: fixed;
-  top: 120px;    /* unter dem Button */
-  right: 60px;   /* gleiche horizontale Position */
-  z-index: 2000;
+  top: 120px;
+  right: 60px;
+  z-index: 3000; /* jetzt über dem Overlay */
 }
 .feedbackToggleButton {
-  display: flex;             /* Icon zentrieren */
+  position: relative;  /* macht z-index wirksam */
+  z-index: 3001;       /* über Popover und Overlay */
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;               /* feste Button-Größe */
+  width: 44px;
   height: 44px;
-  padding: 0;                /* keine zusätzlichen Abstände */
-  background-color: #4caf50; /* falls noch nicht gesetzt */
-  border-radius: 50%;        /* runde Form */
+  background-color: #4caf50;
+  border-radius: 50%;
 }
 
 .feedbackToggleButton svg {
   width: 24px;               /* feste Icon-Größe */
   height: 24px;
+}
+.feedbackOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 2500; /* bleibt wie gehabt */
 }

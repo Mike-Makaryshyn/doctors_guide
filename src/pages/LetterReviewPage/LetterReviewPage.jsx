@@ -202,6 +202,12 @@ const LetterReviewPage = () => {
     };
   }, [tooltipVisible]);
 
+  useEffect(() => {
+    if (feedback) {
+      setTooltipVisible(true);
+    }
+  }, [feedback]);
+
   const responseLanguages = [
     "Deutsch",
     "Englisch",
@@ -791,23 +797,32 @@ const LetterReviewPage = () => {
               {tooltipVisible ? <FaTimes /> : <FaCloud />}
             </button>
             {tooltipVisible && (
-              <div
-                style={{
-                  backgroundColor: "#fff",
-                  color: "#013b6e",
-                  fontWeight: "bold",
-                  width: "600px",
-                  maxWidth: "90vw",
-                  maxHeight: "50vh",
-                  overflowY: "auto",
-                  padding: "0.75rem",
-                  borderRadius: "6px",
-                  whiteSpace: "normal",
-                  wordWrap: "break-word",
-                }}
-              >
-                {feedback.raw || feedback.notice}
-              </div>
+              <>
+                <div
+                  className={styles.feedbackOverlay}
+                  style={{
+                    backdropFilter: `blur(${loading ? 8 : 4}px)`,
+                  }}
+                />
+                <div
+                  className={styles.feedbackPopover}
+                  style={{
+                    backgroundColor: "#fff",
+                    color: "#013b6e",
+                    fontWeight: "bold",
+                    width: "600px",
+                    maxWidth: "90vw",
+                    maxHeight: "50vh",
+                    overflowY: "auto",
+                    padding: "0.75rem",
+                    borderRadius: "6px",
+                    whiteSpace: "normal",
+                    wordWrap: "break-word",
+                  }}
+                >
+                  {feedback.raw || feedback.notice}
+                </div>
+              </>
             )}
           </div>
         )}
