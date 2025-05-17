@@ -231,6 +231,9 @@ const NecessaryDocumentsPage = React.lazy(() =>
 const CaseSimulationPage = React.lazy(() =>
   import("../pages/CaseSimulationPage/CaseSimulationPage")
 );
+const LetterReviewPage = React.lazy(() =>
+  import("../pages/LetterReviewPage/LetterReviewPage")
+);
 export default function Routers() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -278,6 +281,26 @@ export default function Routers() {
   element={<ResourceListPage />}
 />
 <Route path="/case-simulation/:caseId" element={<CaseSimulationPage />} />
+<Route
+  path="/review"
+  element={
+    <DataSourceProvider>
+      <CasesProvider>
+        <LetterReviewPage />
+      </CasesProvider>
+    </DataSourceProvider>
+  }
+/>
+<Route
+  path="/review/:caseId"
+  element={
+    <DataSourceProvider>
+      <CasesProvider>
+        <LetterReviewPage />
+      </CasesProvider>
+    </DataSourceProvider>
+  }
+/>
 <Route
   path={pathList.fachsprachpruefung.path}
   element={<FachsprachPruefungPage />}

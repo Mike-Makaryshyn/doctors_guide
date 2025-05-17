@@ -176,5 +176,11 @@ export const pathList = {
   },
   fachsprachpruefung: {
     path: "/fachsprachpruefung",
-  }
+  },
+  review: {
+  path: "/review",
+},
+reviewById: {
+  path: "/review/:caseId",
+},
 };

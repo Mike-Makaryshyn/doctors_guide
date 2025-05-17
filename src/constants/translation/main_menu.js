@@ -385,6 +385,21 @@ export const main_menu_items = {
           link: "/cases",
         },
         {
+          en: "Review Brief",
+          fr: "Vérifier le courrier",
+          es: "Revisar carta médicale",
+          ar: "مراجعة الرسالة",
+          tr: "Mektubu İncele",
+          pl: "Sprawdź list",
+          uk: "Перевірити лист",
+          ru: "Проверить письмо",
+          de: "Brief prüfen",
+          el: "Έλεγχση επιστολής",
+          ro: "Verifică scrisoarea",
+          link: "/review",
+        },
+        
+        {
           en: "Frequent Cases in Region",
           fr: "Cas fréquents dans la région",
           es: "Casos frecuentes en la región",
