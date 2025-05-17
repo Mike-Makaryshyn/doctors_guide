@@ -3,7 +3,7 @@ import { useParams, useLocation } from 'react-router-dom';
 import { supabase } from '../../supabaseClient';
 import styles from './LetterReviewPage.module.css';
 import MainLayout from '../../layouts/MainLayout/MainLayout';
-import { FaExclamationCircle } from 'react-icons/fa';
+import { FaExclamationCircle, FaInfoCircle } from 'react-icons/fa';
 
 const LetterReviewPage = () => {
   const { caseId: routeCaseId } = useParams();
@@ -14,23 +14,189 @@ const LetterReviewPage = () => {
     ? `${initialParsed.fullName} ${initialParsed.surname}`
     : initialParsed.fullName || initialParsed.surname || '';
 
+  // Anamnese template
+  const anamnesisTemplate =
+    'aktuelle Beschwerden:\n\n\n\n\n\n\n' +  // six blank lines after heading
+    'Vorerkrankungen:\n\n\n' +              // two blank lines
+    'OP:\n\n\n' +                          // two blank lines
+    'Medikamente:\n\n\n';                  // two blank lines
+
+  // Allergies template
+  const allergiesTemplate =
+    'Allergien:\n' +
+    'Unverträglichkeiten:';
+
+  // Consumables template
+  const consumablesTemplate =
+    'Nikotin-Abusus:\n' +
+    'Alkohol-Abusus:\n' +
+    'Drogen-Abusus:';
+
   // 3. Brief-Inhalte
   const [letter, setLetter] = useState({
     patientAndDate: initialParsed.patientAndDate || '',
-    anamnesis: initialParsed.anamnesis || '',
+    anamnesis: initialParsed.anamnesis || anamnesisTemplate,
+    allergies: initialParsed.allergies || '',
     preexistingConditions: initialParsed.preexistingConditions || '',
     medications: initialParsed.medications || '',
     consumables: initialParsed.consumables || '',
     socialHistory: initialParsed.socialHistory || '',
     familyHistory: initialParsed.familyHistory || '',
+    suspectedDiagnosis: '',
     differentialDiagnosis: initialParsed.differentialDiagnosis || '',
     furtherProcedure: initialParsed.furtherProcedure || '',
     therapy: initialParsed.therapy || ''
   });
-  const [options, setOptions] = useState({
-    compareWithTemplate: true,
-    grammarStyleOnly: false
-  });
+
+  const [patientRows, setPatientRows] = useState(2);
+  const [allergiesRows, setAllergiesRows] = useState(2);
+  const [consumablesRows, setConsumablesRows] = useState(2);
+  const [socialHistoryRows, setSocialHistoryRows] = useState(2);
+  const [familyHistoryRows, setFamilyHistoryRows] = useState(2);
+
+  // Rows and template for Vermutete Diagnose
+  const [suspectedDiagnosisRows, setSuspectedDiagnosisRows] = useState(2);
+  const suspectedDiagnosisTemplate =
+    'Vermutete Diagnose:\n' +
+    'Begründung:';
+  const insertSuspectedDiagnosisTemplate = () => {
+    setLetter(prev => ({
+      ...prev,
+      suspectedDiagnosis: prev.suspectedDiagnosis
+        ? prev.suspectedDiagnosis + '\n' + suspectedDiagnosisTemplate
+        : suspectedDiagnosisTemplate
+    }));
+    setSuspectedDiagnosisRows(prevRows => prevRows + suspectedDiagnosisTemplate.split('\n').length);
+  };
+
+  // Insert placeholder template into Patient field
+  const insertPatientTemplate = () => {
+    setLetter(prev => ({
+      ...prev,
+      patientAndDate: prev.patientAndDate
+        ? prev.patientAndDate + '\n' + [
+            'Vorname: ',
+            'Nachname: ',
+            'Geburtsdatum: ',
+            'Alter: ',
+            'Gewicht: ',
+            'Größe: ',
+            'Hausarzt: '
+          ].join('\n')
+        : [
+            'Vorname: ',
+            'Nachname: ',
+            'Geburtsdatum: ',
+            'Alter: ',
+            'Gewicht: ',
+            'Größe: ',
+            'Hausarzt: '
+          ].join('\n')
+    }));
+  };
+
+  const insertAllergiesTemplate = () => {
+    setLetter(prev => ({
+      ...prev,
+      allergies: prev.allergies
+        ? prev.allergies + '\n' + allergiesTemplate
+        : allergiesTemplate
+    }));
+    setAllergiesRows(prevRows => prevRows + allergiesTemplate.split('\n').length);
+  };
+
+  const insertConsumablesTemplate = () => {
+    setLetter(prev => ({
+      ...prev,
+      consumables: prev.consumables
+        ? prev.consumables + '\n' + consumablesTemplate
+        : consumablesTemplate
+    }));
+    setConsumablesRows(prevRows => prevRows + consumablesTemplate.split('\n').length);
+  };
+
+  const insertDifferentialTemplate = () => {
+    setLetter(prev => ({
+      ...prev,
+      differentialDiagnosis: prev.differentialDiagnosis
+        ? prev.differentialDiagnosis + '\n' + [
+            'Differentiale Diagnosen:',
+            'Abgrenzung:'
+          ].join('\n')
+        : [
+            'Differentiale Diagnosen:',
+            'Abgrenzung:'
+          ].join('\n')
+    }));
+  };
+
+  const insertProceduresTemplate = () => {
+    setLetter(prev => ({
+      ...prev,
+      furtherProcedure: prev.furtherProcedure
+        ? prev.furtherProcedure + '\n' + [
+            'Körperliche Untersuchung:',
+            'Laboruntersuchung:',
+            'Apparative Untersuchung:'
+          ].join('\n')
+        : [
+            'Körperliche Untersuchung:',
+            'Laboruntersuchung:',
+            'Apparative Untersuchung:'
+          ].join('\n')
+    }));
+  };
+
+  // Therapy template
+  const therapyTemplate =
+    'Therapie:\n' +
+    '• ';
+  const insertTherapyTemplate = () => {
+    setLetter(prev => ({
+      ...prev,
+      therapy: prev.therapy
+        ? prev.therapy + '\nTherapie:\n• '
+        : 'Therapie:\n• '
+    }));
+  };
+
+  // Social History template
+  const socialHistoryTemplate =
+    'Beruf:\n' +
+    'Familienstand:\n' +
+    'Kinder:\n' +
+    'Wohnsituation:\n' +
+    'Psychosomatische Anamnese/Stress:\n' +
+    'Körperliche Aktivität:\n' +
+    'Ernährungsgewohnheiten:';
+
+  // Family History template
+  const familyHistoryTemplate =
+    'Familiäre Erkrankungen:\n' +
+    'Genetische Erkrankungen:\n' +
+    'Eltern:\n' +
+    'Geschwister:';
+
+  // Insert templates for Social History and Family History
+  const insertSocialHistoryTemplate = () => {
+    setLetter(prev => ({
+      ...prev,
+      socialHistory: prev.socialHistory
+        ? prev.socialHistory + '\n' + socialHistoryTemplate
+        : socialHistoryTemplate
+    }));
+    setSocialHistoryRows(prevRows => prevRows + socialHistoryTemplate.split('\n').length);
+  };
+  const insertFamilyHistoryTemplate = () => {
+    setLetter(prev => ({
+      ...prev,
+      familyHistory: prev.familyHistory
+        ? prev.familyHistory + '\n' + familyHistoryTemplate
+        : familyHistoryTemplate
+    }));
+    setFamilyHistoryRows(prevRows => prevRows + familyHistoryTemplate.split('\n').length);
+  };
+
   const [feedback, setFeedback] = useState(null);
   const [loading, setLoading] = useState(false);
   const [tokenCount, setTokenCount] = useState(0);
@@ -194,27 +360,250 @@ const LetterReviewPage = () => {
           {/* Text-Felder */}
           {[
             { label: 'Patient', key: 'patientAndDate' },
-            { label: 'Aktuelle Beschwerden', key: 'anamnesis' },
-            { label: 'Vorerkrankungen', key: 'preexistingConditions' },
-            { label: 'Medikamente', key: 'medications' },
+            { label: 'Anamnese', key: 'anamnesis' },
+            { label: 'Allergien', key: 'allergies' },
             { label: 'Genussmittel', key: 'consumables' },
             { label: 'Sozialanamnese', key: 'socialHistory' },
             { label: 'Familiäre Anamnese', key: 'familyHistory' },
+            { label: 'Diagnose', key: 'suspectedDiagnosis' },
             { label: 'Differentialdiagnose', key: 'differentialDiagnosis' },
             { label: 'Weiteres Procedere', key: 'furtherProcedure' },
             { label: 'Therapie', key: 'therapy' }
           ].map(({ label, key }) => (
             <div key={key} className={styles.field}>
               <label>{label}</label>
-              {key === 'patientAndDate' ? (
-                <input
-                  type="text"
+              {label === 'Patient' ? (
+                <div style={{ position: 'relative', width: '100%', overflow: 'visible' }}>
+                  <textarea
+                    rows={patientRows}
+                    style={{ width: '100%', paddingRight: '32px', boxSizing: 'border-box', overflow: 'hidden' }}
+                    value={letter[key]}
+                    onChange={e => {
+                      const val = e.target.value;
+                      setLetter(l => ({ ...l, [key]: val }));
+                      const lines = val.split('\n').length;
+                      setPatientRows(Math.max(lines, 2));
+                    }}
+                  />
+                  <FaInfoCircle
+                    style={{
+                      position: 'absolute',
+                      top: '8px',
+                      right: '8px',
+                      cursor: 'pointer',
+                      zIndex: 10,
+                      color: '#333'
+                    }}
+                    title="Vorlage einfügen"
+                    onClick={() => {
+                      insertPatientTemplate();
+                      setPatientRows(7);
+                    }}
+                  />
+                </div>
+              ) : label === 'Anamnese' ? (
+                <textarea
+                  rows={18}
+                  style={{ width: '100%' }}
                   value={letter[key]}
                   onChange={e => setLetter(l => ({ ...l, [key]: e.target.value }))}
                 />
+              ) : label === 'Allergien' ? (
+                <div style={{ position: 'relative', width: '100%', overflow: 'visible' }}>
+                  <textarea
+                    rows={allergiesRows}
+                    style={{ width: '100%', paddingRight: '32px', boxSizing: 'border-box', overflow: 'hidden' }}
+                    value={letter[key]}
+                    onChange={e => {
+                      const lines = e.target.value.split('\n').length;
+                      setAllergiesRows(lines);
+                      setLetter(l => ({ ...l, [key]: e.target.value }));
+                    }}
+                  />
+                  <FaInfoCircle
+                    style={{
+                      position: 'absolute',
+                      top: '8px',
+                      right: '8px',
+                      cursor: 'pointer',
+                      zIndex: 10,
+                      color: '#333'
+                    }}
+                    title="Vorlage einfügen"
+                    onClick={() => {
+                      insertAllergiesTemplate();
+                    }}
+                  />
+                </div>
+              ) : label === 'Genussmittel' ? (
+                <div style={{ position: 'relative', width: '100%', overflow: 'visible' }}>
+                  <textarea
+                    rows={consumablesRows}
+                    style={{ width: '100%', paddingRight: '32px', boxSizing: 'border-box', overflow: 'hidden' }}
+                    value={letter[key]}
+                    onChange={e => {
+                      const lines = e.target.value.split('\n').length;
+                      setConsumablesRows(lines);
+                      setLetter(l => ({ ...l, [key]: e.target.value }));
+                    }}
+                  />
+                  <FaInfoCircle
+                    style={{
+                      position: 'absolute',
+                      top: '8px',
+                      right: '8px',
+                      cursor: 'pointer',
+                      zIndex: 10,
+                      color: '#333'
+                    }}
+                    title="Vorlage einfügen"
+                    onClick={() => {
+                      insertConsumablesTemplate();
+                    }}
+                  />
+                </div>
+              ) : label === 'Sozialanamnese' ? (
+                <div style={{ position: 'relative', width: '100%', overflow: 'visible' }}>
+                  <textarea
+                    rows={socialHistoryRows}
+                    style={{ width: '100%', paddingRight: '32px', boxSizing: 'border-box', overflow: 'hidden' }}
+                    value={letter.socialHistory}
+                    onChange={e => {
+                      const lines = e.target.value.split('\n').length;
+                      setSocialHistoryRows(lines);
+                      setLetter(l => ({ ...l, socialHistory: e.target.value }));
+                    }}
+                  />
+                  <FaInfoCircle
+                    style={{
+                      position: 'absolute',
+                      top: '8px',
+                      right: '8px',
+                      cursor: 'pointer',
+                      zIndex: 10,
+                      color: '#333'
+                    }}
+                    title="Vorlage einfügen"
+                    onClick={insertSocialHistoryTemplate}
+                  />
+                </div>
+              ) : label === 'Familiäre Anamnese' ? (
+                <div style={{ position: 'relative', width: '100%', overflow: 'visible' }}>
+                  <textarea
+                    rows={familyHistoryRows}
+                    style={{ width: '100%', paddingRight: '32px', boxSizing: 'border-box', overflow: 'hidden' }}
+                    value={letter.familyHistory}
+                    onChange={e => {
+                      const lines = e.target.value.split('\n').length;
+                      setFamilyHistoryRows(lines);
+                      setLetter(l => ({ ...l, familyHistory: e.target.value }));
+                    }}
+                  />
+                  <FaInfoCircle
+                    style={{
+                      position: 'absolute',
+                      top: '8px',
+                      right: '8px',
+                      cursor: 'pointer',
+                      zIndex: 10,
+                      color: '#333'
+                    }}
+                    title="Vorlage einfügen"
+                    onClick={insertFamilyHistoryTemplate}
+                  />
+                </div>
+              ) : label === 'Differentialdiagnose' ? (
+                <div style={{ position: 'relative', width: '100%', overflow: 'visible' }}>
+                  <textarea
+                    rows={3}
+                    style={{ width: '100%', paddingRight: '32px', boxSizing: 'border-box' }}
+                    value={letter[key]}
+                    onChange={e => setLetter(l => ({ ...l, [key]: e.target.value }))}
+                  />
+                  <FaInfoCircle
+                    style={{
+                      position: 'absolute',
+                      top: '8px',
+                      right: '8px',
+                      cursor: 'pointer',
+                      zIndex: 10,
+                      color: '#333'
+                    }}
+                    title="Vorlage einfügen"
+                    onClick={() => insertDifferentialTemplate()}
+                  />
+                </div>
+              ) : label === 'Weiteres Procedere' ? (
+                <div style={{ position: 'relative', width: '100%', overflow: 'visible' }}>
+                  <textarea
+                    rows={4}
+                    style={{ width: '100%', paddingRight: '32px', boxSizing: 'border-box' }}
+                    value={letter[key]}
+                    onChange={e => setLetter(l => ({ ...l, [key]: e.target.value }))}
+                  />
+                  <FaInfoCircle
+                    style={{
+                      position: 'absolute',
+                      top: '8px',
+                      right: '8px',
+                      cursor: 'pointer',
+                      zIndex: 10,
+                      color: '#333'
+                    }}
+                    title="Vorlage einfügen"
+                    onClick={() => insertProceduresTemplate()}
+                  />
+                </div>
+              ) : label === 'Diagnose' ? (
+                <div style={{ position: 'relative', width: '100%', overflow: 'visible' }}>
+                  <textarea
+                    rows={suspectedDiagnosisRows}
+                    style={{ width: '100%', paddingRight: '32px', boxSizing: 'border-box' }}
+                    value={letter.suspectedDiagnosis}
+                    onChange={e => {
+                      const val = e.target.value;
+                      setLetter(l => ({ ...l, suspectedDiagnosis: val }));
+                      setSuspectedDiagnosisRows(val.split('\n').length);
+                    }}
+                  />
+                  <FaInfoCircle
+                    style={{
+                      position: 'absolute',
+                      top: '8px',
+                      right: '8px',
+                      cursor: 'pointer',
+                      zIndex: 10,
+                      color: '#333'
+                    }}
+                    title="Vorlage einfügen"
+                    onClick={insertSuspectedDiagnosisTemplate}
+                  />
+                </div>
+              ) : label === 'Therapie' ? (
+                <div style={{ position: 'relative', width: '100%', overflow: 'visible' }}>
+                  <textarea
+                    rows={3}
+                    style={{ width: '100%', paddingRight: '32px', boxSizing: 'border-box' }}
+                    value={letter.therapy}
+                    onChange={e => setLetter(l => ({ ...l, therapy: e.target.value }))}
+                  />
+                  <FaInfoCircle
+                    style={{
+                      position: 'absolute',
+                      top: '8px',
+                      right: '8px',
+                      cursor: 'pointer',
+                      zIndex: 10,
+                      color: '#333'
+                    }}
+                    title="Vorlage einfügen"
+                    onClick={insertTherapyTemplate}
+                  />
+                </div>
               ) : (
                 <textarea
                   rows={3}
+                  style={{ width: '100%' }}
                   value={letter[key]}
                   onChange={e => setLetter(l => ({ ...l, [key]: e.target.value }))}
                 />
@@ -222,36 +611,7 @@ const LetterReviewPage = () => {
             </div>
           ))}
 
-          {/* Vergleichs-Optionen */}
-          <div className={styles.options}>
-            <label>
-              <input
-                type="checkbox"
-                checked={options.compareWithTemplate}
-                onChange={e => setOptions(o => ({ ...o, compareWithTemplate: e.target.checked }))}
-              />
-              Mit Vorlage vergleichen
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                checked={options.grammarStyleOnly}
-                onChange={e => setOptions(o => ({ ...o, grammarStyleOnly: e.target.checked }))}
-                disabled={!options.compareWithTemplate}
-              />
-              Nur Grammatik/Stil
-            </label>
-          </div>
 
-          {/* Vergleichsvorlage */}
-          {options.compareWithTemplate && (
-            <div className={styles.field}>
-              <label>Vergleichsvorlage</label>
-              <select value={''} onChange={() => {}}>
-                <option value="">Keine Auswahl möglich</option>
-              </select>
-            </div>
-          )}
 
           <div className={styles.field}>
             <label>Antwortsprache</label>
