@@ -4,6 +4,7 @@ import { supabase } from "../../supabaseClient";
 import styles from "./LetterReviewPage.module.css";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { FaExclamationCircle, FaCog, FaInfoCircle, FaCloud, FaTimes } from "react-icons/fa";
+import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 
 const LetterReviewPage = () => {
   const { caseId: routeCaseId } = useParams();
@@ -186,6 +187,22 @@ const LetterReviewPage = () => {
   const [costUsd, setCostUsd] = useState(0);
   const [showDebug, setShowDebug] = useState(false);
   const [tooltipVisible, setTooltipVisible] = useState(false);
+  const { selectedLanguage } = useGetGlobalInfo();
+  const languageMap = {
+    de: "Deutsch",
+    en: "Englisch",
+    uk: "Українська",
+    ru: "Русский",
+    tr: "Türkçe",
+    ar: "العربية",
+    fr: "Français",
+    es: "Español",
+    pl: "Polski",
+    el: "Ελληνικά",
+    ro: "Română",
+  };
+  const targetLanguageName = languageMap[selectedLanguage] || "Englisch";
+  const emptyNotice = "Keine Felder ausgefüllt. Bitte mindestens ein Feld ausfüllen.";
 
   const feedbackRef = useRef(null);
 
@@ -208,38 +225,6 @@ const LetterReviewPage = () => {
     }
   }, [feedback]);
 
-  const responseLanguages = [
-    "Deutsch",
-    "Englisch",
-    "Українська",
-    "Русский",
-    "Türkçe",
-    "العربية",
-    "Français",
-    "Español",
-    "Polski",
-    "Ελληνικά",
-    "Română",
-  ];
-  const [responseLang, setResponseLang] = useState("Deutsch");
-
-  const emptyNotices = {
-    Deutsch: "Keine Felder ausgefüllt. Bitte mindestens ein Feld ausfüllen.",
-    Englisch: "No fields filled. Please fill in at least one field.",
-    Українська:
-      "Немає заповнених полів. Будь ласка, заповніть хоча б одне поле.",
-    Русский: "Нет заполненных полей. Пожалуйста, заполните хотя бы одно поле.",
-    Türkçe: "Hiç alan doldurulmadı. Lütfen en az bir alan doldurun.",
-    العربية: "لم يتم ملء أي حقول. الرجاء ملء حقل واحد على الأقل.",
-    Français: "Aucun champ rempli. Veuillez remplir au moins un champ.",
-    Español:
-      "No se han rellenado campos. Por favor, complete al menos un campo.",
-    Polski:
-      "Nie wypełniono żadnych pól. Proszę wypełnić przynajmniej jedno pole.",
-    Ελληνικά:
-      "Δεν συμπληρώθηκε κανένα πεδίο. Παρακαλώ συμπληρώστε τουλάχιστον ένα πεδίο.",
-    Română: "Niciun câmp completat. Vă rugăm să completaţi cel puţin un câmp.",
-  };
 
   const buildPromptData = () => {
     const filtered = Object.entries(initialParsed)
@@ -278,17 +263,15 @@ const LetterReviewPage = () => {
     {
       role: "system",
       content: [
-        `Antworte ausschließlich auf ${responseLang}.`,
-        "Du bist ein erfahrener Prüfer und bewertest nun den eingereichten Arztbrief.",
-        `• Wenn der Brief leer ist ({}), antworte nur: "${
-          emptyNotices[responseLang] || emptyNotices.Deutsch
-        }"`,
-        "• Ansonsten bewerte:",
-        "  1. Fachkorrektheit in natürlicher Sprache (keine Feldnamen nennen).",
-        "  2. Grammatikfehler auflisten und Korrekturen vorschlagen.",
-        "  3. Stil & Lesbarkeit kurz einschätzen.",
-        '  4. Gesamtbewertung: "Dieser Brief würde in der Prüfung voraussichtlich bestanden/nicht bestanden werden", mit kurzer Begründung.',
-      ].join(" "),
+        "Antworte zuerst auf Deutsch in einer eigenen Zeile,",
+        `danach in einer neuen Zeile auf ${targetLanguageName}.`,
+        "1. Überprüfe die Übereinstimmung zwischen den Falldaten (Kontext) und dem eingereichten Arztbrief. " +
+        "Liste alle Abweichungen mit dem Originalwert und dem Eingabewert auf.",
+        "2. Fachkorrektheit in natürlicher Sprache (keine Feldnamen nennen).",
+        "3. Grammatikfehler auflisten und Korrekturen vorschlagen.",
+        "4. Stil & Lesbarkeit kurz einschätzen.",
+        '5. Gesamtbewertung: "Dieser Brief würde in der Prüfung voraussichtlich bestanden/nicht bestanden werden", mit kurzer Begründung.',
+      ].join("\n"),
     },
     {
       role: "user",
@@ -298,7 +281,7 @@ const LetterReviewPage = () => {
   const fallbackMessages = [
     {
       role: "system",
-      content: emptyNotices[responseLang] || emptyNotices.Deutsch,
+      content: emptyNotice,
     },
     { role: "user", content: JSON.stringify(letter) },
   ];
@@ -309,9 +292,7 @@ const LetterReviewPage = () => {
     const payload = buildPromptData();
     if (!payload.userLetter || Object.keys(payload.userLetter).length === 0) {
       setLoading(false);
-      setFeedback({
-        notice: emptyNotices[responseLang] || emptyNotices.Deutsch,
-      });
+      setFeedback({ notice: emptyNotice });
       return;
     }
     const toSend = hasParsedData ? messages : fallbackMessages;
@@ -758,19 +739,6 @@ const LetterReviewPage = () => {
             </div>
           ))}
 
-          <div className={styles.field}>
-            <label>Antwortsprache</label>
-            <select
-              value={responseLang}
-              onChange={e => setResponseLang(e.target.value)}
-            >
-              {responseLanguages.map(lang => (
-                <option key={lang} value={lang}>
-                  {lang}
-                </option>
-              ))}
-            </select>
-          </div>
         </form>
 
         <div className={styles.reviewButtonContainer}>
