@@ -1,50 +1,31 @@
-import React, { useState, useContext, useEffect, useMemo } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useParams, useLocation } from 'react-router-dom';
 import { supabase } from '../../supabaseClient';
 import styles from './LetterReviewPage.module.css';
 import MainLayout from '../../layouts/MainLayout/MainLayout';
-import { DataSourceContext } from '../../contexts/DataSourceContext';
-import useGetGlobalInfo from '../../hooks/useGetGlobalInfo';
+import { FaExclamationCircle } from 'react-icons/fa';
 
 const LetterReviewPage = () => {
   const { caseId: routeCaseId } = useParams();
-  const { selectedRegion, handleChangeRegion } = useGetGlobalInfo() || {};
-  const context = useContext(DataSourceContext) || {};
-  const dataSources = context.dataSources || {};
-  const regions = Object.keys(dataSources).filter(r => dataSources[r].type === 'dynamic');
-
-  // 1. Region automatisch initialisieren
-  const [region, setRegion] = useState(selectedRegion || regions[0] || '');
-  useEffect(() => {
-    if (handleChangeRegion && region) handleChangeRegion(region);
-  }, [region, handleChangeRegion]);
-
-  // 2. Lokale Cases & Templates
-  const [localCases, setLocalCases] = useState([]);
-  const [selectedCase, setSelectedCase] = useState(routeCaseId || '');
-  const [selectedTemplateCase, setSelectedTemplateCase] = useState('');
-
-  useEffect(() => {
-    if (!region) return;
-    const local = dataSources[region]?.sources?.local || [];
-    setLocalCases(local);
-    setSelectedTemplateCase(local[0]?.id || '');
-    // Defaults setzen
-    setSelectedCase(prev => prev || local[0]?.id || '');
-  }, [region, dataSources, routeCaseId]);
+  const location = useLocation();
+  const initialParsed = location.state?.parsedData || {};
+  const hasParsedData = Object.keys(initialParsed).length > 0;
+  const fullNameDisplay = initialParsed.fullName && initialParsed.surname
+    ? `${initialParsed.fullName} ${initialParsed.surname}`
+    : initialParsed.fullName || initialParsed.surname || '';
 
   // 3. Brief-Inhalte
   const [letter, setLetter] = useState({
-    patientAndDate: '',
-    anamnesis: '',
-    preexistingConditions: '',
-    medications: '',
-    consumables: '',
-    socialHistory: '',
-    familyHistory: '',
-    differentialDiagnosis: '',
-    furtherProcedure: '',
-    therapy: ''
+    patientAndDate: initialParsed.patientAndDate || '',
+    anamnesis: initialParsed.anamnesis || '',
+    preexistingConditions: initialParsed.preexistingConditions || '',
+    medications: initialParsed.medications || '',
+    consumables: initialParsed.consumables || '',
+    socialHistory: initialParsed.socialHistory || '',
+    familyHistory: initialParsed.familyHistory || '',
+    differentialDiagnosis: initialParsed.differentialDiagnosis || '',
+    furtherProcedure: initialParsed.furtherProcedure || '',
+    therapy: initialParsed.therapy || ''
   });
   const [options, setOptions] = useState({
     compareWithTemplate: true,
@@ -54,34 +35,87 @@ const LetterReviewPage = () => {
   const [loading, setLoading] = useState(false);
   const [tokenCount, setTokenCount] = useState(0);
   const [costUsd, setCostUsd] = useState(0);
+  // Debug toggle to inspect prompt data
+  const [showDebug, setShowDebug] = useState(false);
 
-  // 4. Helfer: nur nicht-leere Felder, patientAndDate ausfiltern
+  // 4. Helfer: alle geparsten Felder (initialParsed), entferne leere Strings/Null/Undefined
   const buildPromptData = () => {
-    const filtered = Object.entries(letter)
-      .filter(([k, v]) => k !== 'patientAndDate' && v && v.trim() !== '')
-      .reduce((acc, [k, v]) => ({ ...acc, [k]: v.trim() }), {});
+    // Nehme alle geparsten Daten, entferne leere Strings/Null/Undefined
+    const filtered = Object.entries(initialParsed)
+      .filter(([k, v]) =>
+        k !== 'patientQuestions' &&
+        k !== 'examinerQuestions' &&
+        k !== 'id' &&
+        k !== 'examDate' &&
+        v !== null &&
+        v !== undefined &&
+        !(typeof v === 'string' && v.trim() === '')
+      )
+      .reduce((acc, [k, v]) => ({ ...acc, [k]: typeof v === 'string' ? v.trim() : v }), {});
     return {
-      caseId: selectedCase,
-      ...(options.compareWithTemplate && { templateCaseId: selectedTemplateCase }),
       userLetter: filtered
     };
   };
+
+  // Build primary payload
+  const payload = buildPromptData();
+
+  // Messages when parsed data exists
+  const messages = [
+    {
+      role: 'system',
+      content: [
+        'Du erhältst nun die vollständigen Falldaten, auf deren Grundlage der Arztbrief erstellt wurde.',
+        'Nutze diese Informationen nur als Kontext und wiederhole sie nicht.'
+      ].join(' ') + `\n\nDaten:\n${JSON.stringify(payload, null, 2)}`
+    },
+    {
+      role: 'system',
+      content: [
+        'Du bist ein erfahrener Prüfer und bewertest nun den eingereichten Arztbrief.',
+        '• Wenn der Brief leer ist ({}), antworte nur: "Keine Briefdaten vorhanden. Bitte mindestens ein Feld ausfüllen."',
+        '• Ansonsten bewerte:',
+        '  1. Fachkorrektheit in natürlicher Sprache (keine Feldnamen nennen).',
+        '  2. Grammatikfehler auflisten und Korrekturen vorschlagen.',
+        '  3. Stil & Lesbarkeit kurz einschätzen.',
+        '  4. Gesamtbewertung: "Dieser Brief würde in der Prüfung voraussichtlich bestanden/nicht bestanden werden", mit kurzer Begründung.'
+      ].join(' ')
+    },
+    {
+      role: 'user',
+      content: JSON.stringify(letter, null, 2)
+    }
+  ];
+
+  // Fallback messages when no parsed data
+  const fallbackMessages = [
+    {
+      role: 'system',
+      content: `Sie sind ein Prüfer, der einen frei eingegebenen Arztbrief bewertet. Führen Sie Grammatik- und Stilprüfung durch und geben Sie Verbesserungsvorschläge.`
+    },
+    { role: 'user', content: JSON.stringify(letter) }
+  ];
+
+  // Choose which set to debug or send
+  const debugMessages = hasParsedData ? messages : fallbackMessages;
 
   // 5. Review-Handler
   const handleReview = async () => {
     setLoading(true);
     const payload = buildPromptData();
-    const systemMsg = options.compareWithTemplate
-      ? `Vergleiche diesen Arzt-Brief für Fall ${selectedCase} mit der Vorlage ${selectedTemplateCase}.`
-      : `Prüfe diesen Arzt-Brief für Fall ${selectedCase}.`;
+    // If no userLetter fields provided, skip API call and show notice
+    if (!payload.userLetter || Object.keys(payload.userLetter).length === 0) {
+      setLoading(false);
+      setFeedback({ notice: 'Keine Felder ausgefüllt. Bitte mindestens ein Feld ausfüllen.' });
+      return;
+    }
+    const toSend = hasParsedData ? messages : fallbackMessages;
+    console.log('Sending to GPT:', toSend);
     const { data, error } = await supabase.functions.invoke('openai-proxy', {
       body: {
-        model: 'gpt-4o-mini',
+        model: 'gpt-4',
         temperature: 0,
-        messages: [
-          { role: 'system',  content: systemMsg },
-          { role: 'user',    content: JSON.stringify(payload) }
-        ]
+        messages: toSend
       }
     });
     // Token & Kosten
@@ -101,27 +135,36 @@ const LetterReviewPage = () => {
     setFeedback(parsed);
   };
 
-  // 6. Memoisierte Statusanzeigen
-  const statsInfo = useMemo(() => ({
-    casesCount: localCases.length
-  }), [localCases]);
-
   return (
     <MainLayout>
       <div className={styles.wrapper}>
         <h1>
-          {selectedCase
-            ? `Arzt-Brief Review – Fall ${selectedCase}`
+          {hasParsedData && (
+            <FaExclamationCircle
+              title="Parsed data present"
+              style={{ color: 'orange', marginRight: '8px', cursor: 'pointer' }}
+              onClick={() => setShowDebug(d => !d)}
+            />
+          )}
+          {fullNameDisplay
+            ? `Arzt-Brief Review – ${fullNameDisplay}`
+            : routeCaseId
+            ? `Arzt-Brief Review – Fall ${routeCaseId}`
             : 'Arzt-Brief Review'}
         </h1>
+
+        {showDebug && (
+          <div style={{ background: '#f9f9f9', border: '1px solid #ddd', padding: '12px', margin: '12px 0' }}>
+            <h2 style={{ margin: '0 0 8px' }}>Debug Prompt</h2>
+            <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-all', fontSize: '0.9em' }}>
+              {JSON.stringify(debugMessages, null, 2)}
+            </pre>
+          </div>
+        )}
 
         <div className={styles.counters}>
           <span>Tokens: {tokenCount}</span>
           <span>Kosten: €{costUsd.toFixed(4)}</span>
-        </div>
-
-        <div className={styles.stats}>
-          <div>Fälle in {dataSources[region]?.name}: {statsInfo.casesCount}</div>
         </div>
 
         <form className={styles.form} onSubmit={e => { e.preventDefault(); handleReview(); }}>
@@ -156,28 +199,6 @@ const LetterReviewPage = () => {
             </div>
           ))}
 
-          {/* Region & Fall */}
-          <div className={styles.row}>
-            <div className={styles.field}>
-              <label>Region</label>
-              <select value={region} onChange={e => setRegion(e.target.value)}>
-                {regions.map(r =>
-                  <option key={r} value={r}>{dataSources[r].name}</option>
-                )}
-              </select>
-            </div>
-            <div className={styles.field}>
-              <label>Fall</label>
-              <select value={selectedCase} onChange={e => setSelectedCase(e.target.value)}>
-                {localCases.map(c =>
-                  <option key={c.id} value={c.id}>
-                    {c.fileDisplayName || c.name || c.id}
-                  </option>
-                )}
-              </select>
-            </div>
-          </div>
-
           {/* Vergleichs-Optionen */}
           <div className={styles.options}>
             <label>
@@ -203,12 +224,8 @@ const LetterReviewPage = () => {
           {options.compareWithTemplate && (
             <div className={styles.field}>
               <label>Vergleichsvorlage</label>
-              <select value={selectedTemplateCase} onChange={e => setSelectedTemplateCase(e.target.value)}>
-                {localCases.map(c =>
-                  <option key={c.id} value={c.id}>
-                    {c.fileDisplayName || c.name || c.id}
-                  </option>
-                )}
+              <select value={''} onChange={() => {}}>
+                <option value="">Keine Auswahl möglich</option>
               </select>
             </div>
           )}

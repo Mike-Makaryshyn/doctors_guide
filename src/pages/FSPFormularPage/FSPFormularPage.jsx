@@ -38,7 +38,7 @@ import { parseData } from "../../utils/dataParser";
 import useIsMobile from "../../hooks/useIsMobile";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { DataSourceContext } from "../../contexts/DataSourceContext";
-import { FaCheck, FaPause, FaCog, FaPlus, FaSync, FaPlay } from "react-icons/fa";
+import { FaCheck, FaPause, FaCog, FaPlus, FaSync, FaPlay, FaEnvelope } from "react-icons/fa";
 import { previewFSPPDF, downloadFSPPDF } from "./pdfFSPFormular"; // <-- Імпорт
 import { FaPrint, FaDownload, FaFilePdf } from "react-icons/fa";
 import { supabase } from "../../supabaseClient";
@@ -869,6 +869,31 @@ const FSPFormularPage = () => {
                     aria-label="Simulation starten"
                   >
                     <FaPlay className={styles["icon-common"]} />
+                  </button>
+                  <button
+                    className={styles["actionButton"]}
+                    onClick={() => {
+                      if (requireAuth()) return;
+                      const filteredParsed = Object.entries(parsedData).reduce((acc, [k, v]) => {
+                        if (
+                          v !== null &&
+                          v !== undefined &&
+                          !(typeof v === 'string' && v.trim() === '')
+                        ) {
+                          acc[k] = v;
+                        }
+                        return acc;
+                      }, {});
+                      localStorage.setItem(
+                        "review_parsedData",
+                        JSON.stringify(filteredParsed)
+                      );
+                      navigate(`/review/${selectedCase}`, { state: { parsedData: filteredParsed } });
+                    }}
+                    disabled={!selectedCase}
+                    aria-label="Brief prüfen"
+                  >
+                    <FaEnvelope className={styles["icon-common"]} />
                   </button>
                 </div>
 

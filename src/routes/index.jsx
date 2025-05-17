@@ -281,26 +281,8 @@ export default function Routers() {
   element={<ResourceListPage />}
 />
 <Route path="/case-simulation/:caseId" element={<CaseSimulationPage />} />
-<Route
-  path="/review"
-  element={
-    <DataSourceProvider>
-      <CasesProvider>
-        <LetterReviewPage />
-      </CasesProvider>
-    </DataSourceProvider>
-  }
-/>
-<Route
-  path="/review/:caseId"
-  element={
-    <DataSourceProvider>
-      <CasesProvider>
-        <LetterReviewPage />
-      </CasesProvider>
-    </DataSourceProvider>
-  }
-/>
+<Route path="/review" element={<LetterReviewPage />} />
+<Route path="/review/:caseId" element={<LetterReviewPage />} />
 <Route
   path={pathList.fachsprachpruefung.path}
   element={<FachsprachPruefungPage />}
