@@ -3,7 +3,7 @@ import { useParams, useLocation } from 'react-router-dom';
 import { supabase } from '../../supabaseClient';
 import styles from './LetterReviewPage.module.css';
 import MainLayout from '../../layouts/MainLayout/MainLayout';
-import { FaExclamationCircle, FaInfoCircle } from 'react-icons/fa';
+import { FaExclamationCircle, FaInfoCircle, FaCog } from 'react-icons/fa';
 
 const LetterReviewPage = () => {
   const { caseId: routeCaseId } = useParams();
@@ -203,6 +203,7 @@ const LetterReviewPage = () => {
   const [costUsd, setCostUsd] = useState(0);
   // Debug toggle to inspect prompt data
   const [showDebug, setShowDebug] = useState(false);
+  const [showPopover, setShowPopover] = useState(false);
 
   // Available feedback languages
   const responseLanguages = [
@@ -625,14 +626,29 @@ const LetterReviewPage = () => {
             </select>
           </div>
 
-          <button type="submit" className={styles.btn} disabled={loading}>
-            {loading ? 'Prüfe…' : 'Brief prüfen'}
-          </button>
         </form>
+        <div className={styles.reviewButtonContainer}>
+          <button
+            type="button"
+            className={styles.reviewButton}
+            onClick={handleReview}
+            disabled={loading}
+          >
+            <FaCog className={loading ? styles.spin : ''} />
+          </button>
+        </div>
 
-        {/* Feedback */}
+        {/* Feedback toggle icon */}
         {feedback && (
-          <div className={styles.feedback}>
+          <FaInfoCircle
+            className={styles.feedbackToggleIcon}
+            title="Feedback anzeigen"
+            onClick={() => setShowPopover(prev => !prev)}
+          />
+        )}
+        {/* Popover window */}
+        {feedback && showPopover && (
+          <div className={styles.feedbackPopover}>
             {feedback.notice && <p className={styles.notice}>{feedback.notice}</p>}
             {feedback.similarityScore != null &&
               <p>Ähnlichkeit: {(feedback.similarityScore * 100).toFixed(1)} %</p>

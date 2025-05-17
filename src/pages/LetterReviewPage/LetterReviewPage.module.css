@@ -1,3 +1,16 @@
+.field textarea,
+.field select {
+  background: #fff;
+  box-shadow: 6px 6px 12px rgba(19,57,51,0.5), -6px -6px 12px rgba(65,191,171,0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.field textarea:focus,
+.field select:focus {
+  box-shadow: inset 3px 3px 5px rgba(19,57,51,0.5), inset -3px -3px 5px rgba(65,191,171,0.5);
+  outline: none;
+}
+
 .wrapper {
   max-width: 800px;
   margin: 1.5rem auto;
@@ -29,10 +42,10 @@ h1 {
 }
 
 .form {
-  background: #fafafa;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1rem;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
   margin-bottom: 1.25rem;
 }
 
@@ -97,6 +110,7 @@ h1 {
 }
 
 .feedback {
+  position: relative;
   background: #fff;
   border: 1px solid #007bff;
   border-radius: 6px;
@@ -122,4 +136,66 @@ pre {
   padding: 0.5rem;
   border-radius: 4px;
   overflow-x: auto;
+}
+
+.reviewButtonContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.reviewButton {
+  background: #013b6e;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  box-shadow: 6px 6px 12px rgba(19,57,51,0.5), -6px -6px 12px rgba(65,191,171,0.5);
+  transition: transform 0.2s ease;
+}
+
+.reviewButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.reviewButton:hover:not(:disabled) {
+  transform: scale(1.1);
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.tooltipIcon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 4px;
+  cursor: pointer;
+}
+/* Feedback-Popover */
+.feedbackPopover {
+  position: fixed;
+  top: 120px;   /* further below header */
+  right: 20px;
+  z-index: 2000;
+}
+.feedbackToggleIcon {
+  position: fixed;
+  top: 100px;    /* lower under header */
+  right: 20px;
+  cursor: pointer;
+  z-index: 2000; /* above MainLayout */
+  background: none;
+  box-shadow: none;
 }
