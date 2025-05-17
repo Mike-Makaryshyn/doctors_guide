@@ -10,6 +10,14 @@
   box-shadow: inset 3px 3px 5px rgba(19,57,51,0.5), inset -3px -3px 5px rgba(65,191,171,0.5);
   outline: none;
 }
+.fieldLabel {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #013b6e;
+  margin-bottom: 0.75rem;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+}
 
 .wrapper {
   max-width: 800px;
@@ -56,9 +64,15 @@ h1 {
 }
 
 .field label {
-  font-weight: 600;
-  margin-bottom: 0.25rem;
+ font-weight: 600;
+  font-size: 1.5rem;
   color: #013b6e;
+  margin-bottom: 0.75rem;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+  align-self: stretch;     /* Label spans full width */
+  padding-left: 0.5rem;    /* Align with input text */
+  text-align: left;        /* Ensure left alignment */
 }
 
 .field textarea,
@@ -237,4 +251,31 @@ pre {
   backdrop-filter: blur(4px);
   background-color: rgba(255, 255, 255, 0.3);
   z-index: 2500; /* bleibt wie gehabt */
+}
+
+.tooltipIcon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  color: #013b6e;
+  font-size: 1.5rem;              /* größeres Icon */
+  transition: transform 0.2s ease, color 0.2s ease;
+  animation: pulse 4s ease-in-out infinite; /* fortlaufendes Pulsieren */
+}
+.tooltipIcon:hover {
+  color: #00509e;               /* Dunkleres Blau beim Hover */
+  transform: translateY(-2px);  /* Hebt das Icon leicht an */
+}
+.tooltipIcon:active {
+  transform: translateY(0);     /* Rücksprung bei Klick */
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }

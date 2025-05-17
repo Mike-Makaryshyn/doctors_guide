@@ -3,7 +3,13 @@ import { useParams, useLocation } from "react-router-dom";
 import { supabase } from "../../supabaseClient";
 import styles from "./LetterReviewPage.module.css";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
-import { FaExclamationCircle, FaCog, FaInfoCircle, FaCloud, FaTimes } from "react-icons/fa";
+import {
+  FaExclamationCircle,
+  FaCog,
+  FaInfoCircle,
+  FaCloud,
+  FaTimes,
+} from "react-icons/fa";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 
 const LetterReviewPage = () => {
@@ -187,6 +193,15 @@ const LetterReviewPage = () => {
   const [costUsd, setCostUsd] = useState(0);
   const [showDebug, setShowDebug] = useState(false);
   const [tooltipVisible, setTooltipVisible] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobileView(window.innerWidth <= 768);
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const { selectedLanguage } = useGetGlobalInfo();
   const languageMap = {
     de: "Deutsch",
@@ -202,7 +217,8 @@ const LetterReviewPage = () => {
     ro: "Română",
   };
   const targetLanguageName = languageMap[selectedLanguage] || "Englisch";
-  const emptyNotice = "Keine Felder ausgefüllt. Bitte mindestens ein Feld ausfüllen.";
+  const emptyNotice =
+    "Keine Felder ausgefüllt. Bitte mindestens ein Feld ausfüllen.";
 
   const feedbackRef = useRef(null);
 
@@ -224,7 +240,6 @@ const LetterReviewPage = () => {
       setTooltipVisible(true);
     }
   }, [feedback]);
-
 
   const buildPromptData = () => {
     const filtered = Object.entries(initialParsed)
@@ -266,7 +281,7 @@ const LetterReviewPage = () => {
         "Antworte zuerst auf Deutsch in einer eigenen Zeile,",
         `danach in einer neuen Zeile auf ${targetLanguageName}.`,
         "1. Überprüfe die Übereinstimmung zwischen den Falldaten (Kontext) und dem eingereichten Arztbrief. " +
-        "Liste alle Abweichungen mit dem Originalwert und dem Eingabewert auf.",
+          "Liste alle Abweichungen mit dem Originalwert und dem Eingabewert auf.",
         "2. Fachkorrektheit in natürlicher Sprache (keine Feldnamen nennen).",
         "3. Grammatikfehler auflisten und Korrekturen vorschlagen.",
         "4. Stil & Lesbarkeit kurz einschätzen.",
@@ -330,7 +345,7 @@ const LetterReviewPage = () => {
             <FaExclamationCircle
               title="Parsed data present"
               style={{ color: "orange", marginRight: 8, cursor: "pointer" }}
-              onClick={() => setShowDebug(d => !d)}
+              onClick={() => setShowDebug((d) => !d)}
             />
           )}
           {fullNameDisplay
@@ -369,7 +384,7 @@ const LetterReviewPage = () => {
 
         <form
           className={styles.form}
-          onSubmit={e => {
+          onSubmit={(e) => {
             e.preventDefault();
             handleReview();
           }}
@@ -388,7 +403,7 @@ const LetterReviewPage = () => {
             { label: "Therapie", key: "therapy" },
           ].map(({ label, key }) => (
             <div key={key} className={styles.field}>
-              <label>{label}</label>
+            <label className={styles.fieldLabel}>{label}</label>
               {label === "Patient" ? (
                 <div
                   style={{
@@ -406,21 +421,22 @@ const LetterReviewPage = () => {
                       overflow: "hidden",
                     }}
                     value={letter[key]}
-                    onChange={e => {
+                    onChange={(e) => {
                       const val = e.target.value;
-                      setLetter(l => ({ ...l, [key]: val }));
+                      setLetter((l) => ({ ...l, [key]: val }));
                       const lines = val.split("\n").length;
                       setPatientRows(Math.max(lines, 2));
                     }}
                   />
                   <FaInfoCircle
+                  className={styles.tooltipIcon}
                     style={{
                       position: "absolute",
                       top: "8px",
                       right: "8px",
                       cursor: "pointer",
                       zIndex: 10,
-                      color: "#333",
+                      color: "#013b6e",
                     }}
                     title="Vorlage einfügen"
                     onClick={() => {
@@ -434,8 +450,8 @@ const LetterReviewPage = () => {
                   rows={18}
                   style={{ width: "100%" }}
                   value={letter[key]}
-                  onChange={e =>
-                    setLetter(l => ({ ...l, [key]: e.target.value }))
+                  onChange={(e) =>
+                    setLetter((l) => ({ ...l, [key]: e.target.value }))
                   }
                 />
               ) : label === "Allergien" ? (
@@ -455,20 +471,21 @@ const LetterReviewPage = () => {
                       overflow: "hidden",
                     }}
                     value={letter[key]}
-                    onChange={e => {
+                    onChange={(e) => {
                       const lines = e.target.value.split("\n").length;
                       setAllergiesRows(lines);
-                      setLetter(l => ({ ...l, [key]: e.target.value }));
+                      setLetter((l) => ({ ...l, [key]: e.target.value }));
                     }}
                   />
                   <FaInfoCircle
+                  className={styles.tooltipIcon}
                     style={{
                       position: "absolute",
                       top: "8px",
                       right: "8px",
                       cursor: "pointer",
                       zIndex: 10,
-                      color: "#333",
+                      color: "#013b6e",
                     }}
                     title="Vorlage einfügen"
                     onClick={() => {
@@ -493,20 +510,21 @@ const LetterReviewPage = () => {
                       overflow: "hidden",
                     }}
                     value={letter[key]}
-                    onChange={e => {
+                    onChange={(e) => {
                       const lines = e.target.value.split("\n").length;
                       setConsumablesRows(lines);
-                      setLetter(l => ({ ...l, [key]: e.target.value }));
+                      setLetter((l) => ({ ...l, [key]: e.target.value }));
                     }}
                   />
                   <FaInfoCircle
+                  className={styles.tooltipIcon}
                     style={{
                       position: "absolute",
                       top: "8px",
                       right: "8px",
                       cursor: "pointer",
                       zIndex: 10,
-                      color: "#333",
+                      color: "#013b6e",
                     }}
                     title="Vorlage einfügen"
                     onClick={() => {
@@ -531,23 +549,24 @@ const LetterReviewPage = () => {
                       overflow: "hidden",
                     }}
                     value={letter.socialHistory}
-                    onChange={e => {
+                    onChange={(e) => {
                       const lines = e.target.value.split("\n").length;
                       setSocialHistoryRows(lines);
-                      setLetter(l => ({
+                      setLetter((l) => ({
                         ...l,
                         socialHistory: e.target.value,
                       }));
                     }}
                   />
                   <FaInfoCircle
+                  className={styles.tooltipIcon}
                     style={{
                       position: "absolute",
                       top: "8px",
                       right: "8px",
                       cursor: "pointer",
                       zIndex: 10,
-                      color: "#333",
+                      color: "#013b6e",
                     }}
                     title="Vorlage einfügen"
                     onClick={insertSocialHistoryTemplate}
@@ -570,23 +589,24 @@ const LetterReviewPage = () => {
                       overflow: "hidden",
                     }}
                     value={letter.familyHistory}
-                    onChange={e => {
+                    onChange={(e) => {
                       const lines = e.target.value.split("\n").length;
                       setFamilyHistoryRows(lines);
-                      setLetter(l => ({
+                      setLetter((l) => ({
                         ...l,
                         familyHistory: e.target.value,
                       }));
                     }}
                   />
                   <FaInfoCircle
+                  className={styles.tooltipIcon}
                     style={{
                       position: "absolute",
                       top: "8px",
                       right: "8px",
                       cursor: "pointer",
                       zIndex: 10,
-                      color: "#333",
+                      color: "#013b6e",
                     }}
                     title="Vorlage einfügen"
                     onClick={insertFamilyHistoryTemplate}
@@ -608,18 +628,19 @@ const LetterReviewPage = () => {
                       boxSizing: "border-box",
                     }}
                     value={letter[key]}
-                    onChange={e =>
-                      setLetter(l => ({ ...l, [key]: e.target.value }))
+                    onChange={(e) =>
+                      setLetter((l) => ({ ...l, [key]: e.target.value }))
                     }
                   />
                   <FaInfoCircle
+                  className={styles.tooltipIcon}
                     style={{
                       position: "absolute",
                       top: "8px",
                       right: "8px",
                       cursor: "pointer",
                       zIndex: 10,
-                      color: "#333",
+                      color: "#013b6e",
                     }}
                     title="Vorlage einfügen"
                     onClick={() => insertDifferentialTemplate()}
@@ -641,18 +662,19 @@ const LetterReviewPage = () => {
                       boxSizing: "border-box",
                     }}
                     value={letter[key]}
-                    onChange={e =>
-                      setLetter(l => ({ ...l, [key]: e.target.value }))
+                    onChange={(e) =>
+                      setLetter((l) => ({ ...l, [key]: e.target.value }))
                     }
                   />
                   <FaInfoCircle
+                  className={styles.tooltipIcon}
                     style={{
                       position: "absolute",
                       top: "8px",
                       right: "8px",
                       cursor: "pointer",
                       zIndex: 10,
-                      color: "#333",
+                      color: "#013b6e",
                     }}
                     title="Vorlage einfügen"
                     onClick={() => insertProceduresTemplate()}
@@ -674,20 +696,21 @@ const LetterReviewPage = () => {
                       boxSizing: "border-box",
                     }}
                     value={letter.suspectedDiagnosis}
-                    onChange={e => {
+                    onChange={(e) => {
                       const val = e.target.value;
-                      setLetter(l => ({ ...l, suspectedDiagnosis: val }));
+                      setLetter((l) => ({ ...l, suspectedDiagnosis: val }));
                       setSuspectedDiagnosisRows(val.split("\n").length);
                     }}
                   />
                   <FaInfoCircle
+                  className={styles.tooltipIcon}
                     style={{
                       position: "absolute",
                       top: "8px",
                       right: "8px",
                       cursor: "pointer",
                       zIndex: 10,
-                      color: "#333",
+                      color: "#013b6e",
                     }}
                     title="Vorlage einfügen"
                     onClick={insertSuspectedDiagnosisTemplate}
@@ -709,18 +732,19 @@ const LetterReviewPage = () => {
                       boxSizing: "border-box",
                     }}
                     value={letter.therapy}
-                    onChange={e =>
-                      setLetter(l => ({ ...l, therapy: e.target.value }))
+                    onChange={(e) =>
+                      setLetter((l) => ({ ...l, therapy: e.target.value }))
                     }
                   />
                   <FaInfoCircle
+                  className={styles.tooltipIcon}
                     style={{
                       position: "absolute",
                       top: "8px",
                       right: "8px",
                       cursor: "pointer",
                       zIndex: 10,
-                      color: "#333",
+                      color: "#013b6e",
                     }}
                     title="Vorlage einfügen"
                     onClick={insertTherapyTemplate}
@@ -731,14 +755,13 @@ const LetterReviewPage = () => {
                   rows={3}
                   style={{ width: "100%" }}
                   value={letter[key]}
-                  onChange={e =>
-                    setLetter(l => ({ ...l, [key]: e.target.value }))
+                  onChange={(e) =>
+                    setLetter((l) => ({ ...l, [key]: e.target.value }))
                   }
                 />
               )}
             </div>
           ))}
-
         </form>
 
         <div className={styles.reviewButtonContainer}>
@@ -759,7 +782,7 @@ const LetterReviewPage = () => {
             <button
               type="button"
               className={styles.feedbackToggleButton}
-              onClick={() => setTooltipVisible(v => !v)}
+              onClick={() => setTooltipVisible((v) => !v)}
               title="Feedback anzeigen"
             >
               {tooltipVisible ? <FaTimes /> : <FaCloud />}
@@ -774,19 +797,42 @@ const LetterReviewPage = () => {
                 />
                 <div
                   className={styles.feedbackPopover}
-                  style={{
-                    backgroundColor: "#fff",
-                    color: "#013b6e",
-                    fontWeight: "bold",
-                    width: "600px",
-                    maxWidth: "90vw",
-                    maxHeight: "50vh",
-                    overflowY: "auto",
-                    padding: "0.75rem",
-                    borderRadius: "6px",
-                    whiteSpace: "normal",
-                    wordWrap: "break-word",
-                  }}
+                  style={
+                    isMobileView
+                      ? {
+                          position: "fixed",
+                          top: "10vh",
+                          left: "50%",
+                          transform: "translateX(-50%)",
+                          backgroundColor: "#fff",
+                          color: "#013b6e",
+                          fontWeight: "bold",
+                          width: "90vw",
+                          maxWidth: "600px",
+                          maxHeight: "80vh",
+                          overflowY: "auto",
+                          padding: "0.75rem",
+                          borderRadius: "6px",
+                          whiteSpace: "normal",
+                          wordWrap: "break-word",
+                        }
+                      : {
+                          position: "fixed",
+                          top: "120px",
+                          right: "60px",
+                          backgroundColor: "#fff",
+                          color: "#013b6e",
+                          fontWeight: "bold",
+                          width: "600px",
+                          maxWidth: "90vw",
+                          maxHeight: "50vh",
+                          overflowY: "auto",
+                          padding: "0.75rem",
+                          borderRadius: "6px",
+                          whiteSpace: "normal",
+                          wordWrap: "break-word",
+                        }
+                  }
                 >
                   {feedback.raw || feedback.notice}
                 </div>
