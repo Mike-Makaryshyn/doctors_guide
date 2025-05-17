@@ -139,21 +139,25 @@ pre {
 }
 
 .reviewButtonContainer {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
+ position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 2000;
 }
 
 .reviewButton {
-  background: #013b6e;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  padding: 12px;
-  cursor: pointer;
-  box-shadow: 6px 6px 12px rgba(19,57,51,0.5), -6px -6px 12px rgba(65,191,171,0.5);
-  transition: transform 0.2s ease;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .reviewButton:disabled {
@@ -184,18 +188,42 @@ pre {
   cursor: pointer;
 }
 /* Feedback-Popover */
+/* Container für Feedback-Button oben rechts */
+.feedbackContainer {
+ position: fixed;
+  top: 65px;
+  right: 0px; /* Відступ справа */
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+}
+
+/* Der runde Button im Header */
+
+
+.feedbackToggleButton:hover {
+  transform: scale(1.1);
+}
+
+/* Popover direkt unter dem Button */
 .feedbackPopover {
   position: fixed;
-  top: 120px;   /* further below header */
-  right: 20px;
+  top: 120px;    /* unter dem Button */
+  right: 60px;   /* gleiche horizontale Position */
   z-index: 2000;
 }
-.feedbackToggleIcon {
-  position: fixed;
-  top: 100px;    /* lower under header */
-  right: 20px;
-  cursor: pointer;
-  z-index: 2000; /* above MainLayout */
-  background: none;
-  box-shadow: none;
+.feedbackToggleButton {
+  display: flex;             /* Icon zentrieren */
+  align-items: center;
+  justify-content: center;
+  width: 44px;               /* feste Button-Größe */
+  height: 44px;
+  padding: 0;                /* keine zusätzlichen Abstände */
+  background-color: #4caf50; /* falls noch nicht gesetzt */
+  border-radius: 50%;        /* runde Form */
+}
+
+.feedbackToggleButton svg {
+  width: 24px;               /* feste Icon-Größe */
+  height: 24px;
 }
