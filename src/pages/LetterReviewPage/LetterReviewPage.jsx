@@ -38,6 +38,28 @@ const LetterReviewPage = () => {
   // Debug toggle to inspect prompt data
   const [showDebug, setShowDebug] = useState(false);
 
+  // Available feedback languages
+  const responseLanguages = [
+    'Deutsch', 'Englisch', 'Українська', 'Русский', 'Türkçe',
+    'العربية', 'Français', 'Español', 'Polski', 'Ελληνικά', 'Română'
+  ];
+  const [responseLang, setResponseLang] = useState('Deutsch');
+
+  // Notices for when no letter fields are filled
+  const emptyNotices = {
+    Deutsch: 'Keine Felder ausgefüllt. Bitte mindestens ein Feld ausfüllen.',
+    Englisch: 'No fields filled. Please fill in at least one field.',
+    Українська: 'Немає заповнених полів. Будь ласка, заповніть хоча б одне поле.',
+    Русский: 'Нет заполненных полей. Пожалуйста, заполните хотя бы одно поле.',
+    Türkçe: 'Hiç alan doldurulmadı. Lütfen en az bir alan doldurun.',
+    العربية: 'لم يتم ملء أي حقول. الرجاء ملء حقل واحد على الأقل.',
+    Français: 'Aucun champ rempli. Veuillez remplir au moins un champ.',
+    Español: 'No se han rellenado campos. Por favor, complete al menos un campo.',
+    Polski: 'Nie wypełniono żadnych pól. Proszę wypełnić przynajmniej jedno pole.',
+    Ελληνικά: 'Δεν συμπληρώθηκε κανένα πεδίο. Παρακαλώ συμπληρώστε τουλάχιστον ένα πεδίο.',
+    Română: 'Niciun câmp completat. Vă rugăm să completaţi cel puţin un câmp.'
+  };
+
   // 4. Helfer: alle geparsten Felder (initialParsed), entferne leere Strings/Null/Undefined
   const buildPromptData = () => {
     // Nehme alle geparsten Daten, entferne leere Strings/Null/Undefined
@@ -72,8 +94,9 @@ const LetterReviewPage = () => {
     {
       role: 'system',
       content: [
+        `Antworte ausschließlich auf ${responseLang}.`,
         'Du bist ein erfahrener Prüfer und bewertest nun den eingereichten Arztbrief.',
-        '• Wenn der Brief leer ist ({}), antworte nur: "Keine Briefdaten vorhanden. Bitte mindestens ein Feld ausfüllen."',
+        `• Wenn der Brief leer ist ({}), antworte nur: "${emptyNotices[responseLang] || emptyNotices.Deutsch}"`,
         '• Ansonsten bewerte:',
         '  1. Fachkorrektheit in natürlicher Sprache (keine Feldnamen nennen).',
         '  2. Grammatikfehler auflisten und Korrekturen vorschlagen.',
@@ -91,7 +114,7 @@ const LetterReviewPage = () => {
   const fallbackMessages = [
     {
       role: 'system',
-      content: `Sie sind ein Prüfer, der einen frei eingegebenen Arztbrief bewertet. Führen Sie Grammatik- und Stilprüfung durch und geben Sie Verbesserungsvorschläge.`
+      content: emptyNotices[responseLang] || emptyNotices.Deutsch
     },
     { role: 'user', content: JSON.stringify(letter) }
   ];
@@ -106,7 +129,7 @@ const LetterReviewPage = () => {
     // If no userLetter fields provided, skip API call and show notice
     if (!payload.userLetter || Object.keys(payload.userLetter).length === 0) {
       setLoading(false);
-      setFeedback({ notice: 'Keine Felder ausgefüllt. Bitte mindestens ein Feld ausfüllen.' });
+      setFeedback({ notice: emptyNotices[responseLang] || emptyNotices.Deutsch });
       return;
     }
     const toSend = hasParsedData ? messages : fallbackMessages;
@@ -230,6 +253,18 @@ const LetterReviewPage = () => {
             </div>
           )}
 
+          <div className={styles.field}>
+            <label>Antwortsprache</label>
+            <select
+              value={responseLang}
+              onChange={e => setResponseLang(e.target.value)}
+            >
+              {responseLanguages.map(lang => (
+                <option key={lang} value={lang}>{lang}</option>
+              ))}
+            </select>
+          </div>
+
           <button type="submit" className={styles.btn} disabled={loading}>
             {loading ? 'Prüfe…' : 'Brief prüfen'}
           </button>
@@ -238,6 +273,7 @@ const LetterReviewPage = () => {
         {/* Feedback */}
         {feedback && (
           <div className={styles.feedback}>
+            {feedback.notice && <p className={styles.notice}>{feedback.notice}</p>}
             {feedback.similarityScore != null &&
               <p>Ähnlichkeit: {(feedback.similarityScore * 100).toFixed(1)} %</p>
             }
