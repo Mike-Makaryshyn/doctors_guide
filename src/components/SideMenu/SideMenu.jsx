@@ -6,6 +6,8 @@ import styles from "./SideMenu.module.scss";
 import { supabase } from "../../supabaseClient";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo"; // новий імпорт для регіону
+import { useAuth } from "../../contexts/AuthContext";
+import SubscribeButton from "../../components/SubscribeButton";
 
 function SideMenu({ language, isOpen, onClose, direction }) {
   const [openSections, setOpenSections] = useState({});
@@ -14,6 +16,7 @@ function SideMenu({ language, isOpen, onClose, direction }) {
   const location = useLocation();
   const navigate = useNavigate();
   const { selectedRegion } = useGetGlobalInfo(); // отримуємо обраний регіон
+  const { subscriptionStatus } = useAuth();
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -179,6 +182,11 @@ function SideMenu({ language, isOpen, onClose, direction }) {
               </div>
             );
           })}
+          {subscriptionStatus !== "active" && (
+            <div className={styles.subscribeBlock}>
+              <SubscribeButton />
+            </div>
+          )}
           <div className={styles.authBlock}>
             {!loading && (user ? (
               <button onClick={handleLogout} className={styles.authButton}>
