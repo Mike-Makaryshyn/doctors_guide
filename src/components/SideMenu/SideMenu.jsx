@@ -184,7 +184,7 @@ function SideMenu({ language, isOpen, onClose, direction }) {
           })}
           {subscriptionStatus !== "active" && (
             <div className={styles.subscribeBlock}>
-              <SubscribeButton />
+            <SubscribeButton user={user} />
             </div>
           )}
           <div className={styles.authBlock}>
