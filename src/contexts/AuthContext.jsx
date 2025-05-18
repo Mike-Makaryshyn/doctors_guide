@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { supabase } from '../supabaseClient';
+import { createSubscriptionSession, createTokenSession } from '../supabaseClient';
 
 const AuthContext = createContext();
 
@@ -54,11 +55,27 @@ export const AuthProvider = ({ children }) => {
     };
   }, []);
 
+  // Function to initiate subscription checkout
+  const subscribe = async () => {
+    if (!currentUser) return;
+    const url = await createSubscriptionSession(currentUser.id);
+    window.location.href = url;
+  };
+
+  // Function to initiate token purchase checkout
+  const buyTokens = async (count) => {
+    if (!currentUser) return;
+    const url = await createTokenSession(currentUser.id, count);
+    window.location.href = url;
+  };
+
   const value = {
     currentUser,
     subscriptionStatus,
     subscriptionEnd,
     tokensBalance,
+    subscribe,
+    buyTokens,
     // Можна додати додаткові методи, наприклад, реєстрація, вхід, вихід
   };
 
