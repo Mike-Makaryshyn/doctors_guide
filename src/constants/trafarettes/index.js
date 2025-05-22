@@ -135,6 +135,7 @@ import thyreoiditis from "./subpages/schilddruese/thyreoiditis";
 import feinnadelbiopsie from "./subpages/operation/feinnadelbiopsie";
 import pneumothorax from "./subpages/chirurgie/pneumothorax";
 import pavk from "./subpages/chirurgie/pavk";
+import akutesabdomen from "./subpages/chirurgie/akutesabdomen";
 import hypothyreose from "./subpages/schilddruese/hypothyreose";
 
 import whostufenschema from "./subpages/schmerzen/whostufenschema";
@@ -355,6 +356,7 @@ const all_pages_data = [
   { ...feinnadelbiopsie, mainCategory: "Chirurgie & Anästhesie", category: "Operation" },
   { ...pneumothorax, mainCategory: "Chirurgie & Anästhesie", category: "Thoraxchirurgie" },
   { ...pavk, mainCategory: "Chirurgie & Anästhesie", category: "Gefäßchirurgie" },
+  { ...akutesabdomen, mainCategory: "Chirurgie & Anästhesie", category: "Notfallmedizin" },
 
   // *** Schmerzen (Pain) ***
   { ...whostufenschema, mainCategory: "Chirurgie & Anästhesie", category: "Schmerzen" },

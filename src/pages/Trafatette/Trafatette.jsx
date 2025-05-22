@@ -4,6 +4,7 @@ import MainLayout from "../../layouts/MainLayout/MainLayout";
 import all_pages_data from "../../constants/trafarettes";
 import styles from "./Trafarette.module.scss"; // не забудь додати наші нові стилі
 import cn from "classnames";
+import Crossword from "../../components/Crossword/Crossword";
 
 // lazy‑load 3‑D компонент (пахвинний канал)
 const InguinalCanal3D = React.lazy(() =>
@@ -217,7 +218,10 @@ const renderChildTabContent = (childTab) => {
                 )}
               >
                 {isActiveTab && (
-                  <div className={styles.childTabsWrapper}>
+                  parentTab.type === "crossword" ? (
+                    <Crossword />
+                  ) : (
+                    <div className={styles.childTabsWrapper}>
                     {parentTab?.questions?.map((q, qIdx) => {
                       // === Якщо це multiple choice (Tab 2):
                       if (q?.answers) {
@@ -367,6 +371,7 @@ const renderChildTabContent = (childTab) => {
                       );
                     })}
                   </div>
+                  )
                 )}
               </div>
             );
