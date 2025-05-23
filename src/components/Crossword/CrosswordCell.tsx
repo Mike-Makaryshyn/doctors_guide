@@ -16,7 +16,9 @@ const CrosswordCell: React.FC<Props> = ({ cell, selected, onChange }) => {
   };
 
   return (
-    <div className={`cw-cell ${selected ? 'cw-selected' : ''}`}>
+    <div
+      className={`cw-cell ${selected ? 'cw-selected' : ''}`}
+    >
       <input
         type="text"
         maxLength={1}

@@ -7,9 +7,18 @@ import {
 import { buildGridFromClues } from '../../utils/buildGrid';
 import { Cell } from '../../types/crosswordTypes';
 import CrosswordCell from './CrosswordCell';
-import ClueList from './ClueList';
-import HintPanel from './HintPanel';
 import './crossword.css';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
+
+// Dynamische Zellgröße je nach Viewport
+const BASE = window.matchMedia('(max-width:480px)').matches ? 25 : 35;
+const CELL = BASE + 2;          // 2 px Gap
+
+const starts = new Map<string, { number: number; text: string }>();
+clues.forEach((c) => {
+  starts.set(`${c.row}-${c.col}`, { number: c.number, text: c.text });
+});
 
 const Crossword: React.FC = () => {
   const [grid, setGrid] = useState<Cell[][]>(() =>
@@ -53,42 +62,52 @@ const Crossword: React.FC = () => {
   };
 
   return (
-    <div className="cw-wrapper">
+    <div className="cw-wrapper" style={{ position: 'relative' }}>
       <div className={`cw-grid cw-grid-${GRID_COLS}x${GRID_ROWS}`}>
         {grid.map((row, ri) =>
-          row.map((cell, ci) => (
-            <CrosswordCell
-              key={`${ri}-${ci}`}
-              cell={cell}
-              selected={
-                selectedId !== null &&
-                (cell.acrossId === selectedId || cell.downId === selectedId)
-              }
-              onChange={(val) => updateCell(ri, ci, val)}
-            />
-          )),
+          row.map((cell, ci) => {
+            const start = starts.get(`${ri}-${ci}`);
+            return (
+              <CrosswordCell
+                key={`${ri}-${ci}`}
+                cell={cell}
+                selected={
+                  selectedId !== null &&
+                  (cell.acrossId === selectedId || cell.downId === selectedId)
+                }
+                onChange={(val) => updateCell(ri, ci, val)}
+              />
+            );
+          }),
         )}
       </div>
 
-      <ClueList
-        clues={clues.filter((c) => c.direction === 'across')}
-        selectedId={selectedId}
-        onSelect={setSelectedId}
-        onRevealLetter={revealLetter}
-        onRevealWord={revealWord}
-      />
-      <ClueList
-        clues={clues.filter((c) => c.direction === 'down')}
-        selectedId={selectedId}
-        onSelect={setSelectedId}
-        onRevealLetter={revealLetter}
-        onRevealWord={revealWord}
-      />
+      {/* Hint‑Buttons direkt vor der ersten Zelle */}
+      {clues.map((clue) => {
+        const top = clue.row * CELL;
+        const left = clue.col * CELL;
+        const cls = clue.direction === 'across' ? 'cw-hint-left' : 'cw-hint-top';
 
-      <HintPanel
-        clue={clues.find((c) => c.id === selectedId) ?? null}
-        onClose={() => setSelectedId(null)}
-      />
+        return (
+          <Tippy
+            key={clue.id}
+            content={clue.description}
+            placement="top"
+            theme="dark"
+            delay={[100, 0]}
+            arrow={true}
+            trigger="click"
+          >
+            <button
+              className={`cw-inline-hint ${cls}`}
+              style={{ top, left }}
+              onClick={() => setSelectedId(clue.id)}
+            >
+              {clue.number}
+            </button>
+          </Tippy>
+        );
+      })}
     </div>
   );
 };

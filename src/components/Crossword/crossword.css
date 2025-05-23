@@ -51,6 +51,10 @@
   position: relative;
   font-size: 0.75rem;
 }
+/* Wrapper muss Inhalte über den Rand hinaus anzeigen können */
+.cw-wrapper {
+  overflow: visible;
+}
 
 .cw-arrow {
   display: inline-block;
@@ -76,3 +80,74 @@
   transition: right .3s ease;
 }
 .cw-hint-panel.open { right: 0; }
+
+/* ─── Inline‑Hint‑Buttons direkt am Wort ─────────────────────────────── */
+.cw-inline-hint{
+  position:absolute;
+  background:#000;
+  color:#fff;
+  font-size:0.7rem;
+  padding:2px 5px;
+  border:none;
+  border-radius:2px;
+  cursor:pointer;
+  z-index:5;
+  line-height:1;
+}
+
+/* waagerechte Wörter – Button links vor der ersten Zelle */
+.cw-hint-left{
+  transform:translateX(-105%);
+}
+.cw-hint-left::after{
+  content:'';
+  position:absolute;
+  right:-6px;
+  top:50%;
+  transform:translateY(-50%);
+  border-top:6px solid transparent;
+  border-bottom:6px solid transparent;
+  border-left:6px solid red;
+}
+
+/* senkrechte Wörter – Button oberhalb der ersten Zelle */
+.cw-hint-top{
+  transform:translateY(-105%);
+}
+.cw-hint-top::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  top:-6px;
+  transform:translateX(-50%);
+  border-left:6px solid transparent;
+  border-right:6px solid transparent;
+  border-top:6px solid red;
+}
+
+/* ─── Custom Tooltip (ersetzt native title) ─────────────────────────── */
+.cw-inline-hint:hover::before {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: 100%;          /* oberhalb des Buttons */
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  background: #222;
+  color: #fff;
+  padding: 4px 6px;
+  font-size: 0.65rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  border-radius: 3px;
+  z-index: 10;
+}
+
+.cw-inline-hint:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #222;
+}
