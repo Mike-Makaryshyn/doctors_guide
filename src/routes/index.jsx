@@ -195,6 +195,12 @@ const AbbreviationsLearningPage = React.lazy(() =>
 const LetterFormPage = React.lazy(() =>
   import("../pages/LetterFormPage/LetterFormPage")
 );
+const ResetPasswordPage = React.lazy(() =>
+  import("../pages/AuthPage/ResetPasswordPage")
+);
+const UpdatePasswordPage = React.lazy(() =>
+  import("../pages/AuthPage/UpdatePasswordPage")
+);
 const FachsprachPruefungPage = React.lazy(() =>
   import("../pages/FachsprachPruefung/FachsprachPruefungPage")
 );
@@ -272,6 +278,14 @@ export default function Routers() {
   path={pathList.abbreviations_term_matching.path}
   element={<AbbreviationsTermMatchingGame />}
 />
+        <Route
+          path={pathList.reset_password.path}
+          element={<ResetPasswordPage />}
+        />
+        <Route
+          path={pathList.update_password.path}
+          element={<UpdatePasswordPage />}
+        />
 <Route
   path={pathList.necessary_documents.path}
   element={<NecessaryDocumentsPage />}

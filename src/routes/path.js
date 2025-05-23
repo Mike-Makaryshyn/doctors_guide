@@ -6,6 +6,12 @@ export const pathList = {
   registration: {
     path: "/auth/registration",
   },
+  reset_password: {
+    path: "/auth/reset-password",
+  },
+  update_password: {
+    path: "/auth/update-password",
+  },
   // Нові маршрути
   signup: {
     path: "/signup",
@@ -183,4 +189,5 @@ export const pathList = {
 reviewById: {
   path: "/review/:caseId",
 },
+
 };

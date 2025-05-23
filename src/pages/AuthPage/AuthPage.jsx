@@ -54,7 +54,16 @@ const AuthPage = () => {
   };
 
   const handleGoogleSignIn = async () => {
-    alert("Google login not implemented");
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        redirectTo: window.location.origin + "/dashboard"
+      }
+    });
+    if (error) {
+      console.error("Google login error:", error);
+      alert(t.errorLogin.replace("{{message}}", error.message));
+    }
   };
 
   return (
@@ -96,6 +105,13 @@ const AuthPage = () => {
           className={styles.switchButton}
         >
           {t.noAccount}
+        </button>
+        {/* Forgot Password button */}
+        <button
+          onClick={() => navigate("/auth/reset-password")}
+          className={styles.switchButton}
+        >
+          {t.forgotPassword || "Passwort vergessen?"}
         </button>
       </div>
     </MainLayout>
