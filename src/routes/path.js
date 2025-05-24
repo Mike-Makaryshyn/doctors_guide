@@ -19,6 +19,10 @@ export const pathList = {
   login: {
     path: "/login",
   },
+  // Subscription success page
+  success: {
+    path: "/success",
+  },
   // Існуючі маршрути
   main_menu: {
     path: "/main_menu",

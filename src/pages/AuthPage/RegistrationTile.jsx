@@ -5,7 +5,7 @@ import { FaPencilAlt } from 'react-icons/fa';
 import styles from "./RegistrationTile.module.scss";
 
 const RegistrationTile = ({ data, style }) => {
-  const { firstName, lastName, email, birthDate, educationRegion, specialty, germanLevel, procedureType } = data;
+  const { firstName, lastName, email, birthDate, educationRegion, specialty, germanLevel, procedureType, subscriptionStatus, subscriptionEnd } = data;
 
   return (
     <div className={styles.tile} style={{ ...style, position: "relative" }}>
@@ -19,6 +19,12 @@ const RegistrationTile = ({ data, style }) => {
       {specialty && <p><strong>Specialty:</strong> {specialty}</p>}
       {germanLevel && <p><strong>German Level:</strong> {germanLevel}</p>}
       {procedureType && <p><strong>Procedure Type:</strong> {procedureType}</p>}
+      {subscriptionStatus && (
+        <p><strong>Subscription Status:</strong> {subscriptionStatus}</p>
+      )}
+      {subscriptionEnd && (
+        <p><strong>Subscription Ends:</strong> {new Date(subscriptionEnd).toLocaleDateString()}</p>
+      )}
     </div>
   );
 };
@@ -33,6 +39,8 @@ RegistrationTile.propTypes = {
     specialty: PropTypes.string,
     germanLevel: PropTypes.string,
     procedureType: PropTypes.string,
+    subscriptionStatus: PropTypes.string,
+    subscriptionEnd: PropTypes.string,
   }).isRequired,
   style: PropTypes.object, // Додано підтримку стилів
 };

@@ -11,9 +11,11 @@ import styles from "./Dashboard.module.scss";
 import { toast } from "react-toastify";
 import StageTasksWidget from "../../components/StageTasksWidget.jsx";
 import { useDocumentsProgress } from "../../contexts/DocumentsProgressContext";
+import { useSubscription } from "../../contexts/SubscriptionContext";
 
 const Dashboard = () => {
   const { currentUser: user } = useAuth();
+  const { status: subscriptionStatus, endsAt: subscriptionEnd } = useSubscription();
   const [userData, setUserData] = useState(null);
   const [activeStage, setActiveStage] = useState(null);
   const { setProgress } = useDocumentsProgress();
@@ -33,6 +35,8 @@ const Dashboard = () => {
           specialty: md.specialty || '',
           germanLevel: md.german_level || '',
           procedureType: md.procedure_type || '',
+          subscriptionStatus,
+          subscriptionEnd,
           active_stage: md.active_stage,
         };
         setUserData(mappedUserData);

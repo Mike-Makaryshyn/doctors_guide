@@ -14,6 +14,7 @@ import ApprobationPage from "./pages/ApprobationPage/ApprobationPage";
 import { ModalProvider } from "./pages/FSPFormularPage/components/ModalContext";
 import { DataSourceProvider } from "./contexts/DataSourceContext";
 import { AuthProvider } from "./contexts/AuthContext"; // Імпорт AuthProvider
+import { SubscriptionProvider } from "./contexts/SubscriptionContext";
 import { CasesProvider } from "./contexts/CasesContext";
 // Імпорти для React Toastify
 import { ToastContainer } from "react-toastify";
@@ -40,7 +41,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       {/* AuthProvider тепер зовні, що забезпечує доступ до auth контексту */}
       <AuthProvider>
-   
+        <SubscriptionProvider>
           {/* Обгортаємо додаток у ModalProvider */}
           <ModalProvider>
             <div className="App">
@@ -66,8 +67,7 @@ function App() {
               </div>
             </div>
           </ModalProvider>
-   
-      
+        </SubscriptionProvider>
       </AuthProvider>
     </QueryClientProvider>
   );

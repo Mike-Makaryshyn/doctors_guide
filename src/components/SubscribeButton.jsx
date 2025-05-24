@@ -1,9 +1,11 @@
 import React from "react";
 import { useAuth } from "../contexts/AuthContext";
+import { useSubscription } from "../contexts/SubscriptionContext";
 import { supabase } from "../supabaseClient";
 
 const SubscribeButton = () => {
   const { currentUser } = useAuth();
+  const { status: subscriptionStatus } = useSubscription();
 
   const handleSubscribe = async () => {
     if (!currentUser || !currentUser.email) {
@@ -19,17 +21,39 @@ const SubscribeButton = () => {
       return;
     }
 
-    try {
-      const res = await fetch("https://pgwaxkfsnzqmwujdzxje.functions.supabase.co/create-subscription-session", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${accessToken}`,
-        },
-        body: JSON.stringify({ email: currentUser.email }),
-      });
+    // Supabase user id can be either currentUser.id (v2) or currentUser.user.id when wrapped by helpers.
+    const userId = currentUser?.id ?? currentUser?.user?.id;
 
-      const data = await res.json();
+    // 🔍 DEBUG: переконуємося, що відправляємо правильні дані
+    console.log("Sending to create-subscription-session:", {
+      email: currentUser.email,
+      user_id: userId,
+    });
+
+    try {
+      const response = await fetch(
+        "https://pgwaxkfsnzqmwujdzxje.functions.supabase.co/create-subscription-session",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${accessToken}`,
+          },
+          body: JSON.stringify({
+            email: currentUser.email,
+            user_id: userId,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        const errText = await response.text();
+        console.error("Server responded with", response.status, errText);
+        alert("Не вдалося створити сесію підписки.");
+        return;
+      }
+
+      const data = await response.json();
       if (data.url) {
         window.location.href = data.url;
       } else {
@@ -41,7 +65,7 @@ const SubscribeButton = () => {
     }
   };
 
-  const isSubscribed = currentUser?.user_metadata?.subscriptionStatus === "active";
+  const isSubscribed = subscriptionStatus === "active";
 
   return (
     <button
@@ -57,15 +81,19 @@ const SubscribeButton = () => {
       title={isSubscribed ? "Підписка активна" : "Підписатися"}
       className={isSubscribed ? "subscribedIcon" : "subscribeIcon"}
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 448 512"
-        width="28"
-        height="28"
-        fill={isSubscribed ? "#023c6f" : "#999999"}
-      >
-        <path d="M224 512c35.3 0 63.1-28.7 63.1-64H160.9c0 35.3 27.8 64 63.1 64zm215.1-149.1c-19.8-20.9-55.5-52.1-55.5-154.9 0-77.7-54.5-139.3-127.1-155.2V32c0-17.7-14.4-32-32.1-32s-32 14.3-32 32v20.8C118.4 68.7 64 130.3 64 208c0 102.8-35.7 134-55.5 154.9-6 6.4-8.5 14.2-8.5 21.1C0 397.9 10.1 416 32 416h384c21.9 0 32-18.1 32-36.9 0-6.9-2.5-14.7-8.9-21.2z"/>
-      </svg>
+      {isSubscribed ? (
+        <span style={{ fontSize: "14px", fontWeight: "bold" }}>Subscribed</span>
+      ) : (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+          width="28"
+          height="28"
+          fill={isSubscribed ? "#023c6f" : "#999999"}
+        >
+          <path d="M224 512c35.3 0 63.1-28.7 63.1-64H160.9c0 35.3 27.8 64 63.1 64zm215.1-149.1c-19.8-20.9-55.5-52.1-55.5-154.9 0-77.7-54.5-139.3-127.1-155.2V32c0-17.7-14.4-32-32.1-32s-32 14.3-32 32v20.8C118.4 68.7 64 130.3 64 208c0 102.8-35.7 134-55.5 154.9-6 6.4-8.5 14.2-8.5 21.1C0 397.9 10.1 416 32 416h384c21.9 0 32-18.1 32-36.9 0-6.9-2.5-14.7-8.9-21.2z" />
+        </svg>
+      )}
     </button>
   );
 };

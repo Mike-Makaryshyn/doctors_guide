@@ -172,6 +172,9 @@ const MedicationElectiveLanguageGame = React.lazy(() =>
 // всередині src/routes/index.jsx (на рівні з іншими lazy-імпортами)
 const ForumRoutes = React.lazy(() => import("../forum/ForumRoutes.jsx"));
 
+// Success page after subscription
+const SuccessPage = React.lazy(() => import("../pages/SuccessPage/SuccessPage.jsx"));
+
 const MedicationsTermMatchingGame = React.lazy(() =>
   import(
     "../games/MedicationsGame/pages/TermMatchingGame/MedicationsTermMatchingGame.jsx"
@@ -493,6 +496,9 @@ export default function Routers() {
         <Route path="/auth/registration" element={<RegistrationPage />} />
         <Route path="/check-email" element={<CheckEmailPage />} />
         <Route path="/auth/confirm" element={<ConfirmEmailPage />} />
+
+        {/* Success page shown after subscription */}
+        <Route path="/success" element={<SuccessPage />} />
 
         {/* Сторінка не знайдена */}
         <Route
