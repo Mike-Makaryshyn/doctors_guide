@@ -16,7 +16,7 @@ export const clues: Clue[] = [
     row: 0,
     col: 8,
     description:
-      'Akute Appendizitis: häufigste Ursache des „akuten Abdomens“ bei jungen Patient*innen.',
+      'Häufigste Ursache des „akuten Abdomens“ bei jungen Patient*innen.',
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ export const clues: Clue[] = [
     row: 3,
     col: 2,
     description:
-      'Akute Mesenterialischämie durch Embolus oder Thrombose der A. mesenterica.',
+      'durch Embolus oder Thrombose der A. mesenterica.',
   },
   {
     id: 3,
@@ -58,7 +58,7 @@ export const clues: Clue[] = [
     row: 10,
     col: 0,
     description:
-      'Viszerale Perforation (Ulcus, Divertikulitis u. a.) – chirurgischer Notfall.',
+      '(Ulcus, Divertikulitis u. a.) – chirurgischer Notfall.',
   },
 ];
 

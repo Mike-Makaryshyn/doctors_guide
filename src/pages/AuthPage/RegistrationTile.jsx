@@ -1,12 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import { FaPencilAlt } from 'react-icons/fa';
 import styles from "./RegistrationTile.module.scss";
 
 const RegistrationTile = ({ data, style }) => {
   const { firstName, lastName, email, birthDate, educationRegion, specialty, germanLevel, procedureType } = data;
 
   return (
-    <div className={styles.tile} style={style}>
+    <div className={styles.tile} style={{ ...style, position: "relative" }}>
+      <Link to="/edit-profile" className={styles.editIcon} title="Редагувати профіль">
+        <FaPencilAlt />
+      </Link>
       <h3 className={styles.tileHeader}>{`${firstName} ${lastName}`}</h3>
       <p><strong>Email:</strong> {email}</p>
       <p><strong>Birth Date:</strong> {birthDate}</p>

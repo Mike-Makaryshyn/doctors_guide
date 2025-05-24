@@ -49,3 +49,16 @@
       font-size: 0.9rem;
     }
   }
+  .editIcon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 1.3rem;
+  color: #013b6e;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.editIcon:hover {
+  transform: scale(1.2);
+  color: #013b6e;
+}

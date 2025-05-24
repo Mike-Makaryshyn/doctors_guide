@@ -10,7 +10,6 @@ import RegistrationTile from "../../pages/AuthPage/RegistrationTile.jsx";
 import styles from "./Dashboard.module.scss";
 import { toast } from "react-toastify";
 import StageTasksWidget from "../../components/StageTasksWidget.jsx";
-import Avatar from "../../components/Avatar/Avatar.jsx";
 
 const Dashboard = () => {
   const { currentUser: user } = useAuth();
@@ -32,7 +31,6 @@ const Dashboard = () => {
           specialty: md.specialty || '',
           germanLevel: md.german_level || '',
           procedureType: md.procedure_type || '',
-          avatarUrl: md.avatar_url || '',
           active_stage: md.active_stage,
         };
         setUserData(mappedUserData);
@@ -52,25 +50,26 @@ const Dashboard = () => {
     <MainLayout>
       <ProtectedRoute>
         <div className={styles.container}>
-          <div className={styles.dashboardGrid}>
+          <div className={styles.dashboardContent}>
           {userData && (
-  <div className={styles.userTile}>
-    <Avatar src={userData.avatarUrl} alt={`${userData.firstName} ${userData.lastName}`} size="large" />
-    <Link to="/edit-profile" className={styles.editButton} title="Редагувати профіль">✏️</Link>
-    <RegistrationTile data={userData} />
-  </div>
-)}
             <div className={styles.tile}>
-            <ProgressBar />
+              <RegistrationTile data={userData} />
             </div>
-            <SavedCasesWidget className={styles.tile}/>
-            {activeStage && (
-              <StageTasksWidget selectedStageId={activeStage} user={user} language="de" activeStageTitle={`Активний етап: ${activeStage}`} className={styles.tile}/>
-            )}
-          </div>
-          <div className={styles.bottomControls}>
-            <Link to="/main_menu">До головного меню</Link>
-            <button onClick={handleSignOut}>Вийти з профілю</button>
+          )}
+            <div>
+              <div className={styles.tile}><ProgressBar /></div>
+              <div className={styles.tile}><SavedCasesWidget /></div>
+              {activeStage && (
+                <div className={styles.tile}>
+                  <StageTasksWidget
+                    selectedStageId={activeStage}
+                    user={user}
+                    language="de"
+                    activeStageTitle={`Активний етап: ${activeStage}`}
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </ProtectedRoute>
