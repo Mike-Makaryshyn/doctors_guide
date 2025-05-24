@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import styles from "./AuthModal.module.scss";
 import { languages, DEFAULT_LANGUAGE } from "../../constants/translation/AuthPage";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
-import { FaGoogle } from "react-icons/fa";
 
 const AuthModal = ({ isOpen, onClose }) => {
   const [email, setEmail] = useState("");
@@ -31,21 +30,14 @@ const AuthModal = ({ isOpen, onClose }) => {
     }
   };
 
-  const handleGoogleSignIn = async () => {
-    try {
-      const { error } = await supabase.auth.signInWithOAuth({ provider: "google" });
-      if (error) throw error;
-      alert(t.successLogin);
-      onClose();
-      // Видаляємо перенаправлення: navigate("/dashboard");
-    } catch (error) {
-      alert(t.errorLogin.replace("{{message}}", error.message));
-    }
-  };
-
   const handleRegistrationRedirect = () => {
     onClose(); // Закриваємо модальне вікно
     navigate("/auth/registration"); // Якщо потрібне перенаправлення на реєстрацію, можна залишити
+  };
+
+  const handleResetPasswordRedirect = () => {
+    onClose(); // Закриваємо модальне вікно
+    navigate("/auth/reset-password"); // Перенаправлення на сторінку скидання пароля
   };
 
   return (
@@ -77,12 +69,9 @@ const AuthModal = ({ isOpen, onClose }) => {
             {t.loginButton}
           </button>
         </form>
-        <div className={styles.oauthButtons}>
-          <button onClick={handleGoogleSignIn} className={styles.googleButton}>
-            <FaGoogle style={{ marginRight: "8px" }} />
-            {t.googleLogin}
-          </button>
-        </div>
+        <button className={styles.switchButton} onClick={handleResetPasswordRedirect}>
+          {t.forgotPassword}
+        </button>
         <button className={styles.switchButton} onClick={handleRegistrationRedirect}>
           {t.noAccount}
         </button>
