@@ -10,7 +10,7 @@ import guideImage from "../../assets/whatisbilder/guide-image.jpg"; // імпо�
 // Компонент для рендеринга абзаців з сохраненням переносів строк
 const RenderParagraphs = ({ text }) =>
   text.split("\n\n").map((para, index) => (
-    <p key={index} className="white-space-pre-line">
+    <p key={index} className={styles['white-space-pre-line']}>
       {para.split("\n").map((line, i, arr) => (
         <React.Fragment key={i}>
           {line}
@@ -45,6 +45,7 @@ const WhatIsApprobationPage = () => {
           content="Approbation, doctors in Germany, medical license, Germany"
         />
         <meta name="author" content="Doctors Guide Team" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Open Graph Metadaten */}
         <meta property="og:title" content={content.title || "Was ist Approbation?"} />
         <meta

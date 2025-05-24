@@ -10,7 +10,7 @@ import gleichwertigkeitImage from "../../assets/whatisbilder/gleichwertigkeit-im
 // Компонент для рендерингу абзаців із підтримкою переносів рядків
 const RenderParagraphs = ({ text }) => {
   return text.split("\n\n").map((para, index) => (
-    <p key={index} className="white-space-pre-line">
+    <p key={index} className={styles['white-space-pre-line']}>
       {para.split("\n").map((line, i, arr) => (
         <React.Fragment key={i}>
           {line}
@@ -41,6 +41,7 @@ const GleichwertigkeitPage = () => {
             "Information about the recognition of the equivalence of foreign medical education in Germany."
           }
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Open Graph Metadaten */}
         <meta property="og:title" content={content.title || "Gleichwertigkeit der medizinischen Ausbildung"} />
         <meta
@@ -61,7 +62,7 @@ const GleichwertigkeitPage = () => {
             <h1>{content.title || "Title not available"}</h1>
             <h4>{content.intro || "Intro not available"}</h4>
             {content.definition && (
-              <p className="white-space-pre-line">{content.definition}</p>
+              <p className={styles['white-space-pre-line']}>{content.definition}</p>
             )}
           </section>
 
@@ -101,7 +102,7 @@ const GleichwertigkeitPage = () => {
 
           {content.additionalCourses && (
             <section>
-              <p className="white-space-pre-line">{content.additionalCourses}</p>
+              <p className={styles['white-space-pre-line']}>{content.additionalCourses}</p>
             </section>
           )}
 

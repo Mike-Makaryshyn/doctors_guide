@@ -10,7 +10,7 @@ import vergleichsgutachtenImage from "../../assets/whatisbilder/vergleichsgutach
 // Компонент для рендерингу абзаців із підтримкою переносів рядків
 const RenderParagraphs = ({ text }) => {
   return text.split("\n\n").map((para, index) => (
-    <p key={index} className="white-space-pre-line">
+    <p key={index} className={styles['white-space-pre-line']}>
       {para.split("\n").map((line, i, arr) => (
         <React.Fragment key={i}>
           {line}
@@ -51,6 +51,8 @@ const VergleichsgutachtenPage = () => {
           }
         />
         <meta property="og:image" content={vergleichsgutachtenImage} />
+        <meta name="author" content="Doctors Guide Team" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Helmet>
       <div className="page containerBigger mt-20">
         <div className="firstPageImageBlock"></div>
@@ -62,7 +64,7 @@ const VergleichsgutachtenPage = () => {
             <h1>{content.title || "Title not available"}</h1>
             <h4>{content.intro || "Intro not available"}</h4>
             {content.definition && (
-              <p className="white-space-pre-line">{content.definition}</p>
+              <p className={styles['white-space-pre-line']}>{content.definition}</p>
             )}
           </section>
           

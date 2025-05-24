@@ -10,7 +10,7 @@ import fspImage from "../../assets/whatisbilder/fsp-image.jpg"; // імпорт 
 // Компонент для рендерингу абзаців із підтримкою переносів рядків
 const RenderParagraphs = ({ text }) => {
   return text.split("\n\n").map((para, index) => (
-    <p key={index} className="white-space-pre-line">
+    <p key={index} className={styles['white-space-pre-line']}>
       {para.split("\n").map((line, i, arr) => (
         <React.Fragment key={i}>
           {line}
@@ -54,6 +54,7 @@ const WhatIsFSPPage = () => {
           content="FSP, Prüfung, Vorbereitung, Ärzte, Deutschland"
         />
         <meta name="author" content="Doctors Guide Team" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Open Graph Metadaten */}
         <meta property="og:title" content={content.title || "Was ist FSP?"} />
         <meta
