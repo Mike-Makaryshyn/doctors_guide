@@ -4,6 +4,8 @@ import styles from './ResetPasswordPage.module.scss';
 import { useNavigate } from 'react-router-dom';
 import MainLayout from '../../layouts/MainLayout/MainLayout';
 import { pathList } from '../../routes/path';
+import { languages, DEFAULT_LANGUAGE } from "../../constants/translation/AuthPage";
+import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 
 const ResetPasswordPage = () => {
   const [email, setEmail] = useState('');
@@ -14,6 +16,9 @@ const ResetPasswordPage = () => {
     return stored ? parseInt(stored, 10) : null;
   });
   const navigate = useNavigate();
+
+  const { selectedLanguage } = useGetGlobalInfo();
+  const t = languages[selectedLanguage] || languages[DEFAULT_LANGUAGE];
 
   const siteUrl =
     (typeof process !== 'undefined' &&
@@ -42,7 +47,6 @@ const ResetPasswordPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // захист від подвійних кліків
     if (disabled) return;
     setDisabled(true);
 
@@ -53,25 +57,23 @@ const ResetPasswordPage = () => {
 
       if (error) {
         if (error.status === 429) {
-          alert('Забагато запитів – спробуйте ще раз через годину.');
+          alert(t.errorTooManyRequests);
         } else if (error.status === 504) {
-          alert('Сервер не відповів – спробуйте пізніше.');
+          alert(t.errorServer);
         } else {
-          alert(`Помилка: ${error.message || JSON.stringify(error)}`);
+          alert(t.errorUnknown.replace("{{message}}", error.message));
         }
-        // якщо запит не пройшов, знімаємо блокування кнопки
         setDisabled(false);
         return;
       }
 
-      // успішно: показуємо повідомлення та запускаємо 60‑секундний таймер
       setSent(true);
       const now = Date.now();
       localStorage.setItem('lastResetSent', now.toString());
       setLastSentTime(now);
     } catch (err) {
       console.error('Unhandled reset error:', err);
-      alert('Непередбачена помилка: ' + err.message);
+      alert(t.errorUnexpected.replace("{{message}}", err.message));
       setDisabled(false);
     }
   };
@@ -79,14 +81,14 @@ const ResetPasswordPage = () => {
   return (
     <MainLayout>
       <div className={styles.container}>
-        <h2>Passwort zurücksetzen</h2>
+        <h2>{t.resetTitle}</h2>
         {sent ? (
-          <p>Wir haben dir eine E-Mail mit dem Link zum Zurücksetzen gesendet.</p>
+          <p>{t.resetSuccess}</p>
         ) : (
           <form onSubmit={handleSubmit} className={styles.form}>
             <input
               type="email"
-              placeholder="Deine E-Mail"
+              placeholder={t.emailPlaceholder}
               value={email}
               onChange={e => setEmail(e.target.value)}
               required
@@ -97,12 +99,12 @@ const ResetPasswordPage = () => {
               className={styles.submitButton}
               disabled={disabled}
             >
-              Link senden
+              {t.sendLinkButton}
             </button>
           </form>
         )}
         <button onClick={() => navigate(pathList.auth.path)} className={styles.switchButton}>
-          Zurück zur Anmeldung
+          {t.backToLogin}
         </button>
       </div>
     </MainLayout>

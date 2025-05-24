@@ -102,7 +102,7 @@ const AuthPage = () => {
           onClick={() => navigate("/auth/reset-password")}
           className={styles.switchButton}
         >
-          {t.forgotPassword || "Passwort vergessen?"}
+          {t.forgotPassword}
         </button>
       </div>
     </MainLayout>

@@ -1,89 +1,55 @@
-import React, { useState, useEffect } from 'react';
-import { supabase } from '../../supabaseClient';
-import styles from './UpdatePasswordPage.module.scss';
-import { useNavigate } from 'react-router-dom';
-import MainLayout from '../../layouts/MainLayout/MainLayout';
+// src/pages/AuthPage/UpdatePasswordPage.jsx
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { supabase } from "../../supabaseClient";
+import MainLayout from "../../layouts/MainLayout/MainLayout";
+import styles from "./UpdatePasswordPage.module.scss";
+import { languages, DEFAULT_LANGUAGE } from "../../constants/translation/AuthPage";
+import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 
 const UpdatePasswordPage = () => {
-  const [isVerifying, setIsVerifying] = useState(true);
-  const [isVerified, setIsVerified] = useState(false);
-  const [verificationError, setVerificationError] = useState(null);
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const token = params.get('token');
-    const type = params.get('type');
-    if (type === 'recovery' && token) {
-      supabase.auth.verifyOtp({
-        token,
-        type,
-        options: { storeSession: true }
-      }).then(({ data, error }) => {
-        if (error) {
-          console.error('Error verifying recovery token:', error);
-          setVerificationError(error.message);
-        } else {
-          // persist session tokens for all browsers
-          if (data?.session) {
-            const { access_token, refresh_token } = data.session;
-            // store tokens in localStorage
-            localStorage.setItem('access_token', access_token);
-            localStorage.setItem('refresh_token', refresh_token);
-            // also set session explicitly
-            supabase.auth.setSession({ access_token, refresh_token });
-          }
-          setIsVerified(true);
-        }
-      }).catch(err => {
-        console.error('Unexpected verifyOtp error:', err);
-        setVerificationError(err.message);
-      }).finally(() => {
-        setIsVerifying(false);
-      });
-    } else {
-      setVerificationError('Ungültiger oder fehlender Token.');
-      setIsVerifying(false);
-    }
-  }, []);
-
-  const [newPassword, setNewPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [ready, setReady] = useState(false);        // aktive Sitzung vorhanden?
+  const [pwd1, setPwd1] = useState("");
+  const [pwd2, setPwd2] = useState("");
+  const [err, setErr]   = useState("");
   const navigate = useNavigate();
 
-  const handleUpdate = async (e) => {
+  const { selectedLanguage } = useGetGlobalInfo();
+  const t = languages[selectedLanguage] || languages[DEFAULT_LANGUAGE];
+
+  // warten auf PASSWORD_RECOVERY‑Event oder bestehende Sitzung
+  useEffect(() => {
+    const { data: { subscription } } =
+      supabase.auth.onAuthStateChange((_event, session) => {
+        if (session) setReady(true);                // podії: PASSWORD_RECOVERY oder SIGNED_IN
+      });
+
+    // Fallback (F5 oder direkter Aufruf)
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session) setReady(true);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const handleSave = async (e) => {
     e.preventDefault();
-    if (newPassword !== confirmPassword) {
-      alert('Die Passwörter stimmen nicht überein.');
-      return;
-    }
-    const session = await supabase.auth.getSession();
-    if (!session.data.session) {
-      alert('Ihre Sitzung ist abgelaufen. Bitte fordern Sie einen neuen Link an.');
-      return;
-    }
-    const { error } = await supabase.auth.updateUser({ password: newPassword });
-    if (error) {
-      alert(`Fehler: ${error.message}`);
-    } else {
-      alert('Dein Passwort wurde erfolgreich geändert.');
-      navigate('/auth');
-    }
+    setErr("");
+
+    if (pwd1 !== pwd2) return setErr(t.errorMismatch);
+
+    const { error } = await supabase.auth.updateUser({ password: pwd1 });
+    if (error) return setErr(error.message);
+
+    alert(t.successPasswordChange);
+    navigate("/auth");
   };
 
-  if (isVerifying) {
+  if (!ready) {
     return (
       <MainLayout>
         <div className={styles.container}>
-          <p>Überprüfe Token...</p>
-        </div>
-      </MainLayout>
-    );
-  }
-  if (verificationError) {
-    return (
-      <MainLayout>
-        <div className={styles.container}>
-          <p>Fehler bei der Token-Überprüfung: {verificationError}</p>
+          <p style={{ padding: "2rem" }}>{t.checkingRequest}</p>
         </div>
       </MainLayout>
     );
@@ -92,26 +58,30 @@ const UpdatePasswordPage = () => {
   return (
     <MainLayout>
       <div className={styles.container}>
-        <h2>Neues Passwort festlegen</h2>
-        <form onSubmit={handleUpdate} className={styles.form}>
+        <form onSubmit={handleSave} className={styles.form}>
+          <h2>{t.updateTitle}</h2>
+
           <input
             type="password"
-            placeholder="Neues Passwort"
-            value={newPassword}
-            onChange={e => setNewPassword(e.target.value)}
+            placeholder={t.newPasswordPlaceholder}
+            value={pwd1}
+            onChange={(e) => setPwd1(e.target.value)}
             required
             className={styles.input}
           />
           <input
             type="password"
-            placeholder="Passwort bestätigen"
-            value={confirmPassword}
-            onChange={e => setConfirmPassword(e.target.value)}
+            placeholder={t.confirmPasswordPlaceholder}
+            value={pwd2}
+            onChange={(e) => setPwd2(e.target.value)}
             required
             className={styles.input}
           />
+
+          {err && <p className={styles.error}>{err}</p>}
+
           <button type="submit" className={styles.submitButton}>
-            Passwort ändern
+            {t.saveButton}
           </button>
         </form>
       </div>
