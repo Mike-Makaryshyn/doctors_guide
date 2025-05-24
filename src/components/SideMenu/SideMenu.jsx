@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { main_menu_items } from "../../constants/translation/main_menu";
-import Avatar from "../../components/Avatar/Avatar";
 import { LANDS_INFO } from "../../constants/lands";
 import styles from "./SideMenu.module.scss";
 import { supabase } from "../../supabaseClient";
@@ -35,7 +34,9 @@ function SideMenu({ language, isOpen, onClose, direction }) {
     return () => subscription.unsubscribe();
   }, []);
 
-  const displayName = user?.user_metadata?.display_name ?? user?.email ?? "";
+  const firstName = user?.user_metadata?.first_name ?? "";
+  const lastName = user?.user_metadata?.last_name ?? "";
+  const displayName = `${firstName} ${lastName}`.trim();
 
   const sortedSections = React.useMemo(() => {
     return [...main_menu_items.sections].sort((a, b) => a.order - b.order);
@@ -90,17 +91,28 @@ function SideMenu({ language, isOpen, onClose, direction }) {
       <div className={`${styles.sideMenu} ${direction === "right" ? styles.right : ""}`} onClick={handleMenuClick}>
         <div className={styles.sideMenuContent}>
           <div className={styles.avatarBlock}>
-            <Link to="/dashboard" style={{ textDecoration: "none" }}>
-              <Avatar stageId={1} />
-            </Link>
-            <div className={styles.avatarInfo}>
-              {user && displayName && (
-                <span className={styles.userName}>{displayName}</span>
-              )}
-              <div className={styles.regionSelection} onClick={handleRegionClick} style={{ cursor: "pointer" }}>
-                {selectedRegion || "Обрати регіон"}
+            <div className={styles.profileSection}>
+              <div className={styles.doctorIconCircle}>
+                <Link to="/dashboard">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="48" height="48" fill="#023c6f">
+                    <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-96 55.2C54 332.9 0 401.3 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7c0-81-54-149.4-128-171.1l0 50.8c27.6 7.1 48 32.2 48 62l0 40c0 8.8-7.2 16-16 16l-16 0c-8.8 0-16-7.2-16-16s7.2-16 16-16l0-24c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 24c8.8 0 16 7.2 16 16s-7.2 16-16 16l-16 0c-8.8 0-16-7.2-16-16l0-40c0-29.8 20.4-54.9 48-62l0-57.1c-6-.6-12.1-.9-18.3-.9l-91.4 0c-6.2 0-12.3 .3-18.3 .9l0 65.4c23.1 6.9 40 28.3 40 53.7c0 30.9-25.1 56-56 56s-56-25.1-56-56c0-25.4 16.9-46.8 40-53.7l0-59.1zM144 448a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"/>
+                  </svg>
+                </Link>
+              </div>
+              <div className={styles.avatarInfo}>
+                {user && displayName && (
+                  <span className={styles.userName}>{displayName}</span>
+                )}
+                <div className={styles.regionSelection} onClick={handleRegionClick} style={{ cursor: "pointer" }}>
+                  {selectedRegion || "Обрати регіон"}
+                </div>
               </div>
             </div>
+            {subscriptionStatus !== "active" && (
+              <div className={styles.subscribeIconWrapper}>
+                <SubscribeButton user={user} />
+              </div>
+            )}
           </div>
           {sortedSections.map((section, sectionIndex) => {
             const isSectionOpen = !!openSections[sectionIndex];
@@ -182,11 +194,6 @@ function SideMenu({ language, isOpen, onClose, direction }) {
               </div>
             );
           })}
-          {subscriptionStatus !== "active" && (
-            <div className={styles.subscribeBlock}>
-            <SubscribeButton user={user} />
-            </div>
-          )}
           <div className={styles.authBlock}>
             {!loading && (user ? (
               <button onClick={handleLogout} className={styles.authButton}>
