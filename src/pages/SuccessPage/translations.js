@@ -4,6 +4,7 @@ export default {
     activeUntil: "Your subscription is active until {date} at {time}.",
     accessGranted: "You now have access to all platform materials.",
     start: "Start",
+    noSubscription: "You have no subscription",
     unknownStatus: "Subscription status is unknown. Please refresh or contact support."
   },
   de: {
@@ -11,6 +12,7 @@ export default {
     activeUntil: "Ihr Abonnement ist bis {date} um {time} aktiv.",
     accessGranted: "Sie haben jetzt Zugriff auf alle Materialien der Plattform.",
     start: "Starten",
+    noSubscription: "Sie haben kein Abonnement",
     unknownStatus: "Abonnementstatus ist unbekannt. Bitte Seite aktualisieren oder Support kontaktieren."
   },
   uk: {
@@ -18,6 +20,7 @@ export default {
     activeUntil: "Ваша підписка активна до {date} о {time}.",
     accessGranted: "Тепер ви маєте доступ до всіх матеріалів платформи.",
     start: "Почати",
+    noSubscription: "У вас немає абонементу",
     unknownStatus: "Статус підписки невідомий. Спробуйте оновити сторінку або зв’язатися з підтримкою."
   },
   ru: {
@@ -25,6 +28,7 @@ export default {
     activeUntil: "Ваша подписка активна до {date} в {time}.",
     accessGranted: "Теперь у вас есть доступ ко всем материалам платформы.",
     start: "Начать",
+    noSubscription: "У вас немає підписки",
     unknownStatus: "Статус подписки неизвестен. Пожалуйста, обновите страницу или свяжитесь с поддержкой."
   },
   tr: {
@@ -32,6 +36,7 @@ export default {
     activeUntil: "Aboneliğiniz {date} tarihinde {time}'a kadar aktiftir.",
     accessGranted: "Artık platformun tüm materyallerine erişiminiz var.",
     start: "Başlat",
+    noSubscription: "Aboneliğiniz yok",
     unknownStatus: "Abonelik durumu bilinmiyor. Lütfen sayfayı yenileyin veya destek ile iletişime geçin."
   },
   ar: {
@@ -39,6 +44,7 @@ export default {
     activeUntil: "اشتراكك نشط حتى {date} في {time}.",
     accessGranted: "لديك الآن الوصول إلى جميع محتويات المنصة.",
     start: "ابدأ",
+    noSubscription: "ليس لديك اشتراك",
     unknownStatus: "حالة الاشتراك غير معروفة. الرجاء تحديث الصفحة أو الاتصال بالدعم."
   },
   fr: {
@@ -46,6 +52,7 @@ export default {
     activeUntil: "Votre abonnement est actif jusqu'au {date} à {time}.",
     accessGranted: "Vous avez maintenant accès à tous les contenus de la plateforme.",
     start: "Démarrer",
+    noSubscription: "Vous n'avez pas d'abonnement",
     unknownStatus: "Le statut de l'abonnement est inconnu. Veuillez rafraîchir la page ou contacter le support."
   },
   es: {
@@ -53,6 +60,7 @@ export default {
     activeUntil: "Tu suscripción está activa hasta el {date} a las {time}.",
     accessGranted: "Ahora tienes acceso a todos los materiales de la plataforma.",
     start: "Iniciar",
+    noSubscription: "No tienes suscripción",
     unknownStatus: "El estado de la suscripción es desconocido. Por favor, actualiza la página o contacta con soporte."
   },
   pl: {
@@ -60,6 +68,7 @@ export default {
     activeUntil: "Twoja subskrypcja jest aktywna do {date} o {time}.",
     accessGranted: "Masz teraz dostęp do wszystkich materiałów platformy.",
     start: "Rozpocznij",
+    noSubscription: "Nie masz subskrypcji",
     unknownStatus: "Status subskrypcji nie jest znany. Odśwież stronę lub skontaktuj się z pomocą."
   },
   el: {
@@ -67,6 +76,7 @@ export default {
     activeUntil: "Η συνδρομή σας είναι ενεργή έως τις {date} στις {time}.",
     accessGranted: "Τώρα έχετε πρόσβαση σε όλα τα υλικά της πλατφόρμας.",
     start: "Έναρξη",
+    noSubscription: "Δεν έχετε συνδρομή",
     unknownStatus: "Η κατάσταση της συνδρομής είναι άγνωστη. Παρακαλώ ανανεώστε τη σελίδα ή επικοινωνήστε με την υποστήριξη."
   },
   ro: {
@@ -74,6 +84,7 @@ export default {
     activeUntil: "Abonamentul dvs. este activ până la {date} la {time}.",
     accessGranted: "Acum aveți acces la toate materialele platformei.",
     start: "Începeți",
+    noSubscription: "Nu aveți abonament",
     unknownStatus: "Starea abonamentului este necunoscută. Reîmprospătați pagina sau contactați suportul."
   }
 };

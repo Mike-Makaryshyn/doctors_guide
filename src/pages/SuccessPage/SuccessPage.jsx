@@ -82,11 +82,25 @@ const SuccessPage = () => {
             />
           ))}
         </div>
+        {status !== 'active' && (
+          <div
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: 'rgba(0, 0, 0, 0.5)',
+              pointerEvents: 'none',
+              zIndex: 0
+            }}
+          />
+        )}
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
           rel="stylesheet"
         />
-        <Confetti />
+        {status === 'active' && <Confetti />}
         <div style={{
           position: 'relative',
           zIndex: 1,
@@ -100,36 +114,35 @@ const SuccessPage = () => {
           fontFamily: "'Poppins', sans-serif",
           backgroundColor: '#fff'
         }}>
-          <h1 style={{ color: '#023c6f' }}>{messages.thankYou}</h1>
-
           {status === 'active' && endsAt ? (
             <>
+              <h1 style={{ color: '#023c6f' }}>{messages.thankYou}</h1>
               <p style={{ fontSize: '1.1rem', color: '#023c6f' }}>
                 {messages.activeUntil.replace('{date}', formattedDate).replace('{time}', formattedTime)}
               </p>
               <p style={{ color: '#023c6f' }}>{messages.accessGranted}</p>
+              <button
+                onClick={() => navigate('/step-by-step')}
+                style={{
+                  marginTop: '1.5rem',
+                  padding: '0.75rem 1.5rem',
+                  backgroundColor: '#023c6f',
+                  color: '#ffffff',
+                  border: 'none',
+                  borderRadius: '4px',
+                  cursor: 'pointer',
+                  fontSize: '1rem',
+                  fontFamily: "'Poppins', sans-serif"
+                }}
+              >
+                {messages.start}
+              </button>
             </>
           ) : (
-            <p style={{ color: 'crimson' }}>
-              {messages.unknownStatus}
-            </p>
+            <>
+              <h1 style={{ color: 'crimson' }}>{messages.noSubscription}</h1>
+            </>
           )}
-          <button
-            onClick={() => navigate('/step-by-step')}
-            style={{
-              marginTop: '1.5rem',
-              padding: '0.75rem 1.5rem',
-              backgroundColor: '#023c6f',
-              color: '#ffffff',
-              border: 'none',
-              borderRadius: '4px',
-              cursor: 'pointer',
-              fontSize: '1rem',
-              fontFamily: "'Poppins', sans-serif"
-            }}
-          >
-            Start
-          </button>
         </div>
       </div>
     </MainLayout>
