@@ -7,6 +7,7 @@ import React, {
   useCallback,
   useMemo,
 } from "react";
+import { useDocumentsProgress } from "../../contexts/DocumentsProgressContext";
 import { supabase } from "../../supabaseClient";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
@@ -124,6 +125,8 @@ const DocumentsPage = () => {
 
   // Стан для модального вікна авторизації
   const [showAuthModal, setShowAuthModal] = useState(false);
+
+  const { setProgress: setGlobalProgress } = useDocumentsProgress();
 
   // Стан для модального вікна PDF генерації
   const [isPDFModalOpen, setIsPDFModalOpen] = useState(false);
@@ -300,8 +303,9 @@ const DocumentsPage = () => {
     if (category) {
       const newProgress = calculateProgress(dynamicData.checkboxes, language);
       setProgress(newProgress);
+      setGlobalProgress(newProgress);
     }
-  }, [dynamicData.checkboxes, category, language, calculateProgress]);
+  }, [dynamicData.checkboxes, category, language, calculateProgress, setGlobalProgress]);
 
   // Оновлюємо Supabase user metadata з checkboxes та progress (оновлено)
   const updateFirestoreData = useCallback(

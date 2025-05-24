@@ -10,11 +10,13 @@ import RegistrationTile from "../../pages/AuthPage/RegistrationTile.jsx";
 import styles from "./Dashboard.module.scss";
 import { toast } from "react-toastify";
 import StageTasksWidget from "../../components/StageTasksWidget.jsx";
+import { useDocumentsProgress } from "../../contexts/DocumentsProgressContext";
 
 const Dashboard = () => {
   const { currentUser: user } = useAuth();
   const [userData, setUserData] = useState(null);
   const [activeStage, setActiveStage] = useState(null);
+  const { setProgress } = useDocumentsProgress();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,6 +36,8 @@ const Dashboard = () => {
           active_stage: md.active_stage,
         };
         setUserData(mappedUserData);
+        const userProgress = md?.selectionData?.progress || 0;
+        setProgress(userProgress);
         setActiveStage(mappedUserData.active_stage);
       } catch {
         toast.error("Error loading dashboard data");

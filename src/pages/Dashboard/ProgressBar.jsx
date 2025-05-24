@@ -4,8 +4,10 @@ import "react-circular-progressbar/dist/styles.css";
 import { useNavigate } from "react-router-dom";
 import { FaFileAlt } from "react-icons/fa";
 import styles from "./ProgressBar.module.scss";
+import { useDocumentsProgress } from "../../contexts/DocumentsProgressContext";
 
-const ProgressBar = ({ progress }) => {
+const ProgressBar = () => {
+  const { progress } = useDocumentsProgress();
   const navigate = useNavigate();
 
   const handleNavigateToDocuments = () => {

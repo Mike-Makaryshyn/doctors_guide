@@ -7,6 +7,7 @@ import MainLayout from "../layouts/MainLayout/MainLayout";
 import { localStorageGet } from "../utils/localStorage";
 import { DataSourceProvider } from "../contexts/DataSourceContext";
 import { CasesProvider } from "../contexts/CasesContext";
+import { DocumentsProgressProvider } from "../contexts/DocumentsProgressContext";
 
 // Lazy-loaded components
 const IntroductionPage = React.lazy(() =>
@@ -334,7 +335,14 @@ export default function Routers() {
         <Route path="/fill-in-blank-game" element={<FillInBlankGame />} />
         <Route path={pathList.lands.path} element={<GermanyLandsPage />} />
         <Route path={pathList.main_menu.path} element={<MainMenuPage />} />
-        <Route path={pathList.documents.path} element={<DocumentsPage />} />
+        <Route
+          path={pathList.documents.path}
+          element={
+            <DocumentsProgressProvider>
+              <DocumentsPage />
+            </DocumentsProgressProvider>
+          }
+        />
         <Route path={pathList.what_is_fsp.path} element={<WhatIsFSPPage />} />
         <Route
           path={pathList.gleichwertigkeit.path}
@@ -473,7 +481,9 @@ export default function Routers() {
           path="/dashboard"
           element={
             <ProtectedRoute>
-              <Dashboard />
+              <DocumentsProgressProvider>
+                <Dashboard />
+              </DocumentsProgressProvider>
             </ProtectedRoute>
           }
         />
