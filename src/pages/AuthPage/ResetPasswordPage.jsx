@@ -14,6 +14,8 @@ const ResetPasswordPage = () => {
   });
   const navigate = useNavigate();
 
+  const siteUrl = process.env.REACT_APP_SITE_URL;
+
   useEffect(() => {
     if (lastSentTime) {
       const elapsed = Date.now() - lastSentTime;
@@ -42,7 +44,7 @@ const ResetPasswordPage = () => {
 
     try {
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: `${window.location.origin}/auth/update-password`,
+        redirectTo: `${siteUrl}/auth/update-password`,
       });
 
       if (error) {
