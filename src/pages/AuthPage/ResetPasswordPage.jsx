@@ -3,6 +3,7 @@ import { supabase } from '../../supabaseClient';
 import styles from './ResetPasswordPage.module.scss';
 import { useNavigate } from 'react-router-dom';
 import MainLayout from '../../layouts/MainLayout/MainLayout';
+import { pathList } from '../../routes/path';
 
 const ResetPasswordPage = () => {
   const [email, setEmail] = useState('');
@@ -14,7 +15,10 @@ const ResetPasswordPage = () => {
   });
   const navigate = useNavigate();
 
-  const siteUrl = process.env.REACT_APP_SITE_URL;
+  const siteUrl =
+    (typeof process !== 'undefined' &&
+      process.env.REACT_APP_SITE_URL) ||
+    window.location.origin;
 
   useEffect(() => {
     if (lastSentTime) {
@@ -44,8 +48,8 @@ const ResetPasswordPage = () => {
 
     try {
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: `${siteUrl}/auth/update-password`,
-      });
+  redirectTo: `${siteUrl}/auth/update-password`,
+});
 
       if (error) {
         if (error.status === 429) {
@@ -97,7 +101,7 @@ const ResetPasswordPage = () => {
             </button>
           </form>
         )}
-        <button onClick={() => navigate('/auth')} className={styles.switchButton}>
+        <button onClick={() => navigate(pathList.auth.path)} className={styles.switchButton}>
           Zurück zur Anmeldung
         </button>
       </div>
