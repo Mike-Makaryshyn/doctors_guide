@@ -5,7 +5,6 @@ import styles from "./AuthPage.module.scss";
 import { languages, DEFAULT_LANGUAGE } from "../../constants/translation/AuthPage";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
-import { FaGoogle } from "react-icons/fa";
 
 // Function to restore an existing session by tokens
 const restoreSession = async (access_token, refresh_token) => {
@@ -30,9 +29,21 @@ const AuthPage = () => {
     const access = localStorage.getItem("access_token");
     const refresh = localStorage.getItem("refresh_token");
     if (access && refresh) {
-      restoreSession(access, refresh).then(ok => {
-        if (ok) navigate("/dashboard");
-      });
+      restoreSession(access, refresh)
+        .then(ok => {
+          if (ok) {
+            navigate("/dashboard");
+          } else {
+            // clear invalid tokens
+            localStorage.removeItem("access_token");
+            localStorage.removeItem("refresh_token");
+          }
+        })
+        .catch(err => {
+          console.error("Error restoring session:", err);
+          localStorage.removeItem("access_token");
+          localStorage.removeItem("refresh_token");
+        });
     }
   }, []);
 
@@ -50,19 +61,6 @@ const AuthPage = () => {
       localStorage.setItem("refresh_token", data.session.refresh_token);
       alert(t.successLogin);
       navigate("/dashboard");
-    }
-  };
-
-  const handleGoogleSignIn = async () => {
-    const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-        redirectTo: window.location.origin + "/dashboard"
-      }
-    });
-    if (error) {
-      console.error("Google login error:", error);
-      alert(t.errorLogin.replace("{{message}}", error.message));
     }
   };
 
@@ -91,13 +89,6 @@ const AuthPage = () => {
             {t.loginButton}
           </button>
         </form>
-
-        <div className={styles.oauthButtons}>
-          <button onClick={handleGoogleSignIn} className={styles.googleButton}>
-            <FaGoogle style={{ marginRight: "8px" }} />
-            {t.googleLogin}
-          </button>
-        </div>
 
         {/* Кнопка для переходу до реєстрації */}
         <button
