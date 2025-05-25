@@ -14,6 +14,19 @@ const registrationTranslations = {
       el: "Εγγραφή",
       ro: "Înregistrare"
     },
+    chooseLanguage: {
+      en: "Choose your language",
+      de: "Sprache wählen",
+      uk: "Оберіть мову",
+      ru: "Выберите язык",
+      tr: "Dil seçin",
+      ar: "اختر اللغة",
+      fr: "Choisissez votre langue",
+      es: "Elige tu idioma",
+      pl: "Wybierz język",
+      el: "Επιλέξτε γλώσσα",
+      ro: "Alegeți limba"
+    },
   },
   placeholders: {
     firstName: {

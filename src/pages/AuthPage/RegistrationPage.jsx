@@ -10,14 +10,24 @@ import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import registrationTranslations from "../../constants/translation/registration";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { localStorageSet } from "../../utils/localStorage";
-
+import flagDe from "../../assets/flags/de.png";
+import flagEn from "../../assets/flags/en.png";
+import flagUk from "../../assets/flags/uk.png";
+import flagRu from "../../assets/flags/ru.png";
+import flagTr from "../../assets/flags/tr.png";
+import flagAr from "../../assets/flags/ar.png";
+import flagFr from "../../assets/flags/fr.png";
+import flagEs from "../../assets/flags/es.png";
+import flagPl from "../../assets/flags/pl.png";
+import flagEl from "../../assets/flags/el.png";
+import flagRo from "../../assets/flags/ro.png";
 const StageMenu = lazy(() => import("../ApprobationPage/StageMenu"));
 const CustomGermanyMap = lazy(() =>
   import("../../components/CustomGermanyMap/CustomGermanyMap")
 );
 
 const RegistrationPage = () => {
-  const [currentStep, setCurrentStep] = useState("form");
+  const [currentStep, setCurrentStep] = useState("language");
   const [isLoading, setIsLoading] = useState(false);
   const [selectedStage, setSelectedStage] = useState(null);
   const [showIntroModal, setShowIntroModal] = useState(false);
@@ -25,7 +35,7 @@ const RegistrationPage = () => {
   const [localRegion, setLocalRegion] = useState("");
   const navigate = useNavigate();
   const { currentUser } = useAuth();
- const { selectedRegion, selectedLanguage: language = "de" } = useGetGlobalInfo();// глобальний стан, але для збереження регіону ми використовуватимемо локальний стан
+  const { selectedRegion, selectedLanguage: language = "de", handleChangePage, handleChangeRegion, handleChangeEducationCategory, languages } = useGetGlobalInfo();// глобальний стан, але для збереження регіону ми використовуватимемо локальний стан
 
   // Схема валідації
   const validationSchema = Yup.object({
@@ -143,14 +153,28 @@ const RegistrationPage = () => {
   };
 
   // Функція для підстановки плейсхолдера
-  const placeholderWithError = (fieldName, defaultPlaceholder) => {
+  const placeholderWithError = (fieldName) => {
     const hasError = formik.touched[fieldName] && formik.errors[fieldName];
-    return hasError ? formik.errors[fieldName] : defaultPlaceholder;
+    return hasError ? formik.errors[fieldName] : "";
   };
 
   useEffect(() => {
     localStorageSet("selectedRegion", "");
   }, []);
+
+const languageOptions = [
+  { code: "de", label: "Deutsch", flag: flagDe },
+  { code: "en", label: "English", flag: flagEn },
+  { code: "uk", label: "Українська", flag: flagUk },
+  { code: "ru", label: "Русский", flag: flagRu },
+  { code: "tr", label: "Türkçe", flag: flagTr },
+  { code: "ar", label: "العربية", flag: flagAr },
+  { code: "fr", label: "Français", flag: flagFr },
+  { code: "es", label: "Español", flag: flagEs },
+  { code: "pl", label: "Polski", flag: flagPl },
+  { code: "el", label: "Ελληνικά", flag: flagEl },
+  { code: "ro", label: "Română", flag: flagRo },
+];
 
   return (
     <MainLayout>
@@ -170,20 +194,61 @@ const RegistrationPage = () => {
                 exitActive: styles.exitActive,
               }}
             >
-              {currentStep === "form" ? (
+              {currentStep === "language" ? (
+                <>
+                  <div className={styles.languageSelection}>
+                    {languageOptions.map((lang) => (
+                      <div
+                        key={lang.code}
+                        onClick={() => {
+                          localStorage.setItem("selectedLanguage", JSON.stringify(lang.code));
+                          window.location.reload();
+                        }}
+                        className={styles.langIcon}
+                        role="button"
+                        tabIndex={0}
+                        onKeyPress={(e) => {
+                          if (e.key === 'Enter') {
+                            localStorage.setItem("selectedLanguage", JSON.stringify(lang.code));
+                            window.location.reload();
+                          }
+                        }}
+                      >
+                        <img
+                          src={lang.flag}
+                          alt={lang.label}
+                          className={
+                            language === lang.code ? styles.selectedLang : ""
+                          }
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  <div className={styles.languageFooter}>
+                    <button
+                      type="button"
+                      className={`${styles.nextButton} ${language && styles.pulse}`}
+                      onClick={() => setCurrentStep("form")}
+                      disabled={!language}
+                    >
+                      &#8594;
+                    </button>
+                  </div>
+                </>
+              ) : currentStep === "form" ? (
                 <div className={styles.formWrapper}>
                   <form className={styles.form} onSubmit={formik.handleSubmit}>
                     <div className={styles.formGrid}>
                       {/* Vorname */}
                       <div className={styles.formGroup}>
+                        <label htmlFor="firstName">
+                          {registrationTranslations.placeholders.firstName[language]}
+                        </label>
                         <input
                           id="firstName"
                           name="firstName"
                           type="text"
-                          placeholder={placeholderWithError(
-                            "firstName",
-                            registrationTranslations.placeholders.firstName[language]
-                          )}
+                          placeholder={placeholderWithError("firstName")}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.firstName}
@@ -193,14 +258,14 @@ const RegistrationPage = () => {
                       </div>
                       {/* Nachname */}
                       <div className={styles.formGroup}>
+                        <label htmlFor="lastName">
+                          {registrationTranslations.placeholders.lastName[language]}
+                        </label>
                         <input
                           id="lastName"
                           name="lastName"
                           type="text"
-                          placeholder={placeholderWithError(
-                            "lastName",
-                            registrationTranslations.placeholders.lastName[language]
-                          )}
+                          placeholder={placeholderWithError("lastName")}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.lastName}
@@ -210,15 +275,15 @@ const RegistrationPage = () => {
                       </div>
                       {/* Geburtsdatum */}
                       <div className={styles.formGroup}>
+                        <label htmlFor="birthDate">
+                          {registrationTranslations.placeholders.birthDate[language]}
+                        </label>
                         <input
                           id="birthDate"
                           name="birthDate"
                           type="date"
                           lang="de"
-                          placeholder={placeholderWithError(
-                            "birthDate",
-                            registrationTranslations.placeholders.birthDate[language]
-                          )}
+                          placeholder={placeholderWithError("birthDate")}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.birthDate}
@@ -228,14 +293,14 @@ const RegistrationPage = () => {
                       </div>
                       {/* E-Mail */}
                       <div className={styles.formGroup}>
+                        <label htmlFor="email">
+                          {registrationTranslations.placeholders.email[language]}
+                        </label>
                         <input
                           id="email"
                           name="email"
                           type="email"
-                          placeholder={placeholderWithError(
-                            "email",
-                            registrationTranslations.placeholders.email[language]
-                          )}
+                          placeholder={placeholderWithError("email")}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.email}
@@ -245,14 +310,14 @@ const RegistrationPage = () => {
                       </div>
                       {/* Passwort */}
                       <div className={styles.formGroup}>
+                        <label htmlFor="password">
+                          {registrationTranslations.placeholders.password[language]}
+                        </label>
                         <input
                           id="password"
                           name="password"
                           type="password"
-                          placeholder={placeholderWithError(
-                            "password",
-                            registrationTranslations.placeholders.password[language]
-                          )}
+                          placeholder={placeholderWithError("password")}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.password}
@@ -262,14 +327,14 @@ const RegistrationPage = () => {
                       </div>
                       {/* Passwort bestätigen */}
                       <div className={styles.formGroup}>
+                        <label htmlFor="repeatPassword">
+                          {registrationTranslations.placeholders.repeatPassword[language]}
+                        </label>
                         <input
                           id="repeatPassword"
                           name="repeatPassword"
                           type="password"
-                          placeholder={placeholderWithError(
-                            "repeatPassword",
-                            registrationTranslations.placeholders.repeatPassword[language]
-                          )}
+                          placeholder={placeholderWithError("repeatPassword")}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.repeatPassword}
@@ -279,6 +344,9 @@ const RegistrationPage = () => {
                       </div>
                       {/* Вибір EU / Non-EU */}
                       <div className={styles.formGroup}>
+                        <label htmlFor="educationRegion">
+                          {language === "de" ? "Bildungsregion" : "Education Region"}
+                        </label>
                         <div
                           className={
                             formik.touched.educationRegion &&
@@ -317,11 +385,13 @@ const RegistrationPage = () => {
                       </div>
                       {/* Fachgebiet */}
                       <div className={styles.formGroup}>
+                        <label htmlFor="specialty">
+                          {registrationTranslations.placeholders.specialty[language]}
+                        </label>
                         <input
                           id="specialty"
                           name="specialty"
                           type="text"
-                          placeholder={registrationTranslations.placeholders.specialty[language]}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.specialty}
@@ -330,11 +400,13 @@ const RegistrationPage = () => {
                       </div>
                       {/* Deutschniveau */}
                       <div className={styles.formGroup}>
+                        <label htmlFor="germanLevel">
+                          {registrationTranslations.placeholders.germanLevel[language]}
+                        </label>
                         <input
                           id="germanLevel"
                           name="germanLevel"
                           type="text"
-                          placeholder={registrationTranslations.placeholders.germanLevel[language]}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.germanLevel}
@@ -343,6 +415,9 @@ const RegistrationPage = () => {
                       </div>
                       {/* Verfahrenstyp */}
                       <div className={styles.formGroup}>
+                        <label htmlFor="procedureType">
+                          {registrationTranslations.placeholders.procedureType[language]}
+                        </label>
                         <select
                           id="procedureType"
                           name="procedureType"
@@ -433,7 +508,7 @@ const RegistrationPage = () => {
                         setCurrentStep("stageMenu");
                         setShowIntroModal(true);
                       }}
-                      className={styles.nextButton}
+                      className={`${styles.nextButton} ${formik.isValid && formik.dirty ? styles.pulse : ''}`}
                       disabled={!formik.isValid || !formik.dirty}
                     >
                       &#8594;
@@ -484,7 +559,7 @@ const RegistrationPage = () => {
                   </button>
                   <button
                     type="button"
-                    className={styles.nextButton}
+                    className={`${styles.nextButton} ${selectedStage ? styles.pulse : ''}`}
                     onClick={() => setCurrentStep("map")}
                     disabled={!selectedStage}
                   >
@@ -508,7 +583,7 @@ const RegistrationPage = () => {
                   </button>
                   <button
                     type="button"
-                    className={styles.submitButton}
+                    className={`${styles.submitButton} ${!isLoading ? styles.pulse : ""}`}
                     onClick={formik.handleSubmit}
                     disabled={isLoading}
                   >
