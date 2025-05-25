@@ -74,7 +74,7 @@
   display: flex
   ;
       flex-direction: column;
-      gap: 20px;
+      gap: 15px;
       flex-wrap: wrap;
       align-content: space-around;
 }
@@ -112,7 +112,7 @@
 .inputField,
 textarea.inputField {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   min-height: 50px;
   resize: none;
   border-radius: 12px;
@@ -135,7 +135,7 @@ textarea.inputField:focus {
 
 .selectField {
   width: 100%;
-  max-width: 320px;
+  max-width: 500px;
   padding: 15px;
   border-radius: 12px;
   background: #ffffff;
@@ -155,14 +155,14 @@ textarea.inputField:focus {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 20px;
+  margin-top: 15px;
 
   label {
     display: flex;
     align-items: center;
     color: #333;
     font-size: 0.95rem;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 
     input {
       margin-right: 10px;
@@ -398,4 +398,101 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .centeredHeading {
     display: block;
   }
+
+  .formGrid {
+    gap: 10px;
+  }
+
+  .inputField,
+  textarea.inputField,
+  .selectField {
+    max-width: 100%;
+  }
+
+  .checkboxGroup {
+    margin-top: 10px;
+
+    label {
+      margin-bottom: 4px;
+    }
+  }
+}
+.stageIntro {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.stageIntroTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.stageIntroText {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #555;
+}
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.closeButton {
+ position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ed0a0a;
+  transition: transform 0.2s ease;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+
+.CloseButton:hover {
+  transform: scale(0.9);
+  background-color: rgba(237, 10, 10, 0);
+}
+/* 1) Stage-Titel in Fillet-Lila groß darstellen */
+.stageIntroTitle {
+  color: #013b6e;       /* dein Fillet-Lila */
+  font-size: 2.2rem;    /* große Schrift */
+  font-weight: 700;
+}
+
+/* 2) Textblock zentrieren */
+.stageIntro {
+  text-align: center;
+}
+
+/* 3) Modal-Fenster schön stylen */
+.modalContent {
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;      /* sicherheitshalber mittig */
 }

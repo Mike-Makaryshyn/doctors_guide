@@ -1,26 +1,31 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback, useEffect, Suspense, lazy } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../../supabaseClient";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
-import StageMenu from "../ApprobationPage/StageMenu";
 import styles from "./RegistrationPage.module.scss";
 import { useAuth } from "../../contexts/AuthContext";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+import registrationTranslations from "../../constants/translation/registration";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import CustomGermanyMap from "../../components/CustomGermanyMap/CustomGermanyMap";
 import { localStorageSet } from "../../utils/localStorage";
+
+const StageMenu = lazy(() => import("../ApprobationPage/StageMenu"));
+const CustomGermanyMap = lazy(() =>
+  import("../../components/CustomGermanyMap/CustomGermanyMap")
+);
 
 const RegistrationPage = () => {
   const [currentStep, setCurrentStep] = useState("form");
   const [isLoading, setIsLoading] = useState(false);
   const [selectedStage, setSelectedStage] = useState(null);
+  const [showIntroModal, setShowIntroModal] = useState(false);
   // Додаємо локальний стан для регіону
   const [localRegion, setLocalRegion] = useState("");
   const navigate = useNavigate();
   const { currentUser } = useAuth();
-  const { selectedRegion } = useGetGlobalInfo(); // глобальний стан, але для збереження регіону ми використовуватимемо локальний стан
+ const { selectedRegion, selectedLanguage: language = "de" } = useGetGlobalInfo();// глобальний стан, але для збереження регіону ми використовуватимемо локальний стан
 
   // Схема валідації
   const validationSchema = Yup.object({
@@ -70,28 +75,45 @@ const RegistrationPage = () => {
         options: {
           emailRedirectTo: window.location.origin + "/auth/confirm",
           data: {
-            first_name:       values.firstName,
-            last_name:        values.lastName,
-            birth_date:       values.birthDate,
+            first_name: values.firstName,
+            last_name: values.lastName,
+            birth_date: values.birthDate,
             education_region: values.educationRegion,
-            region:           localRegion,
-            specialty:        values.specialty || null,
-            german_level:     values.germanLevel || null,
-            procedure_type:   values.procedureType || null,
-            subscribe:        values.subscribe,
-            agree_terms:      values.agreeTerms,
-            agree_privacy:    values.agreePrivacy,
-            active_step:      "completed",
-            active_stage:     selectedStage || 1,
-          }
-        }
+            region: localRegion,
+            specialty: values.specialty || null,
+            german_level: values.germanLevel || null,
+            procedure_type: values.procedureType || null,
+            subscribe: values.subscribe,
+            agree_terms: values.agreeTerms,
+            agree_privacy: values.agreePrivacy,
+            active_step: "completed",
+            active_stage: selectedStage || 1,
+          },
+        },
       });
       setIsLoading(false);
       if (signUpError) {
         console.error("Error signing up:", signUpError.message);
         alert(`Registrierung fehlgeschlagen: ${signUpError.message}`);
       } else {
-        alert("Danke fürs Registrieren! Bitte prüfe deine E-Mails und klicke auf den Bestätigungslink.");
+        alert(
+          "Danke fürs Registrieren! Bitte prüfe deine E-Mails und klicke auf den Bestätigungslink."
+        );
+        // Speichere Checkbox-Präferenzen in Supabase
+        if (data && data.user) {
+          const { error: prefsError } = await supabase
+            .from("user_preferences")
+            .insert([
+              {
+                user_id: data.user.id,
+                subscribe: values.subscribe,
+                agree_terms: values.agreeTerms,
+                agree_privacy: values.agreePrivacy,
+              },
+            ]);
+          if (prefsError)
+            console.error("Error saving preferences:", prefsError.message);
+        }
         navigate("/check-email");
       }
     },
@@ -133,7 +155,9 @@ const RegistrationPage = () => {
   return (
     <MainLayout>
       <div className={styles.pageContainer}>
-        <h1 className={styles.centeredHeading}>Registrierung</h1>
+        <h1 className={styles.centeredHeading}>
+   {registrationTranslations.titles.pageTitle[language]}
+ </h1>
         <div className={styles.contentWrapper}>
           <TransitionGroup component={null}>
             <CSSTransition
@@ -158,7 +182,7 @@ const RegistrationPage = () => {
                           type="text"
                           placeholder={placeholderWithError(
                             "firstName",
-                            "Vorname"
+                            registrationTranslations.placeholders.firstName[language]
                           )}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
@@ -175,7 +199,7 @@ const RegistrationPage = () => {
                           type="text"
                           placeholder={placeholderWithError(
                             "lastName",
-                            "Nachname"
+                            registrationTranslations.placeholders.lastName[language]
                           )}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
@@ -193,7 +217,7 @@ const RegistrationPage = () => {
                           lang="de"
                           placeholder={placeholderWithError(
                             "birthDate",
-                            "Geburtsdatum"
+                            registrationTranslations.placeholders.birthDate[language]
                           )}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
@@ -208,7 +232,10 @@ const RegistrationPage = () => {
                           id="email"
                           name="email"
                           type="email"
-                          placeholder={placeholderWithError("email", "E-Mail")}
+                          placeholder={placeholderWithError(
+                            "email",
+                            registrationTranslations.placeholders.email[language]
+                          )}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.email}
@@ -224,7 +251,7 @@ const RegistrationPage = () => {
                           type="password"
                           placeholder={placeholderWithError(
                             "password",
-                            "Passwort"
+                            registrationTranslations.placeholders.password[language]
                           )}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
@@ -241,7 +268,7 @@ const RegistrationPage = () => {
                           type="password"
                           placeholder={placeholderWithError(
                             "repeatPassword",
-                            "Passwort bestätigen"
+                            registrationTranslations.placeholders.repeatPassword[language]
                           )}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
@@ -294,7 +321,7 @@ const RegistrationPage = () => {
                           id="specialty"
                           name="specialty"
                           type="text"
-                          placeholder="Fachgebiet"
+                          placeholder={registrationTranslations.placeholders.specialty[language]}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.specialty}
@@ -307,7 +334,7 @@ const RegistrationPage = () => {
                           id="germanLevel"
                           name="germanLevel"
                           type="text"
-                          placeholder="Deutschniveau (z.B.: B2, C1)"
+                          placeholder={registrationTranslations.placeholders.germanLevel[language]}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.germanLevel}
@@ -324,7 +351,9 @@ const RegistrationPage = () => {
                           value={formik.values.procedureType}
                           className={styles.inputField}
                         >
-                          <option value="">-- Typ wählen --</option>
+                          <option value="">
+                            {registrationTranslations.placeholders.procedureType[language]}
+                          </option>
                           <option value="Kenntnisprüfung">
                             Kenntnisprüfung
                           </option>
@@ -344,7 +373,7 @@ const RegistrationPage = () => {
                             onBlur={formik.handleBlur}
                             checked={formik.values.subscribe}
                           />
-                          Newsletter abonnieren
+                          {registrationTranslations.labels.subscribe[language]}
                         </label>
                       </div>
                       {/* AGB */}
@@ -368,7 +397,7 @@ const RegistrationPage = () => {
                           />
                           {formik.touched.agreeTerms && formik.errors.agreeTerms
                             ? formik.errors.agreeTerms
-                            : "Ich stimme den AGB zu"}
+                            : registrationTranslations.labels.agreeTerms[language]}
                         </label>
                       </div>
                       {/* Datenschutzerklärung */}
@@ -393,14 +422,17 @@ const RegistrationPage = () => {
                           {formik.touched.agreePrivacy &&
                           formik.errors.agreePrivacy
                             ? formik.errors.agreePrivacy
-                            : "Ich stimme der Datenschutzerklärung zu"}
+                            : registrationTranslations.labels.agreePrivacy[language]}
                         </label>
                       </div>
                     </div>
                     {/* Кнопка "Далі" */}
                     <button
                       type="button"
-                      onClick={() => setCurrentStep("stageMenu")}
+                      onClick={() => {
+                        setCurrentStep("stageMenu");
+                        setShowIntroModal(true);
+                      }}
                       className={styles.nextButton}
                       disabled={!formik.isValid || !formik.dirty}
                     >
@@ -410,15 +442,39 @@ const RegistrationPage = () => {
                 </div>
               ) : currentStep === "stageMenu" ? (
                 <div className={styles.stageMenuWrapper}>
-                  <StageMenu
-                    onStageSelect={handleStageSelect}
-                    isRegistration={true}
-                    stagesProgress={stagesProgress}
-                    activeStage={selectedStage}
-                    enableSwipe={false}
-                    gridView={true}
-                    educationRegion={formik.values.educationRegion}
-                  />
+                  {showIntroModal && (
+                    <div className={styles.modalOverlay}>
+                      <div className={styles.modalContent}>
+                        <button
+                          type="button"
+                          className={styles.closeButton}
+                          onClick={() => setShowIntroModal(false)}
+                        >
+                           ×
+                        </button>
+                        <div className={styles.stageIntro}>
+                         <h2 className={styles.stageIntroTitle}>
+   {registrationTranslations.modal.title[language]}
+ </h2>
+                         <p className={styles.stageIntroText}>
+   {registrationTranslations.modal.text[language]}
+ </p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <StageMenu
+                      onStageSelect={handleStageSelect}
+                      isRegistration={true}
+                      stagesProgress={stagesProgress}
+                      activeStage={selectedStage}
+                      enableSwipe={false}
+                      gridView={true}
+                      educationRegion={formik.values.educationRegion}
+                    />
+                  </Suspense>
                   <button
                     type="button"
                     onClick={handleBack}
@@ -437,10 +493,12 @@ const RegistrationPage = () => {
                 </div>
               ) : currentStep === "map" ? (
                 <div className={styles.mapStepWrapper}>
-                  <CustomGermanyMap
-                    registrationMode={true}
-                    onRegionSelect={setLocalRegion}
-                  />
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <CustomGermanyMap
+                      registrationMode={true}
+                      onRegionSelect={setLocalRegion}
+                    />
+                  </Suspense>
                   <button
                     type="button"
                     onClick={handleBack}

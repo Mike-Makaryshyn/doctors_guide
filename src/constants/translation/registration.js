@@ -1,0 +1,249 @@
+// src/constants/translation/registration.js
+const registrationTranslations = {
+  titles: {
+    pageTitle: {
+      en: "Registration",
+      de: "Registrierung",
+      uk: "Реєстрація",
+      ru: "Регистрация",
+      tr: "Kayıt",
+      ar: "التسجيل",
+      fr: "Inscription",
+      es: "Registro",
+      pl: "Rejestracja",
+      el: "Εγγραφή",
+      ro: "Înregistrare"
+    },
+  },
+  placeholders: {
+    firstName: {
+      en: "First Name",
+      de: "Vorname",
+      uk: "Ім'я",
+      ru: "Имя",
+      tr: "Adı",
+      ar: "الاسم الأول",
+      fr: "Prénom",
+      es: "Nombre",
+      pl: "Imię",
+      el: "Όνομα",
+      ro: "Prenume"
+    },
+    lastName: {
+      en: "Last Name",
+      de: "Nachname",
+      uk: "Прізвище",
+      ru: "Фамилия",
+      tr: "Soyadı",
+      ar: "اسم العائلة",
+      fr: "Nom de famille",
+      es: "Apellido",
+      pl: "Nazwisko",
+      el: "Επώνυμο",
+      ro: "Nume de familie"
+    },
+    birthDate: {
+      en: "Birth Date",
+      de: "Geburtsdatum",
+      uk: "Дата народження",
+      ru: "Дата рождения",
+      tr: "Doğum Tarihi",
+      ar: "تاريخ الميلاد",
+      fr: "Date de naissance",
+      es: "Fecha de nacimiento",
+      pl: "Data urodzenia",
+      el: "Ημερομηνία γέννησης",
+      ro: "Data nașterii"
+    },
+    email: {
+      en: "Email",
+      de: "E-Mail",
+      uk: "Електронна пошта",
+      ru: "Электронная почта",
+      tr: "E-posta",
+      ar: "البريد الإلكتروني",
+      fr: "Email",
+      es: "Correo electrónico",
+      pl: "Email",
+      el: "Ηλεκτρονικό ταχυδρομείο",
+      ro: "Email"
+    },
+    password: {
+      en: "Password",
+      de: "Passwort",
+      uk: "Пароль",
+      ru: "Пароль",
+      tr: "Parola",
+      ar: "كلمة المرور",
+      fr: "Mot de passe",
+      es: "Contraseña",
+      pl: "Hasło",
+      el: "Κωδικός πρόσβασης",
+      ro: "Parolă"
+    },
+    repeatPassword: {
+      en: "Confirm Password",
+      de: "Passwort bestätigen",
+      uk: "Підтвердіть пароль",
+      ru: "Подтвердите пароль",
+      tr: "Parolayı Onaylayın",
+      ar: "تأكيد كلمة المرور",
+      fr: "Confirmer le mot de passe",
+      es: "Confirmar contraseña",
+      pl: "Potwierdź hasło",
+      el: "Επιβεβαίωση κωδικού",
+      ro: "Confirmă parola"
+    },
+    specialty: {
+      en: "Specialty",
+      de: "Fachgebiet",
+      uk: "Спеціальність",
+      ru: "Специальность",
+      tr: "Uzmanlık",
+      ar: "التخصص",
+      fr: "Spécialité",
+      es: "Especialidad",
+      pl: "Specjalizacja",
+      el: "Ειδικότητα",
+      ro: "Specialitate"
+    },
+    germanLevel: {
+      en: "German Level (e.g., B2, C1)",
+      de: "Deutschniveau (z.B.: B2, C1)",
+      uk: "Рівень німецької (наприклад, B2, C1)",
+      ru: "Уровень немецкого (например B2, C1)",
+      tr: "Almanca Seviyesi (örn., B2, C1)",
+      ar: "مستوى اللغة الألمانية (مثل B2, C1)",
+      fr: "Niveau d'allemand (ex. B2, C1)",
+      es: "Nivel de alemán (p.ej., B2, C1)",
+      pl: "Poziom niemieckiego (np. B2, C1)",
+      el: "Επίπεδο γερμανικών (π.χ. B2, C1)",
+      ro: "Nivel de germană (ex. B2, C1)"
+    },
+    procedureType: {
+      en: "-- Select Type --",
+      de: "-- Typ wählen --",
+      uk: "-- Виберіть тип --",
+      ru: "-- Выберите тип --",
+      tr: "-- Tür seçin --",
+      ar: "-- اختر النوع --",
+      fr: "-- Sélectionner le type --",
+      es: "-- Seleccione tipo --",
+      pl: "-- Wybierz typ --",
+      el: "-- Επιλέξτε τύπο --",
+      ro: "-- Selectați tipul --"
+    },
+  },
+  modal: {
+    title: {
+      en: "Continue Registration",
+      de: "Registrierung fortsetzen",
+      uk: "Продовжити реєстрацію",
+      ru: "Продолжить регистрацию",
+      tr: "Kaydı sürdür",
+      ar: "متابعة التسجيل",
+      fr: "Poursuivre l'inscription",
+      es: "Continuar el registro",
+      pl: "Kontynuuj rejestrację",
+      el: "Συνέχεια εγγραφής",
+      ro: "Continuați înregistrarea"
+    },
+    text: {
+      en: "These are the steps on the path to obtaining your medical license. Each step displays the relevant tasks on the platform. You can also change the order of these steps if needed. Please click on each step to see more information, then select the one that applies to you.",
+      de: "Dies sind die Schritte auf dem Weg zu Ihrer Approbation. Jeder Schritt zeigt auf der Plattform die entsprechenden Aufgaben an. Sie können die Reihenfolge dieser Schritte bei Bedarf ändern. Bitte klicken Sie auf jeden Schritt, um weitere Informationen zu erhalten, und wählen Sie dann den für Sie passenden aus.",
+      uk: "Це кроки на шляху до отримання вашої апробації. Кожен крок відображає відповідні завдання на платформі. Ви також можете змінити порядок цих кроків за потреби. Будь ласка, натисніть на кожен крок, щоб побачити більше інформації, а потім виберіть той, який вам підходить.",
+      ru: "Это шаги на пути к получению вашей апробации. Каждый шаг отображает соответствующие задачи на платформе. Вы также можете изменить порядок этих шагов при необходимости. Пожалуйста, нажмите на каждый шаг, чтобы увидеть подробную информацию, а затем выберите подходящий для вас.",
+      tr: "Bunlar, tıbbi lisansınızı alma yolundaki adımlardır. Her adım platformda ilgili görevleri gösterir. Bu adımların sırasını gerektiğinde değiştirebilirsiniz. Lütfen bilgi almak için her adıma tıklayın, ardından size uygun olanı seçin.",
+      ar: "هذه هي الخطوات نحو الحصول على ترخيصك الطبي. يعرض كل خطوة المهام ذات الصلة على المنصة. يمكنك أيضًا تغيير ترتيب هذه الخطوات حسب الحاجة. يرجى النقر على كل خطوة للاطلاع على مزيد من المعلومات ثم اختيار ما يناسبك.",
+      fr: "Voici les étapes pour obtenir votre licence médicale. Chaque étape affiche les tâches correspondantes sur la plateforme. Vous pouvez également modifier l'ordre de ces étapes si nécessaire. Veuillez cliquer sur chaque étape pour voir plus d'informations, puis sélectionnez celle qui vous convient.",
+      es: "Estos son los pasos para obtener su licencia médica. Cada paso muestra las tareas correspondientes en la plataforma. También puede cambiar el orden de estos pasos según sea necesario. Por favor, haga clic en cada paso para ver más información y luego seleccione el que le corresponda.",
+      pl: "To są kroki na drodze do uzyskania Twojej licencji medycznej. Każdy krok wyświetla odpowiednie zadania na platformie. Możesz również zmienić kolejność tych kroków w razie potrzeby. Proszę kliknąć każdy krok, aby zobaczyć więcej informacji, a następnie wybierz ten, który Ci odpowiada.",
+      el: "Αυτά είναι τα βήματα για να αποκτήσετε την ιατρική σας άδεια. Κάθε βήμα εμφανίζει τις αντίστοιχες εργασίες στην πλατφόρμα. Μπορείτε επίσης να αλλάξετε τη σειρά αυτών των βημάτων εάν χρειάζεται. Παρακαλώ κάντε κλικ σε κάθε βήμα για να δείτε περισσότερες πληροφορίες και στη συνέχεια επιλέξτε αυτό που σας ταιριάζει.",
+      ro: "Aceștia sunt pașii pentru a obține licența medicală. Fiecare pas afișează sarcinile relevante pe platformă. De asemenea, puteți schimba ordinea acestor pași după cum este necesar. Vă rugăm să faceți clic pe fiecare pas pentru a vedea mai multe informații, apoi selectați-l pe cel care vi se potrivește."
+    }
+  },
+  buttons: {
+    next: {
+      en: "Next",
+      de: "Weiter",
+      uk: "Далі",
+      ru: "Далее",
+      tr: "İleri",
+      ar: "التالي",
+      fr: "Suivant",
+      es: "Siguiente",
+      pl: "Dalej",
+      el: "Επόμενο",
+      ro: "Următor"
+    },
+    back: {
+      en: "Back",
+      de: "Zurück",
+      uk: "Назад",
+      ru: "Назад",
+      tr: "Geri",
+      ar: "السابق",
+      fr: "Retour",
+      es: "Atrás",
+      pl: "Wstecz",
+      el: "Πίσω",
+      ro: "Înapoi"
+    },
+    finish: {
+      en: "Finish",
+      de: "Fertig",
+      uk: "Завершити",
+      ru: "Завершить",
+      tr: "Bitir",
+      ar: "إنهاء",
+      fr: "Terminer",
+      es: "Finalizar",
+      pl: "Zakończ",
+      el: "Τέλος",
+      ro: "Finalizează"
+    }
+  },
+  labels: {
+    subscribe: {
+      en: "Subscribe to newsletter",
+      de: "Newsletter abonnieren",
+      uk: "Підписатися на розсилку",
+      ru: "Подписаться на рассылку",
+      tr: "Bültene abone ol",
+      ar: "الاشتراك في النشرة",
+      fr: "S'abonner à la newsletter",
+      es: "Suscribirse al boletín",
+      pl: "Subskrybuj newsletter",
+      el: "Εγγραφή στο ενημερωτικό δελτίο",
+      ro: "Abonează-te la newsletter"
+    },
+    agreeTerms: {
+      en: "I agree to the Terms and Conditions",
+      de: "Ich stimme den AGB zu",
+      uk: "Я погоджуюся з умовами",
+      ru: "Я согласен с условиями",
+      tr: "Şartlar ve Koşulları kabul ediyorum",
+      ar: "أنا أوافق على الشروط والأحكام",
+      fr: "J'accepte les termes et conditions",
+      es: "Acepto los términos y condiciones",
+      pl: "Akceptuję regulamin",
+      el: "Συμφωνώ με τους όρους και προϋποθέσεις",
+      ro: "Sunt de acord cu termenii și condițiile"
+    },
+    agreePrivacy: {
+      en: "I agree to the Privacy Policy",
+      de: "Ich stimme der Datenschutzerklärung zu",
+      uk: "Я погоджуюся з політикою конфіденційності",
+      ru: "Я согласен с политикой конфиденциальности",
+      tr: "Gizlilik Politikasını kabul ediyorum",
+      ar: "أنا أوافق على سياسة الخصوصية",
+      fr: "J'accepte la politique de confidentialité",
+      es: "Acepto la política de privacidad",
+      pl: "Akceptuję politykę prywatności",
+      el: "Συμφωνώ με την πολιτική απορρήτου",
+      ro: "Sunt de acord cu politica de confidențialitate"
+    }
+  },
+};
+
+export default registrationTranslations;
