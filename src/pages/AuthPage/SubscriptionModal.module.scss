@@ -1,0 +1,182 @@
+/* Загальні стилі для всіх кнопок */
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Оверлей модального вікна */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+/* Основне модальне вікно */
+.modal {
+  position: relative; // Для позиціювання кнопки закриття
+  background: #fff;
+  padding: 20px 40px;
+  border-radius: 30px; /* Залишаємо трохи округлення для модального вікна */
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.auth-modal-overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* затемнення */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Вищий z-index */
+}
+
+.auth-modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 10000; /* Ще вище для безпеки */
+}
+
+/* Кнопка закриття – розташована у правому верхньому кутку.
+   При наведенні збільшується */
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fb0000;
+  padding: 5px;
+  border-radius: 0; 
+  &:hover {
+    transform: scale(1.1);
+    background-color: rgba(251, 0, 0, 0);
+  }
+}
+
+/* Заголовок з синім текстом (#013b6e) */
+.modalTitle {
+  color: #013b6e;
+  margin-bottom: 20px;
+}
+
+/* Стилі для форми */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Поля вводу e-mail та password – квадратні */
+.input {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px; /* Квадратні кути */
+  background: #ffffff;
+  box-shadow: 7px 7px 14px #d1d1d1, -7px -7px 14px #ffffff;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.input:focus {
+  box-shadow: inset 5px 5px 10px #bababa, inset -5px -5px 10px #ffffff;
+}
+
+/* Уніфіковані стилі для основних кнопок (логін, Google, реєстрація) – квадратні */
+.loginButton,
+.googleButton,
+.switchButton {
+  width: 240px;
+  height: 50px;
+  margin: 5px auto; /* Центрування кнопок */
+  font-size: 1rem;
+  border: none;
+  border-radius: 15px; /* Квадратні кути */
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Кнопка входу (логін) */
+.loginButton {
+  background: #013b6e;
+  color: #fff;
+  box-shadow: 7px 7px 14px #d1d1d1, -7px -7px 14px #ffffff;
+  &:hover {
+    background: #012d59; /* трохи темніший відтінок */
+  }
+}
+
+/* Кнопка входу через Google (з іконкою) */
+.googleButton {
+  background: #4285f4;
+  color: #fff;
+  box-shadow: 7px 7px 14px #d1d1d1, -7px -7px 14px #ffffff;
+  &:hover {
+    background: #357ae8;
+  }
+  /* Додаємо невеликий відступ для іконки */
+  svg {
+    margin-right: 8px;
+  }
+}
+.loginButton {
+  background: #013b6e;
+  color: #fff;
+  box-shadow: 7px 7px 14px #d1d1d1, -7px -7px 14px #ffffff;
+  font-weight: 700;
+  &:hover {
+    background: #012d59;
+  }
+}
+/* Контейнер для OAuth-кнопок.
+   Зменшено margin-top, щоб кнопки логіну та Google були ближче один до одного */
+.oauthButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Кнопка для переходу до реєстрації.
+   Додано додатковий margin-top для відділення від інших кнопок */
+.switchButton {
+  background-color: #6c757d;
+  color: #fff;
+  margin-top: 20px; 
+  &:hover {
+    background-color: #5a6268;
+  }
+}
+
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 768px) {
+  .modal {
+    width: 95%;
+    padding: 15px 20px;
+  }
+  .loginButton,
+  .googleButton,
+  .switchButton {
+    width: 100%;
+  }
+}

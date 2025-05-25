@@ -38,6 +38,8 @@ import Modal from "react-modal"; // Для PDF модального вікна �
 import PDFTable from "../../components/Table/PDFTable"; // Імпорт нового компонента PDFTable
 // Імпортуємо оновлений AuthModal
 import AuthModal from "../../pages/AuthPage/AuthModal";
+import { useSubscription } from "../../contexts/SubscriptionContext";
+import SubscriptionModal from "../../pages/AuthPage/SubscriptionModal";
 
 // Ініціалізуємо модальне вікно (для тих компонентів, де використовується react-modal, наприклад PDFTable)
 Modal.setAppElement("#root");
@@ -127,6 +129,13 @@ const DocumentsPage = () => {
   const [showAuthModal, setShowAuthModal] = useState(false);
 
   const { setProgress: setGlobalProgress } = useDocumentsProgress();
+
+  const { status: subscriptionStatus } = useSubscription();
+  const isSubscribed = subscriptionStatus === "active";
+
+  const [showSubscriptionModal, setShowSubscriptionModal] = useState(false);
+  const handleShowSubscriptionModal = () => setShowSubscriptionModal(true);
+  const handleCloseSubscriptionModal = () => setShowSubscriptionModal(false);
 
   // Стан для модального вікна PDF генерації
   const [isPDFModalOpen, setIsPDFModalOpen] = useState(false);
@@ -449,16 +458,18 @@ const DocumentsPage = () => {
     });
   }, [documentsOptional, dynamicData.checkboxes]);
 
-  // Обгортка для handleCheckboxChange
+  // Обгортка для handleCheckboxChange з перевіркою підписки
   const handleCheckboxChangeWrapper = useCallback(
     (documentId, fieldName) => {
       if (!user) {
         handleShowAuthModal();
+      } else if (!isSubscribed) {
+        handleShowSubscriptionModal();
       } else {
         handleCheckboxChange(documentId, fieldName);
       }
     },
-    [user, handleCheckboxChange]
+    [user, handleCheckboxChange, isSubscribed]
   );
 
   return (
@@ -586,11 +597,16 @@ const DocumentsPage = () => {
             {/* Приховані або відключені лінки для неавторизованих користувачів */}
             {user && (
               <>
-              
                 {/* Додати кнопку друку */}
                 <button
                   className={styles.printButton}
-                  onClick={handleOpenPDFModal}
+                  onClick={() => {
+                    if (!isSubscribed) {
+                      handleShowSubscriptionModal();
+                    } else {
+                      handleOpenPDFModal();
+                    }
+                  }}
                   title="Друкувати PDF"
                   data-tutorial="printButton"
                 >
@@ -622,6 +638,10 @@ const DocumentsPage = () => {
             data-tutorial="pdfModal" // Додаємо атрибут туторіалу
           />
         )}
+        <SubscriptionModal
+          isOpen={showSubscriptionModal}
+          onClose={handleCloseSubscriptionModal}
+        />
       </div>
     </MainLayout>
   );

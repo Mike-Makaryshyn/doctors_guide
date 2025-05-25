@@ -31,9 +31,16 @@ export function SubscriptionProvider({ children }) {
       .single();
 
     if (!error && data) {
-      setStatus(data.status);
-      setEndsAt(data.current_period_end);
-      console.log('SubscriptionContext: status =', data.status, 'endsAt =', data.current_period_end);
+      const { status: subStatus, current_period_end } = data;
+      const now = new Date();
+      // Treat canceled subscriptions as active until their period end date
+      const effectiveStatus =
+        subStatus === 'canceled' && new Date(current_period_end) > now
+          ? 'active'
+          : subStatus;
+      setStatus(effectiveStatus);
+      setEndsAt(current_period_end);
+      console.log('SubscriptionContext: status =', effectiveStatus, 'endsAt =', current_period_end);
     } else {
       setStatus('inactive');
       setEndsAt(null);
