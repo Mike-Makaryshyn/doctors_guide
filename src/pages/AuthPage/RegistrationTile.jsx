@@ -8,6 +8,12 @@ import { useSubscription } from '../../contexts/SubscriptionContext';
 const RegistrationTile = ({ data, style }) => {
   const { status: contextStatus, endsAt: contextEndsAt } = useSubscription();
   const navigate = useNavigate();
+  // Treat cancelled subscriptions with a future end date as still manageable
+  const inGracePeriod =
+    contextStatus === "canceled" &&
+    contextEndsAt &&
+    new Date(contextEndsAt) > new Date();
+  const isManageable = contextStatus === "active" || inGracePeriod;
   const { firstName, lastName, email, birthDate, educationRegion, specialty, germanLevel, procedureType } = data;
 
   return (
@@ -35,15 +41,11 @@ const RegistrationTile = ({ data, style }) => {
         <div className={styles.buttonContainer}>
           <button
             onClick={() =>
-              navigate(
-                contextStatus === "active"
-                  ? "/dashboard/subscription"
-                  : "/subscription"
-              )
+              navigate(isManageable ? "/dashboard/subscription" : "/subscription")
             }
             className={styles.subscriptionButton}
           >
-            {contextStatus === "active" ? "Manage Subscription" : "Subscribe"}
+            {isManageable ? "Manage Subscription" : "Subscribe"}
           </button>
         </div>
       </div>

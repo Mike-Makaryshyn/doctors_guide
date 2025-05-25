@@ -52,3 +52,20 @@
     width: 100%;
   }
 }
+// Back to dashboard button styles
+.mainMenuBack {
+margin-top: auto;
+    width: 35px;
+    height: 28px;
+    position: fixed;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    left: 20px;
+    bottom: 0;
+}
+.mainMenuBack:hover {
+  transform: scale(1.1);
+  color: #ffffff;
+}

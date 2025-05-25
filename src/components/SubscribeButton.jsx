@@ -5,7 +5,7 @@ import { supabase } from "../supabaseClient";
 
 const SubscribeButton = () => {
   const { currentUser } = useAuth();
-  const { status: subscriptionStatus } = useSubscription();
+  const { status: subscriptionStatus, endsAt: subscriptionEnd } = useSubscription();
 
   const handleSubscribe = async () => {
     if (!currentUser || !currentUser.email) {
@@ -65,7 +65,9 @@ const SubscribeButton = () => {
     }
   };
 
-  const isSubscribed = subscriptionStatus === "active";
+  const isSubscribed =
+    subscriptionStatus === "active" ||
+    (subscriptionStatus === "canceled" && subscriptionEnd && new Date(subscriptionEnd) > new Date());
 
   return (
     <button

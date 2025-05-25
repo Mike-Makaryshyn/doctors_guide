@@ -1,82 +1,75 @@
-.progressContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Вирівнювання вліво для всіх пристроїв */
-    margin: 0;
-    width: auto; /* Повернення до автоматичної ширини */
+.tile {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: var(--tile-width, 340px);
+  margin: 10px;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
   }
-  
-  .circularWrapper {
-    width: 150px; /* Фіксований розмір для всіх пристроїв */
-    height: 150px;
-    position: relative;
-    cursor: pointer;
-    border: 2px solid transparent;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(145deg, #ffffff, #e6e6e6);
-  
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    }
-  
-    &:focus {
-      outline: none;
-      border-color: #007bff;
-    }
-  }
-  
-  .iconWrapper {
+}
+
+.tileHeader {
+  font-size: 1.3rem;
+  color: #013b6e;
+  margin-bottom: 10px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.progressBar {
+  width: 100%;
+  height: 24px;
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 8px;
+  background-color: #013b6e;
+  transition: width 0.3s ease;
+  position: relative;
+
+  &::after {
+    content: attr(data-progress) "%";
     position: absolute;
-    top: 50%;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    animation: floating 3s ease-in-out infinite; /* Постійне покачування іконки */
-  
-    .documentIcon {
-      font-size: 50px;
-      color: #4caf50;
-    }
-  
-    .percentageText {
-      font-size: 18px;
-      font-weight: bold;
-      color: #333;
-    }
+    font-weight: bold;
+    color: #fff;
+    font-size: 0.9rem;
   }
-  
-  /* Анімація блика для заповненого прогресу */
-  .CircularProgressbar-path {
-    stroke: #4caf50;
-    animation: shimmer 3s infinite linear;
+}
+
+.editIcon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 1.3rem;
+  color: #013b6e;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.editIcon:hover {
+  transform: scale(1.2);
+  color: #012d59;
+}
+
+@media (max-width: 768px) {
+  .tile {
+    margin: 0 !important;
   }
-  
-  @keyframes shimmer {
-    0% {
-      stroke-dasharray: 10, 90;
-      stroke-dashoffset: 0;
-    }
-    50% {
-      stroke-dasharray: 50, 50;
-      stroke-dashoffset: -25;
-    }
-    100% {
-      stroke-dasharray: 10, 90;
-      stroke-dashoffset: -50;
-    }
-  }
-  
-  @keyframes floating {
-    0% {
-      transform: translate(-50%, -50%) translateY(0);
-    }
-    50% {
-      transform: translate(-50%, -50%) translateY(-5px);
-    }
-    100% {
-      transform: translate(-50%, -50%) translateY(0);
-    }
-  }
+}

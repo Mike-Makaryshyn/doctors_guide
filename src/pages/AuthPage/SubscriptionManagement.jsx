@@ -15,22 +15,14 @@ const SubscriptionManagement = () => {
   const { selectedLanguage } = useGetGlobalInfo();
   const t = languages[selectedLanguage] || languages[DEFAULT_LANGUAGE];
 
+  // Grace-Period: 'canceled' aber noch nicht abgelaufen → treat as subscribed
+  const isSubscribed =
+    status === 'active' ||
+    (status === 'canceled' && endsAt && new Date(endsAt) > new Date());
+
   useEffect(() => {
     refresh();
-  }, []);
-
-  const handleCancel = async () => {
-    setLoading(true);
-    // Виклик функції скасування у backend / webhook
-    const { error } = await supabase.rpc('cancel_subscription', { user_id: supabase.auth.user().id });
-    if (error) {
-      alert(t.errorCancel.replace('{{message}}', error.message));
-    } else {
-      alert(t.successCancel);
-      refresh();
-    }
-    setLoading(false);
-  };
+  }, [refresh]);
 
   const handleUpgrade = () => {
     navigate('/pricing');
@@ -40,32 +32,35 @@ const SubscriptionManagement = () => {
     <MainLayout>
       <div className={styles.modalWrapper}>
         <h1 className={styles.modalTitle}>{t.title}</h1>
-        {status === 'active' ? (
-          <>
-            <p className={styles.infoText}>{t.statusLabel}: <strong>{t.active}</strong></p>
-            {endsAt && (
-              <p className={styles.infoText}>{t.validUntil}: <strong>{new Date(endsAt).toLocaleDateString()}</strong></p>
-            )}
-            <button
-              onClick={handleCancel}
-              className={styles.subscriptionButton}
-              disabled={loading}
-            >
-              {loading ? t.processing : t.cancelButton}
-            </button>
-          </>
-        ) : (
-          <>
-            <p className={styles.infoText}>{t.noSubscription}</p>
-            <button
-              onClick={handleUpgrade}
-              className={styles.subscriptionButton}
-            >
-              {t.subscribeButton}
-            </button>
-          </>
+
+        {/* Immer Status anzeigen */}
+        <p className={styles.infoText}>
+          {t.statusLabel}: <strong>{isSubscribed ? t.active : t.noSubscription}</strong>
+        </p>
+
+        {/* Ablaufdatum nur bei Subscription */}
+        {isSubscribed && endsAt && (
+          <p className={styles.infoText}>
+            {t.validUntil}: <strong>{new Date(endsAt).toLocaleDateString()}</strong>
+          </p>
         )}
+
+        {/* Ein Button: bei Subscription deaktiviert, ansonsten "Subscribe" */}
+        <button
+          onClick={isSubscribed ? undefined : handleUpgrade}
+          className={styles.subscriptionButton}
+          disabled={isSubscribed || loading}
+        >
+          {isSubscribed ? t.active : t.subscribeButton}
+        </button>
       </div>
+      <button
+        onClick={() => navigate('/dashboard')}
+        className={styles.mainMenuBack}
+        title="Back to Dashboard"
+      >
+        ←
+      </button>
     </MainLayout>
   );
 };
