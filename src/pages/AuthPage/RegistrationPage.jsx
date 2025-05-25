@@ -162,6 +162,11 @@ const RegistrationPage = () => {
     localStorageSet("selectedRegion", "");
   }, []);
 
+  // Show intro modal when currentStep becomes "map"
+  useEffect(() => {
+    if (currentStep === "map") setShowIntroModal(true);
+  }, [currentStep]);
+
 const languageOptions = [
   { code: "de", label: "Deutsch", flag: flagDe },
   { code: "en", label: "English", flag: flagEn },
@@ -568,6 +573,28 @@ const languageOptions = [
                 </div>
               ) : currentStep === "map" ? (
                 <div className={styles.mapStepWrapper}>
+                  {showIntroModal && (
+                    <div className={styles.modalOverlay}>
+                      <div className={styles.modalContent}>
+                        <button
+                          type="button"
+                          className={styles.closeButton}
+                          onClick={() => setShowIntroModal(false)}
+                        >
+                          ×
+                        </button>
+                        <div className={styles.stageIntro}>
+                          <h2 className={styles.stageIntroTitle}>
+                            {registrationTranslations.modal.mapTitle?.[language] || "Letzter Schritt der Registrierung"}
+                          </h2>
+                          <p className={styles.stageIntroText}>
+                            {registrationTranslations.modal.mapText?.[language] ||
+                              "Bitte wählen Sie auf der Karte das Bundesland aus, in dem Sie Ihre Approbation beantragen möchten."}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                   <Suspense fallback={<div>Loading...</div>}>
                     <CustomGermanyMap
                       registrationMode={true}

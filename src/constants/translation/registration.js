@@ -173,6 +173,32 @@ const registrationTranslations = {
       pl: "To są kroki na drodze do uzyskania Twojej licencji medycznej. Każdy krok wyświetla odpowiednie zadania na platformie. Możesz również zmienić kolejność tych kroków w razie potrzeby. Proszę kliknąć każdy krok, aby zobaczyć więcej informacji, a następnie wybierz ten, który Ci odpowiada.",
       el: "Αυτά είναι τα βήματα για να αποκτήσετε την ιατρική σας άδεια. Κάθε βήμα εμφανίζει τις αντίστοιχες εργασίες στην πλατφόρμα. Μπορείτε επίσης να αλλάξετε τη σειρά αυτών των βημάτων εάν χρειάζεται. Παρακαλώ κάντε κλικ σε κάθε βήμα για να δείτε περισσότερες πληροφορίες και στη συνέχεια επιλέξτε αυτό που σας ταιριάζει.",
       ro: "Aceștia sunt pașii pentru a obține licența medicală. Fiecare pas afișează sarcinile relevante pe platformă. De asemenea, puteți schimba ordinea acestor pași după cum este necesar. Vă rugăm să faceți clic pe fiecare pas pentru a vedea mai multe informații, apoi selectați-l pe cel care vi se potrivește."
+    },
+    mapTitle: {
+      de: "Letzter Schritt der Registrierung",
+      en: "Final Step of Registration",
+      uk: "Останній крок реєстрації",
+      ru: "Последний шаг регистрации",
+      tr: "Kayıt işleminin son adımı",
+      ar: "الخطوة الأخيرة من التسجيل",
+      fr: "Dernière étape de l'inscription",
+      es: "Último paso del registro",
+      pl: "Ostatni krok rejestracji",
+      el: "Τελευταίο βήμα της εγγραφής",
+      ro: "Ultimul pas al înregistrării"
+    },
+    mapText: {
+      de: "Bitte wählen Sie auf der Karte das Bundesland aus, in dem Sie Ihre Approbation beantragen möchten.",
+      en: "Please select the federal state on the map where you plan to apply for your Approbation.",
+      uk: "Будь ласка, оберіть на карті федеральну землю, де ви плануєте подавати документи на апробацію.",
+      ru: "Пожалуйста, выберите на карте федеральную землю, где вы планируете подавать на апробацию.",
+      tr: "Lütfen haritadan başvuru yapmak istediğiniz eyaleti seçin.",
+      ar: "يرجى اختيار الولاية الفيدرالية من الخريطة التي تنوي التقديم فيها للموافقة.",
+      fr: "Veuillez sélectionner l'état fédéral sur la carte où vous envisagez de demander votre approbation.",
+      es: "Por favor seleccione en el mapa el estado federal donde planea solicitar su aprobación.",
+      pl: "Wybierz na mapie kraj związkowy, w którym planujesz ubiegać się o aprobację.",
+      el: "Παρακαλώ επιλέξτε στο χάρτη την ομοσπονδιακή περιοχή στην οποία σκοπεύετε να κάνετε αίτηση για έγκριση.",
+      ro: "Vă rugăm să selectați pe hartă statul federal în care intenționați să aplicați pentru aprobarea dvs."
     }
   },
   buttons: {
