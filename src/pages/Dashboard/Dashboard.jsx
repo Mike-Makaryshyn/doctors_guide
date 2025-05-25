@@ -48,7 +48,7 @@ const Dashboard = () => {
       }
     };
     fetchData();
-  }, [user]);
+  }, [user, subscriptionStatus, subscriptionEnd]);
 
   const handleSignOut = async () => {
     try { await supabase.auth.signOut(); } catch { toast.error("Error signing out"); }

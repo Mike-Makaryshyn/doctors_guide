@@ -3,9 +3,11 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { FaPencilAlt } from 'react-icons/fa';
 import styles from "./RegistrationTile.module.scss";
+import { useSubscription } from '../../contexts/SubscriptionContext';
 
 const RegistrationTile = ({ data, style }) => {
-  const { firstName, lastName, email, birthDate, educationRegion, specialty, germanLevel, procedureType, subscriptionStatus, subscriptionEnd } = data;
+  const { status: contextStatus, endsAt: contextEndsAt } = useSubscription();
+  const { firstName, lastName, email, birthDate, educationRegion, specialty, germanLevel, procedureType } = data;
 
   return (
     <div className={styles.tile} style={{ ...style, position: "relative" }}>
@@ -19,11 +21,9 @@ const RegistrationTile = ({ data, style }) => {
       {specialty && <p><strong>Specialty:</strong> {specialty}</p>}
       {germanLevel && <p><strong>German Level:</strong> {germanLevel}</p>}
       {procedureType && <p><strong>Procedure Type:</strong> {procedureType}</p>}
-      {subscriptionStatus && (
-        <p><strong>Subscription Status:</strong> {subscriptionStatus}</p>
-      )}
-      {subscriptionEnd && (
-        <p><strong>Subscription Ends:</strong> {new Date(subscriptionEnd).toLocaleDateString()}</p>
+      <p><strong>Subscription Status:</strong> {contextStatus}</p>
+      {contextEndsAt && (
+        <p><strong>Subscription Ends:</strong> {new Date(contextEndsAt).toLocaleDateString()}</p>
       )}
     </div>
   );
