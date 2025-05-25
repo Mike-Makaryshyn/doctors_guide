@@ -62,3 +62,24 @@
   transform: scale(1.2);
   color: #013b6e;
 }
+.buttonContainer {
+  margin-top: 1rem;
+  width: 100%;
+  /* тут ваші додаткові стилі */
+}
+.subscriptionButton {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background: #013b6e;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.subscriptionButton:hover {
+  background: #012d59;
+}

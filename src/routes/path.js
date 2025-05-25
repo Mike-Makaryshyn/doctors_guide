@@ -193,5 +193,13 @@ export const pathList = {
 reviewById: {
   path: "/review/:caseId",
 },
+  subscription: {
+    path: '/subscription',
+    label: 'Subscribe',
+  },
+  subscriptionManagement: {
+    path: '/dashboard/subscription',
+    label: 'Subscription Management',
+  },
 
 };

@@ -244,6 +244,12 @@ const CaseSimulationPage = React.lazy(() =>
 const LetterReviewPage = React.lazy(() =>
   import("../pages/LetterReviewPage/LetterReviewPage")
 );
+const SubscriptionModal = React.lazy(() =>
+  import("../pages/AuthPage/SubscriptionModal")
+);
+const SubscriptionManagement = React.lazy(() =>
+  import("../pages/AuthPage/SubscriptionManagement")
+);
 export default function Routers() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -294,6 +300,22 @@ export default function Routers() {
   path={pathList.necessary_documents.path}
   element={<NecessaryDocumentsPage />}
 />
+  {/* Відкриття модалки підписки */}
+  <Route
+    path={pathList.subscription.path}
+    element={
+      <SubscriptionModal
+        isOpen={true}
+        onClose={() => window.history.back()}
+      />
+    }
+  />
+
+  {/* Сторінка управління підпискою */}
+  <Route
+    path={pathList.subscriptionManagement.path}
+    element={<SubscriptionManagement />}
+  />
 <Route
   path={pathList.resource_list.path}
   element={<ResourceListPage />}
