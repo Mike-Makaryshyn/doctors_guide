@@ -22,7 +22,7 @@
   animation: slideIn 0.4s forwards ease;
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.5);
   /* scrolling handled inside the inner container */
-  overflow: hidden;
+  overflow: visible;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -65,7 +65,7 @@
   padding-bottom: 100px;
 }
 .sideMenu {
-  overflow-x: hidden;
+  overflow-x: visible;
 }
 .sideMenuContent {
   overflow-x: hidden;
@@ -328,4 +328,31 @@
   width: 24px;
   height: 24px;
   fill: #9e9e9e;
+}
+
+.toggleHandle {
+  position: absolute;
+  top: 44%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 64px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10000;
+  box-shadow: 2px 0 4px rgba(0,0,0,0.2);
+}
+
+.sideMenu:not(.right) .toggleHandle {
+  right: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.sideMenu.right .toggleHandle {
+  left: -31px;
+  border-radius: 4px 0 0 4px;
+  box-shadow: -2px 0 4px rgba(0,0,0,0.2);
 }

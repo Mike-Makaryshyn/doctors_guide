@@ -89,6 +89,11 @@ function SideMenu({ language, isOpen, onClose, direction }) {
   return (
     <div className={styles.overlay} onClick={handleOverlayClick}>
       <div className={`${styles.sideMenu} ${direction === "right" ? styles.right : ""}`} onClick={handleMenuClick}>
+        <div className={styles.toggleHandle} onClick={onClose}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16" fill="#023c6f" style={{ transform: direction === "right" ? "rotate(180deg)" : "none" }}>
+            <path d="M279 239l-194-194c-9-9-23-9-32 0l-22 22c-9 9-9 23 0 32l154 154-154 154c-9 9-9 23 0 32l22 22c9 9 23 9 32 0l194-194c9-9 9-23 0-32z"/>
+          </svg>
+        </div>
         <div className={styles.sideMenuContent}>
           <div className={styles.avatarBlock}>
             <div className={styles.profileSection}>
