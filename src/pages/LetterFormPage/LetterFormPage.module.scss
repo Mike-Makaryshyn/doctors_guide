@@ -4,6 +4,9 @@
 .letterFormContainer {
   font-family: "Poppins", sans-serif;
   padding: 20px;
+  width: min(1200px, 95vw);
+  max-width: 100%;
+  margin: 0 auto;
   position: relative;
   min-height: 100vh;
   /* Прибираємо горизонтальний скрол */
@@ -40,6 +43,7 @@
   margin-bottom: 30px;
   color: #ffffff; /* Синій текст */
   text-align: center;
+  word-wrap: break-word;
 }
 
 /* Обгортка для двох колонок: зліва (адреса) і справа (регіон) */
@@ -49,6 +53,7 @@
   align-items: stretch;
   gap: 20px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 /* Ліва колонка (наша адреса) */
@@ -70,6 +75,7 @@
 @media (max-width: 768px) {
   .columnsWrapper {
     flex-wrap: wrap;
+    padding: 0 10px;
   }
   .leftColumn,
   .rightColumn {
@@ -132,6 +138,7 @@
   position: relative;
   padding: 20px;
   flex: 1;
+  overflow-x: hidden;
 }
 
 /* Контейнер для іконки + селект */
@@ -183,6 +190,8 @@
 .addressInfo {
     margin-top: 10px;
     color: #013b6e;
+    overflow-wrap: break-word;
+    word-break: break-all;
   }
   
   /* Медіа-запити для шрифту адреси */
