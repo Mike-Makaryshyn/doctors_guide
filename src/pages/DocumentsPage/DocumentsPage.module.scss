@@ -754,7 +754,7 @@
   }
   .printButton {
     @extend .backButton;  // Наслідуємо всі властивості з .backButton
-    z-index: 100010; 
+    z-index: 1000; 
     left: auto;      // Знімаємо "left", щоб не перекривалася позиція
     right: 0px;  
     pointer-events: auto !important;

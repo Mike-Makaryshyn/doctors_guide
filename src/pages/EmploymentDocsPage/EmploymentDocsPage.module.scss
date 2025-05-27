@@ -3,6 +3,14 @@
 /* Підтягуємо готові мікси та базові стилі DocumentsPage */
 @import "../../pages/DocumentsPage/DocumentsPage.module.scss";
 
+
+/* Ensure tiles have a reasonable width range */
+.tile {
+  flex: 1 1 200px;       /* grow and shrink around a 200px base */
+  max-width: 400px;      /* never exceed 300px */
+  width: auto;           /* let flex sizing take over */
+}
+
 /* ——— Лише те, чого нема у спільному файлі ——— */
 
 .page {
@@ -92,6 +100,12 @@
 
 /* Сховати таблицю на мобільних: (DOM додається умовно, але на випадок ширини) */
 @media (max-width: 768px) {
+  .page {
+    padding-left: 0;
+    padding-right: 0;
+    width: 95vw;
+    max-width: 95vw;
+  }
   /* …ваші існуючі мобільні правила… */
 
   .table {

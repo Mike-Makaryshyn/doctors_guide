@@ -25,6 +25,16 @@ const effectiveCategory = educationCategory || "Non-EU";
     }
   }, [user]);
 
+  useEffect(() => {
+    if (user) {
+      const meta = user.user_metadata || {};
+      const initialProgress = Array(9)
+        .fill(0)
+        .map((_, idx) => meta[`stage_${idx + 1}`]?.progress || 0);
+      setStagesProgress(initialProgress);
+    }
+  }, [user]);
+
   // Розрахунок загального прогресу (середнє значення)
   useEffect(() => {
     if (stagesProgress.length > 0) {
