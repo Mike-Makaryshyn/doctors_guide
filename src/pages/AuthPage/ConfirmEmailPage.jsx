@@ -1,48 +1,39 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../../supabaseClient";
+import MainLayout from "../../layouts/MainLayout/MainLayout";
+import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+import confirmEmailTranslations from "../../constants/translation/confirmEmail";
+import styles from './ConfirmEmailPage.module.css';
+import { Link } from "react-router-dom";
 
 export default function ConfirmEmailPage() {
+  const { selectedLanguage: language = "de" } = useGetGlobalInfo();
   const navigate = useNavigate();
-  const [status, setStatus] = useState("Перевірка електронної пошти...");
+  const [status, setStatus] = useState(confirmEmailTranslations.initial[language]);
 
   useEffect(() => {
     (async () => {
-      const { error } = await supabase.auth.getSessionFromUrl({ storeSession: true });
-      if (error) {
-        setStatus("Не вдалося підтвердити електронну пошту. Спробуйте ще раз.");
+      // Supabase-js v2 no longer has getSessionFromUrl; use getSession instead
+      const { data: { session }, error } = await supabase.auth.getSession();
+      if (error || !session) {
+        setStatus(confirmEmailTranslations.failure[language]);
       } else {
-        setStatus("Дякуємо за підтвердження електронної пошти! Тепер ви можете увійти в свій обліковий запис.");
+        setStatus(confirmEmailTranslations.success[language]);
       }
     })();
   }, []);
 
   return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      minHeight: '60vh',
-      padding: '2rem'
-    }}>
-      <h2 style={{
-        fontSize: '1.5rem',
-        marginBottom: '1rem',
-        textAlign: 'center'
-      }}>
-        {status}
-      </h2>
-      <button
-        onClick={() => navigate('/auth')}
-        style={{
-          padding: '0.75rem 1.5rem',
-          fontSize: '1rem',
-          cursor: 'pointer'
-        }}
-      >
-        Увійти
-      </button>
-    </div>
+    <MainLayout>
+      <div className={styles.container}>
+        <h2 className={styles.heading}>{status}</h2>
+        <p className={styles.text}>
+          <Link to="/auth" className={styles.link}>
+            {confirmEmailTranslations.linkText[language]}
+          </Link>
+        </p>
+      </div>
+    </MainLayout>
   );
 }
