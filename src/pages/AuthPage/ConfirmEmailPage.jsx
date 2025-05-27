@@ -14,15 +14,23 @@ export default function ConfirmEmailPage() {
 
   useEffect(() => {
     (async () => {
-      // Supabase-js v2 no longer has getSessionFromUrl; use getSession instead
-      const { data: { session }, error } = await supabase.auth.getSession();
-      if (error || !session) {
+      const params = new URLSearchParams(window.location.search);
+      const token = params.get('token');
+      if (!token) {
+        setStatus(confirmEmailTranslations.failure[language]);
+        return;
+      }
+      const { error } = await supabase.auth.verifyOtp({
+        token,
+        type: 'email'
+      });
+      if (error) {
         setStatus(confirmEmailTranslations.failure[language]);
       } else {
         setStatus(confirmEmailTranslations.success[language]);
       }
     })();
-  }, []);
+  }, [language]);
 
   return (
     <MainLayout>
