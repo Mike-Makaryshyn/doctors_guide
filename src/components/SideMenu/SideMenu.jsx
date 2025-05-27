@@ -202,11 +202,11 @@ function SideMenu({ language, isOpen, onClose, direction }) {
           <div className={styles.authBlock}>
             {!loading && (user ? (
               <button onClick={handleLogout} className={styles.authButton}>
-                Вийти
+                {main_menu_items.auth.logout[language]}
               </button>
             ) : (
               <Link to="/auth" className={styles.authButton}>
-                Увійти
+                {main_menu_items.auth.login[language]}
               </Link>
             ))}
           </div>

@@ -62,6 +62,34 @@ export const languagesMainMenu = {
 };
 
 export const main_menu_items = {
+  auth: {
+    login: {
+      en: "Login",
+      fr: "Se connecter",
+      es: "Iniciar sesión",
+      ar: "تسجيل الدخول",
+      tr: "Giriş yap",
+      pl: "Zaloguj się",
+      uk: "Увійти",
+      ru: "Войти",
+      de: "Anmelden",
+      el: "Σύνδεση",
+      ro: "Autentificare"
+    },
+    logout: {
+      en: "Logout",
+      fr: "Se déconnecter",
+      es: "Cerrar sesión",
+      ar: "تسجيل الخروج",
+      tr: "Çıkış yap",
+      pl: "Wyloguj się",
+      uk: "Вийти",
+      ru: "Выйти",
+      de: "Abmelden",
+      el: "Αποσύνδεση",
+      ro: "Deconectare"
+    }
+  },
   sections: [
     {
       order: 1,
