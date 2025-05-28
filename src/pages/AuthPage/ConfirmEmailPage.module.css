@@ -6,7 +6,7 @@
   margin: 10rem auto 2rem;
   text-align: center;
   background-color: #ffffff;
-  background-image: url('/images/paper-texture.png');
+ 
   background-size: cover;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -24,6 +24,7 @@
   line-height: 1.5;
   color: #555;
   margin-bottom: 1.25rem;
+  text-align: center;
 }
 
 .link {

@@ -1,36 +1,30 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { supabase } from "../../supabaseClient";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import confirmEmailTranslations from "../../constants/translation/confirmEmail";
 import styles from './ConfirmEmailPage.module.css';
+import { useAuth } from "../../contexts/AuthContext";
 import { Link } from "react-router-dom";
 
 export default function ConfirmEmailPage() {
   const { selectedLanguage: language = "de" } = useGetGlobalInfo();
-  const navigate = useNavigate();
   const [status, setStatus] = useState(confirmEmailTranslations.initial[language]);
-
+  const { currentUser } = useAuth();
+  
   useEffect(() => {
-    (async () => {
-      const params = new URLSearchParams(window.location.search);
-      const token = params.get('token');
-      if (!token) {
-        setStatus(confirmEmailTranslations.failure[language]);
-        return;
-      }
-      const { error } = await supabase.auth.verifyOtp({
-        token,
-        type: 'signup'
-      });
-      if (error) {
-        setStatus(confirmEmailTranslations.failure[language]);
-      } else {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("error")) {
+      setStatus(confirmEmailTranslations.failure[language]);
+      return;
+    }
+    if (currentUser) {
+      if (currentUser.email_confirmed_at) {
         setStatus(confirmEmailTranslations.success[language]);
+      } else {
+        setStatus(confirmEmailTranslations.failure[language]);
       }
-    })();
-  }, [language]);
+    }
+  }, [language, currentUser]);
 
   return (
     <MainLayout>
