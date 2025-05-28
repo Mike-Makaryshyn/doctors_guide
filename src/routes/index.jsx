@@ -117,6 +117,9 @@ const CheckEmailPage = React.lazy(() =>
 const ConfirmEmailPage = React.lazy(() =>
   import("../pages/AuthPage/ConfirmEmailPage")
 );
+const CancelSubscriptionPage = React.lazy(
+  () => import("../pages/AuthPage/CancelSubscriptionPage")
+);
 const Dashboard = React.lazy(() => import("../pages/Dashboard/Dashboard"));
 
 // Protected Route
@@ -518,6 +521,9 @@ export default function Routers() {
         <Route path="/auth/registration" element={<RegistrationPage />} />
         <Route path="/check-email" element={<CheckEmailPage />} />
         <Route path="/auth/confirm" element={<ConfirmEmailPage />} />
+
+        {/* Cancel subscription page */}
+        <Route path="/cancel" element={<CancelSubscriptionPage />} />
 
         {/* Success page shown after subscription */}
         <Route path="/success" element={<SuccessPage />} />
