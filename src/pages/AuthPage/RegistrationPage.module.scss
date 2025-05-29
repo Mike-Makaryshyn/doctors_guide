@@ -569,6 +569,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 @media (max-width: 600px) {
   .languageSelection {
+        width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
     grid-template-columns: 1fr;
   }
 }
@@ -654,13 +658,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .doctorImageMobile {
     display: block;
     position: absolute;
-    bottom: 10px;       /* відступ від низу */
-    left: 20px;         /* відступ зліва */
-    max-width: 100px;   /* розмір картинки */
+bottom: -24px;
+        left: -174px;
+        max-width: 359px;   /* розмір картинки */
     height: auto;
     z-index: 1;
   }
-
+  /* 1) Hide the flag-in-hand icon on mobile */
+  .flagInHand {
+    display: none !important;
+     }
   .doctorContainer {
     position: absolute;
     justify-content: flex-start;

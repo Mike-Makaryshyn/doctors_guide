@@ -22,7 +22,6 @@ import flagPl from "../../assets/flags/pl.png";
 import flagEl from "../../assets/flags/el.png";
 import flagRo from "../../assets/flags/ro.png";
 import langHolder from "../../assets/langholder.png";
-import langHolderMobile from "../../assets/langholdermobile.png";
 const StageMenu = lazy(() => import("../ApprobationPage/StageMenu"));
 const CustomGermanyMap = lazy(() =>
   import("../../components/CustomGermanyMap/CustomGermanyMap")
@@ -42,8 +41,10 @@ const RegistrationPage = () => {
     const stored = localStorage.getItem("selectedLanguage");
     return stored ? JSON.parse(stored) : language;
   });
+  const isMobile = window.innerWidth <= 768;
 
-  // Схема валідації
+
+// Схема валідації
   const validationSchema = Yup.object({
     firstName: Yup.string().required("Vorname ist erforderlich"),
     lastName: Yup.string().required("Nachname ist erforderlich"),
@@ -187,6 +188,20 @@ const languageOptions = [
   { code: "ro", label: "Română", flag: flagRo },
 ];
 
+  // Mobile scroll-to-select language logic
+  const handleScroll = useCallback((e) => {
+    const el = e.target;
+    const item = el.querySelector(`.${styles.langIcon}`);
+    const style = getComputedStyle(el);
+    const gap = parseInt(style.rowGap || style.gap || 0);
+    const itemHeight = item.clientHeight + gap;
+    const rawIndex = Math.round(el.scrollTop / itemHeight);
+    const code = languageOptions[rawIndex].code;
+    setLocalLanguage(code);
+    handleChangeLanguage(code);
+    localStorage.setItem("selectedLanguage", JSON.stringify(code));
+  }, [handleChangeLanguage]);
+
   return (
     <MainLayout>
       {currentStep === "language" && (
@@ -197,12 +212,6 @@ const languageOptions = [
             alt="Doctor placeholder"
             className={styles.doctorImage}
           />
-          {/* Mobile only */}
-          <img
-            src={langHolderMobile}
-            alt="Doctor mobile placeholder"
-            className={styles.doctorImageMobile}
-          />
           {/* Sprach-Flagge bleibt unverändert */}
           <img
             src={languageOptions.find((l) => l.code === localLanguage).flag}
@@ -210,7 +219,7 @@ const languageOptions = [
             className={styles.flagInHand}
           />
         </div>
-     )}
+      )}
       <div className={styles.pageContainer}>
         <h1 className={styles.centeredHeading}>
    {registrationTranslations.titles.pageTitle[localLanguage]}
@@ -229,30 +238,39 @@ const languageOptions = [
             >
               {currentStep === "language" ? (
                 <>
-                  <div className={styles.languageSelection}>
+                  <div
+                    className={styles.languageSelection}
+                    onScroll={isMobile ? handleScroll : undefined}
+                  >
                     {languageOptions.map((lang) => (
                       <div
                         key={lang.code}
-                        onClick={() => {
-                          localStorage.setItem("selectedLanguage", JSON.stringify(lang.code));
-                          setLocalLanguage(lang.code);
-                        }}
+                        onClick={
+                          !isMobile
+                            ? () => {
+                                localStorage.setItem("selectedLanguage", JSON.stringify(lang.code));
+                                setLocalLanguage(lang.code);
+                              }
+                            : undefined
+                        }
                         className={styles.langIcon}
-                        role="button"
-                        tabIndex={0}
-                        onKeyPress={(e) => {
-                          if (e.key === 'Enter') {
-                            localStorage.setItem("selectedLanguage", JSON.stringify(lang.code));
-                            setLocalLanguage(lang.code);
-                          }
-                        }}
+                        role={!isMobile ? "button" : undefined}
+                        tabIndex={!isMobile ? 0 : undefined}
+                        onKeyPress={
+                          !isMobile
+                            ? (e) => {
+                                if (e.key === 'Enter') {
+                                  localStorage.setItem("selectedLanguage", JSON.stringify(lang.code));
+                                  setLocalLanguage(lang.code);
+                                }
+                              }
+                            : undefined
+                        }
                       >
                         <img
                           src={lang.flag}
                           alt={lang.label}
-                          className={
-                            localLanguage === lang.code ? styles.selectedLang : ""
-                          }
+                          className={localLanguage === lang.code ? styles.selectedLang : ''}
                         />
                       </div>
                     ))}
