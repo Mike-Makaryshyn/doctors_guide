@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect, Suspense, lazy } from "react";
+import React, { useState, useCallback, useEffect, Suspense, lazy, useRef } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
@@ -42,6 +42,38 @@ const RegistrationPage = () => {
     const stored = localStorage.getItem("selectedLanguage");
     return stored ? JSON.parse(stored) : language;
   });
+
+  const carouselRef = useRef(null);
+  const scrollTimeoutRef = useRef(null);
+
+  // Debounced scroll-end handler to auto-select centered language
+  const handleScroll = () => {
+    if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
+    scrollTimeoutRef.current = setTimeout(() => {
+      const container = carouselRef.current;
+      if (!container) return;
+      const children = Array.from(container.children);
+      const containerCenter = container.scrollLeft + container.offsetWidth / 2;
+
+      let closest = children[0];
+      let minDiff = Infinity;
+      children.forEach(child => {
+        const childCenter = child.offsetLeft + child.offsetWidth / 2;
+        const diff = Math.abs(childCenter - containerCenter);
+        if (diff < minDiff) {
+          minDiff = diff;
+          closest = child;
+        }
+      });
+
+      const code = closest.getAttribute("data-lang-code");
+      if (code && code !== localLanguage) {
+        localStorage.setItem("selectedLanguage", JSON.stringify(code));
+        setLocalLanguage(code);
+        handleChangeLanguage(code);
+      }
+    }, 150);
+  };
 
 
 // Схема валідації
@@ -232,11 +264,14 @@ const languageOptions = [
               {currentStep === "language" ? (
                 <>
                   <div
+                    ref={carouselRef}
+                    onScroll={handleScroll}
                     className={styles.languageSelection}
                   >
                     {languageOptions.map((lang) => (
                       <div
                         key={lang.code}
+                        data-lang-code={lang.code}
                         className={styles.langIcon}
                         role="button"
                         tabIndex={0}
