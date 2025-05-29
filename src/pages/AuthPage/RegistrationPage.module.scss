@@ -557,7 +557,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .selectedLang {
-  outline: 3px solid #3f6f64;
+  outline: 5px solid #64b02e;
   outline-offset: 2px;
 }
 
@@ -612,6 +612,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1000;         /* über allem anderen */
+    pointer-events: none;
+
   }
   .flagInHand {
     top: 40%;        /* tweak to palm position on mobile image */
@@ -622,23 +625,24 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 @media (max-width: 600px) {
   .languageSelection {
     display: flex;
-    flex-direction: column;
-    overflow-y: scroll; /* включає вертикальний скрол */
-    scroll-snap-type: y mandatory; /* активує прив’язку елементів */
-    scroll-behavior: smooth; /* плавна анімація */
-    max-height: 70vh; /* обмежує висоту області прокрутки */
-    padding-right: 10px;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    padding-left: calc(50% - 52px);
+    padding-right: calc(50% - 52px);
     -webkit-overflow-scrolling: touch;
   }
 
   .langIcon {
-    scroll-snap-align: center; /* кожен елемент зупиняється по центру */
+    scroll-snap-align: center;
     flex: 0 0 auto;
-    padding: 20px 0; /* додає відступ, щоб елементи не злипалися */
+    margin: 0 10px;
   }
 
   .languageSelection::-webkit-scrollbar {
-    display: none; /* приховує скролбар */
+    display: none;
   }
 }
 
@@ -658,11 +662,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .doctorImageMobile {
     display: block;
     position: absolute;
-bottom: -24px;
-        left: -174px;
-        max-width: 359px;   /* розмір картинки */
+        bottom: -14px;
+        left: -253px;
+        max-width: 444px;   /* розмір картинки */
     height: auto;
-    z-index: 1;
+    z-index: 10000;
   }
   /* 1) Hide the flag-in-hand icon on mobile */
   .flagInHand {
@@ -673,4 +677,6 @@ bottom: -24px;
     justify-content: flex-start;
     align-items: flex-end; /* дозволяє більш гнучке вирівнювання */
   }
+  /* Verschiebt das ausgewählte Flag nur auf Mobilgeräten nach unten */
+
 }

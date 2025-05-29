@@ -22,6 +22,7 @@ import flagPl from "../../assets/flags/pl.png";
 import flagEl from "../../assets/flags/el.png";
 import flagRo from "../../assets/flags/ro.png";
 import langHolder from "../../assets/langholder.png";
+import langHolderMobile from "../../assets/langholdermobile.png";
 const StageMenu = lazy(() => import("../ApprobationPage/StageMenu"));
 const CustomGermanyMap = lazy(() =>
   import("../../components/CustomGermanyMap/CustomGermanyMap")
@@ -41,7 +42,6 @@ const RegistrationPage = () => {
     const stored = localStorage.getItem("selectedLanguage");
     return stored ? JSON.parse(stored) : language;
   });
-  const isMobile = window.innerWidth <= 768;
 
 
 // Схема валідації
@@ -188,19 +188,6 @@ const languageOptions = [
   { code: "ro", label: "Română", flag: flagRo },
 ];
 
-  // Mobile scroll-to-select language logic
-  const handleScroll = useCallback((e) => {
-    const el = e.target;
-    const item = el.querySelector(`.${styles.langIcon}`);
-    const style = getComputedStyle(el);
-    const gap = parseInt(style.rowGap || style.gap || 0);
-    const itemHeight = item.clientHeight + gap;
-    const rawIndex = Math.round(el.scrollTop / itemHeight);
-    const code = languageOptions[rawIndex].code;
-    setLocalLanguage(code);
-    handleChangeLanguage(code);
-    localStorage.setItem("selectedLanguage", JSON.stringify(code));
-  }, [handleChangeLanguage]);
 
   return (
     <MainLayout>
@@ -211,6 +198,12 @@ const languageOptions = [
             src={langHolder}
             alt="Doctor placeholder"
             className={styles.doctorImage}
+          />
+          {/* Mobile placeholder */}
+          <img
+            src={langHolderMobile}
+            alt="Doctor placeholder mobile"
+            className={styles.doctorImageMobile}
           />
           {/* Sprach-Flagge bleibt unverändert */}
           <img
@@ -240,7 +233,6 @@ const languageOptions = [
                 <>
                   <div
                     className={styles.languageSelection}
-                    onScroll={isMobile ? handleScroll : undefined}
                   >
                     {languageOptions.map((lang) => (
                       <div
