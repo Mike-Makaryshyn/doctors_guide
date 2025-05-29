@@ -63,7 +63,10 @@
   flex-direction: column;
   align-items: center;
   /* justify-content: center; // якщо хочете вертикальне вирівнювання */
-  overflow-y: auto;
+  overflow-x: hidden;          /* запобігає горизонтальному скролу */
+  overscroll-behavior: none;   /* вимикає iOS‑bounce, щоб не “витягувати” фон */
+  background-size: cover;      /* фон розтягується на увесь вьюпорт */
+  background-attachment: fixed;/* фон не прокручується окремо від контенту */
 }
 
 .form {
@@ -679,4 +682,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
   /* Verschiebt das ausgewählte Flag nur auf Mobilgeräten nach unten */
 
+}
+// Global fallback: overscroll shows same color as background
+:global(html, body) {
+  margin: 0;
+  padding: 0;
+  background-color: #3f6f64;
 }

@@ -41,24 +41,24 @@ li {
    text-align: left;
 }
 .tippy-box[data-theme~='custom'] {
-   background: #ffffff; // Білий фон
-   color: #013b6e; // Синій текст
+   background: #ffffff; 
+   color: #013b6e; 
    font-size: 1rem;
    font-weight: bold;
    border-radius: 10px;
    padding: 15px;
    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
    text-align: center;
-   max-width: 300px; // Щоб не було занадто широким
-   word-wrap: break-word; // Дозволити перенос тексту
+   max-width: 300px;
+   word-wrap: break-word; 
  }
  
  .tippy-box[data-theme~='custom'] .tippy-content {
-   color: #013b6e; // Синій текст всередині підказки
+   color: #013b6e; 
  }
  
  .tippy-box[data-theme~='custom'][data-placement^='top'] .tippy-arrow::before {
-   border-top-color: #ffffff; // Зробити стрілку білою
+   border-top-color: #ffffff; 
  }
  
  .tippy-box[data-theme~='custom'][data-placement^='bottom'] .tippy-arrow::before {
@@ -73,7 +73,7 @@ li {
    border-right-color: #ffffff;
  }
 section {
-   padding: 20px;
+   padding: 0px;
 }
 
 ul {
