@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../../supabaseClient";
 import styles from "./AuthPage.module.scss";
 import { languages, DEFAULT_LANGUAGE } from "../../constants/translation/AuthPage";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
+import bg from '../../assets/hintergrungAuth-2.svg';
 
 // Function to restore an existing session by tokens
 const restoreSession = async (access_token, refresh_token) => {
@@ -22,7 +25,11 @@ const restoreSession = async (access_token, refresh_token) => {
 const AuthPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loginError, setLoginError] = useState("");
   const navigate = useNavigate();
+
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
 
   // On mount, try to restore session if tokens are in localStorage
   useEffect(() => {
@@ -52,36 +59,90 @@ const AuthPage = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    emailRef.current.setCustomValidity("");
+    if (!emailRegex.test(email)) {
+      emailRef.current.setCustomValidity(t.invalidEmailFormat);
+      emailRef.current.reportValidity();
+      return;
+    }
     const { data, error } = await supabase.auth.signInWithPassword({ email, password });
     if (error) {
-      alert(t.errorLogin.replace("{{message}}", error.message));
+      const errorMessage = error?.message?.toLowerCase?.() || "";
+      const msg = t.invalidCredentials;
+
+      setLoginError(error.message || msg);
+
+      emailRef.current.setCustomValidity("");
+      passwordRef.current.setCustomValidity("");
+
+      if (errorMessage.includes("email") || errorMessage.includes("credentials")) {
+        emailRef.current.setCustomValidity(msg);
+        emailRef.current.reportValidity();
+      } else if (errorMessage.includes("password")) {
+        passwordRef.current.setCustomValidity(msg);
+        passwordRef.current.reportValidity();
+      } else {
+        // fallback
+        passwordRef.current.setCustomValidity(msg);
+        passwordRef.current.reportValidity();
+      }
+      return;
     } else {
       // store tokens
       localStorage.setItem("access_token", data.session.access_token);
       localStorage.setItem("refresh_token", data.session.refresh_token);
-      alert(t.successLogin);
       navigate("/dashboard");
     }
   };
 
   return (
     <MainLayout>
-      <div className={styles.container}>
+      <div
+        className={styles.container}
+        style={{
+          backgroundImage: `url(${bg})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center center',
+          backgroundSize: 'cover',
+          backgroundAttachment: 'fixed'
+        }}
+      >
         <h1>{t.loginTitle}</h1>
-        <form onSubmit={handleLogin} className={styles.form}>
+        <form onSubmit={handleLogin} className={styles.form} noValidate>
           <input
-            type="email"
+            ref={emailRef}
+            type="text"
             placeholder={t.emailPlaceholder}
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              emailRef.current.setCustomValidity("");
+            }}
+            onBlur={(e) => {
+              const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              if (!emailPattern.test(e.target.value)) {
+                e.target.setCustomValidity(t.invalidEmailFormat);
+                e.target.reportValidity();
+              } else {
+                e.target.setCustomValidity("");
+              }
+            }}
+            onInput={(e) => {
+              e.target.setCustomValidity("");
+            }}
             required
             className={styles.input}
           />
           <input
+            ref={passwordRef}
             type="password"
             placeholder={t.passwordPlaceholder}
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => {
+              setPassword(e.target.value);
+              passwordRef.current.setCustomValidity("");
+            }}
             required
             className={styles.input}
           />

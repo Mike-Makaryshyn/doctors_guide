@@ -1,18 +1,33 @@
 .container {
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
   flex-direction: column;
   align-items: center;
   /* Починаємо з верху – вирівнюємо по flex-start та додаємо невеликий відступ зверху */
   justify-content: flex-start;
-  padding-top: 20px;
+  padding-top: 175px;
   /* Можна зберегти мінімальну висоту, якщо потрібно */
   min-height: 100vh;
+  // height: 100vh;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 60% auto;
+  background-attachment: fixed;
 }
 
 h1 {
   font-size: 2rem;
   margin-bottom: 20px;
   color: #ffffff;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
 }
 
 .form {
@@ -104,11 +119,54 @@ h1 {
 @media (max-width: 768px) {
   .form,
   .oauthButtons {
-    max-width: 100%;
+    width: 90%;
+    max-width: 90%;
   }
   .submitButton,
   .switchButton,
   .googleButton {
-    width: 100%;
+    width: 80%;
   }
+  .switchButton {
+    margin-top: 20px;
+  }
+  .container {
+    background-position: center top;
+    background-size: 100% auto;
+    padding-top: 150px;
+  }
+}
+
+/* Align the form and buttons to the right on desktop */
+@media (min-width: 769px) {
+  .container {
+    align-items: flex-end;
+    padding-right: 10px;
+  }
+
+  .form {
+    align-self: flex-end;
+    margin: 0 70px 20px 0;
+  }
+
+  /* Keep the login title centered above the form */
+  h1 {
+    align-self: flex-end;
+    margin-right: 70px;
+  }
+
+  .submitButton {
+    align-self: flex-end;
+    margin: 5px 70px 20px 0;
+  }
+  .switchButton {
+    align-self: flex-end;
+    margin: 5px 140px 5px 0;
+  }
+}
+.container {
+  background-size: 80%; // або contain
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
