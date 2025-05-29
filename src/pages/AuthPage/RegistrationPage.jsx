@@ -245,27 +245,21 @@ const languageOptions = [
                     {languageOptions.map((lang) => (
                       <div
                         key={lang.code}
-                        onClick={
-                          !isMobile
-                            ? () => {
-                                localStorage.setItem("selectedLanguage", JSON.stringify(lang.code));
-                                setLocalLanguage(lang.code);
-                              }
-                            : undefined
-                        }
                         className={styles.langIcon}
-                        role={!isMobile ? "button" : undefined}
-                        tabIndex={!isMobile ? 0 : undefined}
-                        onKeyPress={
-                          !isMobile
-                            ? (e) => {
-                                if (e.key === 'Enter') {
-                                  localStorage.setItem("selectedLanguage", JSON.stringify(lang.code));
-                                  setLocalLanguage(lang.code);
-                                }
-                              }
-                            : undefined
-                        }
+                        role="button"
+                        tabIndex={0}
+                        onClick={() => {
+                          localStorage.setItem("selectedLanguage", JSON.stringify(lang.code));
+                          setLocalLanguage(lang.code);
+                          handleChangeLanguage(lang.code);
+                        }}
+                        onKeyPress={(e) => {
+                          if (e.key === 'Enter') {
+                            localStorage.setItem("selectedLanguage", JSON.stringify(lang.code));
+                            setLocalLanguage(lang.code);
+                            handleChangeLanguage(lang.code);
+                          }
+                        }}
                       >
                         <img
                           src={lang.flag}
