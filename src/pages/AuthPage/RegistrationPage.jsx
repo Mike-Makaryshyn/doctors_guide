@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { supabase } from "../../supabaseClient";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./RegistrationPage.module.scss";
+import heroBanner from "../../assets/hero-medical-banner.svg";
 import { useAuth } from "../../contexts/AuthContext";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import registrationTranslations from "../../constants/translation/registration";
@@ -245,7 +246,15 @@ const languageOptions = [
           />
         </div>
       )}
-      <div className={styles.pageContainer}>
+      <div
+        className={styles.pageContainer}
+        style={{
+          backgroundColor: "#3f6f64",
+          backgroundImage: currentStep === "language" ? null : `url(${heroBanner})`,
+          backgroundRepeat: "repeat",
+          backgroundPosition: "top left",
+        }}
+      >
         <h1 className={styles.centeredHeading}>
    {registrationTranslations.titles.pageTitle[localLanguage]}
  </h1>
