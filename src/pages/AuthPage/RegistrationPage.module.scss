@@ -576,3 +576,94 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   transform: none;
   background-color: transparent;
 }
+ .doctorContainer {
+  position: fixed;
+  bottom: 0px;
+  left: -150px;
+  width: 40%;  /* doubled size */
+  pointer-events: none;
+  background: transparent;
+ }
+
+.doctorImage {
+  width: 100%;
+  display: block;
+}
+
+.flagInHand {
+  position: absolute;
+  /* Use percentages relative to .doctorContainer */
+  top: 50%;
+    left: 76%;
+    width: 10%;      /* flag width relative to doctor width */
+  height: auto;
+  transform: translate(-50%, -50%); /* center the flag at the point */
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .doctorContainer {
+    width: 60%;      /* narrower container on mobile */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .flagInHand {
+    top: 40%;        /* tweak to palm position on mobile image */
+    left: 60%;
+    width: 25%;      /* adjust flag size */
+  }
+}
+@media (max-width: 600px) {
+  .languageSelection {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll; /* включає вертикальний скрол */
+    scroll-snap-type: y mandatory; /* активує прив’язку елементів */
+    scroll-behavior: smooth; /* плавна анімація */
+    max-height: 70vh; /* обмежує висоту області прокрутки */
+    padding-right: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .langIcon {
+    scroll-snap-align: center; /* кожен елемент зупиняється по центру */
+    flex: 0 0 auto;
+    padding: 20px 0; /* додає відступ, щоб елементи не злипалися */
+  }
+
+  .languageSelection::-webkit-scrollbar {
+    display: none; /* приховує скролбар */
+  }
+}
+
+/* Mobile doctor placeholder base style */
+.doctorImageMobile {
+  display: none;
+  width: auto;
+  max-width: 150px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .doctorImage {
+    display: none;
+  }
+
+  .doctorImageMobile {
+    display: block;
+    position: absolute;
+    bottom: 10px;       /* відступ від низу */
+    left: 20px;         /* відступ зліва */
+    max-width: 100px;   /* розмір картинки */
+    height: auto;
+    z-index: 1;
+  }
+
+  .doctorContainer {
+    position: absolute;
+    justify-content: flex-start;
+    align-items: flex-end; /* дозволяє більш гнучке вирівнювання */
+  }
+}

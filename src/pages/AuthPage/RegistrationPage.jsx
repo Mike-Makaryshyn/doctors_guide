@@ -21,6 +21,8 @@ import flagEs from "../../assets/flags/es.png";
 import flagPl from "../../assets/flags/pl.png";
 import flagEl from "../../assets/flags/el.png";
 import flagRo from "../../assets/flags/ro.png";
+import langHolder from "../../assets/langholder.png";
+import langHolderMobile from "../../assets/langholdermobile.png";
 const StageMenu = lazy(() => import("../ApprobationPage/StageMenu"));
 const CustomGermanyMap = lazy(() =>
   import("../../components/CustomGermanyMap/CustomGermanyMap")
@@ -35,7 +37,11 @@ const RegistrationPage = () => {
   const [localRegion, setLocalRegion] = useState("");
   const navigate = useNavigate();
   const { currentUser } = useAuth();
-  const { selectedRegion, selectedLanguage: language = "de", handleChangePage, handleChangeRegion, handleChangeEducationCategory, languages } = useGetGlobalInfo();// глобальний стан, але для збереження регіону ми використовуватимемо локальний стан
+  const { selectedRegion, selectedLanguage: language = "de", handleChangePage, handleChangeRegion, handleChangeEducationCategory, handleChangeLanguage, languages } = useGetGlobalInfo();// глобальний стан, але для збереження регіону ми використовуватимемо локальний стан
+  const [localLanguage, setLocalLanguage] = useState(() => {
+    const stored = localStorage.getItem("selectedLanguage");
+    return stored ? JSON.parse(stored) : language;
+  });
 
   // Схема валідації
   const validationSchema = Yup.object({
@@ -183,9 +189,31 @@ const languageOptions = [
 
   return (
     <MainLayout>
+      {currentStep === "language" && (
+        <div className={styles.doctorContainer}>
+          {/* Desktop */}
+          <img
+            src={langHolder}
+            alt="Doctor placeholder"
+            className={styles.doctorImage}
+          />
+          {/* Mobile only */}
+          <img
+            src={langHolderMobile}
+            alt="Doctor mobile placeholder"
+            className={styles.doctorImageMobile}
+          />
+          {/* Sprach-Flagge bleibt unverändert */}
+          <img
+            src={languageOptions.find((l) => l.code === localLanguage).flag}
+            alt="Selected language flag"
+            className={styles.flagInHand}
+          />
+        </div>
+     )}
       <div className={styles.pageContainer}>
         <h1 className={styles.centeredHeading}>
-   {registrationTranslations.titles.pageTitle[language]}
+   {registrationTranslations.titles.pageTitle[localLanguage]}
  </h1>
         <div className={styles.contentWrapper}>
           <TransitionGroup component={null}>
@@ -207,7 +235,7 @@ const languageOptions = [
                         key={lang.code}
                         onClick={() => {
                           localStorage.setItem("selectedLanguage", JSON.stringify(lang.code));
-                          window.location.reload();
+                          setLocalLanguage(lang.code);
                         }}
                         className={styles.langIcon}
                         role="button"
@@ -215,7 +243,7 @@ const languageOptions = [
                         onKeyPress={(e) => {
                           if (e.key === 'Enter') {
                             localStorage.setItem("selectedLanguage", JSON.stringify(lang.code));
-                            window.location.reload();
+                            setLocalLanguage(lang.code);
                           }
                         }}
                       >
@@ -223,7 +251,7 @@ const languageOptions = [
                           src={lang.flag}
                           alt={lang.label}
                           className={
-                            language === lang.code ? styles.selectedLang : ""
+                            localLanguage === lang.code ? styles.selectedLang : ""
                           }
                         />
                       </div>
@@ -232,9 +260,9 @@ const languageOptions = [
                   <div className={styles.languageFooter}>
                     <button
                       type="button"
-                      className={`${styles.nextButton} ${language && styles.pulse}`}
+                      className={`${styles.nextButton} ${localLanguage && styles.pulse}`}
                       onClick={() => setCurrentStep("form")}
-                      disabled={!language}
+                      disabled={!localLanguage}
                     >
                       &#8594;
                     </button>
@@ -247,7 +275,7 @@ const languageOptions = [
                       {/* Vorname */}
                       <div className={styles.formGroup}>
                         <label htmlFor="firstName">
-                          {registrationTranslations.placeholders.firstName[language]}
+                          {registrationTranslations.placeholders.firstName[localLanguage]}
                         </label>
                         <input
                           id="firstName"
@@ -264,7 +292,7 @@ const languageOptions = [
                       {/* Nachname */}
                       <div className={styles.formGroup}>
                         <label htmlFor="lastName">
-                          {registrationTranslations.placeholders.lastName[language]}
+                          {registrationTranslations.placeholders.lastName[localLanguage]}
                         </label>
                         <input
                           id="lastName"
@@ -281,7 +309,7 @@ const languageOptions = [
                       {/* Geburtsdatum */}
                       <div className={styles.formGroup}>
                         <label htmlFor="birthDate">
-                          {registrationTranslations.placeholders.birthDate[language]}
+                          {registrationTranslations.placeholders.birthDate[localLanguage]}
                         </label>
                         <input
                           id="birthDate"
@@ -299,7 +327,7 @@ const languageOptions = [
                       {/* E-Mail */}
                       <div className={styles.formGroup}>
                         <label htmlFor="email">
-                          {registrationTranslations.placeholders.email[language]}
+                          {registrationTranslations.placeholders.email[localLanguage]}
                         </label>
                         <input
                           id="email"
@@ -316,7 +344,7 @@ const languageOptions = [
                       {/* Passwort */}
                       <div className={styles.formGroup}>
                         <label htmlFor="password">
-                          {registrationTranslations.placeholders.password[language]}
+                          {registrationTranslations.placeholders.password[localLanguage]}
                         </label>
                         <input
                           id="password"
@@ -333,7 +361,7 @@ const languageOptions = [
                       {/* Passwort bestätigen */}
                       <div className={styles.formGroup}>
                         <label htmlFor="repeatPassword">
-                          {registrationTranslations.placeholders.repeatPassword[language]}
+                          {registrationTranslations.placeholders.repeatPassword[localLanguage]}
                         </label>
                         <input
                           id="repeatPassword"
@@ -350,7 +378,7 @@ const languageOptions = [
                       {/* Вибір EU / Non-EU */}
                       <div className={styles.formGroup}>
                         <label htmlFor="educationRegion">
-                          {language === "de" ? "Bildungsregion" : "Education Region"}
+                          {localLanguage === "de" ? "Bildungsregion" : "Education Region"}
                         </label>
                         <div
                           className={
@@ -391,7 +419,7 @@ const languageOptions = [
                       {/* Fachgebiet */}
                       <div className={styles.formGroup}>
                         <label htmlFor="specialty">
-                          {registrationTranslations.placeholders.specialty[language]}
+                          {registrationTranslations.placeholders.specialty[localLanguage]}
                         </label>
                         <input
                           id="specialty"
@@ -406,7 +434,7 @@ const languageOptions = [
                       {/* Deutschniveau */}
                       <div className={styles.formGroup}>
                         <label htmlFor="germanLevel">
-                          {registrationTranslations.placeholders.germanLevel[language]}
+                          {registrationTranslations.placeholders.germanLevel[localLanguage]}
                         </label>
                         <input
                           id="germanLevel"
@@ -421,7 +449,7 @@ const languageOptions = [
                       {/* Verfahrenstyp */}
                       <div className={styles.formGroup}>
                         <label htmlFor="procedureType">
-                          {registrationTranslations.placeholders.procedureType[language]}
+                          {registrationTranslations.placeholders.procedureType[localLanguage]}
                         </label>
                         <select
                           id="procedureType"
@@ -432,7 +460,7 @@ const languageOptions = [
                           className={styles.inputField}
                         >
                           <option value="">
-                            {registrationTranslations.placeholders.procedureType[language]}
+                            {registrationTranslations.placeholders.procedureType[localLanguage]}
                           </option>
                           <option value="Kenntnisprüfung">
                             Kenntnisprüfung
@@ -453,7 +481,7 @@ const languageOptions = [
                             onBlur={formik.handleBlur}
                             checked={formik.values.subscribe}
                           />
-                          {registrationTranslations.labels.subscribe[language]}
+                          {registrationTranslations.labels.subscribe[localLanguage]}
                         </label>
                       </div>
                       {/* AGB */}
@@ -477,7 +505,7 @@ const languageOptions = [
                           />
                           {formik.touched.agreeTerms && formik.errors.agreeTerms
                             ? formik.errors.agreeTerms
-                            : registrationTranslations.labels.agreeTerms[language]}
+                            : registrationTranslations.labels.agreeTerms[localLanguage]}
                         </label>
                       </div>
                       {/* Datenschutzerklärung */}
@@ -502,7 +530,7 @@ const languageOptions = [
                           {formik.touched.agreePrivacy &&
                           formik.errors.agreePrivacy
                             ? formik.errors.agreePrivacy
-                            : registrationTranslations.labels.agreePrivacy[language]}
+                            : registrationTranslations.labels.agreePrivacy[localLanguage]}
                         </label>
                       </div>
                     </div>
@@ -534,10 +562,10 @@ const languageOptions = [
                         </button>
                         <div className={styles.stageIntro}>
                          <h2 className={styles.stageIntroTitle}>
-   {registrationTranslations.modal.title[language]}
+   {registrationTranslations.modal.title[localLanguage]}
  </h2>
                          <p className={styles.stageIntroText}>
-   {registrationTranslations.modal.text[language]}
+   {registrationTranslations.modal.text[localLanguage]}
  </p>
                         </div>
                       </div>
@@ -585,10 +613,10 @@ const languageOptions = [
                         </button>
                         <div className={styles.stageIntro}>
                           <h2 className={styles.stageIntroTitle}>
-                            {registrationTranslations.modal.mapTitle?.[language] || "Letzter Schritt der Registrierung"}
+                            {registrationTranslations.modal.mapTitle?.[localLanguage] || "Letzter Schritt der Registrierung"}
                           </h2>
                           <p className={styles.stageIntroText}>
-                            {registrationTranslations.modal.mapText?.[language] ||
+                            {registrationTranslations.modal.mapText?.[localLanguage] ||
                               "Bitte wählen Sie auf der Karte das Bundesland aus, in dem Sie Ihre Approbation beantragen möchten."}
                           </p>
                         </div>
