@@ -664,7 +664,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
   .doctorImageMobile {
     display: block;
-    position: absolute;
+    position: fixed;
         bottom: -14px;
         left: -253px;
         max-width: 444px;   /* розмір картинки */
@@ -676,7 +676,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     display: none !important;
      }
   .doctorContainer {
-    position: absolute;
+    position: fixed;
     justify-content: flex-start;
     align-items: flex-end; /* дозволяє більш гнучке вирівнювання */
   }
