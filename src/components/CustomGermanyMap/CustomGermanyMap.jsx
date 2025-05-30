@@ -28,6 +28,8 @@ import SachsenAnhaltCoat from "../../assets/coats/Sachsen-Anhalt.svg";
 import SchleswigHolsteinCoat from "../../assets/coats/Schleswig-Holstein.svg";
 import ThueringenCoat from "../../assets/coats/Thüringen.svg";
 
+import AuthModal from "../../pages/AuthPage/AuthModal";
+
 // Name-Mappings, якщо потрібно
 const nameMappings = {
   "Mecklenburg-Vorpommern": "Mecklenburg Vorpommern",
@@ -112,10 +114,15 @@ const regionCoatsOfArms = {
 };
 
 const CustomGermanyMap = ({ registrationMode = false, onRegionSelect }) => {
-  const { selectedRegion, handleChangeRegion, user } = useGetGlobalInfo();
+  // Grab region from global context but hide it for unauthenticated users (outside registration)
+  const { selectedRegion: storedRegion, handleChangeRegion, user } = useGetGlobalInfo();
+  const selectedRegion = (!registrationMode && !user) ? null : storedRegion;
   const [pendingRegion, setPendingRegion] = useState(null);
   const [hoveredRegion, setHoveredRegion] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const handleShowAuthModal = () => setShowAuthModal(true);
+  const handleCloseAuthModal = () => setShowAuthModal(false);
 
   const isMobile = useIsMobile();
   const navigate = useNavigate();
@@ -134,6 +141,14 @@ const CustomGermanyMap = ({ registrationMode = false, onRegionSelect }) => {
     const rawName = geo.properties.name;
     const unified = unifyRegionName(rawName);
     setPendingRegion(unified);
+
+    // Prevent unauthenticated users from *setting* the region outside registration mode.
+    // They can still preview regions, but saving is blocked.
+    if (!registrationMode && !user) {
+      handleShowAuthModal();
+      return;
+    }
+
     if (registrationMode) {
       // Якщо реєстрація – оновлюємо глобальний стан відразу
       handleChangeRegion(unified);
@@ -147,6 +162,11 @@ const CustomGermanyMap = ({ registrationMode = false, onRegionSelect }) => {
   };
 
   const handleDashboardClick = async () => {
+    // Block saving the region for unauthenticated users outside registration mode.
+    if (!registrationMode && !user) {
+      handleShowAuthModal();
+      return;
+    }
     if (pendingRegion) {
       if (!registrationMode) {
         const confirmChange = window.confirm(
@@ -277,6 +297,7 @@ const CustomGermanyMap = ({ registrationMode = false, onRegionSelect }) => {
           )}
         </div>
       </div>
+      <AuthModal isOpen={showAuthModal} onClose={handleCloseAuthModal} />
     </MainLayout>
   );
 };
