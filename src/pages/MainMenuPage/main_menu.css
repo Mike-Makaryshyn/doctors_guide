@@ -24,6 +24,14 @@
    margin-bottom: 10px;
    position: relative;
 }
+.news_content a {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 2px 4px;
+  text-decoration: none;
+  white-space: nowrap; /* забороняє розрив рядка всередині посилання */
+}
+
 
 /* Стилі для плиток новин */
 .news_tiles {

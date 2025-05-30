@@ -89,9 +89,11 @@ const MainMenuPage = () => {
                               <div className="news_date">{news.date}</div>
                            </div>
                            <div className="news_summary">{news.summary[language]}</div>
-                           <div className="news_content" id={`news-content-${index}`}>
-                              {news.fullText[language]}
-                           </div>
+                           <div
+                             className="news_content"
+                             id={`news-content-${index}`}
+                             dangerouslySetInnerHTML={{ __html: news.fullText[language] }}
+                           ></div>
                         </div>
                      ))}
                   </div>

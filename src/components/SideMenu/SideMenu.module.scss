@@ -147,16 +147,20 @@
 .regionSelection {
   font-size: 14px;
   color: #023c6f;
-  text-decoration: underline;
+  /* text-decoration: underline; removed */
   cursor: pointer;
   transition: color 0.2s ease;
   text-align: left;
   align-self: flex-start;
   margin-left: 2px;
+  background-color: rgba(2, 60, 111, 0.1); /* similar to activeLink */
+  border-radius: 8px; /* for rounded corners */
+  padding: 4px 8px; /* padding for better appearance */
 }
 
 .regionSelection:hover {
   color: #03528c;
+  background-color: rgba(2, 60, 111, 0.2);
 }
 
 /* Акордеон */
@@ -224,6 +228,7 @@
 .activeLink {
   background-color: rgba(2, 59, 110, 0.2);
   font-weight: bold;
+  border-radius: 8px; /* нове заокруглення */
 }
 
 .authBlock {
