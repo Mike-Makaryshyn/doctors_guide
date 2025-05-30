@@ -6,8 +6,7 @@ import {
   AbbreviationsStatusProvider,
   useAbbreviationsStatus,
 } from "../../../../contexts/AbbreviationsStatusContext";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../../firebase";
+import { useAuth } from "../../../../hooks/useAuth";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
 import { Helmet } from "react-helmet";
 import {
@@ -61,7 +60,7 @@ function AbbreviationsTermMatchingGameContent() {
   const { abbreviationStatuses, flushChanges } = useAbbreviationsStatus();
 
   // Авторизація
-  const [user] = useAuthState(auth);
+  const { user } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
   const requireAuth = () => {
     if (!user) {

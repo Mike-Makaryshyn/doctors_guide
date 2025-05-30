@@ -18,8 +18,7 @@ import { useMedicationStatus, MedicationStatusProvider } from "../../../../conte
 import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
 import { categoryIcons } from "../../../../constants/CategoryIcons";
 import { Helmet } from "react-helmet";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../../firebase";
+import { useAuth } from "../../../../hooks/useAuth";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
 import FillInBlankGameTutorial from "./FillInBlankGameTutorial";
 // Оновлена фонова картинка
@@ -57,8 +56,9 @@ const MedicationFillInBlankGameContent = () => {
   const { selectedLanguage } = useGetGlobalInfo();
   const { medicationStatuses, toggleStatus, flushChanges, recordCorrectAnswer } = useMedicationStatus();
 
-  // Firebase Auth логіка
-  const [user, loading] = useAuthState(auth);
+  // Supabase Auth логіка
+  const { user } = useAuth();
+  const loading = user === undefined; // treat “undefined” as loading
   const [showAuthModal, setShowAuthModal] = useState(false);
   const requireAuth = () => {
     if (!user) {

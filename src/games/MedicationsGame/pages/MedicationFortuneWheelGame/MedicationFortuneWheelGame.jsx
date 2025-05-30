@@ -11,8 +11,7 @@ import fortuneWheelBg from "../../../../assets/medication-fortune-wheel-bg.jpg";
 import MedicationFortuneWheelGameTutorial from "./MedicationFortuneWheelGameTutorial";
 
 // Додаткові імпорти для аутентифікації
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../../firebase";
+import { useAuth } from "../../../../hooks/useAuth";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
 
 /** Допоміжні функції */
@@ -57,9 +56,10 @@ function MedicationFortuneWheelGameContent() {
   const navigate = useNavigate();
   const { medicationStatuses, recordCorrectAnswer, flushChanges } = useMedicationStatus();
 
-  // Аутентифікація
-  const [user] = useAuthState(auth);
+  // Supabase Auth
+  const { user } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
+  const loading = user === undefined; // treat “undefined” as loading if needed
   const requireAuth = () => {
     if (!user) {
       setShowAuthModal(true);

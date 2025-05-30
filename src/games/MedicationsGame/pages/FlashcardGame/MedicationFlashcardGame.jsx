@@ -52,8 +52,7 @@ const questionCountOptions = [20, 40, 60, 100, 200, "Alle"];
 import FlashCardGameTutorial from "./MedicationFlashCardGameTutorial";
 
 // Firebase Auth
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../../firebase";
+import { useAuth } from "../../../../hooks/useAuth";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
 
 // Компонента для плаваючих прикладів
@@ -75,9 +74,10 @@ const MedicationFlashcardGameContent = () => {
   const navigate = useNavigate();
   const query = useQuery();
 
-  // Auth
-  const [user] = useAuthState(auth);
+  // Supabase Auth
+  const { user } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
+  const loading = user === undefined; // treat “undefined” as loading (if needed)
   const requireAuth = () => {
     if (!user) {
       setShowAuthModal(true);

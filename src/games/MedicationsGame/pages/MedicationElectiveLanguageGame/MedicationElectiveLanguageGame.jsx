@@ -22,8 +22,7 @@ import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
 import { Helmet } from "react-helmet";
 import translatorBg from "../../../../assets/translator-bg.jpg";
 import { categoryIcons } from "../../../../constants/CategoryIcons";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../../firebase";
+import { useAuth } from "../../../../hooks/useAuth";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
@@ -55,9 +54,10 @@ const MedicationElectiveLanguageGameContent = () => {
   const navigate = useNavigate();
   const { selectedLanguage } = useGetGlobalInfo();
 
-  // Аутентифікація
-  const [user] = useAuthState(auth);
+  // Supabase Auth
+  const { user } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
+  const loading = user === undefined; // treat “undefined” as loading if needed
   const requireAuth = () => {
     if (!user) {
       setShowAuthModal(true);

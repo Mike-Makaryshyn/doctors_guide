@@ -26,6 +26,10 @@
   color: #013b6e;
   margin-bottom: 5px;
 }
+.modalCloseButton:hover {
+  background-color: transparent !important;
+  border: none !important;
+  }
 .main_menu_back:active {
   transform: scale(0.95);
 }

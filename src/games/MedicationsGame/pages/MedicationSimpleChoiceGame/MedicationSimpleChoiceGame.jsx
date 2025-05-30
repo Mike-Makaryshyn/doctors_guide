@@ -23,8 +23,7 @@ import { Helmet } from "react-helmet";
 import medicationSimpleChoiceBg from "../../../../assets/medication-simple-choice-bg.jpg";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../../firebase";
+import { useAuth } from "../../../../hooks/useAuth";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
 import FloatingExamples from "./FloatingExamples";
 
@@ -60,9 +59,10 @@ const MedicationSimpleChoiceGameContent = () => {
   const navigate = useNavigate();
   const { selectedLanguage } = useGetGlobalInfo();
 
-  // Firebase Auth
-  const [user] = useAuthState(auth);
+  // Supabase Auth
+  const { user } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
+  const loading = user === undefined; // treat “undefined” as loading if needed
   const requireAuth = () => {
     if (!user) {
       setShowAuthModal(true);

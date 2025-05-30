@@ -18,13 +18,13 @@ export function useAuth() {
     getSession();
 
     // відслідковуємо зміни авторизації
-    const { data: subscription } = supabase.auth.onAuthStateChange(
+    const { data } = supabase.auth.onAuthStateChange(
       (_event, session) => {
         setUser(session?.user ?? null);
       }
     );
 
-    return () => subscription?.unsubscribe();
+    return () => data.subscription.unsubscribe();
   }, []);
 
   return { user, loading };

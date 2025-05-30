@@ -2,8 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import MainLayout from "../../../../layouts/MainLayout/MainLayout";
 import { medications } from "../../../../constants/medications";
 import styles from "./AllMedicationsPage.module.scss";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../../firebase";
+import { useAuth } from "../../../../hooks/useAuth";
 import {
   FaCog,
   FaCheck,
@@ -50,7 +49,8 @@ const AllMedicationsPageContent = () => {
   const navigate = useNavigate();
   const { medicationStatuses, toggleStatus, scheduleFlushChanges } =
     useMedicationStatus();
-  const [user, loading] = useAuthState(auth);
+  const { user } = useAuth();
+  const loading = user === undefined; // treat “undefined” as loading
   const { selectedLanguage } = useGetGlobalInfo();
 
   // -----------------------

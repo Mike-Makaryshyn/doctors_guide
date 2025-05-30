@@ -20,7 +20,7 @@ const AbbreviationsLearningPage = () => {
   const navigate = useNavigate();
 
   return (
-    <MainLayout>
+    <MainLayout key={regionParam}>
       <Helmet>
         <title>Abbreviations Games - Lernen & Üben</title>
         <meta

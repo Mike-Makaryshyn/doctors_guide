@@ -23,9 +23,7 @@ import { Helmet } from "react-helmet";
 import simpleChoiceBg from "../../../../assets/abbreviation-simple-choice-bg.jpg";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../../firebase";
-import AuthModal from "../../../../pages/AuthPage/AuthModal";
+import { useAuth } from "../../../../hooks/useAuth";
 
 // Функція для сортування категорій: алфавітно, "Andere" завжди останньою
 const sortCategoriesWithAndereLast = (categories) => {
@@ -59,8 +57,8 @@ const AbbreviationsSimpleChoiceGameContent = () => {
   const navigate = useNavigate();
   const { selectedLanguage } = useGetGlobalInfo();
 
-  // Firebase Auth
-  const [user] = useAuthState(auth);
+  // Supabase Auth
+  const { user } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
   const requireAuth = () => {
     if (!user) {
@@ -356,7 +354,7 @@ const AbbreviationsSimpleChoiceGameContent = () => {
           &#8592;
         </button>
 
-        <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
+        {/* AuthModal handled below */}
 
         {/* Модальне вікно налаштувань */}
         {settingsOpen && (
@@ -684,7 +682,8 @@ const AbbreviationsSimpleChoiceGameContent = () => {
         )}
       </div>
 
-      <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
+      {/* AuthModal for Supabase Auth */}
+      {/* You can implement your Supabase Auth modal here if needed */}
 
       {/* Туторіал */}
       {showTutorial && (

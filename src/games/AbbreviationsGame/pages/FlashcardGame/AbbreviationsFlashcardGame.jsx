@@ -52,10 +52,8 @@ const questionCountOptions = [20, 40, 60, 100, 200, "Alle"];
 // Tutorial
 import FlashCardGameTutorial from "./AbbreviationsFlashCardGameTutorial";
 
-// Firebase Auth
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../../firebase";
-import AuthModal from "../../../../pages/AuthPage/AuthModal";
+// Supabase Auth
+import { useAuth } from "../../../../hooks/useAuth";
 
 // Helper для сортування категорій
 const sortCategoriesWithAndereLast = (categories) => {
@@ -74,11 +72,11 @@ const AbbreviationsFlashcardGameContent = () => {
   const query = useQuery();
 
   // Auth
-  const [user] = useAuthState(auth);
-  const [showAuthModal, setShowAuthModal] = useState(false);
+  const { user } = useAuth();
   const requireAuth = () => {
     if (!user) {
-      setShowAuthModal(true);
+      // Тут можна показати кастомний алерт/модалку, якщо потрібно
+      alert("Bitte melden Sie sich an, um diese Funktion zu nutzen.");
       return true;
     }
     return false;

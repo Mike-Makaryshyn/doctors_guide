@@ -1,5 +1,4 @@
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../../firebase";
+import { useAuth } from "../../../../hooks/useAuth";
 import React, { useState, useEffect } from "react";
 import MainLayout from "../../../../layouts/MainLayout/MainLayout";
 import { medicalAbbreviations } from "../../../../constants/medicalAbbreviations";
@@ -51,15 +50,10 @@ function AbbreviationsFortuneWheelGameContent() {
   const navigate = useNavigate();
   const { abbreviationStatuses, recordCorrectAnswer, flushChanges } = useAbbreviationsStatus();
 
-  // Аутентифікація
-  const [user] = useAuthState(auth);
-  const [showAuthModal, setShowAuthModal] = useState(false);
+  // Аутентифікація (Supabase)
+  const { user } = useAuth();
   const requireAuth = () => {
-    if (!user) {
-      setShowAuthModal(true);
-      return false;
-    }
-    return true;
+    return !!user;
   };
 
   // Стан налаштувань і даних гри
@@ -577,13 +571,6 @@ function AbbreviationsFortuneWheelGameContent() {
         )}
       </div>
 
-      {/* Модаль аутентифікації */}
-      {showAuthModal && (
-        <AuthModal
-          isOpen={showAuthModal}
-          onClose={() => setShowAuthModal(false)}
-        />
-      )}
     </MainLayout>
   );
 }

@@ -1,52 +1,52 @@
 import React, { createContext, useContext, useState, useEffect, useRef } from "react";
-import { auth, db } from "../firebase";
-import { doc, getDoc, setDoc } from "firebase/firestore";
-import { useAuthState } from "react-firebase-hooks/auth";
+import { supabase } from "../supabaseClient";
+import { useAuth } from "../hooks/useAuth";
 
 const AbbreviationsStatusContext = createContext();
 
 export const AbbreviationsStatusProvider = ({ children }) => {
-  const [user, loading] = useAuthState(auth);
+  const { user } = useAuth();
   const [abbreviationStatuses, setAbbreviationStatuses] = useState({});
   const unsavedChanges = useRef({});
   const flushTimeoutRef = useRef(null);
 
+  // Загрузка данных из Supabase и LocalStorage
   useEffect(() => {
-    if (loading) return;
-    if (!user) {
-      setAbbreviationStatuses({});
-      return;
-    }
     const fetchData = async () => {
-      try {
-        const docRef = doc(db, "users", user.uid, "abbreviationStatuses", "allAbbreviations");
-        const docSnap = await getDoc(docRef);
-        let firebaseData = {};
-        if (docSnap.exists()) {
-          firebaseData = docSnap.data()?.statuses || {};
-        }
-        console.log("Data from Firestore (abbreviationStatuses):", firebaseData);
-        const localData = localStorage.getItem("abbreviationStatuses");
-        const localStatuses = localData ? JSON.parse(localData) : {};
-        const merged = Object.keys(localStatuses).length > 0 ? localStatuses : firebaseData;
-        setAbbreviationStatuses(merged);
-        localStorage.setItem("abbreviationStatuses", JSON.stringify(merged));
-        unsavedChanges.current = {};
-      } catch (error) {
-        console.error("Error fetching abbreviation data:", error);
+      if (!user) {
+        setAbbreviationStatuses({});
+        return;
       }
+      const { data, error } = await supabase
+        .from("abbreviation_statuses")
+        .select("abbr_id, status, correct_count, updated_at")
+        .eq("user_id", user.id);
+      if (error) {
+        console.error("Ошибка загрузки abbreviation statuses:", error);
+        return;
+      }
+      const loaded = {};
+      data.forEach(row => {
+        loaded[row.abbr_id] = {
+          status: row.status,
+          correctCount: row.correct_count,
+          updatedAt: new Date(row.updated_at).getTime(),
+        };
+      });
+      setAbbreviationStatuses(loaded);
+      localStorage.setItem("abbreviationStatuses", JSON.stringify(loaded));
+      unsavedChanges.current = {};
     };
     fetchData();
-  }, [user, loading]);
+  }, [user]);
 
   useEffect(() => {
     localStorage.setItem("abbreviationStatuses", JSON.stringify(abbreviationStatuses));
   }, [abbreviationStatuses]);
 
-  const saveChangesToFirebase = async () => {
+  const saveChangesToSupabase = async () => {
     if (!user) {
-      console.log("No user (abbreviations) – saving locally only.");
-      setAbbreviationStatuses((prev) => {
+      setAbbreviationStatuses(prev => {
         const newStatuses = { ...prev };
         for (const [abbrId, data] of Object.entries(unsavedChanges.current)) {
           newStatuses[abbrId] = data;
@@ -57,34 +57,32 @@ export const AbbreviationsStatusProvider = ({ children }) => {
       unsavedChanges.current = {};
       return;
     }
-    const changes = { ...unsavedChanges.current };
-    if (Object.keys(changes).length === 0) {
-      console.log("No unsaved changes (abbreviations).");
+    const entries = Object.entries(unsavedChanges.current);
+    if (entries.length === 0) {
+      console.log("Нет изменений для сохранения.");
+      return;
+    }
+    const upserts = entries.map(([abbrId, data]) => ({
+      user_id: user.id,
+      abbr_id: abbrId,
+      status: data.status,
+      correct_count: data.correctCount,
+      updated_at: new Date(data.updatedAt).toISOString(),
+    }));
+    const { error } = await supabase
+      .from("abbreviation_statuses")
+      .upsert(upserts, { onConflict: ["user_id", "abbr_id"] });
+    if (error) {
+      console.error("Ошибка сохранения в Supabase:", error);
       return;
     }
     unsavedChanges.current = {};
-    try {
-      console.log("Saving changes to Firestore (abbreviations):", changes);
-      const newStatuses = { ...abbreviationStatuses };
-      for (const [abbrId, data] of Object.entries(changes)) {
-        newStatuses[abbrId] = data;
-      }
-      setAbbreviationStatuses(() => {
-        localStorage.setItem("abbreviationStatuses", JSON.stringify(newStatuses));
-        return newStatuses;
-      });
-      const docRef = doc(db, "users", user.uid, "abbreviationStatuses", "allAbbreviations");
-      await setDoc(docRef, { statuses: newStatuses }, { merge: true });
-      console.log("Changes saved to Firestore (abbreviations).");
-    } catch (error) {
-      console.error("Error saving to Firebase (abbreviations):", error);
-      unsavedChanges.current = { ...changes, ...unsavedChanges.current };
-    }
+    console.log("Abbreviation statuses успешно сохранены в Supabase.");
   };
 
   const flushChanges = () => {
-    console.log("flushChanges() called (abbreviations), saving immediately.");
-    saveChangesToFirebase();
+    console.log("flushChanges() вызвано, сохраняем сейчас.");
+    saveChangesToSupabase();
   };
 
   const scheduleFlushChanges = () => {
@@ -99,7 +97,7 @@ export const AbbreviationsStatusProvider = ({ children }) => {
 
   const setStatus = (abbrId, status) => {
     const now = Date.now();
-    setAbbreviationStatuses((prev) => {
+    setAbbreviationStatuses(prev => {
       const prevData = prev[abbrId] || {};
       return {
         ...prev,
@@ -115,19 +113,20 @@ export const AbbreviationsStatusProvider = ({ children }) => {
       ...current,
       status,
       updatedAt: now,
+      correctCount: current.correctCount || 0,
     };
   };
 
   const toggleStatus = (abbrId, newStatus) => {
     const currentStatus = abbreviationStatuses[abbrId]?.status || "unlearned";
     const updatedStatus = currentStatus === newStatus ? "unlearned" : newStatus;
-    console.log(`Toggling status for abbreviation ${abbrId}: ${currentStatus} -> ${updatedStatus}`);
+    console.log(`Переключаем статус ${abbrId}: ${currentStatus} -> ${updatedStatus}`);
     setStatus(abbrId, updatedStatus);
   };
 
   const recordCorrectAnswer = (abbrId, increment = 1) => {
     const now = Date.now();
-    setAbbreviationStatuses((prev) => {
+    setAbbreviationStatuses(prev => {
       const current = prev[abbrId] || { status: "unlearned", correctCount: 0 };
       const newCount = (current.correctCount || 0) + increment;
       const newStatus = newCount >= 5 ? "learned" : current.status;

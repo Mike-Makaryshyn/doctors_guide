@@ -14,7 +14,8 @@ const useGetGlobalInfo = () => {
   const navigate = useNavigate();
   const selectedLanguage = localStorageGet("selectedLanguage", DEFAULT_LANGUAGE);
   const currentPage = user ? localStorageGet("currentPage", "/main_menu") : "/main_menu";
-  const [selectedRegion, setSelectedRegion] = useState(localStorageGet("selectedRegion", ""));
+  // Гість не має обраного регіону; ініціалізуємо як порожній рядок
+  const [selectedRegion, setSelectedRegion] = useState("");
 
   // =======================
   // Код для роботи з регіоном
@@ -111,13 +112,29 @@ const useGetGlobalInfo = () => {
   }, []);
 
   useEffect(() => {
-    if (!user) return;
-    const meta = user.user_metadata || {};
-    // Sync selectedRegion
-    if (meta.selectedRegion && meta.selectedRegion !== selectedRegion) {
-      setSelectedRegion(meta.selectedRegion);
-      localStorageSet("selectedRegion", meta.selectedRegion);
+    if (!user) {
+      // Користувач неавторизований: скидаємо регіон і чистимо LocalStorage
+      setSelectedRegion("");
+      localStorage.removeItem("selectedRegion");
+      return;
     }
+
+    const meta = user.user_metadata || {};
+
+    // Якщо регіон збережено у metadata – синхронізуємо
+    if (meta.selectedRegion) {
+      if (meta.selectedRegion !== selectedRegion) {
+        setSelectedRegion(meta.selectedRegion);
+        localStorageSet("selectedRegion", meta.selectedRegion);
+      }
+    } else {
+      // fallback: беремо з LocalStorage (можливо, збережений раніше в сесії)
+      const stored = localStorageGet("selectedRegion", "");
+      if (stored && stored !== selectedRegion) {
+        setSelectedRegion(stored);
+      }
+    }
+
     // Sync educationCategory
     const educ = meta.education_region;
     setEducationCategory(educ === "EU" || educ === "Non-EU" ? educ : "Non-EU");

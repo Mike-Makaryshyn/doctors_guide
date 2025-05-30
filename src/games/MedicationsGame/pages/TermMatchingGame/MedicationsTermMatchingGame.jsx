@@ -4,8 +4,7 @@ import MainLayout from "../../../../layouts/MainLayout/MainLayout";
 import { medications } from "../../../../constants/medications";
 import { MedicationStatusProvider, useMedicationStatus } from "../../../../contexts/MedicationStatusContext";
 import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../../firebase";
+import { useAuth } from "../../../../hooks/useAuth";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
 import { Helmet } from "react-helmet";
 import {
@@ -77,9 +76,10 @@ function MedicationTermMatchingGameContent() {
   // З регіональним фільтром більше не працюємо – його видалено
   const { medicationStatuses, flushChanges } = useMedicationStatus();
 
-  // Авторизація
-  const [user] = useAuthState(auth);
+  // Supabase Auth
+  const { user } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
+  const loading = user === undefined; // treat “undefined” as loading
   const requireAuth = () => {
     if (!user) {
       setShowAuthModal(true);
