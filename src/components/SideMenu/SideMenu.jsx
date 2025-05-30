@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { main_menu_items } from "../../constants/translation/main_menu";
+import { main_menu_items, regionSelection } from "../../constants/translation/main_menu";
 import { LANDS_INFO } from "../../constants/lands";
 import styles from "./SideMenu.module.scss";
 import { supabase } from "../../supabaseClient";
@@ -41,6 +41,11 @@ function SideMenu({ language, isOpen, onClose, direction }) {
   const sortedSections = React.useMemo(() => {
     return [...main_menu_items.sections].sort((a, b) => a.order - b.order);
   }, []);
+
+  // Add region selection translations if not present
+  // (for code completion only; actual object should be in main_menu_items)
+  // regionSelection: { en, fr, es, ar, tr, pl, uk, ru, de, el, ro }
+  // Example usage: main_menu_items.regionSelection[language]
 
   // При зміні маршруту відкриваємо категорію, якщо в ній є активний лінк
   useEffect(() => {
@@ -86,6 +91,8 @@ function SideMenu({ language, isOpen, onClose, direction }) {
     onClose();
   };
 
+const regionText = regionSelection[language] || "Choose Region";
+
   return (
     <div className={styles.overlay} onClick={handleOverlayClick}>
       <div className={`${styles.sideMenu} ${direction === "right" ? styles.right : ""}`} onClick={handleMenuClick}>
@@ -109,7 +116,7 @@ function SideMenu({ language, isOpen, onClose, direction }) {
                   <span className={styles.userName}>{displayName}</span>
                 )}
                 <div className={styles.regionSelection} onClick={handleRegionClick} style={{ cursor: "pointer" }}>
-                  {selectedRegion || "Обрати регіон"}
+                  {selectedRegion || regionText}
                 </div>
               </div>
             </div>

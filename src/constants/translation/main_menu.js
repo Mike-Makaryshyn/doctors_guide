@@ -806,3 +806,18 @@ export const choose_region_text = {
   el: "(Επιλέξτε Περιφέρεια)",
   ro: "(Alegeți regiunea)",
 };
+
+export const regionSelection = {
+  en: "Choose Region",
+  fr: "Choisissez la région",
+  es: "Elija la región",
+  ar: "اختر المنطقة",
+  tr: "Bölge Seçin",
+  pl: "Wybierz region",
+  uk: "Обрати регіон",
+  ru: "Выберите регион",
+  de: "Region auswählen",
+  el: "Επιλέξτε Περιφέρεια",
+  ro: "Alegeți regiunea"
+};
+
