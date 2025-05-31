@@ -10,6 +10,7 @@ import bamfLogo from "../../assets/bamflogo.png";
 import goetheLogo from "../../assets/goetelogo.png";
 
 import { FaCog } from "react-icons/fa";
+import { AiOutlineClose } from "react-icons/ai"; // Додано імпорт для кнопки закриття модалки
 
 // Функція уніфікації регіону, щоб об'єднати певні ключі в один
 const unifyRegion = (r) => {
