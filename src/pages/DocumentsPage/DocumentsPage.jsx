@@ -193,23 +193,23 @@ const DocumentsPage = () => {
     };
   }, []);
 
-  // Завантаження educationRegion з Supabase та підписка на зміни (оновлено: auth metadata)
+  // Завантаження education_region з user_metadata та підписка на зміни (Supabase auth metadata)
   const fetchEducationRegionFromSupabase = useCallback(() => {
-    let isMounted = true;
-
+    // Immediately get the current user and read education_region from metadata
     supabase.auth.getUser().then(({ data: { user: sessionUser } }) => {
       if (!sessionUser) return;
-      const region = sessionUser.user_metadata?.educationRegion;
-      if (isMounted) setCategory(region === "EU" || region === "Non-EU" ? region : "Non-EU");
+      const region = sessionUser.user_metadata?.education_region;
+      setCategory(region === 'EU' ? 'EU' : 'Non-EU');
     });
 
+    // Listen for auth state changes to update education_region when metadata changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      const region = session?.user?.user_metadata?.educationRegion;
-      setCategory(region === "EU" || region === "Non-EU" ? region : "Non-EU");
+      const region = session?.user?.user_metadata?.education_region;
+      setCategory(region === 'EU' ? 'EU' : 'Non-EU');
     });
 
+    // Return a cleanup to unsubscribe from auth state changes
     return () => {
-      isMounted = false;
       subscription?.unsubscribe();
     };
   }, []);

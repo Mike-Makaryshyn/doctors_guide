@@ -39,7 +39,7 @@ const newsData = [
       el: "Μπορείτε εύκολα να εξερευνήσετε και να κατακτήσετε την ιατρική ορολογία, τις συντομογραφίες και τα φάρμακα απευθείας στην πλατφόρμα μας. Επισκεφθείτε: <a href='/terminology-learning'>Εκμάθηση ορολογίας</a>, <a href='/abbreviations-learning'>Εκμάθηση συντομογραφιών</a>, <a href='/medications-learning'>Εκμάθηση φαρμάκων</a>",
       ro: "Puteți explora și stăpâni convenabil terminologia medicală, abrevierile și medicamentele direct pe platforma noastră. Vizitați: <a href='/terminology-learning'>Învățare terminologie</a>, <a href='/abbreviations-learning'>Învățare abrevieri</a>, <a href='/medications-learning'>Învățare medicamente</a>"
     },
-    date: "05.05.2025",
+    date: "31.05.2025",
   },
   {
     title: {
