@@ -216,7 +216,9 @@
   padding: 6px 8px;
   display: flex;                  /* enable flex layout */
   align-items: center;            /* vertically center text and icons */
-  justify-content: space-between; /* push the last child (icon/badge) to the right */
+  width: 100%;
+  justify-content: flex-start !important;
+  text-align: left;
   transition: background-color 0.3s ease;
   font-family: 'Papin', sans-serif;
 }
@@ -240,7 +242,7 @@
   /* Combine size pulse and color-shift animations */
   animation: joystickPulse 1.5s infinite ease-in-out,
              joystickColorShift 4s infinite ease-in-out;
-  margin-left: 8px; /* small gap between text and icon */
+  margin-left: auto; /* штовхаємо іконку вправо */
 }
 
 @keyframes joystickColorShift {
@@ -252,7 +254,7 @@
 }
 
 .betaBadge {
-  margin-left: 8px; /* gap between icon and badge */
+  margin-left: auto; /* тепер бейдж завжди справа */
   background-color: #f0c419;
   color: #ffffff;
   font-size: 10px;
@@ -395,4 +397,22 @@
   transform: translate(-50%, -50%);
   border-radius: 4px 0 0 4px;
   box-shadow: -2px 0 4px rgba(0,0,0,0.2);
+}
+
+/* Mobile-specific adjustment to keep links left-aligned and position badges/icons */
+@media (max-width: 600px) {
+  .menuLink {
+    display: block !important;
+    position: relative;
+    padding-right: 36px; /* ensure space on the right for badge/icon */
+    text-align: left;
+  }
+  .joystickIcon,
+  .betaBadge {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 0; /* remove any left margin */
+  }
 }
