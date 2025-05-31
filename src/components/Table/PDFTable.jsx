@@ -607,7 +607,7 @@ const PDFTable = ({
     <div className={styles.pdfModal}>
       <div className={styles.modalContent}>
         <button className={styles.closeButton} onClick={onClose}>
-          <FaTimes />
+         ×
         </button>
         <div className={styles.modalTitle}>PDF Table</div>
         <div className={styles.buttons}>

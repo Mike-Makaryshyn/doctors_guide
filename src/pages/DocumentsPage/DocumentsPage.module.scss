@@ -752,20 +752,36 @@
       transform: translate(0px, 0px);
     }
   }
-  .printButton {
-    @extend .backButton;  // Наслідуємо всі властивості з .backButton
-    z-index: 1000; 
-    left: auto;      // Знімаємо "left", щоб не перекривалася позиція
-    right: 0px;  
-    pointer-events: auto !important;
-       // Закріплюємо по правому краю
+.printButton {
+  position: fixed;
+  z-index: 1000;
+  right: 0;
+  bottom: 0;
+  background: #4CAF50;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
   }
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
   .printButton {
     right: 3px;
     bottom: 10px;
     width: 35px;
     height: 30px;
+    margin: 8px;
     pointer-events: auto !important;
   }
 }
