@@ -201,22 +201,148 @@ export const LANGUAGE_STUDY_INFO = {
             phone: "040 3258870",
           },
         ],
-        "Hessen": [
-          {
-            name: "Goethe-Institut Frankfurt am Main",
-            address: "Diesterwegplatz 72, 60594 Frankfurt am Main",
-            website: "goethe.de/frankfurt",
-            email: "frankfurt@goethe.de",
-            phone: "069 961227-0",
-          },
-          {
-            name: "did deutsch-institut Frankfurt",
-            address: "Gutleutstraße 32, 60329 Frankfurt am Main",
-            website: "did.de",
-            email: "office@did.de",
-            phone: "069 24004560",
-          },
-        ],
+       "Hessen": [
+  // Frankfurt am Main
+  {
+    name: "Speakeasy Sprachschule Frankfurt",
+    address: "Steinweg 7, 60313 Frankfurt am Main",
+    website: "https://speakeasy-sprachschule.de",
+    email: "info@speakeasy-sprachschule.de",
+    phone: "+49 69 2424 9525"
+  },
+  {
+    name: "Schöne Sprache – Das Institut",
+    address: "Kaiserstraße 37, 60329 Frankfurt am Main",
+    website: "https://sprachschule-frankfurt.de",
+    email: "kursanmeldung@schoenesprache.de",
+    phone: "+49 69 97391701"
+  },
+  {
+    name: "Sprachcaffe Frankfurt",
+    address: "Gartenstraße 6, 60594 Frankfurt am Main",
+    website: "https://www.sprachcaffe-frankfurt.com",
+    email: "frankfurt@sprachcaffe.de",
+    phone: "+49 69 61091234"
+  },
+  {
+    name: "Evolanguage Sprachschule Frankfurt",
+    address: "Liebfrauenberg 39, 60313 Frankfurt am Main",
+    website: "https://www.deutschkurse-in-deutschland.de",
+    email: "frankfurt@evolanguage.de",
+    phone: "+49 69 26484869"
+  },
+  {
+    name: "Sprachschule Centro Frankfurt",
+    address: "Töngesgasse 35, 60311 Frankfurt am Main",
+    website: "https://sprachschule-centro-ffm.de",
+    email: "info@sprachschule-centro-ffm.de",
+    phone: "+49 69 90559060"
+  },
+  {
+    name: "inlingua Frankfurt",
+    address: "Kaiserstraße 37, 60329 Frankfurt am Main",
+    website: "https://www.inlingua-frankfurt.de",
+    email: "frankfurt@inlingua.de",
+    phone: "+49 69 2429200"
+  },
+
+  // Wiesbaden
+  {
+    name: "inlingua Wiesbaden",
+    address: "Friedrichstraße 31-33, 65185 Wiesbaden",
+    website: "https://www.inlingua-wiesbaden.de",
+    email: "wiesbaden@inlingua.de",
+    phone: "+49 611 373005"
+  },
+  {
+    name: "Sprachzentrum ProfiL Wiesbaden",
+    address: "Friedrichstraße 7, 65185 Wiesbaden",
+    website: "https://www.sprachzentrum-profil.de",
+    email: "info@sprachzentrum-profil.de",
+    phone: "+49 611 98859988"
+  },
+  {
+    name: "Sprachschule mit Herz",
+    address: "Wiesbaden",
+    website: "https://sprachschule-mit-herz.de",
+    email: "info@sprachschule-mit-herz.de",
+    phone: "+49 611 98859988"
+  },
+
+  // Kassel
+  {
+    name: "Berlitz Kassel",
+    address: "Karthäuserstraße 7–9, 34117 Kassel",
+    website: "https://www.berlitz.com/de-de/sprachschulen/kassel",
+    email: "kassel@berlitz.de",
+    phone: "+49 561 400700"
+  },
+  {
+    name: "Spracheninstitut DSI Kassel",
+    address: "Untere Königsstraße 58, 34117 Kassel",
+    website: "https://www.spracheninstitut.com",
+    email: "info@spracheninstitut.com",
+    phone: "+49 561 72987109"
+  },
+  {
+    name: "Lernstudio Barbarossa Kassel-Mitte",
+    address: "Obere Königsstraße 16-18, 34117 Kassel",
+    website: "https://www.lernstudio-barbarossa.de/kassel-mitte",
+    email: "kassel-mitte@lernstudio-barbarossa.de",
+    phone: "+49 561 9793366"
+  },
+  {
+    name: "Conas Lernstudio Kassel",
+    address: "Friedrich-Ebert-Straße 100, 34119 Kassel",
+    website: "https://www.conas-lernstudio.de",
+    email: "info@conas-lernstudio.de",
+    phone: "+49 561 7667994"
+  },
+  {
+    name: "DIALOG-Bildungsinstitut Kassel",
+    address: "Frankfurter Straße 170, 34121 Kassel",
+    website: "https://dialog-kilian.de",
+    email: "verwaltung@dialog-kilian.de",
+    phone: "+49 561 710586"
+  },
+
+  // Darmstadt
+  {
+    name: "Studio MONDIALE Darmstadt",
+    address: "Schottener Weg 7, 64289 Darmstadt",
+    website: "https://www.mondiale.de",
+    email: "info@mondiale.de",
+    phone: "+49 6151 136040"
+  },
+  {
+    name: "iQ Lingua Darmstadt",
+    address: "Ludwigsplatz 3, 64283 Darmstadt",
+    website: "https://www.iq-lingua.de/sprachkurse/darmstadt",
+    email: "info@iq-lingua.de",
+    phone: "+49 6151 7868752"
+  },
+  {
+    name: "LernAkademie Darmstadt",
+    address: "Wilhelminenstraße 10, 64283 Darmstadt",
+    website: "https://www.lernakademie-darmstadt.de",
+    email: "info@lernakademie-darmstadt.de",
+    phone: "+49 6151 6607096"
+  },
+  {
+    name: "Berlitz Darmstadt",
+    address: "Rheinstraße 40-42, 64283 Darmstadt",
+    website: "https://www.berlitz.com/de-de/sprachschulen/darmstadt",
+    email: "darmstadt@berlitz.de",
+    phone: "+49 6151 3605050"
+  },
+  {
+    name: "IB Sprachzentrum Darmstadt",
+    address: "Pallaswiesenstraße 123, 64293 Darmstadt",
+    website: "https://www.internationaler-bund.de/standort/211785",
+    email: "sprachkurse-darmstadt@ib.de",
+    phone: "+49 6151 780080"
+  }
+],
         "Mecklenburg-Vorpommern": [
           {
             name: "inlingua Rostock",
