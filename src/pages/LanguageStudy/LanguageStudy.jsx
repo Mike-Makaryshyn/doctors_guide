@@ -10,7 +10,7 @@ import bamfLogo from "../../assets/bamflogo.png";
 import goetheLogo from "../../assets/goetelogo.png";
 
 import { FaCog } from "react-icons/fa";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai"; // Додано імпорт для кнопки закриття модалки
 
 // Функція уніфікації регіону, щоб об'єднати певні ключі в один
 const unifyRegion = (r) => {
@@ -86,22 +86,28 @@ const LanguageStudyPage = () => {
         {/* Регіональні ресурси (відображаються залежно від вибраного регіону) */}
         <section>
           <h2 className={styles.sectionTitle}>
-            {LANGUAGE_STUDY_INFO[language]?.regional?.title || "Regionale Ressourcen"}
+            {LANGUAGE_STUDY_INFO[language]?.regional?.title ||
+              "Regionale Ressourcen"}
           </h2>
           {regionalSchools.length > 0 ? (
             <div className={styles.tilesContainer}>
               {regionalSchools.map((school, idx) => (
                 <div key={idx} className={styles.tile}>
                   <h3 className={styles.tileHeader}>{school.name}</h3>
-                  {/* Website */}
+                  {/* Website (відображаємо просто "Link") */}
                   {school.website && (
                     <p className={styles.tileWebsite}>
                       <a
-                        href={school.website.startsWith('http') ? school.website : `https://${school.website}`}
+                        className={styles.linkButton}
+                        href={
+                          school.website.startsWith("http")
+                            ? school.website
+                            : `https://${school.website}`
+                        }
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        {school.website}
+                        Link
                       </a>
                     </p>
                   )}
@@ -109,7 +115,9 @@ const LanguageStudyPage = () => {
                   {school.address && (
                     <p className={styles.tileAddress}>
                       <a
-                        href={`https://maps.google.com/?q=${encodeURIComponent(school.address)}`}
+                        href={`https://maps.google.com/?q=${encodeURIComponent(
+                          school.address
+                        )}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -120,18 +128,24 @@ const LanguageStudyPage = () => {
                   {/* Phone */}
                   {school.phone && (
                     <p className={styles.tilePhone}>
-                      Tel: <a href={`tel:${school.phone.replace(/\s+/g, '')}`}>{school.phone}</a>
+                      Tel:{" "}
+                      <a href={`tel:${school.phone.replace(/\s+/g, "")}`}>
+                        {school.phone}
+                      </a>
                     </p>
                   )}
                   {/* Email */}
                   {school.email && (
                     <p className={styles.tileEmail}>
-                      E-Mail: <a href={`mailto:${school.email}`}>{school.email}</a>
+                      E-Mail:{" "}
+                      <a href={`mailto:${school.email}`}>{school.email}</a>
                     </p>
                   )}
                   {/* Додатковий опис (якщо потрібен) */}
                   {school.description && (
-                    <p className={styles.tileDescription}>{school.description}</p>
+                    <p className={styles.tileDescription}>
+                      {school.description}
+                    </p>
                   )}
                 </div>
               ))}
@@ -148,12 +162,17 @@ const LanguageStudyPage = () => {
         {/* Загальні ресурси */}
         <section>
           <h2 className={styles.sectionTitle}>
-            {LANGUAGE_STUDY_INFO[language]?.general?.title || "Allgemeine Ressourcen"}
+            {LANGUAGE_STUDY_INFO[language]?.general?.title ||
+              "Allgemeine Ressourcen"}
           </h2>
           <div className={styles.tilesContainer}>
             {generalResourcesBanners.map((banner, index) => (
               <div key={index} className={styles.tile}>
-                <a href={banner.linkUrl} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={banner.linkUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src={banner.imageUrl}
                     alt={banner.altText}
@@ -190,7 +209,7 @@ const LanguageStudyPage = () => {
                 className={styles.modalCloseButton}
                 onClick={() => setIsModalOpen(false)}
               >
-                  ×
+                <AiOutlineClose />
               </button>
               <h2 className={styles.modalTitle}>Region</h2>
               <select

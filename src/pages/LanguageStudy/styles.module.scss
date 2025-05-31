@@ -27,6 +27,41 @@
   gap: 20px;
   justify-content: flex-start;
 }
+/* Але кнопка “Link” повинна бути БІЛА, тому додаємо
+   вищезначущу специфічність чи !important */
+.linkButton {
+  display: block;                  /* Блочна, займає всю ширину плитки */
+  width: 100%;
+  padding: 8px 0;                  /* Менші вертикальні відступи (8px замість 12px) */
+  font-size: 0.95rem;              /* Трохи менший шрифт */
+  font-weight: 600;
+  color: #ffffff !important;       /* Примусово білий текст */
+  background-color: #013b6e;       /* Синій фон */
+  border: none;
+  border-radius: 8px;              /* Заокруглені кути */
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: darken(#013b6e, 10%);
+    outline: none;
+    text-decoration: none;
+  }
+
+  /* Мобільні (екрани до 480px) */
+  @media (max-width: 480px) {
+    padding: 10px 0;
+    font-size: 0.9rem;
+  }
+
+  /* Планшети / маленькі десктопи (481px – 768px) */
+  @media (max-width: 768px) and (min-width: 481px) {
+    padding: 9px 0;
+    font-size: 0.95rem;
+  }
+}
 
 /* Стилізація плитки */
 .tile {
@@ -61,6 +96,7 @@
   font-weight: 600; /* жирний шрифт */
   color: #013b6e;   /* синій колір, як в нотарях */
   margin-bottom: 8px;
+  min-height: 70px; /* Додано для вирівнювання кнопки на одному рівні */
 }
 
 /* Додаткові поля для школи */
