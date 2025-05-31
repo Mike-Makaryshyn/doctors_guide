@@ -54,41 +54,73 @@ const LanguageStudyPage = () => {
     };
   }, [isModalOpen]);
 
+  const resourceLang = "de";
+
+  // Übersetzungen für die Überschriften basierend auf der ausgewählten Sprache
+  const regionalTitleMap = {
+    de: "Regionale Ressourcen",
+    en: "Regional Resources",
+    uk: "Регіональні ресурси",
+    ru: "Региональные ресурсы",
+    tr: "Bölgesel Kaynaklar",
+    ar: "الموارد الإقليمية",
+    fr: "Ressources régionales",
+    es: "Recursos regionales",
+    pl: "Zasoby regionalne",
+    el: "Περιφερειακοί πόροι",
+    ro: "Resurse regionale",
+  };
+
+  const generalTitleMap = {
+    de: "Allgemeine Ressourcen",
+    en: "General Resources",
+    uk: "Загальні ресурси",
+    ru: "Общие ресурсы",
+    tr: "Genel Kaynaklar",
+    ar: "الموارد العامة",
+    fr: "Ressources générales",
+    es: "Recursos generales",
+    pl: "Zasoby ogólne",
+    el: "Γενικοί πόροι",
+    ro: "Resurse generale",
+  };
+
+  // Bestimme die Überschriften basierend auf der global gewählten Sprache
+  const regionalTitle = regionalTitleMap[language] || regionalTitleMap["de"];
+  const generalTitle = generalTitleMap[language] || generalTitleMap["de"];
+
   // Загальні ресурси (з картинками), які відображаються завжди
   const generalResourcesBanners = [
     {
       imageUrl: vhsBanner,
       altText: "VHS Banner",
       linkUrl: "https://www.volkshochschule.de",
-      description: LANGUAGE_STUDY_INFO[language]?.general?.vhsDescription,
+      description: LANGUAGE_STUDY_INFO[resourceLang]?.general?.vhsDescription,
     },
     {
       imageUrl: bamfLogo,
       altText: "BAMF Banner",
       linkUrl: "https://www.bamf.de",
-      description: LANGUAGE_STUDY_INFO[language]?.general?.bamfDescription,
+      description: LANGUAGE_STUDY_INFO[resourceLang]?.general?.bamfDescription,
     },
     {
       imageUrl: goetheLogo,
       altText: "Goethe-Institut Banner",
       linkUrl: "https://www.goethe.de",
-      description: LANGUAGE_STUDY_INFO[language]?.general?.goetheDescription,
+      description: LANGUAGE_STUDY_INFO[resourceLang]?.general?.goetheDescription,
     },
   ];
 
   // Отримання масиву шкіл для поточного регіону
   const regionalSchools =
-    LANGUAGE_STUDY_INFO[language]?.regional?.resources?.[region] || [];
+    LANGUAGE_STUDY_INFO[resourceLang]?.regional?.resources?.[region] || [];
 
   return (
     <MainLayout>
       <div className={`${styles.container} page container mt-20`}>
         {/* Регіональні ресурси (відображаються залежно від вибраного регіону) */}
         <section>
-          <h2 className={styles.sectionTitle}>
-            {LANGUAGE_STUDY_INFO[language]?.regional?.title ||
-              "Regionale Ressourcen"}
-          </h2>
+          <h2 className={styles.sectionTitle}>{regionalTitle}</h2>
           {regionalSchools.length > 0 ? (
             <div className={styles.tilesContainer}>
               {regionalSchools.map((school, idx) => (
@@ -152,7 +184,7 @@ const LanguageStudyPage = () => {
             </div>
           ) : (
             <p className={styles.noResource}>
-              {language === "uk"
+              {resourceLang === "uk"
                 ? "Немає регіональних ресурсів."
                 : "No regional resources available."}
             </p>
@@ -161,10 +193,7 @@ const LanguageStudyPage = () => {
 
         {/* Загальні ресурси */}
         <section>
-          <h2 className={styles.sectionTitle}>
-            {LANGUAGE_STUDY_INFO[language]?.general?.title ||
-              "Allgemeine Ressourcen"}
-          </h2>
+          <h2 className={styles.sectionTitle}>{generalTitle}</h2>
           <div className={styles.tilesContainer}>
             {generalResourcesBanners.map((banner, index) => (
               <div key={index} className={styles.tile}>
@@ -209,7 +238,7 @@ const LanguageStudyPage = () => {
                 className={styles.modalCloseButton}
                 onClick={() => setIsModalOpen(false)}
               >
-                <AiOutlineClose />
+                ×
               </button>
               <h2 className={styles.modalTitle}>Region</h2>
               <select
@@ -218,7 +247,7 @@ const LanguageStudyPage = () => {
                 className={styles.modalSelect}
               >
                 {Object.keys(
-                  LANGUAGE_STUDY_INFO[language]?.regional?.resources || {}
+                  LANGUAGE_STUDY_INFO[resourceLang]?.regional?.resources || {}
                 ).map((r) => (
                   <option key={r} value={r}>
                     {r}
