@@ -1,57 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* … (попередні стилі залишаються без змін) … */
 
-/* Загальні стилі для контейнера сторінки */
-.container {
-  padding: 20px;
-  font-family: 'Poppins', sans-serif;
+/* КОЛИР ВСІХ ПОСИЛАНЬ У .tile - синій */
+.tile a {
+  color: #013b6e;
 }
 
-/* Заголовки секцій */
-.sectionTitle {
-  font-size: 30px;
-  margin: 20px 0 10px;
-  color: #ffffff;
-}
-
-.noResource {
-  font-size: 16px;
-  color: #999;
-  text-align: center;
-  margin-top: 10px;
-}
-
-/* Стилі для кнопки-лінка "Link" */
+/* Але кнопка “Link” повинна бути БІЛА, тому додаємо
+   вищезначущу специфічність чи !important */
 .linkButton {
-  display: block;                  /* Робимо кнопку блочним елементом */
-  width: 100%;                     /* Займає всю ширину плитки */
-  padding: 12px 0;                 /* Трохи більше відступів зверху/знизу */
-  font-size: 1rem;                 /* Збільшуємо шрифт для кращої читабельності */
-  font-weight: 600;                /* Трохи жирніше, щоб відрізняти від інших текстів */
-  color: #ffffff;                  /* Білий текст */
-  background-color: #013b6e;       /* Колір, як в заголовку плитки (синій) */
+  display: block;                  /* Блочна, займає всю ширину плитки */
+  width: 100%;
+  padding: 8px 0;                  /* Менші вертикальні відступи (8px замість 12px) */
+  font-size: 0.95rem;              /* Трохи менший шрифт */
+  font-weight: 600;
+  color: #ffffff !important;       /* Примусово білий текст */
+  background-color: #013b6e;       /* Синій фон */
   border: none;
-  border-radius: 8px;              /* Більш заокруглені кути кнопки */
+  border-radius: 8px;              /* Заокруглені кути */
   text-decoration: none;
   text-align: center;
   transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 
   &:hover,
   &:focus {
-    background-color: darken(#013b6e, 10%); /* Трохи темніший відтінок при ховері */
+    background-color: darken(#013b6e, 10%);
     outline: none;
     text-decoration: none;
   }
 
-  /* Мобільні (екрани до 480px): залишається 100% ширини */
+  /* Мобільні (екрани до 480px) */
   @media (max-width: 480px) {
-    padding: 14px 0;
-    font-size: 0.95rem;
+    padding: 10px 0;
+    font-size: 0.9rem;
   }
 
-  /* Планшети / маленькі десктопи (481px – 768px): відповідний розмір */
+  /* Планшети / маленькі десктопи (481px – 768px) */
   @media (max-width: 768px) and (min-width: 481px) {
-    padding: 13px 0;
-    font-size: 1rem;
+    padding: 9px 0;
+    font-size: 0.95rem;
   }
 }
 
@@ -66,7 +52,7 @@
 /* Стилізація плитки */
 .tile {
   background: #ffffff;
-  border-radius: 30px;             /* Збільшуємо заокруглення панелі */
+  border-radius: 30px;             /* Більш заокруглений бокс */
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -82,7 +68,6 @@
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   }
 
-  /* Для мобільних – плитка займає всю ширину */
   @media (max-width: 768px) {
     flex: 1 1 100%;
     max-width: 100%;
@@ -99,8 +84,8 @@
 /* Заголовок плитки (жирний, синій колір) */
 .tileHeader {
   font-size: 18px;
-  font-weight: 600;         /* жирний шрифт */
-  color: #013b6e;           /* синій колір аналогічно заголовку */
+  font-weight: 600;
+  color: #013b6e;
   margin-bottom: 8px;
 }
 
@@ -118,15 +103,15 @@
   font-size: 14px;
   color: #777;
   line-height: 1.4;
-  margin-top: auto;         /* щоб опис був внизу, якщо плитка тягнеться */
+  margin-top: auto;
 }
 
-/* Колір посилань у межах .tile (якщо є ще інші лінки) */
-.tile a {
+/* Колір посилань у межах .tile (якщо є інші посилання) */
+.tile a:not(.linkButton) {
   color: #013b6e;
 }
 
-/* Кнопка налаштувань (правий нижній кут) */
+/* Стилі для кнопки налаштувань (правий нижній кут) */
 .bottomRightSettings {
   position: fixed;
   bottom: 0px;
@@ -188,7 +173,6 @@
   position: relative;
 }
 
-/* Додатковий відступ під всіма полями tile (якщо треба) */
 .tileWebsite {
   margin-bottom: 0.5rem;
 }
