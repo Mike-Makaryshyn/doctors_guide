@@ -69,14 +69,63 @@ textarea {
 }
 
 .saveButton {
-  background-color: #3498db;
-  color: white;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
 .saveButton:hover {
-  background-color: #2980b9;
+  background-color: #66bb6a;
+  transform: scale(1.1);
+}
+.saveButton:active {
+  transform: scale(0.95);
 }
 
+/* Container that fixes the save button to the bottom‑right corner */
+.bottomRightSave {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 3000;
+}
+.editProfileContainer {
+  /* === Hintergrund: «Milch»-Bleistifte === */
+  background-color: #0f6d62; /* Fallback-Ton, ähnlich Ihrem Grün */
+  background-image:
+    url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 256 256'>\
+<g transform='translate(128 128) rotate(-45) translate(-128 -128)' stroke='%23f5f4f2' stroke-width='6' fill='none'>\
+  <rect x='8'  y='108' width='30' height='40'/>\
+  <rect x='38' y='108' width='10' height='40'/>\
+  <rect x='48' y='108' width='132' height='40'/>\
+  <polygon points='180,108 212,128 180,148'/>\
+  <polygon points='212,128 224,128 216,134'/>\
+</g>\
+</svg>"),
+    url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 256 256'>\
+<g transform='translate(128 128) rotate(25) translate(-128 -128)' stroke='%23f5f4f2' stroke-width='6' fill='none'>\
+  <rect x='8'  y='108' width='30' height='40'/>\
+  <rect x='38' y='108' width='10' height='40'/>\
+  <rect x='48' y='108' width='132' height='40'/>\
+  <polygon points='180,108 212,128 180,148'/>\
+  <polygon points='212,128 224,128 216,134'/>\
+</g>\
+</svg>");
+  background-repeat: repeat;
+  background-size: 240px 240px; /* рідше та з різними кутами *//* щільність плитки – у 3 рази рідше */
+  background-position: 0 0, 120px 120px; /* зсув другої сітки, щоб не накладались */
+}
 .cancelButton {
   background-color: #e74c3c;
   color: white;
@@ -122,4 +171,34 @@ textarea {
 /* Активна кнопка */
 .active {
   box-shadow: inset 3px 3px 5px #133933, inset -3px -3px 5px #41bfab;
+}
+
+/* === Floating save & back buttons added 2025‑05‑31 === */
+
+.backButton {
+margin-top: auto;
+    width: 35px;
+    height: 28px;
+    position: fixed;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    left: 20px;
+    bottom: 0;
+}
+.backButton:hover {
+  background-color: #4caf50;
+  transform: scale(1.1);
+}
+
+/* ==== Outline for the page heading ==== */
+.editProfileContainer h1 {
+  color: #ffffff;                 /* inner fill */
+  -webkit-text-stroke: 0,1px #013b6e; /* crisp outline in modern browsers */
+  text-shadow:                     /* fallback outline for others */
+    -1px -1px 0 #013b6e,
+     1px -1px 0 #013b6e,
+    -1px  1px 0 #013b6e,
+     1px  1px 0 #013b6e;
 }

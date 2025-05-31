@@ -64,7 +64,7 @@ const Dashboard = () => {
               <RegistrationTile data={userData} />
             </div>
           )}
-            <div>
+            <div className={styles.rightColumn}>
               <div className={styles.tile}><ProgressBar /></div>
               <div className={styles.tile}><SavedCasesWidget /></div>
               {activeStage && (
