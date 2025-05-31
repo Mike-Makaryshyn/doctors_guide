@@ -12,22 +12,115 @@ export const LANGUAGE_STUDY_INFO = {
       // Кожен ключ - це назва регіону після уніфікації (наприклад, "Baden-Württemberg", "Bayern", "Nordrhein-Westfalen" тощо)
       // Всередині - масив шкіл (об'єктів)
       resources: {
-        "Baden-Württemberg": [
-          {
-            name: "Sprachschule Aktiv Stuttgart",
-            address: "Schlossstraße 49, 70174 Stuttgart",
-            website: "sprachschule-aktiv.de/stuttgart",
-            email: "stuttgart@sprachschule-aktiv.de",
-            phone: "0711/45140520",
-          },
-          {
-            name: "Berlitz Stuttgart",
-            address: "Königstraße 40, 70173 Stuttgart",
-            website: "berlitz.de/stuttgart",
-            email: "stuttgart@berlitz.de",
-            phone: "0711 2229520",
-          },
-        ],
+      
+  "Baden-Württemberg": [
+    {
+      "name": "Berlitz Sprachschule Stuttgart",
+      "address": "Königstraße 40, 70173 Stuttgart",
+      "phone": "+49 711 2229520",
+      "email": "",
+      "website": "https://www.berlitz.com/en-de/language-centers/stuttgart"
+    },
+    {
+      "name": "FOKUS Sprachen & Seminare Stuttgart",
+      "address": "Probststraße 17, 70567 Stuttgart",
+      "phone": "+49 711 79472190",
+      "email": "info@fokusstuttgart.de",
+      "website": "https://fokussprachen.com/en/sprachschulen/stuttgart/"
+    },
+    {
+      "name": "German Institute Stuttgart",
+      "address": "Rotebühlstraße 121, 70178 Stuttgart",
+      "phone": "+49 711 21950920",
+      "email": "info@germaninstitute.de",
+      "website": "https://germaninstitute.de/en/contact/"
+    },
+    {
+      "name": "Berlitz Sprachschule Mannheim",
+      "address": "O7, 3, 68161 Mannheim",
+      "phone": "+49 621 150 560",
+      "email": "",
+      "website": "https://www.berlitz.com/en-de/language-centers/mannheim"
+    },
+    {
+      "name": "Goethe-Institut Mannheim",
+      "address": "Oskar-Meixner-Straße 6, 68163 Mannheim",
+      "phone": "+49 89 1222 31222",
+      "email": "kundenservice-d@goethe.de",
+      "website": "https://www.goethe.de/ins/de/en/ort/man.html"
+    },
+    {
+      "name": "iQ Lingua Mannheim",
+      "address": "M7, 16-18, 68161 Mannheim",
+      "phone": "+49 621 12839925",
+      "email": "",
+      "website": "https://www.iq-lingua.de/en/language-courses/mannheim/"
+    },
+    {
+      "name": "Berlitz Sprachschule Karlsruhe",
+      "address": "Kaiserstraße 10, 76131 Karlsruhe",
+      "phone": "+49 721 831 8357",
+      "email": "",
+      "website": "https://www.berlitz.com/en-de/language-centers/karlsruhe"
+    },
+    {
+      "name": "KERN AG Training Karlsruhe",
+      "address": "Karlstraße 49a, 76133 Karlsruhe",
+      "phone": "+49 721 8318357",
+      "email": "kern.karlsruhe@kerntraining.com",
+      "website": "https://www.kerntraining.com/en/language-training/language-schools/karlsruhe-language-school"
+    },
+    {
+      "name": "SprachenStudio KAST",
+      "address": "Kaiserstraße 94, 76133 Karlsruhe",
+      "phone": "+49 721 7258127",
+      "email": "info@sprachenstudiokast.de",
+      "website": "https://www.sprachenstudiokast.de/sprachkurse-mehr/sprachkurse/german-courses/"
+    },
+    {
+      "name": "Berlitz Sprachschule Freiburg",
+      "address": "Bismarckallee 7a, 79098 Freiburg",
+      "phone": "+49 761 368 890",
+      "email": "",
+      "website": "https://www.berlitz.com/en-de/language-centers/freiburg"
+    },
+    {
+      "name": "Alpadia Language Schools Freiburg",
+      "address": "Werthmannstraße 18, 79098 Freiburg",
+      "phone": "",
+      "email": "",
+      "website": "https://www.alpadia.com/en/language-courses/german/germany/freiburg"
+    },
+    {
+      "name": "Internationales Sprachzentrum Dialogo (ISD-Freiburg)",
+      "address": "Moltkestraße 1, 79098 Freiburg",
+      "phone": "+49 761 6105060",
+      "email": "",
+      "website": "https://isd-freiburg.de/en/"
+    },
+    {
+      "name": "F+U Academy of Languages Heidelberg",
+      "address": "Hauptstraße 1, 69117 Heidelberg",
+      "phone": "+49 6221 912035",
+      "email": "",
+      "website": "https://www.academy-languages.de/en/"
+    },
+    {
+      "name": "Alpha Aktiv Heidelberg",
+      "address": "Hans-Böckler-Straße 2, 69115 Heidelberg",
+      "phone": "+49 6221 7252820",
+      "email": "office@alpha-heidelberg.de",
+      "website": "https://www.alpha-heidelberg.de/en/school/contact/"
+    },
+    {
+      "name": "DAI Sprachschule Heidelberg",
+      "address": "Sofienstraße 12, 69115 Heidelberg",
+      "phone": "+49 6221 607312",
+      "email": "sprachschule@dai-heidelberg.de",
+      "website": "https://dai-heidelberg.de/en/language-school/contact-registration/"
+    },
+  ],
+
         "Bayern": [
           {
             name: "Goethe-Institut München",
