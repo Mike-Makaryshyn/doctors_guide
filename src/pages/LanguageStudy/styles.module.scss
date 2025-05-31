@@ -8,9 +8,9 @@
 
 /* Заголовки секцій */
 .sectionTitle {
-    font-size: 30px;
-    margin: 20px 0 10px;
-    color: #ffffff;
+  font-size: 30px;
+  margin: 20px 0 10px;
+  color: #ffffff;
 }
 
 .noResource {
@@ -19,41 +19,42 @@
   text-align: center;
   margin-top: 10px;
 }
+
 /* Стилі для кнопки-лінка "Link" */
 .linkButton {
-  display: inline-block;
-  padding: 8px 16px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #ffffff;
-  background-color: #007bff;
+  display: block;                  /* Робимо кнопку блочним елементом */
+  width: 100%;                     /* Займає всю ширину плитки */
+  padding: 12px 0;                 /* Трохи більше відступів зверху/знизу */
+  font-size: 1rem;                 /* Збільшуємо шрифт для кращої читабельності */
+  font-weight: 600;                /* Трохи жирніше, щоб відрізняти від інших текстів */
+  color: #ffffff;                  /* Білий текст */
+  background-color: #013b6e;       /* Колір, як в заголовку плитки (синій) */
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;              /* Більш заокруглені кути кнопки */
   text-decoration: none;
   text-align: center;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 
   &:hover,
   &:focus {
-    background-color: #0056b3; /* темніший відтінок для hover */
+    background-color: darken(#013b6e, 10%); /* Трохи темніший відтінок при ховері */
     outline: none;
     text-decoration: none;
   }
 
-  /* Мобільні (екрани до 480px): кнопка займає всю ширину плитки */
+  /* Мобільні (екрани до 480px): залишається 100% ширини */
   @media (max-width: 480px) {
-    display: block;
-    width: 100%;
-    font-size: 0.85rem;
-    padding: 10px 0;
+    padding: 14px 0;
+    font-size: 0.95rem;
   }
 
-  /* Планшети / маленькі десктопи (481px – 768px): трохи більші відступи */
+  /* Планшети / маленькі десктопи (481px – 768px): відповідний розмір */
   @media (max-width: 768px) and (min-width: 481px) {
-    font-size: 0.9rem;
-    padding: 10px 14px;
+    padding: 13px 0;
+    font-size: 1rem;
   }
 }
+
 /* Контейнер для плиток */
 .tilesContainer {
   display: flex;
@@ -65,7 +66,7 @@
 /* Стилізація плитки */
 .tile {
   background: #ffffff;
-  border-radius: 20px;
+  border-radius: 30px;             /* Збільшуємо заокруглення панелі */
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -75,11 +76,17 @@
   flex-direction: column;
   min-width: 220px;
   max-width: calc(25% - 20px);
-}
 
-.tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Для мобільних – плитка займає всю ширину */
+  @media (max-width: 768px) {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 
 .tileImage {
@@ -92,8 +99,8 @@
 /* Заголовок плитки (жирний, синій колір) */
 .tileHeader {
   font-size: 18px;
-  font-weight: 600; /* жирний шрифт */
-  color: #013b6e;   /* синій колір, як в нотарях */
+  font-weight: 600;         /* жирний шрифт */
+  color: #013b6e;           /* синій колір аналогічно заголовку */
   margin-bottom: 8px;
 }
 
@@ -111,7 +118,12 @@
   font-size: 14px;
   color: #777;
   line-height: 1.4;
-  margin-top: auto; /* щоб опис був внизу, якщо плитка тягнеться */
+  margin-top: auto;         /* щоб опис був внизу, якщо плитка тягнеться */
+}
+
+/* Колір посилань у межах .tile (якщо є ще інші лінки) */
+.tile a {
+  color: #013b6e;
 }
 
 /* Кнопка налаштувань (правий нижній кут) */
@@ -137,74 +149,69 @@
 }
 
 .settingsButton:hover {
-  background-color: #4caf50;
+  background-color: #43a047;
   transform: scale(1.1);
 }
 
 /* Контейнер модального вікна для десктопу */
 .popupContainerDesktop {
-    font-family: Poppins, sans-serif;
-    background: #fff;
-    padding: 25px 20px 20px;
-    width: 260px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    position: fixed;
-    bottom: 45px;
-    right: 45px;
-    text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 260px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 45px;
+  right: 45px;
+  text-align: center;
 }
 
 /* Контейнер модального вікна для мобільних */
 .popupContainerMobile {
-    font-family: Poppins, sans-serif;
-    background: #fff;
-    padding: 25px 20px 20px;
-    width: 100%;
-    border-radius: 12px 12px 0 0;
-    box-shadow: 0 -4px 12px #0003;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 2502;
-    text-align: center;
-    animation: _popupBounce_chby0_1 .6s ease-out;
-  }
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 12px #0003;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2502;
+  text-align: center;
+  animation: _popupBounce_chby0_1 .6s ease-out;
+}
 
 /* Стилізація самої модалки */
 .modal {
   position: relative;
 }
+
+/* Додатковий відступ під всіма полями tile (якщо треба) */
 .tileWebsite {
-  color: #013b6e; 
-  /* або інший колір, який контрастує з фоном */
- 
-  margin-bottom: 0.1rem; // Якщо треба відступ
+  margin-bottom: 0.5rem;
 }
 
-/* Можна також задати стилі для всіх посилань у межах .tile */
-.tile a {
-  color: #013b6e;
-
-}
 /* Кнопка закриття модалки */
 .modalCloseButton {
-    position: absolute;
-    top: -42px;
-    right: -32px;
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #ed0a0a;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-    padding: 5px;
-    border-radius: 50%;
-  }
-  .modalCloseButton:hover {
-    background-color: rgba(237, 10, 10, 0);
-    transform: scale(0.9);
-  }
+  position: absolute;
+  top: -42px;
+  right: -32px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ed0a0a;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.modalCloseButton:hover {
+  background-color: rgba(237, 10, 10, 0.1);
+  transform: scale(0.9);
+}
 
 /* Заголовок модального вікна */
 .modalTitle {
