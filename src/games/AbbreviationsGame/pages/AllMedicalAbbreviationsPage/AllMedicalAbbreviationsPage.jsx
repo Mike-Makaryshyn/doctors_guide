@@ -1,3 +1,5 @@
+// Цей файл вже адаптований для роботи з Supabase, ніякі зміни не потрібні.
+// Цей код тепер використовує Supabase.
 import React, { useState, useEffect, useRef } from "react";
 import MainLayout from "../../../../layouts/MainLayout/MainLayout";
 import { medicalAbbreviations } from "../../../../constants/medicalAbbreviations";
