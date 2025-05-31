@@ -1,10 +1,7 @@
-// doctors_guide/src/pages/SimulationPage/AddSimulationEntryPage.jsx
 import React, { useState, useEffect } from "react";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth, db } from "../../firebase";
-import { doc, getDoc, updateDoc, arrayUnion } from "firebase/firestore";
+import { supabase } from "../../supabaseClient";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 import { FaSave, FaArrowLeft } from "react-icons/fa";
@@ -51,7 +48,8 @@ const languageOptions = [
 ];
 
 const AddSimulationEntryPage = () => {
-  const [user] = useAuthState(auth);
+  // Supabase current user
+  const [user, setUser] = useState(null);
   const navigate = useNavigate();
   const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
   // Початкові значення форми
@@ -67,7 +65,6 @@ const AddSimulationEntryPage = () => {
     preferredContact: "phone", // phone, Telegram, WhatsApp, SMS, Email, Skype
     email: "", // автоматично заповнюється з профілю
   });
-  const [userData, setUserData] = useState(null);
   const [alreadySubmitted, setAlreadySubmitted] = useState(false);
 
   // Встановлюємо Eintragsdatum на поточну дату при завантаженні
@@ -76,30 +73,33 @@ const AddSimulationEntryPage = () => {
     setFormData((prev) => ({ ...prev, addedDate: today }));
   }, []);
 
-  // Завантаження даних користувача з профілю
+  // keep user in sync with Supabase auth
   useEffect(() => {
-    const fetchUserData = async () => {
-      if (!user) return;
-      try {
-        const userDocRef = doc(db, "users", user.uid, "userData", "data");
-        const docSnap = await getDoc(userDocRef);
-        if (docSnap.exists()) {
-          const data = docSnap.data();
-          setUserData(data);
-          setFormData((prev) => ({
-            ...prev,
-            firstName: data.firstName || "",
-            lastName: data.lastName || "",
-            country: data.country || "",
-            email: data.email || "", // E-Mail заповнюється автоматично
-          }));
-        }
-      } catch (error) {
-        console.error("Fehler beim Laden der Benutzerdaten:", error);
-        toast.error("Fehler beim Laden der Benutzerdaten.");
-      }
+    const getSession = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      setUser(session?.user || null);
     };
-    fetchUserData();
+    getSession();
+
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user || null);
+    });
+
+    return () => listener?.subscription?.unsubscribe();
+  }, []);
+
+  // Завантаження даних користувача з user_metadata
+  useEffect(() => {
+    if (!user) return;
+
+    const md = user.user_metadata || {};
+    setFormData((prev) => ({
+      ...prev,
+      firstName: md.first_name || "",
+      lastName: md.last_name || "",
+      country: md.country || "",
+      email: user.email || "",
+    }));
   }, [user]);
 
   // Перевірка, чи вже був доданий кейс для цього користувача
@@ -107,14 +107,17 @@ const AddSimulationEntryPage = () => {
     const checkSubmission = async () => {
       if (!user) return;
       try {
-        const simulationDocRef = doc(db, "simulation", formData.region);
-        const docSnap = await getDoc(simulationDocRef);
-        if (docSnap.exists()) {
-          const data = docSnap.data();
-          const arrayCases = data.arrayCases || [];
-          const already = arrayCases.some((entry) => entry.uid === user.uid);
-          setAlreadySubmitted(already);
-        }
+        const { data, error } = await supabase
+          .from("simulation")
+          .select("arraycases")
+          .eq("region", formData.region)
+          .maybeSingle();
+
+        // if (error && error.code !== "PGRST116") throw error;
+
+        const arrayCases = (data && data.arraycases) || [];
+        const already = arrayCases.some((entry) => entry.uid === user?.id);
+        setAlreadySubmitted(already);
       } catch (error) {
         console.error("Error checking submission:", error);
       }
@@ -140,16 +143,44 @@ const AddSimulationEntryPage = () => {
       return;
     }
     try {
-      const simulationDocRef = doc(db, "simulation", formData.region);
-      const newEntry = { uid: user.uid, createdAt: new Date() };
+      // fetch existing arrayCases (if any) for this region
+      const { data, error } = await supabase
+        .from("simulation")
+        .select("arraycases")
+        .eq("region", formData.region)
+        .maybeSingle();
+
+      // if (error && error.code !== "PGRST116") throw error; // ignore “row not found”
+
+      const arrayCases = (data && data.arraycases) || [];
+
+      const newEntry = { uid: user.id, createdAt: new Date().toISOString() };
+      const camelToSnake = (s) =>
+        s.replace(/[A-Z]/g, (m) => "_" + m.toLowerCase());
+
       Object.entries(formData).forEach(([key, value]) => {
         if (value && value.toString().trim() !== "") {
-          newEntry[key] = value;
+          newEntry[camelToSnake(key)] = value;
         }
       });
-      await updateDoc(simulationDocRef, {
-        arrayCases: arrayUnion(newEntry),
-      });
+
+      const updatedArray = [...arrayCases, newEntry];
+
+      if (data) {
+        // update existing row
+        const { error: updateErr } = await supabase
+          .from("simulation")
+          .update({ arraycases: updatedArray })
+          .eq("region", formData.region);
+        if (updateErr) throw updateErr;
+      } else {
+        // create new row
+        const { error: insertErr } = await supabase
+          .from("simulation")
+          .insert({ region: formData.region, arraycases: updatedArray });
+        if (insertErr) throw insertErr;
+      }
+
       toast.success("Ihr Fall wurde hinzugefügt!");
       navigate("/simulation");
     } catch (error) {

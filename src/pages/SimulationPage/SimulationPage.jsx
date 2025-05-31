@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth, db } from "../../firebase";
-import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { supabase } from "../../supabaseClient";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 import { FaCog, FaArrowLeft, FaUserPlus, FaTrash } from "react-icons/fa";
@@ -51,10 +49,32 @@ const languageOptions = [
 
 const SimulationPage = () => {
   const navigate = useNavigate();
-  const [user] = useAuthState(auth);
+  // Supabase current user
+  const [user, setUser] = useState(null);
+
+  // keep user in sync with Supabase auth
+  useEffect(() => {
+    const getSession = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      setUser(session?.user || null);
+    };
+    getSession();
+
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user || null);
+    });
+
+    return () => listener?.subscription?.unsubscribe();
+  }, []);
   const { selectedRegion: globalRegion } = useGetGlobalInfo();
 
   const [region, setRegion] = useState(globalRegion || "Bayern");
+  // Synchronisiere lokalen Region-State, falls selectedRegion erst später aus dem Kontext kommt
+  useEffect(() => {
+    if (globalRegion) {
+      setRegion(globalRegion);
+    }
+  }, [globalRegion]);
   const [simulationCases, setSimulationCases] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const modalRef = useRef(null);
@@ -62,17 +82,18 @@ const SimulationPage = () => {
   // Стан для фільтрації за мовою – фільтрація реалізована лише в модальному вікні
   const [languageFilter, setLanguageFilter] = useState("");
 
-  // Функція завантаження оголошень із Firestore
+  // Функція завантаження оголошень із Supabase
   const fetchSimulationCases = async () => {
     try {
-      const docRef = doc(db, "simulation", region);
-      const docSnap = await getDoc(docRef);
-      if (docSnap.exists()) {
-        const data = docSnap.data();
-        setSimulationCases(data.arrayCases || []);
-      } else {
-        setSimulationCases([]);
-      }
+      const { data, error } = await supabase
+        .from("simulation")
+        .select("arraycases")
+        .eq("region", region)
+        .maybeSingle();
+
+      if (error) throw error;
+
+      setSimulationCases((data && data.arraycases) || []);
     } catch (error) {
       console.error("Error fetching simulation cases: ", error);
       toast.error("Fehler beim Laden der Anzeigen.");
@@ -106,7 +127,7 @@ const SimulationPage = () => {
     setRegion(e.target.value);
   };
 
-  // Видалення оголошення з підтвердженням
+  // Видалення оголошення з підтвердженням (Supabase)
   const handleDeleteCase = async () => {
     if (!user) {
       toast.error("Bitte melden Sie sich an, um Ihre Anzeige zu löschen.");
@@ -117,22 +138,32 @@ const SimulationPage = () => {
     );
     if (!confirmed) return;
     try {
-      const docRef = doc(db, "simulation", region);
-      const docSnap = await getDoc(docRef);
-      if (!docSnap.exists()) {
-        toast.info("Keine Einträge in dieser Region.");
-        return;
-      }
-      const data = docSnap.data();
-      const arrayCases = data.arrayCases || [];
-      const filtered = arrayCases.filter((item) => item.uid !== user.uid);
+      // fetch current arraycases for this region
+      const { data, error } = await supabase
+        .from("simulation")
+        .select("arraycases")
+        .eq("region", region)
+        .maybeSingle();
+
+      if (error) throw error;
+
+      const arrayCases = (data && data.arraycases) || [];
+      const filtered = arrayCases.filter((item) => item.uid !== user.id);
+
       if (filtered.length === arrayCases.length) {
         toast.info(
           "Sie haben noch keine Anzeige aufgegeben oder sie wurde bereits gelöscht."
         );
         return;
       }
-      await updateDoc(docRef, { arrayCases: filtered });
+
+      const { error: updateError } = await supabase
+        .from("simulation")
+        .update({ arraycases: filtered })
+        .eq("region", region);
+
+      if (updateError) throw updateError;
+
       toast.success("Ihre Anzeige wurde erfolgreich gelöscht!");
       fetchSimulationCases();
     } catch (error) {
@@ -166,50 +197,63 @@ const SimulationPage = () => {
             {filteredCases.length === 0 ? (
               <p style={{ color: "#013b6e" }}>Keine Einträge</p>
             ) : (
-              filteredCases.map((item, index) => (
-                <div key={index} className={styles.tile}>
-                  <h3 className={styles.tileHeader}>
-                    {item.firstName} {item.lastName}
-                  </h3>
-                  {item.email && (
-                    <p className={styles.tileItem}>
-                      <strong>E-Mail:</strong>{" "}
-                      <a href={`mailto:${item.email}`} className={styles.link}>
-                        {item.email}
-                      </a>
-                    </p>
-                  )}
-                  {item.phone && (
-                    <p className={styles.tileItem}>
-                      <strong>Telefon:</strong>{" "}
-                      <a href={`tel:${item.phone}`} className={styles.link}>
-                        {item.phone}
-                      </a>
-                    </p>
-                  )}
-                  {item.preferredContact && (
-                    <p className={styles.tileItem}>
-                      <strong>Kontakt:</strong> {item.preferredContact}
-                    </p>
-                  )}
-                  {item.language && (
-                    <p className={styles.tileItem}>
-                      <strong>Sprache:</strong>{" "}
-                      {getLanguageLabel(item.language)}
-                    </p>
-                  )}
-                  {item.pruefungsdatum && (
-                    <p className={styles.tileItem}>
-                      <strong>Prüfungsdatum:</strong> {item.pruefungsdatum}
-                    </p>
-                  )}
-                  {item.addedDate && (
-                    <p className={styles.tileItem}>
-                      <strong>Eintragsdatum:</strong> {item.addedDate}
-                    </p>
-                  )}
-                </div>
-              ))
+              filteredCases.map((item, index) => {
+                // Support both camelCase (old entries) and snake_case (new entries)
+                const firstName = item.firstName ?? item.first_name ?? "";
+                const lastName = item.lastName ?? item.last_name ?? "";
+                const preferredContact = item.preferredContact ?? item.preferred_contact;
+                const addedDate = item.addedDate ?? item.added_date;
+
+                return (
+                  <div key={index} className={styles.tile}>
+                    <h3 className={styles.tileHeader}>
+                      {firstName} {lastName}
+                    </h3>
+
+                    {item.email && (
+                      <p className={styles.tileItem}>
+                        <strong>E-Mail:</strong>{" "}
+                        <a href={`mailto:${item.email}`} className={styles.link}>
+                          {item.email}
+                        </a>
+                      </p>
+                    )}
+
+                    {item.phone && (
+                      <p className={styles.tileItem}>
+                        <strong>Telefon:</strong>{" "}
+                        <a href={`tel:${item.phone}`} className={styles.link}>
+                          {item.phone}
+                        </a>
+                      </p>
+                    )}
+
+                    {preferredContact && (
+                      <p className={styles.tileItem}>
+                        <strong>Kontakt:</strong> {preferredContact}
+                      </p>
+                    )}
+
+                    {item.language && (
+                      <p className={styles.tileItem}>
+                        <strong>Sprache:</strong> {getLanguageLabel(item.language)}
+                      </p>
+                    )}
+
+                    {item.pruefungsdatum && (
+                      <p className={styles.tileItem}>
+                        <strong>Prüfungsdatum:</strong> {item.pruefungsdatum}
+                      </p>
+                    )}
+
+                    {addedDate && (
+                      <p className={styles.tileItem}>
+                        <strong>Eintragsdatum:</strong> {addedDate}
+                      </p>
+                    )}
+                  </div>
+                );
+              })
             )}
           </div>
 
