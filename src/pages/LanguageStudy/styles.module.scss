@@ -1,10 +1,32 @@
-/* … (попередні стилі залишаються без змін) … */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* КОЛИР ВСІХ ПОСИЛАНЬ У .tile - синій */
-.tile a {
-  color: #013b6e;
+/* Загальні стилі для контейнера сторінки */
+.container {
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
+/* Заголовки секцій */
+.sectionTitle {
+    font-size: 30px;
+    margin: 20px 0 10px;
+    color: #ffffff;
+}
+
+.noResource {
+  font-size: 16px;
+  color: #999;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Контейнер для плиток */
+.tilesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
 /* Але кнопка “Link” повинна бути БІЛА, тому додаємо
    вищезначущу специфічність чи !important */
 .linkButton {
@@ -41,18 +63,10 @@
   }
 }
 
-/* Контейнер для плиток */
-.tilesContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: flex-start;
-}
-
 /* Стилізація плитки */
 .tile {
   background: #ffffff;
-  border-radius: 30px;             /* Більш заокруглений бокс */
+  border-radius: 20px;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -62,16 +76,11 @@
   flex-direction: column;
   min-width: 220px;
   max-width: calc(25% - 20px);
+}
 
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-  }
-
-  @media (max-width: 768px) {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .tileImage {
@@ -84,8 +93,8 @@
 /* Заголовок плитки (жирний, синій колір) */
 .tileHeader {
   font-size: 18px;
-  font-weight: 600;
-  color: #013b6e;
+  font-weight: 600; /* жирний шрифт */
+  color: #013b6e;   /* синій колір, як в нотарях */
   margin-bottom: 8px;
 }
 
@@ -103,15 +112,10 @@
   font-size: 14px;
   color: #777;
   line-height: 1.4;
-  margin-top: auto;
+  margin-top: auto; /* щоб опис був внизу, якщо плитка тягнеться */
 }
 
-/* Колір посилань у межах .tile (якщо є інші посилання) */
-.tile a:not(.linkButton) {
-  color: #013b6e;
-}
-
-/* Стилі для кнопки налаштувань (правий нижній кут) */
+/* Кнопка налаштувань (правий нижній кут) */
 .bottomRightSettings {
   position: fixed;
   bottom: 0px;
@@ -134,68 +138,74 @@
 }
 
 .settingsButton:hover {
-  background-color: #43a047;
+  background-color: #4caf50;
   transform: scale(1.1);
 }
 
 /* Контейнер модального вікна для десктопу */
 .popupContainerDesktop {
-  font-family: 'Poppins', sans-serif;
-  background: #fff;
-  padding: 25px 20px 20px;
-  width: 260px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  position: fixed;
-  bottom: 45px;
-  right: 45px;
-  text-align: center;
+    font-family: Poppins, sans-serif;
+    background: #fff;
+    padding: 25px 20px 20px;
+    width: 260px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 45px;
+    right: 45px;
+    text-align: center;
 }
 
 /* Контейнер модального вікна для мобільних */
 .popupContainerMobile {
-  font-family: 'Poppins', sans-serif;
-  background: #fff;
-  padding: 25px 20px 20px;
-  width: 100%;
-  border-radius: 12px 12px 0 0;
-  box-shadow: 0 -4px 12px #0003;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 2502;
-  text-align: center;
-  animation: _popupBounce_chby0_1 .6s ease-out;
-}
+    font-family: Poppins, sans-serif;
+    background: #fff;
+    padding: 25px 20px 20px;
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -4px 12px #0003;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2502;
+    text-align: center;
+    animation: _popupBounce_chby0_1 .6s ease-out;
+  }
 
 /* Стилізація самої модалки */
 .modal {
   position: relative;
 }
-
 .tileWebsite {
-  margin-bottom: 0.5rem;
+  color: #013b6e; 
+  /* або інший колір, який контрастує з фоном */
+ 
+  margin-bottom: 0.1rem; // Якщо треба відступ
 }
 
+/* Можна також задати стилі для всіх посилань у межах .tile */
+.tile a {
+  color: #013b6e;
+
+}
 /* Кнопка закриття модалки */
 .modalCloseButton {
-  position: absolute;
-  top: -42px;
-  right: -32px;
-  background-color: transparent;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #ed0a0a;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-  padding: 5px;
-  border-radius: 50%;
-}
-
-.modalCloseButton:hover {
-  background-color: rgba(237, 10, 10, 0.1);
-  transform: scale(0.9);
-}
+    position: absolute;
+    top: -42px;
+    right: -32px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ed0a0a;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    padding: 5px;
+    border-radius: 50%;
+  }
+  .modalCloseButton:hover {
+    background-color: rgba(237, 10, 10, 0);
+    transform: scale(0.9);
+  }
 
 /* Заголовок модального вікна */
 .modalTitle {
