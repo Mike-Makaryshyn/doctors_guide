@@ -214,10 +214,11 @@
   color: #023c6f;
   text-decoration: none;
   padding: 6px 8px;
-  display: block;
+  display: flex;                  /* enable flex layout */
+  align-items: center;            /* vertically center text and icons */
+  justify-content: space-between; /* push the last child (icon/badge) to the right */
   transition: background-color 0.3s ease;
   font-family: 'Papin', sans-serif;
-  text-align: left;
 }
 
 .menuLink:hover {
@@ -229,6 +230,36 @@
   background-color: rgba(2, 59, 110, 0.2);
   font-weight: bold;
   border-radius: 8px; /* нове заокруглення */
+}
+.joystickIcon {
+  /* remove margin-left to allow flex positioning */
+  vertical-align: middle;
+  font-size: 16px;
+  /* Initial color; will be overridden by animation */
+  color: #ff0000;
+  /* Combine size pulse and color-shift animations */
+  animation: joystickPulse 1.5s infinite ease-in-out,
+             joystickColorShift 4s infinite ease-in-out;
+  margin-left: 8px; /* small gap between text and icon */
+}
+
+@keyframes joystickColorShift {
+  0% { color: #023c6f; }   /* dark blue */
+  25% { color: #03528c; }  /* medium blue */
+  50% { color: #0472aa; }  /* lighter blue */
+  75% { color: #0591c8; }  /* even lighter blue */
+  100% { color: #023c6f; } /* back to dark blue */
+}
+
+.betaBadge {
+  margin-left: 8px; /* gap between icon and badge */
+  background-color: #f0c419;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 4px;
+  border-radius: 4px;
+  vertical-align: middle;
 }
 
 .authBlock {

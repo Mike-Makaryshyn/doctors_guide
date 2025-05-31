@@ -7,6 +7,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo"; // новий імпорт для регіону
 import { useAuth } from "../../contexts/AuthContext";
 import SubscribeButton from "../../components/SubscribeButton";
+import { IoGameController } from "react-icons/io5";
 
 function SideMenu({ language, isOpen, onClose, direction }) {
   const [openSections, setOpenSections] = useState({});
@@ -188,7 +189,17 @@ const regionText = regionSelection[language] || "Choose Region";
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          {item[language]}
+                          <>
+                            {item[language]}
+                            {(item.link === "/terminology-learning" ||
+                              item.link === "/abbreviations-learning" ||
+                              item.link === "/medications-learning") && (
+                              <IoGameController className={styles.joystickIcon} />
+                            )}
+                            {item.isBeta && (
+                              <span className={styles.betaBadge}>Beta</span>
+                            )}
+                          </>
                         </a>
                       ) : (
                         <Link
@@ -197,7 +208,17 @@ const regionText = regionSelection[language] || "Choose Region";
                           className={classes}
                           onClick={onClose}
                         >
-                          {item[language]}
+                          <>
+                            {item[language]}
+                            {(item.link === "/terminology-learning" ||
+                              item.link === "/abbreviations-learning" ||
+                              item.link === "/medications-learning") && (
+                              <IoGameController className={styles.joystickIcon} />
+                            )}
+                            {item.isBeta && (
+                              <span className={styles.betaBadge}>Beta</span>
+                            )}
+                          </>
                         </Link>
                       );
                     })}
