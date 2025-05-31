@@ -192,7 +192,7 @@
 /* Покращення стилю select */
 #pdfLangSelect {
   padding: 8px;
-  border-radius: 6px;
+  border-radius: 10px;
   border: 1px solid #ccc;
   font-size: 1rem;
   color: #ff0000;
@@ -200,8 +200,8 @@
 }
 .closeButton {
     position: absolute;
-    top: -29px;
-    right: -29px;
+       top: -35px;
+    right: -30px;
     background: none;
     border: none;
     font-size: 1.5rem;
