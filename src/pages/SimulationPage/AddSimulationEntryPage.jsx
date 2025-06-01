@@ -200,12 +200,19 @@ const AddSimulationEntryPage = () => {
       toast.success(t.addedSuccess);
 
       // ───────────── Частина 2: Викликаємо нову Edge Function ─────────────
+      console.log("Перед викликом simulationEmail:", {
+        email: formData.email,
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        region: formData.region,
+      });
       try {
         const fnResponse = await simulationEmail(
           formData.email,
           formData.firstName,
           formData.lastName,
-          formData.region
+          formData.region,
+          updatedArray 
         );
         console.log("Simulation-email response:", fnResponse);
       } catch (errEmail) {

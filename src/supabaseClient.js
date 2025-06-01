@@ -87,12 +87,13 @@ export async function sendSimulationConfirmation(email, firstName, lastName, reg
  * @param {string} region
  */
 export async function simulationEmail(email, firstName, lastName, region) {
+  console.log("[simulationEmail] payload minimal:", JSON.stringify({ email, firstName, lastName, region }));
   const { data, error } = await supabase.functions.invoke(
     "simulation-email",
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, firstName, lastName, region }),
+      body: JSON.stringify({ email, firstName, lastName, region }),  // лишні поля не передаємо
     }
   );
   if (error) throw error;
