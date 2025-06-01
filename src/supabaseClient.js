@@ -85,17 +85,20 @@ export async function sendSimulationConfirmation(email, firstName, lastName, reg
  * @param {string} firstName
  * @param {string} lastName
  * @param {string} region
+ * @param {Array} arraycases   // передаємо масив, якщо він є
  */
-export async function simulationEmail(email, firstName, lastName, region) {
-  console.log("[simulationEmail] payload minimal:", JSON.stringify({ email, firstName, lastName, region }));
+export async function simulationEmail(email, firstName, lastName, region, arraycases) {
+  // Для діагностики: виводимо те, що відправляємо
+  console.log("[simulationEmail] payload:", JSON.stringify({ email, firstName, lastName, region, arraycases }));
+
   const { data, error } = await supabase.functions.invoke(
     "simulation-email",
     {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, firstName, lastName, region }),  // лишні поля не передаємо
+      body: JSON.stringify({ email, firstName, lastName, region, arraycases }),
     }
   );
+
   if (error) throw error;
   return data;
 }
