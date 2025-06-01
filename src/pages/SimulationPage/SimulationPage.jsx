@@ -219,7 +219,11 @@ const SimulationPage = () => {
           {/* Список плиток */}
           <div className={styles.tilesContainer}>
             {filteredCases.length === 0 ? (
-              <p style={{ color: "#013b6e" }}>Keine Einträge</p>
+              <div className={styles.noEntriesOverlay}>
+                <div className={styles.noEntriesMessage}>
+                  <p>Keine Einträge</p>
+                </div>
+              </div>
             ) : (
               filteredCases.map((item, index) => {
                 // Support both camelCase (old entries) and snake_case (new entries)
@@ -360,13 +364,7 @@ const SimulationPage = () => {
 
         {/* Кнопка Back */}
         <div className={styles.main_menu_back}>
-          <button
-            onClick={() => navigate("/main_menu")}
-            className={styles.backButton}
-            aria-label="Zurück"
-          >
-            &#8592;
-          </button>
+   
         </div>
       </ProtectedRoute>
     </MainLayout>
