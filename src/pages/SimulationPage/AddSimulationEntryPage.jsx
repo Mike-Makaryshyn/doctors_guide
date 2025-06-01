@@ -1,15 +1,18 @@
+// ───────────────────────────────────────────────────────────────────────────────
+// /src/pages/AddSimulationEntryPage.jsx
+// ───────────────────────────────────────────────────────────────────────────────
+
 import React, { useState, useEffect } from "react";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
-import { supabase } from "../../supabaseClient";
+import { supabase } from "../../supabaseClient";      //  <-- 1. Переконайтеся, що це точно той файл, де правильно прописано URL/KEY
 import { toast } from "react-toastify";
-import { Link, useNavigate } from "react-router-dom";
-import { FaSave, FaArrowLeft } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { FaSave } from "react-icons/fa";
 import styles from "./AddSimulationEntryPage.module.scss";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { languages, DEFAULT_LANGUAGE } from "../../constants/translation/SimulationPage";
 
-// Список регіонів
 const regions = [
   "Baden-Württemberg-Karlsruhe",
   "Baden-Württemberg-Reutlingen",
@@ -33,7 +36,6 @@ const regions = [
   "Westfalen-Lippe",
 ];
 
-// Мова – ключі та показники
 const languageOptions = [
   { value: "de", label: "Deutsch" },
   { value: "en", label: "English" },
@@ -49,60 +51,60 @@ const languageOptions = [
 ];
 
 const AddSimulationEntryPage = () => {
-  // Supabase current user
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
   const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
   const t = languages[selectedLanguage] || languages[DEFAULT_LANGUAGE];
-  // Початкові значення форми
+
   const [formData, setFormData] = useState({
     region: selectedRegion || "Bayern",
     firstName: "",
     lastName: "",
     country: "",
-    pruefungsdatum: "", // Prüfungsdatum
-    addedDate: "",      // Eintragsdatum (буде встановлено автоматично)
+    pruefungsdatum: "",
+    addedDate: "",
     language: selectedLanguage || "de",
     phone: "",
-    preferredContact: "phone", // phone, Telegram, WhatsApp, SMS, Email, Skype
-    email: "", // автоматично заповнюється з профілю
+    preferredContact: "phone",
+    email: "",
   });
 
-  // Halte region im Formular synchron, falls selectedRegion später geladen wird
+  const [alreadySubmitted, setAlreadySubmitted] = useState(false);
+
+  // 1) Коли зміниться selectedRegion із глобального стейту → оновлюємо
   useEffect(() => {
     if (selectedRegion) {
       setFormData((prev) => ({ ...prev, region: selectedRegion }));
     }
   }, [selectedRegion]);
 
-  const [alreadySubmitted, setAlreadySubmitted] = useState(false);
-
-  // Встановлюємо Eintragsdatum на поточну дату при завантаженні
+  // 2) Встановлюємо сьогоднішню дату в addedDate
   useEffect(() => {
     const today = new Date().toISOString().split("T")[0];
     setFormData((prev) => ({ ...prev, addedDate: today }));
   }, []);
 
-  // keep user in sync with Supabase auth
+  // 3) Підтягуємо інформацію користувача з Supabase Auth
   useEffect(() => {
     const getSession = async () => {
-      const { data: { session } } = await supabase.auth.getSession();
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
       setUser(session?.user || null);
     };
     getSession();
 
+    // Слухаємо зміни авторизації
     const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
       setUser(session?.user || null);
     });
-
     return () => listener?.subscription?.unsubscribe();
   }, []);
 
-  // Завантаження даних користувача з user_metadata
+  // 4) Як тільки user підвантажився, оновлюємо formData із user_metadata
   useEffect(() => {
     if (!user) return;
-
-    const md = user.user_metadata || {};
+    const md = (user as any).user_metadata || {};
     setFormData((prev) => ({
       ...prev,
       firstName: md.first_name || "",
@@ -112,7 +114,7 @@ const AddSimulationEntryPage = () => {
     }));
   }, [user]);
 
-  // Перевірка, чи вже був доданий кейс для цього користувача
+  // 5) Перевірка, чи user вже подався у поточному регіоні (щоб заборонити дубль)
   useEffect(() => {
     const checkSubmission = async () => {
       if (!user) return;
@@ -123,10 +125,13 @@ const AddSimulationEntryPage = () => {
           .eq("region", formData.region)
           .maybeSingle();
 
-        // if (error && error.code !== "PGRST116") throw error;
+        if (error) {
+          console.error("Error checking submission:", error);
+          return;
+        }
 
         const arrayCases = (data && data.arraycases) || [];
-        const already = arrayCases.some((entry) => entry.uid === user?.id);
+        const already = arrayCases.some((entry) => entry.uid === user.id);
         setAlreadySubmitted(already);
       } catch (error) {
         console.error("Error checking submission:", error);
@@ -135,15 +140,16 @@ const AddSimulationEntryPage = () => {
     checkSubmission();
   }, [user, formData.region]);
 
-  // Обробка зміни полів форми
+  // 6) Обробник полів форми
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Сабміт форми – додавання нового кейсу
+  // 7) Надсилання форми
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!user) {
       toast.error(t.pleaseLogin);
       return;
@@ -152,21 +158,24 @@ const AddSimulationEntryPage = () => {
       toast.info(t.alreadyAdded);
       return;
     }
+
     try {
-      // fetch existing arrayCases (if any) for this region
+      // ───────────── Частина 1: Додаємо/оновлюємо запис у таблиці "simulation" ─────────────
       const { data, error } = await supabase
         .from("simulation")
         .select("arraycases")
         .eq("region", formData.region)
         .maybeSingle();
 
-      // if (error && error.code !== "PGRST116") throw error; // ignore “row not found”
+      if (error) {
+        throw error;
+      }
 
       const arrayCases = (data && data.arraycases) || [];
 
+      // Формуємо новий об’єкт entry
       const newEntry = { uid: user.id, createdAt: new Date().toISOString() };
-      const camelToSnake = (s) =>
-        s.replace(/[A-Z]/g, (m) => "_" + m.toLowerCase());
+      const camelToSnake = (s) => s.replace(/[A-Z]/g, (m) => "_" + m.toLowerCase());
 
       Object.entries(formData).forEach(([key, value]) => {
         if (value && value.toString().trim() !== "") {
@@ -177,14 +186,15 @@ const AddSimulationEntryPage = () => {
       const updatedArray = [...arrayCases, newEntry];
 
       if (data) {
-        // update existing row
+        // якщо запис на такій регіон вже є → UPDATE
         const { error: updateErr } = await supabase
           .from("simulation")
           .update({ arraycases: updatedArray })
           .eq("region", formData.region);
+
         if (updateErr) throw updateErr;
       } else {
-        // create new row
+        // інакше – INSERT
         const { error: insertErr } = await supabase
           .from("simulation")
           .insert({ region: formData.region, arraycases: updatedArray });
@@ -192,6 +202,35 @@ const AddSimulationEntryPage = () => {
       }
 
       toast.success(t.addedSuccess);
+
+      // ───────────── Частина 2: Викликаємо Edge Function ─────────────
+      try {
+        const { data: fnData, error: fnError } = await supabase.functions.invoke(
+          "send-simulation-confirmation",
+          {
+            method: "POST",
+            body: JSON.stringify({
+              email: formData.email,
+              firstName: formData.firstName,
+              lastName: formData.lastName,
+              region: formData.region,
+            }),
+          }
+        );
+
+        // Якщо fnError не null → вийшла помилка Edge Function
+        if (fnError) {
+          console.error("Edge Function Error:", fnError);
+          // За бажанням, ще можна показати toast:
+          // toast.error("Не вдалося надіслати підтвердження на Email");
+        } else {
+          console.log("Email confirmation response:", fnData);
+        }
+      } catch (errEmail) {
+        console.error("Network error при виклику Edge Function:", errEmail);
+      }
+
+      // ───────────── Частина 3: Редіректимо назад на список ─────────────
       navigate("/simulation");
     } catch (error) {
       console.error("Fehler beim Hinzufügen des Falls:", error);
@@ -205,6 +244,7 @@ const AddSimulationEntryPage = () => {
         <div className={styles.container}>
           <h2>{t.heading}</h2>
           <form onSubmit={handleSubmit} className={styles.form}>
+            {/* ───────── Регiон ───────── */}
             <div className={styles.entryRow}>
               <label>{t.examLocation}:</label>
               <select
@@ -222,6 +262,8 @@ const AddSimulationEntryPage = () => {
                 ))}
               </select>
             </div>
+
+            {/* ───────── Ім’я ───────── */}
             <div className={styles.entryRow}>
               <label>{t.firstName}:</label>
               <input
@@ -234,6 +276,8 @@ const AddSimulationEntryPage = () => {
                 disabled={alreadySubmitted}
               />
             </div>
+
+            {/* ───────── Прізвище ───────── */}
             <div className={styles.entryRow}>
               <label>{t.lastName}:</label>
               <input
@@ -246,6 +290,8 @@ const AddSimulationEntryPage = () => {
                 disabled={alreadySubmitted}
               />
             </div>
+
+            {/* ───────── Країна ───────── */}
             <div className={styles.entryRow}>
               <label>{t.country}:</label>
               <input
@@ -258,6 +304,8 @@ const AddSimulationEntryPage = () => {
                 disabled={alreadySubmitted}
               />
             </div>
+
+            {/* ───────── Email (тільки для читання) ───────── */}
             <div className={styles.entryRow}>
               <label>{t.email}:</label>
               <input
@@ -268,6 +316,8 @@ const AddSimulationEntryPage = () => {
                 disabled
               />
             </div>
+
+            {/* ───────── Дата екзамену ───────── */}
             <div className={styles.entryRow}>
               <label>{t.examDate}:</label>
               <input
@@ -279,6 +329,8 @@ const AddSimulationEntryPage = () => {
                 disabled={alreadySubmitted}
               />
             </div>
+
+            {/* ───────── Дата додавання (генерується автоматично) ───────── */}
             <div className={styles.entryRow}>
               <label>{t.entryDate}:</label>
               <input
@@ -289,6 +341,8 @@ const AddSimulationEntryPage = () => {
                 disabled
               />
             </div>
+
+            {/* ───────── Мова ───────── */}
             <div className={styles.entryRow}>
               <label>{t.language}:</label>
               <select
@@ -305,6 +359,8 @@ const AddSimulationEntryPage = () => {
                 ))}
               </select>
             </div>
+
+            {/* ───────── Телефон ───────── */}
             <div className={styles.entryRow}>
               <label>{t.phone}:</label>
               <input
@@ -316,6 +372,8 @@ const AddSimulationEntryPage = () => {
                 disabled={alreadySubmitted}
               />
             </div>
+
+            {/* ───────── Улюблений канал зв’язку ───────── */}
             <div className={styles.entryRow}>
               <label>{t.preferredContact}:</label>
               <select
@@ -334,19 +392,23 @@ const AddSimulationEntryPage = () => {
               </select>
             </div>
           </form>
+
           {alreadySubmitted && (
-            <p className={styles.infoMessage}>
-              {t.alreadyAdded}
-            </p>
+            <p className={styles.infoMessage}>{t.alreadyAdded}</p>
           )}
         </div>
-        {/* Back-Button (лівий нижньому куті) */}
+
+        {/* ───────── Back button ───────── */}
         <div className={styles.main_menu_back}>
-        <button onClick={() => navigate("/simulation")} className={styles.backButton}>
-  &#8592;
-</button>
+          <button
+            onClick={() => navigate("/simulation")}
+            className={styles.backButton}
+          >
+            &#8592;
+          </button>
         </div>
-        {/* Save-Button (правий нижньому куті) */}
+
+        {/* ───────── Save button ───────── */}
         {!alreadySubmitted && (
           <div className={styles.bottomRightSave}>
             <button onClick={handleSubmit} className={styles.saveButtonNew}>

@@ -4,6 +4,8 @@ import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
 import { supabase } from "../../supabaseClient";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
+import simPageMetaImage from "../../assets/simulationpagemeta.PNG";
 import { FaCog, FaArrowLeft, FaUserPlus, FaTrash } from "react-icons/fa";
 import styles from "./SimulationPage.module.scss";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
@@ -32,6 +34,30 @@ const regions = [
   "Thüringen",
   "Westfalen-Lippe",
 ];
+
+// Abkürzungen für die Region‑Box im Modal
+const regionAbbreviations = {
+  "Nordrhein-Westfalen": "NRW",
+  "Westfalen-Lippe": "W-L",
+  Bayern: "BY",
+  Hessen: "HE",
+  Niedersachsen: "NI",
+  "Rheinland-Pfalz": "RP",
+  Sachsen: "SA",
+  Brandenburg: "BB",
+  Bremen: "HB",
+  Saarland: "SL",
+  "Schleswig-Holstein": "SH",
+  Thüringen: "TH",
+  Berlin: "BE",
+  Hamburg: "HH",
+  "Mecklenburg Vorpommern": "MV",
+  "Sachsen-Anhalt": "ST",
+  "Baden-Württemberg-Freiburg": "BWF",
+  "Baden-Württemberg-Karlsruhe": "BWK",
+  "Baden-Württemberg-Stuttgart": "BWS",
+  "Baden-Württemberg-Reutlingen": "BWR",
+};
 
 // Опції мов (повна назва)
 const languageOptions = [
@@ -204,9 +230,19 @@ const SimulationPage = () => {
   };
 
   return (
-    <MainLayout>
-      <ProtectedRoute>
-        <div className={styles.container}>
+    <>
+      <Helmet>
+        <title>Simulation Partner – Fachsprachenprüfung</title>
+        <meta name="description" content="Suche nach Partnern für Simulationsübungen zur Fachsprachenprüfung in Deutschland." />
+        <meta name="keywords" content="Fachsprachenprüfung, Simulation, Partner, Deutsch, Ärzte, Jena" />
+        <meta property="og:title" content="Simulation Partner – Fachsprachenprüfung" />
+        <meta property="og:description" content="Finde hier Partner für deine Simulationsübungen zur Fachsprachenprüfung." />
+        <meta property="og:image" content={simPageMetaImage} />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      <MainLayout>
+        <ProtectedRoute>
+          <div className={styles.container}>
           {/* Кнопка налаштувань */}
           <button
             className={styles.settingsButton}
@@ -288,6 +324,7 @@ const SimulationPage = () => {
           {/* Модальне вікно */}
           {isModalOpen && (
             <div className={styles.settingsModal} ref={modalRef}>
+              <h2 className={styles.modalTitle}>Einstellungen</h2>
               {/* Кнопка закриття модалки */}
               <button
                 className={styles.modalCloseButton}
@@ -296,78 +333,94 @@ const SimulationPage = () => {
               >
                 ×
               </button>
-
-              {/* Контейнер для вибору регіону */}
-              <div className={styles.nativeSelectContainer}>
-                <select
-                  className={styles.nativeSelect}
-                  value={region}
-                  onChange={handleRegionChange}
-                  aria-label={t.selectRegionAria}
-                >
-                  {regions.map((r) => (
-                    <option key={r} value={r}>
-                      {r}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Рядок для вибору мови та кнопок */}
               <div className={styles.modalRow}>
-                {/* Контейнер для вибору мови (при відкритті drop-down показує повні назви) */}
-                <div className={styles.languageSelectContainer}>
-                  <select
-                    className={styles.languageSelect}
-                    value={languageFilter}
-                    onChange={(e) => setLanguageFilter(e.target.value)}
-                    aria-label={t.selectLanguageAria}
-                  >
-                    <option value="">&infin;</option>
-                    {languageOptions.map((lang) => (
-                      <option
-                        key={lang.value}
-                        value={lang.value}
-                        title={lang.label}
-                      >
-                        {lang.value.toUpperCase()}
-                      </option>
-                    ))}
-                  </select>
+
+                {/* Region */}
+                <div className={styles.modalItem}>
+                  <span className={styles.fieldLabel}>Region</span>
+                  <div className={styles.regionSelectContainer}>
+                    <div className={styles.regionCell}>
+                      {regionAbbreviations[region] || region}
+                    </div>
+                    <select
+                      className={styles.nativeSelect}
+                      value={region}
+                      onChange={handleRegionChange}
+                      aria-label={t.selectRegionAria}
+                    >
+                      {regions.map((r) => (
+                        <option key={r} value={r}>
+                          {r}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
 
-                {/* Кнопка для додавання нового випадку */}
-                <Link
-                  to="/add-simulation"
-                  className={styles.actionButton}
-                  onClick={() => setIsModalOpen(false)}
-                  aria-label={t.addEntryAria}
-                >
-                  <FaUserPlus size={20} />
-                </Link>
+                {/* Language */}
+                <div className={styles.modalItem}>
+                  <span className={styles.fieldLabel}>Sprache</span>
+                  <div className={styles.languageSelectContainer}>
+                    {/* Anzeige der aktuellen Auswahl als Kürzel */}
+                    <div className={styles.languageCell}>
+                      {languageFilter ? languageFilter.toUpperCase() : "∞"}
+                    </div>
+                    {/* Unsichtbares <select> mit vollständigen Sprachbezeichnungen */}
+                    <select
+                      className={styles.nativeSelect}
+                      value={languageFilter}
+                      onChange={(e) => setLanguageFilter(e.target.value)}
+                      aria-label={t.selectLanguageAria}
+                    >
+                      <option value="">&infin;</option>
+                      {languageOptions.map((lang) => (
+                        <option key={lang.value} value={lang.value}>
+                          {lang.label}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
 
-                {/* Кнопка для видалення випадку */}
-                <button
-                  className={styles.deleteButton}
-                  onClick={() => {
-                    handleDeleteCase();
-                    setIsModalOpen(false);
-                  }}
-                  aria-label={t.deleteEntryAria}
-                >
-                  <FaTrash size={20} />
-                </button>
-              </div>
+                {/* Add */}
+                <div className={styles.modalItem}>
+                  <span className={styles.fieldLabel}>Neu</span>
+                  <Link
+                    to="/add-simulation"
+                    className={styles.actionButton}
+                    onClick={() => setIsModalOpen(false)}
+                    aria-label={t.addEntryAria}
+                  >
+                    <FaUserPlus size={18} />
+                  </Link>
+                </div>
+
+                {/* Delete */}
+                <div className={styles.modalItem}>
+                  <span className={styles.fieldLabel}>Löschen</span>
+                  <button
+                    className={styles.deleteButton}
+                    onClick={() => {
+                      handleDeleteCase();
+                      setIsModalOpen(false);
+                    }}
+                    aria-label={t.deleteEntryAria}
+                  >
+                    <FaTrash size={18} />
+                  </button>
+                </div>
+              </div> {/* end .modalRow */}
             </div>
           )}
-        </div>
+          </div>
 
-        {/* Кнопка Back */}
-        <div className={styles.main_menu_back}>
-   
-        </div>
-      </ProtectedRoute>
-    </MainLayout>
+          {/* Кнопка Back */}
+          <div className={styles.main_menu_back}>
+     
+          </div>
+        </ProtectedRoute>
+      </MainLayout>
+    </>
   );
 };
 
