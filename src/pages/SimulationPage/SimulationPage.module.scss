@@ -18,6 +18,26 @@ $transition-time: 0.3s;
     opacity: 1;
   }
 }
+@keyframes moveIcons {
+  0% {
+    background-position: 
+      5% 10%, 30% 40%, 55% 20%, 80% 60%, 20% 80%,
+      70% 90%, 15% 25%, 45% 50%, 65% 15%, 85% 30%,
+      10% 50%, 40% 10%, 60% 70%, 75% 25%, 90% 80%;
+  }
+  50% {
+    background-position: 
+      10% 20%, 35% 50%, 60% 30%, 85% 70%, 25% 90%,
+      75% 100%, 20% 35%, 50% 60%, 70% 25%, 90% 40%,
+      15% 60%, 45% 20%, 65% 80%, 80% 30%, 95% 90%;
+  }
+  100% {
+    background-position: 
+      5% 10%, 30% 40%, 55% 20%, 80% 60%, 20% 80%,
+      70% 90%, 15% 25%, 45% 50%, 65% 15%, 85% 30%,
+      10% 50%, 40% 10%, 60% 70%, 75% 25%, 90% 80%;
+  }
+}
 /* ------------------- Hauptcontainer ------------------- */
 .container {
   padding: 20px;
@@ -34,10 +54,13 @@ $transition-time: 0.3s;
     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 64 64' fill='%23ffffff'><circle cx='20' cy='20' r='8'/><circle cx='44' cy='20' r='8'/><rect x='12' y='28' width='16' height='20' rx='4'/><rect x='36' y='28' width='16' height='20' rx='4'/><path d='M32 6h18c2 0 4 2 4 4v12c0 2-2 4-4 4H32l-4 4V10c0-2 2-4 4-4z'/><rect x='36' y='12' width='10' height='2' rx='1' fill='%23000000'/><rect x='36' y='16' width='8' height='2' rx='1' fill='%23000000'/></svg>"),
     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 64 64' fill='%23ffffff'><circle cx='20' cy='20' r='8'/><circle cx='44' cy='20' r='8'/><rect x='12' y='28' width='16' height='20' rx='4'/><rect x='36' y='28' width='16' height='20' rx='4'/><path d='M32 6h18c2 0 4 2 4 4v12c0 2-2 4-4 4H32l-4 4V10c0-2 2-4 4-4z'/><rect x='36' y='12' width='10' height='2' rx='1' fill='%23000000'/><rect x='36' y='16' width='8' height='2' rx='1' fill='%23000000'/></svg>"),
     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 64 64' fill='%23ffffff'><circle cx='20' cy='20' r='8'/><circle cx='44' cy='20' r='8'/><rect x='12' y='28' width='16' height='20' rx='4'/><rect x='36' y='28' width='16' height='20' rx='4'/><path d='M32 6h18c2 0 4 2 4 4v12c0 2-2 4-4 4H32l-4 4V10c0-2 2-4 4-4z'/><rect x='36' y='12' width='10' height='2' rx='1' fill='%23000000'/><rect x='36' y='16' width='8' height='2' rx='1' fill='%23000000'/></svg>"),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 64 64' fill='%23ffffff'><circle cx='20' cy='20' r='8'/><circle cx='44' cy='20' r='8'/><rect x='12' y='28' width='16' height='20' rx='4'/><rect x='36' y='28' width='16' height='20' rx='4'/><path d='M32 6h18c2 0 4 2 4 4v12c0 2-2 4-4 4H32l-4 4V10c0-2 2-4 4-4z'/><rect x='36' y='12' width='10' height='2' rx='1' fill='%23000000'/><rect x='36' y='16' width='8' height='2' rx='1' fill='%23000000'/></svg>"),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 64 64' fill='%23ffffff'><circle cx='20' cy='20' r='8'/><circle cx='44' cy='20' r='8'/><rect x='12' y='28' width='16' height='20' rx='4'/><rect x='36' y='28' width='16' height='20' rx='4'/><path d='M32 6h18c2 0 4 2 4 4v12c0 2-2 4-4 4H32l-4 4V10c0-2 2-4 4-4z'/><rect x='36' y='12' width='10' height='2' rx='1' fill='%23000000'/><rect x='36' y='16' width='8' height='2' rx='1' fill='%23000000'/></svg>"),
     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 64 64' fill='%23ffffff'><circle cx='20' cy='20' r='8'/><circle cx='44' cy='20' r='8'/><rect x='12' y='28' width='16' height='20' rx='4'/><rect x='36' y='28' width='16' height='20' rx='4'/><path d='M32 6h18c2 0 4 2 4 4v12c0 2-2 4-4 4H32l-4 4V10c0-2 2-4 4-4z'/><rect x='36' y='12' width='10' height='2' rx='1' fill='%23000000'/><rect x='36' y='16' width='8' height='2' rx='1' fill='%23000000'/></svg>");
   background-repeat: no-repeat;
-  background-size: 32px 32px, 32px 32px, 32px 32px, 32px 32px, 32px 32px, 32px 32px, 32px 32px, 32px 32px, 32px 32px, 32px 32px;
-  background-position: 5% 10%, 30% 40%, 55% 20%, 80% 60%, 20% 80%, 70% 90%, 15% 25%, 45% 50%, 65% 15%, 85% 30%;
+  background-size: 32px 32px, 32px 32px, 32px 32px, 32px 32px, 32px 32px, 32px 32px, 32px 32px, 32px 32px, 32px 32px, 32px 32px, 32px 32px, 32px 32px, 32px 32px, 32px 32px, 32px 32px;
+  background-position: 5% 10%, 30% 40%, 55% 20%, 80% 60%, 20% 80%, 70% 90%, 15% 25%, 45% 50%, 65% 15%, 85% 30%, 10% 50%, 40% 10%, 60% 70%, 75% 25%, 90% 80%;
+  animation: moveIcons 19s linear infinite;
 }
 /* Overlay, wenn keine Einträge vorhanden sind */
 .noEntriesOverlay {

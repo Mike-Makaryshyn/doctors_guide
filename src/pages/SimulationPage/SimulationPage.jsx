@@ -7,6 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaCog, FaArrowLeft, FaUserPlus, FaTrash } from "react-icons/fa";
 import styles from "./SimulationPage.module.scss";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+import { languages, DEFAULT_LANGUAGE } from "../../constants/translation/SimulationPage";
 
 // Список регіонів
 const regions = [
@@ -66,7 +67,8 @@ const SimulationPage = () => {
 
     return () => listener?.subscription?.unsubscribe();
   }, []);
-  const { selectedRegion: globalRegion } = useGetGlobalInfo();
+  const { selectedRegion: globalRegion, selectedLanguage } = useGetGlobalInfo();
+  const t = languages[selectedLanguage] || languages[DEFAULT_LANGUAGE];
 
   const [region, setRegion] = useState(globalRegion || "Bayern");
   // Synchronisiere lokalen Region-State, falls selectedRegion erst später aus dem Kontext kommt
@@ -102,7 +104,7 @@ const SimulationPage = () => {
       setSimulationCases((data && data.arraycases) || []);
     } catch (error) {
       console.error("Error fetching simulation cases: ", error);
-      toast.error("Fehler beim Laden der Anzeigen.");
+      toast.error(t.fetchError);
     }
   };
 
@@ -136,12 +138,10 @@ const SimulationPage = () => {
   // Видалення оголошення з підтвердженням (Supabase)
   const handleDeleteCase = async () => {
     if (!user) {
-      toast.error("Bitte melden Sie sich an, um Ihre Anzeige zu löschen.");
+      toast.error(t.notAuthenticatedError);
       return;
     }
-    const confirmed = window.confirm(
-      "Sind Sie sicher, dass Sie Ihre Anzeige löschen möchten?"
-    );
+    const confirmed = window.confirm(t.confirmDeletePrompt);
     if (!confirmed) return;
     try {
       // fetch current arraycases for this region
@@ -172,7 +172,7 @@ const SimulationPage = () => {
         setSimulationCases(filtered);
 
         toast.info(
-          "Sie haben noch keine Anzeige aufgegeben oder sie wurde bereits gelöscht."
+          t.noEntryToDeleteInfo
         );
         return;
       }
@@ -187,12 +187,12 @@ const SimulationPage = () => {
       // Aktualisiere lokale Liste sofort, ohne auf neuen Fetch zu warten
       setSimulationCases(filtered);
 
-      toast.success("Ihre Anzeige wurde erfolgreich gelöscht!");
+      toast.success(t.deleteSuccess);
       // Hol sicherheitshalber frische Daten von Supabase
       fetchSimulationCases(region);
     } catch (error) {
       console.error("Error deleting user case:", error);
-      toast.error("Fehler beim Löschen der Anzeige.");
+      toast.error(t.deleteError);
     }
   };
 
@@ -211,7 +211,7 @@ const SimulationPage = () => {
           <button
             className={styles.settingsButton}
             onClick={() => setIsModalOpen(true)}
-            aria-label="Einstellungen"
+            aria-label={t.settingsAria}
           >
             <FaCog />
           </button>
@@ -221,7 +221,7 @@ const SimulationPage = () => {
             {filteredCases.length === 0 ? (
               <div className={styles.noEntriesOverlay}>
                 <div className={styles.noEntriesMessage}>
-                  <p>Keine Einträge</p>
+                  <p>{t.noEntries}</p>
                 </div>
               </div>
             ) : (
@@ -240,7 +240,7 @@ const SimulationPage = () => {
 
                     {item.email && (
                       <p className={styles.tileItem}>
-                        <strong>E-Mail:</strong>{" "}
+                        <strong>{t.tileEmailLabel}</strong>{" "}
                         <a href={`mailto:${item.email}`} className={styles.link}>
                           {item.email}
                         </a>
@@ -249,7 +249,7 @@ const SimulationPage = () => {
 
                     {item.phone && (
                       <p className={styles.tileItem}>
-                        <strong>Telefon:</strong>{" "}
+                        <strong>{t.tilePhoneLabel}</strong>{" "}
                         <a href={`tel:${item.phone}`} className={styles.link}>
                           {item.phone}
                         </a>
@@ -258,25 +258,25 @@ const SimulationPage = () => {
 
                     {preferredContact && (
                       <p className={styles.tileItem}>
-                        <strong>Kontakt:</strong> {preferredContact}
+                        <strong>{t.tileContactLabel}</strong> {preferredContact}
                       </p>
                     )}
 
                     {item.language && (
                       <p className={styles.tileItem}>
-                        <strong>Sprache:</strong> {getLanguageLabel(item.language)}
+                        <strong>{t.tileLanguageLabel}</strong> {getLanguageLabel(item.language)}
                       </p>
                     )}
 
                     {item.pruefungsdatum && (
                       <p className={styles.tileItem}>
-                        <strong>Prüfungsdatum:</strong> {item.pruefungsdatum}
+                        <strong>{t.tileExamDateLabel}</strong> {item.pruefungsdatum}
                       </p>
                     )}
 
                     {addedDate && (
                       <p className={styles.tileItem}>
-                        <strong>Eintragsdatum:</strong> {addedDate}
+                        <strong>{t.tileEntryDateLabel}</strong> {addedDate}
                       </p>
                     )}
                   </div>
@@ -292,7 +292,7 @@ const SimulationPage = () => {
               <button
                 className={styles.modalCloseButton}
                 onClick={() => setIsModalOpen(false)}
-                aria-label="Fenster schließen"
+                aria-label={t.closeModalAria}
               >
                 ×
               </button>
@@ -303,7 +303,7 @@ const SimulationPage = () => {
                   className={styles.nativeSelect}
                   value={region}
                   onChange={handleRegionChange}
-                  aria-label="Region auswählen"
+                  aria-label={t.selectRegionAria}
                 >
                   {regions.map((r) => (
                     <option key={r} value={r}>
@@ -321,7 +321,7 @@ const SimulationPage = () => {
                     className={styles.languageSelect}
                     value={languageFilter}
                     onChange={(e) => setLanguageFilter(e.target.value)}
-                    aria-label="Sprache auswählen"
+                    aria-label={t.selectLanguageAria}
                   >
                     <option value="">&infin;</option>
                     {languageOptions.map((lang) => (
@@ -341,7 +341,7 @@ const SimulationPage = () => {
                   to="/add-simulation"
                   className={styles.actionButton}
                   onClick={() => setIsModalOpen(false)}
-                  aria-label="Anzeige aufgeben"
+                  aria-label={t.addEntryAria}
                 >
                   <FaUserPlus size={20} />
                 </Link>
@@ -353,7 +353,7 @@ const SimulationPage = () => {
                     handleDeleteCase();
                     setIsModalOpen(false);
                   }}
-                  aria-label="Anzeige löschen"
+                  aria-label={t.deleteEntryAria}
                 >
                   <FaTrash size={20} />
                 </button>
