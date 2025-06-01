@@ -7,6 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaSave, FaArrowLeft } from "react-icons/fa";
 import styles from "./AddSimulationEntryPage.module.scss";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+import { languages, DEFAULT_LANGUAGE } from "../../constants/translation/SimulationPage";
 
 // Список регіонів
 const regions = [
@@ -52,6 +53,7 @@ const AddSimulationEntryPage = () => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
   const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
+  const t = languages[selectedLanguage] || languages[DEFAULT_LANGUAGE];
   // Початкові значення форми
   const [formData, setFormData] = useState({
     region: selectedRegion || "Bayern",
@@ -65,6 +67,14 @@ const AddSimulationEntryPage = () => {
     preferredContact: "phone", // phone, Telegram, WhatsApp, SMS, Email, Skype
     email: "", // автоматично заповнюється з профілю
   });
+
+  // Halte region im Formular synchron, falls selectedRegion später geladen wird
+  useEffect(() => {
+    if (selectedRegion) {
+      setFormData((prev) => ({ ...prev, region: selectedRegion }));
+    }
+  }, [selectedRegion]);
+
   const [alreadySubmitted, setAlreadySubmitted] = useState(false);
 
   // Встановлюємо Eintragsdatum на поточну дату при завантаженні
@@ -135,11 +145,11 @@ const AddSimulationEntryPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!user) {
-      toast.error("Bitte melden Sie sich an, um einen Fall hinzuzufügen.");
+      toast.error(t.pleaseLogin);
       return;
     }
     if (alreadySubmitted) {
-      toast.info("Sie haben bereits einen Fall hinzugefügt.");
+      toast.info(t.alreadyAdded);
       return;
     }
     try {
@@ -181,11 +191,11 @@ const AddSimulationEntryPage = () => {
         if (insertErr) throw insertErr;
       }
 
-      toast.success("Ihr Fall wurde hinzugefügt!");
+      toast.success(t.addedSuccess);
       navigate("/simulation");
     } catch (error) {
       console.error("Fehler beim Hinzufügen des Falls:", error);
-      toast.error("Fehler beim Hinzufügen des Falls.");
+      toast.error(t.addError);
     }
   };
 
@@ -193,10 +203,10 @@ const AddSimulationEntryPage = () => {
     <MainLayout>
       <ProtectedRoute>
         <div className={styles.container}>
-          <h2>Finde einen Partner für Simulation</h2>
+          <h2>{t.heading}</h2>
           <form onSubmit={handleSubmit} className={styles.form}>
             <div className={styles.entryRow}>
-              <label>Prüfungsort:</label>
+              <label>{t.examLocation}:</label>
               <select
                 name="region"
                 value={formData.region}
@@ -213,80 +223,74 @@ const AddSimulationEntryPage = () => {
               </select>
             </div>
             <div className={styles.entryRow}>
-              <label>Vorname:</label>
+              <label>{t.firstName}:</label>
               <input
                 type="text"
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
                 className={styles.inputField}
-                placeholder="Vorname"
                 required
                 disabled={alreadySubmitted}
               />
             </div>
             <div className={styles.entryRow}>
-              <label>Nachname:</label>
+              <label>{t.lastName}:</label>
               <input
                 type="text"
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
                 className={styles.inputField}
-                placeholder="Nachname"
                 required
                 disabled={alreadySubmitted}
               />
             </div>
             <div className={styles.entryRow}>
-              <label>Land:</label>
+              <label>{t.country}:</label>
               <input
                 type="text"
                 name="country"
                 value={formData.country}
                 onChange={handleChange}
                 className={styles.inputField}
-                placeholder="Land"
                 required
                 disabled={alreadySubmitted}
               />
             </div>
             <div className={styles.entryRow}>
-              <label>E-Mail:</label>
+              <label>{t.email}:</label>
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 className={styles.inputField}
                 disabled
-                placeholder="E-Mail"
               />
             </div>
             <div className={styles.entryRow}>
-              <label>Prüfungsdatum:</label>
+              <label>{t.examDate}:</label>
               <input
                 type="date"
                 name="pruefungsdatum"
                 value={formData.pruefungsdatum}
                 onChange={handleChange}
                 className={styles.inputField}
-                placeholder="Prüfungsdatum"
                 disabled={alreadySubmitted}
               />
             </div>
             <div className={styles.entryRow}>
-              <label>Eintragsdatum:</label>
+              <label>{t.entryDate}:</label>
               <input
                 type="date"
                 name="addedDate"
                 value={formData.addedDate}
                 className={styles.inputField}
-                placeholder="Eintragsdatum"
                 disabled
               />
             </div>
             <div className={styles.entryRow}>
-              <label>Sprache:</label>
+              <label>{t.language}:</label>
               <select
                 name="language"
                 value={formData.language}
@@ -302,19 +306,18 @@ const AddSimulationEntryPage = () => {
               </select>
             </div>
             <div className={styles.entryRow}>
-              <label>Telefonnummer:</label>
+              <label>{t.phone}:</label>
               <input
                 type="text"
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
                 className={styles.inputField}
-                placeholder="Telefonnummer"
                 disabled={alreadySubmitted}
               />
             </div>
             <div className={styles.entryRow}>
-              <label>Bevorzugte Kontaktmethode:</label>
+              <label>{t.preferredContact}:</label>
               <select
                 name="preferredContact"
                 value={formData.preferredContact}
@@ -333,7 +336,7 @@ const AddSimulationEntryPage = () => {
           </form>
           {alreadySubmitted && (
             <p className={styles.infoMessage}>
-              Sie haben bereits einen Fall hinzugefügt.
+              {t.alreadyAdded}
             </p>
           )}
         </div>

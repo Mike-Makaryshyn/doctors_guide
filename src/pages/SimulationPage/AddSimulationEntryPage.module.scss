@@ -36,7 +36,7 @@
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #333;
+  color: #ffffff;
   text-align: left;
 }
 
@@ -124,8 +124,8 @@ input[type="date"].inputField::-webkit-calendar-picker-indicator {
 /* Фіксована кнопка збереження (правий нижній кут) */
 .bottomRightSave {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 0px;
+  right: 0px;
   z-index: 3000;
 }
 
@@ -174,9 +174,7 @@ input[type="date"].inputField::-webkit-calendar-picker-indicator {
   transform: scale(1.1);
 }
 
-.main_menu_back:active {
-  transform: scale(0.95);
-}
+
 
 /* Інформаційне повідомлення, якщо кейс вже додано */
 .infoMessage {

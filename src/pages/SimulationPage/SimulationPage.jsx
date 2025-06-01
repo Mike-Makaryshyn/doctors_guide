@@ -82,17 +82,23 @@ const SimulationPage = () => {
   // Стан для фільтрації за мовою – фільтрація реалізована лише в модальному вікні
   const [languageFilter, setLanguageFilter] = useState("");
 
-  // Функція завантаження оголошень із Supabase
-  const fetchSimulationCases = async () => {
+  // schützt vor "stale" Antworten: jede neue Abfrage bekommt höhere ID
+  const fetchSeqRef = useRef(0);
+
+  // Функція завантаження оголошень із Supabase, mit Guard gegen Race-Conditions
+  const fetchSimulationCases = async (rgn) => {
+    const seq = ++fetchSeqRef.current;      // diese Abfrage ist Nr. seq
     try {
       const { data, error } = await supabase
         .from("simulation")
         .select("arraycases")
-        .eq("region", region)
+        .eq("region", rgn)
         .maybeSingle();
 
-      if (error) throw error;
+      // Antwort einer veralteten Abfrage? -> ignorieren
+      if (seq !== fetchSeqRef.current) return;
 
+      if (error) throw error;
       setSimulationCases((data && data.arraycases) || []);
     } catch (error) {
       console.error("Error fetching simulation cases: ", error);
@@ -101,7 +107,7 @@ const SimulationPage = () => {
   };
 
   useEffect(() => {
-    fetchSimulationCases();
+    fetchSimulationCases(region);
   }, [region]);
 
   const filteredCases = languageFilter
@@ -148,9 +154,23 @@ const SimulationPage = () => {
       if (error) throw error;
 
       const arrayCases = (data && data.arraycases) || [];
-      const filtered = arrayCases.filter((item) => item.uid !== user.id);
+      const isOwner = (it) => {
+        // підтримує різні варіанти ключів і можливі пробіли
+        const uidRaw =
+          it.uid ??
+          it.user_id ??
+          it.userId ??
+          it.userid ??
+          "";
+        return uidRaw.replace(/\s+/g, "") === user.id;
+      };
+
+      const filtered = arrayCases.filter((item) => !isOwner(item));
 
       if (filtered.length === arrayCases.length) {
+        // Lokale Anzeige entfernen, falls sie noch da ist
+        setSimulationCases(filtered);
+
         toast.info(
           "Sie haben noch keine Anzeige aufgegeben oder sie wurde bereits gelöscht."
         );
@@ -164,8 +184,12 @@ const SimulationPage = () => {
 
       if (updateError) throw updateError;
 
+      // Aktualisiere lokale Liste sofort, ohne auf neuen Fetch zu warten
+      setSimulationCases(filtered);
+
       toast.success("Ihre Anzeige wurde erfolgreich gelöscht!");
-      fetchSimulationCases();
+      // Hol sicherheitshalber frische Daten von Supabase
+      fetchSimulationCases(region);
     } catch (error) {
       console.error("Error deleting user case:", error);
       toast.error("Fehler beim Löschen der Anzeige.");
