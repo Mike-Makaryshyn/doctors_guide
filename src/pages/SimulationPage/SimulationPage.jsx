@@ -5,7 +5,7 @@ import { supabase } from "../../supabaseClient";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import simPageMetaImage from "../../assets/simulationpagemeta.PNG";
+import simPageMetaImage from "../../assets/simulationpagemeta.png";
 import { FaCog, FaArrowLeft, FaUserPlus, FaTrash } from "react-icons/fa";
 import styles from "./SimulationPage.module.scss";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";

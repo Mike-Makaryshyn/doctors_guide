@@ -1,11 +1,11 @@
 // ───────────────────────────────────────────────────────────────────────────────
-// /src/pages/AddSimulationEntryPage.jsx
+// src/pages/SimulationPage/AddSimulationEntryPage.jsx
 // ───────────────────────────────────────────────────────────────────────────────
 
 import React, { useState, useEffect } from "react";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
-import { supabase } from "../../supabaseClient";      //  <-- 1. Переконайтеся, що це точно той файл, де правильно прописано URL/KEY
+import { supabase, simulationEmail } from "../../supabaseClient.js";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { FaSave } from "react-icons/fa";
@@ -71,7 +71,7 @@ const AddSimulationEntryPage = () => {
 
   const [alreadySubmitted, setAlreadySubmitted] = useState(false);
 
-  // 1) Коли зміниться selectedRegion із глобального стейту → оновлюємо
+  // 1) Якщо змінився selectedRegion із глобального стейту → оновлюємо formData.region
   useEffect(() => {
     if (selectedRegion) {
       setFormData((prev) => ({ ...prev, region: selectedRegion }));
@@ -84,7 +84,7 @@ const AddSimulationEntryPage = () => {
     setFormData((prev) => ({ ...prev, addedDate: today }));
   }, []);
 
-  // 3) Підтягуємо інформацію користувача з Supabase Auth
+  // 3) Завантажуємо інформацію про користувача (Supabase Auth)
   useEffect(() => {
     const getSession = async () => {
       const {
@@ -94,17 +94,16 @@ const AddSimulationEntryPage = () => {
     };
     getSession();
 
-    // Слухаємо зміни авторизації
     const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
       setUser(session?.user || null);
     });
     return () => listener?.subscription?.unsubscribe();
   }, []);
 
-  // 4) Як тільки user підвантажився, оновлюємо formData із user_metadata
+  // 4) Як тільки user підвантажився → беремо firstName, lastName, country, email із user_metadata
   useEffect(() => {
     if (!user) return;
-    const md = (user as any).user_metadata || {};
+    const md = user.user_metadata || {};
     setFormData((prev) => ({
       ...prev,
       firstName: md.first_name || "",
@@ -114,7 +113,7 @@ const AddSimulationEntryPage = () => {
     }));
   }, [user]);
 
-  // 5) Перевірка, чи user вже подався у поточному регіоні (щоб заборонити дубль)
+  // 5) Перевірка, чи user вже подався у поточному регіоні (щоб заборонити дублікати)
   useEffect(() => {
     const checkSubmission = async () => {
       if (!user) return;
@@ -140,7 +139,7 @@ const AddSimulationEntryPage = () => {
     checkSubmission();
   }, [user, formData.region]);
 
-  // 6) Обробник полів форми
+  // 6) Обробник полів
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -167,9 +166,7 @@ const AddSimulationEntryPage = () => {
         .eq("region", formData.region)
         .maybeSingle();
 
-      if (error) {
-        throw error;
-      }
+      if (error) throw error;
 
       const arrayCases = (data && data.arraycases) || [];
 
@@ -186,12 +183,11 @@ const AddSimulationEntryPage = () => {
       const updatedArray = [...arrayCases, newEntry];
 
       if (data) {
-        // якщо запис на такій регіон вже є → UPDATE
+        // якщо запис на такий регіон вже є → UPDATE
         const { error: updateErr } = await supabase
           .from("simulation")
           .update({ arraycases: updatedArray })
           .eq("region", formData.region);
-
         if (updateErr) throw updateErr;
       } else {
         // інакше – INSERT
@@ -203,31 +199,18 @@ const AddSimulationEntryPage = () => {
 
       toast.success(t.addedSuccess);
 
-      // ───────────── Частина 2: Викликаємо Edge Function ─────────────
+      // ───────────── Частина 2: Викликаємо нову Edge Function ─────────────
       try {
-        const { data: fnData, error: fnError } = await supabase.functions.invoke(
-          "send-simulation-confirmation",
-          {
-            method: "POST",
-            body: JSON.stringify({
-              email: formData.email,
-              firstName: formData.firstName,
-              lastName: formData.lastName,
-              region: formData.region,
-            }),
-          }
+        const fnResponse = await simulationEmail(
+          formData.email,
+          formData.firstName,
+          formData.lastName,
+          formData.region
         );
-
-        // Якщо fnError не null → вийшла помилка Edge Function
-        if (fnError) {
-          console.error("Edge Function Error:", fnError);
-          // За бажанням, ще можна показати toast:
-          // toast.error("Не вдалося надіслати підтвердження на Email");
-        } else {
-          console.log("Email confirmation response:", fnData);
-        }
+        console.log("Simulation-email response:", fnResponse);
       } catch (errEmail) {
-        console.error("Network error при виклику Edge Function:", errEmail);
+        console.error("Error при виклику simulation-email:", errEmail);
+        // Якщо потрібно, можна показати toast.error("Не вдалося надіслати підтвердження на Email");
       }
 
       // ───────────── Частина 3: Редіректимо назад на список ─────────────
@@ -391,31 +374,28 @@ const AddSimulationEntryPage = () => {
                 <option value="Skype">Skype</option>
               </select>
             </div>
+
+            {/* ───────── Кнопка Зберегти ───────── */}
+            {!alreadySubmitted && (
+              <div className={styles.bottomRightSave}>
+                <button type="submit" className={styles.saveButtonNew}>
+                  <FaSave />
+                </button>
+              </div>
+            )}
           </form>
 
           {alreadySubmitted && (
             <p className={styles.infoMessage}>{t.alreadyAdded}</p>
           )}
-        </div>
 
-        {/* ───────── Back button ───────── */}
-        <div className={styles.main_menu_back}>
-          <button
-            onClick={() => navigate("/simulation")}
-            className={styles.backButton}
-          >
-            &#8592;
-          </button>
-        </div>
-
-        {/* ───────── Save button ───────── */}
-        {!alreadySubmitted && (
-          <div className={styles.bottomRightSave}>
-            <button onClick={handleSubmit} className={styles.saveButtonNew}>
-              <FaSave />
+          {/* ───────── Кнопка Назад ───────── */}
+          <div className={styles.main_menu_back}>
+            <button onClick={() => navigate("/simulation")} className={styles.backButton}>
+              &#8592;
             </button>
           </div>
-        )}
+        </div>
       </ProtectedRoute>
     </MainLayout>
   );
