@@ -52,18 +52,21 @@ const languageOptions = [
 ];
 
 const AddSimulationEntryPage = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(undefined);
   const navigate = useNavigate();
   const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
   const t = languages[selectedLanguage] || languages[DEFAULT_LANGUAGE];
-  const { status: subscriptionStatus } = useSubscription();
+  const { status: subscriptionStatus, loading: subscriptionLoading } = useSubscription();
+  console.log("Debug - user:", user, "subscriptionStatus:", subscriptionStatus, "subscriptionLoading:", subscriptionLoading);
   const isSubscribed = subscriptionStatus === "active";
   useEffect(() => {
-    // Redirect if not logged in or if not subscribed
-    if (user === null || !isSubscribed) {
+    // Wait until we know user and subscription status are loaded
+    if (user === undefined || subscriptionLoading) return;
+
+    if (user === null || subscriptionStatus !== "active") {
       navigate("/simulation");
     }
-  }, [user, isSubscribed, navigate]);
+  }, [user, subscriptionStatus, subscriptionLoading, navigate]);
 
   const [formData, setFormData] = useState({
     region: selectedRegion || "Bayern",
@@ -147,6 +150,17 @@ const AddSimulationEntryPage = () => {
     };
     checkSubmission();
   }, [user, formData.region]);
+
+  // If still loading user or subscription, show a loading indicator
+  if (user === undefined || subscriptionLoading) {
+    return (
+      <MainLayout>
+        <div className={styles.container}>
+          <p>Завантажуємо дані…</p>
+        </div>
+      </MainLayout>
+    );
+  }
 
   // 6) Обробник полів
   const handleChange = (e) => {
