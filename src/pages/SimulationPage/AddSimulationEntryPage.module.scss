@@ -189,14 +189,14 @@ input[type="date"].inputField::-webkit-calendar-picker-indicator {
 @media (max-width: 768px) {
   .inputField {
     padding: 12px 16px;
-    font-size: 14px;
+    font-size: 16px;
     height: 50px;
     line-height: 50px;
   }
 
   .selectField {
     padding: 10px 16px;
-    font-size: 14px;
+    font-size: 16px;
     height: 50px;
     line-height: normal; /* залишається normal, щоб текст не обрізався */
   }

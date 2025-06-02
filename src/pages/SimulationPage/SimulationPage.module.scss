@@ -404,6 +404,15 @@ $transition-time: 0.3s;
 }
 
 /* ------------------- Responsive Styles ------------------- */
+/* ------------------- Tablet: Two Columns ------------------- */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .tile {
+    /* Zwei Spalten: jeweils 48% Breite minus den 20px Gap */
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
 @media (max-width: 768px) {
   /* Modal fährt von unten hoch (keine Abstände) */
   .settingsModal {
