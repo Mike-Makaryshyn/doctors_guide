@@ -7,6 +7,7 @@ import styles from "./styles.module.scss";
 import cn from "classnames";
 import bgVideo from "../../assets/video/first_page_bg.mp4";
 import fspImage from "../../assets/whatisbilder/fsp-image.jpg"; // імпорт картинки для мета-даних
+import BackgroundMedia from "../../components/BackgroundMedia/BackgroundMedia";
 
 // Компонент для рендерингу абзаців із підтримкою переносів рядків
 const RenderParagraphs = ({ text }) => {
@@ -68,18 +69,7 @@ const WhatIsFSPPage = () => {
         <meta property="og:image" content={fspImage} />
       </Helmet>
       <div className="page page1 containerBigger mt-20">
-        <div className="firstPageImageBlock">
-          {!selectedRegion && (
-            <video
-              className="backgroundVideo"
-              autoPlay
-              muted
-              loop
-              playsInline
-              src={bgVideo}
-            />
-          )}
-        </div>
+        <BackgroundMedia />
         <div className={cn("main_menu__content", styles.what_is_fsp__content)}>
    
 

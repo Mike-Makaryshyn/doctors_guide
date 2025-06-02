@@ -6,6 +6,7 @@ import styles from "./styles.module.scss";
 import { localStorageGet } from "../../utils/localStorage";
 import cn from "classnames";
 import bgVideo from "../../assets/video/first_page_bg.mp4";
+import BackgroundMedia from "../../components/BackgroundMedia/BackgroundMedia";
 
 const handleChangePage = (path) => {
   window.location.href = path;
@@ -312,18 +313,7 @@ const ExamExplanationsPage = () => {
   return (
     <MainLayout>
       <div className="page page1 containerBigger containerMax mt-20">
-        <div className="firstPageImageBlock">
-          {!selectedRegion && (
-            <video
-              className="backgroundVideo"
-              autoPlay
-              muted
-              loop
-              playsInline
-              src={bgVideo}
-            />
-          )}
-        </div>
+        <BackgroundMedia />
         <div className="main_menu__content">
           <div className={styles.parentTabsWrapper}>
             {parentTabs.map((parentTab) => {

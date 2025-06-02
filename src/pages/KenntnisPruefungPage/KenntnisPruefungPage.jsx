@@ -7,6 +7,7 @@ import styles from "./styles.module.scss";
 import cn from "classnames";
 import bgVideo from "../../assets/video/first_page_bg.mp4";
 import guideImage from "../../assets/whatisbilder/kenntnispruefung_guide.jpg";
+import BackgroundMedia from "../../components/BackgroundMedia/BackgroundMedia";
 
 // Компонент для рендерингу абзаців із підтримкою переносів рядків
 const RenderParagraphs = ({ text }) => {
@@ -58,18 +59,7 @@ const KenntnisPruefungPage = () => {
       </Helmet>
 
       <div className="page containerBigger mt-20">
-        <div className="firstPageImageBlock">
-          {!selectedRegion && (
-            <video
-              className="backgroundVideo"
-              autoPlay
-              muted
-              loop
-              playsInline
-              src={bgVideo}
-            />
-          )}
-        </div>
+        <BackgroundMedia />
         <div className={cn("main_menu__content", styles.knowledge_examination_content)}>
  
 

@@ -7,6 +7,7 @@ import styles from "./styles.module.scss";
 import cn from "classnames";
 import bgVideo from "../../assets/video/first_page_bg.mp4";
 import berufserlaubnisImage from "../../assets/whatisbilder/berufserlaubnis-image.jpg"; // імпорт картинки для мета-даних
+import BackgroundMedia from "../../components/BackgroundMedia/BackgroundMedia";
 
 // Компонент для рендерингу абзаців із підтримкою переносів рядків
 const RenderParagraphs = ({ text }) => {
@@ -60,18 +61,7 @@ const WhatIsBerufserlaubnisPage = () => {
         <meta property="og:image" content={berufserlaubnisImage} />
       </Helmet>
       <div className="page page1 containerBigger mt-20">
-        <div className="firstPageImageBlock">
-          {!selectedRegion && (
-            <video
-              className="backgroundVideo"
-              autoPlay
-              muted
-              loop
-              playsInline
-              src={bgVideo}
-            />
-          )}
-        </div>
+        <BackgroundMedia />
         <div className={cn("main_menu__content", styles.what_is_approbation__content)}>
       
 

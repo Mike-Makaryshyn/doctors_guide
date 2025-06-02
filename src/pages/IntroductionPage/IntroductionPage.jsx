@@ -4,6 +4,7 @@ import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { useNavigate } from "react-router-dom";
 
 import bgVideo from "../../assets/video/first_page_bg.mp4";
+import BackgroundMedia from "../../components/BackgroundMedia/BackgroundMedia";
 
 const IntroductionPage = () => {
   const { selectedLanguage, languages } = useGetGlobalInfo();
@@ -14,16 +15,7 @@ const IntroductionPage = () => {
       <div className="introductionPage">
         <div className="main_menu_wrapper">
           <div className="page page1">
-            <div className="firstPageImageBlock">
-              <video
-                className="backgroundVideo"
-                autoPlay
-                muted
-                loop
-                playsInline
-                src={bgVideo}
-              />
-            </div>
+            <BackgroundMedia />
             <div className="containerSmall firstPageContent">
               <h1>{languages[selectedLanguage].welcome}</h1>
               <ul className="req">
