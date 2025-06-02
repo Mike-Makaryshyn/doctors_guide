@@ -5,7 +5,7 @@ import regionBackgrounds from "../../utils/regionBackgrounds";
 import bgVideo from "../../assets/video/first_page_bg.mp4";
 import styles from "./BackgroundMedia.module.scss"; // трохи стилів описані нижче
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
-const BackgroundMedia = () => {
+const BackgroundMedia = ({ wrapperClassName = "" }) => {
   const { selectedRegion } = useGetGlobalInfo();
 
   // Якщо для поточного регіону є картинка в мапі — рендеримо її
@@ -24,7 +24,7 @@ const BackgroundMedia = () => {
 
   // Якщо регіон не вибрано або нема картинки — рендеримо відео
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${wrapperClassName}`}>
       <video
         className={styles.backgroundVideo}
         autoPlay

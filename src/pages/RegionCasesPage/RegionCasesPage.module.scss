@@ -255,3 +255,13 @@
     }
   }
 }
+.icon-heart,
+.icon-stethoscope,
+.icon-pill,
+.icon-cross {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  color: rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+}

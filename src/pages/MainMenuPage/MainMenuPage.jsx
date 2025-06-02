@@ -55,7 +55,7 @@ const MainMenuPage = () => {
             <meta name="twitter:image" content={logoMeta} />
          </Helmet>
          <div className="page page1 containerSmall mt-20">
-            <BackgroundMedia />
+            <BackgroundMedia wrapperClassName="mainMenuWrapperOverride" />
             <div className="main_menu__content">
                <div className="main_menu_wrapper">
                   {!selectedRegion && (
