@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { useNavigate } from "react-router-dom";
@@ -23,13 +23,22 @@ import { Helmet } from "react-helmet";
 import introImage from "../../assets/introduction.png";
 
 const IntroductionPage = () => {
-  const { selectedLanguage: globalLanguage } = useGetGlobalInfo();
+  // Extract `user` alongside the selected language
+  const { user, selectedLanguage: globalLanguage } = useGetGlobalInfo();
   const [localLanguage, setLocalLanguage] = useState(globalLanguage);
+  const navigate = useNavigate();
+
+  // Redirect to /main_menu if already authenticated
+  useEffect(() => {
+    if (user) {
+      navigate("/main_menu");
+    }
+  }, [user, navigate]);
+
   const handleChangeLanguage = (newLang) => {
     setLocalLanguage(newLang);
     localStorage.setItem("selectedLanguage", JSON.stringify(newLang));
   };
-  const navigate = useNavigate();
   const content = IntroductionContent[localLanguage];
 
   const languageOptions = [

@@ -190,7 +190,8 @@
     font-size: 0.9rem;
   }
   .nextButton {
-    bottom: 0px;
+    position: fixed;
+    bottom: 10px;
     right: 10px;
   }
   .scrollContent {
@@ -272,3 +273,8 @@
   overflow: hidden;
   position: relative;
 }
+  .dalleButton {
+    position: fixed;
+    bottom: 10px;
+    right: 10px; /* shift left a bit so buttons don't overlap */
+  }
