@@ -6,6 +6,8 @@ import { FaCog } from "react-icons/fa";
 import styles from "./RegionCasesPage.module.scss";
 import regionCases from "../../constants/regionCases";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+import { Helmet } from "react-helmet";
+import regCasesImage from "../../assets/regcases.png";
 
 const RegionCasesPage = () => {
   const navigate = useNavigate();
@@ -135,8 +137,13 @@ const RegionCasesPage = () => {
 
   return (
     <MainLayout>
-      {/* Button "Zurück" zum Hauptmenü */}
-    
+      <Helmet>
+        <title>{`Liste der häufigsten Fälle für Region: ${region}`}</title>
+        <meta name="description" content={`Liste der häufigsten Fälle in der Region ${region}.`} />
+        <meta property="og:title" content={`Liste der häufigsten Fälle für Region: ${region}`} />
+        <meta property="og:description" content={`Liste der häufigsten Fälle in der Region ${region}.`} />
+        <meta property="og:image" content={regCasesImage} />
+      </Helmet>
 
       <div ref={containerRef} className={styles.container}>
         {/* SVG-іконки (фонова анімація) */}
@@ -170,7 +177,7 @@ const RegionCasesPage = () => {
             </svg>
           );
         })}
-        <h1>Fälle für Region: {region}</h1>
+        <h1>Liste der häufigsten Fälle für Region: {region}</h1>
 
         {/* Kachel-Container (responsiv in der SCSS geregelt) */}
         <div className={styles.casesContainer}>
@@ -201,6 +208,7 @@ const RegionCasesPage = () => {
               >
                 ×
               </button>
+              <FaCog />
 
               <div className={styles.regionSelector}>
                 <label className={styles.regionLabel}>Ausgewählte Region:</label>
@@ -222,7 +230,10 @@ const RegionCasesPage = () => {
           </div>
         )}
 
-        {/* Button zum Öffnen des Modals (Zahnrad) */}
+      </div>
+
+      {/* Floating Settings-Button */}
+      <div className={styles.bottomControls}>
         <button
           onClick={() => setIsModalOpen(true)}
           className={styles.settingsButton}
