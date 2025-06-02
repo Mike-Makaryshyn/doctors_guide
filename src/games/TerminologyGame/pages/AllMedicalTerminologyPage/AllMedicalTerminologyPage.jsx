@@ -1,420 +1,841 @@
-// ───────────────────────────────────────────────────────────────────────────────
-// src/pages/SimulationPage/AddSimulationEntryPage.jsx
-// ───────────────────────────────────────────────────────────────────────────────
-
-import React, { useState, useEffect } from "react";
-import MainLayout from "../../layouts/MainLayout/MainLayout";
-import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
-import { supabase, simulationEmail } from "../../supabaseClient.js";
-import { toast } from "react-toastify";
+import React, { useState, useEffect, useRef } from "react";
+import MainLayout from "../../../../layouts/MainLayout/MainLayout";
+import { medicalTerms } from "../../../../constants/medicalTerms";
+import styles from "./AllMedicalTerminologyPage.module.scss";
+import { supabase } from "../../../../supabaseClient";
+import {
+  FaCog,
+  FaCheck,
+  FaPause,
+  FaGamepad,
+  FaList,
+  FaPlay,
+  FaTimes,
+  FaSearch,
+} from "react-icons/fa";
+import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
+import {
+  useTermStatus,
+  TermStatusProvider,
+} from "../../../../contexts/TermStatusContext";
 import { useNavigate } from "react-router-dom";
-import { FaSave } from "react-icons/fa";
-import styles from "./AddSimulationEntryPage.module.scss";
-import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
-import { languages, DEFAULT_LANGUAGE } from "../../constants/translation/SimulationPage";
+import { categoryIcons } from "../../../../constants/CategoryIcons";
+import { Helmet } from "react-helmet";
+import AuthModal from "../../../../pages/AuthPage/AuthModal";
+import medicalTerminologyBg from "../../../../assets/medical-terminology-bg.jpg";
 
-const regions = [
-  "Baden-Württemberg-Karlsruhe",
-  "Baden-Württemberg-Reutlingen",
-  "Baden-Württemberg-Stuttgart",
-  "Baden-Württemberg-Freiburg",
-  "Bayern",
-  "Berlin",
-  "Brandenburg",
-  "Bremen",
-  "Hamburg",
-  "Hessen",
-  "Mecklenburg Vorpommern",
-  "Niedersachsen",
-  "Nordrhein-Westfalen",
-  "Rheinland-Pfalz",
-  "Saarland",
-  "Sachsen",
-  "Sachsen-Anhalt",
-  "Schleswig-Holstein",
-  "Thüringen",
-  "Westfalen-Lippe",
+// Import the tutorial component
+import AllMedicalTerminologyTutorial from "./AllMedicalTerminologyTutorial";
+
+const regionAbbreviations = {
+  "Nordrhein-Westfalen": "NRW",
+  "Westfalen-Lippe": "W-L",
+  Bayern: "BY",
+  Hessen: "HE",
+  Niedersachsen: "NI",
+  "Rheinland-Pfalz": "RP",
+  Sachsen: "SA",
+  Brandenburg: "BB",
+  Bremen: "HB",
+  Saarland: "SL",
+  "Schleswig-Holstein": "SH",
+  Thüringen: "TH",
+  Berlin: "BE",
+  Hamburg: "HH",
+  "Mecklenburg Vorpommern": "MV",
+  "Sachsen-Anhalt": "ST",
+  "Baden-Württemberg-Freiburg": "BWF",
+  "Baden-Württemberg-Karlsruhe": "BWK",
+  "Baden-Württemberg-Stuttgart": "BWS",
+  "Baden-Württemberg-Reutlingen": "BWR",
+};
+
+const filterModes = [
+  { value: "all", icon: <FaList />, label: "Alle" },
+  { value: "learned", icon: <FaCheck />, label: "Gelernt" },
+  { value: "unlearned", icon: <FaPlay />, label: "Ungelernt" },
+  { value: "paused", icon: <FaPause />, label: "Pausiert" },
 ];
 
-const languageOptions = [
-  { value: "de", label: "Deutsch" },
-  { value: "en", label: "English" },
-  { value: "uk", label: "Українська" },
-  { value: "ru", label: "Русский" },
-  { value: "tr", label: "Türkçe" },
-  { value: "ar", label: "العربية" },
-  { value: "fr", label: "Français" },
-  { value: "es", label: "Español" },
-  { value: "pl", label: "Polski" },
-  { value: "el", label: "Ελληνικά" },
-  { value: "ro", label: "Română" },
-];
-
-const AddSimulationEntryPage = () => {
-  const [user, setUser] = useState(null);
+const AllMedicalTerminologyContent = () => {
   const navigate = useNavigate();
+  const { termStatuses, toggleStatus, scheduleFlushChanges } = useTermStatus();
   const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
-  const t = languages[selectedLanguage] || languages[DEFAULT_LANGUAGE];
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  const [formData, setFormData] = useState({
-    region: selectedRegion || "Bayern",
-    firstName: "",
-    lastName: "",
-    country: "",
-    pruefungsdatum: "",
-    addedDate: "",
-    language: selectedLanguage || "de",
-    phone: "",
-    preferredContact: "phone",
-    email: "",
-  });
-
-  const [alreadySubmitted, setAlreadySubmitted] = useState(false);
-
-  // 1) Якщо змінився selectedRegion із глобального стейту → оновлюємо formData.region
   useEffect(() => {
-    if (selectedRegion) {
-      setFormData((prev) => ({ ...prev, region: selectedRegion }));
-    }
-  }, [selectedRegion]);
-
-  // 2) Встановлюємо сьогоднішню дату в addedDate
-  useEffect(() => {
-    const today = new Date().toISOString().split("T")[0];
-    setFormData((prev) => ({ ...prev, addedDate: today }));
-  }, []);
-
-  // 3) Завантажуємо інформацію про користувача (Supabase Auth)
-  useEffect(() => {
-    const getSession = async () => {
+    const fetchUser = async () => {
       const {
         data: { session },
       } = await supabase.auth.getSession();
-      setUser(session?.user || null);
+      setUser(session?.user ?? null);
+      setLoading(false);
     };
-    getSession();
 
-    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user || null);
+    fetchUser();
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null);
     });
-    return () => listener?.subscription?.unsubscribe();
+
+    return () => subscription.unsubscribe();
   }, []);
 
-  // 4) Як тільки user підвантажився → беремо firstName, lastName, country, email із user_metadata
+  // =========================
+  // STATES
+  // =========================
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [showDefinition, setShowDefinition] = useState(true);
+  const [region, setRegion] = useState(selectedRegion || "Alle");
+  const [translationLanguage, setTranslationLanguage] = useState(
+    selectedLanguage || "de"
+  );
+  const [selectedCategory, setSelectedCategory] = useState("Alle");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [collapsedCategories, setCollapsedCategories] = useState({});
+  const [filterMode, setFilterMode] = useState("all");
+  const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
+  const [isSearchActive, setIsSearchActive] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  // Guests (not logged in) can see only this many terms per category
+  const GUEST_CATEGORY_LIMIT = 3;
+
+  // Туторіал: початково не запускається
+  const [showTutorial, setShowTutorial] = useState(false);
+  // Ключ для примусового перезапуску туторіалу
+  const [tutorialKey, setTutorialKey] = useState(0);
+  // Додатковий стан, щоб відзначити, що модальне вікно туторіалу вже пройдено
+  const [tutorialModalCompleted, setTutorialModalCompleted] = useState(false);
+
+  // =========================
+  // REFS
+  // =========================
+  const pageRef = useRef(null);
+  const settingsModalRef = useRef(null);
+  const joyrideRef = useRef(null);
+
+  // =========================
+  // EFFECTS
+  // =========================
   useEffect(() => {
-    if (!user) return;
-    const md = user.user_metadata || {};
-    setFormData((prev) => ({
-      ...prev,
-      firstName: md.first_name || "",
-      lastName: md.last_name || "",
-      country: md.country || "",
-      email: user.email || "",
-    }));
-  }, [user]);
+    // Якщо туторіал активний, але модальне вікно ще не було закрито для туторіалу,
+    // відкриваємо його лише якщо ми ще не пройшли модальну частину
+    if (showTutorial && !isSettingsModalOpen && !tutorialModalCompleted) {
+      setIsSettingsModalOpen(true);
+    }
+  }, [showTutorial, isSettingsModalOpen, tutorialModalCompleted]);
 
-  // 5) Перевірка, чи user вже подався у поточному регіоні (щоб заборонити дублікати)
   useEffect(() => {
-    const checkSubmission = async () => {
-      if (!user) return;
-      try {
-        const { data, error } = await supabase
-          .from("simulation")
-          .select("arraycases")
-          .eq("region", formData.region)
-          .maybeSingle();
-
-        if (error) {
-          console.error("Error checking submission:", error);
-          return;
-        }
-
-        const arrayCases = (data && data.arraycases) || [];
-        const already = arrayCases.some((entry) => entry.uid === user.id);
-        setAlreadySubmitted(already);
-      } catch (error) {
-        console.error("Error checking submission:", error);
+    function handleClickOutside(event) {
+      if (event.target.closest(".tutorialButton")) return;
+      if (showTutorial) return;
+      if (
+        settingsModalRef.current &&
+        !settingsModalRef.current.contains(event.target)
+      ) {
+        console.log("Click outside modal detected, closing modal");
+        setIsSettingsModalOpen(false);
       }
+    }
+    if (isSettingsModalOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
     };
-    checkSubmission();
-  }, [user, formData.region]);
+  }, [isSettingsModalOpen, showTutorial]);
 
-  // 6) Обробник полів
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+  useEffect(() => {
+    setRegion(selectedRegion || "Alle");
+  }, [selectedRegion]);
 
-  // 7) Надсилання форми
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  useEffect(() => {
+    setTranslationLanguage(selectedLanguage || "de");
+  }, [selectedLanguage]);
 
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    function handleClickOutsidePage(event) {
+      if (
+        isSearchActive &&
+        pageRef.current &&
+        !pageRef.current.contains(event.target)
+      ) {
+        setIsSearchActive(false);
+        setSearchTerm("");
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutsidePage);
+    return () =>
+      document.removeEventListener("mousedown", handleClickOutsidePage);
+  }, [isSearchActive]);
+
+  useEffect(() => {
+    if (isSettingsModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      if (!showTutorial) {
+        document.body.style.overflow = "auto";
+      }
+    }
+  }, [isSettingsModalOpen, showTutorial]);
+
+  // =========================
+  // FUNCTIONS
+  // =========================
+  const requireAuth = () => {
     if (!user) {
-      toast.error(t.pleaseLogin);
-      return;
+      setShowAuthModal(true);
+      return true;
     }
-    if (alreadySubmitted) {
-      toast.info(t.alreadyAdded);
-      return;
-    }
-
-    try {
-      // ───────────── Частина 1: Додаємо/оновлюємо запис у таблиці "simulation" ─────────────
-      const { data, error } = await supabase
-        .from("simulation")
-        .select("arraycases")
-        .eq("region", formData.region)
-        .maybeSingle();
-
-      if (error) throw error;
-
-      const arrayCases = (data && data.arraycases) || [];
-
-      // Формуємо новий об’єкт entry
-      const newEntry = { uid: user.id, createdAt: new Date().toISOString() };
-      const camelToSnake = (s) => s.replace(/[A-Z]/g, (m) => "_" + m.toLowerCase());
-
-      Object.entries(formData).forEach(([key, value]) => {
-        if (value && value.toString().trim() !== "") {
-          newEntry[camelToSnake(key)] = value;
-        }
-      });
-
-      const updatedArray = [...arrayCases, newEntry];
-
-      if (data) {
-        // якщо запис на такий регіон вже є → UPDATE
-        const { error: updateErr } = await supabase
-          .from("simulation")
-          .update({ arraycases: updatedArray })
-          .eq("region", formData.region);
-        if (updateErr) throw updateErr;
-      } else {
-        // інакше – INSERT
-        const { error: insertErr } = await supabase
-          .from("simulation")
-          .insert({ region: formData.region, arraycases: updatedArray });
-        if (insertErr) throw insertErr;
-      }
-
-      toast.success(t.addedSuccess);
-
-      // ───────────── Частина 2: Викликаємо Edge Function ─────────────
-      console.log("Перед викликом simulationEmail:", {
-        email: formData.email,
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        region: formData.region,
-        arraycases: updatedArray,
-      });
-
-      try {
-        const fnResponse = await simulationEmail(
-          formData.email,
-          formData.firstName,
-          formData.lastName,
-          formData.region,
-          updatedArray
-        );
-        console.log("Simulation-email response:", fnResponse);
-      } catch (errEmail) {
-        console.error("Error при виклику simulation-email:", errEmail);
-if (errEmail?.response) {
-  // supabase-js FunctionsHttpError хранит тело ответа в errEmail.response.data
-  console.error("Response body:", errEmail.response.data);
-}
-        // При потребі: toast.error("Не вдалося надіслати підтвердження на Email");
-      }
-
-      // ───────────── Частина 3: Редіректимо назад на список ─────────────
-      navigate("/simulation");
-    } catch (error) {
-      console.error("Fehler beim Hinzufügen des Falls:", error);
-      toast.error(t.addError);
-    }
+    return false;
   };
 
+  const toggleLearned = (id) => {
+    if (requireAuth()) return;
+    toggleStatus(id, "learned");
+    scheduleFlushChanges();
+  };
+
+  const togglePaused = (id) => {
+    if (requireAuth()) return;
+    toggleStatus(id, "paused");
+    scheduleFlushChanges();
+  };
+
+  const handleRegionChange = (e) => {
+    if (requireAuth()) return;
+    setRegion(e.target.value);
+  };
+
+  const handleCategoryChange = (e) => {
+    if (requireAuth()) return;
+    setSelectedCategory(e.target.value);
+  };
+
+  const handleFilterModeChange = (e) => {
+    if (requireAuth()) return;
+    setFilterMode(e.target.value);
+  };
+
+  const handleBack = () => {
+    navigate("/main_menu");
+  };
+
+  const handleGameClick = () => {
+    if (requireAuth()) return;
+    navigate("/terminology-learning");
+  };
+
+  /**
+   * Callback для закриття модального вікна туторіалу.
+   * Також встановлюємо tutorialModalCompleted, щоб ефект не відкривав модалку знову.
+   */
+  const handleModalComplete = () => {
+    setIsSettingsModalOpen(false);
+    setTutorialModalCompleted(true);
+  };
+
+  // =========================
+  // FILTERING
+  // =========================
+  const filteredTerms = medicalTerms.filter((term) => {
+    const matchesSearch =
+      term.lat.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      term.de.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      term.deExplanation.toLowerCase().includes(searchTerm.toLowerCase());
+
+    const matchesCategory =
+      selectedCategory === "Alle" ||
+      (term.categories || []).includes(selectedCategory);
+
+    const matchesRegion =
+      region === "Alle" || (term.regions || []).includes(region);
+
+    const statusObj = termStatuses[term.id];
+    const status = statusObj?.status || "unlearned";
+
+    if (filterMode === "learned" && status !== "learned") return false;
+    if (filterMode === "paused" && status !== "paused") return false;
+    if (
+      filterMode === "unlearned" &&
+      (status === "learned" || status === "paused")
+    )
+      return false;
+
+    return matchesSearch && matchesCategory && matchesRegion;
+  });
+
+  const termsByCategory = {};
+  filteredTerms.forEach((term) => {
+    (term.categories || []).forEach((category) => {
+      if (!termsByCategory[category]) {
+        termsByCategory[category] = [];
+      }
+      termsByCategory[category].push(term);
+    });
+  });
+
+  const uniqueRegions = Array.from(
+    new Set(medicalTerms.flatMap((term) => term.regions || []))
+  );
+  const regionOptions = ["Alle", ...uniqueRegions];
+  const uniqueCategories = Array.from(
+    new Set(medicalTerms.flatMap((term) => term.categories || []))
+  );
+
+  // =========================
+  // RENDER
+  // =========================
   return (
     <MainLayout>
-      <ProtectedRoute>
-        <div className={styles.container}>
-          <h2>{t.heading}</h2>
-          <form onSubmit={handleSubmit} className={styles.form}>
-            {/* ───────── Регiон ───────── */}
-            <div className={styles.entryRow}>
-              <label>{t.examLocation}:</label>
-              <select
-                name="region"
-                value={formData.region}
-                onChange={handleChange}
-                className={styles.selectField}
-                required
-                disabled={alreadySubmitted}
+      {loading ? (
+        <p>Daten werden geladen...</p>
+      ) : (
+        <>
+          <Helmet>
+            <title>
+              Medizinische Fachbegriffe für die Fachsprachenprüfung in
+              Deutschland
+            </title>
+            <meta
+              name="description"
+              content="Diese Seite richtet sich an alle, die sich auf die Fachsprachenprüfung vorbereiten, eine Approbation anstreben und in Deutschland arbeiten möchten. Lernen Sie medizinische Fachbegriffe effektiv!"
+            />
+            <meta
+              name="keywords"
+              content="Fachsprachenprüfung, medizinische Begriffe, Approbation, Arbeitslizenz, Deutschland"
+            />
+            <meta property="og:image" content={medicalTerminologyBg} />
+          </Helmet>
+
+          <div className={styles.allMedicalTerminologyPage} ref={pageRef}>
+         
+
+            <div className={styles.searchContainer} data-tutorial="searchField">
+              <input
+                type="text"
+                placeholder="Suche..."
+                value={searchTerm}
+                onChange={(e) => {
+                  if (requireAuth()) return;
+                  setSearchTerm(e.target.value);
+                }}
+                className={`${styles.searchInput} ${
+                  isSearchActive ? styles.active : ""
+                }`}
+                style={{ display: isSearchActive ? "block" : "none" }}
+                autoFocus={isSearchActive}
+              />
+              <button
+                className={styles.searchToggleButton}
+                onClick={() => {
+                  if (!user) {
+                    setShowAuthModal(true);
+                    return;
+                  }
+                  if (isSearchActive) {
+                    setSearchTerm("");
+                    setIsSearchActive(false);
+                  } else {
+                    setIsSearchActive(true);
+                  }
+                }}
               >
-                {regions.map((r) => (
-                  <option key={r} value={r}>
-                    {r}
-                  </option>
+                {isSearchActive ? <FaTimes /> : <FaSearch />}
+              </button>
+            </div>
+
+            {isMobile ? (
+              <div className={styles.tilesContainer}>
+                {Object.keys(termsByCategory).map((category, index) => (
+                  <div key={category} className={styles.categorySection}>
+                    <h2
+                      onClick={() => {
+                        if (!user && index !== 0) {
+                          setShowAuthModal(true);
+                          return;
+                        }
+                        setCollapsedCategories((prev) => ({
+                          ...prev,
+                          [category]: !prev[category],
+                        }));
+                      }}
+                      className={styles.categoryHeader}
+                      data-tutorial="categoryHeader"
+                    >
+                      {category}
+                      <span className={styles.collapseIcon}>
+                        {collapsedCategories[category] ? "▼" : "▲"}
+                      </span>
+                    </h2>
+                    {!collapsedCategories[category] && (() => {
+                      const categoryTerms = user
+                        ? termsByCategory[category]
+                        : termsByCategory[category].slice(0, GUEST_CATEGORY_LIMIT);
+                      return categoryTerms.map((term) => {
+                        const statusObj = termStatuses[term.id] || {};
+                        const status = statusObj.status || "unlearned";
+                        return (
+                          <div
+                            key={term.id}
+                            className={`${styles.tile} ${
+                              status === "learned"
+                                ? styles.learned
+                                : status === "paused"
+                                ? styles.paused
+                                : ""
+                            }`}
+                          >
+                            <span
+                              data-tutorial="checkIcon"
+                              className={styles.checkIconDesktop}
+                              onClick={() => toggleLearned(term.id)}
+                              title="Gelernt"
+                            >
+                              <FaCheck />
+                            </span>
+                            <span
+                              data-tutorial="pauseIconMobile"
+                              className={styles.pauseIcon}
+                              onClick={() => togglePaused(term.id)}
+                              title="Pausiert"
+                            >
+                              <FaPause />
+                            </span>
+                            <h3 className={styles.tileHeader}>{term.lat}</h3>
+                            <p
+                              className={styles.tileDescription}
+                              data-tutorial="germanDefinition"
+                            >
+                              {translationLanguage !== "de" ? (
+                                <Tippy
+                                  content={
+                                    term[translationLanguage] ||
+                                    "Keine Übersetzung vorhanden"
+                                  }
+                                  trigger="click"
+                                  interactive={true}
+                                  placement="bottom"
+                                >
+                                  <span className={styles.clickableCell}>
+                                    {term.de}
+                                  </span>
+                                </Tippy>
+                              ) : (
+                                term.de
+                              )}
+                            </p>
+                            {showDefinition && (
+                              <p
+                                className={styles.tileExplanation}
+                                data-tutorial="explanationCell"
+                              >
+                                {translationLanguage !== "de" ? (
+                                  <Tippy
+                                    content={
+                                      term[
+                                        translationLanguage + "Explanation"
+                                      ] || "Keine Übersetzung vorhanden"
+                                    }
+                                    trigger="click"
+                                    interactive={true}
+                                    placement="bottom"
+                                  >
+                                    <span className={styles.clickableCell}>
+                                      {term.deExplanation}
+                                    </span>
+                                  </Tippy>
+                                ) : (
+                                  term.deExplanation
+                                )}
+                              </p>
+                            )}
+                          </div>
+                        );
+                      });
+                    })()}
+                  </div>
                 ))}
-              </select>
-            </div>
+              </div>
+            ) : (
+              Object.keys(termsByCategory).map((category, index) => (
+                <div key={category} className={styles.categorySection}>
+                  <h2
+                    onClick={() => {
+                      if (!user && index !== 0) {
+                        setShowAuthModal(true);
+                        return;
+                      }
+                      setCollapsedCategories((prev) => ({
+                        ...prev,
+                        [category]: !prev[category],
+                      }));
+                    }}
+                    className={styles.categoryHeader}
+                    data-tutorial="categoryHeader"
+                  >
+                    {category}
+                    <span className={styles.collapseIcon}>
+                      {collapsedCategories[category] ? "▼" : "▲"}
+                    </span>
+                  </h2>
+                  {!collapsedCategories[category] && (
+                    <table
+                      className={
+                        !isMobile && !showDefinition
+                          ? `${styles.terminologyTable} ${styles.noDefinition}`
+                          : styles.terminologyTable
+                      }
+                    >
+                      <thead>
+                        <tr>
+                          <th
+                            style={{
+                              width: showDefinition ? "20%" : "50%",
+                              textAlign: "left",
+                            }}
+                          >
+                            Begriff
+                          </th>
+                          <th style={{ width: showDefinition ? "20%" : "50%" }}>
+                            Deutsche Bezeichnung
+                          </th>
+                          {showDefinition && (
+                            <th style={{ width: "60%", textAlign: "left" }}>
+                              Definition
+                            </th>
+                          )}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {(() => {
+                             const categoryTerms = user
+                               ? termsByCategory[category]
+                               : termsByCategory[category].slice(0, GUEST_CATEGORY_LIMIT);
+                             return categoryTerms.map((term) => {
+                              const statusObj = termStatuses[term.id] || {};
+                              const status = statusObj.status || "unlearned";
+                              return (
+                                <tr
+                                  key={term.id}
+                                  className={
+                                    status === "learned"
+                                      ? styles.learned
+                                      : status === "paused"
+                                      ? styles.paused
+                                      : ""
+                                  }
+                                >
+                                  <td className={styles.termCell}>
+                                    <div className={styles.iconWrapper}>
+                                      <span
+                                        data-tutorial="checkIcon"
+                                        className={styles.checkIconDesktop}
+                                        onClick={() => toggleLearned(term.id)}
+                                        title="Gelernt"
+                                      >
+                                        <FaCheck />
+                                      </span>
+                                      <span
+                                        data-tutorial="pauseIconDesktop"
+                                        className={styles.pauseIconDesktop}
+                                        onClick={() => togglePaused(term.id)}
+                                        title="Pausiert"
+                                      >
+                                        <FaPause />
+                                      </span>
+                                    </div>
+                                    <div className={styles.termContent}>
+                                      {term.lat}
+                                    </div>
+                                  </td>
+                                  <td data-tutorial="germanDefinition">
+                                    {translationLanguage !== "de" ? (
+                                      <Tippy
+                                        content={
+                                          term[translationLanguage] ||
+                                          "Keine Übersetzung vorhanden"
+                                        }
+                                        trigger="click"
+                                        interactive={true}
+                                        placement="right"
+                                      >
+                                        <span className={styles.clickableCell}>
+                                          {term.de}
+                                        </span>
+                                      </Tippy>
+                                    ) : (
+                                      term.de
+                                    )}
+                                  </td>
+                                  {showDefinition && (
+                                    <td data-tutorial="explanationCell">
+                                      {translationLanguage !== "de" ? (
+                                        <Tippy
+                                          content={
+                                            term[
+                                              translationLanguage + "Explanation"
+                                            ] || "Keine Übersetzung vorhanden"
+                                          }
+                                          trigger="click"
+                                          interactive={true}
+                                          placement="right"
+                                        >
+                                          <span className={styles.clickableCell}>
+                                            {term.deExplanation}
+                                          </span>
+                                        </Tippy>
+                                      ) : (
+                                        term.deExplanation
+                                      )}
+                                    </td>
+                                  )}
+                                </tr>
+                              );
+                            });
+                        })()}
+                      </tbody>
+                    </table>
+                  )}
+                </div>
+              ))
+            )}
 
-            {/* ───────── Ім’я ───────── */}
-            <div className={styles.entryRow}>
-              <label>{t.firstName}:</label>
-              <input
-                type="text"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleChange}
-                className={styles.inputField}
-                required
-                disabled={alreadySubmitted}
-              />
-            </div>
-
-            {/* ───────── Прізвище ───────── */}
-            <div className={styles.entryRow}>
-              <label>{t.lastName}:</label>
-              <input
-                type="text"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleChange}
-                className={styles.inputField}
-                required
-                disabled={alreadySubmitted}
-              />
-            </div>
-
-            {/* ───────── Країна ───────── */}
-            <div className={styles.entryRow}>
-              <label>{t.country}:</label>
-              <input
-                type="text"
-                name="country"
-                value={formData.country}
-                onChange={handleChange}
-                className={styles.inputField}
-                required
-                disabled={alreadySubmitted}
-              />
-            </div>
-
-            {/* ───────── Email (тільки для читання) ───────── */}
-            <div className={styles.entryRow}>
-              <label>{t.email}:</label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                className={styles.inputField}
-                disabled
-              />
-            </div>
-
-            {/* ───────── Дата екзамену ───────── */}
-            <div className={styles.entryRow}>
-              <label>{t.examDate}:</label>
-              <input
-                type="date"
-                name="pruefungsdatum"
-                value={formData.pruefungsdatum}
-                onChange={handleChange}
-                className={styles.inputField}
-                disabled={alreadySubmitted}
-              />
-            </div>
-
-            {/* ───────── Дата додавання (генерується автоматично) ───────── */}
-            <div className={styles.entryRow}>
-              <label>{t.entryDate}:</label>
-              <input
-                type="date"
-                name="addedDate"
-                value={formData.addedDate}
-                className={styles.inputField}
-                disabled
-              />
-            </div>
-
-            {/* ───────── Мова ───────── */}
-            <div className={styles.entryRow}>
-              <label>{t.language}:</label>
-              <select
-                name="language"
-                value={formData.language}
-                onChange={handleChange}
-                className={styles.selectField}
-                disabled={alreadySubmitted}
-              >
-                {languageOptions.map((lang) => (
-                  <option key={lang.value} value={lang.value}>
-                    {lang.label}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* ───────── Телефон ───────── */}
-            <div className={styles.entryRow}>
-              <label>{t.phone}:</label>
-              <input
-                type="text"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                className={styles.inputField}
-                disabled={alreadySubmitted}
-              />
-            </div>
-
-            {/* ───────── Улюблений канал зв’язку ───────── */}
-            <div className={styles.entryRow}>
-              <label>{t.preferredContact}:</label>
-              <select
-                name="preferredContact"
-                value={formData.preferredContact}
-                onChange={handleChange}
-                className={styles.selectField}
-                disabled={alreadySubmitted}
-              >
-                <option value="phone">Telefon</option>
-                <option value="Telegram">Telegram</option>
-                <option value="WhatsApp">WhatsApp</option>
-                <option value="SMS">SMS</option>
-                <option value="Email">Email</option>
-                <option value="Skype">Skype</option>
-              </select>
-            </div>
-
-            {/* ───────── Кнопка Зберегти ───────── */}
-            {!alreadySubmitted && (
-              <div className={styles.bottomRightSave}>
-                <button type="submit" className={styles.saveButtonNew}>
-                  <FaSave />
-                </button>
+            {isSettingsModalOpen && (
+              <div className={styles.modalOverlay}>
+                <div
+                  className={
+                    window.innerWidth > 768
+                      ? styles.popupDesktopWide
+                      : styles.popupMobile
+                  }
+                  ref={settingsModalRef}
+                >
+                  <button
+                    className={styles.modalCloseButton}
+                    onClick={() => {
+                      if (!showTutorial) {
+                        setIsSettingsModalOpen(false);
+                      }
+                    }}
+                    data-tutorial="closeModal"
+                  >
+                    ×
+                  </button>
+                  <h2 className={styles.modalTitle}>Einstellungen</h2>
+                  <div className={styles.row}>
+                    <div
+                      className={styles.regionColumn}
+                      data-tutorial="regionSelect"
+                    >
+                      <label className={styles.fieldLabel}>Region</label>
+                      <div className={styles.selectWrapper}>
+                        <div className={styles.regionCell}>
+                          {regionAbbreviations[region] || region}
+                        </div>
+                        <select
+                          className={styles.nativeSelect}
+                          value={region}
+                          onChange={handleRegionChange}
+                          data-tutorial="nativeSelectClick"
+                        >
+                          {regionOptions.map((r) => (
+                            <option key={r} value={r}>
+                              {r}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+                    <div
+                      className={styles.filterColumn}
+                      data-tutorial="filterColumn"
+                    >
+                      <label className={styles.fieldLabel}>Filter</label>
+                      <div className={styles.selectWrapper}>
+                        <div className={styles.filterCell}>
+                          {filterModes.find((m) => m.value === filterMode)
+                            ?.icon}
+                        </div>
+                        <select
+                          className={styles.nativeSelect}
+                          value={filterMode}
+                          onChange={handleFilterModeChange}
+                        >
+                          {filterModes.map((mode) => (
+                            <option key={mode.value} value={mode.value}>
+                              {mode.label}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+                    <div
+                      className={styles.categoryColumn}
+                      data-tutorial="categorySelect"
+                    >
+                      <label className={styles.fieldLabel}>Kategorie</label>
+                      <div className={styles.selectWrapper}>
+                        <div className={styles.categoryCell}>
+                          {categoryIcons[selectedCategory] && (
+                            <img
+                              src={categoryIcons[selectedCategory]}
+                              alt={selectedCategory}
+                              className={styles.categoryIcon}
+                            />
+                          )}
+                        </div>
+                        <select
+                          className={styles.nativeSelect}
+                          value={selectedCategory}
+                          onChange={handleCategoryChange}
+                        >
+                          <option value="Alle">Alle</option>
+                          {uniqueCategories.map((c) => (
+                            <option key={c} value={c}>
+                              {c}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+                    <div
+                      className={styles.gameColumn}
+                      data-tutorial="gameContainer"
+                    >
+                      <label className={styles.fieldLabel}>Spiel</label>
+                      <div
+                        className={styles.selectWrapper}
+                        onClick={handleGameClick}
+                        style={{ cursor: "pointer" }}
+                      >
+                        <div className={styles.gameCell}>
+                          <FaGamepad size={24} color="#013b6e" />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className={styles.definitionColumn}
+                      data-tutorial="definitionToggle"
+                    >
+                      <label className={styles.fieldLabel}>Definition</label>
+                      <div
+                        className={`${styles.definitionToggle} ${
+                          showDefinition ? styles.active : ""
+                        }`}
+                        onClick={() => {
+                          if (requireAuth()) return;
+                          setShowDefinition((prev) => !prev);
+                        }}
+                      >
+                        <span className={styles.toggleText}>
+                          {showDefinition ? "An" : "Aus"}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             )}
-          </form>
 
-          {alreadySubmitted && (
-            <p className={styles.infoMessage}>{t.alreadyAdded}</p>
-          )}
+            <div className={styles.bottomRightSettings}>
+              <button
+                className={styles.settingsButton}
+                onClick={() => {
+                  if (requireAuth()) return;
+                  setIsSettingsModalOpen(true);
+                }}
+              >
+                <FaCog />
+              </button>
+            </div>
 
-          {/* ───────── Кнопка Назад ───────── */}
-          <div className={styles.main_menu_back}>
-            <button
-              onClick={() => navigate("/simulation")}
-              className={styles.backButton}
-            >
-              &#8592;
-            </button>
+            {isSettingsModalOpen && (
+              <div
+                className="tutorialButton"
+                style={{
+                  position: "fixed",
+                  top: "65px",
+                  left: "5px",
+                  zIndex: 9999,
+                  width: "35px",
+                  height: "35px",
+                  padding: "5px",
+                  cursor: "pointer",
+                }}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  console.log("Tutorial button clicked!");
+                  localStorage.removeItem(
+                    "allMedicalTerminologyTutorialCompleted"
+                  );
+                  // При повторному запуску скидаємо стан, щоб модалка знову відкрилася
+                  setTutorialKey((prev) => prev + 1);
+                  setTutorialModalCompleted(false);
+                  setShowTutorial(true);
+                  setIsSettingsModalOpen(true);
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="30"
+                  height="30"
+                  fill="none"
+                  stroke="#ededed"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
+                  <line x1="12" y1="12" x2="12" y2="15.5" strokeWidth="3" />
+                  <circle cx="12" cy="7" r="0.5" fill="#ededed" />
+                </svg>
+              </div>
+            )}
           </div>
-        </div>
-      </ProtectedRoute>
+
+          <AuthModal
+            isOpen={showAuthModal}
+            onClose={() => setShowAuthModal(false)}
+          />
+
+          {showTutorial && (
+            <AllMedicalTerminologyTutorial
+              key={tutorialKey}
+              ref={joyrideRef}
+              run={showTutorial}
+              onFinish={() => {
+                setShowTutorial(false);
+                setIsSettingsModalOpen(false);
+              }}
+              onModalComplete={handleModalComplete}
+              selectedLanguage={selectedLanguage}
+            />
+          )}
+        </>
+      )}
     </MainLayout>
   );
 };
 
-export default AddSimulationEntryPage;
+const AllMedicalTerminologyPage = () => {
+  return (
+    <TermStatusProvider>
+      <AllMedicalTerminologyContent />
+    </TermStatusProvider>
+  );
+};
+
+export default AllMedicalTerminologyPage;
