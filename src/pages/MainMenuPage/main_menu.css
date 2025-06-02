@@ -100,28 +100,29 @@
    padding: 16px;
 }
 
-.login_lock_container {
-  position: fixed;
-  bottom: 16px;
-  right: 20px;
-  z-index: 3000;
-}
 
 .login_lock_button {
-    margin-top: auto;
-    width: 35px;
-    height: 28px;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    right: 20px;
-    bottom: 0;
-    animation: pulse 2s infinite;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 20;
+  width: 35px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  animation: pulse 2s infinite;
 }
 .login_lock_button:hover {
-  background-color: #4bae50;
-  transform: scale(1.1);
+  background-color: #4caf50;
+}
+.login_lock_button:active {
+  transform: scale(0.95);
 }
 
 @keyframes pulse {
