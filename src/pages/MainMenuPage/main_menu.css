@@ -99,3 +99,42 @@
    max-height: 500px; /* Можна відрегулювати залежно від довжини тексту */
    padding: 16px;
 }
+
+.login_lock_container {
+  position: fixed;
+  bottom: 16px;
+  right: 20px;
+  z-index: 3000;
+}
+
+.login_lock_button {
+    margin-top: auto;
+    width: 35px;
+    height: 28px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 20px;
+    bottom: 0;
+    animation: pulse 2s infinite;
+}
+.login_lock_button:hover {
+  background-color: #4bae50;
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 #4bae50;
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}

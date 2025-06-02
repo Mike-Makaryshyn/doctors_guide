@@ -14,11 +14,18 @@ import "./main_menu.css";
 
 import BackgroundMedia from "../../components/BackgroundMedia/BackgroundMedia";
 
+import { useAuth } from "../../hooks/useAuth";
+import { useNavigate } from "react-router-dom";
+import { FaSignInAlt } from "react-icons/fa";
+
 const MainMenuPage = () => {
    const {
       selectedLanguage: language,
       selectedRegion,
    } = useGetGlobalInfo();
+
+   const { user, loading } = useAuth();
+   const navigate = useNavigate();
 
    const returnLandDesc = () => {
       const desc = LANDS_INFO?.find((land) => land?.name === selectedRegion)?.desc[language];
@@ -103,6 +110,16 @@ const MainMenuPage = () => {
                </div>
             </div>
          </div>
+         {!loading && !user && (
+           <div className="login_lock_container">
+             <button
+               className="login_lock_button"
+               onClick={() => navigate("/auth")}
+             >
+               <FaSignInAlt size={24} color="white" />
+             </button>
+           </div>
+         )}
       </MainLayout>
    );
 };
