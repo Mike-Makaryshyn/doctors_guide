@@ -5,6 +5,7 @@ import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./styles.module.scss";
 import cn from "classnames";
+import bgVideo from "../../assets/video/first_page_bg.mp4";
 import fspImage from "../../assets/whatisbilder/fsp-image.jpg"; // імпорт картинки для мета-даних
 
 // Компонент для рендерингу абзаців із підтримкою переносів рядків
@@ -35,7 +36,7 @@ const renderBulletList = (text) => {
 };
 
 const WhatIsFSPPage = () => {
-  const { selectedLanguage: language, handleChangePage } = useGetGlobalInfo();
+  const { selectedLanguage: language, handleChangePage, selectedRegion } = useGetGlobalInfo();
   const content = FSP_INFO[language];
 
   return (
@@ -67,7 +68,18 @@ const WhatIsFSPPage = () => {
         <meta property="og:image" content={fspImage} />
       </Helmet>
       <div className="page page1 containerBigger mt-20">
-        <div className="firstPageImageBlock"></div>
+        <div className="firstPageImageBlock">
+          {!selectedRegion && (
+            <video
+              className="backgroundVideo"
+              autoPlay
+              muted
+              loop
+              playsInline
+              src={bgVideo}
+            />
+          )}
+        </div>
         <div className={cn("main_menu__content", styles.what_is_fsp__content)}>
    
 

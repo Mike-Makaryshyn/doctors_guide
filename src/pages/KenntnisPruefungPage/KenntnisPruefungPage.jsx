@@ -5,6 +5,7 @@ import { KENNTNISPRUEFUNG_INFO } from "../../constants/translation/kenntnisPruef
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import styles from "./styles.module.scss";
 import cn from "classnames";
+import bgVideo from "../../assets/video/first_page_bg.mp4";
 import guideImage from "../../assets/whatisbilder/kenntnispruefung_guide.jpg";
 
 // Компонент для рендерингу абзаців із підтримкою переносів рядків
@@ -22,7 +23,7 @@ const RenderParagraphs = ({ text }) => {
 };
 
 const KenntnisPruefungPage = () => {
-  const { selectedLanguage: language, handleChangePage } = useGetGlobalInfo();
+  const { selectedLanguage: language, handleChangePage, selectedRegion } = useGetGlobalInfo();
   const content = KENNTNISPRUEFUNG_INFO[language];
 
   if (!content) {
@@ -57,7 +58,18 @@ const KenntnisPruefungPage = () => {
       </Helmet>
 
       <div className="page containerBigger mt-20">
-        <div className="firstPageImageBlock"></div>
+        <div className="firstPageImageBlock">
+          {!selectedRegion && (
+            <video
+              className="backgroundVideo"
+              autoPlay
+              muted
+              loop
+              playsInline
+              src={bgVideo}
+            />
+          )}
+        </div>
         <div className={cn("main_menu__content", styles.knowledge_examination_content)}>
  
 

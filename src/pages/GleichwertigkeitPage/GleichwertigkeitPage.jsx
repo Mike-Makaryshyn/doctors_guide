@@ -5,6 +5,7 @@ import { GLEICHWERTIGKEIT_INFO } from "../../constants/translation/whatIsGleichw
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import styles from "./styles.module.scss";
 import cn from "classnames";
+import bgVideo from "../../assets/video/first_page_bg.mp4";
 import gleichwertigkeitImage from "../../assets/whatisbilder/gleichwertigkeit-image.jpg"; // імпорт картинки для мета-даних
 
 // Компонент для рендерингу абзаців із підтримкою переносів рядків
@@ -22,7 +23,7 @@ const RenderParagraphs = ({ text }) => {
 };
 
 const GleichwertigkeitPage = () => {
-  const { selectedLanguage: language, handleChangePage } = useGetGlobalInfo();
+  const { selectedLanguage: language, handleChangePage, selectedRegion } = useGetGlobalInfo();
   const content = GLEICHWERTIGKEIT_INFO[language];
 
   if (!content) {
@@ -54,7 +55,18 @@ const GleichwertigkeitPage = () => {
         <meta property="og:image" content={gleichwertigkeitImage} />
       </Helmet>
       <div className="page containerBigger mt-20">
-        <div className="firstPageImageBlock"></div>
+        <div className="firstPageImageBlock">
+          {!selectedRegion && (
+            <video
+              className="backgroundVideo"
+              autoPlay
+              muted
+              loop
+              playsInline
+              src={bgVideo}
+            />
+          )}
+        </div>
         <div className={cn("main_menu__content", styles.gleichwertigkeit_content)}>
     
 

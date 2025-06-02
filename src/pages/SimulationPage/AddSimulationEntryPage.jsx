@@ -8,6 +8,7 @@ import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
 import { supabase, simulationEmail } from "../../supabaseClient.js";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { useSubscription } from "../../contexts/SubscriptionContext";
 import { FaSave } from "react-icons/fa";
 import styles from "./AddSimulationEntryPage.module.scss";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
@@ -55,6 +56,14 @@ const AddSimulationEntryPage = () => {
   const navigate = useNavigate();
   const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
   const t = languages[selectedLanguage] || languages[DEFAULT_LANGUAGE];
+  const { status: subscriptionStatus } = useSubscription();
+  const isSubscribed = subscriptionStatus === "active";
+  useEffect(() => {
+    // Redirect if not logged in or if not subscribed
+    if (user === null || !isSubscribed) {
+      navigate("/simulation");
+    }
+  }, [user, isSubscribed, navigate]);
 
   const [formData, setFormData] = useState({
     region: selectedRegion || "Bayern",

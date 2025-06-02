@@ -13,9 +13,6 @@ import { DocumentsProgressProvider } from "../contexts/DocumentsProgressContext"
 const IntroductionPage = React.lazy(() =>
   import("../pages/IntroductionPage/IntroductionPage")
 );
-const GermanyLandsPage = React.lazy(() =>
-  import("../pages/GermanyLandsPage/GermanyLandsPage")
-);
 
 const MainMenuPage = React.lazy(() =>
   import("../pages/MainMenuPage/MainMenuPage")
@@ -257,16 +254,14 @@ export default function Routers() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
+        <Route path="/" element={<IntroductionPage />} />
         {/* Динамічне рендеринг початкової сторінки на основі localStorage */}
-        {localStorageGet("currentPage", "/") === "/lands" && (
-          <Route path="/" element={<GermanyLandsPage />} />
-        )}
         {localStorageGet("currentPage", "/") === "/main_menu" && (
           <Route path="/" element={<MainMenuPage />} />
         )}
-        {localStorageGet("currentPage", "/") === "/" && (
+        {/* {localStorageGet("currentPage", "/") === "/" && (
           <Route path="/" element={<IntroductionPage />} />
-        )}
+        )} */}
 
         {/* Основні сторінки */}
         <Route
@@ -361,7 +356,6 @@ export default function Routers() {
         <Route path={pathList.social_media.path} element={<SocialMediaListPage />} />
         <Route path={pathList.custom_map.path} element={<CustomGermanyMap />} />
         <Route path="/fill-in-blank-game" element={<FillInBlankGame />} />
-        <Route path={pathList.lands.path} element={<GermanyLandsPage />} />
         <Route path={pathList.main_menu.path} element={<MainMenuPage />} />
         <Route
           path={pathList.documents.path}

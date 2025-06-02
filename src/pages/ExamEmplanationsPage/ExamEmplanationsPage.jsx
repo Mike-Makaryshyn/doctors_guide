@@ -5,6 +5,7 @@ import { exam_categories, parentTabs } from "../../constants/exam_explanations";
 import styles from "./styles.module.scss";
 import { localStorageGet } from "../../utils/localStorage";
 import cn from "classnames";
+import bgVideo from "../../assets/video/first_page_bg.mp4";
 
 const handleChangePage = (path) => {
   window.location.href = path;
@@ -311,7 +312,18 @@ const ExamExplanationsPage = () => {
   return (
     <MainLayout>
       <div className="page page1 containerBigger containerMax mt-20">
-        <div className="firstPageImageBlock"></div>
+        <div className="firstPageImageBlock">
+          {!selectedRegion && (
+            <video
+              className="backgroundVideo"
+              autoPlay
+              muted
+              loop
+              playsInline
+              src={bgVideo}
+            />
+          )}
+        </div>
         <div className="main_menu__content">
           <div className={styles.parentTabsWrapper}>
             {parentTabs.map((parentTab) => {

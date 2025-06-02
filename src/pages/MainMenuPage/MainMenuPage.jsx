@@ -8,8 +8,11 @@ import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import newsData from "./newData";
 import logoMeta from "../../assets/logometagen.jpeg";
+import bgVideo from "../../assets/video/first_page_bg.mp4";
 
 import "./main_menu.css";
+
+import BackgroundMedia from "../../components/BackgroundMedia/BackgroundMedia";
 
 const MainMenuPage = () => {
    const {
@@ -52,7 +55,7 @@ const MainMenuPage = () => {
             <meta name="twitter:image" content={logoMeta} />
          </Helmet>
          <div className="page page1 containerSmall mt-20">
-            <div className="firstPageImageBlock"></div>
+            <BackgroundMedia />
             <div className="main_menu__content">
                <div className="main_menu_wrapper">
                   {!selectedRegion && (

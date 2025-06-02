@@ -4,6 +4,9 @@ import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
 import { supabase } from "../../supabaseClient";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
+import { useSubscription } from "../../contexts/SubscriptionContext";
+import AuthModal from "../../pages/AuthPage/AuthModal";
+import SubscriptionModal from "../../pages/AuthPage/SubscriptionModal";
 import { Helmet } from "react-helmet";
 import simPageMetaImage from "../../assets/simulationpagemeta.png";
 import { FaCog, FaArrowLeft, FaUserPlus, FaTrash } from "react-icons/fa";
@@ -107,6 +110,18 @@ const SimulationPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const modalRef = useRef(null);
 
+  const { status: subscriptionStatus } = useSubscription();
+  const isSubscribed = subscriptionStatus === "active";
+
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [showSubscriptionModal, setShowSubscriptionModal] = useState(false);
+
+  const handleShowAuthModal = () => setShowAuthModal(true);
+  const handleCloseAuthModal = () => setShowAuthModal(false);
+
+  const handleShowSubscriptionModal = () => setShowSubscriptionModal(true);
+  const handleCloseSubscriptionModal = () => setShowSubscriptionModal(false);
+
   // Стан для фільтрації за мовою – фільтрація реалізована лише в модальному вікні
   const [languageFilter, setLanguageFilter] = useState("");
 
@@ -135,8 +150,12 @@ const SimulationPage = () => {
   };
 
   useEffect(() => {
-    fetchSimulationCases(region);
-  }, [region]);
+    if (user) {
+      fetchSimulationCases(region);
+    } else {
+      setSimulationCases([]);
+    }
+  }, [region, user]);
 
   const filteredCases = languageFilter
     ? simulationCases.filter((item) => item.language === languageFilter)
@@ -253,73 +272,82 @@ const SimulationPage = () => {
           </button>
 
           {/* Список плиток */}
-          <div className={styles.tilesContainer}>
-            {filteredCases.length === 0 ? (
-              <div className={styles.noEntriesOverlay}>
-                <div className={styles.noEntriesMessage}>
-                  <p>{t.noEntries}</p>
-                </div>
+          {!user ? (
+            <div className={styles.noEntriesOverlay}>
+              <div className={styles.noEntriesMessage}>
+                <p>Bitte melde dich an, um Simulationen zu sehen.</p>
               </div>
-            ) : (
-              filteredCases.map((item, index) => {
-                // Support both camelCase (old entries) and snake_case (new entries)
-                const firstName = item.firstName ?? item.first_name ?? "";
-                const lastName = item.lastName ?? item.last_name ?? "";
-                const preferredContact = item.preferredContact ?? item.preferred_contact;
-                const addedDate = item.addedDate ?? item.added_date;
-
-                return (
-                  <div key={index} className={styles.tile}>
-                    <h3 className={styles.tileHeader}>
-                      {firstName} {lastName}
-                    </h3>
-
-                    {item.email && (
-                      <p className={styles.tileItem}>
-                        <strong>{t.tileEmailLabel}</strong>{" "}
-                        <a href={`mailto:${item.email}`} className={styles.link}>
-                          {item.email}
-                        </a>
-                      </p>
-                    )}
-
-                    {item.phone && (
-                      <p className={styles.tileItem}>
-                        <strong>{t.tilePhoneLabel}</strong>{" "}
-                        <a href={`tel:${item.phone}`} className={styles.link}>
-                          {item.phone}
-                        </a>
-                      </p>
-                    )}
-
-                    {preferredContact && (
-                      <p className={styles.tileItem}>
-                        <strong>{t.tileContactLabel}</strong> {preferredContact}
-                      </p>
-                    )}
-
-                    {item.language && (
-                      <p className={styles.tileItem}>
-                        <strong>{t.tileLanguageLabel}</strong> {getLanguageLabel(item.language)}
-                      </p>
-                    )}
-
-                    {item.pruefungsdatum && (
-                      <p className={styles.tileItem}>
-                        <strong>{t.tileExamDateLabel}</strong> {item.pruefungsdatum}
-                      </p>
-                    )}
-
-                    {addedDate && (
-                      <p className={styles.tileItem}>
-                        <strong>{t.tileEntryDateLabel}</strong> {addedDate}
-                      </p>
-                    )}
+            </div>
+          ) : null}
+          {user && (
+            <div className={styles.tilesContainer}>
+              {filteredCases.length === 0 ? (
+                <div className={styles.noEntriesOverlay}>
+                  <div className={styles.noEntriesMessage}>
+                    <p>{t.noEntries}</p>
                   </div>
-                );
-              })
-            )}
-          </div>
+                </div>
+              ) : (
+                filteredCases.map((item, index) => {
+                  // Support both camelCase (old entries) and snake_case (new entries)
+                  const firstName = item.firstName ?? item.first_name ?? "";
+                  const lastName = item.lastName ?? item.last_name ?? "";
+                  const preferredContact = item.preferredContact ?? item.preferred_contact;
+                  const addedDate = item.addedDate ?? item.added_date;
+
+                  return (
+                    <div key={index} className={styles.tile}>
+                      <h3 className={styles.tileHeader}>
+                        {firstName} {lastName}
+                      </h3>
+
+                      {item.email && (
+                        <p className={styles.tileItem}>
+                          <strong>{t.tileEmailLabel}</strong>{" "}
+                          <a href={`mailto:${item.email}`} className={styles.link}>
+                            {item.email}
+                          </a>
+                        </p>
+                      )}
+
+                      {item.phone && (
+                        <p className={styles.tileItem}>
+                          <strong>{t.tilePhoneLabel}</strong>{" "}
+                          <a href={`tel:${item.phone}`} className={styles.link}>
+                            {item.phone}
+                          </a>
+                        </p>
+                      )}
+
+                      {preferredContact && (
+                        <p className={styles.tileItem}>
+                          <strong>{t.tileContactLabel}</strong> {preferredContact}
+                        </p>
+                      )}
+
+                      {item.language && (
+                        <p className={styles.tileItem}>
+                          <strong>{t.tileLanguageLabel}</strong> {getLanguageLabel(item.language)}
+                        </p>
+                      )}
+
+                      {item.pruefungsdatum && (
+                        <p className={styles.tileItem}>
+                          <strong>{t.tileExamDateLabel}</strong> {item.pruefungsdatum}
+                        </p>
+                      )}
+
+                      {addedDate && (
+                        <p className={styles.tileItem}>
+                          <strong>{t.tileEntryDateLabel}</strong> {addedDate}
+                        </p>
+                      )}
+                    </div>
+                  );
+                })
+              )}
+            </div>
+          )}
 
           {/* Модальне вікно */}
           {isModalOpen && (
@@ -385,14 +413,22 @@ const SimulationPage = () => {
                 {/* Add */}
                 <div className={styles.modalItem}>
                   <span className={styles.fieldLabel}>Neu</span>
-                  <Link
-                    to="/add-simulation"
+                  <button
                     className={styles.actionButton}
-                    onClick={() => setIsModalOpen(false)}
+                    onClick={() => {
+                      if (!user) {
+                        handleShowAuthModal();
+                      } else if (!isSubscribed) {
+                        handleShowSubscriptionModal();
+                      } else {
+                        setIsModalOpen(false);
+                        navigate("/add-simulation");
+                      }
+                    }}
                     aria-label={t.addEntryAria}
                   >
                     <FaUserPlus size={18} />
-                  </Link>
+                  </button>
                 </div>
 
                 {/* Delete */}
@@ -401,8 +437,14 @@ const SimulationPage = () => {
                   <button
                     className={styles.deleteButton}
                     onClick={() => {
-                      handleDeleteCase();
-                      setIsModalOpen(false);
+                      if (!user) {
+                        handleShowAuthModal();
+                      } else if (!isSubscribed) {
+                        handleShowSubscriptionModal();
+                      } else {
+                        handleDeleteCase();
+                        setIsModalOpen(false);
+                      }
                     }}
                     aria-label={t.deleteEntryAria}
                   >
@@ -413,6 +455,9 @@ const SimulationPage = () => {
             </div>
           )}
           </div>
+
+          <AuthModal isOpen={showAuthModal} onClose={handleCloseAuthModal} />
+          <SubscriptionModal isOpen={showSubscriptionModal} onClose={handleCloseSubscriptionModal} />
 
           {/* Кнопка Back */}
           <div className={styles.main_menu_back}>
