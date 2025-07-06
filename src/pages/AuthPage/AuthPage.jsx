@@ -11,15 +11,25 @@ import bg from '../../assets/hintergrungAuth-2.svg';
 
 // Function to restore an existing session by tokens
 const restoreSession = async (access_token, refresh_token) => {
-  const { data, error } = await supabase.auth.setSession({
-    access_token,
-    refresh_token
-  });
-  if (error) {
+  if (!supabase) {
+    console.warn('Supabase is not configured, cannot restore session');
+    return false;
+  }
+  
+  try {
+    const { data, error } = await supabase.auth.setSession({
+      access_token,
+      refresh_token
+    });
+    if (error) {
+      console.error('Error restoring session:', error);
+      return false;
+    }
+    return true;
+  } catch (error) {
     console.error('Error restoring session:', error);
     return false;
   }
-  return true;
 };
 
 const AuthPage = () => {
@@ -52,13 +62,20 @@ const AuthPage = () => {
           localStorage.removeItem("refresh_token");
         });
     }
-  }, []);
+  }, [navigate]);
 
   const { selectedLanguage } = useGetGlobalInfo();
   const t = languages[selectedLanguage] || languages[DEFAULT_LANGUAGE];
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    
+    // Check if Supabase is configured
+    if (!supabase) {
+      setLoginError("Supabase ist nicht konfiguriert. Bitte setzen Sie die Umgebungsvariablen VITE_SUPABASE_URL und VITE_SUPABASE_ANON_KEY.");
+      return;
+    }
+    
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     emailRef.current.setCustomValidity("");
     if (!emailRegex.test(email)) {
@@ -66,33 +83,43 @@ const AuthPage = () => {
       emailRef.current.reportValidity();
       return;
     }
-    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
-    if (error) {
-      const errorMessage = error?.message?.toLowerCase?.() || "";
-      const msg = t.invalidCredentials;
+    
+    try {
+      const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+      if (error) {
+        const errorMessage = error?.message?.toLowerCase?.() || "";
+        const msg = t.invalidCredentials;
 
-      setLoginError(error.message || msg);
+        setLoginError(error.message || msg);
 
-      emailRef.current.setCustomValidity("");
-      passwordRef.current.setCustomValidity("");
+        emailRef.current.setCustomValidity("");
+        passwordRef.current.setCustomValidity("");
 
-      if (errorMessage.includes("email") || errorMessage.includes("credentials")) {
-        emailRef.current.setCustomValidity(msg);
-        emailRef.current.reportValidity();
-      } else if (errorMessage.includes("password")) {
-        passwordRef.current.setCustomValidity(msg);
-        passwordRef.current.reportValidity();
+        if (errorMessage.includes("email") || errorMessage.includes("credentials")) {
+          emailRef.current.setCustomValidity(msg);
+          emailRef.current.reportValidity();
+        } else if (errorMessage.includes("password")) {
+          passwordRef.current.setCustomValidity(msg);
+          passwordRef.current.reportValidity();
+        } else {
+          // fallback
+          passwordRef.current.setCustomValidity(msg);
+          passwordRef.current.reportValidity();
+        }
+        return;
       } else {
-        // fallback
-        passwordRef.current.setCustomValidity(msg);
-        passwordRef.current.reportValidity();
+        // Validate session data before storing
+        if (data?.session?.access_token && data?.session?.refresh_token) {
+          localStorage.setItem("access_token", data.session.access_token);
+          localStorage.setItem("refresh_token", data.session.refresh_token);
+          navigate("/dashboard");
+        } else {
+          setLoginError("Ungültige Sitzungsdaten erhalten");
+        }
       }
-      return;
-    } else {
-      // store tokens
-      localStorage.setItem("access_token", data.session.access_token);
-      localStorage.setItem("refresh_token", data.session.refresh_token);
-      navigate("/dashboard");
+    } catch (error) {
+      console.error("Login error:", error);
+      setLoginError("Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.");
     }
   };
 
@@ -107,9 +134,14 @@ const AuthPage = () => {
           backgroundSize: 'cover',
           backgroundAttachment: 'fixed'
         }}
-      >
-        <h1>{t.loginTitle}</h1>
-        <form onSubmit={handleLogin} className={styles.form} noValidate>
+              >
+          <h1>{t.loginTitle}</h1>
+          {loginError && (
+            <div className={styles.errorMessage} style={{ color: 'red', marginBottom: '10px', textAlign: 'center' }}>
+              {loginError}
+            </div>
+          )}
+          <form onSubmit={handleLogin} className={styles.form} noValidate>
           <input
             ref={emailRef}
             type="text"
@@ -145,6 +177,7 @@ const AuthPage = () => {
             }}
             required
             className={styles.input}
+            autoComplete="current-password"
           />
           <button type="submit" className={styles.submitButton}>
             {t.loginButton}

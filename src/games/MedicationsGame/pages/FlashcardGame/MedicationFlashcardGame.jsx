@@ -77,7 +77,7 @@ const MedicationFlashcardGameContent = () => {
   // Supabase Auth
   const { user } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
-  const loading = user === undefined; // treat “undefined” as loading (if needed)
+  const loading = user === undefined; // treat "undefined" as loading (if needed)
   const requireAuth = () => {
     if (!user) {
       setShowAuthModal(true);
@@ -522,7 +522,7 @@ const MedicationFlashcardGameContent = () => {
             <div className={isMobile ? styles.popupMobile : styles.popupDesktop}>
               {/* Кнопка закриття, яка ТІЛЬКИ закриває модальне вікно */}
               <button
-                className={styles.modalCloseButton}
+                className='modalCloseButton'
                 onClick={() => setSettingsOpen(false)}
               >
                 ×

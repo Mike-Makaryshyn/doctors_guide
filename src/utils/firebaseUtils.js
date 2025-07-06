@@ -9,6 +9,10 @@ import { supabase } from "../supabaseClient";
  * @returns {Promise<Object>} - The record data.
  */
 export const fetchDataFromSupabase = async (table, id) => {
+  if (!supabase) {
+    throw new Error("Supabase ist nicht konfiguriert");
+  }
+  
   try {
     const { data, error } = await supabase
       .from(table)

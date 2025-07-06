@@ -1,0 +1,30 @@
+.efastContainer {
+  text-align: center;
+  max-width: 400px;
+  margin: 2rem auto;
+  background: #fefefe;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.silhouetteSvg {
+  width: 100%;
+  height: auto;
+}
+
+.regionDetails {
+  margin-top: 1rem;
+  background: #e8f5e9;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.region {
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.region:hover {
+  opacity: 0.6;
+}

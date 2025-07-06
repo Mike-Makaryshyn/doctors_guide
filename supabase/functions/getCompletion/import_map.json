@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "npm:": "https://ghcdn.rawgit.org/skymethod/openai-deno/v3.1.0/mod.ts"
+  }
+}

@@ -21,7 +21,7 @@ const useGetGlobalInfo = () => {
   // Код для роботи з регіоном
   // =======================
   const saveSelectedRegionToFirebase = async (region) => {
-    if (!user) return;
+    if (!user || !supabase) return;
     try {
       const { error } = await supabase.auth.updateUser({
         data: { selectedRegion: region }
@@ -50,8 +50,8 @@ const useGetGlobalInfo = () => {
 
   // OPTIONAL: Функція для зміни educationRegion
   const handleChangeEducationCategory = async (newCategory) => {
-    if (!user) {
-      console.warn("Unauthorized user cannot change educationRegion.");
+    if (!user || !supabase) {
+      console.warn("Unauthorized user or Supabase not configured cannot change educationRegion.");
       return;
     }
     if (newCategory !== "EU" && newCategory !== "Non-EU") {
@@ -96,10 +96,19 @@ const useGetGlobalInfo = () => {
   // onAuthStateChanged - відслідковуємо авторизацію (Supabase)
   // =====================
   useEffect(() => {
+    if (!supabase) {
+      console.warn('Supabase is not configured, skipping auth initialization');
+      setUser(null);
+      return;
+    }
+
     // Initial session fetch
     supabase.auth.getSession().then(({ data: { session } }) => {
       setUser(session?.user || null);
-    }).catch(console.error);
+    }).catch((error) => {
+      console.error('Error fetching session:', error);
+      setUser(null);
+    });
 
     // Listen for auth changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_, session) => {

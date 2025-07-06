@@ -314,7 +314,7 @@ const SimpleChoiceGameContent = () => {
     return (
       <div className={styles.resultsTile}>
         <button
-          className={styles.modalCloseButton}
+          className='modalCloseButton'
           onClick={() => setGameFinished(false)}
         >
           ×
@@ -403,7 +403,7 @@ const SimpleChoiceGameContent = () => {
         {settingsOpen && (
           <div className={styles.modalOverlay}>
             <div className={window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile}>
-              <button className={styles.modalCloseButton} onClick={() => setSettingsOpen(false)}>
+              <button className='modalCloseButton' onClick={() => setSettingsOpen(false)}>
                 ×
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>

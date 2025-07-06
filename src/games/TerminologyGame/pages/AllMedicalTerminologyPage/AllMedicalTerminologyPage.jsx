@@ -623,7 +623,7 @@ const AllMedicalTerminologyContent = () => {
                   ref={settingsModalRef}
                 >
                   <button
-                    className={styles.modalCloseButton}
+                    className='modalCloseButton'
                     onClick={() => {
                       if (!showTutorial) {
                         setIsSettingsModalOpen(false);

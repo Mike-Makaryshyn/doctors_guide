@@ -58,7 +58,7 @@ const MedicationFillInBlankGameContent = () => {
 
   // Supabase Auth логіка
   const { user } = useAuth();
-  const loading = user === undefined; // treat “undefined” as loading
+  const loading = user === undefined; // treat "undefined" as loading
   const [showAuthModal, setShowAuthModal] = useState(false);
   const requireAuth = () => {
     if (!user) {
@@ -278,7 +278,7 @@ const MedicationFillInBlankGameContent = () => {
     const categoryErrors = berechneKategorieFehler();
     return (
       <div className={styles.resultsTile}>
-        <button className={styles.modalCloseButton} onClick={() => setGameFinished(false)}>
+        <button className='modalCloseButton' onClick={() => setGameFinished(false)}>
           ×
         </button>
         <h3>Spielergebnisse</h3>
@@ -349,7 +349,7 @@ const MedicationFillInBlankGameContent = () => {
         {settingsOpen && (
           <div className={styles.modalOverlay}>
             <div className={window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile}>
-              <button className={styles.modalCloseButton} onClick={closeSettings}>
+              <button className='modalCloseButton' onClick={closeSettings}>
                 ×
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>

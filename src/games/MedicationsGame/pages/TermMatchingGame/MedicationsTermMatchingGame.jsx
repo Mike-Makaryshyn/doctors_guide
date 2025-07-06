@@ -79,7 +79,7 @@ function MedicationTermMatchingGameContent() {
   // Supabase Auth
   const { user } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
-  const loading = user === undefined; // treat “undefined” as loading
+  const loading = user === undefined; // treat "undefined" as loading
   const requireAuth = () => {
     if (!user) {
       setShowAuthModal(true);
@@ -507,7 +507,10 @@ function MedicationTermMatchingGameContent() {
         {gameFinished && (
           <div className={styles.resultsOverlay}>
             <div className={styles.resultsTile}>
-              <button className={styles.modalCloseButton} onClick={handleCloseResults}>
+              <button
+                className='modalCloseButton'
+                onClick={handleCloseResults}
+              >
                 ×
               </button>
               <h3>Ergebnisse</h3>

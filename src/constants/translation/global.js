@@ -2,7 +2,7 @@ export const languageFlags = {
    de: "🇩🇪",
    en: "🇬🇧",
    uk: "🇺🇦",
-   ru: "💩",
+   ru: "🇷🇺", // Russian
    tr: "🇹🇷", // Turkish
    ar: "🇸🇦", // Arabic
    fr: "🇫🇷", // French

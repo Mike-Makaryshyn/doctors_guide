@@ -21,6 +21,7 @@ import {
 import AbbreviationsTermMatchingGameTutorial from "./AbbreviationsTermMatchingGameTutorial";
 import styles from "./TermMatchingGame.module.scss";
 import matchingGameBg from "../../../../assets/abbreviation-term-matching-bg.jpg";
+import { initGameDataUtil } from "./initGameDataUtil";
 
 // Допоміжна функція для сортування категорій: алфавітно, з "Andere" завжди останньою
 const sortCategoriesWithAndereLast = (categories) => {
@@ -53,6 +54,217 @@ const filterModes = [
 // Функція для перетасування масиву
 function shuffleArray(arr) {
   return [...arr].sort(() => Math.random() - 0.5);
+}
+
+// Декомпозовані компоненти (скелети)
+function GameBoard({ displayedLeft, displayedRight, matchedPairs, wrongLeft, wrongRight, selectedLeft, selectedRight, handleLeftSelect, handleRightSelect, styles }) {
+  return (
+    <div className={styles.gameContainer}>
+      {/* Ліва колонка */}
+      <div className={styles.column} data-tutorial="termsColumn">
+        {displayedLeft.map((item) => {
+          const matched = matchedPairs[item.id] ? styles.correct : "";
+          const isWrong = wrongLeft === item.id ? styles.wrong : "";
+          const isSelected = selectedLeft?.id === item.id ? styles.selected : "";
+          return (
+            <div
+              key={item.id}
+              className={`${styles.answerTile} ${matched} ${isWrong} ${isSelected}`}
+              onClick={() => {
+                if (!matchedPairs[item.id]) handleLeftSelect(item);
+              }}
+            >
+              {item.leftText}
+            </div>
+          );
+        })}
+      </div>
+      {/* Права колонка */}
+      <div className={styles.column} data-tutorial="definitionsColumn">
+        {displayedRight.map((item) => {
+          const matched = matchedPairs[item.id] ? styles.correct : "";
+          const isWrong = wrongRight === item.id ? styles.wrong : "";
+          const isSelected = selectedRight?.id === item.id ? styles.selected : "";
+          return (
+            <div
+              key={item.id}
+              className={`${styles.answerTile} ${matched} ${isWrong} ${isSelected}`}
+              onClick={() => {
+                if (!matchedPairs[item.id]) handleRightSelect(item);
+              }}
+            >
+              {item.rightText}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function SettingsModal({
+  settingsOpen,
+  setSettingsOpen,
+  filterMode,
+  setFilterMode,
+  filterModes,
+  selectedCategory,
+  setSelectedCategory,
+  allCategories,
+  displayMode,
+  setDisplayMode,
+  displayModeOptions,
+  questionCount,
+  setQuestionCount,
+  questionCountOptions,
+  requireAuth,
+  handleStartGame,
+  styles,
+}) {
+  if (!settingsOpen) return null;
+  return (
+    <div className={styles.modalOverlay}>
+      <div className={window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile}>
+        <button className='modalCloseButton' onClick={() => setSettingsOpen(false)}>
+          ×
+        </button>
+        <h2 className={styles.modalTitle}>Einstellungen</h2>
+        {/* Перший ряд: Filter / Kategorie / (Режим відображення) */}
+        <div className={styles.row}>
+          {/* Фільтр */}
+          <div className={styles.filterColumn} data-tutorial="filterColumn">
+            <label className={styles.fieldLabel}>Filter</label>
+            <div className={styles.selectWrapper}>
+              <div className={styles.filterCell}>
+                {filterModes.find((f) => f.value === filterMode)?.icon}
+              </div>
+              <select
+                className={styles.nativeSelect}
+                value={filterMode}
+                onChange={(e) => {
+                  if (requireAuth()) return;
+                  setFilterMode(e.target.value);
+                }}
+              >
+                {filterModes.map((fm) => (
+                  <option key={fm.value} value={fm.value}>
+                    {fm.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {/* Категорія */}
+          <div className={styles.categoryColumn} data-tutorial="categorySelect">
+            <label className={styles.fieldLabel}>Kategorie</label>
+            <div className={styles.selectWrapper}>
+              <div className={styles.categoryCell}>
+                {selectedCategory === "Alle"
+                  ? "Alle"
+                  : selectedCategory === "Andere"
+                  ? "Andr."
+                  : selectedCategory}
+              </div>
+              <select
+                className={styles.nativeSelect}
+                value={selectedCategory}
+                onChange={(e) => {
+                  if (requireAuth()) return;
+                  setSelectedCategory(e.target.value);
+                }}
+              >
+                <option value="Alle">Alle</option>
+                {allCategories.map((cat) => (
+                  <option key={cat} value={cat}>
+                    {cat}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {/* Режим відображення */}
+          <div className={styles.modalField} data-tutorial="displayModeContainer">
+          <div className={styles.modalField} style={{ width: "100%" }}>
+              {displayModeOptions.map((option) => (
+                <div
+                  key={option.value}
+                  className={`${styles.displayModeIcon} ${
+                    displayMode === option.value ? styles.selected : ""
+                  }`}
+                  onClick={() => {
+                    if (requireAuth()) return;
+                    setDisplayMode(option.value);
+                  }}
+                >
+                  {option.label}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Другий ряд: Кількість абревіатур */}
+        <div className={styles.modalField} data-tutorial="questionCountContainer">
+          <div className={styles.questionCountContainer}>
+            {questionCountOptions.map((qc) => (
+              <div
+                key={qc}
+                className={`${styles.questionCountIcon} ${
+                  questionCount === qc ? styles.selected : ""
+                }`}
+                onClick={() => {
+                  if (requireAuth()) return;
+                  setQuestionCount(qc);
+                }}
+              >
+                {qc === "all" ? "Alles" : qc}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Кнопка Start */}
+        <button
+          className={styles.startButton}
+          data-tutorial="startButton"
+          onClick={handleStartGame}
+        >
+          Start
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function ResultsModal({ gameFinished, handleCloseResults, correctMatchesCount, pairs, sessionDuration, setSettingsOpen, setGameFinished, styles }) {
+  if (!gameFinished) return null;
+  return (
+    <div className={styles.resultsOverlay}>
+      <div className={styles.resultsTile}>
+        <button className='modalCloseButton' onClick={handleCloseResults}>
+          ×
+        </button>
+        <h3>Ergebnisse</h3>
+        <p>
+          Alle Paare gefunden: {correctMatchesCount} / {pairs.length}
+        </p>
+        <p>
+          Dauer: {Math.floor(sessionDuration / 60)} Minuten {sessionDuration % 60} Sekunden
+        </p>
+        <button
+          className={styles.startButton}
+          onClick={() => {
+            setSettingsOpen(true);
+            setGameFinished(false);
+          }}
+        >
+          Neue Runde
+        </button>
+      </div>
+    </div>
+  );
 }
 
 function AbbreviationsTermMatchingGameContent() {
@@ -122,78 +334,23 @@ function AbbreviationsTermMatchingGameContent() {
     setGameStartTime(Date.now());
     setPageIndex(0);
     setCorrectMatchesCount(0);
-    initGameData();
-  };
-
-  // Ініціалізація (формування) питань
-  const initGameData = () => {
-    // 1. Фільтрація абревіатур за категорією та статусом
-    let filtered = medicalAbbreviations.filter((abbr) => {
-      const matchesCategory =
-        selectedCategory === "Alle" ||
-        (abbr.categories || []).includes(selectedCategory);
-      const status = abbreviationStatuses[abbr.id]?.status || "unlearned";
-
-      if (filterMode === "learned" && status !== "learned") return false;
-      if (filterMode === "paused" && status !== "paused") return false;
-      if (filterMode === "unlearned" && (status === "learned" || status === "paused"))
-        return false;
-      return matchesCategory;
+    // Використання утиліти
+    const { pairs, leftColumn, rightColumn, newShownCounts } = initGameDataUtil({
+      medicalAbbreviations,
+      abbreviationStatuses,
+      selectedCategory,
+      filterMode,
+      questionCount,
+      displayMode,
+      shownCounts,
     });
-
-    // 2. Сортування за кількістю показів
-    filtered = filtered.sort((a, b) => {
-      const countA = shownCounts[a.id] || 0;
-      const countB = shownCounts[b.id] || 0;
-      if (countA === countB) return Math.random() - 0.5;
-      return countA - countB;
-    });
-
-    // 3. Відбір потрібної кількості (questionCount)
-    if (questionCount !== "all") {
-      filtered = filtered.slice(0, questionCount);
-    }
-
-    // 4. Оновлення лічильників показів
-    const newShownCounts = { ...shownCounts };
-    filtered.forEach((abbr) => {
-      newShownCounts[abbr.id] = (newShownCounts[abbr.id] || 0) + 1;
-    });
-    setShownCounts(newShownCounts);
-
-    // 5. Формування пар: ліва й права колонки
-    const newPairs = filtered.map((abbr) => {
-      let mode = displayMode;
-      if (mode === "Mixed") {
-        mode = Math.random() < 0.5 ? "LatGerman" : "GermanLat";
-      }
-      let leftText, rightText;
-      if (mode === "LatGerman") {
-        leftText = abbr.abbreviation;
-        rightText = abbr.name;
-      } else {
-        leftText = abbr.name;
-        rightText = abbr.abbreviation;
-      }
-      return {
-        id: abbr.id,
-        leftText,
-        rightText,
-        original: abbr,
-      };
-    });
-
-    // Перетасовка лівого та правого списків
-    const shuffledLeft = shuffleArray(newPairs);
-    const shuffledRight = shuffleArray(newPairs);
-
-    // Заносимо у стейт
-    setPairs(newPairs);
-    setLeftColumn(shuffledLeft);
-    setRightColumn(shuffledRight);
+    setPairs(pairs);
+    setLeftColumn(leftColumn);
+    setRightColumn(rightColumn);
     setMatchedPairs({});
     setWrongLeft(null);
     setWrongRight(null);
+    setShownCounts(newShownCounts);
   };
 
   // Підрахунок кількості сторінок
@@ -301,129 +458,25 @@ function AbbreviationsTermMatchingGameContent() {
           &#8592;
         </button>
 
-        {/* Модальне вікно налаштувань */}
-        {settingsOpen && (
-          <div className={styles.modalOverlay}>
-            <div
-              className={
-                window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile
-              }
-            >
-              <button
-                className={styles.modalCloseButton}
-                onClick={() => setSettingsOpen(false)}
-              >
-                ×
-              </button>
-              <h2 className={styles.modalTitle}>Einstellungen</h2>
-
-              {/* Перший ряд: Filter / Kategorie / (Режим відображення) */}
-              <div className={styles.row}>
-                {/* Фільтр */}
-                <div className={styles.filterColumn} data-tutorial="filterColumn">
-                  <label className={styles.fieldLabel}>Filter</label>
-                  <div className={styles.selectWrapper}>
-                    <div className={styles.filterCell}>
-                      {filterModes.find((f) => f.value === filterMode)?.icon}
-                    </div>
-                    <select
-                      className={styles.nativeSelect}
-                      value={filterMode}
-                      onChange={(e) => {
-                        if (requireAuth()) return;
-                        setFilterMode(e.target.value);
-                      }}
-                    >
-                      {filterModes.map((fm) => (
-                        <option key={fm.value} value={fm.value}>
-                          {fm.label}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-
-                {/* Категорія */}
-                <div className={styles.categoryColumn} data-tutorial="categorySelect">
-                  <label className={styles.fieldLabel}>Kategorie</label>
-                  <div className={styles.selectWrapper}>
-                    <div className={styles.categoryCell}>
-                      {selectedCategory === "Alle"
-                        ? "Alle"
-                        : selectedCategory === "Andere"
-                        ? "Andr."
-                        : selectedCategory}
-                    </div>
-                    <select
-                      className={styles.nativeSelect}
-                      value={selectedCategory}
-                      onChange={(e) => {
-                        if (requireAuth()) return;
-                        setSelectedCategory(e.target.value);
-                      }}
-                    >
-                      <option value="Alle">Alle</option>
-                      {allCategories.map((cat) => (
-                        <option key={cat} value={cat}>
-                          {cat}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-
-                {/* Режим відображення */}
-                <div className={styles.modalField} data-tutorial="displayModeContainer">
-                <div className={styles.modalField} style={{ width: "100%" }}>
-                    {displayModeOptions.map((option) => (
-                      <div
-                        key={option.value}
-                        className={`${styles.displayModeIcon} ${
-                          displayMode === option.value ? styles.selected : ""
-                        }`}
-                        onClick={() => {
-                          if (requireAuth()) return;
-                          setDisplayMode(option.value);
-                        }}
-                      >
-                        {option.label}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Другий ряд: Кількість абревіатур */}
-              <div className={styles.modalField} data-tutorial="questionCountContainer">
-                <div className={styles.questionCountContainer}>
-                  {questionCountOptions.map((qc) => (
-                    <div
-                      key={qc}
-                      className={`${styles.questionCountIcon} ${
-                        questionCount === qc ? styles.selected : ""
-                      }`}
-                      onClick={() => {
-                        if (requireAuth()) return;
-                        setQuestionCount(qc);
-                      }}
-                    >
-                      {qc === "all" ? "Alles" : qc}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Кнопка Start */}
-              <button
-                className={styles.startButton}
-                data-tutorial="startButton"
-                onClick={handleStartGame}
-              >
-                Start
-              </button>
-            </div>
-          </div>
-        )}
+        <SettingsModal
+          settingsOpen={settingsOpen}
+          setSettingsOpen={setSettingsOpen}
+          filterMode={filterMode}
+          setFilterMode={setFilterMode}
+          filterModes={filterModes}
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+          allCategories={allCategories}
+          displayMode={displayMode}
+          setDisplayMode={setDisplayMode}
+          displayModeOptions={displayModeOptions}
+          questionCount={questionCount}
+          setQuestionCount={setQuestionCount}
+          questionCountOptions={questionCountOptions}
+          requireAuth={requireAuth}
+          handleStartGame={handleStartGame}
+          styles={styles}
+        />
 
         {/* Кнопка для туторіалу */}
         {settingsOpen && (
@@ -466,48 +519,18 @@ function AbbreviationsTermMatchingGameContent() {
               Seite {pageIndex + 1} / {pageCount} &nbsp;(
               {displayedLeft.length} Begriffe)
             </div>
-
-            <div className={styles.gameContainer}>
-              {/* Ліва колонка */}
-              <div className={styles.column} data-tutorial="termsColumn">
-                {displayedLeft.map((item) => {
-                  const matched = matchedPairs[item.id] ? styles.correct : "";
-                  const isWrong = wrongLeft === item.id ? styles.wrong : "";
-                  const isSelected = selectedLeft?.id === item.id ? styles.selected : "";
-                  return (
-                    <div
-                      key={item.id}
-                      className={`${styles.answerTile} ${matched} ${isWrong} ${isSelected}`}
-                      onClick={() => {
-                        if (!matchedPairs[item.id]) handleLeftSelect(item);
-                      }}
-                    >
-                      {item.leftText}
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Права колонка */}
-              <div className={styles.column} data-tutorial="definitionsColumn">
-                {displayedRight.map((item) => {
-                  const matched = matchedPairs[item.id] ? styles.correct : "";
-                  const isWrong = wrongRight === item.id ? styles.wrong : "";
-                  const isSelected = selectedRight?.id === item.id ? styles.selected : "";
-                  return (
-                    <div
-                      key={item.id}
-                      className={`${styles.answerTile} ${matched} ${isWrong} ${isSelected}`}
-                      onClick={() => {
-                        if (!matchedPairs[item.id]) handleRightSelect(item);
-                      }}
-                    >
-                      {item.rightText}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+            <GameBoard
+              displayedLeft={displayedLeft}
+              displayedRight={displayedRight}
+              matchedPairs={matchedPairs}
+              wrongLeft={wrongLeft}
+              wrongRight={wrongRight}
+              selectedLeft={selectedLeft}
+              selectedRight={selectedRight}
+              handleLeftSelect={handleLeftSelect}
+              handleRightSelect={handleRightSelect}
+              styles={styles}
+            />
 
             {/* Пагінація */}
             <div className={styles.navigationContainer}>
@@ -525,36 +548,16 @@ function AbbreviationsTermMatchingGameContent() {
           </>
         )}
 
-        {/* Результати гри */}
-        {gameFinished && (
-          <div className={styles.resultsOverlay}>
-            <div className={styles.resultsTile}>
-              <button
-                className={styles.modalCloseButton}
-                onClick={handleCloseResults}
-              >
-                ×
-              </button>
-              <h3>Ergebnisse</h3>
-              <p>
-                Alle Paare gefunden: {correctMatchesCount} / {pairs.length}
-              </p>
-              <p>
-                Dauer: {Math.floor(sessionDuration / 60)} Minuten{" "}
-                {sessionDuration % 60} Sekunden
-              </p>
-              <button
-                className={styles.startButton}
-                onClick={() => {
-                  setSettingsOpen(true);
-                  setGameFinished(false);
-                }}
-              >
-                Neue Runde
-              </button>
-            </div>
-          </div>
-        )}
+        <ResultsModal
+          gameFinished={gameFinished}
+          handleCloseResults={handleCloseResults}
+          correctMatchesCount={correctMatchesCount}
+          pairs={pairs}
+          sessionDuration={sessionDuration}
+          setSettingsOpen={setSettingsOpen}
+          setGameFinished={setGameFinished}
+          styles={styles}
+        />
 
         {/* Кнопка налаштувань (якщо не мобільний або якщо налаштування вже закриті) */}
         {(!settingsOpen || window.innerWidth > 768) && !gameFinished && (

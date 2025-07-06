@@ -10,7 +10,12 @@ import { createClient } from "@supabase/supabase-js";
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-if (!supabaseUrl || !supabaseAnonKey) {
+// Check if we have valid Supabase configuration
+const hasValidSupabaseConfig = supabaseUrl && supabaseAnonKey && 
+                              supabaseUrl !== 'your_supabase_project_url_here' && 
+                              supabaseAnonKey !== 'your_supabase_anon_key_here';
+
+if (!hasValidSupabaseConfig) {
   console.warn(
     "[supabaseClient] Увага! Відсутні VITE_SUPABASE_URL або VITE_SUPABASE_ANON_KEY у змінних середовища."
   );
@@ -19,15 +24,19 @@ if (!supabaseUrl || !supabaseAnonKey) {
 // ----------------------------------------------------------------------------
 // Створюємо клієнт Supabase
 // ----------------------------------------------------------------------------
-export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+export const supabase = hasValidSupabaseConfig ? createClient(supabaseUrl, supabaseAnonKey, {
   auth: { detectSessionInUrl: true },
-});
+}) : null;
 
 // ----------------------------------------------------------------------------
 // Приклад 1: Створити Stripe Checkout session для підписки.
 // Викликає Edge Function 'create-subscription-session'.
 // ----------------------------------------------------------------------------
 export async function createSubscriptionSession(userId) {
+  if (!supabase) {
+    throw new Error("Supabase ist nicht konfiguriert");
+  }
+  
   const { data, error } = await supabase.functions.invoke(
     "create-subscription-session",
     {
@@ -45,6 +54,10 @@ export async function createSubscriptionSession(userId) {
 // Викликає Edge Function 'create-token-session'.
 // ----------------------------------------------------------------------------
 export async function createTokenSession(userId, tokenCount) {
+  if (!supabase) {
+    throw new Error("Supabase ist nicht konfiguriert");
+  }
+  
   const { data, error } = await supabase.functions.invoke(
     "create-token-session",
     {
@@ -62,6 +75,10 @@ export async function createTokenSession(userId, tokenCount) {
 // Викликає Edge Function 'send-simulation-confirmation'.
 // ----------------------------------------------------------------------------
 export async function sendSimulationConfirmation(email, firstName, lastName, region) {
+  if (!supabase) {
+    throw new Error("Supabase ist nicht konfiguriert");
+  }
+  
   const { data, error } = await supabase.functions.invoke(
     "send-simulation-confirmation",
     {
@@ -88,6 +105,10 @@ export async function sendSimulationConfirmation(email, firstName, lastName, reg
  * @param {Array} arraycases   // передаємо масив, якщо він є
  */
 export async function simulationEmail(email, firstName, lastName, region, arraycases) {
+  if (!supabase) {
+    throw new Error("Supabase ist nicht konfiguriert");
+  }
+  
   // Для діагностики: виводимо те, що відправляємо
   console.log("[simulationEmail] payload:", JSON.stringify({ email, firstName, lastName, region, arraycases }));
 

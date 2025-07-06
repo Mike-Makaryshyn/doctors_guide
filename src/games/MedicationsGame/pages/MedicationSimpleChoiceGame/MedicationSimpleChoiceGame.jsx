@@ -62,7 +62,7 @@ const MedicationSimpleChoiceGameContent = () => {
   // Supabase Auth
   const { user } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
-  const loading = user === undefined; // treat “undefined” as loading if needed
+  const loading = user === undefined; // treat "undefined" as loading if needed
   const requireAuth = () => {
     if (!user) {
       setShowAuthModal(true);
@@ -272,7 +272,7 @@ const MedicationSimpleChoiceGameContent = () => {
     return (
       <div className={styles.resultsTile}>
         <button
-          className={styles.modalCloseButton}
+          className='modalCloseButton'
           onClick={() => setGameFinished(false)}
         >
           ×
@@ -355,7 +355,7 @@ const MedicationSimpleChoiceGameContent = () => {
               }
             >
               <button
-                className={styles.modalCloseButton}
+                className='modalCloseButton'
                 onClick={() => setSettingsOpen(false)}
               >
                 ×

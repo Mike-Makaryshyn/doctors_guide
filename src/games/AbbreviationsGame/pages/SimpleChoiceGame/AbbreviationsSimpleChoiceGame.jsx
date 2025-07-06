@@ -283,7 +283,7 @@ const AbbreviationsSimpleChoiceGameContent = () => {
     return (
       <div className={styles.resultsTile}>
         <button
-          className={styles.modalCloseButton}
+          className='modalCloseButton'
           onClick={() => setGameFinished(false)}
         >
           ×
@@ -365,7 +365,7 @@ const AbbreviationsSimpleChoiceGameContent = () => {
               }
             >
               <button
-                className={styles.modalCloseButton}
+                className='modalCloseButton'
                 onClick={() => setSettingsOpen(false)}
               >
                 ×

@@ -293,7 +293,7 @@ const FillInBlankGameContent = () => {
       <div className={styles.resultsTile}>
         {/* Кнопка закриття результатного модального вікна */}
         <button
-          className={styles.modalCloseButton}
+          className='modalCloseButton'
           onClick={() => setGameFinished(false)}
         >
           ×
@@ -382,7 +382,7 @@ const FillInBlankGameContent = () => {
           <div className={styles.modalOverlay}>
             <div className={window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile}>
               {/* Використовуємо closeSettings для простого закриття модального вікна */}
-              <button className={styles.modalCloseButton} onClick={closeSettings}>
+              <button className='modalCloseButton' onClick={closeSettings}>
                 ×
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>

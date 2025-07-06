@@ -17,12 +17,14 @@ import MainLayout from "../../layouts/MainLayout/MainLayout";
 import AuthModal from "../../pages/AuthPage/AuthModal";
 import Modal from "react-modal";
 import { Helmet } from "react-helmet";
-import { FaMapMarkedAlt, FaFileAlt, FaCog, FaEye, FaDownload } from "react-icons/fa";
+import { FaMapMarkedAlt, FaFileAlt, FaCog, FaEye, FaDownload, FaArrowDown } from "react-icons/fa";
 
 // Підключення компонента туторіалу
 import LetterFormTutorial from "./LetterFormTutorial";
 
 import styles from "./LetterFormPage.module.scss";
+
+import letterFormPage from "../../constants/translation/letterFormPage";
 
 Modal.setAppElement("#root");
 
@@ -41,7 +43,7 @@ const unifyRegion = (r) => {
 };
 
 const LetterFormPage = () => {
-  const { user, selectedRegion } = useGetGlobalInfo();
+  const { user, selectedRegion, selectedLanguage = "de" } = useGetGlobalInfo();
   const navigate = useNavigate();
 
   // State для підрегіону Баварії
@@ -81,6 +83,9 @@ const LetterFormPage = () => {
 
   // Перевірка, чи мобільний розмір екрана
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  // Додаю стан для відстеження, чи дані вже підвантажені
+  const [isDataLoaded, setIsDataLoaded] = useState(false);
 
   // Слухач зміни розміру вікна
   useEffect(() => {
@@ -236,6 +241,7 @@ const LetterFormPage = () => {
   const handleAllInOneClick = async () => {
     if (requireAuth()) return;
     await fetchData();
+    setIsDataLoaded(true); // Після підвантаження даних
   };
 
   const textAreaRef = useRef(null);
@@ -253,19 +259,18 @@ const LetterFormPage = () => {
 
   const handleTextAreaChange = (e) => {
     setLetterText(e.target.value);
+    // Якщо користувач щось вводить вручну, не скидаємо isDataLoaded
   };
 
   return (
     <MainLayout>
-   
-
       <Helmet>
-        <title>Begleitschreiben und Dokumentensammlung für die Approbation</title>
+        <title>{letterFormPage.pageTitle[selectedLanguage] || letterFormPage.pageTitle.de}</title>
         <meta
           name="description"
           content="Testversion zur Sammlung von Dokumenten und dem Begleitschreiben für die Approbation. Hier finden Sie alle notwendigen Informationen und Unterlagen."
         />
-        <meta property="og:title" content="Begleitschreiben und Dokumentensammlung" />
+        <meta property="og:title" content={letterFormPage.pageTitle[selectedLanguage] || letterFormPage.pageTitle.de} />
         <meta
           property="og:description"
           content="Testversion zur Sammlung von Dokumenten und dem Begleitschreiben für die Approbation."
@@ -278,17 +283,17 @@ const LetterFormPage = () => {
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
 
       <div className={styles.letterFormContainer}>
-        <h1 className={styles.pageTitle}>Begleitschreiben mit Dokumenten</h1>
+        <h1 className={styles.pageTitle}>{letterFormPage.pageTitle[selectedLanguage] || letterFormPage.pageTitle.de}</h1>
 
         <div className={styles.columnsWrapper}>
           <div className={styles.leftColumn}>
             <div className={styles.userAddressCard} data-tutorial="userAddressCard">
-              <h2 className={styles.subTitle}>Deine Adresse</h2>
+              <h2 className={styles.subTitle}>{letterFormPage.yourAddress[selectedLanguage] || letterFormPage.yourAddress.de}</h2>
               <div className={styles.inputRow}>
                 <input
                   type="text"
                   className={styles.inputField}
-                  placeholder="Name / Vorname + Nachname"
+                  placeholder={letterFormPage.namePlaceholder[selectedLanguage] || letterFormPage.namePlaceholder.de}
                   value={personalData.name}
                   onChange={(e) => handlePersonalDataChange("name", e.target.value)}
                 />
@@ -297,7 +302,7 @@ const LetterFormPage = () => {
                 <input
                   type="text"
                   className={styles.inputField}
-                  placeholder="Straße, Hausnummer"
+                  placeholder={letterFormPage.streetPlaceholder[selectedLanguage] || letterFormPage.streetPlaceholder.de}
                   value={personalData.strasse}
                   onChange={(e) => handlePersonalDataChange("strasse", e.target.value)}
                 />
@@ -306,7 +311,7 @@ const LetterFormPage = () => {
                 <input
                   type="text"
                   className={styles.inputField}
-                  placeholder="PLZ, Ort"
+                  placeholder={letterFormPage.plzOrtPlaceholder[selectedLanguage] || letterFormPage.plzOrtPlaceholder.de}
                   value={personalData.plzOrt}
                   onChange={(e) => handlePersonalDataChange("plzOrt", e.target.value)}
                 />
@@ -316,7 +321,7 @@ const LetterFormPage = () => {
                   <input
                     type="text"
                     className={styles.inputField}
-                    placeholder="Aktenzeichen"
+                    placeholder={letterFormPage.aktenzeichenPlaceholder[selectedLanguage] || letterFormPage.aktenzeichenPlaceholder.de}
                     value={personalData.aktenzeichen}
                     onChange={(e) => handlePersonalDataChange("aktenzeichen", e.target.value)}
                     disabled={!personalData.aktenzeichenEnabled}
@@ -334,7 +339,7 @@ const LetterFormPage = () => {
                 <input
                   type="email"
                   className={styles.inputField}
-                  placeholder="E-Mail"
+                  placeholder={letterFormPage.emailPlaceholder[selectedLanguage] || letterFormPage.emailPlaceholder.de}
                   value={personalData.email}
                   onChange={(e) => handlePersonalDataChange("email", e.target.value)}
                 />
@@ -343,7 +348,7 @@ const LetterFormPage = () => {
                 <input
                   type="text"
                   className={styles.inputField}
-                  placeholder="Telefon"
+                  placeholder={letterFormPage.telefonPlaceholder[selectedLanguage] || letterFormPage.telefonPlaceholder.de}
                   value={personalData.telefon}
                   onChange={(e) => handlePersonalDataChange("telefon", e.target.value)}
                 />
@@ -371,8 +376,8 @@ const LetterFormPage = () => {
               
               <h2 className={styles.subTitle}>
                 {region === "Bayern" && bavariaSubregion
-                  ? `Adresse für Bayern (${bavariaSubregion})`
-                  : `Adresse für ${region}`}
+                  ? `${letterFormPage.regionAddress[selectedLanguage] || letterFormPage.regionAddress.de} Bayern (${bavariaSubregion})`
+                  : `${letterFormPage.regionAddress[selectedLanguage] || letterFormPage.regionAddress.de} ${region}`}
               </h2>
 
               {region === "Bayern" && (
@@ -386,7 +391,7 @@ const LetterFormPage = () => {
                     }
                     onClick={() => setBavariaSubregion("Oberbayern")}
                   >
-                    Oberbayern
+                    {letterFormPage.subregionOberbayern[selectedLanguage] || letterFormPage.subregionOberbayern.de}
                   </button>
                   <button
                     type="button"
@@ -397,7 +402,7 @@ const LetterFormPage = () => {
                     }
                     onClick={() => setBavariaSubregion("Unterfranken")}
                   >
-                    Unterfranken
+                    {letterFormPage.subregionUnterfranken[selectedLanguage] || letterFormPage.subregionUnterfranken.de}
                   </button>
                 </div>
               )}
@@ -425,13 +430,13 @@ const LetterFormPage = () => {
                   </div>
                 ) : (
                   <p className={styles.errorText}>
-                    Keine Adresse für diesen Region gefunden.
+                    {letterFormPage.noAddress[selectedLanguage] || letterFormPage.noAddress.de}
                   </p>
                 )
               ) : (
                 region === "Bayern" && (
                   <p style={{ marginTop: "10px", color: "#013b6e" }}>
-                    Bitte wählen Sie Oberbayern oder Unterfranken.
+                    {letterFormPage.selectBavaria[selectedLanguage] || letterFormPage.selectBavaria.de}
                   </p>
                 )
               )}
@@ -440,21 +445,40 @@ const LetterFormPage = () => {
         </div>
 
         <div className={styles.textAreaFullWidth}>
-          <button
-            className={styles.allInOneButton}
-            onClick={handleAllInOneClick}
-            title="Daten abrufen & Schreiben generieren"
-            data-tutorial="allInOneButton"
-          >
-            <FaFileAlt size={20} />
-          </button>
+          <div className={styles.hintRow}>
+            {!isDataLoaded ? (
+              <>
+                <span style={{ color: '#013b6e', fontSize: '0.98rem', fontWeight: 500 }}>
+                  {letterFormPage.letterPlaceholder[selectedLanguage] || letterFormPage.letterPlaceholder.de}
+                </span>
+                <svg className={styles.hintArrow} width="32" height="32" viewBox="0 0 32 32">
+                  <path d="M4 8 L28 28" stroke="#013b6e" strokeWidth="3" fill="none"/>
+                  <path d="M22 28 L28 28 L28 22" stroke="#013b6e" strokeWidth="3" fill="none"/>
+                </svg>
+              </>
+            ) : (
+              <span style={{ visibility: 'hidden' }}>placeholder</span>
+            )}
+          </div>
+          {!isDataLoaded && (
+            <button
+              className={styles.allInOneButton}
+              onClick={handleAllInOneClick}
+              title={letterFormPage.loadDataButton[selectedLanguage] || letterFormPage.loadDataButton.de}
+              data-tutorial="allInOneButton"
+            >
+              <FaFileAlt size={20} />
+            </button>
+          )}
           <textarea
             ref={textAreaRef}
             className={styles.bigTextArea}
-            value={letterText}
+            value={isDataLoaded ? letterText : ''}
             onChange={handleTextAreaChange}
             rows={1}
             data-tutorial="letterTextArea"
+            readOnly={!isDataLoaded}
+        
           />
         </div>
 
@@ -469,7 +493,7 @@ const LetterFormPage = () => {
                 ×
               </button>
 
-              <h2 className={styles.modalTitle}>PDF Funktion</h2>
+              <h2 className={styles.modalTitle}>{letterFormPage.pdfTitle[selectedLanguage] || letterFormPage.pdfTitle.de}</h2>
 
               <div className={styles.buttonsArea}>
                 <div className={styles.iconButton}>
@@ -479,7 +503,7 @@ const LetterFormPage = () => {
                       previewLetterPDF(personalData, addressData, letterText);
                     }}
                     className={styles.squareButton}
-                    title="Vorschau"
+                    title={letterFormPage.preview[selectedLanguage] || letterFormPage.preview.de}
                     data-tutorial="squareButton"
                   >
                     <FaEye className={styles.iconInside} />
@@ -492,7 +516,7 @@ const LetterFormPage = () => {
                       downloadLetterPDF(personalData, addressData, letterText);
                     }}
                     className={styles.squareButton}
-                    title="Druck"
+                    title={letterFormPage.download[selectedLanguage] || letterFormPage.download.de}
                     data-tutorial="downloadButton"
                   >
                     <FaDownload className={styles.iconInside} />
@@ -502,7 +526,7 @@ const LetterFormPage = () => {
                   <Link
                     to="/documents"
                     className={`${styles.squareButton} ${styles.documentsButton}`}
-                    title="Documents"
+                    title={letterFormPage.documents[selectedLanguage] || letterFormPage.documents.de}
                     data-tutorial="documentsButton"
                   >
                     <span className={styles.invertedIcon}>

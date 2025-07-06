@@ -555,7 +555,7 @@ function TermMatchingGameContent() {
         {gameFinished && (
           <div className={styles.resultsOverlay}>
             <div className={styles.resultsTile}>
-              <button className={styles.modalCloseButton} onClick={handleCloseResults}>
+              <button className='modalCloseButton' onClick={handleCloseResults}>
                 ×
               </button>
               <h3>Ergebnisse</h3>

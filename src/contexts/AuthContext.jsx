@@ -17,11 +17,20 @@ export const AuthProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    if (!supabase) {
+      console.warn('Supabase is not configured, skipping auth initialization');
+      setLoading(false);
+      return;
+    }
+
     // Fetch initial session
     supabase.auth.getSession().then(({ data: { session } }) => {
       handleUser(session?.user || null);
       setLoading(false);
-    }).catch(() => setLoading(false));
+    }).catch((error) => {
+      console.error('Error fetching session:', error);
+      setLoading(false);
+    });
 
     // Listen for future auth state changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(

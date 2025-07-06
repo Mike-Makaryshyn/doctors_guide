@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { main_menu_items, regionSelection } from "../../constants/translation/main_menu";
 import { LANDS_INFO } from "../../constants/lands";
 import styles from "./SideMenu.module.scss";
-import { supabase } from "../../supabaseClient";
+import { safeGetSession, safeSignOut, createAuthStateListener } from "../../utils/supabaseUtils";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo"; // новий імпорт для регіону
 import { useAuth } from "../../contexts/AuthContext";
@@ -20,16 +20,19 @@ function SideMenu({ language, isOpen, onClose, direction }) {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const {
-        data: { session },
-      } = await supabase.auth.getSession();
-      setUser(session?.user ?? null);
-      setLoading(false);
+      try {
+        const { session } = await safeGetSession();
+        setUser(session?.user ?? null);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching session:', error);
+        setUser(null);
+        setLoading(false);
+      }
     };
     fetchUser();
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
+    
+    const { subscription } = createAuthStateListener((_event, session) => {
       setUser(session?.user ?? null);
     });
     return () => subscription.unsubscribe();
@@ -80,7 +83,7 @@ function SideMenu({ language, isOpen, onClose, direction }) {
 
   const handleLogout = async () => {
     try {
-      await supabase.auth.signOut();
+      await safeSignOut();
       onClose();
     } catch (error) {
       console.error("Error signing out:", error);

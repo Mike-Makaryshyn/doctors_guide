@@ -212,7 +212,7 @@
 
 /* Контейнер для textarea (мінімальний) */
 .textAreaFullWidth {
-  position: relative; /* щоб кнопка всередині могла позиціонуватись */
+  position: relative;
   margin-bottom: 20px;
 }
 
@@ -226,35 +226,35 @@
 
 /* Кнопка для генерації тексту (правий верхній кут textarea-контейнера) */
 .allInOneButton {
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    background-color: rgba(1, 59, 110, 0); /* Напівпрозорий фон */
-    color: #013b6e;
-    border: none;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    z-index: 2;
-    justify-content: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    animation: pulseAnimation 2s infinite ease-in-out;
-  }
-  
-  /* Анімація пульсації */
-  @keyframes pulseAnimation {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-  }
-  
-  /* При наведенні - змінюємо тільки прозорість */
-  .allInOneButton:hover {
-    background-color: rgba(1, 59, 110, 0); /* Трохи менш прозорий */
-  }
+  position: absolute;
+  top: 25px;
+  right: -15px;
+  z-index: 2;
+  background-color: rgba(1, 59, 110, 0);
+  color: #013b6e;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: pulseAnimation 2s infinite ease-in-out;
+}
+
+/* Анімація пульсації */
+@keyframes pulseAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* При наведенні - змінюємо тільки прозорість */
+.allInOneButton:hover {
+  background-color: rgba(1, 59, 110, 0); /* Трохи менш прозорий */
+}
 
 /* Textarea (автоматичне розширення, білій фон, заокруглення 12px) */
 .bigTextArea {
@@ -264,6 +264,7 @@
   box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.2),
               -6px -6px 12px rgba(65, 191, 171, 0.2);
   padding: 15px;
+  padding-right: 60px;
   border: none;
   outline: none;
   font-size: 1rem;
@@ -581,3 +582,139 @@
     transform: scale(1.1);
     background: rgba(76, 175, 79, 0); /* наприклад, зелений напівпрозорий фон */
   }
+
+@media (max-width: 480px) {
+  .letterFormContainer {
+    padding: 8px;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+  .columnsWrapper {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+  .leftColumn,
+  .rightColumn {
+    width: 100%;
+    min-width: unset;
+    padding: 0;
+  }
+  .userAddressCard,
+  .regionTile {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(19,57,51,0.12), -2px -2px 6px rgba(65,191,171,0.12);
+  }
+  .inputField,
+  .toggleButton {
+    height: 38px;
+    font-size: 0.95rem;
+    padding: 0 8px;
+    border-radius: 8px;
+  }
+  .akInputContainer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+  .allInOneButton {
+    top: 44px;
+    right: -16px;
+    width: 36px;
+    height: 36px;
+  }
+  .bigTextArea {
+    padding-right: 44px;
+    min-height: 80px;
+    font-size: 0.95rem;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  .modalOverlay {
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0;
+  }
+  .popupMobile {
+    width: 100vw;
+    min-width: 0;
+    padding: 12px 6px 10px;
+    border-radius: 16px 16px 0 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 0.98rem;
+  }
+  .modalTitle {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  .squareButton {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+  .iconInside {
+    width: 18px;
+    height: 18px;
+  }
+  .subregionToggle {
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .subregionButton, .subregionButtonActive {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 8px;
+  }
+  .addressInfo {
+    font-size: 0.85rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  .pageTitle {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    padding: 0 2px;
+  }
+  .bottomRightSettings {
+    right: 4px;
+    bottom: 4px;
+  }
+  .settingsButton {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+  .tutorialButton {
+    width: 36px;
+    height: 36px;
+    top: 48px;
+    right: 0;
+  }
+}
+
+.hintRow {
+  min-height: 32px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+}
+.hintArrow {
+  position: absolute;
+  right: 30px;
+  top: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+@media (max-width: 480px) {
+  .hintArrow {
+    right: 20px;
+    top: 30px;
+  }
+}

@@ -578,7 +578,7 @@ const AllMedicalAbbreviationsPageContent = () => {
               ref={settingsModalRef}
             >
               <button
-                className={styles.modalCloseButton}
+                className='modalCloseButton'
                 onClick={() => setIsSettingsModalOpen(false)}
               >
                 ×

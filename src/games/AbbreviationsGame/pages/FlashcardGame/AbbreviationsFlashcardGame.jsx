@@ -506,7 +506,7 @@ const AbbreviationsFlashcardGameContent = () => {
             <div className={isMobile ? styles.popupMobile : styles.popupDesktop}>
               {/* Кнопка закриття */}
               <button
-                className={styles.modalCloseButton}
+                className='modalCloseButton'
                 onClick={() => setSettingsOpen(false)}
               >
                 ×

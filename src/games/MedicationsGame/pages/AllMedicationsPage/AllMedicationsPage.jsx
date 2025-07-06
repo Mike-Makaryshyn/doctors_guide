@@ -50,7 +50,7 @@ const AllMedicationsPageContent = () => {
   const { medicationStatuses, toggleStatus, scheduleFlushChanges } =
     useMedicationStatus();
   const { user } = useAuth();
-  const loading = user === undefined; // treat “undefined” as loading
+  const loading = user === undefined; // treat "undefined" as loading
   const { selectedLanguage } = useGetGlobalInfo();
 
   // -----------------------
@@ -665,7 +665,7 @@ const AllMedicationsPageContent = () => {
                   ref={settingsModalRef}
                 >
                   <button
-                    className={styles.modalCloseButton}
+                    className='modalCloseButton'
                     onClick={() => setIsSettingsModalOpen(false)}
                   >
                     ×

@@ -7,13 +7,26 @@ export function useAuth() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (!supabase) {
+      console.warn('Supabase is not configured, skipping auth initialization');
+      setUser(null);
+      setLoading(false);
+      return;
+    }
+
     // початковий запит сесії
     const getSession = async () => {
-      const {
-        data: { session },
-      } = await supabase.auth.getSession();
-      setUser(session?.user ?? null);
-      setLoading(false);
+      try {
+        const {
+          data: { session },
+        } = await supabase.auth.getSession();
+        setUser(session?.user ?? null);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching session:', error);
+        setUser(null);
+        setLoading(false);
+      }
     };
     getSession();
 

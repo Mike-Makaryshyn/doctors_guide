@@ -89,6 +89,7 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.9",
     "three": "^0.160.1",
+    "twemoji": "^14.0.2",
     "yup": "^1.6.1",
     "zwitch": "^1.0.5"
   },

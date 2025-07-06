@@ -48,6 +48,14 @@ body {
   object-fit: cover;
   z-index: -1;
 }
+/* робимо «шильдик» круглим */
+.flag-emoji {
+  width: 1.25em;        /* можна змінити розмір */
+  height: 1.25em;
+  border-radius: 50%;   /* ⬅️ саме це надає форму кола */
+  object-fit: cover;    /* заповнює коло без спотворень */
+  vertical-align: -0.125em; /* щоб вирівняти по базовій лінії тексту */
+}
 
 /* Ensure any content over the video sits above it */
 .firstPageContent {
@@ -113,4 +121,47 @@ a {
 a:hover {
    color: rgb(143, 186, 143);
    text-decoration: underline;
+}
+
+.modalCloseButton {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ed0a0a;
+  transition: transform 0.2s ease;
+  padding: 5px;
+  border-radius: 50%;
+}
+.modalCloseButton:hover {
+  transform: scale(0.9);
+  background-color: rgba(237, 10, 10, 0);
+}
+
+.settingsButton {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.settingsButton:hover {
+  background-color: #388e3c;
+  transform: scale(1.08);
+}
+
+.settingsButton-bottomRight {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 3000;
 }
