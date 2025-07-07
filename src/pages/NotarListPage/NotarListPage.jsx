@@ -5,6 +5,7 @@ import { notarData } from "./notarData";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { FaCog, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
+import { FaGlobe } from "react-icons/fa";
 
 // Якщо глобально вибрано "Westfalen-Lippe", перетворюємо на "Nordrhein-Westfalen"
 const unifyRegion = (r) => {
@@ -102,6 +103,19 @@ const NotarListPage = () => {
                     {notar.email}
                   </p>
                 )}
+              </div>
+              <div className={styles.contactRow}>
+                <span
+                  className={styles.webItem}
+                  style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}
+                  onClick={() => {
+                    const query = encodeURIComponent(`${notar.name} Notar ${region}`);
+                    window.open(`https://www.google.com/search?q=${query}`, '_blank');
+                  }}
+                >
+                  <FaGlobe style={{ marginRight: "5px" }} />
+                  Web
+                </span>
               </div>
             </div>
           ))}
