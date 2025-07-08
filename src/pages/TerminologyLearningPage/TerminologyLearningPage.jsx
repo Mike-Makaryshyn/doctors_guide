@@ -12,6 +12,7 @@ import translatorBg from "../../assets/translator-bg.jpg";
 import medicalTerminologyBg from "../../assets/medical-terminology-bg.jpg";
 import matchingGameBg from "../../assets/matching-game-bg.jpg";
 import audioQuizBg from "../../assets/audio-quiz-bg.jpg";
+import definitionChoiceBg from "../../assets/definition-choice-bg.jpg";
 
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { pathList } from "../../routes/path";
@@ -147,6 +148,19 @@ const TerminologyLearningPage = () => {
                   ))}
                 </div>
                 <div className={styles.speakerRight}></div>
+              </div>
+            </div>
+          </Link>
+
+          {/* 9. Definition Choice Game */}
+          <Link
+            to={`${pathList.definition_choice.path}?region=${regionParam}&category=Alle&filterMode=unlearned`}
+            className={styles.gameTile}
+            style={{ backgroundImage: `url(${definitionChoiceBg})` }}
+          >
+            <div className={styles.innerTile}>
+              <div className={styles.rockingCard}>
+                <div className={styles.tileTitle}>Definition Choice Game</div>
               </div>
             </div>
           </Link>

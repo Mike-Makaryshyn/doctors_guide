@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import MainLayout from "../../../../layouts/MainLayout/MainLayout";
 import { medicalTerms } from "../../../../constants/medicalTerms";
-import { audioFiles } from "../../../../constants/audioFiles";
+import audioFiles from "../../../../constants/audioFiles";
 import styles from "./AudioChoiceGame.module.scss";
 import {
   FaCog,

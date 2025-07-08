@@ -251,16 +251,21 @@ const AllMedicalTerminologyContent = () => {
   // =========================
   const filteredTerms = medicalTerms.filter((term) => {
     const matchesSearch =
-      term.lat.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      term.de.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      term.deExplanation.toLowerCase().includes(searchTerm.toLowerCase());
+      (term.lat || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
+      (term.de || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
+      (term.deExplanation || '').toLowerCase().includes(searchTerm.toLowerCase());
 
+    // Vereinfachte Kategorie-Logik - zeige alle Begriffe an, wenn "Alle" ausgewählt ist
     const matchesCategory =
       selectedCategory === "Alle" ||
-      (term.categories || []).includes(selectedCategory);
+      (term.categories && term.categories.includes(selectedCategory)) ||
+      (selectedCategory === "Allgemein" && (!term.categories || term.categories.length === 0));
 
+    // Bei aktiver Suche wird der Regionalfilter ignoriert
     const matchesRegion =
-      region === "Alle" || (term.regions || []).includes(region);
+      searchTerm.trim() !== "" || 
+      region === "Alle" || 
+      (term.regions && term.regions.includes(region));
 
     const statusObj = termStatuses[term.id];
     const status = statusObj?.status || "unlearned";
@@ -278,7 +283,14 @@ const AllMedicalTerminologyContent = () => {
 
   const termsByCategory = {};
   filteredTerms.forEach((term) => {
-    (term.categories || []).forEach((category) => {
+    let termCategories = [];
+    if (term.categories && Array.isArray(term.categories) && term.categories.length > 0) {
+      termCategories = term.categories;
+    } else {
+      termCategories = ['Allgemein'];
+    }
+    
+    termCategories.forEach((category) => {
       if (!termsByCategory[category]) {
         termsByCategory[category] = [];
       }
@@ -291,7 +303,13 @@ const AllMedicalTerminologyContent = () => {
   );
   const regionOptions = ["Alle", ...uniqueRegions];
   const uniqueCategories = Array.from(
-    new Set(medicalTerms.flatMap((term) => term.categories || []))
+    new Set(medicalTerms.flatMap((term) => {
+      if (term.categories && Array.isArray(term.categories) && term.categories.length > 0) {
+        return term.categories;
+      } else {
+        return ['Allgemein'];
+      }
+    }))
   );
 
   // =========================
@@ -413,7 +431,7 @@ const AllMedicalTerminologyContent = () => {
                             >
                               <FaPause />
                             </span>
-                            <h3 className={styles.tileHeader}>{term.lat}</h3>
+                            <h3 className={styles.tileHeader}>{term.lat || 'Kein Begriff'}</h3>
                             <p
                               className={styles.tileDescription}
                               data-tutorial="germanDefinition"
@@ -429,11 +447,11 @@ const AllMedicalTerminologyContent = () => {
                                   placement="bottom"
                                 >
                                   <span className={styles.clickableCell}>
-                                    {term.de}
+                                    {term.de || 'Keine deutsche Bezeichnung'}
                                   </span>
                                 </Tippy>
                               ) : (
-                                term.de
+                                term.de || 'Keine deutsche Bezeichnung'
                               )}
                             </p>
                             {showDefinition && (
@@ -453,11 +471,11 @@ const AllMedicalTerminologyContent = () => {
                                     placement="bottom"
                                   >
                                     <span className={styles.clickableCell}>
-                                      {term.deExplanation}
+                                      {term.deExplanation || 'Keine Definition'}
                                     </span>
                                   </Tippy>
                                 ) : (
-                                  term.deExplanation
+                                  term.deExplanation || 'Keine Definition'
                                 )}
                               </p>
                             )}
@@ -557,7 +575,7 @@ const AllMedicalTerminologyContent = () => {
                                       </span>
                                     </div>
                                     <div className={styles.termContent}>
-                                      {term.lat}
+                                      {term.lat || 'Kein Begriff'}
                                     </div>
                                   </td>
                                   <td data-tutorial="germanDefinition">
@@ -572,11 +590,11 @@ const AllMedicalTerminologyContent = () => {
                                         placement="right"
                                       >
                                         <span className={styles.clickableCell}>
-                                          {term.de}
+                                          {term.de || 'Keine deutsche Bezeichnung'}
                                         </span>
                                       </Tippy>
                                     ) : (
-                                      term.de
+                                      term.de || 'Keine deutsche Bezeichnung'
                                     )}
                                   </td>
                                   {showDefinition && (
@@ -593,11 +611,11 @@ const AllMedicalTerminologyContent = () => {
                                           placement="right"
                                         >
                                           <span className={styles.clickableCell}>
-                                            {term.deExplanation}
+                                            {term.deExplanation || 'Keine Definition'}
                                           </span>
                                         </Tippy>
                                       ) : (
-                                        term.deExplanation
+                                        term.deExplanation || 'Keine Definition'
                                       )}
                                     </td>
                                   )}

@@ -169,6 +169,9 @@ export const pathList = {
   audio_choice: {
     path: "/audio-choice-game",
   },
+  definition_choice: {
+    path: "/definition-choice-game",
+  },
   simulation: {
     path: "/simulation",
   },
